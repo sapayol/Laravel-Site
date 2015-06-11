@@ -1,0 +1,19 @@
+.centered {
+  width: 60%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+footer .alert-box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 15%; }
+
+
+
+/*# sourceMappingURL=../maps/main.css.map */
