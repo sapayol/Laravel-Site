@@ -1,6 +1,7 @@
-{% include "00-atoms/meta/_head" %}
+{!! view('00-atoms.meta._head') !!}
 
-	{% block content %}
-	{% endblock %}
+<main class="row">
+	@yield('main')
+</main>
 
-{% include "00-atoms/meta/_foot" %}
+{!! view('00-atoms.meta._foot') !!}

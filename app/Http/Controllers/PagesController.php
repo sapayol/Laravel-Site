@@ -13,6 +13,12 @@ class PagesController extends Controller {
 	|
 	*/
 
+
+	public function comingSoon()
+	{
+		return view('04-pages.coming-soon');
+	}
+
 	public function index()
 	{
 		return view('04-pages.home');

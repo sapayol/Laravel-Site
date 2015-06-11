@@ -1,11 +1,18 @@
-{% extends "03-templates/coming-soon" %}
+@extends('03-templates/coming-soon')
 
-{% block content %}
+@section('title')
+  Home
+@stop
 
-<div class="centered text-center">
-	<img src="images/logo-black.svg" alt="	Sapayol Logo" class="logo">
-	<br><br>
-	<h1 class="thin">Coming Soon</h1>
-</div>
+@section('header')
+	<h1>Welcome to Sapayol</h1>
+@stop
 
-{% endblock %}
+@section('main')
+	<div class="centered text-center">
+		<img src="images/logo-black.svg" alt="	Sapayol Logo" class="logo">
+		<br><br>
+		<h1 class="thin">Coming Soon</h1>
+	</div>
+@stop
+
