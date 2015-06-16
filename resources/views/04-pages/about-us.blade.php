@@ -34,6 +34,16 @@
 				Introduce the values and motivations behind Sapayol
 			</small>
 		</h4>
+		<h3><strong><small>Components</small></strong></h3>
+		<h4>
+			<small>
+				- Main heading <br>
+				- Summary paragraph (lede) <br>
+				- Subheadings <br>
+				- Body copy <br>
+				- Text on top of images to highlight certain things <br>
+			</small>
+		</h4>
 		<a href="#" class="close">&times;</a>
 	</div>
 @stop

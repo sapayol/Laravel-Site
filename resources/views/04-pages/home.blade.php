@@ -32,6 +32,14 @@
 				Get the audience to explore the jacket and customization options. Make them curious about the materials used and the process.
 			</small>
 		</h4>
+		<h3><strong><small>Components</small></strong></h3>
+		<h4>
+			<small>
+				- main heading on top of image/video <br>
+				- subheadings under or on top of images <br>
+				- short paragraph about the content that the image links to
+			</small>
+		</h4>
   	<a href="#" class="close">&times;</a>
 	</div>
 @stop

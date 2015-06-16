@@ -21,15 +21,23 @@
 	<div class="alert-box info" data-alert>
 	  <h3><strong><small>Page Description</small></strong></h3>
 		<h4>
-			<small>
-				Explain how SAPAYOL, the buying and the production process works.
-			</small>
+			<small>Explain how SAPAYOL, the buying and the production process works.</small>
 		</h4>
 
 		<h3><strong><small>Purpose Served</small></strong></h3>
 		<h4>
 			<small>
 				Make the audience aware that the jacket gets produced as soon as they order, according to their individual preferences, by a craftsman in Turkey, and that it will take time to arrive
+			</small>
+		</h4>
+		<h3><strong><small>Components</small></strong></h3>
+		<h4>
+			<small>
+				- Main heading <br>
+				- Summary paragraph (lede) <br>
+				- Subheadings <br>
+				- Body copy <br>
+				- Text on top of images to highlight certain things <br>
 			</small>
 		</h4>
 		<a href="#" class="close">&times;</a>

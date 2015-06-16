@@ -1,3 +1,5 @@
+@import "navigation";
+
 	.logo {
 		// width: 75%;
 	}
@@ -10,11 +12,10 @@
   	transform: translate(-50%, -50%);
 	}
 
-
-
-footer .alert-box {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 15%;
+@media only screen and (min-width: 30.063em) {
+	footer .alert-box {
+		position: absolute;
+		right: 0;
+		width: 25%;
+	}
 }
