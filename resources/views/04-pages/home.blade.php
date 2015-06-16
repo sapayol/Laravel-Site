@@ -4,17 +4,13 @@
   Home
 @stop
 
-@section('header')
-	<h1>Welcome to Sapayol</h1>
-@stop
-
-
-
-
 @section('main')
-{{-- 	<h1>{{ entry.title }}</h1>
-
-	{{ entry.body }} --}}
+	{{-- <div class="large-12 medium-12 small-12 columns text-center"> --}}
+		<img class="hero-image" src="images/photos/jacket-full_body-profile.jpg" alt="">
+		<h1 class="hero-text">
+			<strong>Le<span>ather Jacke</span>ts</strong>
+		</h1>
+	{{-- </div> --}}
 @stop
 
 @section('footer')

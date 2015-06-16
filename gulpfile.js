@@ -52,7 +52,7 @@ gulp.task('sass', function() {
     })
     .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('public/css'))
-    .pipe(reload({stream: true}));
+    .pipe(browserSync.stream());
 });
 
 gulp.task('js', function() {
