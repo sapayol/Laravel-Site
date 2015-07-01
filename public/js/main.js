@@ -1,2 +1,2 @@
-!function(){"use strict";angular.module("sapayolApp",[]).run(["$timeout",function(n){n(function(){$(document).foundation()},500)}])}();
+!function(){"use strict";angular.module("sapayolApp",[]).run(["$timeout",function(o){o(function(){$(document).ready(function(){$(".home-carousel").slick({dots:!0,mobileFirst:!0})}),$(document).foundation()},500)}])}();
 //# sourceMappingURL=../maps/main.js.map
