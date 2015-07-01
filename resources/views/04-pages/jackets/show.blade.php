@@ -4,17 +4,94 @@
 	{{{ $jacket->name }}}
 @stop
 
-@section('header')
-	<h1>{{{ $jacket->name }}}</h1>
-@stop
 
 @section('main')
+	<section class="small-12 medium-12 large-12 columns carousel-container">
+		<h1>{{{ $jacket->name }}}</h1>
+		<div class="home-carousel" >
+		  <div>
+		  	<img src="/images/photos/jacket-thigh-up-front-open.jpg" alt="">
+		  </div>
+		  <div>
+		  	<img src="/images/photos/jacket-thigh-up-profile-open.jpg" alt="">
+		  </div>
+		  <div>
+		  	<img src="/images/photos/jacket-thigh-up-back.jpg" alt="">
+		  </div>
+		</div>
+		<a href="{!! route('jackets.look', $jacket->model) !!}" class="button radius expand success">Fine-tune your look</a>
+	</section>
 
-	<img src="http://placehold.it/800x400&text={{{ $jacket->model }}}">
+	<section class="small-12 medium-12 large-12 columns">
+		<div class="flex-video">
+	    <iframe width="420" height="315" src="//www.youtube.com/embed/qcM8H08LFKM?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
+		</div>
+		<a class="video-caption" ng-show="!measurementsVisible" ng-click="measurementsVisible = !measurementsVisible">Measurements Seen In the Video </a>
+	</section>
 
-	<h2>${{{ $jacket->price }}}</h2>
+	<section ng-show="measurementsVisible" class="small-12 medium-12 large-12 columns">
+		<ul class="no-bullet value-list large-6 medium-6 small-6 columns">
+			<li><span class="value-key thin">Height</span>     186 <small>cm</small></li>
+			<li><span class="value-key thin">Shoulder 1</span> 15  <small>cm</small></li>
+			<li><span class="value-key thin">Shoulder 2</span> 46  <small>cm</small></li>
+			<li><span class="value-key thin">Back</span>       40  <small>cm</small></li>
+			<li><span class="value-key thin">Chest</span>      100 <small>cm</small></li>
+		</ul>
+		<ul class="no-bullet value-list  large-6 medium-6 small-6 columns">
+			<li><span class="value-key thin">Waist</span>  77 <small>cm</small></li>
+			<li><span class="value-key thin">Hip</span>    95 <small>cm</small></li>
+			<li><span class="value-key thin">Length</span> 60 <small>cm</small></li>
+			<li><span class="value-key thin">Sleeve</span> 63 <small>cm</small></li>
+			<li><span class="value-key thin">Biceps</span> 35 <small>cm</small></li>
+		</ul>
+		<div class="small-12 medium-12 large-12 columns">
+			<p>Model wears a size 50 with the following adjustments:</p>
+			<ul class="no-bullet value-list left">
+				<li><span class="value-key thin">Shoulders</span>– 2.5 <small>cm</small></li>
+				<li><span class="value-key thin">Waist</span>– 2.5 <small>cm</small></li>
+			</ul>
+		<button ng-toggle="metricUnits != metricUnits" class="right button tiny radius">cm / in</button>
+		<a ng-show="measurementsVisible" class="right" ng-click="measurementsVisible = !measurementsVisible">Hide measurements</a>
+		</div>
+	</section>
 
-	<a href="{!! route('jackets.look', $jacket->model) !!}" class="button radius success">Customize Look</a>
+	<section class="small-12 medium-12 large-12 columns">
+		<h2>Places to put stuff</h2>
+		<a href="/images/photos/outside-pocket.jpg"><img class="sidekick-image" src="/images/photos/outside-pocket.jpg" alt=""></a>
+		<p class="image-caption">Zippered interior chest pocket on right side</p>
+		<a href="/images/photos/inside-pocket.jpg"><img class="sidekick-image" src="/images/photos/inside-pocket.jpg" alt=""></a>
+		<p class="image-caption">Welted interior pocket on left side, parallel to zipper</p>
+		<a href="/images/photos/lining-tencel.jpg"><img class="sidekick-image" src="/images/photos/lining-tencel.jpg" alt=""></a>
+		<p>All pockets are lined with a Tencel twill, a very strong yet soft fabric that prevents bacteria growth. Tencel yarn production is extremely ecological and the fabric is fully biodegradable.</p>
+	</section>
+
+	<section class="small-12 medium-12 large-12 columns">
+		<h2>Mastering the art of leather tanning</h2>
+		<a href="/images/photos/leather-black.jpg"><img class="sidekick-image" src="/images/photos/leather-black.jpg" alt=""></a>
+		<p>Our tannery produces incredibly supple, chrome-free lambskin, with a beautiful warm touch and a gentle, pleasant smell. The profound color is perfectly even and the grain naturally flawless. The relatively high thickness (~3 ounces / 1.0–1.2 mm) gives the jacket a substantial weight and solid structure, without it becoming too heavy.</p>
+		<p>The jacket will break in and develop a patina quickly.</p>
+		<p>All our leather is full-grain, vegetable tanned, with a semi-aniline finish. We explain why that’s the most precious leather <here>.</here></p>
+		<p><em>Further detailed information on leather types will be inserted here. (Maybe with an “accordion”?)</em></p>
+	</section>
+
+	<section class="small-12 medium-12 large-12 columns">
+		<h2>Breathable and Smooth</h2>
+		<a href="/images/photos/jacket-lining.jpg"><img class="sidekick-image" src="/images/photos/jacket-lining.jpg" alt=""></a>
+		<p>We chose a 100% Bemberg Cupro Twill for our lining for the same reasons that has made the fabric the top choice of bespoke suit makers. No other fabric breathes as well, absorbs and releases sweat as quickly, and is at the same time as smooth as Bemberg Cupro. </p>
+		<p>You don’t feel clammy in the jacket, you can take it on and off easily, plus the fabric doesn’t build any static. It’s also more robust than other traditional lining fabrics like viscose (rayon) and acetate.</p>
+	</section>
+
+
+	<section class="small-12 medium-12 large-12 columns">
+		<h2>Polished Blue Collar Workers</h2>
+		<a href="/images/photos/zipper.jpg"><img class="sidekick-image" src="/images/photos/zipper.jpg" alt=""></a>
+		<p>All zippers are YKK Excella, where each tooth is individually polished, which results in a brilliance and prevents scratching of the jacket or your skin. YKK Excella zippers receive a beautiful, highly scratch-resisting coating and don’t contain Nickel. At the same time, the reliability of YKK Excella Zippers is legendary.</p>
+		<br>
+		<a href="/images/photos/buttons.jpg"><img class="sidekick-image" src="/images/photos/buttons.jpg" alt=""></a>
+		<p>The buttons on our jackets are spring-type snaps from YKK, made purely out of nickel-free metal. They receive the same beautiful coatings as our zippers and provide reliable closure without the risk of damaging the leather when you want to open them.</p>
+		<a href="{!! route('jackets.look', $jacket->model) !!}" class="button radius expand success">Fine-tune your look</a>
+		<h2>${{{ $jacket->price }}}</h2>
+	</section>
 @stop
 
 @section('footer')
@@ -46,8 +123,6 @@
 			</small>
 		</h4>
 		<a href="#" class="close">&times;</a>
-
-
 	</div>
 @stop
 
