@@ -1,5 +1,5 @@
 <nav class="primary-nav" role="navigation">
-  <a href="/home" class="logo"><img src="images/logo-black.svg" alt="Sapayol Logo"></a></li>
+  <a href="/home" class="logo"><img src="/images/logo-black.svg" alt="Sapayol Logo"></a></li>
   <ul class="no-bullet">
     <li class="{!! Request::is('jackets') ? 'active' : '' !!}">
       <a href="/jackets">Our Jackets</a>
