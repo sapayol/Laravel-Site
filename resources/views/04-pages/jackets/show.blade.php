@@ -34,28 +34,46 @@
 	</section>
 
 	<section ng-show="measurementsVisible" class="small-12 medium-12 large-12 columns">
-		<ul class="no-bullet value-list large-6 medium-6 small-6 columns">
+		<ul ng-if="metricUnits" class="no-bullet value-list large-6 medium-6 small-6 columns">
 			<li><span class="value-key thin">Height</span>     186 <small>cm</small></li>
 			<li><span class="value-key thin">Shoulder 1</span> 15  <small>cm</small></li>
 			<li><span class="value-key thin">Shoulder 2</span> 46  <small>cm</small></li>
 			<li><span class="value-key thin">Back</span>       40  <small>cm</small></li>
 			<li><span class="value-key thin">Chest</span>      100 <small>cm</small></li>
 		</ul>
-		<ul class="no-bullet value-list  large-6 medium-6 small-6 columns">
+		<ul ng-if="metricUnits" class="no-bullet value-list  large-6 medium-6 small-6 columns">
 			<li><span class="value-key thin">Waist</span>  77 <small>cm</small></li>
 			<li><span class="value-key thin">Hip</span>    95 <small>cm</small></li>
 			<li><span class="value-key thin">Length</span> 60 <small>cm</small></li>
 			<li><span class="value-key thin">Sleeve</span> 63 <small>cm</small></li>
 			<li><span class="value-key thin">Biceps</span> 35 <small>cm</small></li>
 		</ul>
+		<ul ng-if="!metricUnits" class="no-bullet value-list large-6 medium-6 small-6 columns">
+			<li><span class="value-key thin">Height</span>     73.23 <small>in</small></li>
+			<li><span class="value-key thin">Shoulder 1</span> 5.91  <small>in</small></li>
+			<li><span class="value-key thin">Shoulder 2</span> 18.11  <small>in</small></li>
+			<li><span class="value-key thin">Back</span>       15.75  <small>in</small></li>
+			<li><span class="value-key thin">Chest</span>      39.37 <small>in</small></li>
+		</ul>
+		<ul ng-if="!metricUnits" class="no-bullet value-list  large-6 medium-6 small-6 columns">
+			<li><span class="value-key thin">Waist</span>  30.31 <small>in</small></li>
+			<li><span class="value-key thin">Hip</span>    37.4 <small>in</small></li>
+			<li><span class="value-key thin">Length</span> 23.62 <small>in</small></li>
+			<li><span class="value-key thin">Sleeve</span> 24.8 <small>in</small></li>
+			<li><span class="value-key thin">Biceps</span> 13.78 <small>in</small></li>
+		</ul>
 		<div class="small-12 medium-12 large-12 columns">
 			<p>Model wears a size 50 with the following adjustments:</p>
-			<ul class="no-bullet value-list left">
+			<ul ng-if="metricUnits" class="no-bullet value-list left">
 				<li><span class="value-key thin">Shoulders</span>– 2.5 <small>cm</small></li>
 				<li><span class="value-key thin">Waist</span>– 2.5 <small>cm</small></li>
 			</ul>
-		<button ng-toggle="metricUnits != metricUnits" class="right button tiny radius">cm / in</button>
-		<a ng-show="measurementsVisible" class="right" ng-click="measurementsVisible = !measurementsVisible">Hide measurements</a>
+			<ul ng-if="!metricUnits" class="no-bullet value-list left">
+				<li><span class="value-key thin">Shoulders</span>– 0.98 <small>in</small></li>
+				<li><span class="value-key thin">Waist</span>– 0.98 <small>in</small></li>
+			</ul>
+			<button ng-click="metricUnits = !metricUnits" class="right button tiny radius">cm / in</button>
+			<a ng-show="measurementsVisible" class="right" ng-click="measurementsVisible = !measurementsVisible">Hide measurements</a>
 		</div>
 	</section>
 
