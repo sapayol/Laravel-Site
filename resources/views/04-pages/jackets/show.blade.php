@@ -79,7 +79,7 @@
 	</section>
 
 	<section class="small-12 medium-12 large-12 columns">
-		<h2 class="thin">Places to put stuff</h2>
+		<h2 class="thin">Places to Put Stuff</h2>
 		<a href="/images/photos/outside-pocket.jpg"><img class="sidekick-image" src="/images/photos/outside-pocket.jpg" alt=""></a>
 		<p class="image-caption">Zippered interior chest pocket on right side</p>
 		<a href="/images/photos/inside-pocket.jpg"><img class="sidekick-image" src="/images/photos/inside-pocket.jpg" alt=""></a>
@@ -89,7 +89,7 @@
 	</section>
 
 	<section class="small-12 medium-12 large-12 columns">
-		<h2 class="thin">Mastering the art of leather tanning</h2>
+		<h2 class="thin">Mastering the Art of Leather Tanning</h2>
 		<a href="/images/photos/leather-black.jpg"><img class="sidekick-image" src="/images/photos/leather-black.jpg" alt=""></a>
 		<p>Our tannery produces incredibly supple, chrome-free lambskin, with a beautiful warm touch and a gentle, pleasant smell. The profound color is perfectly even and the grain naturally flawless. The relatively high thickness (~3 ounces / 1.0–1.2 mm) gives the jacket a substantial weight and solid structure, without it becoming too heavy.</p>
 		<p>The jacket will break in and develop a patina quickly.</p>
