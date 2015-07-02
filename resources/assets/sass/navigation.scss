@@ -5,13 +5,21 @@
 		.logo {
 			img {
 				width: 15rem;
-				padding-bottom: 1rem;
+				padding-bottom: 2rem;
 			}
+		}
+		li {
+			// background: $grey;
 		}
 		li.active {
 			font-weight: bold;
+			background: black;
+			a {
+				color: $white;
+			}
 		}
 		a {
+			color: $black;
 			display: block;
 			font-size: 1.5rem;
 			font-weight: light;

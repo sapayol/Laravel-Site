@@ -1,0 +1,99 @@
+// Dubspot Color Scheme - Dima (2015/02/16)
+
+//===========================================================================//
+//																 BASE COLORS 															 //
+//===========================================================================//
+
+$beige:     #efeadf;
+$red:       #ca3b26;
+$orange:    #EF9464;
+$yellow:    #FFEE96;
+$green:     #57ca66;
+$baby-blue: #78c0ca;
+$blue:      #1B81B6;
+$purple:    #B783FB;
+$pink:      #d24A9C;
+$grey:      #606060;
+$black:     #2D2D2D;
+$white:     #FEFDFD;
+$very-light-grey: #F5F5F5;
+$greenish-grey: #D8E1E1;
+//606060
+$dark-beige:      mix($beige,     black, 70%);
+$dark-red:        mix($red,       black, 70%);
+$dark-orange:     mix($orange,    black, 70%);
+$dark-yellow:     mix($yellow,    black, 70%);
+$dark-green:      mix($green,     black, 70%);
+$dark-baby-blue:  mix($baby-blue, black, 70%);
+$dark-blue:       mix($blue,      black, 70%);
+$dark-purple:     mix($purple,    black, 70%);
+$dark-pink:       mix($pink,      black, 70%);
+$dark-grey:       mix($grey,      black, 70%);
+$dark-black:      mix($black,     black, 70%);
+$dark-white:      mix($white,     black, 70%);
+
+$light-beige:     mix($beige,     white, 50%);
+$light-red:       mix($red,       white, 50%);
+$light-orange:    mix($orange,    white, 50%);
+$light-yellow:    mix($yellow,    white, 50%);
+$light-green:     mix($green,     white, 50%);
+$light-baby-blue: mix($baby-blue, white, 50%);
+$light-blue:      mix($blue,      white, 50%);
+$light-purple:    mix($purple,    white, 50%);
+$light-pink:      mix($pink,      white, 50%);
+$light-grey:      mix($grey,      white, 50%);
+$light-black:     mix($black,     white, 50%);
+$light-white:     mix($white,     white, 50%);
+
+
+//===========================================================================//
+//																 SITE COLORS 															 //
+//===========================================================================//
+$checkout-breadcrumbs-bg: $white;
+$section-header-bg:     $beige;
+$bg-color:         	    $very-light-grey;
+$text-color:         	  mix($grey, white, 90%);
+$text-color-inverted:   $white;
+$inverted-text-color:   $grey;
+$primary-color:         $blue;
+$dark-primary-color:    mix($primary-color,   black, 90%);
+$secondary-color:       $grey;
+$alert-color:           $red;
+$success-color:         $green;
+$warning-color:         $orange;
+$info-color:            $baby-blue;
+$alternate-color:       #B187C9;
+$alternate-color-hover: #9F53CA;
+
+$button-bg-color:       $primary-color;
+$button-shadow-color:   $dark-primary-color;
+$button-font-color:     $white;
+$button-font-color-alt: $grey;
+$button-border-color:   $dark-primary-color;
+
+$facebook-color:        #3b5998;
+$google-color:         	#dd4b39;
+
+
+$dark-text-color:         	  mix($text-color,      black, 70%);
+$dark-secondary-color:        mix($secondary-color, black, 70%);
+$dark-alert-color:            mix($alert-color,     black, 70%);
+$dark-success-color:          mix($success-color,   black, 70%);
+$dark-warning-color:          mix($warning-color,   black, 70%);
+$dark-alternate-color:        mix($alternate-color, black, 70%);
+$dark-alternate-color-hover:  mix($alternate-color, black, 70%);
+$dark-facebook-color:         mix($facebook-color,  black, 70%);
+$dark-google-color:         	mix($google-color,    black, 70%);
+
+$light-text-color:         	  mix($text-color,      white, 70%);
+$light-primary-color:         mix($primary-color,   white, 40%);
+$light-secondary-color:       mix($secondary-color, white, 70%);
+$light-alert-color:           mix($alert-color,     white, 70%);
+$light-success-color:         mix($success-color,   white, 70%);
+$light-warning-color:         mix($warning-color,   white, 70%);
+$light-alternate-color:       mix($alternate-color, white, 70%);
+$light-alternate-color-hover: mix($alternate-color, white, 70%);
+$light-facebook-color:        mix($facebook-color,  white, 70%);
+$light-google-color:         	mix($google-color,    white, 70%);
+
+

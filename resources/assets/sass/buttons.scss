@@ -1,0 +1,18 @@
+.button.black {
+	box-shadow: 0 4px 0 black;
+	background: $black;
+	font-size: 1.2rem;
+	transition: all 150ms ease-in;
+	&:hover {
+		background: $black;
+	}
+	&:active {
+		box-shadow: none;
+		position: relative;
+		top: 3px;
+	}
+}
+
+.call-to-action {
+	margin: 2rem 0 1.25rem 0;
+}

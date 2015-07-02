@@ -2,6 +2,30 @@
   display: inline-block;
   min-width: 5rem; }
 
+.button.black {
+  box-shadow: 0 4px 0 black;
+  background: #2D2D2D;
+  font-size: 1.2rem;
+  -webkit-transition: all 150ms ease-in;
+          transition: all 150ms ease-in; }
+  .button.black:hover {
+    background: #2D2D2D; }
+  .button.black:active {
+    box-shadow: none;
+    position: relative;
+    top: 3px; }
+
+.call-to-action {
+  margin: 2rem 0 1.25rem 0; }
+
+h1 {
+  font-size: 2.45rem; }
+  h1.with-subheading {
+    margin-bottom: -0.3rem; }
+
+.large-price {
+  font-size: 1.5rem; }
+
 .hero-text {
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0.96) 51%, white 53%, white 100%);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0.96) 51%, white 53%, white 100%);
@@ -41,10 +65,14 @@
     padding-top: 2rem; }
     nav.primary-nav .logo img {
       width: 15rem;
-      padding-bottom: 1rem; }
+      padding-bottom: 2rem; }
     nav.primary-nav li.active {
-      font-weight: bold; }
+      font-weight: bold;
+      background: black; }
+      nav.primary-nav li.active a {
+        color: #FEFDFD; }
     nav.primary-nav a {
+      color: #2D2D2D;
       display: block;
       font-size: 1.5rem;
       font-weight: light; } }

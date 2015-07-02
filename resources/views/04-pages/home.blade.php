@@ -15,7 +15,7 @@
 	</div>
 
 	<section class="large-12 medium-12 small-12 columns">
-		<a href="/jackets/bomber" class="button radius expand">See Our Collection</a>
+		<a href="/jackets/bomber" class="button black expand call-to-action">See Our Collection</a>
 
 		<article>
 			<a href="/how-it-works"><img class="sidekick-image" src="/images/photos/tailor-supplies.jpg" alt=""></a>
