@@ -3,13 +3,13 @@
   min-width: 5rem; }
 
 .hero-text {
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0.96) 51%, white 53%, white 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0.96) 51%, white 53%, white 100%);
   position: absolute;
   text-align: center;
   font-size: 2.9rem;
-  top: 38rem;
+  top: 26rem;
   left: 1rem; }
-  .hero-text strong span {
-    color: white; }
 
 .thin {
   font-family: 'HelveticaNeue-Thin', 'Helvetica', 'Roboto', 'Arial', 'sans-serif';
@@ -26,10 +26,12 @@
 .sidekick-image {
   margin-bottom: 1rem; }
 
+.hero-image-container {
+  overflow: hidden;
+  height: 38rem; }
+
 .hero-image {
-  margin: 0 auto;
-  margin-left: 4rem;
-  width: 70%; }
+  margin: 0 auto; }
 
 @media only screen {
   nav.primary-nav {
@@ -53,7 +55,10 @@
     padding: 0 1rem;
     font-size: .8rem; } }
 .carousel-container {
-  overflow: hidden; }
+  overflow: hidden;
+  height: 45rem; }
+  .carousel-container .home-carousel {
+    margin-bottom: 0; }
 
 .centered {
   width: 60%;
@@ -76,6 +81,10 @@
 main > section {
   margin-bottom: 1rem;
   margin-top: 1rem; }
+
+main > section > article {
+  margin-bottom: 4rem;
+  margin-top: 3rem; }
 
 
 

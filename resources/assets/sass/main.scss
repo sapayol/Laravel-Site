@@ -5,6 +5,10 @@
 
 .carousel-container {
 	overflow: hidden;
+	height: 45rem;
+	.home-carousel {
+		margin-bottom: 0;
+	}
 }
 
 .centered {
@@ -31,4 +35,9 @@
 main > section {
 	margin-bottom: 1rem;
 	margin-top: 1rem;
+}
+
+main > section > article {
+	margin-bottom: 4rem;
+	margin-top: 3rem;
 }
