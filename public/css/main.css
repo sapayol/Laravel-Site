@@ -11,9 +11,11 @@
   top: 26rem;
   left: 1rem; }
 
+.underlined {
+  text-decoration: underline; }
+
 .thin {
-  font-family: 'HelveticaNeue-Thin', 'Helvetica', 'Roboto', 'Arial', 'sans-serif';
-  margin-bottom: 0; }
+  font-family: 'HelveticaNeue-Thin', 'Helvetica', 'Roboto', 'Arial', 'sans-serif'; }
 
 .image-caption {
   margin-bottom: 2rem;

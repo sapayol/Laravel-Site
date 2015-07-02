@@ -10,7 +10,7 @@
 			  	mobileFirst: true,
 			  });
 			});
-      $(document).foundation();
+      // $(document).foundation();
     }, 500);
 
 
