@@ -10,7 +10,7 @@
     <li class="{!! Request::is('how-it-works') ? 'active' : '' !!}">
       <a href="/how-it-works">How It Works</a>
     </li>
-    <li class="{!! Request::is('jackets/bomber') ? 'active' : '' !!}">
+    <li class="{!! Request::is('jackets/*') ? 'active' : '' !!}">
       <a href="/jackets/bomber">Our Signature Jacket</a>
     </li>
   </ul>

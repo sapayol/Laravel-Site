@@ -4,3 +4,37 @@
 		min-width: 5rem;
 	}
 }
+
+.measurement-table {
+	border: none;
+	margin: 0 auto;
+	th, td {
+		text-align: center;
+		transition: all 150ms ease-in;
+		&.active {
+			background: black;
+			color: white;
+			box-shadow: 4px 4px 0 lightgrey !important;
+			position: relative;
+			z-index: 10;
+			top: -3px;
+		}
+		&:not(:first-child) {
+			cursor: pointer;
+		}
+	}
+	tr:nth-of-type(even) {
+		background: none;
+		td:not(.active) {
+			background: #F9F9F9;
+		}
+	}
+	small {
+		font-size: .75rem;
+	}
+	td {
+		transition: all 100ms linear;
+		font-size: .775rem;
+		padding: 0.5625rem 0.495rem;
+	}
+}

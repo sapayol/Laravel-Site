@@ -25,7 +25,7 @@ class JacketsController extends Controller {
 		$jacket = Jacket::where('model', '=', $model)->first();
 		$measurements = Measurement::where('type', '=', 'standard')->get();
 
-		return view('04-pages.jackets.look', ['jacket' => $jacket, 'measurements' => $measurements]);
+		return view('04-pages.jackets.look2', ['jacket' => $jacket, 'measurements' => $measurements]);
 	}
 
 	public function fit($model, Request $request)

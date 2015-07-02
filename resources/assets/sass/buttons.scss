@@ -16,3 +16,28 @@
 .call-to-action {
 	margin: 2rem 0 1.25rem 0;
 }
+
+.look-options {
+	&.button-group > li > .button {
+		border: 1px solid grey;
+	}
+	.button {
+		padding: .5rem .9rem;
+		text-transform: capitalize;
+		background: transparent;
+		color: $black;
+		position: relative;
+		top: 3px;
+		transition: all 150ms ease-in;
+		&:active, &.active {
+			border: 1px solid white !important;
+			border-right: none !important;
+			border-bottom: none !important;
+			background: black;
+			color: $white;
+			top: 0;
+			// box-shadow: none;
+			box-shadow: 4px 4px 0 lightgrey;
+		}
+	}
+}
