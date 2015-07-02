@@ -7,7 +7,6 @@
 
 @section('main')
 	<section class="small-12 medium-12 large-12 columns carousel-container">
-		<h1>{{{ $jacket->name }}}</h1>
 		<div class="home-carousel" >
 		  <div>
 		  	<img src="/images/photos/jacket-thigh-up-front-open.jpg" alt="">
@@ -19,7 +18,12 @@
 		  	<img src="/images/photos/jacket-thigh-up-back.jpg" alt="">
 		  </div>
 		</div>
-		<a href="{!! route('jackets.look', $jacket->model) !!}" class="button radius expand success">Fine-tune your look</a>
+	</section>
+
+	<section class="small-12 medium-12 large-12 columns">
+		<h1 class="text-center">{{{ $jacket->name }}}</h1>
+		<br>
+		<a href="{!! route('jackets.look', $jacket->model) !!}" class="button radius expand success">Customize Yours Now</a>
 	</section>
 
 	<section class="small-12 medium-12 large-12 columns">
@@ -56,7 +60,7 @@
 	</section>
 
 	<section class="small-12 medium-12 large-12 columns">
-		<h2>Places to put stuff</h2>
+		<h2 class="thin">Places to put stuff</h2>
 		<a href="/images/photos/outside-pocket.jpg"><img class="sidekick-image" src="/images/photos/outside-pocket.jpg" alt=""></a>
 		<p class="image-caption">Zippered interior chest pocket on right side</p>
 		<a href="/images/photos/inside-pocket.jpg"><img class="sidekick-image" src="/images/photos/inside-pocket.jpg" alt=""></a>
@@ -66,7 +70,7 @@
 	</section>
 
 	<section class="small-12 medium-12 large-12 columns">
-		<h2>Mastering the art of leather tanning</h2>
+		<h2 class="thin">Mastering the art of leather tanning</h2>
 		<a href="/images/photos/leather-black.jpg"><img class="sidekick-image" src="/images/photos/leather-black.jpg" alt=""></a>
 		<p>Our tannery produces incredibly supple, chrome-free lambskin, with a beautiful warm touch and a gentle, pleasant smell. The profound color is perfectly even and the grain naturally flawless. The relatively high thickness (~3 ounces / 1.0–1.2 mm) gives the jacket a substantial weight and solid structure, without it becoming too heavy.</p>
 		<p>The jacket will break in and develop a patina quickly.</p>
@@ -75,7 +79,7 @@
 	</section>
 
 	<section class="small-12 medium-12 large-12 columns">
-		<h2>Breathable and Smooth</h2>
+		<h2 class="thin">Breathable and Smooth</h2>
 		<a href="/images/photos/jacket-lining.jpg"><img class="sidekick-image" src="/images/photos/jacket-lining.jpg" alt=""></a>
 		<p>We chose a 100% Bemberg Cupro Twill for our lining for the same reasons that has made the fabric the top choice of bespoke suit makers. No other fabric breathes as well, absorbs and releases sweat as quickly, and is at the same time as smooth as Bemberg Cupro. </p>
 		<p>You don’t feel clammy in the jacket, you can take it on and off easily, plus the fabric doesn’t build any static. It’s also more robust than other traditional lining fabrics like viscose (rayon) and acetate.</p>
@@ -83,7 +87,7 @@
 
 
 	<section class="small-12 medium-12 large-12 columns">
-		<h2>Polished Blue Collar Workers</h2>
+		<h2 class="thin">Polished Blue Collar Workers</h2>
 		<a href="/images/photos/zipper.jpg"><img class="sidekick-image" src="/images/photos/zipper.jpg" alt=""></a>
 		<p>All zippers are YKK Excella, where each tooth is individually polished, which results in a brilliance and prevents scratching of the jacket or your skin. YKK Excella zippers receive a beautiful, highly scratch-resisting coating and don’t contain Nickel. At the same time, the reliability of YKK Excella Zippers is legendary.</p>
 		<br>
