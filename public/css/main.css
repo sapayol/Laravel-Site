@@ -2,33 +2,80 @@
   display: inline-block;
   min-width: 5rem; }
 
+.switch.large label, .switch.large input:checked + label {
+  background-color: transparent;
+  padding: .5rem; }
+.switch.large label:after {
+  background: black;
+  top: 1.8rem;
+  height: 2px; }
+.switch.large .switch-text {
+  color: #6f6f6f;
+  font-size: .9rem;
+  position: absolute;
+  top: .6rem;
+  left: .85rem;
+  font-weight: bold; }
+  .switch.large .switch-text span:first-child {
+    padding-right: .65rem; }
+  .switch.large .switch-text span:last-child {
+    padding-left: .65rem; }
+
 .measurement-table {
   border: none;
   margin: 0 auto; }
+  .measurement-table tr:first-child td:first-child {
+    text-align: left; }
+  .measurement-table tr:nth-of-type(even) {
+    background: none;
+    background: #F9F9F9; }
+  .measurement-table tr:last-child {
+    background: none; }
   .measurement-table th, .measurement-table td {
-    text-align: center;
-    -webkit-transition: all 150ms ease-in;
-            transition: all 150ms ease-in; }
-    .measurement-table th.active, .measurement-table td.active {
-      background: black;
-      color: white;
-      box-shadow: 4px 4px 0 lightgrey !important;
-      position: relative;
-      z-index: 10;
-      top: -3px; }
+    text-align: center; }
     .measurement-table th:not(:first-child), .measurement-table td:not(:first-child) {
       cursor: pointer; }
-  .measurement-table tr:nth-of-type(even) {
-    background: none; }
-    .measurement-table tr:nth-of-type(even) td:not(.active) {
-      background: #F9F9F9; }
-  .measurement-table small {
-    font-size: .75rem; }
+  .measurement-table th {
+    padding: 0;
+    padding-bottom: .4rem;
+    -webkit-transition: all 150ms ease-in;
+            transition: all 150ms ease-in; }
+    .measurement-table th.active {
+      position: relative;
+      z-index: 10;
+      top: -3px;
+      left: -3px; }
+      .measurement-table th.active a {
+        box-shadow: 4px 4px 0 lightgrey !important; }
+      .measurement-table th.active .table-heading-button {
+        color: white;
+        background: black;
+        border: none; }
+    .measurement-table th .table-heading-button {
+      font-size: 0.8125rem;
+      font-weight: 400;
+      color: #2D2D2D;
+      display: block;
+      height: 100%;
+      padding: .5rem 0;
+      border: 1px solid grey;
+      width: 100%; }
   .measurement-table td {
-    -webkit-transition: all 100ms linear;
-            transition: all 100ms linear;
     font-size: .775rem;
     padding: 0.5625rem 0.495rem; }
+    .measurement-table td.active {
+      background: lightgrey; }
+    .measurement-table td:first-child {
+      text-align: left; }
+    .measurement-table td small {
+      font-size: .75rem; }
+  .measurement-table .switch {
+    margin: 0;
+    left: -.2rem; }
+  .measurement-table h3 {
+    padding-left: 1.2rem;
+    font-size: .85rem;
+    color: #6f6f6f; }
 
 .button.black {
   box-shadow: 0 4px 0 black;
@@ -46,25 +93,30 @@
 .call-to-action {
   margin: 2rem 0 1.25rem 0; }
 
-.look-options.button-group > li > .button {
-  border: 1px solid grey; }
-.look-options .button {
-  padding: .5rem .9rem;
-  text-transform: capitalize;
-  background: transparent;
-  color: #2D2D2D;
-  position: relative;
-  top: 3px;
-  -webkit-transition: all 150ms ease-in;
-          transition: all 150ms ease-in; }
-  .look-options .button:active, .look-options .button.active {
-    border: 1px solid white !important;
-    border-right: none !important;
-    border-bottom: none !important;
-    background: black;
-    color: #FEFDFD;
-    top: 0;
-    box-shadow: 4px 4px 0 lightgrey; }
+.look-options {
+  padding-right: 0; }
+  .look-options > ul {
+    position: relative; }
+    .look-options > ul.button-group > li > .button {
+      border: 1px solid grey; }
+    .look-options > ul .button {
+      padding: .5rem .9rem;
+      text-transform: capitalize;
+      background: transparent;
+      color: #2D2D2D;
+      position: relative;
+      right: -.5rem;
+      -webkit-transition: all 150ms ease-in;
+              transition: all 150ms ease-in;
+      top: 3px; }
+      .look-options > ul .button:active, .look-options > ul .button.active {
+        border: 1px solid white !important;
+        border-right: none !important;
+        border-bottom: none !important;
+        background: black;
+        color: #FEFDFD;
+        top: 0;
+        box-shadow: 4px 4px 0 lightgrey; }
 
 h1 {
   font-size: 2.45rem; }
@@ -97,8 +149,19 @@ h1 {
   margin-bottom: 2rem;
   display: inline-block; }
 
+.jacket-size-label {
+  position: absolute;
+  top: .8rem; }
+
 .sidekick-image {
   margin-bottom: 1rem; }
+
+.checkout-image {
+  width: 45%; }
+
+.customization-image {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem; }
 
 .hero-image-container {
   overflow: hidden;

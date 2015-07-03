@@ -18,26 +18,31 @@
 }
 
 .look-options {
-	&.button-group > li > .button {
-		border: 1px solid grey;
-	}
-	.button {
-		padding: .5rem .9rem;
-		text-transform: capitalize;
-		background: transparent;
-		color: $black;
+	padding-right: 0;
+	& > ul {
 		position: relative;
-		top: 3px;
-		transition: all 150ms ease-in;
-		&:active, &.active {
-			border: 1px solid white !important;
-			border-right: none !important;
-			border-bottom: none !important;
-			background: black;
-			color: $white;
-			top: 0;
-			// box-shadow: none;
-			box-shadow: 4px 4px 0 lightgrey;
+		&.button-group > li > .button {
+			border: 1px solid grey;
+		}
+		.button {
+			padding: .5rem .9rem;
+			text-transform: capitalize;
+			background: transparent;
+			color: $black;
+			position: relative;
+			right: -.5rem;
+			transition: all 150ms ease-in;
+			top: 3px;
+			&:active, &.active {
+				border: 1px solid white !important;
+				border-right: none !important;
+				border-bottom: none !important;
+				background: black;
+				color: $white;
+				top: 0;
+				// box-shadow: none;
+				box-shadow: 4px 4px 0 lightgrey;
+			}
 		}
 	}
 }

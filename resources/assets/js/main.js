@@ -1,7 +1,9 @@
 (function() {
   'use strict';
 
-  var sapayolApp = angular.module('sapayolApp', [])
+  var sapayolApp = angular.module('sapayolApp', [
+    'controllers',
+  ])
   .run(['$timeout', function($timeout) {
     $timeout(function() {
 			$(document).ready(function(){

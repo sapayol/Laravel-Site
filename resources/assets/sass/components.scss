@@ -5,36 +5,28 @@
 	}
 }
 
-.measurement-table {
-	border: none;
-	margin: 0 auto;
-	th, td {
-		text-align: center;
-		transition: all 150ms ease-in;
-		&.active {
-			background: black;
-			color: white;
-			box-shadow: 4px 4px 0 lightgrey !important;
-			position: relative;
-			z-index: 10;
-			top: -3px;
-		}
-		&:not(:first-child) {
-			cursor: pointer;
-		}
+.switch.large {
+	label, input:checked+label {
+		background-color: transparent;
+		padding: .5rem;
 	}
-	tr:nth-of-type(even) {
-		background: none;
-		td:not(.active) {
-			background: #F9F9F9;
+	label:after {
+		background: black;
+		top: 1.8rem;
+		height: 2px;
+	}
+	.switch-text {
+		color: $text-color;
+		font-size: .9rem;
+		position: absolute;
+		top: .6rem;
+		left: .85rem;
+		font-weight: bold;
+		span:first-child {
+			padding-right: .65rem;
 		}
-	}
-	small {
-		font-size: .75rem;
-	}
-	td {
-		transition: all 100ms linear;
-		font-size: .775rem;
-		padding: 0.5625rem 0.495rem;
+		span:last-child {
+			padding-left: .65rem;
+		}
 	}
 }
