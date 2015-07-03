@@ -47,7 +47,13 @@ class JacketsController extends Controller {
 	{
 		$jacket = Jacket::where('model', '=', $model)->first();
 
-		return view('04-pages.jackets.checkout', ['jacket' => $jacket]);
+		return view('04-pages.jackets.checkout', [
+			'jacket'         => $jacket,
+			'leather_type'   => $request->leather_type,
+			'leather_color'  => $request->leather_color,
+			'lining_color'   => $request->lining_color,
+			'hardware_color' => $request->hardware_color
+		]);
 	}
 
 	public function postCheckout()
@@ -55,9 +61,11 @@ class JacketsController extends Controller {
 		return redirect()->route('jackets.checkout-complete');
 	}
 
-	public function checkoutComplete()
+	public function checkoutComplete($model)
 	{
-		return view('04-pages.jackets.checkout-complete');
+		$jacket = Jacket::where('model', '=', $model)->first();
+
+		return view('04-pages.jackets.checkout-complete', ['jacket' => $jacket]);
 	}
 
 }
