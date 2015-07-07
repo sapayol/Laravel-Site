@@ -1,4 +1,5 @@
 @import "colors";
+@import "chevron";
 @import "components";
 @import "measurement-table";
 @import "buttons";
@@ -23,14 +24,6 @@
 	transform: translate(-50%, -50%);
 }
 
-@media only screen and (min-width: 30.063em) {
-	footer .alert-box {
-		position: absolute;
-		right: 0;
-		width: 25%;
-	}
-}
-
 .flex-video {
 	margin-bottom: 1rem;
 }
@@ -43,4 +36,23 @@ main > section {
 main > section > article {
 	margin-bottom: 4rem;
 	margin-top: 3rem;
+}
+
+footer {
+	background: $black;
+	a.back-to-top-link {
+		color: white;
+		display: block;
+		padding-top: 2.5rem;
+		padding-bottom: 2rem;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.chevron {
+		border-color: white;
+		position: relative;
+		left: 50%;
+		margin-left: -15px;
+	}
 }

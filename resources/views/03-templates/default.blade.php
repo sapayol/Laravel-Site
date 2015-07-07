@@ -10,8 +10,11 @@
 	@yield('main')
 </main>
 
-<footer class="row">
-	@yield('footer')
+<footer class="row text-center">
+	<a ng-click="scrollToTop()" class="back-to-top-link" scroll-to-top>
+		<p class="chevron chevron--top"></p>
+		Back to Top
+	</a>
 </footer>
 
 {!! view('00-atoms.meta._foot') !!}

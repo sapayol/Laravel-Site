@@ -46,22 +46,3 @@
 	</section>
 
 @stop
-
-@section('footer')
-	<div class="alert-box info" data-alert >
-	  <h3><strong><small>Page Description</small></strong></h3>
-		<h4>
-			<small>
-				Communicate instantly what the site is selling and highlight the content areas that are most important to the brand.
-			</small>
-		</h4>
-
-		<h3><strong><small>Purpose Served</small></strong></h3>
-		<h4>
-			<small>
-				Get the audience to explore the jacket and customization options. Make them curious about the materials used and the process.
-			</small>
-		</h4>
-  	<a href="#" class="close">&times;</a>
-	</div>
-@stop
