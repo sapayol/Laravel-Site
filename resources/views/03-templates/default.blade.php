@@ -10,7 +10,7 @@
 	@yield('main')
 </main>
 
-<footer class="row text-center">
+<footer class="text-center">
 	<a ng-click="scrollToTop()" class="back-to-top-link" scroll-to-top>
 		<p class="chevron chevron--top"></p>
 		Back to Top
