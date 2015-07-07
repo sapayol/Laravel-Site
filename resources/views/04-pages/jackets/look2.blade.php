@@ -61,7 +61,7 @@
 				@if ($jacket->hardware_colors()->count() > 1)
 					<ul class="right button-group">
 						@foreach ($jacket->hardware_colors() as $hardware_color)
-					  	<li><a class="button small" ng-class="{active: jacket.hardware_color == '{{{ $hardware_color->name}}}' }" ng-click="jacket.hardware_color = '{{{ $hardware_color->name }}}'">{{{ $hardware_color->name }}}</a></li>
+					  	<li><a class="button small" ng-class="{active: jacket.hardware_color == '{{{ $hardware_color->name }}}' }" ng-click="jacket.hardware_color = '{{{ $hardware_color->name }}}'">{{{ $hardware_color->name }}}</a></li>
 						@endforeach
 					</ul>
 				@else
@@ -78,11 +78,11 @@
 	<div class="large-12 medium-12 small-12 columns">
 		<form action="/jackets/bomber/checkout" method="GET">
 			<input type="hidden" name="model"          value="{{{ $jacket->model }}}">
-			<input type="hidden" name="leather_type"   value="@{{jacket.leather_type}}">
-			<input type="hidden" name="leather_color"  value="@{{jacket.leather_color}}">
-			<input type="hidden" name="lining_color"   value="@{{jacket.lining_color}}">
-			<input type="hidden" name="hardware_color" value="@{{jacket.hardware_color}}">
-			<input type="hidden" name="size"           value="@{{jacket.size}}">
+			<input type="hidden" name="leather_type"   value="@{{ jacket.leather_type }}">
+			<input type="hidden" name="leather_color"  value="@{{ jacket.leather_color }}">
+			<input type="hidden" name="lining_color"   value="@{{ jacket.lining_color }}">
+			<input type="hidden" name="hardware_color" value="@{{ jacket.hardware_color }}">
+			<input type="hidden" name="size"           value="@{{ jacket.size }}">
 			<button class="black button expand">Proceed To Checkout</button>
 		</form>
 	</div>
