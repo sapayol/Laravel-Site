@@ -1,4 +1,5 @@
 .measurement-table {
+	font-family: 'HelveticaNeue', 'Helvetica', 'Roboto', 'Arial', 'sans-serif';
 	border: none;
 	margin: 0 auto;
 	tr:first-child td:first-child {
@@ -52,16 +53,17 @@
 	}
 
 	td {
-		font-size: .775rem;
+		font-size: .65rem;
 		padding: 0.5625rem 0.495rem;
 		&.active {
 			background: lightgrey;
 		}
 		&:first-child {
+			width: 4rem;
 			text-align: left;
 		}
 		small {
-			font-size: .75rem;
+			font-size: .6rem;
 		}
 	}
 

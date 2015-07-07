@@ -1,5 +1,10 @@
 html, body {
 	font-size: 18px;
+	font-family: 'Quattrocento Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oswald', sans-serif;
 }
 
 h1 {
@@ -27,7 +32,8 @@ h1 {
 }
 
 .thin {
-	font-family: 'HelveticaNeue-Thin', 'Helvetica', 'Roboto', 'Arial', 'sans-serif';
+	// font-weight: light;
+	// font-family: 'HelveticaNeue-Thin', 'Helvetica', 'Roboto', 'Arial', 'sans-serif';
 }
 
 .image-caption {

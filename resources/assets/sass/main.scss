@@ -39,7 +39,8 @@ main > section > article {
 }
 
 footer {
-	background: $black;
+	background: $accent-color;
+	margin-top: 2rem;
 	a.back-to-top-link {
 		color: white;
 		display: block;

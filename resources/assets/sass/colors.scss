@@ -8,14 +8,15 @@ $beige:     #efeadf;
 $red:       #ca3b26;
 $orange:    #EF9464;
 $yellow:    #FFEE96;
+$gold:      #e2bb3a;
 $green:     #57ca66;
-$baby-blue: #78c0ca;
-$blue:      #1B81B6;
+$baby-blue: #91d8f1;
+$blue:      #468aaf;
 $purple:    #B783FB;
 $pink:      #d24A9C;
 $grey:      #606060;
-$black:     #2D2D2D;
-$white:     #FEFDFD;
+$black:     #222222;
+$white:     #fffcfb;
 $very-light-grey: #F5F5F5;
 $greenish-grey: #D8E1E1;
 //606060
@@ -49,19 +50,21 @@ $light-white:     mix($white,     white, 50%);
 //===========================================================================//
 //																 SITE COLORS 															 //
 //===========================================================================//
+$primary-color:         $blue;
+$info-color:            $baby-blue;
+$accent-color:          $gold;
+
 $checkout-breadcrumbs-bg: $white;
 $section-header-bg:     $beige;
 $bg-color:         	    $very-light-grey;
 $text-color:         	  mix($grey, white, 90%);
 $text-color-inverted:   $white;
 $inverted-text-color:   $grey;
-$primary-color:         $blue;
 $dark-primary-color:    mix($primary-color,   black, 90%);
 $secondary-color:       $grey;
 $alert-color:           $red;
 $success-color:         $green;
 $warning-color:         $orange;
-$info-color:            $baby-blue;
 $alternate-color:       #B187C9;
 $alternate-color-hover: #9F53CA;
 
