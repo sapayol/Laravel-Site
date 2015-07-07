@@ -4,204 +4,93 @@
 	SAPAYOL | {{{ $jacket->name }}}
 @stop
 
+@section('angular_page_controller')
+	ng-controller="lookAndFitCtrl"
+@stop
 
 @section('main')
 
-	<section class="large-8 medium-8 small-12 columns text-center">
-		<br>
-		<img src="/images/photos/jacket-1.jpg">
-		<h1 class="with-subheading">{{{ $jacket->name }}}</h1>
-		<span class="thin large-price">{{{ floor($jacket->price) }}}<small> USD</small></span>
-	</section>
+	<section>
+		<div class="large-12 medium-12 small-12 columns">
+			<h2 class="thin text-center">Choose Your Look &amp; Fit </h2>
 
-	<div class="large-4 medium-4 small-12 columns">
-		<ul class="no-bullet">
-			<li><small>Leather Type: </small> @{{ leather_type }}</li>
-			<li><small>Leather Color: </small>@{{ leather_color }}</li>
-			<li><small>Lining Color: </small>@{{ lining_color }}</li>
-			<li><small>Hardware Color: </small>@{{ hardware_color }}</li>
-		</ul>
-	</div>
+			<img class="customization-image" src="/images/photos/jacket-1.jpg">
+			<div class="large-12 medium-12 small-12 columns look-options">
+				<h3 class="left"><small>Leather Type</small></h3>
+				@if ($jacket->leather_types()->count() > 1)
+					<ul class="right button-group">
+						@foreach ($jacket->leather_types() as $leather_type)
+					  	<li><a class="button small" ng-class="{active: jacket.leather_type == '{{{ $leather_type->name}}}' }" ng-click="jacket.leather_type = '{{{ $leather_type->name }}}'">{{{ $leather_type->name }}}</a></li>
+						@endforeach
+					</ul>
+				@else
+					{{{ $jacket->leather_types()->first()->name }}}
+				@endif
+			</div>
 
-	<section class="large-12 medium-12 small-12 columns">
-		<h2 class="thin">Choose Your Look</h2>
+			<div class="large-12 medium-12 small-12 columns look-options">
+				<h3 class="left"><small>Leather Color</small></h3>
+				@if ($jacket->leather_colors()->count() > 1)
+					<ul class="right button-group">
+						@foreach ($jacket->leather_colors() as $leather_color)
+							@if ($leather_color->name != 'navy' && $leather_color->name != 'olive')
+					  	<li><a class="button small" ng-class="{active: jacket.leather_color == '{{{ $leather_color->name}}}' }" ng-click="jacket.leather_color = '{{{ $leather_color->name }}}'">{{{ $leather_color->name }}}</a></li>
+							@endif
+						@endforeach
+					</ul>
+				@else
+					{{{ $jacket->leather_colors()->first()->name }}}
+				@endif
+			</div>
 
-		<div class="large-6 medium-6 small-12 columns">
-			<h4><small>Leather Type</small></h4>
-			@if ($jacket->leather_types()->count() > 1)
-				<ul class="button-group look-options">
-					@foreach ($jacket->leather_types() as $leather_type)
-				  	<li><a class="button small" ng-class="{active: leather_type == '{{{ $leather_type->name}}}' }" ng-click="leather_type = '{{{ $leather_type->name }}}'">{{{ $leather_type->name }}}</a></li>
-					@endforeach
-				</ul>
-			@else
-				{{{ $jacket->leather_types()->first()->name }}}
-			@endif
+			<div class="large-12 medium-12 small-12 columns look-options">
+				<h3 class="left"><small>Lining Color</small></h3>
+				@if ($jacket->lining_colors()->count() > 1)
+					<ul class="right button-group">
+						@foreach ($jacket->lining_colors() as $lining_color)
+					  	<li><a class="button small" ng-class="{active: jacket.lining_color == '{{{ $lining_color->name}}}' }" ng-click="jacket.lining_color = '{{{ $lining_color->name }}}'">{{{ $lining_color->name }}}</a></li>
+						@endforeach
+					</ul>
+				@else
+					{{{ $jacket->lining_colors()->first()->name }}}
+				@endif
+			</div>
+
+			<div class="large-12 medium-12 small-12 columns look-options">
+				<h3 class="left"><small>Hardware Color</small></h3>
+				@if ($jacket->hardware_colors()->count() > 1)
+					<ul class="right button-group">
+						@foreach ($jacket->hardware_colors() as $hardware_color)
+					  	<li><a class="button small" ng-class="{active: jacket.hardware_color == '{{{ $hardware_color->name }}}' }" ng-click="jacket.hardware_color = '{{{ $hardware_color->name }}}'">{{{ $hardware_color->name }}}</a></li>
+						@endforeach
+					</ul>
+				@else
+					{{{ $jacket->hardware_colors()->first()->name }}}
+				@endif
+			</div>
 		</div>
 
-		<div class="large-6 medium-6 small-12 columns">
-			<h4><small>Leather Color</small></h4>
-			@if ($jacket->leather_colors()->count() > 1)
-				<ul class="button-group look-options">
-					@foreach ($jacket->leather_colors() as $leather_color)
-				  	<li><a class="button small" ng-class="{active: leather_color == '{{{ $leather_color->name}}}' }" ng-click="leather_color = '{{{ $leather_color->name }}}'">{{{ $leather_color->name }}}</a></li>
-					@endforeach
-				</ul>
-			@else
-				{{{ $jacket->leather_colors()->first()->name }}}
-			@endif
-		</div>
-
-		<div class="large-6 medium-6 small-12 columns">
-			<h4><small>Lining Color</small></h4>
-			@if ($jacket->lining_colors()->count() > 1)
-				<ul class="button-group look-options">
-					@foreach ($jacket->lining_colors() as $lining_color)
-				  	<li><a class="button small" ng-class="{active: lining_color == '{{{ $lining_color->name}}}' }" ng-click="lining_color = '{{{ $lining_color->name }}}'">{{{ $lining_color->name }}}</a></li>
-					@endforeach
-				</ul>
-			@else
-				{{{ $jacket->lining_colors()->first()->name }}}
-			@endif
-		</div>
-
-		<div class="large-6 medium-6 small-12 columns">
-			<h4><small>Hardware Color</small></h4>
-			@if ($jacket->hardware_colors()->count() > 1)
-				<ul class="button-group look-options">
-					@foreach ($jacket->hardware_colors() as $hardware_color)
-				  	<li><a class="button small" ng-class="{active: hardware_color == '{{{ $hardware_color->name}}}' }" ng-click="hardware_color = '{{{ $hardware_color->name }}}'">{{{ $hardware_color->name }}}</a></li>
-					@endforeach
-				</ul>
-			@else
-				{{{ $jacket->hardware_colors()->first()->name }}}
-			@endif
+		<div>
+			@include('02-organisms.jacket.measurement-table')
 		</div>
 	</section>
 
-
-	<div class="large-12 medium-12 small-12 columns" ng-init="units = 'inches'">
-		<h2 class="thin">
-			Choose Your Fit (
-			<small><strong>
-				<span ng-show="units == 'inches'">Cm</span>
-				<span ng-show="units == 'cm'">Inches</span>
-			</strong></small>
-			)
-		</h2>
-		<a href="" ng-show="units == 'cm'" ng-click="units = 'inches' ">View in Cm</a>
-		<a href="" ng-show="units == 'inches'" ng-click="units = 'cm' ">View in Inches</a>
-			<table>
-				<tbody>
-						<tr>
-							<td>Size</td>
-							@foreach ($measurements as $measurement)
-								<th>{{{ intval($measurement->size) }}}</th>
-							@endforeach
-						</tr>
-						<tr>
-							<td>Shoulders Front</td>
-							@foreach ($measurements as $measurement)
-								<td ng-show="units == 'cm'">{{{ $measurement->shoulders_front }}}</td>
-								<td ng-show="units == 'inches'">{{{ round($measurement->shoulders_front * 2.54, 2) }}}</td>
-							@endforeach
-						</tr>
-						<tr>
-							<td>Pits_across</td>
-							@foreach ($measurements as $measurement)
-								<td ng-show="units == 'cm'">{{{ $measurement->pits_across }}}</td>
-								<td ng-show="units == 'inches'">{{{ round($measurement->pits_across * 2.54, 2) }}}</td>
-							@endforeach
-						</tr>
-						<tr>
-							<td>Mid</td>
-							@foreach ($measurements as $measurement)
-								<td ng-show="units == 'cm'">{{{ $measurement->mid }}}</td>
-								<td ng-show="units == 'inches'">{{{ round($measurement->mid * 2.54, 2) }}}</td>
-							@endforeach
-						</tr>
-						<tr>
-							<td>Waist</td>
-							@foreach ($measurements as $measurement)
-								<td ng-show="units == 'cm'">{{{ $measurement->waist }}}</td>
-								<td ng-show="units == 'inches'">{{{ round($measurement->waist * 2.54, 2) }}}</td>
-							@endforeach
-						</tr>
-						<tr>
-							<td>Front_length</td>
-							@foreach ($measurements as $measurement)
-								<td ng-show="units == 'cm'">{{{ $measurement->front_length }}}</td>
-								<td ng-show="units == 'inches'">{{{ round($measurement->front_length * 2.54, 2) }}}</td>
-							@endforeach
-						</tr>
-						<tr>
-							<td>Back_length</td>
-							@foreach ($measurements as $measurement)
-								<td ng-show="units == 'cm'">{{{ $measurement->back_length }}}</td>
-								<td ng-show="units == 'inches'">{{{ round($measurement->back_length * 2.54, 2) }}}</td>
-							@endforeach
-						</tr>
-						<tr>
-							<td>Sleeve_length</td>
-							@foreach ($measurements as $measurement)
-								<td ng-show="units == 'cm'">{{{ $measurement->sleeve_length }}}</td>
-								<td ng-show="units == 'inches'">{{{ round($measurement->sleeve_length * 2.54, 2) }}}</td>
-							@endforeach
-						</tr>
-						<tr>
-							<td>Width_at_pit</td>
-							@foreach ($measurements as $measurement)
-								<td ng-show="units == 'cm'">{{{ $measurement->width_at_pit }}}</td>
-								<td ng-show="units == 'inches'">{{{ round($measurement->width_at_pit * 2.54, 2) }}}</td>
-							@endforeach
-						</tr>
-						<tr>
-							<td>Width_at_elbow</td>
-							@foreach ($measurements as $measurement)
-								<td ng-show="units == 'cm'">{{{ $measurement->width_at_elbow }}}</td>
-								<td ng-show="units == 'inches'">{{{ round($measurement->width_at_elbow * 2.54, 2) }}}</td>
-							@endforeach
-						</tr>
-						<tr>
-							<td>Width_at_cuff</td>
-							@foreach ($measurements as $measurement)
-								<td ng-show="units == 'cm'">{{{ $measurement->width_at_cuff }}}</td>
-								<td ng-show="units == 'inches'">{{{ round($measurement->width_at_cuff * 2.54, 2) }}}</td>
-							@endforeach
-						</tr>
-						<tr>
-							<td>&nbsp;</td>
-							@foreach ($measurements as $measurement)
-								<td><a href="" ng-click="selectedSize = {{{ $measurement->size }}}" class="tiny radius">Select</a></td>
-							@endforeach
-						</tr>
-				</tbody>
-			</table>
+	<div class="large-12 medium-12 small-12 columns">
+		<form action="/checkout" method="GET">
+			<input type="hidden" name="model"          value="{{{ $jacket->model }}}">
+			<input type="hidden" name="leather_type"   value="@{{ jacket.leather_type }}">
+			<input type="hidden" name="leather_color"  value="@{{ jacket.leather_color }}">
+			<input type="hidden" name="lining_color"   value="@{{ jacket.lining_color }}">
+			<input type="hidden" name="hardware_color" value="@{{ jacket.hardware_color }}">
+			<input type="hidden" name="size"           value="@{{ jacket.size }}">
+			<button class="black button expand">Proceed To Checkout</button>
+		</form>
 	</div>
 
 
 @stop
 
 
-
-@section('footer')
-	<div class="alert-box info" data-alert>
-	  <h3><strong><small>Page Description</small></strong></h3>
-		<h4>
-			<small>
-				Here's where a user sees all available options
-			</small>
-		</h4>
-
-		<h3><strong><small>Purpose Served</small></strong></h3>
-		<h4>
-			<small>
-				Visualize design choices and help people make their selection. Get them excited about their ""creation"".
-			</small>
-		</h4>
-		<a href="#" class="close">&times;</a>
-	</div>
-@stop
 
 
 
