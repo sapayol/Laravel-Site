@@ -13,8 +13,8 @@
     <li class="{!! Request::is('jackets/bomber') ? 'active' : '' !!}">
       <a href="/jackets/bomber">Our Signature Jacket</a>
     </li>
-    @if (Request::is('jackets/*/*'))
-      <li class="{!! Request::is('jackets/*/*') ? 'active' : '' !!}">
+    @if (Request::is('jackets/*/*') || Request::is('checkout'))
+      <li class="{!! Request::is('checkout') ? 'active' : '' !!}">
         <a href="/jackets/bomber/look">Your Order</a>
       </li>
     @endif
