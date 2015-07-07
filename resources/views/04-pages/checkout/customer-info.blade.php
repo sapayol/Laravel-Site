@@ -4,47 +4,27 @@
 	{{{ $jacket->name }}}
 @stop
 
+@section('angular_page_controller')
+	ng-controller="checkoutCtrl"
+@stop
+
 @section('main')
 	<section class="large-12 medium-12 small-12 columns">
+		<h2 class="text-center thin">Your Info</h2>
+		@include('03-templates.checkout.user-info-form')
+	</section>
+
+	<section class="large-12 medium-12 small-12 columns" ng-show="userInfoSubmitted">
 		<h2 class="text-center thin">Shipping Info</h2>
-		<form action="">
-			<label for="">Address 1
-				<input type="text">
-			</label>
-			<label for="">Address 2
-				<input type="text">
-			</label>
-			<label for="">City
-				<input type="text">
-			</label>
-			<label for="">Province / State
-				<input type="text">
-			</label>
-			<label for="">Postcode
-				<input type="text">
-			</label>
-			<label for="">Country
-				<input type="text">
-			</label>
-		</form>
+		@include('03-templates.checkout.shipping-info-form')
 	</section>
 
-	<section class="large-12 medium-12 small-12 columns">
+	<section class="large-12 medium-12 small-12 columns" ng-show="shippingInfoSubmitted">
 		<h2 class="text-center thin">Payment Info</h2>
-		<form action="">
-			<label for="">Credit Card Number
-				<input type="text">
-			</label>
-			<label for="">Expiration
-				<input type="text">
-			</label>
-			<label for="">CVC <small><a class="underlined" href="">What's This?</a></small>
-				<input type="text">
-			</label>
-		</form>
+		@include('03-templates.checkout.payment-info-form')
 	</section>
 
-	<section class="large-12 medium-12 small-12 columns">
+	<section class="large-12 medium-12 small-12 columns" ng-show="checkoutStep == 4">
 		<h2 class="text-center thin">Summary</h2>
 		<br>
 		<ul class="no-bullet value-list left">
@@ -58,7 +38,7 @@
 		<img class="checkout-image right" src="/images/photos/jacket-1.jpg">
 	</section>
 
-	<section class="large-12 medium-12 small-12 columns">
+	<section class="large-12 medium-12 small-12 columns" ng-show="checkoutStep == 4">
 		<a href="/jackets/{{{$jacket->model}}}/checkout/complete" class="button expand success">Order Now</a>
 	</section>
 
