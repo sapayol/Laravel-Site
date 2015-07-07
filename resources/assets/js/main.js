@@ -3,6 +3,9 @@
 
   var sapayolApp = angular.module('sapayolApp', [
     'controllers',
+    'duScroll',
+    'angularPayments',
+    'angular-loading-bar',
   ])
   .run(['$timeout', function($timeout) {
     $timeout(function() {
