@@ -1,3 +1,19 @@
+@font-face {
+  font-family: Nitti;
+  font-weight: 100;
+  src: url("/fonts/Nitti-Light.otf") format("opentype"); }
+@font-face {
+  font-family: Nitti;
+  font-weight: 300;
+  src: url("/fonts/Nitti-Normal.otf") format("opentype"); }
+@font-face {
+  font-family: Nitti;
+  font-weight: 500;
+  src: url("/fonts/Nitti-Medium.otf") format("opentype"); }
+@font-face {
+  font-family: Nitti;
+  font-weight: 900;
+  src: url("/fonts/Nitti-Bold.otf") format("opentype"); }
 .chevron {
   display: block;
   width: 30px;
@@ -38,7 +54,7 @@
   top: 1.8rem;
   height: 2px; }
 .switch.large .switch-text {
-  color: #6f6f6f;
+  color: #707070;
   font-size: .9rem;
   position: absolute;
   top: .6rem;
@@ -111,20 +127,41 @@ input[type="search"], input[type="tel"], input[type="color"] {
   .measurement-table h3 {
     padding-left: 1.2rem;
     font-size: .85rem;
-    color: #6f6f6f; }
+    color: #707070; }
 
-.button.black {
-  box-shadow: 0 4px 0 black;
-  background: #222222;
+a {
+  color: #B02428; }
+  a:hover {
+    color: #70171a; }
+
+.button, a.button, button.button {
+  font-family: Nitti, HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-weight: 500;
   font-size: 1.2rem;
-  -webkit-transition: all 150ms ease-in;
-          transition: all 150ms ease-in; }
-  .button.black:hover {
-    background: #222222; }
-  .button.black:active {
-    box-shadow: none;
+  border: 1px solid transparent;
+  border-bottom: 5px solid black;
+  border-radius: 0;
+  color: white;
+  background: #B02428; }
+  .button:hover, a.button:hover, button.button:hover {
+    background: transparent;
+    border-bottom: 5px solid #B02428;
+    border-color: black;
+    color: black; }
+  .button:active, a.button:active, button.button:active {
+    background: transparent;
+    border-bottom: 1px solid black;
     position: relative;
     top: 3px; }
+  .button.hollow, a.button.hollow, button.button.hollow {
+    color: black;
+    background: transparent;
+    border: 1px solid black;
+    border-bottom: 5px solid #B02428; }
+    .button.hollow:hover, a.button.hollow:hover, button.button.hollow:hover {
+      background: #B02428;
+      color: white;
+      border-color: #B02428; }
 
 .call-to-action {
   margin: 2rem 0 1.25rem 0; }
@@ -156,10 +193,12 @@ input[type="search"], input[type="tel"], input[type="color"] {
 
 html, body {
   font-size: 18px;
-  font-family: 'Quattrocento Sans', sans-serif; }
+  font-family: Nitti, HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-weight: 500; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oswald', sans-serif; }
+  font-family: Nitti, HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-weight: 100; }
 
 h1 {
   font-size: 2.45rem; }
@@ -217,8 +256,6 @@ h1 {
     nav.primary-nav .logo img {
       width: 15rem;
       padding-bottom: 2rem; }
-    nav.primary-nav li {
-      background: #e2bb3a; }
     nav.primary-nav li.active {
       font-weight: bold;
       background: black; }

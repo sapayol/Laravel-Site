@@ -1,10 +1,12 @@
 html, body {
 	font-size: 18px;
-	font-family: 'Quattrocento Sans', sans-serif;
+	font-family: Nitti, HelveticaNeue, Helvetica, Arial, sans-serif;
+	font-weight: 500;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Oswald', sans-serif;
+	font-family: Nitti, HelveticaNeue, Helvetica, Arial, sans-serif;
+	font-weight: 100;
 }
 
 h1 {
@@ -29,11 +31,6 @@ h1 {
 
 .underlined {
 	text-decoration: underline;
-}
-
-.thin {
-	// font-weight: light;
-	// font-family: 'HelveticaNeue-Thin', 'Helvetica', 'Roboto', 'Arial', 'sans-serif';
 }
 
 .image-caption {
