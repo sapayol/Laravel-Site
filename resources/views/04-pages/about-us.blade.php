@@ -7,14 +7,12 @@
 @section('main')
 
 	<section class="large-12 medium-12 small-12 columns">
-		<h1>Who We Are</h1>
-		<p>Regular doesn’t fit you.</p>
-		<p>Something about the way you’re supposed to do things doesn’t feel right. The instructions you’re given don’t produce the results you have in mind. And while this might be the shortest path, it’s not the most exciting.</p>
+		<p>Something about the way you’re supposed to do things doesn't feel right. The instructions you’re given don’t produce the results you have in mind. And while this might be the shortest path, it’s not the most exciting.</p>
 		<p>You’re curious about what’s behind that door.<br>
 		You don’t back down.<br>
-		You make your own tools.<br>
 		You approach it from a different angle.<br>
 		You find your own way.</p>
+		<p>Regular doesn’t fit you.</p>
 		<p>We understand.</p>
 		<p>It’s the same urge that motivates us to design leather jackets without compromises, to create a company that does things the right way.</p>
 		<p>SAPAYOL: Turkish for “the road less traveled by”</p>

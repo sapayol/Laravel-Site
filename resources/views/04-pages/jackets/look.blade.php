@@ -20,7 +20,7 @@
 				@if ($jacket->leather_types()->count() > 1)
 					<ul class="right button-group">
 						@foreach ($jacket->leather_types() as $leather_type)
-					  	<li><a class="button small" ng-class="{active: jacket.leather_type == '{{{ $leather_type->name}}}' }" ng-click="jacket.leather_type = '{{{ $leather_type->name }}}'">{{{ $leather_type->name }}}</a></li>
+					  	<li><a class="button tiny" ng-class="{active: jacket.leather_type == '{{{ $leather_type->name}}}' }" ng-click="jacket.leather_type = '{{{ $leather_type->name }}}'">{{{ $leather_type->name }}}</a></li>
 						@endforeach
 					</ul>
 				@else
@@ -34,7 +34,7 @@
 					<ul class="right button-group">
 						@foreach ($jacket->leather_colors() as $leather_color)
 							@if ($leather_color->name != 'navy' && $leather_color->name != 'olive')
-					  	<li><a class="button small" ng-class="{active: jacket.leather_color == '{{{ $leather_color->name}}}' }" ng-click="jacket.leather_color = '{{{ $leather_color->name }}}'">{{{ $leather_color->name }}}</a></li>
+					  	<li><a class="button tiny" ng-class="{active: jacket.leather_color == '{{{ $leather_color->name}}}' }" ng-click="jacket.leather_color = '{{{ $leather_color->name }}}'">{{{ $leather_color->name }}}</a></li>
 							@endif
 						@endforeach
 					</ul>
@@ -48,7 +48,7 @@
 				@if ($jacket->lining_colors()->count() > 1)
 					<ul class="right button-group">
 						@foreach ($jacket->lining_colors() as $lining_color)
-					  	<li><a class="button small" ng-class="{active: jacket.lining_color == '{{{ $lining_color->name}}}' }" ng-click="jacket.lining_color = '{{{ $lining_color->name }}}'">{{{ $lining_color->name }}}</a></li>
+					  	<li><a class="button tiny" ng-class="{active: jacket.lining_color == '{{{ $lining_color->name}}}' }" ng-click="jacket.lining_color = '{{{ $lining_color->name }}}'">{{{ $lining_color->name }}}</a></li>
 						@endforeach
 					</ul>
 				@else
@@ -61,7 +61,7 @@
 				@if ($jacket->hardware_colors()->count() > 1)
 					<ul class="right button-group">
 						@foreach ($jacket->hardware_colors() as $hardware_color)
-					  	<li><a class="button small" ng-class="{active: jacket.hardware_color == '{{{ $hardware_color->name }}}' }" ng-click="jacket.hardware_color = '{{{ $hardware_color->name }}}'">{{{ $hardware_color->name }}}</a></li>
+					  	<li><a class="button tiny" ng-class="{active: jacket.hardware_color == '{{{ $hardware_color->name }}}' }" ng-click="jacket.hardware_color = '{{{ $hardware_color->name }}}'">{{{ $hardware_color->name }}}</a></li>
 						@endforeach
 					</ul>
 				@else
@@ -70,12 +70,12 @@
 			</div>
 		</div>
 
-		<div>
-			@include('02-organisms.jacket.measurement-table')
+{{-- 		<div class="large-12 medium-12 small-12 columns">
+			<button class="black button expand">Enter Your Measurements</button>
 		</div>
-	</section>
+ --}}	</section>
 
-	<div class="large-12 medium-12 small-12 columns">
+	<div class="large-12 medium-12 small-12 columns text-center ">
 		<form action="/checkout" method="GET">
 			<input type="hidden" name="model"          value="{{{ $jacket->model }}}">
 			<input type="hidden" name="leather_type"   value="@{{ jacket.leather_type }}">
@@ -83,7 +83,8 @@
 			<input type="hidden" name="lining_color"   value="@{{ jacket.lining_color }}">
 			<input type="hidden" name="hardware_color" value="@{{ jacket.hardware_color }}">
 			<input type="hidden" name="size"           value="@{{ jacket.size }}">
-			<button class="black button expand">Proceed To Checkout</button>
+			<a href="/fit" class="black button expand">Enter Your Measurements</a>
+			<a href="" class="underlined under-button-link">Order Now and Measure Later</a><br>
 		</form>
 	</div>
 

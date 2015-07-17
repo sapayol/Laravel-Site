@@ -6,30 +6,32 @@ a {
 }
 .button, a.button, button.button {
 	font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
-	font-weight: 500;
+	font-weight: 300;
 	font-size: 1.2rem;
 	border: 1px solid transparent;
-	border-bottom: 5px solid black;
+	border-bottom: 6px solid $primary-color;
 	border-radius: 0;
 	color: white;
-	background: $primary-color;
+	background: $black;
+	text-transform: uppercase;
+	letter-spacing: 1.2;
 	&:hover {
 		background: transparent;
-		border-bottom: 5px solid $primary-color;
-		border-color: black;
-		color: black;
+		border-bottom: 6px solid $primary-color;
+		border-color: $black;
+		color: $black;
 	}
 	&:active {
 		background: transparent;
-		border-bottom: 1px solid black;
+		border-bottom: 1px solid $black;
 		position: relative;
 		top: 3px;
 	}
 	&.hollow {
-		color: black;
+		color: $black;
 		background: transparent;
-		border: 1px solid black;
-		border-bottom: 5px solid $primary-color;
+		border: 1px solid $black;
+		border-bottom: 6px solid $primary-color;
 		&:hover {
 			background: $primary-color;
 			color: white;
@@ -42,32 +44,32 @@ a {
 	margin: 2rem 0 1.25rem 0;
 }
 
-.look-options {
-	padding-right: 0;
-	& > ul {
-		position: relative;
-		&.button-group > li > .button {
-			border: 1px solid grey;
-		}
-		.button {
-			padding: .5rem .9rem;
-			text-transform: capitalize;
-			background: transparent;
-			color: $black;
-			position: relative;
-			right: -.5rem;
-			transition: all 150ms ease-in;
-			top: 3px;
-			&:active, &.active {
-				border: 1px solid white !important;
-				border-right: none !important;
-				border-bottom: none !important;
-				background: black;
-				color: $white;
-				top: 0;
-				// box-shadow: none;
-				box-shadow: 4px 4px 0 lightgrey;
-			}
-		}
-	}
-}
+// .look-options {
+// 	padding-right: 0;
+// 	& > ul {
+// 		position: relative;
+// 		&.button-group > li > .button {
+// 			border: 1px solid grey;
+// 		}
+// 		.button {
+// 			padding: .5rem .9rem;
+// 			text-transform: capitalize;
+// 			background: transparent;
+// 			color: $black;
+// 			position: relative;
+// 			right: -.5rem;
+// 			transition: all 150ms ease-in;
+// 			top: 3px;
+// 			&:active, &.active {
+// 				border: 1px solid white !important;
+// 				border-right: none !important;
+// 				border-bottom: none !important;
+// 				background: black;
+// 				color: $white;
+// 				top: 0;
+// 				// box-shadow: none;
+// 				box-shadow: 4px 4px 0 lightgrey;
+// 			}
+// 		}
+// 	}
+// }

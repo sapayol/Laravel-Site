@@ -1,7 +1,11 @@
 <nav class="primary-nav" role="navigation">
   <a href="/home" class="logo left"><img src="/images/logo-black.svg" alt="Sapayol Logo"></a></li>
-  <a href="" class="right menu-button" ng-click="displayMenu = !displayMenu">MENU <i class="fa fa-bars"></i></a>
+  {{-- <a href="" class="right menu-button" ng-click="displayMenu = !displayMenu">MENU <i class="fa fa-bars"></i></a> --}}
+  <a href="" class="right menu-button" ng-class="{open: displayMenu}" ng-click="displayMenu = !displayMenu">MENU </a>
   <div class="clearfix"></div>
+  <div class="left">HOW IT WORKS</div>
+  <div class="clearfix"></div>
+
   <ul class="no-bullet">
     {{-- <li class="{!! Request::is('jackets') ? 'active' : '' !!}"> --}}
       {{-- <a href="/jackets">Our Jackets</a> --}}
