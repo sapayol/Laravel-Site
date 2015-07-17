@@ -1,15 +1,40 @@
-.button.black {
-	box-shadow: 0 4px 0 black;
-	background: $black;
-	font-size: 1.2rem;
-	transition: all 150ms ease-in;
+a {
+	color: $primary-color;
 	&:hover {
-		background: $black;
+		color: darken($primary-color, 15%);
+	}
+}
+.button, a.button, button.button {
+	font-family: Nitti, HelveticaNeue, Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	font-size: 1.2rem;
+	border: 1px solid transparent;
+	border-bottom: 5px solid black;
+	border-radius: 0;
+	color: white;
+	background: $primary-color;
+	&:hover {
+		background: transparent;
+		border-bottom: 5px solid $primary-color;
+		border-color: black;
+		color: black;
 	}
 	&:active {
-		box-shadow: none;
+		background: transparent;
+		border-bottom: 1px solid black;
 		position: relative;
 		top: 3px;
+	}
+	&.hollow {
+		color: black;
+		background: transparent;
+		border: 1px solid black;
+		border-bottom: 5px solid $primary-color;
+		&:hover {
+			background: $primary-color;
+			color: white;
+			border-color: $primary-color;
+		}
 	}
 }
 
