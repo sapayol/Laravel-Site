@@ -20,4 +20,4 @@
 
 	<body>
 
-		<div "@yield('angular_page_controller')" class="container">
+		<div "@yield('angular_page_controller')">

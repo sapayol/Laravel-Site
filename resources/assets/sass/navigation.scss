@@ -1,16 +1,23 @@
 @media only screen {
 	nav.primary-nav {
 		text-align: center;
-		padding-top: 2rem;
+		padding: 1rem 1rem;
 		.logo {
 			img {
-				width: 15rem;
+				width: 10rem;
 				padding-bottom: 2rem;
 			}
 		}
-		li {
-			background: $accent-color;
-			// background: $grey;
+		.menu-button {
+			border: 1px solid black;
+			font-size: 1.25rem;
+			padding: .05rem .3rem;
+			position: relative;
+			top: -.3rem;
+			i {
+				position: relative;
+				top: .075rem;
+			}
 		}
 		li.active {
 			font-weight: bold;

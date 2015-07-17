@@ -8,10 +8,10 @@
 	<section class="large-12 medium-12 small-12 columns">
 		<h1>How It Works</h1>
 		<p>Every SAPAYOL leather jacket is made for you, and no one else. We tailor each piece according to your measurements and your customizations and then ship it directly from the atelier to your door.</p>
-		<p><strong>The following is kind of a process overview / flow chart, with pictograms to be added</strong></p>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns">
+		<p><strong>The following is kind of a process overview / flow chart, with pictograms to be added</strong></p>
 		<h3>1. Choose your model</h3>
 		<h3>2. Customize it</h3>
 		<p>For every model, you can choose hardware and lining colors.</p>

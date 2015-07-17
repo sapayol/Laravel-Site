@@ -14,6 +14,38 @@
   font-family: Nitti;
   font-weight: 900;
   src: url("/fonts/Nitti-Bold.otf") format("opentype"); }
+.page-wrap {
+  border-top: 1px solid #e2e2e2;
+  background: white;
+  -webkit-transition: all .4s ease;
+          transition: all .4s ease;
+  position: relative;
+  z-index: 9999;
+  top: -10.5rem; }
+  .page-wrap.descended {
+    top: 0; }
+
+.centered {
+  width: 60%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.flex-video {
+  margin-bottom: 1rem; }
+
+main > section {
+  margin-bottom: 1rem;
+  margin-top: 1rem; }
+
+main > section > article {
+  margin-bottom: 4rem;
+  margin-top: 3rem; }
+
 .chevron {
   display: block;
   width: 30px;
@@ -252,10 +284,19 @@ h1 {
 @media only screen {
   nav.primary-nav {
     text-align: center;
-    padding-top: 2rem; }
+    padding: 1rem 1rem; }
     nav.primary-nav .logo img {
-      width: 15rem;
+      width: 10rem;
       padding-bottom: 2rem; }
+    nav.primary-nav .menu-button {
+      border: 1px solid black;
+      font-size: 1.25rem;
+      padding: .05rem .3rem;
+      position: relative;
+      top: -.3rem; }
+      nav.primary-nav .menu-button i {
+        position: relative;
+        top: .075rem; }
     nav.primary-nav li.active {
       font-weight: bold;
       background: black; }
@@ -279,27 +320,6 @@ h1 {
   height: 45rem; }
   .carousel-container .home-carousel {
     margin-bottom: 0; }
-
-.centered {
-  width: 60%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
-
-.flex-video {
-  margin-bottom: 1rem; }
-
-main > section {
-  margin-bottom: 1rem;
-  margin-top: 1rem; }
-
-main > section > article {
-  margin-bottom: 4rem;
-  margin-top: 3rem; }
 
 footer {
   background: #e2bb3a;
