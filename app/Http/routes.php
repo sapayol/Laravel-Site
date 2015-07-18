@@ -13,7 +13,7 @@
 
 Route::get('/',                         				 ['uses' => 'PagesController@comingSoon',          'as' => 'pages.coming-soon']);
 Route::get('/home',                         		 ['uses' => 'PagesController@index',               'as' => 'pages.home']);
-Route::get('/who-we-are',                        ['uses' => 'PagesController@about',               'as' => 'pages.about']);
+Route::get('/who-we-are',                        ['uses' => 'PagesController@whoWeAre',            'as' => 'pages.who-we-are']);
 Route::get('/how-it-works',                      ['uses' => 'PagesController@howItWorks',          'as' => 'pages.how-it-works']);
 
 Route::resource('jackets', 'JacketsController');

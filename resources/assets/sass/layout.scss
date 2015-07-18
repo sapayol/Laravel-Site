@@ -1,10 +1,13 @@
 .page-wrap {
-	border-top: 1px solid #e2e2e2;
-	background: white;
+	background: $white;
 	transition: all .4s ease;
 	position: relative;
 	z-index: 9999;
-	top: -8rem;
+	top: -4rem;
+	margin-top: .5rem;
+	&.on-home-page {
+		top: -5.8rem;
+	}
 	&.descended {
 		top: 0;
 	}

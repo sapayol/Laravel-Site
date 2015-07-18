@@ -2,47 +2,41 @@
 	nav.primary-nav {
 		text-align: left;
 		padding: 1rem 1rem;
+		padding-bottom: 0;
 		.logo {
 			border: none;
-			margin-bottom: 0;
+			margin-bottom: .5rem;
 			img {
 				width: 10rem;
-				// padding-bottom: 2rem;
 			}
 		}
 		.menu-button {
 			color: $black;
 			border-bottom: 3px solid $primary-color;
 			font-size: 1.25rem;
-			// padding: .05rem .3rem;
-			padding-bottom: 0;
-			position: relative;
-			top: -.3rem;
-			i {
-				position: relative;
-				top: .075rem;
-			}
+			line-height: 1;
+			// position: relative;
+			// top: -.3rem;
 			&.open {
 				border: none;
 			}
 		}
+		ul {
+			margin-bottom: 0;
+		}
 		li {
 			margin-bottom: .5rem;
-		}
-		li.active {
-			// font-weight: bold;
-			// background: black;
-			a {
-				border: none;
-				color: $black;
-				display: none;
+			&.active a {
+					border: none;
+					color: $black;
+					display: none;
 			}
 		}
 		a {
 			color: $black;
 			border-bottom: 3px solid $primary-color;
 			font-size: 1rem;
-			font-weight: light;
+			font-weight: 500;
 			text-transform: uppercase;
 			margin-bottom: .5rem;
 		}

@@ -8,15 +8,12 @@
 @section('main')
 	<section class="small-12 medium-12 large-12 columns carousel-container">
 		<div class="home-carousel" >
-		  <div>
-		  	<img src="/images/photos/jacket-thigh-up-front-open.jpg" alt="">
-		  </div>
-		  <div>
-		  	<img src="/images/photos/jacket-thigh-up-profile-open.jpg" alt="">
-		  </div>
-		  <div>
-		  	<img src="/images/photos/jacket-thigh-up-back.jpg" alt="">
-		  </div>
+		  <div><img src="/images/photos/model-front.jpg" alt=""></div>
+		  <div><img src="/images/photos/model-right-profile-open.jpg" alt=""></div>
+		  <div><img src="/images/photos/model-right.jpg" alt=""></div>
+		  <div><img src="/images/photos/model-back.jpg" alt=""></div>
+		  <div><img src="/images/photos/model-left.jpg" alt=""></div>
+		  <div><img src="/images/photos/model-left-profile-closed.jpg" alt=""></div>
 		</div>
 	</section>
 
@@ -80,11 +77,11 @@
 
 	<section class="small-12 medium-12 large-12 columns">
 		<h2 class="thin">Places to Put Stuff</h2>
-		<a href="/images/photos/outside-pocket.jpg"><img class="sidekick-image" src="/images/photos/outside-pocket.jpg" alt=""></a>
+		<a href="/images/photos/outside-pocket.jpg"><img class="sidekick-image" src="/images/photos/pocket-inside.jpg" alt=""></a>
 		<p class="image-caption">Zippered interior chest pocket on right side</p>
 		<a href="/images/photos/inside-pocket.jpg"><img class="sidekick-image" src="/images/photos/inside-pocket.jpg" alt=""></a>
 		<p class="image-caption">Welted interior pocket on left side, parallel to zipper</p>
-		<a href="/images/photos/lining-tencel.jpg"><img class="sidekick-image" src="/images/photos/lining-tencel.jpg" alt=""></a>
+		<a href="/images/photos/lining-tencel.jpg"><img class="sidekick-image" src="/images/photos/lining-black.jpg" alt=""></a>
 		<p>All pockets are lined with a Tencel twill, a very strong yet soft fabric that prevents bacteria growth. Tencel yarn production is extremely ecological and the fabric is fully biodegradable.</p>
 	</section>
 
@@ -99,7 +96,7 @@
 
 	<section class="small-12 medium-12 large-12 columns">
 		<h2 class="thin">Breathable and Smooth</h2>
-		<a href="/images/photos/jacket-lining.jpg"><img class="sidekick-image" src="/images/photos/jacket-lining.jpg" alt=""></a>
+		<a href="/images/photos/jacket-lining.jpg"><img class="sidekick-image" src="/images/photos/lining-red.jpg" alt=""></a>
 		<p>We chose a 100% Bemberg Cupro Twill for our lining for the same reasons that has made the fabric the top choice of bespoke suit makers. No other fabric breathes as well, absorbs and releases sweat as quickly, and is at the same time as smooth as Bemberg Cupro. </p>
 		<p>You don’t feel clammy in the jacket, you can take it on and off easily, plus the fabric doesn’t build any static. It’s also more robust than other traditional lining fabrics like viscose (rayon) and acetate.</p>
 	</section>
@@ -110,7 +107,7 @@
 		<a href="/images/photos/zipper.jpg"><img class="sidekick-image" src="/images/photos/zipper.jpg" alt=""></a>
 		<p>All zippers are YKK Excella, where each tooth is individually polished, which results in a brilliance and prevents scratching of the jacket or your skin. YKK Excella zippers receive a beautiful, highly scratch-resisting coating and don’t contain Nickel. At the same time, the reliability of YKK Excella Zippers is legendary.</p>
 		<br>
-		<a href="/images/photos/buttons.jpg"><img class="sidekick-image" src="/images/photos/buttons.jpg" alt=""></a>
+		<a href="/images/photos/buttons.jpg"><img class="sidekick-image" src="/images/photos/button.jpg" alt=""></a>
 		<p>The buttons on our jackets are spring-type snaps from YKK, made purely out of nickel-free metal. They receive the same beautiful coatings as our zippers and provide reliable closure without the risk of damaging the leather when you want to open them.</p>
 		<a href="{!! route('jackets.look', $jacket->model) !!}" class="button radius expand success">Fine-tune your look</a>
 		<h2>${{{ $jacket->price }}}</h2>

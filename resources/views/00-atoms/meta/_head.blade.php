@@ -18,6 +18,4 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 	</head>
 
-	<body>
-
-		<div "@yield('angular_page_controller')">
+	<body "@yield('angular_page_controller')">

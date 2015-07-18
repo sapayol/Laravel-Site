@@ -1,4 +1,3 @@
-		</div><!-- end of angular page controller wrapper -->
 
 		<link rel="dns-prefetch" href="//js.stripe.com" />
 

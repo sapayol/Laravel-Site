@@ -1,8 +1,9 @@
+@import "colors";
 @import "fonts";
 @import "layout";
-@import "colors";
 @import "chevron";
 @import "components";
+@import "header";
 @import "hacks";
 @import "measurement-table";
 @import "buttons";
@@ -23,7 +24,7 @@ footer {
 	background: $accent-color;
 	margin-top: 2rem;
 	a.back-to-top-link {
-		color: white;
+		color: $white;
 		display: block;
 		padding-top: 2.5rem;
 		padding-bottom: 2rem;
@@ -32,7 +33,7 @@ footer {
 		}
 	}
 	.chevron {
-		border-color: white;
+		border-color: $white;
 		position: relative;
 		left: 50%;
 		margin-left: -15px;

@@ -1,13 +1,27 @@
-{!! view('00-atoms.meta._head') !!}
+<?php $action = Request::route()->getAction()['as'] ?>
 
-{!! view('01-molecules.navigation.primary-nav') !!}
+@include('00-atoms.meta._head')
 
+@include('01-molecules.navigation.primary-nav')
 
-
-
-<div class="page-wrap" ng-class="{descended: displayMenu}">
+@if ($action == 'pages.home')
+	<div class="page-wrap on-home-page" ng-class="{descended: displayMenu}">
+@else
+	<div class="page-wrap" ng-class="{descended: displayMenu}">
+@endif
 	<header class="row">
-		@yield('header')
+	  <h1 class="page-title">
+			<?php $action = Request::route()->getAction()['as'] ?>
+		  @if ($action == 'pages.who-we-are')
+				Who We Are
+			@elseif ($action == 'pages.how-it-works')
+				How It Works
+			@elseif ($action == 'jackets.show')
+			  Tailored Jackets
+			@elseif ($action == 'jackets.look')
+				@yield('title')
+		  @endif
+	  </h1>
 	</header>
 
 	<main class="row">
@@ -22,5 +36,4 @@
 	</footer>
 </div>
 
-
-{!! view('00-atoms.meta._foot') !!}
+@include('00-atoms.meta._foot')

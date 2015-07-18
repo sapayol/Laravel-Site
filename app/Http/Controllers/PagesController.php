@@ -24,9 +24,9 @@ class PagesController extends Controller {
 		return view('04-pages.home');
 	}
 
-	public function about()
+	public function whoWeAre()
 	{
-		return view('04-pages.about-us');
+		return view('04-pages.who-we-are');
 	}
 
 	public function howItWorks()
