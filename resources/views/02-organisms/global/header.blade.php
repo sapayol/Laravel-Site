@@ -1,9 +1,16 @@
-<header role="banner flex">
-	<h1 class="logo">{{ siteName }}</h1>
-	<ul>
-		<li><a href="mailto:dima@dimamarkus.com"><i class="fa fa-envelope fa-2x"></i> </a> </li>
-		<li><a href="http://github.com/dmi3000"><i class="fa fa-github fa-2x"></i> </a> </li>
-		<li><a href="http://twitter.com/dimamarkus"><i class="fa fa-twitter fa-2x"></i> </a> </li>
-		<li><a href=""><i class="fa fa-rss fa-2x"></i> </a> </li>
-	</ul>
+<header class="row">
+	<h1 class="page-title">
+		<?php $action = Request::route()->getAction()['as'] ?>
+	  @if ($action == 'pages.who-we-are')
+			Who We Are
+		@elseif ($action == 'pages.how-it-works')
+			How It Works
+		@elseif ($action == 'jackets.show')
+		  Tailored Jackets
+		@elseif ($action == 'jackets.look')
+			@yield('title')
+		@elseif ($action == 'jackets.fit')
+			@yield('title') - Fit
+	  @endif
+	</h1>
 </header>

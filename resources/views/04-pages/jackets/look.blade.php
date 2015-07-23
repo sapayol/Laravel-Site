@@ -76,14 +76,14 @@
  --}}	</section>
 
 	<div class="large-12 medium-12 small-12 columns text-center ">
-		<form action="/checkout" method="GET">
+		<form action="/jackets/{{{ $jacket->model }}}/fit" method="GET">
 			<input type="hidden" name="model"          value="{{{ $jacket->model }}}">
 			<input type="hidden" name="leather_type"   value="@{{ jacket.leather_type }}">
 			<input type="hidden" name="leather_color"  value="@{{ jacket.leather_color }}">
 			<input type="hidden" name="lining_color"   value="@{{ jacket.lining_color }}">
 			<input type="hidden" name="hardware_color" value="@{{ jacket.hardware_color }}">
 			<input type="hidden" name="size"           value="@{{ jacket.size }}">
-			<a href="/fit" class="black button expand">Enter Your Measurements</a>
+			<button class="black button expand">Enter Your Measurements</button>
 			<a href="" class="underlined under-button-link">Order Now and Measure Later</a><br>
 		</form>
 	</div>

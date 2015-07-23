@@ -4,13 +4,27 @@
 	{{{ $jacket->name }}}
 @stop
 
-@section('header')
+@section('main')
+
 	<div class="large-12 medium-12 small-12 columns">
 		<h1>{{{ $jacket->name }}}</h1>
 	</div>
-@stop
 
-@section('main')
+Shoulders
+?
+Chest
+?
+Mid
+?
+Waist
+?
+Back length
+?
+Sleeve length
+?
+Biceps
+?
+
 
 	<div class="large-8 medium-8 small-12 columns">
 		<img src="http://placehold.it/800x400&text={{{ $jacket->model }}}">
@@ -26,7 +40,7 @@
 			<li><small>Hardware Color: </small>{{ ucfirst($hardware_color) }}</li>
 			<li><small>Size: </small>@{{ selectedSize }}</li>
 		</ul>
-		<a href="{!! route('jackets.checkout', $jacket->model) !!}" class="button radius success">Order Jacket</a>
+		{{-- <a href="{!! route('jackets.checkout', $jacket->model) !!}" class="button radius success">Order Jacket</a> --}}
 	</div>
 
 	<div class="large-12 medium-12 small-12 columns" ng-init="units = 'inches'">
