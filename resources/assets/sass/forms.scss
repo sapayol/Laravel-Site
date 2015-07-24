@@ -1,8 +1,25 @@
-// Prevent auto zoom when user focuses on an input on iOS Safari
-
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"],
 input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"],
 input[type="week"], input[type="number"], input[type="email"], input[type="url"],
 input[type="search"], input[type="tel"], input[type="color"] {
 	font-size: 24px;
+}
+
+.text-input-label {
+	span {
+		position: relative;
+		top: 1.5rem;
+		padding-left: .5rem;
+	}
+	input {
+	  padding-top: 1.3rem;
+	  padding-bottom: 0;
+		height: 3rem;
+	}
+}
+
+fieldset {
+	padding-left: .5rem;
+	padding-top: .1rem;
+	height: 3rem;
 }

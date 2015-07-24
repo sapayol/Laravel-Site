@@ -1,0 +1,39 @@
+ul.measurement-tracker {
+	position: fixed;
+	bottom: 0;
+	z-index: 500;
+	margin: 0;
+	width: 19rem;
+	li {
+		padding: 0;
+	}
+	a {
+		font-size: .9rem;
+		font-weight: 300;
+		background: white;
+		color: black;
+		padding: 0;
+		width: 4.75rem;
+		height: 4rem;
+		text-align: center;
+		border: 1px solid $black;
+		border-bottom: 6px solid $primary-color;
+		display: flex;
+		margin: 0;
+		.measurement-value {
+			display: block;
+			font-weight: 500;
+			line-height: 1;
+		}
+		.measurement-units {
+			font-weight: 300;
+		}
+		&.valid {
+			border-bottom: 6px solid $success-color;
+		}
+		div {
+			margin: auto;
+		}
+
+	}
+}

@@ -13,7 +13,6 @@
 	<section>
 		<div class="large-12 medium-12 small-12 columns">
 			<h2 class="thin text-center">Choose Your Look &amp; Fit </h2>
-
 			<img class="customization-image" src="/images/photos/jacket-details.jpg">
 			<div class="large-12 medium-12 small-12 columns look-options">
 				<h3 class="left"><small>Leather Type</small></h3>
@@ -69,11 +68,7 @@
 				@endif
 			</div>
 		</div>
-
-{{-- 		<div class="large-12 medium-12 small-12 columns">
-			<button class="black button expand">Enter Your Measurements</button>
-		</div>
- --}}	</section>
+	</section>
 
 	<div class="large-12 medium-12 small-12 columns text-center ">
 		<form action="/jackets/{{{ $jacket->model }}}/fit" method="GET">

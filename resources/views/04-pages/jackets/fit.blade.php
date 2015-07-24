@@ -6,27 +6,17 @@
 
 @section('main')
 
-	<div class="large-12 medium-12 small-12 columns">
+	<section class="large-12 medium-12 small-12 columns measurement-entry">
 		<h1>{{{ $jacket->name }}}</h1>
-	</div>
+		<h2>Enter Your Measurements</h2>
 
-Shoulders
-?
-Chest
-?
-Mid
-?
-Waist
-?
-Back length
-?
-Sleeve length
-?
-Biceps
-?
+		@include('02-organisms.jacket.measurement-form')
+
+	</section>
 
 
-	<div class="large-8 medium-8 small-12 columns">
+
+	<div class="large-8 medium-8 smcolumnsall-12 columns">
 		<img src="http://placehold.it/800x400&text={{{ $jacket->model }}}">
 	</div>
 
@@ -43,7 +33,7 @@ Biceps
 		{{-- <a href="{!! route('jackets.checkout', $jacket->model) !!}" class="button radius success">Order Jacket</a> --}}
 	</div>
 
-	<div class="large-12 medium-12 small-12 columns" ng-init="units = 'inches'">
+{{-- 	<div class="large-12 medium-12 small-12 columns" ng-init="units = 'inches'">
 		<h3>
 			Choose Your Fit (
 			<small><strong>
@@ -140,30 +130,12 @@ Biceps
 						</tr>
 				</tbody>
 			</table>
-	</div>
+	</div> --}}
 
+		@include('02-organisms.jacket.measurement-tracker')
 
 @stop
 
-
-@section('footer')
-	<div class="alert-box info" data-alert>
-	  <h3><strong><small>Page Description</small></strong></h3>
-		<h4>
-			<small>
-				Page that explains taking measurements and lets user add his
-			</small>
-		</h4>
-
-		<h3><strong><small>Purpose Served</small></strong></h3>
-		<h4>
-			<small>
-				Make sure that the jacket will have the perfect, customized fit
-			</small>
-		</h4>
-		<a href="#" class="close">&times;</a>
-	</div>
-@stop
 
 
 

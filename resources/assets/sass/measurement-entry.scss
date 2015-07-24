@@ -1,0 +1,32 @@
+.measurement-entry {
+	article {
+		margin-bottom: 2rem;
+	}
+	.text-button {
+		font-size: .8rem;
+	}
+	.flex-video {
+		display: flex;
+		position: relative;
+		z-index: 1;
+	}
+	label.text-input-label, fieldset {
+		display: inline-block;
+		width: 49%;
+		margin-top: -1rem;
+	}
+	fieldset label:not(:first-child) {
+		margin-left: .3rem;
+	}
+	input[type="tel"] {
+		width: 100%;
+	}
+	h3 {
+		margin: auto;
+		position: relative;
+		font-weight: 900;
+		color: white;
+		top: 9.95rem;
+		z-index: 10;
+	}
+}
