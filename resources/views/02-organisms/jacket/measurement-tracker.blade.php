@@ -1,10 +1,10 @@
 <ul class="small-block-grid-4 measurement-tracker">
 	<li>
-		<a href="#shoulders-section" ng-class="{valid: shoulders}">
+		<a href="#shoulders-section" ng-class="{valid: halfShoulder}">
 			<div>
-				<span>Shoulder</span>
-				<span ng-if="shoulders" class="measurement-value">
-					@{{ shoulders }}<br><span class="measurement-units"> cm</span>
+				<span>1/2 Shoulder</span>
+				<span ng-if="halfShoulder" class="measurement-value">
+					@{{ halfShoulder }}<br><span class="measurement-units"> @{{ units }}</span>
 				</span>
 			</div>
 		</a>
@@ -14,7 +14,7 @@
 			<div>
 				<span>Chest</span>
 				<span ng-if="chest" class="measurement-value">
-					@{{ chest }}<br><span class="measurement-units"> cm</span>
+					@{{ chest }}<br><span class="measurement-units"> @{{ units }}</span>
 				</span>
 			</div>
 		</a>
@@ -24,7 +24,7 @@
 			<div>
 				<span>Mid</span>
 				<span ng-if="mid" class="measurement-value">
-					@{{ mid }}<br><span class="measurement-units"> cm</span>
+					@{{ mid }}<br><span class="measurement-units"> @{{ units }}</span>
 				</span>
 			</div>
 		</a>
@@ -34,7 +34,7 @@
 			<div>
 				<span>Waist</span>
 				<span ng-if="waist" class="measurement-value">
-					@{{ waist }}<br><span class="measurement-units"> cm</span>
+					@{{ waist }}<br><span class="measurement-units"> @{{ units }}</span>
 				</span>
 			</div>
 		</a>
@@ -44,7 +44,7 @@
 			<div>
 				<span>Back</span>
 				<span ng-if="back" class="measurement-value">
-					@{{ back }}<br><span class="measurement-units"> cm</span>
+					@{{ back }}<br><span class="measurement-units"> @{{ units }}</span>
 				</span>
 			</div>
 		</a>
@@ -54,7 +54,7 @@
 			<div>
 				<span>Sleeve</span>
 				<span ng-if="sleeve" class="measurement-value">
-					@{{ sleeve }}<br><span class="measurement-units"> cm</span>
+					@{{ sleeve }}<br><span class="measurement-units"> @{{ units }}</span>
 				</span>
 			</div>
 		</a>
@@ -64,8 +64,16 @@
 			<div>
 				<span>Bicep</span>
 				<span ng-if="bicep" class="measurement-value">
-					@{{ bicep }}<br><span class="measurement-units"> cm</span>
+					@{{ bicep }}<br><span class="measurement-units"> @{{ units }}</span>
 				</span>
+			</div>
+		</a>
+	</li>
+	<li>
+		<a class="hollow">
+			<div>
+				<span>0</span>
+				<span> / 7</span>
 			</div>
 		</a>
 	</li>

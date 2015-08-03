@@ -19,7 +19,14 @@
 		margin-left: .3rem;
 	}
 	input[type="tel"] {
-		width: 100%;
+		width: 80%;
+		display: inline-block;
+	}
+	span.input-units {
+		display: inline-block;
+		position: relative;
+		font-weight: 200;
+		left: -3rem;
 	}
 	h3 {
 		margin: auto;

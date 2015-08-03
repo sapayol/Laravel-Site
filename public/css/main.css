@@ -2317,7 +2317,7 @@ input[type="week"], input[type="number"], input[type="email"], input[type="url"]
 input[type="search"], input[type="tel"], input[type="color"] {
   font-size: 24px; }
 
-.text-input-label span {
+.text-input-label span.label-title {
   position: relative;
   top: 1.5rem;
   padding-left: .5rem; }
@@ -2328,6 +2328,7 @@ input[type="search"], input[type="tel"], input[type="color"] {
 
 fieldset {
   padding-left: .5rem;
+  padding-right: .5rem;
   padding-top: .1rem;
   height: 3rem; }
 
@@ -2407,7 +2408,13 @@ fieldset {
 .measurement-entry fieldset label:not(:first-child) {
   margin-left: .3rem; }
 .measurement-entry input[type="tel"] {
-  width: 100%; }
+  width: 80%;
+  display: inline-block; }
+.measurement-entry span.input-units {
+  display: inline-block;
+  position: relative;
+  font-weight: 200;
+  left: -3rem; }
 .measurement-entry h3 {
   margin: auto;
   position: relative;

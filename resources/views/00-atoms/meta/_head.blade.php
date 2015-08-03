@@ -9,13 +9,13 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 		<link rel="home" href="{{ getenv('SITE_URL') }}" />
-		<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700|Oswald:400,300,700' rel='stylesheet' type='text/css'>
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/normalize.min.css" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Quattrocento+Sans:400,700|Oswald:400,300,700">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/normalize.min.css" >
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<link href="/css/vendor.css" rel="stylesheet">
-		<link href="/css/main.css" rel="stylesheet">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<link rel="stylesheet" href="/css/vendor.css">
+		<link rel="stylesheet" href="/css/main.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 	</head>
 
 	<body "@yield('angular_page_controller')">
