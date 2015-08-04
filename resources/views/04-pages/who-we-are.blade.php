@@ -12,10 +12,23 @@
 		You don’t back down.<br>
 		You approach it from a different angle.<br>
 		You find your own way.</p>
-		<p>Regular doesn’t fit you.</p>
-		<p>We understand.</p>
+	</section>
+	<section class="large-12 medium-12 small-12 columns primary-color-section">
+		<p>
+			Regular doesn’t fit you.
+	 		<br>
+			<span class="subheading">We understand.</span>
+		</p>
+	</section>
+	<section class="large-12 medium-12 small-12 columns">
 		<p>It’s the same urge that motivates us to design leather jackets without compromises, to create a company that does things the right way.</p>
-		<p>SAPAYOL: Turkish for “the road less traveled by”</p>
+	</section>
+
+	<section class="large-12 medium-12 small-12 columns definition-section">
+		<h2>Sapayol</h2>
+		<span class="pronounciation">[Turkish <strong>sapa</strong>-yol]</span><br>
+		<span class="word-type">noun</span>
+		<span class="defition">1. the road less traveled by</span>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns">

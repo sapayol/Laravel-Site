@@ -29,11 +29,23 @@
 }
 
 main > section {
-	margin-bottom: 1rem;
-	margin-top: 1rem;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
 }
 
 main > section > article {
-	margin-bottom: 4rem;
-	margin-top: 3rem;
+	padding-bottom: 2rem;
+	padding-top: 1rem;
+}
+
+.primary-color-section {
+	background: $primary-color;
+	color: $white;
+	p {
+		margin-bottom: 0;
+	}
+	span.subheading {
+		color: $black;
+		font-weight: 200;
+	}
 }

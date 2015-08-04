@@ -1,3 +1,11 @@
+.inverted-colors {
+  background: #222222;
+  color: white; }
+  .inverted-colors h1, .inverted-colors h2, .inverted-colors h3, .inverted-colors h4, .inverted-colors h5, .inverted-colors h6 {
+    color: white; }
+  .inverted-colors a:hover {
+    color: #c86669; }
+
 @font-face {
   font-family: NittiGrotesk;
   font-weight: 100;
@@ -55,12 +63,21 @@
   margin-bottom: 1rem; }
 
 main > section {
-  margin-bottom: 1rem;
-  margin-top: 1rem; }
+  padding-bottom: 1rem;
+  padding-top: 1rem; }
 
 main > section > article {
-  margin-bottom: 4rem;
-  margin-top: 3rem; }
+  padding-bottom: 2rem;
+  padding-top: 1rem; }
+
+.primary-color-section {
+  background: #B02428;
+  color: white; }
+  .primary-color-section p {
+    margin-bottom: 0; }
+  .primary-color-section span.subheading {
+    color: #222222;
+    font-weight: 200; }
 
 .chevron {
   display: block;
@@ -2294,6 +2311,19 @@ Copyright (c) 2015 Daniel Eden
   .switch.large .switch-text span:last-child {
     padding-left: .65rem; }
 
+.definition-section {
+  background: #e2bb3a;
+  line-height: 1.2; }
+  .definition-section h2 {
+    margin-bottom: 0;
+    font-size: 2.25rem;
+    line-height: 1; }
+  .definition-section .pronounciation, .definition-section .word-type {
+    color: #606060; }
+  .definition-section .word-type {
+    display: block;
+    margin-top: .5rem; }
+
 header {
   border-bottom: 1px solid #e2e2e2; }
   header h1 {
@@ -2304,6 +2334,21 @@ header {
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500; }
+
+footer {
+  background: #e2bb3a; }
+  footer a.back-to-top-link {
+    color: white;
+    display: block;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem; }
+    footer a.back-to-top-link p {
+      margin-bottom: 0; }
+  footer .chevron {
+    border-color: white;
+    position: relative;
+    left: 50%;
+    margin-left: -15px; }
 
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"],
 input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"],
@@ -2616,22 +2661,6 @@ a.under-button-link {
   height: 45rem; }
   .carousel-container .home-carousel {
     margin-bottom: 0; }
-
-footer {
-  background: #e2bb3a;
-  margin-top: 2rem; }
-  footer a.back-to-top-link {
-    color: white;
-    display: block;
-    padding-top: 2.5rem;
-    padding-bottom: 2rem; }
-    footer a.back-to-top-link p {
-      margin-bottom: 0; }
-  footer .chevron {
-    border-color: white;
-    position: relative;
-    left: 50%;
-    margin-left: -15px; }
 
 
 

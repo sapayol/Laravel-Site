@@ -5,6 +5,7 @@
 @import "animations";
 @import "components";
 @import "header";
+@import "footer";
 @import "hacks";
 @import "forms";
 @import "measurement-table";
@@ -24,22 +25,3 @@
 }
 
 
-footer {
-	background: $accent-color;
-	margin-top: 2rem;
-	a.back-to-top-link {
-		color: $white;
-		display: block;
-		padding-top: 2.5rem;
-		padding-bottom: 2rem;
-		p {
-			margin-bottom: 0;
-		}
-	}
-	.chevron {
-		border-color: $white;
-		position: relative;
-		left: 50%;
-		margin-left: -15px;
-	}
-}

@@ -30,3 +30,20 @@
 		}
 	}
 }
+
+.definition-section {
+	background: $gold;
+	line-height: 1.2;
+	h2 {
+		margin-bottom: 0;
+		font-size: 2.25rem;
+		line-height: 1;
+	}
+	.pronounciation, .word-type {
+		color: $grey;
+	}
+	.word-type {
+		display: block;
+		margin-top: .5rem;
+	}
+}

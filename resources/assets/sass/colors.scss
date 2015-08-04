@@ -90,7 +90,7 @@ $dark-facebook-color:         mix($facebook-color,  black, 70%);
 $dark-google-color:         	mix($google-color,    black, 70%);
 
 $light-text-color:         	  mix($text-color,      white, 70%);
-$light-primary-color:         mix($primary-color,   white, 40%);
+$light-primary-color:         mix($primary-color,   white, 70%);
 $light-secondary-color:       mix($secondary-color, white, 70%);
 $light-alert-color:           mix($alert-color,     white, 70%);
 $light-success-color:         mix($success-color,   white, 70%);
@@ -101,3 +101,13 @@ $light-facebook-color:        mix($facebook-color,  white, 70%);
 $light-google-color:         	mix($google-color,    white, 70%);
 
 
+.inverted-colors {
+	background: $black;
+	color: $white;
+	h1, h2, h3, h4, h5, h6 {
+		color: $white;
+	}
+	a:hover {
+		color: $light-primary-color;
+	}
+}
