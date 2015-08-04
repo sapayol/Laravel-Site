@@ -13,8 +13,9 @@ $green:     #57ca66;
 $baby-blue: #91d8f1;
 $blue:      #468aaf;
 $purple:    #B783FB;
-$pink:      #d24A9C;
+$pink:      #DE9CCF;
 $grey:      #606060;
+$silver:    #d9d9d9;
 $black:     #222222;
 // $white:     #fffcfb;
 $white:     white;
@@ -100,6 +101,7 @@ $light-alternate-color-hover: mix($alternate-color, white, 70%);
 $light-facebook-color:        mix($facebook-color,  white, 70%);
 $light-google-color:         	mix($google-color,    white, 70%);
 
+$leather-brown: #734026;
 
 .inverted-colors {
 	background: $black;

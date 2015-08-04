@@ -1,0 +1,58 @@
+.look-options {
+	margin-top: -2rem;
+	padding-bottom: 2rem;
+	fieldset {
+		padding: 0;
+		border: none;
+	}
+	legend {
+		font-weight: 100;
+		padding: 0;
+		margin: 0;
+		margin-bottom: .2rem;
+		line-height: 1;
+	}
+	.button-group {
+		margin-left: .1rem;
+		&>li:first-child .button {
+			border-left: 1px solid $black;
+		}
+	}
+	.button[type="submit"] {
+		margin-top: 2rem;
+	}
+	.button:not([type="submit"]) {
+		margin-bottom: 0;
+		border-color: $black;
+    padding: 0.325rem .875rem 0.3875rem .875rem;
+		&.active {
+			border-color: $black;
+			background: $black;
+			color: $white;
+		}
+		&.black, &.brown, &.gray, &.pink, &.silver, &.darkGray, &.gold {
+			border-color: $black;
+		}
+		&.black {
+			border-bottom-color: black;
+		}
+		&.brown {
+			border-bottom-color: $leather-brown;
+		}
+		&.gray {
+			border-bottom-color: mix($grey, white, 75%);
+		}
+		&.pink {
+			border-bottom-color: $pink;
+		}
+		&.silver {
+			border-bottom-color: $silver;
+		}
+		&.darkGray {
+			border-bottom-color: mix($dark-grey, white, 75%);
+		}
+		&.gold {
+			border-bottom-color: $gold;
+		}
+	}
+}

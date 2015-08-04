@@ -19,8 +19,10 @@
 
 	<section class="small-12 medium-12 large-12 columns text-center">
 		<h1 class="with-subheading">{{{ $jacket->name }}}</h1>
-		<span class="thin large-price">{{{ floor($jacket->price) }}}<small> USD</small></span>
-		<a href="{!! route('jackets.look', $jacket->model) !!}" class="button black expand call-to-action">Customize Yours Now</a>
+		<span class="thin large-price">${{{ number_format($jacket->price) }}}<small> USD</small></span>
+		<a href="{!! route('jackets.look', $jacket->model) !!}" class="button black expand call-to-action">
+			Customize Yours Now <span class="chevron chevron--right"></span>
+		</a>
 	</section>
 
 
@@ -109,8 +111,10 @@
 		<br>
 		<a href="/images/photos/buttons.jpg"><img class="sidekick-image" src="/images/photos/button.jpg" alt=""></a>
 		<p>The buttons on our jackets are spring-type snaps from YKK, made purely out of nickel-free metal. They receive the same beautiful coatings as our zippers and provide reliable closure without the risk of damaging the leather when you want to open them.</p>
-		<a href="{!! route('jackets.look', $jacket->model) !!}" class="button radius expand success">Fine-tune your look</a>
-		<h2>${{{ $jacket->price }}}</h2>
+		<a href="{!! route('jackets.look', $jacket->model) !!}" class="button black expand call-to-action hollow">
+			Customize Yours Now <span class="chevron chevron--right"></span>
+		</a>
+		<br>
 	</section>
 @stop
 

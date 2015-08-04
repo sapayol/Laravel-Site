@@ -16,11 +16,35 @@ a {
 	background: $black;
 	text-transform: uppercase;
 	letter-spacing: 1.2;
+	.chevron {
+		border-color: $white;
+	}
 	&:hover {
 		background: transparent;
-		border-bottom: 6px solid $primary-color;
 		border-color: $black;
+		border-bottom: 6px solid $primary-color;
 		color: $black;
+			.chevron {
+				border-color: $black;
+			}
+	}
+	&.hollow {
+		color: $black;
+		background: transparent;
+		border: 1px solid $black;
+		border-bottom: 6px solid $primary-color;
+		.chevron {
+			border-color: $black;
+		}
+		&:hover {
+			background: $black;
+			color: $white;
+			border-color: $black;
+			border-bottom: 6px solid $primary-color;
+			.chevron {
+				border-color: $white;
+			}
+		}
 	}
 	&:active {
 		background: transparent;
@@ -28,15 +52,10 @@ a {
 		position: relative;
 		top: 3px;
 	}
-	&.hollow {
-		color: $black;
-		background: transparent;
-		border: 1px solid $black;
-		border-bottom: 6px solid $primary-color;
-		&:hover {
-			background: $primary-color;
-			color: $white;
-			border-color: $primary-color;
+	&.bottomless {
+		border-bottom: 1px solid $black;
+		&:hover, &:active {
+			border-bottom: 1px solid $black;
 		}
 	}
 }

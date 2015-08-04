@@ -9,81 +9,77 @@
 @stop
 
 @section('main')
-
-	<section>
-		<div class="large-12 medium-12 small-12 columns">
-			<h2 class="thin text-center">Choose Your Look &amp; Fit </h2>
-			<img class="customization-image" src="/images/photos/jacket-details.jpg">
-			<div class="large-12 medium-12 small-12 columns look-options">
-				<h3 class="left"><small>Leather Type</small></h3>
-				@if ($jacket->leather_types()->count() > 1)
-					<ul class="right button-group">
-						@foreach ($jacket->leather_types() as $leather_type)
-					  	<li><a class="button tiny" ng-class="{active: jacket.leather_type == '{{{ $leather_type->name}}}' }" ng-click="jacket.leather_type = '{{{ $leather_type->name }}}'">{{{ $leather_type->name }}}</a></li>
-						@endforeach
-					</ul>
-				@else
-					{{{ $jacket->leather_types()->first()->name }}}
-				@endif
-			</div>
-
-			<div class="large-12 medium-12 small-12 columns look-options">
-				<h3 class="left"><small>Leather Color</small></h3>
-				@if ($jacket->leather_colors()->count() > 1)
-					<ul class="right button-group">
-						@foreach ($jacket->leather_colors() as $leather_color)
-							@if ($leather_color->name != 'navy' && $leather_color->name != 'olive')
-					  	<li><a class="button tiny" ng-class="{active: jacket.leather_color == '{{{ $leather_color->name}}}' }" ng-click="jacket.leather_color = '{{{ $leather_color->name }}}'">{{{ $leather_color->name }}}</a></li>
-							@endif
-						@endforeach
-					</ul>
-				@else
-					{{{ $jacket->leather_colors()->first()->name }}}
-				@endif
-			</div>
-
-			<div class="large-12 medium-12 small-12 columns look-options">
-				<h3 class="left"><small>Lining Color</small></h3>
-				@if ($jacket->lining_colors()->count() > 1)
-					<ul class="right button-group">
-						@foreach ($jacket->lining_colors() as $lining_color)
-					  	<li><a class="button tiny" ng-class="{active: jacket.lining_color == '{{{ $lining_color->name}}}' }" ng-click="jacket.lining_color = '{{{ $lining_color->name }}}'">{{{ $lining_color->name }}}</a></li>
-						@endforeach
-					</ul>
-				@else
-					{{{ $jacket->lining_colors()->first()->name }}}
-				@endif
-			</div>
-
-			<div class="large-12 medium-12 small-12 columns look-options">
-				<h3 class="left"><small>Hardware Color</small></h3>
-				@if ($jacket->hardware_colors()->count() > 1)
-					<ul class="right button-group">
-						@foreach ($jacket->hardware_colors() as $hardware_color)
-					  	<li><a class="button tiny" ng-class="{active: jacket.hardware_color == '{{{ $hardware_color->name }}}' }" ng-click="jacket.hardware_color = '{{{ $hardware_color->name }}}'">{{{ $hardware_color->name }}}</a></li>
-						@endforeach
-					</ul>
-				@else
-					{{{ $jacket->hardware_colors()->first()->name }}}
-				@endif
-			</div>
-		</div>
+	<section class="large-12 medium-12 small-12 columns">
+		<h2 class="thin text-center">Choose Your Look &amp; Fit </h2>
+		<img class="customization-image" src="/images/photos/jacket-details.jpg">
 	</section>
 
-	<div class="large-12 medium-12 small-12 columns text-center ">
-		<form action="/jackets/{{{ $jacket->model }}}/fit" method="GET">
-			<input type="hidden" name="model"          value="{{{ $jacket->model }}}">
-			<input type="hidden" name="leather_type"   value="@{{ jacket.leather_type }}">
-			<input type="hidden" name="leather_color"  value="@{{ jacket.leather_color }}">
-			<input type="hidden" name="lining_color"   value="@{{ jacket.lining_color }}">
-			<input type="hidden" name="hardware_color" value="@{{ jacket.hardware_color }}">
-			<input type="hidden" name="size"           value="@{{ jacket.size }}">
-			<button class="black button expand">Enter Your Measurements</button>
+	<form class="large-12 medium-12 small-12 columns look-options" action="/jackets/{{{ $jacket->model }}}/fit" method="GET">
+		<fieldset>
+			<legend>Leather Type</legend>
+			@if ($jacket->leather_types()->count() > 1)
+				<ul class="button-group">
+					@foreach ($jacket->leather_types() as $leather_type)
+				  	<li><a class="button tiny hollow bottomless" ng-class="{active: jacket.leather_type == '{{{ $leather_type->name}}}' }" ng-click="jacket.leather_type = '{{{ $leather_type->name }}}'">{{{ $leather_type->name }}}</a></li>
+					@endforeach
+				</ul>
+			@else
+				{{{ $jacket->leather_types()->first()->name }}}
+			@endif
+		</fieldset>
+
+		<fieldset>
+			<legend>Leather Color</legend>
+			@if ($jacket->leather_colors()->count() > 1)
+				<ul class="button-group">
+					@foreach ($jacket->leather_colors() as $leather_color)
+						@if ($leather_color->name != 'navy' && $leather_color->name != 'olive')
+				  	<li><a class="button tiny hollow {{{ camel_case($leather_color->name) }}}" ng-class="{active: jacket.leather_color == '{{{ $leather_color->name}}}' }" ng-click="jacket.leather_color = '{{{ $leather_color->name }}}'">{{{ $leather_color->name }}}</a></li>
+						@endif
+					@endforeach
+				</ul>
+			@else
+				{{{ $jacket->leather_colors()->first()->name }}}
+			@endif
+		</fieldset>
+
+		<fieldset>
+			<legend>Lining Color</legend>
+			@if ($jacket->lining_colors()->count() > 1)
+				<ul class="button-group">
+					@foreach ($jacket->lining_colors() as $lining_color)
+				  	<li><a class="button tiny hollow {{{ camel_case($lining_color->name) }}}" ng-class="{active: jacket.lining_color == '{{{ $lining_color->name}}}' }" ng-click="jacket.lining_color = '{{{ $lining_color->name }}}'">{{{ $lining_color->name }}}</a></li>
+					@endforeach
+				</ul>
+			@else
+				{{{ $jacket->lining_colors()->first()->name }}}
+			@endif
+		</fieldset>
+
+		<fieldset>
+			<legend>Hardware Color</legend>
+			@if ($jacket->hardware_colors()->count() > 1)
+				<ul class="button-group">
+					@foreach ($jacket->hardware_colors() as $hardware_color)
+				  	<li><a class="button tiny hollow {{{ camel_case($hardware_color->name) }}}" ng-class="{active: jacket.hardware_color == '{{{ $hardware_color->name }}}' }" ng-click="jacket.hardware_color = '{{{ $hardware_color->name }}}'">{{{ $hardware_color->name }}}</a></li>
+					@endforeach
+				</ul>
+			@else
+				{{{ $jacket->hardware_colors()->first()->name }}}
+			@endif
+		</fieldset>
+
+		<input type="hidden" name="model"          value="{{{ $jacket->model }}}">
+		<input type="hidden" name="leather_type"   value="@{{ jacket.leather_type }}">
+		<input type="hidden" name="leather_color"  value="@{{ jacket.leather_color }}">
+		<input type="hidden" name="lining_color"   value="@{{ jacket.lining_color }}">
+		<input type="hidden" name="hardware_color" value="@{{ jacket.hardware_color }}">
+		<input type="hidden" name="size"           value="@{{ jacket.size }}">
+		<div class="text-center">
+			<button type="submit" class="black button expand">Proceed To Measurements</button>
 			<a href="" class="underlined under-button-link">Order Now and Measure Later</a><br>
-		</form>
-	</div>
-
-
+		</div>
+	</form>
 @stop
 
 

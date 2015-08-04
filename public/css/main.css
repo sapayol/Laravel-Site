@@ -87,6 +87,13 @@ main > section > article {
   border-right: 1px solid black;
   border-width: 1px; }
 
+.button .chevron {
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  margin-bottom: .1rem;
+  border-width: 2px; }
+
 .chevron--top {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
@@ -2350,6 +2357,49 @@ footer {
     left: 50%;
     margin-left: -15px; }
 
+.look-options {
+  margin-top: -2rem;
+  padding-bottom: 2rem; }
+  .look-options fieldset {
+    padding: 0;
+    border: none; }
+  .look-options legend {
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    margin-bottom: .2rem;
+    line-height: 1; }
+  .look-options .button-group {
+    margin-left: .1rem; }
+    .look-options .button-group > li:first-child .button {
+      border-left: 1px solid #222222; }
+  .look-options .button[type="submit"] {
+    margin-top: 2rem; }
+  .look-options .button:not([type="submit"]) {
+    margin-bottom: 0;
+    border-color: #222222;
+    padding: 0.325rem .875rem 0.3875rem .875rem; }
+    .look-options .button:not([type="submit"]).active {
+      border-color: #222222;
+      background: #222222;
+      color: white; }
+    .look-options .button:not([type="submit"]).black, .look-options .button:not([type="submit"]).brown, .look-options .button:not([type="submit"]).gray, .look-options .button:not([type="submit"]).pink, .look-options .button:not([type="submit"]).silver, .look-options .button:not([type="submit"]).darkGray, .look-options .button:not([type="submit"]).gold {
+      border-color: #222222; }
+    .look-options .button:not([type="submit"]).black {
+      border-bottom-color: black; }
+    .look-options .button:not([type="submit"]).brown {
+      border-bottom-color: #734026; }
+    .look-options .button:not([type="submit"]).gray {
+      border-bottom-color: #888888; }
+    .look-options .button:not([type="submit"]).pink {
+      border-bottom-color: #DE9CCF; }
+    .look-options .button:not([type="submit"]).silver {
+      border-bottom-color: #d9d9d9; }
+    .look-options .button:not([type="submit"]).darkGray {
+      border-bottom-color: #727272; }
+    .look-options .button:not([type="submit"]).gold {
+      border-bottom-color: #e2bb3a; }
+
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"],
 input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"],
 input[type="week"], input[type="number"], input[type="email"], input[type="url"],
@@ -2521,25 +2571,38 @@ a {
   background: #222222;
   text-transform: uppercase;
   letter-spacing: 1.2; }
+  .button .chevron, a.button .chevron, button.button .chevron {
+    border-color: white; }
   .button:hover, a.button:hover, button.button:hover {
     background: transparent;
-    border-bottom: 6px solid #B02428;
     border-color: #222222;
+    border-bottom: 6px solid #B02428;
     color: #222222; }
-  .button:active, a.button:active, button.button:active {
-    background: transparent;
-    border-bottom: 1px solid #222222;
-    position: relative;
-    top: 3px; }
+    .button:hover .chevron, a.button:hover .chevron, button.button:hover .chevron {
+      border-color: #222222; }
   .button.hollow, a.button.hollow, button.button.hollow {
     color: #222222;
     background: transparent;
     border: 1px solid #222222;
     border-bottom: 6px solid #B02428; }
+    .button.hollow .chevron, a.button.hollow .chevron, button.button.hollow .chevron {
+      border-color: #222222; }
     .button.hollow:hover, a.button.hollow:hover, button.button.hollow:hover {
-      background: #B02428;
+      background: #222222;
       color: white;
-      border-color: #B02428; }
+      border-color: #222222;
+      border-bottom: 6px solid #B02428; }
+      .button.hollow:hover .chevron, a.button.hollow:hover .chevron, button.button.hollow:hover .chevron {
+        border-color: white; }
+  .button:active, a.button:active, button.button:active {
+    background: transparent;
+    border-bottom: 1px solid #222222;
+    position: relative;
+    top: 3px; }
+  .button.bottomless, a.button.bottomless, button.button.bottomless {
+    border-bottom: 1px solid #222222; }
+    .button.bottomless:hover, .button.bottomless:active, a.button.bottomless:hover, a.button.bottomless:active, button.button.bottomless:hover, button.button.bottomless:active {
+      border-bottom: 1px solid #222222; }
 
 .call-to-action {
   margin: 2rem 0 1.25rem 0; }
@@ -2555,7 +2618,7 @@ button.text-button {
 html, body {
   font-size: 20px;
   font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 200;
   letter-spacing: 1; }
 
 h1, h2, h3, h4, h5, h6 {
