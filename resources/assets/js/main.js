@@ -6,6 +6,7 @@
     'duScroll',
     'angularPayments',
     'angular-loading-bar',
+    'ngMask'
   ])
   .run(['$timeout', function($timeout) {
     $timeout(function() {

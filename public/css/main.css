@@ -2485,6 +2485,8 @@ fieldset {
     font-size: .85rem;
     color: #707070; }
 
+.measurement-entry form {
+  margin-top: 1.5rem; }
 .measurement-entry article {
   margin-bottom: 2rem; }
 .measurement-entry .text-button {

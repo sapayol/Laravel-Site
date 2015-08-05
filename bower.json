@@ -5,7 +5,8 @@
 		"slick.js"            : null,
     "angular-loading-bar" : null,
     "angular-payments"    : null,
-    "angular-scroll"      : null
+    "angular-scroll"      : null,
+    "angular-mask" 		    : null
   }
 }
 

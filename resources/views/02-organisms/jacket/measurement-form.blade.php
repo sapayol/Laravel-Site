@@ -16,7 +16,7 @@
 	    <iframe width="420" height="315" src="//www.youtube.com/embed/6wyy_j6VHzw?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
 	    {{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
-		<div ng-show="halfShoulderInstructions" class="slideInDown">
+		<div ng-show="halfShoulderInstructions" class="animated slideInDown">
 			<h4>Start</h4>
 			<p>Side of the neck, straight under the hollow behind your earlobe.</p>
 			<h4>End</h4>
@@ -26,7 +26,7 @@
 		</div>
 		<label for="half-shoulder" class="text-input-label">
 			<span class="label-title">Half Shoulder</span>
-			<input id="half-shoulder" type="tel" placeholder="00.00" ng-model="halfShoulder" maxlength="5">
+			<input id="half-shoulder" type="tel" placeholder="00.00" ng-model="halfShoulder" maxlength="5" mask="99.99">
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="halfShoulderInstructions = !halfShoulderInstructions">
@@ -41,12 +41,12 @@
 	    <iframe width="420" height="315" src="//www.youtube.com/embed/6wyy_j6VHzw?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
 	    {{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
-		<div ng-show="shoulderInstructions" class="slideInDown">
+		<div ng-show="shoulderInstructions" class="animated slideInDown">
 			<p>From one shoulder point (right under the dimple that forms when you raise your arm to shoulder level) to the other, across the back.</p>
 		</div>
 		<label for="shoulders" class="text-input-label">
 			<span class="label-title">Shoulder Length</span>
-			<input id="shoulders" type="tel" placeholder="00.00" ng-model="shoulders" maxlength="5">
+			<input id="shoulders" type="tel" placeholder="00.00" ng-model="shoulders" maxlength="5" mask="99.99">
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="shoulderInstructions = !shoulderInstructions">
@@ -61,7 +61,7 @@
     	<iframe width="420" height="315" src="//www.youtube.com/embed/9dDa8TePCR8?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
     	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
-		<div ng-if="chestInstructions">
+		<div ng-show="chestInstructions" class="animated slideInDown">
 			<p>This measurement goes around the widest part of your chest, right across your nipples.</p>
 			<ul>
 				<li>Make sure that the measuring tape is horizontal on the back too.</li>
@@ -72,7 +72,7 @@
 		</div>
 		<label for="chest" class="text-input-label">
 			<span class="label-title">Chest</span>
-			<input id="chest" type="tel" placeholder="00.00" ng-model="chest" maxlength="5">
+			<input id="chest" type="tel" placeholder="00.00" ng-model="chest" maxlength="5" mask="99.99">
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="chestInstructions = !chestInstructions">
@@ -87,13 +87,13 @@
     	<iframe width="420" height="315" src="//www.youtube.com/embed/Spk9gp-XqDQ?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
     	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
-		<div ng-if="stomachInstructions">
+		<div ng-show="stomachInstructions" class="animated slideInDown">
 			<p>Measure horizontally around the body, just above the hipbones (for most people, that’s right across your belly button).</p>
 			<p>Leave enough space to fit a finger under the measure tape. </p>
 		</div>
 		<label for="stomach" class="text-input-label">
 			<span class="label-title">Stomach</span>
-			<input id="stomach" type="tel" placeholder="00.00" ng-model="stomach" maxlength="5">
+			<input id="stomach" type="tel" placeholder="00.00" ng-model="stomach" maxlength="5" mask="99.99">
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="stomachInstructions = !stomachInstructions">
@@ -108,7 +108,7 @@
     	<iframe width="420" height="315" src="//www.youtube.com/embed/SK2fbnCKVJ0?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
     	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
-		<div ng-if="waistInstructions">
+		<div ng-show="waistInstructions" class="animated slideInDown">
 			<p>Measure around the hips, right where your jacket length measurement ended.</p>
 			<ul>
 				<li>Leave enough space to fit a finger under the measure tape.</li>
@@ -118,7 +118,7 @@
 		</div>
 		<label for="waist" class="text-input-label">
 			<span class="label-title">Waist</span>
-			<input id="waist" type="tel" placeholder="00.00" ng-model="waist" maxlength="5">
+			<input id="waist" type="tel" placeholder="00.00" ng-model="waist" maxlength="5" mask="99.99">
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="waistInstructions = !waistInstructions">
@@ -133,13 +133,13 @@
     	<iframe width="420" height="315" src="//www.youtube.com/embed/qcM8H08LFKM?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
     	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
-		<div ng-if="backInstructions">
+		<div ng-show="backInstructions" class="animated slideInDown">
 			<h4>Start and End</h4>
 			<p>Halfway between the shoulder point and the arm crease.</p>
 		</div>
 		<label for="back" class="text-input-label">
 			<span class="label-title">Back</span>
-			<input id="back" type="tel" placeholder="00.00" ng-model="back" maxlength="5">
+			<input id="back" type="tel" placeholder="00.00" ng-model="back" maxlength="5" mask="99.99">
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="backInstructions = !backInstructions">
@@ -154,7 +154,7 @@
     	<iframe width="420" height="315" src="//www.youtube.com/embed/qcM8H08LFKM?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
     	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
-		<div ng-if="jacketLengthInstructions">
+		<div ng-show="jacketLengthInstructions" class="animated slideInDown">
 			<h4>Start</h4>
 			<p>Bend your head forward. The highest bone on the jacket-length of your neck that sticks out is your starting point.</p>
 			<h4>End</h4>
@@ -164,7 +164,7 @@
 		</div>
 		<label for="jacket-length" class="text-input-label">
 			<span class="label-title">Jacket Length</span>
-			<input id="jacket-length" type="tel" placeholder="00.00" ng-model="jacketLength" maxlength="5">
+			<input id="jacket-length" type="tel" placeholder="00.00" ng-model="jacketLength" maxlength="5" mask="99.99">
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="jacketLengthInstructions = !jacketLengthInstructions">
@@ -179,7 +179,7 @@
     	<iframe width="420" height="315" src="//www.youtube.com/embed/6qHZNR6if1Y?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
     	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
-		<div ng-if="sleeveInstructions">
+		<div ng-show="sleeveInstructions" class="animated slideInDown">
 			<h4>Start</h4>
 			<p>Shoulder point (where you left off for the shoulder measurement)</p>
 			<h4>End</h4>
@@ -190,7 +190,7 @@
 		</div>
 		<label for="sleeve" class="text-input-label">
 			<span class="label-title">Sleeve Length</span>
-			<input id="sleeve" type="tel" placeholder="00.00" ng-model="sleeve" maxlength="5">
+			<input id="sleeve" type="tel" placeholder="00.00" ng-model="sleeve" maxlength="5" mask="99.99">
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="sleeveInstructions = !sleeveInstructions">
@@ -205,12 +205,12 @@
     	<iframe width="420" height="315" src="//www.youtube.com/embed/RoA_Rusd4Bg?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
     	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
-		<div ng-if="bicepsInstructions">
+		<div ng-show="bicepsInstructions" class="animated slideInDown">
 			<p>Measure around the biceps, with your muscles flexed.</p>
 		</div>
 		<label for="biceps" class="text-input-label">
 			<span class="label-title">Biceps</span>
-			<input id="biceps" type="tel" placeholder="00.00" ng-model="biceps" maxlength="5">
+			<input id="biceps" type="tel" placeholder="00.00" ng-model="biceps" maxlength="5" mask="99.99">
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="bicepsInstructions = !bicepsInstructions">

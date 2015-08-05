@@ -10,8 +10,8 @@
 
 @section('main')
 	<section class="large-12 medium-12 small-12 columns">
-		<h2 class="thin text-center">Choose Your Look &amp; Fit </h2>
-		<img class="customization-image" src="/images/photos/jacket-details.jpg">
+		<h2 class="thin text-center">Choose Your Look</h2>
+		<img class="customization-image" src="/images/stock-photos/jacket-customize.jpg">
 	</section>
 
 	<form class="large-12 medium-12 small-12 columns look-options" action="/jackets/{{{ $jacket->model }}}/fit" method="GET">
