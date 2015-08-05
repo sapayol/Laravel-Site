@@ -2400,6 +2400,52 @@ footer {
     .look-options .button:not([type="submit"]).gold {
       border-bottom-color: #e2bb3a; }
 
+.look-options2 {
+  margin-top: -2rem;
+  padding-bottom: 2rem; }
+  .look-options2 fieldset {
+    padding: 0;
+    border: none; }
+  .look-options2 legend {
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    margin-bottom: .2rem;
+    line-height: 1; }
+  .look-options2 .button-group {
+    margin-left: .1rem; }
+  .look-options2 .button[type="submit"] {
+    margin-top: 2rem; }
+  .look-options2 .button:not([type="submit"]) {
+    margin-bottom: 0;
+    border: none;
+    padding: 0.325rem .875rem 0.3875rem .875rem;
+    margin-right: .875rem;
+    border-color: white; }
+    .look-options2 .button:not([type="submit"]):hover {
+      background: none;
+      border-width: 2px;
+      color: #222222;
+      top: 0; }
+    .look-options2 .button:not([type="submit"]).active {
+      border: 2px solid; }
+    .look-options2 .button:not([type="submit"]).black, .look-options2 .button:not([type="submit"]).brown, .look-options2 .button:not([type="submit"]).gray, .look-options2 .button:not([type="submit"]).pink, .look-options2 .button:not([type="submit"]).silver, .look-options2 .button:not([type="submit"]).darkGray, .look-options2 .button:not([type="submit"]).gold {
+      border-color: #222222; }
+    .look-options2 .button:not([type="submit"]).black {
+      border-color: #222222; }
+    .look-options2 .button:not([type="submit"]).brown {
+      border-color: #734026; }
+    .look-options2 .button:not([type="submit"]).gray {
+      border-color: #888888; }
+    .look-options2 .button:not([type="submit"]).pink {
+      border-color: #DE9CCF; }
+    .look-options2 .button:not([type="submit"]).silver {
+      border-color: #d9d9d9; }
+    .look-options2 .button:not([type="submit"]).darkGray {
+      border-color: #727272; }
+    .look-options2 .button:not([type="submit"]).gold {
+      border-color: #e2bb3a; }
+
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"],
 input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"],
 input[type="week"], input[type="number"], input[type="email"], input[type="url"],

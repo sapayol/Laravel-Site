@@ -1,0 +1,70 @@
+.look-options2 {
+	margin-top: -2rem;
+	padding-bottom: 2rem;
+	fieldset {
+		padding: 0;
+		border: none;
+		// text-align: center;
+	}
+	legend {
+		font-weight: 100;
+		padding: 0;
+		margin: 0;
+		margin-bottom: .2rem;
+		line-height: 1;
+	}
+	.button-group {
+		margin-left: .1rem;
+		&>li:first-child .button {
+			// border-left: 1px solid $black;
+		}
+	}
+	.button[type="submit"] {
+		margin-top: 2rem;
+	}
+	.button:not([type="submit"]) {
+		margin-bottom: 0;
+		border: none;
+		// border-color: $black;
+    padding: 0.325rem .875rem 0.3875rem .875rem;
+    // padding: 0.325rem 0 0.1875rem 0;
+    margin-right: .875rem;
+		border-color: white;
+    &:hover {
+    	background: none;
+    	border-width: 2px;
+    	color: $black;
+    	top: 0;
+    }
+		&.active {
+			// border-color: $black;
+			// background: $black;
+			// color: $white;
+			border: 2px solid;
+		}
+		&.black, &.brown, &.gray, &.pink, &.silver, &.darkGray, &.gold {
+			border-color: $black;
+		}
+		&.black {
+			border-color: $black;
+		}
+		&.brown {
+			border-color: $leather-brown;
+		}
+		&.gray {
+			border-color: mix($grey, white, 75%);
+		}
+		&.pink {
+			border-color: $pink;
+		}
+		&.silver {
+			border-color: $silver;
+		}
+		&.darkGray {
+			border-color: mix($dark-grey, white, 75%);
+		}
+		&.gold {
+			border-color: $gold;
+		}
+	}
+}

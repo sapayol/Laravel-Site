@@ -21,8 +21,7 @@
 			<p>Side of the neck, straight under the hollow behind your earlobe.</p>
 			<h4>End</h4>
 			<p>Raise the arm to shoulder level and a dimple will form at the shoulder bone. That’s the shoulder point.</p>
-			<h4>Note</h4>
-			<p>You only need to measure one side.</p>
+			<p><em>You only need to measure one side.</em></p>
 		</div>
 		<label for="half-shoulder" class="text-input-label">
 			<span class="label-title">Half Shoulder</span>
@@ -159,8 +158,7 @@
 			<p>Bend your head forward. The highest bone on the jacket-length of your neck that sticks out is your starting point.</p>
 			<h4>End</h4>
 			<p>If you’re wearing pants that sit right on your hips (not pants with a high waist), measure to end of the waistband. Anatomically, it’s right above the sacrum.</p>
-			<h4>Note</h4>
-			<p>Some people like a slightly shorter or longer jacket. You will be able to express your preference later. For now, measure as indicated in the video.</p>
+			<p><em>Some people like a slightly shorter or longer jacket. You will be able to express your preference later. For n</em>ow, measure as indicated in the video.</p>
 		</div>
 		<label for="jacket-length" class="text-input-label">
 			<span class="label-title">Jacket Length</span>
@@ -184,8 +182,7 @@
 			<p>Shoulder point (where you left off for the shoulder measurement)</p>
 			<h4>End</h4>
 			<p>Right at the wrist, just after the bone that sticks out a little on the side of your little finger (head of ulna).</p>
-			<h4>Note</h4>
-			<p>Go along the arm, passing through the elbow. Don’t go straight from the shoulder to your hand.</p>
+			<p><em>Go along the arm, passing through the elbow. Don’t go straight from the shoulder to your hand.</em></p>
 			<p>Some people like their sleeves a little longer, other a little shorter. You will be able to express your preference later. For now, measure as indicated in the video.</p>
 		</div>
 		<label for="sleeve" class="text-input-label">
