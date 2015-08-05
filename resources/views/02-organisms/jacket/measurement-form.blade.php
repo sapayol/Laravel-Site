@@ -1,7 +1,7 @@
 <form action="">
 	<article>
 		<p>To begin, please choose which units you'll be measuring in</p>
-	  <fieldset>
+	  <fieldset class="unit-choice">
 	    <label>Units</label>
 	    <input type="radio" name="units" ng-model="units" id="unit-cm" value="cm" ng-checked="true" checked="checked"/>
 	    <label for="unit-cm">cm</label>
@@ -11,10 +11,10 @@
 	</article>
 
 	<article id="half-shoulder-section">
-		<div>
+		<div class="flex-video">
 			<h3>Half Shoulder</h3>
-	    {{-- <iframe width="420" height="315" src="//www.youtube.com/embed/6wyy_j6VHzw?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe> --}}
-	    <img src="http://placehold.it/420x315" alt="">
+	    <iframe width="420" height="315" src="//www.youtube.com/embed/6wyy_j6VHzw?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
+	    {{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
 		<div ng-show="halfShoulderInstructions" class="slideInDown">
 			<h4>Start</h4>
@@ -36,10 +36,10 @@
 
 
 	<article id="shoulders-section">
-		<div>
+		<div class="flex-video">
 			<h3>Full Shoulder</h3>
-	    {{-- <iframe width="420" height="315" src="//www.youtube.com/embed/6wyy_j6VHzw?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe> --}}
-	    <img src="http://placehold.it/420x315" alt="">
+	    <iframe width="420" height="315" src="//www.youtube.com/embed/6wyy_j6VHzw?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
+	    {{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
 		<div ng-show="shoulderInstructions" class="slideInDown">
 			<p>From one shoulder point (right under the dimple that forms when you raise your arm to shoulder level) to the other, across the back.</p>
@@ -56,10 +56,10 @@
 
 
 	<article id="chest-section">
-		<div>
+		<div class="flex-video">
 			<h3>Chest</h3>
-    	{{-- <iframe width="420" height="315" src="//www.youtube.com/embed/9dDa8TePCR8?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe> --}}
-    	<img src="http://placehold.it/420x315" alt="">
+    	<iframe width="420" height="315" src="//www.youtube.com/embed/9dDa8TePCR8?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
+    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
 		<div ng-if="chestInstructions">
 			<p>This measurement goes around the widest part of your chest, right across your nipples.</p>
@@ -82,10 +82,10 @@
 
 
 	<article id="stomach-section">
-		<div>
+		<div class="flex-video">
 			<h3>Stomach</h3>
-    	{{-- <iframe width="420" height="315" src="//www.youtube.com/embed/Spk9gp-XqDQ?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe> --}}
-    	<img src="http://placehold.it/420x315" alt="">
+    	<iframe width="420" height="315" src="//www.youtube.com/embed/Spk9gp-XqDQ?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
+    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
 		<div ng-if="stomachInstructions">
 			<p>Measure horizontally around the body, just above the hipbones (for most people, that’s right across your belly button).</p>
@@ -103,10 +103,10 @@
 
 
 	<article id="waist-section">
-		<div>
+		<div class="flex-video">
 			<h3>Waist</h3>
-    	{{-- <iframe width="420" height="315" src="//www.youtube.com/embed/SK2fbnCKVJ0?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe> --}}
-    	<img src="http://placehold.it/420x315" alt="">
+    	<iframe width="420" height="315" src="//www.youtube.com/embed/SK2fbnCKVJ0?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
+    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
 		<div ng-if="waistInstructions">
 			<p>Measure around the hips, right where your jacket length measurement ended.</p>
@@ -128,10 +128,10 @@
 
 
 	<article id="back-section">
-		<div>
+		<div class="flex-video">
 			<h3>Back</h3>
-    	{{-- <iframe width="420" height="315" src="//www.youtube.com/embed/qcM8H08LFKM?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe> --}}
-    	<img src="http://placehold.it/420x315" alt="">
+    	<iframe width="420" height="315" src="//www.youtube.com/embed/qcM8H08LFKM?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
+    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
 		<div ng-if="backInstructions">
 			<h4>Start and End</h4>
@@ -149,10 +149,10 @@
 
 
 	<article id="jacket-length-section">
-		<div>
+		<div class="flex-video">
 			<h3>Jacket Length</h3>
-    	{{-- <iframe width="420" height="315" src="//www.youtube.com/embed/qcM8H08LFKM?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe> --}}
-    	<img src="http://placehold.it/420x315" alt="">
+    	<iframe width="420" height="315" src="//www.youtube.com/embed/qcM8H08LFKM?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
+    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
 		<div ng-if="jacketLengthInstructions">
 			<h4>Start</h4>
@@ -174,10 +174,10 @@
 
 
 	<article id="sleeve-section">
-		<div>
+		<div class="flex-video">
 			<h3>Sleeve Length</h3>
-    	{{-- <iframe width="420" height="315" src="//www.youtube.com/embed/6qHZNR6if1Y?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe> --}}
-    	<img src="http://placehold.it/420x315" alt="">
+    	<iframe width="420" height="315" src="//www.youtube.com/embed/6qHZNR6if1Y?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
+    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
 		<div ng-if="sleeveInstructions">
 			<h4>Start</h4>
@@ -200,10 +200,10 @@
 
 
 	<article id="biceps-section">
-		<div>
+		<div class="flex-video">
 			<h3>Biceps</h3>
-    	{{-- <iframe width="420" height="315" src="//www.youtube.com/embed/RoA_Rusd4Bg?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe> --}}
-    	<img src="http://placehold.it/420x315" alt="">
+    	<iframe width="420" height="315" src="//www.youtube.com/embed/RoA_Rusd4Bg?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
+    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
 		</div>
 		<div ng-if="bicepsInstructions">
 			<p>Measure around the biceps, with your muscles flexed.</p>

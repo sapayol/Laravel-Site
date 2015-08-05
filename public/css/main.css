@@ -2500,6 +2500,14 @@ fieldset {
   display: inline-block;
   width: 49%;
   margin-top: -1rem; }
+.measurement-entry fieldset.unit-choice {
+  width: 80%; }
+  .measurement-entry fieldset.unit-choice input, .measurement-entry fieldset.unit-choice label:not(:first-child) {
+    padding: .25rem;
+    position: relative;
+    top: -.3rem; }
+  .measurement-entry fieldset.unit-choice label {
+    margin-right: 2rem; }
 .measurement-entry fieldset label:not(:first-child) {
   margin-left: .3rem; }
 .measurement-entry input[type="tel"] {
