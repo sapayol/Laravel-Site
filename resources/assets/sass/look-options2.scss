@@ -23,10 +23,11 @@
 		margin-top: 2rem;
 	}
 	.button:not([type="submit"]) {
+		width: 4.7rem;
 		margin-bottom: 0;
 		border: none;
 		// border-color: $black;
-    padding: 0.325rem .875rem 0.3875rem .875rem;
+    padding: 0.325rem .475rem 0.3875rem .475rem;
     // padding: 0.325rem 0 0.1875rem 0;
     margin-right: .875rem;
 		border-color: white;

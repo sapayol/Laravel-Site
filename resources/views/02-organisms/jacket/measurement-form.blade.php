@@ -1,4 +1,4 @@
-<form action="" ng-init="units = 'cm'">
+<form action="/checkout" ng-init="units = 'cm'">
 	<article>
 		<p>To begin, please choose which units you'll be measuring in</p>
 	  <fieldset class="unit-choice">
@@ -232,6 +232,11 @@
     	<span ng-show="!bicepsInstructions">Show</span><span ng-show="bicepsInstructions">Hide</span> Instructions
     </button>
   </article>
+
+	<div class="text-center">
+		<button type="submit" class="black button expand">Proceed To Checkout</button>
+	</div>
+
 </form>
 
 

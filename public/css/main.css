@@ -2417,9 +2417,10 @@ footer {
   .look-options2 .button[type="submit"] {
     margin-top: 2rem; }
   .look-options2 .button:not([type="submit"]) {
+    width: 4.7rem;
     margin-bottom: 0;
     border: none;
-    padding: 0.325rem .875rem 0.3875rem .875rem;
+    padding: 0.325rem .475rem 0.3875rem .475rem;
     margin-right: .875rem;
     border-color: white; }
     .look-options2 .button:not([type="submit"]):hover {
