@@ -1,4 +1,4 @@
-<form action="">
+<form action="" ng-init="units = 'cm'">
 	<article>
 		<p>To begin, please choose which units you'll be measuring in</p>
 	  <fieldset class="unit-choice">
