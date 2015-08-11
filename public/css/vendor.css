@@ -114,6 +114,9 @@
 
     border: 1px solid transparent;
 }
+.slick-arrow.slick-hidden {
+    display: none;
+}
 @charset 'UTF-8';
 /* Slider */
 .slick-loading .slick-list

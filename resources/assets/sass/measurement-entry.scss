@@ -8,11 +8,6 @@
 	.text-button {
 		font-size: .8rem;
 	}
-	.flex-video {
-		display: flex;
-		position: relative;
-		z-index: 1;
-	}
 	label.text-input-label, fieldset {
 		display: inline-block;
 		width: 49%;
@@ -43,11 +38,13 @@
 		left: -3rem;
 	}
 	h3 {
-		margin: auto;
 		position: relative;
-		font-weight: 900;
-		color: white;
-		top: 9.95rem;
-		z-index: 10;
+		left: -9999px;
+	}
+	.player-controls-right {
+		display: inline-block;
+	}
+	.measurement-instructions {
+		background: $white;
 	}
 }

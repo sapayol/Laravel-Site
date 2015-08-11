@@ -16,6 +16,9 @@
 		<link rel="stylesheet" href="/css/vendor.css">
 		<link rel="stylesheet" href="/css/main.css">
 		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.plyr.io/1.3.3/plyr.css">
+<script src="https://cdn.plyr.io/1.3.3/plyr.js"></script>
 	</head>
 
 	<body "@yield('angular_page_controller')">

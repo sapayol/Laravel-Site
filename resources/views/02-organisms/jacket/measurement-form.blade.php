@@ -11,12 +11,14 @@
 	</article>
 
 	<article id="half-shoulder-section">
-		<div class="flex-video">
+		<div class="player">
 			<h3>Half Shoulder</h3>
-	    <iframe width="420" height="315" src="//www.youtube.com/embed/6wyy_j6VHzw?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
-	    {{-- <img src="http://placehold.it/420x315" alt=""> --}}
+	    <video poster="/images/video-posters/half-shoulder.png" controls crossorigin>
+        <source src="/videos/1-half shoulder.mp4" type="video/mp4">
+        <a href="/videos/1-half shoulder.mp4">Download</a>
+	    </video>
 		</div>
-		<div ng-show="halfShoulderInstructions" class="animated slideInDown">
+		<div ng-show="halfShoulderInstructions" class="measurement-instructions animated slideInDown">
 			<h4>Start</h4>
 			<p>Side of the neck, straight under the hollow behind your earlobe.</p>
 			<h4>End</h4>
@@ -35,16 +37,18 @@
 
 
 	<article id="shoulders-section">
-		<div class="flex-video">
+		<div class="player">
 			<h3>Full Shoulder</h3>
-	    <iframe width="420" height="315" src="//www.youtube.com/embed/6wyy_j6VHzw?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
-	    {{-- <img src="http://placehold.it/420x315" alt=""> --}}
+	    <video poster="/images/video-posters/full-shoulder.png" controls crossorigin>
+        <source src="/videos/2-full shoulder.mp4" type="video/mp4">
+        <a href="/videos/2-full shoulder.mp4">Download</a>
+	    </video>
 		</div>
-		<div ng-show="shoulderInstructions" class="animated slideInDown">
+		<div ng-show="shoulderInstructions" class="measurement-instructions animated slideInDown">
 			<p>From one shoulder point (right under the dimple that forms when you raise your arm to shoulder level) to the other, across the back.</p>
 		</div>
 		<label for="shoulders" class="text-input-label">
-			<span class="label-title">Shoulder Length</span>
+			<span class="label-title">Shoulders</span>
 			<input id="shoulders" type="tel" placeholder="00.00" ng-model="shoulders" maxlength="5" mask="99.99">
 			<span class="input-units">@{{ units }}</span>
 		</label>
@@ -54,13 +58,38 @@
 	</article>
 
 
-	<article id="chest-section">
-		<div class="flex-video">
-			<h3>Chest</h3>
-    	<iframe width="420" height="315" src="//www.youtube.com/embed/9dDa8TePCR8?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
-    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
+	<article id="back-section">
+		<div class="player">
+			<h3>Back</h3>
+	    <video poster="/images/video-posters/back-width.png" controls crossorigin>
+        <source src="/videos/3-back width.mp4" type="video/mp4">
+        <a href="/videos/3-back width.mp4">Download</a>
+	    </video>
 		</div>
-		<div ng-show="chestInstructions" class="animated slideInDown">
+		<div ng-show="backInstructions" class="measurement-instructions animated slideInDown">
+			<h4>Start and End</h4>
+			<p>Halfway between the shoulder point and the arm crease.</p>
+		</div>
+		<label for="back" class="text-input-label">
+			<span class="label-title">Back</span>
+			<input id="back" type="tel" placeholder="00.00" ng-model="back" maxlength="5" mask="99.99">
+			<span class="input-units">@{{ units }}</span>
+		</label>
+    <button type="button" class="text-button"  ng-click="backInstructions = !backInstructions">
+    	<span ng-show="!backInstructions">Show</span> <span ng-show="backInstructions">Hide</span> Instructions
+    </button>
+  </article>
+
+
+	<article id="chest-section">
+		<div class="player">
+			<h3>Chest</h3>
+	    <video poster="/images/video-posters/full-chest.png" controls crossorigin>
+        <source src="/videos/4-full chest.mp4" type="video/mp4">
+        <a href="/videos/4-full chest.mp4">Download</a>
+	    </video>
+		</div>
+		<div ng-show="chestInstructions" class="measurement-instructions animated slideInDown">
 			<p>This measurement goes around the widest part of your chest, right across your nipples.</p>
 			<ul>
 				<li>Make sure that the measuring tape is horizontal on the back too.</li>
@@ -81,12 +110,14 @@
 
 
 	<article id="stomach-section">
-		<div class="flex-video">
-			<h3>Stomach</h3>
-    	<iframe width="420" height="315" src="//www.youtube.com/embed/Spk9gp-XqDQ?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
-    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
+		<div class="player">
+			<h3>Belly / Stomach</h3>
+	    <video poster="/images/video-posters/belly-stomach.png" controls crossorigin>
+        <source src="/videos/5-belly-stomach.mp4" type="video/mp4">
+        <a href="/videos/5-belly-stomach.mp4">Download</a>
+	    </video>
 		</div>
-		<div ng-show="stomachInstructions" class="animated slideInDown">
+		<div ng-show="stomachInstructions" class="measurement-instructions animated slideInDown">
 			<p>Measure horizontally around the body, just above the hipbones (for most people, that’s right across your belly button).</p>
 			<p>Leave enough space to fit a finger under the measure tape. </p>
 		</div>
@@ -101,13 +132,41 @@
   </article>
 
 
-	<article id="waist-section">
-		<div class="flex-video">
-			<h3>Waist</h3>
-    	<iframe width="420" height="315" src="//www.youtube.com/embed/SK2fbnCKVJ0?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
-    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
+	<article id="jacket-length-section">
+		<div class="player">
+			<h3>Jacket Length</h3>
+	    <video poster="/images/video-posters/jacket-length.png" controls crossorigin>
+        <source src="/videos/6-jacket length.mp4" type="video/mp4">
+        <a href="/videos/6-jacket length.mp4">Download</a>
+	    </video>
 		</div>
-		<div ng-show="waistInstructions" class="animated slideInDown">
+		<div ng-show="jacketLengthInstructions" class="measurement-instructions animated slideInDown">
+			<h4>Start</h4>
+			<p>Bend your head forward. The highest bone on the jacket-length of your neck that sticks out is your starting point.</p>
+			<h4>End</h4>
+			<p>If you’re wearing pants that sit right on your hips (not pants with a high waist), measure to end of the waistband. Anatomically, it’s right above the sacrum.</p>
+			<p><em>Some people like a slightly shorter or longer jacket. You will be able to express your preference later. For n</em>ow, measure as indicated in the video.</p>
+		</div>
+		<label for="jacket-length" class="text-input-label">
+			<span class="label-title">Jacket Length</span>
+			<input id="jacket-length" type="tel" placeholder="00.00" ng-model="jacketLength" maxlength="5" mask="99.99">
+			<span class="input-units">@{{ units }}</span>
+		</label>
+    <button type="button" class="text-button"  ng-click="jacketLengthInstructions = !jacketLengthInstructions">
+    	<span ng-show="!jacketLengthInstructions">Show</span> <span ng-show="jacketLengthInstructions">Hide</span> Instructions
+    </button>
+  </article>
+
+
+	<article id="waist-section">
+		<div class="player">
+			<h3>Waist</h3>
+	    <video poster="/images/video-posters/waist.png" controls crossorigin>
+        <source src="/videos/7-waist.mp4" type="video/mp4">
+        <a href="/videos/7-waist.mp4">Download</a>
+	    </video>
+		</div>
+		<div ng-show="waistInstructions" class="measurement-instructions animated slideInDown">
 			<p>Measure around the hips, right where your jacket length measurement ended.</p>
 			<ul>
 				<li>Leave enough space to fit a finger under the measure tape.</li>
@@ -126,58 +185,15 @@
   </article>
 
 
-	<article id="back-section">
-		<div class="flex-video">
-			<h3>Back</h3>
-    	<iframe width="420" height="315" src="//www.youtube.com/embed/qcM8H08LFKM?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
-    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
-		</div>
-		<div ng-show="backInstructions" class="animated slideInDown">
-			<h4>Start and End</h4>
-			<p>Halfway between the shoulder point and the arm crease.</p>
-		</div>
-		<label for="back" class="text-input-label">
-			<span class="label-title">Back</span>
-			<input id="back" type="tel" placeholder="00.00" ng-model="back" maxlength="5" mask="99.99">
-			<span class="input-units">@{{ units }}</span>
-		</label>
-    <button type="button" class="text-button"  ng-click="backInstructions = !backInstructions">
-    	<span ng-show="!backInstructions">Show</span> <span ng-show="backInstructions">Hide</span> Instructions
-    </button>
-  </article>
-
-
-	<article id="jacket-length-section">
-		<div class="flex-video">
-			<h3>Jacket Length</h3>
-    	<iframe width="420" height="315" src="//www.youtube.com/embed/qcM8H08LFKM?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
-    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
-		</div>
-		<div ng-show="jacketLengthInstructions" class="animated slideInDown">
-			<h4>Start</h4>
-			<p>Bend your head forward. The highest bone on the jacket-length of your neck that sticks out is your starting point.</p>
-			<h4>End</h4>
-			<p>If you’re wearing pants that sit right on your hips (not pants with a high waist), measure to end of the waistband. Anatomically, it’s right above the sacrum.</p>
-			<p><em>Some people like a slightly shorter or longer jacket. You will be able to express your preference later. For n</em>ow, measure as indicated in the video.</p>
-		</div>
-		<label for="jacket-length" class="text-input-label">
-			<span class="label-title">Jacket Length</span>
-			<input id="jacket-length" type="tel" placeholder="00.00" ng-model="jacketLength" maxlength="5" mask="99.99">
-			<span class="input-units">@{{ units }}</span>
-		</label>
-    <button type="button" class="text-button"  ng-click="jacketLengthInstructions = !jacketLengthInstructions">
-    	<span ng-show="!jacketLengthInstructions">Show</span> <span ng-show="jacketLengthInstructions">Hide</span> Instructions
-    </button>
-  </article>
-
-
 	<article id="sleeve-section">
-		<div class="flex-video">
-			<h3>Sleeve Length</h3>
-    	<iframe width="420" height="315" src="//www.youtube.com/embed/6qHZNR6if1Y?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
-    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
+		<div class="player">
+			<h3>Sleeve</h3>
+	    <video poster="/images/video-posters/sleeve.png" controls crossorigin>
+        <source src="/videos/8-sleeve.mp4" type="video/mp4">
+        <a href="/videos/8-sleeve.mp4">Download</a>
+	    </video>
 		</div>
-		<div ng-show="sleeveInstructions" class="animated slideInDown">
+		<div ng-show="sleeveInstructions" class="measurement-instructions animated slideInDown">
 			<h4>Start</h4>
 			<p>Shoulder point (where you left off for the shoulder measurement)</p>
 			<h4>End</h4>
@@ -197,12 +213,14 @@
 
 
 	<article id="biceps-section">
-		<div class="flex-video">
+		<div class="player">
 			<h3>Biceps</h3>
-    	<iframe width="420" height="315" src="//www.youtube.com/embed/RoA_Rusd4Bg?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
-    	{{-- <img src="http://placehold.it/420x315" alt=""> --}}
+	    <video poster="/images/video-posters/biceps.png" controls crossorigin>
+        <source src="/videos/9-biceps.mp4" type="video/mp4">
+        <a href="/videos/9-biceps.mp4">Download</a>
+	    </video>
 		</div>
-		<div ng-show="bicepsInstructions" class="animated slideInDown">
+		<div ng-show="bicepsInstructions" class="measurement-instructions animated slideInDown">
 			<p>Measure around the biceps, with your muscles flexed.</p>
 		</div>
 		<label for="biceps" class="text-input-label">

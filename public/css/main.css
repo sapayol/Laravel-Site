@@ -2537,13 +2537,6 @@ fieldset {
   margin-bottom: 2rem; }
 .measurement-entry .text-button {
   font-size: .8rem; }
-.measurement-entry .flex-video {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  z-index: 1; }
 .measurement-entry label.text-input-label, .measurement-entry fieldset {
   display: inline-block;
   width: 49%;
@@ -2567,12 +2560,12 @@ fieldset {
   font-weight: 200;
   left: -3rem; }
 .measurement-entry h3 {
-  margin: auto;
   position: relative;
-  font-weight: 900;
-  color: white;
-  top: 9.95rem;
-  z-index: 10; }
+  left: -9999px; }
+.measurement-entry .player-controls-right {
+  display: inline-block; }
+.measurement-entry .measurement-instructions {
+  background: white; }
 
 ul.measurement-tracker {
   position: fixed;

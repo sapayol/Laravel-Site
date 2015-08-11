@@ -46,6 +46,9 @@
     });
   });
 
+  plyr.setup({
+    controls: ["play", "fullscreen"]
+  });
 
 })();
 
