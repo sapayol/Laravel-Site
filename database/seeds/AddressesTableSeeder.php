@@ -15,7 +15,7 @@ class AddressesTableSeeder extends Seeder {
 				'address1' => $faker->streetAddress,
 				'address2' => $faker->secondaryAddress,
 				'city'     => $faker->city,
-				'state'    => strtolower($faker->stateAbbr),
+				'province'    => strtolower($faker->stateAbbr),
 				'postcode' => $faker->postcode,
 				'country'  => strtolower($faker->country),
 			]);

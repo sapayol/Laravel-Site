@@ -144,6 +144,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Vendor Service Providers...
+         */
+        'Laracasts\Utilities\JavaScript\JavascriptServiceProvider',
+        'Laravel\Cashier\CashierServiceProvider'
+
     ],
 
     /*

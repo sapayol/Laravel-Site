@@ -74,7 +74,6 @@
 		<input type="hidden" name="leather_color"  value="@{{ jacket.leather_color }}">
 		<input type="hidden" name="lining_color"   value="@{{ jacket.lining_color }}">
 		<input type="hidden" name="hardware_color" value="@{{ jacket.hardware_color }}">
-		<input type="hidden" name="size"           value="@{{ jacket.size }}">
 		<div class="text-center">
 			<button type="submit" class="black button expand">Proceed To Measurements</button>
 			<a href="" class="underlined under-button-link">Order Now and Measure Later</a><br>
@@ -141,7 +140,6 @@
 		<input type="hidden" name="leather_color"  value="@{{ jacket.leather_color }}">
 		<input type="hidden" name="lining_color"   value="@{{ jacket.lining_color }}">
 		<input type="hidden" name="hardware_color" value="@{{ jacket.hardware_color }}">
-		<input type="hidden" name="size"           value="@{{ jacket.size }}">
 		<div class="text-center">
 			<button type="submit" class="black button expand">Proceed To Measurements</button>
 			<a href="" class="underlined under-button-link">Order Now and Measure Later</a><br>

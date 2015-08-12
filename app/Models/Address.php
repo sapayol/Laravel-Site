@@ -13,7 +13,9 @@ class Address extends Model {
 	 */
 	protected $table = 'addresses';
 
-  public function orders()
+  protected $guarded = array();
+
+  public function order()
   {
     return $this->belongsTo('Order');
   }

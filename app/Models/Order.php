@@ -13,13 +13,15 @@ class Order extends Model {
 	 */
 	protected $table = 'orders';
 
+  protected $guarded = array();
+
 	//===========================================================================//
   //                                RELATIONSHIPS                              //
   //===========================================================================//
 
   public function address()
   {
-    return $this->hasOne('Address');
+    return $this->belongsTo('Address');
   }
 
   public function attributes()
@@ -29,12 +31,12 @@ class Order extends Model {
 
   public function jacket()
   {
-    return $this->hasOne('Jacket');
+    return $this->belongsTo('Jacket');
   }
 
   public function measurement()
   {
-    return $this->hasOne('Measurement');
+    return $this->belongsTo('Measurement');
   }
 
   public function user()
@@ -42,24 +44,24 @@ class Order extends Model {
     return $this->belongsTo('User');
   }
 
-  public function leatherColor()
+  public function leather_color()
   {
-    return $this->attributes->where('type', '=', 'leather_color')->first();
+    return $this->attributes()->where('type', '=', 'leather_color')->first();
   }
 
-  public function leatherType()
+  public function leather_type()
   {
-    return $this->attributes->where('type', '=', 'leather_type')->first();
+    return $this->attributes()->where('type', '=', 'leather_type')->first();
   }
 
-  public function hardwareColor()
+  public function hardware_color()
   {
-    return $this->attributes->where('type', '=', 'hardware_color')->first();
+    return $this->attributes()->where('type', '=', 'hardware_color')->first();
   }
 
-  public function liningColor()
+  public function lining_color()
   {
-    return $this->attributes->where('type', '=', 'lining_color')->first();
+    return $this->attributes()->where('type', '=', 'lining_color')->first();
   }
 
 }

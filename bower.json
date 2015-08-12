@@ -4,6 +4,7 @@
   "dependencies": {
 		"slick.js"            : null,
     "angular-loading-bar" : null,
+    "angular-notify"			: null,
     "angular-payments"    : null,
     "angular-scroll"      : null,
     "angular-mask" 		    : null

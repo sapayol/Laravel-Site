@@ -1,11 +1,12 @@
-<form ng-submit="submitPaymentInfo()" name="paymentInfoForm">
+<form name="paymentInfoForm" stripe-form="stripeResponseHandler">
+
 	<label for="number">Credit Card Number
 		<span class="right" ng-if="showPaymentErorrs && paymentInfoForm.number.$invalid">Required</span>
 		<input id="number"
 					 name="number"
 					 type="tel"
 					 size="20"
-					 ng-model="payment.number"
+					 ng-model="number"
 					 ng-required="true"
 					 ng-disabled="paymentInfoSubmitted"
 					 payments-format="card"
@@ -19,7 +20,7 @@
 					 name="cvc"
 					 type="tel"
 					 size="4"
-					 ng-model="payment.cvc"
+					 ng-model="cvc"
 					 ng-required="true"
 					 ng-disabled="paymentInfoSubmitted"
 					 data-stripe="cvc"
@@ -33,7 +34,7 @@
 					 name="expiry"
 					 type="tel"
 					 size="4"
-					 ng-model="payment.expiry"
+					 ng-model="expiry"
 					 ng-required="true"
 					 ng-disabled="paymentInfoSubmitted"
 					 payments-validate="expiry"
@@ -41,5 +42,11 @@
 					 placeholder="MM/YYYY">
 	</label>
 
-	<input class="button expand" type="submit" value="Proceed To Shipping Info" ng-hide="paymentInfoSubmitted">
+	<div class="text-center">
+		<br>
+		<input class="button expand" type="submit" value="Proceed To Shipping Info" ng-hide="paymentInfoSubmitted">
+		<em href="" class="under-button-link">Your card will not be charged until you confirm</em>
+		<br>
+	</div>
+
 </form>

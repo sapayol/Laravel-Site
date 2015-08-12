@@ -13,6 +13,8 @@ class Measurement extends Model {
 	 */
 	protected $table = 'measurements';
 
+  protected $guarded = array();
+
   public function orders()
   {
     return $this->belongsTo('Order');

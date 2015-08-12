@@ -1,10 +1,10 @@
 <ul class="small-block-grid-4 measurement-tracker">
 	<li>
-		<a href="#shoulders-section" ng-class="{valid: shoulders}">
+		<a href="#shoulder-section" ng-class="{valid: shoulder}">
 			<div>
 				<span>Shoulders</span>
-				<span ng-if="shoulders" class="measurement-value">
-					@{{ shoulders }}<br><span class="measurement-units"> @{{ units }}</span>
+				<span ng-if="shoulder" class="measurement-value">
+					@{{ shoulder }}<br><span class="measurement-units"> @{{ units }}</span>
 				</span>
 			</div>
 		</a>
@@ -43,8 +43,8 @@
 		<a href="#jacket-length-section" ng-class="{valid: jacketLength}">
 			<div>
 				<span>Jacket</span>
-				<span ng-if="jacket-length" class="measurement-value">
-					@{{ jacket-length }}<br><span class="measurement-units"> @{{ units }}</span>
+				<span ng-if="jacketLength" class="measurement-value">
+					@{{ jacketLength }}<br><span class="measurement-units"> @{{ units }}</span>
 				</span>
 			</div>
 		</a>

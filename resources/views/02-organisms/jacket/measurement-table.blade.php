@@ -53,15 +53,15 @@
 			<tr>
 				<td class="thin"><small>Back Length</small></td>
 				@for ($i=0; $i < count($measurements); $i++)
-					<td ng-class="{active: selectedColumn == {{{$i}}} }" ng-click="selectedColumn = {{{$i}}}; jacket.size = {{{$measurements[$i]->size}}}"  ng-show="!metricUnits">{{{ $measurements[$i]->back_length }}}</td>
-					<td ng-class="{active: selectedColumn == {{{$i}}} }" ng-click="selectedColumn = {{{$i}}}; jacket.size = {{{$measurements[$i]->size}}}"  ng-show="metricUnits">{{{ round($measurements[$i]->back_length * 2.54, 2) }}}</td>
+					<td ng-class="{active: selectedColumn == {{{$i}}} }" ng-click="selectedColumn = {{{$i}}}; jacket.size = {{{$measurements[$i]->size}}}"  ng-show="!metricUnits">{{{ $measurements[$i]->back }}}</td>
+					<td ng-class="{active: selectedColumn == {{{$i}}} }" ng-click="selectedColumn = {{{$i}}}; jacket.size = {{{$measurements[$i]->size}}}"  ng-show="metricUnits">{{{ round($measurements[$i]->back * 2.54, 2) }}}</td>
 				@endfor
 			</tr>
 			<tr>
 				<td class="thin"><small>Sleeve Length</small></td>
 				@for ($i=0; $i < count($measurements); $i++)
-					<td ng-class="{active: selectedColumn == {{{$i}}} }" ng-click="selectedColumn = {{{$i}}}; jacket.size = {{{$measurements[$i]->size}}}"  ng-show="!metricUnits">{{{ $measurements[$i]->sleeve_length }}}</td>
-					<td ng-class="{active: selectedColumn == {{{$i}}} }" ng-click="selectedColumn = {{{$i}}}; jacket.size = {{{$measurements[$i]->size}}}"  ng-show="metricUnits">{{{ round($measurements[$i]->sleeve_length * 2.54, 2) }}}</td>
+					<td ng-class="{active: selectedColumn == {{{$i}}} }" ng-click="selectedColumn = {{{$i}}}; jacket.size = {{{$measurements[$i]->size}}}"  ng-show="!metricUnits">{{{ $measurements[$i]->sleeve }}}</td>
+					<td ng-class="{active: selectedColumn == {{{$i}}} }" ng-click="selectedColumn = {{{$i}}}; jacket.size = {{{$measurements[$i]->size}}}"  ng-show="metricUnits">{{{ round($measurements[$i]->sleeve * 2.54, 2) }}}</td>
 				@endfor
 			</tr>
 			<tr>

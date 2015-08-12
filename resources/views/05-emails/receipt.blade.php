@@ -1,0 +1,1 @@
+Thanks for purchasing {{{ $order->jacket->name }}}

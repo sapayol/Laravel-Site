@@ -1,7 +1,7 @@
 @extends('03-templates/default')
 
 @section('title')
-	{{{ $jacket->name }}}
+	{{{ $order->jacket->name }}}
 @stop
 
 @section('main')

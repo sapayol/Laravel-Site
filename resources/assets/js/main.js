@@ -3,7 +3,10 @@
 
   var sapayolApp = angular.module('sapayolApp', [
     'controllers',
+    'services',
+    'factories',
     'duScroll',
+    'cgNotify',
     'angularPayments',
     'angular-loading-bar',
     'ngMask'

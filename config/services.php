@@ -20,7 +20,7 @@ return [
     ],
 
     'mandrill' => [
-        'secret' => '',
+        'secret' => env('MANDRILL_SECRET'),
     ],
 
     'ses' => [
@@ -31,8 +31,7 @@ return [
 
     'stripe' => [
         'model'  => App\User::class,
-        'key' => '',
-        'secret' => '',
+        'secret' => env('STRIPE_SECRET'),
     ],
 
 ];

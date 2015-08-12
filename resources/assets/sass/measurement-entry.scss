@@ -44,6 +44,12 @@
 	.player-controls-right {
 		display: inline-block;
 	}
+	.player-controls button:hover {
+		background: #B02428;
+	}
+	.player-progress-played[value] {
+		color: #B02428;
+	}
 	.measurement-instructions {
 		background: $white;
 	}

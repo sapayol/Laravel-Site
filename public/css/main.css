@@ -2565,6 +2565,10 @@ fieldset {
   left: -9999px; }
 .measurement-entry .player-controls-right {
   display: inline-block; }
+.measurement-entry .player-controls button:hover {
+  background: #B02428; }
+.measurement-entry .player-progress-played[value] {
+  color: #B02428; }
 .measurement-entry .measurement-instructions {
   background: white; }
 
@@ -2714,9 +2718,6 @@ a.under-button-link {
 
 .sidekick-image {
   margin-bottom: 1rem; }
-
-.checkout-image {
-  width: 45%; }
 
 .customization-image {
   margin-top: 1rem;

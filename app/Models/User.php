@@ -2,17 +2,18 @@
 
 namespace App\Models;
 
-namespace App;
-
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Laravel\Cashier\Billable;
+use Laravel\Cashier\Contracts\Billable as BillableContract;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract
+
+class User extends Model implements AuthenticatableContract, CanResetPasswordContract, BillableContract
 {
-    use Authenticatable, CanResetPassword;
+    use Authenticatable, CanResetPassword, Billable;
 
     /**
      * The database table used by the model.
@@ -34,6 +35,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    protected $dates = ['trial_ends_at', 'subscription_ends_at'];
 
     public function orders()
     {

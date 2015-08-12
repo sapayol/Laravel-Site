@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Jacket;
 use Measurement;
+use Route;
 
 class JacketsController extends Controller {
 
@@ -23,23 +24,20 @@ class JacketsController extends Controller {
 	public function look($model)
 	{
 		$jacket = Jacket::where('model', '=', $model)->first();
-		$measurements = Measurement::where('type', '=', 'standard')->get();
 
-		return view('04-pages.jackets.look', ['jacket' => $jacket, 'measurements' => $measurements]);
+		return view('04-pages.jackets.look', ['jacket' => $jacket]);
 	}
 
 	public function fit($model, Request $request)
 	{
 		$jacket = Jacket::where('model', '=', $model)->first();
-		$measurements = Measurement::where('type', '=', 'standard')->get();
 
 		return view('04-pages.jackets.fit', [
 			'jacket'         => $jacket,
-			'measurements'   => $measurements,
-			'leather_type'   => $request->type,
-			'leather_color'  => $request->color,
-			'lining_color'   => $request->lining,
-			'hardware_color' => $request->hardware
+			'leather_type'   => $request->leather_type,
+			'leather_color'  => $request->leather_color,
+			'lining_color'   => $request->lining_color,
+			'hardware_color' => $request->hardware_color
 		]);
 	}
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" ng-app="sapayolApp" class="no-js">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" ng-app="sapayolApp" class="no-js" ng-controller="GlobalCtrl">
 	<head>
 		<meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">

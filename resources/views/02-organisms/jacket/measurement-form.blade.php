@@ -1,16 +1,16 @@
-<form action="/checkout" ng-init="units = 'cm'">
+<form action="/orders" ng-init="units = 'cm'" method="POST">
 	<article>
 		<p>To begin, please choose which units you'll be measuring in</p>
 	  <fieldset class="unit-choice">
 	    <label>Units</label>
-	    <input type="radio" name="units" ng-model="units" id="unit-cm" value="cm" ng-checked="true" checked="checked"/>
+	    <input type="radio" name="measurements[units]" ng-model="units" id="unit-cm" value="cm" ng-checked="true" checked="checked"/>
 	    <label for="unit-cm">cm</label>
-	    <input type="radio" name="units" ng-model="units" id="unit-in" value="in"/>
+	    <input type="radio" name="measurements[units]" ng-model="units" id="unit-in" value="in"/>
 	    <label for="unit-in">in</label>
 	  </fieldset>
 	</article>
 
-	<article id="half-shoulder-section">
+	<article id="shoulder-section">
 		<div class="player">
 			<h3>Half Shoulder</h3>
 	    <video poster="/images/video-posters/half-shoulder.png" controls crossorigin>
@@ -18,25 +18,25 @@
         <a href="/videos/1-half shoulder.mp4">Download</a>
 	    </video>
 		</div>
-		<div ng-show="halfShoulderInstructions" class="measurement-instructions animated slideInDown">
+		<div ng-show="shoulderInstructions" class="measurement-instructions animated slideInDown">
 			<h4>Start</h4>
 			<p>Side of the neck, straight under the hollow behind your earlobe.</p>
 			<h4>End</h4>
 			<p>Raise the arm to shoulder level and a dimple will form at the shoulder bone. That’s the shoulder point.</p>
 			<p><em>You only need to measure one side.</em></p>
 		</div>
-		<label for="half-shoulder" class="text-input-label">
+		<label for="shoulder" class="text-input-label">
 			<span class="label-title">Half Shoulder</span>
-			<input id="half-shoulder" type="tel" placeholder="00.00" ng-model="halfShoulder" maxlength="5" mask="99.99">
+			<input name="measurements[shoulder]" id="shoulder" type="tel" placeholder="00.00" ng-model="shoulder" maxlength="5" mask="99.99" required>
 			<span class="input-units">@{{ units }}</span>
 		</label>
-    <button type="button" class="text-button"  ng-click="halfShoulderInstructions = !halfShoulderInstructions">
-    	<span ng-show="!halfShoulderInstructions">Show</span> <span ng-show="halfShoulderInstructions">Hide</span> Instructions
+    <button type="button" class="text-button"  ng-click="shoulderInstructions = !shoulderInstructions">
+    	<span ng-show="!shoulderInstructions">Show</span> <span ng-show="shoulderInstructions">Hide</span> Instructions
     </button>
 	</article>
 
 
-	<article id="shoulders-section">
+{{-- 	<article id="shoulders-section">
 		<div class="player">
 			<h3>Full Shoulder</h3>
 	    <video poster="/images/video-posters/full-shoulder.png" controls crossorigin>
@@ -49,13 +49,13 @@
 		</div>
 		<label for="shoulders" class="text-input-label">
 			<span class="label-title">Shoulders</span>
-			<input id="shoulders" type="tel" placeholder="00.00" ng-model="shoulders" maxlength="5" mask="99.99">
+			<input name="measurements[shoulders]" id="shoulders" type="tel" placeholder="00.00" ng-model="shoulders" maxlength="5" mask="99.99" required>
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="shoulderInstructions = !shoulderInstructions">
     	<span ng-show="!shoulderInstructions">Show</span> <span ng-show="shoulderInstructions">Hide</span> Instructions
     </button>
-	</article>
+	</article> --}}
 
 
 	<article id="back-section">
@@ -72,7 +72,7 @@
 		</div>
 		<label for="back" class="text-input-label">
 			<span class="label-title">Back</span>
-			<input id="back" type="tel" placeholder="00.00" ng-model="back" maxlength="5" mask="99.99">
+			<input name="measurements[back]" id="back" type="tel" placeholder="00.00" ng-model="back" maxlength="5" mask="99.99" required>
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="backInstructions = !backInstructions">
@@ -100,7 +100,7 @@
 		</div>
 		<label for="chest" class="text-input-label">
 			<span class="label-title">Chest</span>
-			<input id="chest" type="tel" placeholder="00.00" ng-model="chest" maxlength="5" mask="99.99">
+			<input name="measurements[chest]" id="chest" type="tel" placeholder="00.00" ng-model="chest" maxlength="5" mask="99.99" required>
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="chestInstructions = !chestInstructions">
@@ -123,7 +123,7 @@
 		</div>
 		<label for="stomach" class="text-input-label">
 			<span class="label-title">Stomach</span>
-			<input id="stomach" type="tel" placeholder="00.00" ng-model="stomach" maxlength="5" mask="99.99">
+			<input name="measurements[stomach]" id="stomach" type="tel" placeholder="00.00" ng-model="stomach" maxlength="5" mask="99.99" required>
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="stomachInstructions = !stomachInstructions">
@@ -149,7 +149,7 @@
 		</div>
 		<label for="jacket-length" class="text-input-label">
 			<span class="label-title">Jacket Length</span>
-			<input id="jacket-length" type="tel" placeholder="00.00" ng-model="jacketLength" maxlength="5" mask="99.99">
+			<input name="measurements[jacket-length]" id="jacket-length" type="tel" placeholder="00.00" ng-model="jacketLength" maxlength="5" mask="99.99" required>
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="jacketLengthInstructions = !jacketLengthInstructions">
@@ -176,7 +176,7 @@
 		</div>
 		<label for="waist" class="text-input-label">
 			<span class="label-title">Waist</span>
-			<input id="waist" type="tel" placeholder="00.00" ng-model="waist" maxlength="5" mask="99.99">
+			<input name="measurements[waist]" id="waist" type="tel" placeholder="00.00" ng-model="waist" maxlength="5" mask="99.99" required>
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="waistInstructions = !waistInstructions">
@@ -203,7 +203,7 @@
 		</div>
 		<label for="sleeve" class="text-input-label">
 			<span class="label-title">Sleeve Length</span>
-			<input id="sleeve" type="tel" placeholder="00.00" ng-model="sleeve" maxlength="5" mask="99.99">
+			<input name="measurements[sleeve]" id="sleeve" type="tel" placeholder="00.00" ng-model="sleeve" maxlength="5" mask="99.99" required>
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="sleeveInstructions = !sleeveInstructions">
@@ -225,7 +225,7 @@
 		</div>
 		<label for="biceps" class="text-input-label">
 			<span class="label-title">Biceps</span>
-			<input id="biceps" type="tel" placeholder="00.00" ng-model="biceps" maxlength="5" mask="99.99">
+			<input name="measurements[biceps]" id="biceps" type="tel" placeholder="00.00" ng-model="biceps" maxlength="5" mask="99.99" required>
 			<span class="input-units">@{{ units }}</span>
 		</label>
     <button type="button" class="text-button"  ng-click="bicepsInstructions = !bicepsInstructions">
@@ -234,6 +234,12 @@
   </article>
 
 	<div class="text-center">
+		<input type="hidden" name="_token"                 value="{!! csrf_token() !!}">
+		<input type="hidden" name="jacket[model]"          value="{{{ $jacket->model }}}">
+		<input type="hidden" name="jacket[leather_type]"   value="{{{ $leather_type }}}">
+		<input type="hidden" name="jacket[leather_color]"  value="{{{ $leather_color }}}">
+		<input type="hidden" name="jacket[lining_color]"   value="{{{ $lining_color }}}">
+		<input type="hidden" name="jacket[hardware_color]" value="{{{ $hardware_color }}}">
 		<button type="submit" class="black button expand">Proceed To Checkout</button>
 	</div>
 
