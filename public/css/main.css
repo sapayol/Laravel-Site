@@ -2532,45 +2532,55 @@ fieldset {
     font-size: .85rem;
     color: #707070; }
 
-.measurement-entry form {
-  margin-top: 1.5rem; }
-.measurement-entry article {
-  margin-bottom: 2rem; }
-.measurement-entry .text-button {
-  font-size: .8rem; }
-.measurement-entry label.text-input-label, .measurement-entry fieldset {
-  display: inline-block;
-  width: 49%;
-  margin-top: -1rem; }
-.measurement-entry fieldset.unit-choice {
-  width: 80%; }
-  .measurement-entry fieldset.unit-choice input, .measurement-entry fieldset.unit-choice label:not(:first-child) {
-    padding: .25rem;
+.measurement-entry {
+  margin-bottom: 10rem; }
+  .measurement-entry form {
+    margin-top: 1.5rem; }
+  .measurement-entry article {
+    margin-bottom: 2rem; }
+  .measurement-entry .text-button {
+    font-size: .8rem; }
+  .measurement-entry label.text-input-label, .measurement-entry fieldset {
+    display: inline-block;
+    width: 49%;
+    margin-top: -1rem; }
+  .measurement-entry fieldset.unit-choice {
+    width: 80%; }
+    .measurement-entry fieldset.unit-choice input, .measurement-entry fieldset.unit-choice label:not(:first-child) {
+      padding: .25rem;
+      position: relative;
+      top: -.3rem; }
+    .measurement-entry fieldset.unit-choice label {
+      margin-right: 2rem; }
+  .measurement-entry fieldset label:not(:first-child) {
+    margin-left: .3rem; }
+  .measurement-entry input[type="tel"] {
+    width: 80%;
+    display: inline-block; }
+  .measurement-entry span.input-units {
+    display: inline-block;
     position: relative;
-    top: -.3rem; }
-  .measurement-entry fieldset.unit-choice label {
-    margin-right: 2rem; }
-.measurement-entry fieldset label:not(:first-child) {
-  margin-left: .3rem; }
-.measurement-entry input[type="tel"] {
-  width: 80%;
-  display: inline-block; }
-.measurement-entry span.input-units {
-  display: inline-block;
-  position: relative;
-  font-weight: 200;
-  left: -3rem; }
-.measurement-entry h3 {
-  position: relative;
-  left: -9999px; }
-.measurement-entry .player-controls-right {
-  display: inline-block; }
-.measurement-entry .player-controls button:hover {
-  background: #B02428; }
-.measurement-entry .player-progress-played[value] {
-  color: #B02428; }
-.measurement-entry .measurement-instructions {
-  background: white; }
+    font-weight: 200;
+    left: -3rem; }
+  .measurement-entry h3 {
+    position: relative;
+    left: -9999px; }
+  .measurement-entry .player-controls-right {
+    display: inline-block; }
+  .measurement-entry .player-controls button:hover {
+    color: white;
+    background: #B02428;
+    border-bottom: 3px solid #222222; }
+  .measurement-entry .player-controls button {
+    background: none;
+    border: 1px solid #222222;
+    border-radius: 0;
+    color: black;
+    border-bottom: 3px solid #B02428; }
+  .measurement-entry .player-progress-played[value] {
+    color: #B02428; }
+  .measurement-entry .measurement-instructions {
+    background: white; }
 
 ul.measurement-tracker {
   position: fixed;
@@ -2657,6 +2667,12 @@ a {
     border-bottom: 1px solid #222222; }
     .button.bottomless:hover, .button.bottomless:active, a.button.bottomless:hover, a.button.bottomless:active, button.button.bottomless:hover, button.button.bottomless:active {
       border-bottom: 1px solid #222222; }
+  .button.inverted-colors, a.button.inverted-colors, button.button.inverted-colors {
+    background: white;
+    color: #222222; }
+    .button.inverted-colors:hover, a.button.inverted-colors:hover, button.button.inverted-colors:hover {
+      background: #222222;
+      color: white; }
 
 .call-to-action {
   margin: 2rem 0 1.25rem 0; }
@@ -2688,13 +2704,11 @@ h1 {
   font-size: 1.5rem; }
 
 .hero-text {
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0.96) 51%, white 53%, white 100%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0.96) 51%, white 53%, white 100%);
-  position: absolute;
   text-align: center;
-  font-size: 2.9rem;
-  top: 26rem;
-  left: 1rem; }
+  font-size: 2.2rem;
+  z-index: 100;
+  margin: auto;
+  color: #222222; }
 
 a.under-button-link {
   position: relative;
@@ -2725,10 +2739,101 @@ a.under-button-link {
 
 .hero-image-container {
   overflow: hidden;
-  height: 38rem; }
+  height: 22rem; }
 
 .hero-image {
   margin: 0 auto; }
+
+.bg-video {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative; }
+  .bg-video video {
+    background-size: cover; }
+
+.homepage-hero-module {
+  border-right: none;
+  border-left: none;
+  position: relative; }
+
+.no-video .video-container video,
+.touch .video-container video {
+  display: none; }
+
+.no-video .video-container .poster,
+.touch .video-container .poster {
+  display: block !important; }
+
+.video-container {
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: white; }
+
+.video-container .poster img {
+  width: 100%;
+  bottom: 0;
+  position: absolute; }
+
+.video-container .filter {
+  z-index: 100;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%; }
+
+.video-container .title-container {
+  z-index: 1000;
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  color: #fff; }
+
+.video-container .hero-text {
+  color: white;
+  font-size: 2rem; }
+
+.video-container .link {
+  position: absolute;
+  bottom: 3em;
+  width: 100%;
+  text-align: center;
+  z-index: 1001;
+  font-size: 2em;
+  color: #fff; }
+
+.video-container .link a {
+  color: #fff; }
+
+.video-container video {
+  position: absolute;
+  z-index: 0;
+  bottom: 0; }
+
+.video-container video.fillWidth {
+  width: 100%; }
+
+.show {
+  display: block !important; }
+
+.hidden {
+  display: none !important; }
+
+.invisible {
+  visibility: hidden; }
 
 @media only screen {
   nav.primary-nav {

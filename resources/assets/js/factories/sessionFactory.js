@@ -1,9 +1,4 @@
-var factories = angular.module('factories', [
-	'sessionFactory'
-]);
-
 var sessionFactory = angular.module('sessionFactory', []);
-
 
 sessionFactory.factory('Session', ['$http', '$q', function($http, $q) {
 

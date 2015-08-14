@@ -1,4 +1,5 @@
-@extends('app')
+@extends('03-templates/default')
+
 
 @section('content')
 <div class="container-fluid">

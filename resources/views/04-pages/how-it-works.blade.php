@@ -52,3 +52,11 @@
 @stop
 
 
+@section('footer')
+	<footer class="text-center">
+		<a ng-click="scrollToTop()" class="back-to-top-link" scroll-to-top>
+			<p class="chevron chevron--top"></p>
+				Back to Top
+		</a>
+	</footer>
+@stop

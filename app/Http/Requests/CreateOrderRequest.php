@@ -13,8 +13,9 @@ class CreateOrderRequest extends Request {
 	public function rules()
 	{
 		return [
-			'measurements' => 'required',
-			'jacket' => 'required'
+			'user_id'  => 'required',
+			'model'    => 'required'
+			// 'password' => 'required',
 		];
 	}
 

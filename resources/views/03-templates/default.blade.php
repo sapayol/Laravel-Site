@@ -14,15 +14,12 @@
 
 	@include('02-organisms.global.header')
 
+	@yield('full-width-hero')
+
 	<main class="row">
 		@yield('main')
 	</main>
 
-	<footer class="text-center">
-		<a ng-click="scrollToTop()" class="back-to-top-link" scroll-to-top>
-			<p class="chevron chevron--top"></p>
-				Back to Top
-		</a>
-	</footer>
+	@yield('footer')
 
 @include('00-atoms.meta._foot')

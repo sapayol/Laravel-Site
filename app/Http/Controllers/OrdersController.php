@@ -2,62 +2,62 @@
 
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateOrderRequest;
-use JavaScript, Mail;
+use JavaScript, Mail, Auth;
 use Address, Jacket, Measurement, Attribute, Order, User;
 
 class OrdersController extends Controller {
 
-	public function index(Request $request)
-	{
-		$this->createNewOrder($request->input());
-		$jacket = Jacket::where('model', '=', $request->model)->first();
-
-		return view('04-pages.checkout.customer-info', [
-			'jacket'         => $jacket,
-			'leather_type'   => $request->leather_type,
-			'leather_color'  => $request->leather_color,
-			'lining_color'   => $request->lining_color,
-			'hardware_color' => $request->hardware_color
-		]);
-	}
-
 	public function store(CreateOrderRequest $request)
 	{
-		$jacket         = Jacket::where('model', '=', $request->jacket['model'])->first();
-		$leather_type   = Attribute::where('type', '=', 'leather_type')->where('name', '=', $request->jacket['leather_type'])->first();
-		$leather_color  = Attribute::where('type', '=', 'leather_color')->where('name', '=', $request->jacket['leather_color'])->first();
-		$lining_color   = Attribute::where('type', '=', 'lining_color')->where('name', '=', $request->jacket['lining_color'])->first();
-		$hardware_color = Attribute::where('type', '=', 'hardware_color')->where('name', '=', $request->jacket['hardware_color'])->first();
+		Auth::loginUsingId($request->user_id);
 
-		$measurements = Measurement::create(array(
-			'type'          => 'custom',
-			'units'         => $request->measurements['units'],
-			'shoulder'      => $request->measurements['shoulder'],
-			'back'          => $request->measurements['back'],
-			'chest'         => $request->measurements['chest'],
-			'stomach'       => $request->measurements['stomach'],
-			'waist'         => $request->measurements['waist'],
-			'sleeve'        => $request->measurements['sleeve'],
-			'biceps'        => $request->measurements['biceps'],
-			// 'jacket-length' => $request->measurement['jacket-length'],
-		));
-
-		$order = Order::create(array(
+		$jacket = Jacket::where('model', '=', $request->model)->first();
+		$order  = Order::create(array(
 			'status'         => 'new',
 			'jacket_id'      => $jacket->id,
-			'measurement_id' => $measurements->id,
 			'total'          => $jacket->price // Needs to updated in 2.0 when attributes affect price
 		));
+
+		$leather_type   = Attribute::where('type', '=', 'leather_type')->where('name',   '=', $request->leather_type)->first();
+		$leather_color  = Attribute::where('type', '=', 'leather_color')->where('name',  '=', $request->leather_color)->first();
+		$lining_color   = Attribute::where('type', '=', 'lining_color')->where('name',   '=', $request->lining_color)->first();
+		$hardware_color = Attribute::where('type', '=', 'hardware_color')->where('name', '=', $request->hardware_color)->first();
 
 		$order->attributes()->attach($leather_type->id);
 		$order->attributes()->attach($leather_color->id);
 		$order->attributes()->attach($lining_color->id);
 		$order->attributes()->attach($hardware_color->id);
 
-		// return view('04-pages.checkout.customer-info', ['order' => $order]);
-		return redirect()->route('orders.show', $order->id);
+		return redirect()->route('orders.fit', [$order->id, 'units']);
 	}
 
+	public function getFit($id, $step)
+	{
+		$order = Order::find($id);
+
+		return view('04-pages.fit.' . $step, ['order' => $order]);
+	}
+
+	public function postFit($id, $step, Request $request)
+	{
+		$order = Order::find($id);
+
+		if ($order->measurement === null) {
+			$measurement = Measurement::create(['units' => $request->units]);
+			$order->measurement_id = $measurement->id;
+			$order->save();
+		}
+
+		if ($request->measurements !== null) {
+			foreach ($request->measurements as $key => $value) {
+				$key = trim(str_replace('-', '_', $key));
+				$order->measurement->$key = $value;
+				$order->measurement->save();
+			}
+		}
+
+		return view('04-pages.fit.' . $step, ['order' => $order]);
+	}
 
 	/**
 	 * Return a specific course.
@@ -167,5 +167,7 @@ class OrdersController extends Controller {
 		$order = Order::findOrFail($id);
 		return view('04-pages.checkout.complete', ['order' => $order]);
 	}
+
+
 
 }

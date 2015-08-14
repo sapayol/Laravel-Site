@@ -1,81 +1,129 @@
 <ul class="small-block-grid-4 measurement-tracker">
 	<li>
-		<a href="#shoulder-section" ng-class="{valid: shoulder}">
+		@if ($order->measurement->half_shoulder)
+			<a href="#half_shoulder-section" class="valid">
+		@else
+			<a href="#half_shoulder-section">
+		@endif
 			<div>
-				<span>Shoulders</span>
-				<span ng-if="shoulder" class="measurement-value">
-					@{{ shoulder }}<br><span class="measurement-units"> @{{ units }}</span>
-				</span>
+				<span>1/2 Shoulder</span>
+				@if ($order->measurement->half_shoulder)
+					<span class="measurement-value">
+						{{{ $order->measurement->half_shoulder }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+					</span>
+				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-		<a href="#back-section" ng-class="{valid: back}">
+		@if ($order->measurement->back_width)
+			<a href="#back_width-section" class="valid">
+		@else
+			<a href="#back_width-section">
+		@endif
 			<div>
-				<span>Back</span>
-				<span ng-if="back" class="measurement-value">
-					@{{ back }}<br><span class="measurement-units"> @{{ units }}</span>
-				</span>
+				<span>Back Width</span>
+				@if ($order->measurement->back_width)
+					<span class="measurement-value">
+						{{{ $order->measurement->back_width }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+					</span>
+				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-		<a href="#chest-section" ng-class="{valid: chest}">
+		@if ($order->measurement->chest)
+			<a href="#chest-section" class="valid">
+		@else
+			<a href="#chest-section">
+		@endif
 			<div>
 				<span>Chest</span>
-				<span ng-if="chest" class="measurement-value">
-					@{{ chest }}<br><span class="measurement-units"> @{{ units }}</span>
-				</span>
+				@if ($order->measurement->chest)
+					<span class="measurement-value">
+						{{{ $order->measurement->chest }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+					</span>
+				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-		<a href="#stomach-section" ng-class="{valid: stomach}">
+		@if ($order->measurement->stomach)
+			<a href="#stomach-section" class="valid">
+		@else
+			<a href="#stomach-section">
+		@endif
 			<div>
 				<span>Stomach</span>
-				<span ng-if="stomach" class="measurement-value">
-					@{{ stomach }}<br><span class="measurement-units"> @{{ units }}</span>
-				</span>
+				@if ($order->measurement->stomach)
+					<span class="measurement-value">
+						{{{ $order->measurement->stomach }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+					</span>
+				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-		<a href="#jacket-length-section" ng-class="{valid: jacketLength}">
+		@if ($order->measurement->back_length)
+			<a href="#jacket-length-section"class="valid">
+		@else
+			<a href="#jacket-length-sectio">
+		@endif
 			<div>
-				<span>Jacket</span>
-				<span ng-if="jacketLength" class="measurement-value">
-					@{{ jacketLength }}<br><span class="measurement-units"> @{{ units }}</span>
-				</span>
+				<span>Back Length</span>
+				@if ($order->measurement->back_length)
+					<span class="measurement-value">
+						{{{ $order->measurement->back_length }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+					</span>
+				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-		<a href="#waist-section" ng-class="{valid: waist}">
+		@if ($order->measurement->waist)
+			<a href="#waist-section" class="valid">
+		@else
+			<a href="#waist-section">
+		@endif
 			<div>
 				<span>Waist</span>
-				<span ng-if="waist" class="measurement-value">
-					@{{ waist }}<br><span class="measurement-units"> @{{ units }}</span>
-				</span>
+				@if ($order->measurement->waist)
+					<span class="measurement-value">
+						{{{ $order->measurement->waist }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+					</span>
+				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-		<a href="#sleeve-section" ng-class="{valid: sleeve}">
+		@if ($order->measurement->arm)
+			<a href="#arm-section" class="valid">
+		@else
+			<a href="#arm-section">
+		@endif
 			<div>
-				<span>Sleeve</span>
-				<span ng-if="sleeve" class="measurement-value">
-					@{{ sleeve }}<br><span class="measurement-units"> @{{ units }}</span>
-				</span>
+				<span>Arm</span>
+				@if ($order->measurement->arm)
+					<span class="measurement-value">
+						{{{ $order->measurement->arm }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+					</span>
+				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-		<a href="#biceps-section" ng-class="{valid: biceps}">
+		@if ($order->measurement->biceps)
+			<a href="#biceps-section" class="valid">
+		@else
+			<a href="#biceps-section">
+		@endif
 			<div>
 				<span>Biceps</span>
-				<span ng-if="biceps" class="measurement-value">
-					@{{ biceps }}<br><span class="measurement-units"> @{{ units }}</span>
-				</span>
+				@if ($order->measurement->biceps)
+					<span class="measurement-value">
+						{{{ $order->measurement->biceps }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+					</span>
+				@endif
 			</div>
 		</a>
 	</li>

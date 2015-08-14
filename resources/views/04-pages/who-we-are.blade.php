@@ -72,3 +72,12 @@
 		<p>Last but not least, our direct shipment from the leather workshop to the customer is the most ecological logistics process we can think of. Other than putting a sheep herd and a master craftsmen in your backyard.</p>
 	</section>
 @stop
+
+@section('footer')
+	<footer class="text-center">
+		<a ng-click="scrollToTop()" class="back-to-top-link" scroll-to-top>
+			<p class="chevron chevron--top"></p>
+				Back to Top
+		</a>
+	</footer>
+@stop

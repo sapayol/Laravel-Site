@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use Auth;
+use User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
@@ -32,6 +34,41 @@ class AuthController extends Controller
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 
+     /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function postRegister(Request $request)
+    {
+        $validator = $this->validator($request->all());
+
+        if ($validator->fails()) {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+
+        $user = $this->create($request->all());
+        Auth::login($user);
+
+        if ($request->wantsJson() || $request->ajax()) {
+           return $user->toJson();
+        }
+
+        return redirect()->intended($this->redirectPath());
+    }
+
+    public function authenticated($request, $user)
+    {
+        if ($request->wantsJson() || $request->ajax()) {
+           return $user->toJson();
+        }
+
+        return redirect()->intended($this->redirectPath());
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -41,9 +78,10 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
+            // 'name' => 'required|max:255',
+            // 'password' => 'required|confirmed|min:6',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6',
+            'password' => 'required|min:6',
         ]);
     }
 
@@ -56,7 +94,7 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            // 'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);

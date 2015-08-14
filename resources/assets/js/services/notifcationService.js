@@ -1,8 +1,6 @@
-var services = angular.module('services', ['notificationServices']);
+var notificationService = angular.module('notificationService', []);
 
-var notificationServices = angular.module('notificationServices', []);
-
-notificationServices.factory('notifyUser', ['notify', function(notify) {
+notificationService.factory('notifyUser', ['notify', function(notify) {
 
 	notifyOfValidationError = function(data) {
 		angular.forEach(data, function(error, val) {

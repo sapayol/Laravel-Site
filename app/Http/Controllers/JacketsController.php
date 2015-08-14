@@ -40,5 +40,4 @@ class JacketsController extends Controller {
 			'hardware_color' => $request->hardware_color
 		]);
 	}
-
 }

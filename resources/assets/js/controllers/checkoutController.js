@@ -1,36 +1,6 @@
-var controllers = angular.module('controllers', [
-	'sapayolControllers',
-]);
+var checkoutController = angular.module('checkoutController', []);
 
-var sapayolControllers = angular.module('sapayolControllers', []);
-
-sapayolControllers.controller('lookAndFitCtrl', ['$scope', '$http', '$q', function($scope, $http, $q) {
-	$scope.selectedColumn = 0;
-	$scope.jacket = {
-		leather_type: 'lamb heavy',
-    leather_color:  'black',
-    lining_color:  'black',
-    hardware_color: 'silver',
-    size: 44
-	};
-}]);
-
-sapayolControllers.controller('GlobalCtrl', ['$rootScope', '$document', 'Session', '$scope', 'notifyUser', function($rootScope, $document, Session, $scope, notifyUser) {
-		$rootScope.flushSession = function() {
-			Session.delete('flush').then(function(){
-				notifyUser.of('Session flushed');
-			});
-		};
-
-		$rootScope.getSession = function() {
-			Session.getCurrent().then(function(session){
-				console.log(session);
-			});
-		};
-}]);
-
-
-sapayolControllers.controller('checkoutCtrl', ['$scope', '$http', '$q', '$document', 'notifyUser',  function($scope, $http, $q, $document, notifyUser) {
+checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$document', 'notifyUser',  function($scope, $http, $q, $document, notifyUser) {
 
 	init = function() {
 		if (sapayol.user !== null) {

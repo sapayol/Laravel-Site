@@ -58,6 +58,14 @@ a {
 			border-bottom: 1px solid $black;
 		}
 	}
+	&.inverted-colors {
+		background: $white;
+		color: $black;
+		&:hover {
+			background: $black;
+			color: $white;
+		}
+	}
 }
 
 .call-to-action {
