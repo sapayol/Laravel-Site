@@ -5,6 +5,10 @@
     color: white; }
   .inverted-colors a:hover {
     color: #c86669; }
+  .inverted-colors a {
+    color: white; }
+  .inverted-colors label {
+    color: white; }
 
 @font-face {
   font-family: NittiGrotesk;
@@ -2533,7 +2537,8 @@ fieldset {
     color: #707070; }
 
 .measurement-entry {
-  margin-bottom: 10rem; }
+  margin-bottom: 10rem;
+  padding-top: 0; }
   .measurement-entry form {
     margin-top: 1.5rem; }
   .measurement-entry article {
@@ -2563,8 +2568,12 @@ fieldset {
     font-weight: 200;
     left: -3rem; }
   .measurement-entry h3 {
-    position: relative;
+    position: absolute;
     left: -9999px; }
+  .measurement-entry .player {
+    z-index: 2000;
+    padding-top: 2rem;
+    background: white; }
   .measurement-entry .player-controls-right {
     display: inline-block; }
   .measurement-entry .player-controls button:hover {
@@ -2580,6 +2589,7 @@ fieldset {
   .measurement-entry .player-progress-played[value] {
     color: #B02428; }
   .measurement-entry .measurement-instructions {
+    padding-top: 1rem;
     background: white; }
 
 ul.measurement-tracker {

@@ -10,11 +10,7 @@
 	</label>
 
 	<div class="text-center">
-		<input class="button expand" type="button" ng-click=submitAuthRequest('register') value="Register" ng-hide="userInfoSubmitted">
-		<span>or</span>
-		<br><br>
-		<input class="button expand hollow" type="button" ng-click=submitAuthRequest('login') value="Login" ng-hide="userInfoSubmitted">
+		<input class="button expand inverted-colors" type="button" ng-click=submitAuthRequest() value="Register / Login" ng-hide="userInfoSubmitted">
 		<a href="" class="underlined under-button-link">Reset my password</a><br>
 	</div>
-
 </form>

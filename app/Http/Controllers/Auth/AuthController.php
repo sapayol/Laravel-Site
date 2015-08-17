@@ -42,8 +42,17 @@ class AuthController extends Controller
      */
     public function postRegister(Request $request)
     {
-        $validator = $this->validator($request->all());
+        // Attempt to log the user in
+        $this->validate($request, [
+            $this->loginUsername() => 'required', 'password' => 'required',
+        ]);
+        $credentials = $this->getCredentials($request);
+        if (Auth::attempt($credentials, $request->has('remember'))) {
+            return $this->handleUserWasAuthenticated($request, $this->isUsingThrottlesLoginsTrait());
+        }
 
+        // Attempt to create the user account
+        $validator = $this->validator($request->all());
         if ($validator->fails()) {
             $this->throwValidationException(
                 $request, $validator
@@ -59,6 +68,7 @@ class AuthController extends Controller
 
         return redirect()->intended($this->redirectPath());
     }
+
 
     public function authenticated($request, $user)
     {
@@ -77,12 +87,15 @@ class AuthController extends Controller
      */
     protected function validator(array $data)
     {
+        $messages = [
+            'email.unique' => "Looks like you already have an account but the password is incorrect",
+        ];
         return Validator::make($data, [
             // 'name' => 'required|max:255',
             // 'password' => 'required|confirmed|min:6',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6',
-        ]);
+            'password' => 'required|min:3',
+        ], $messages);
     }
 
     /**
@@ -99,4 +112,17 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    /**
+     * Log the user out of the application.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getLogout()
+    {
+        Auth::logout();
+
+        return redirect()->back();
+    }
+
 }

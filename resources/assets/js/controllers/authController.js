@@ -5,9 +5,10 @@ authController.controller('authCtrl', ['$scope', '$http', '$q', '$timeout', 'Aut
 	  $scope.submitAuthRequest = function(request) {
 	  	if (request === 'logout') return logout($scope.user);
 	  	if ($scope.userInfoForm.$valid) {
-		  	if (request === 'register') register($scope.user);
-		  	if (request === 'login')    login($scope.user);
-		  	if (request === 'reset')    resetPassword($scope.user);
+	  		register($scope.user);
+		  	// if (request === 'register') register($scope.user);
+		  	// if (request === 'login')    login($scope.user);
+		  	// if (request === 'reset')    resetPassword($scope.user);
 		  } else {
 	  		$scope.showUserErorrs = true;
 	  		focus('emailField');

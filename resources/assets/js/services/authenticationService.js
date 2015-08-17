@@ -59,7 +59,6 @@ authenticationService.factory('Auth', ['$http', '$q', 'notifyUser', function($ht
 		return deferred.promise;
   };
 
-
 	return auth;
 
 }]);

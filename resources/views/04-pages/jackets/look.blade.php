@@ -10,7 +10,7 @@
 
 @section('main')
 	<section class="large-12 medium-12 small-12 columns">
-		<h2 class="thin text-center">Choose Your Look</h2>
+		<h2 class="thin text-center">Customize your {{{ $jacket->name }}}</h2>
 		<img class="customization-image" src="/images/stock-photos/jacket-customize.jpg">
 	</section>
 
@@ -74,28 +74,23 @@
 		<input type="hidden" name="leather_color"  value="@{{ jacket.leather_color }}">
 		<input type="hidden" name="lining_color"   value="@{{ jacket.lining_color }}">
 		<input type="hidden" name="hardware_color" value="@{{ jacket.hardware_color }}">
-{{-- 		<div class="text-center">
-			<button type="submit" class="black button expand">Proceed To Measurements</button>
-			<a href="" class="underlined under-button-link">Order Now and Measure Later</a><br>
-		</div>
- --}}	</form>
+	</form>
 
-	<section class="large-12 medium-12 small-12 columns" ng-controller="authCtrl">
-
+	<section class="large-12 medium-12 small-12 columns inverted-colors" ng-controller="authCtrl">
 		@if (Auth::guest())
-			<h3>Register or Login to begin your order</h3>
+			<p>Enter an email address and password to track your progress throughout the order. </p>
+			<p><em>We don’t spam or share your information.</em></p>
 			@include('03-templates.checkout.user-registration-form')
 		@else
 			<h4>Looks like you've started an order as <strong>{{{ Auth::user()->email }}}</strong></h4>
 			<div class="text-center">
-				<a href="" ng-click="proceedToOrder()" class="button expand">Finalize Your Order</a>
+				<a href="" ng-click="proceedToOrder()" class="button expand inverted-colors">Finalize Your Order</a>
 				<br>
 				<span>or</span>
 				<br><br>
 				<a href="{{ url('/auth/logout') }}" class="underlined">Login as someone else</a>
 			</div>
 		@endif
-
 
 		<form action="/orders" method="POST" name="createOrderForm">
 			<input type="hidden" name="_token"         value="{{{ csrf_token() }}}">

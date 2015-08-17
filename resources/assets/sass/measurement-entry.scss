@@ -1,5 +1,6 @@
 .measurement-entry {
 	margin-bottom: 10rem;
+	padding-top: 0;
 	form {
 		margin-top: 1.5rem;
 	}
@@ -39,8 +40,13 @@
 		left: -3rem;
 	}
 	h3 {
-		position: relative;
+		position: absolute;
 		left: -9999px;
+	}
+	.player {
+		z-index: 2000;
+		padding-top: 2rem;
+		background: white;
 	}
 	.player-controls-right {
 		display: inline-block;
@@ -61,6 +67,7 @@
 		color: #B02428;
 	}
 	.measurement-instructions {
+		padding-top: 1rem;
 		background: $white;
 	}
 }
