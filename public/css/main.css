@@ -2600,7 +2600,6 @@ ul.measurement-tracker {
     height: 4rem;
     text-align: center;
     border: 1px solid #222222;
-    border-bottom: 6px solid #B02428;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2614,6 +2613,9 @@ ul.measurement-tracker {
       font-weight: 300; }
     ul.measurement-tracker a.valid {
       border-bottom: 6px solid #57ca66; }
+    ul.measurement-tracker a.active {
+      border-bottom: 6px solid #468aaf;
+      border: 6px solid #468aaf; }
     ul.measurement-tracker a div {
       margin: auto; }
 
@@ -2830,7 +2832,7 @@ a.under-button-link {
   display: block !important; }
 
 .hidden {
-  display: none !important; }
+  display: none; }
 
 .invisible {
   visibility: hidden; }

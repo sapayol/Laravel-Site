@@ -1,10 +1,6 @@
 <ul class="small-block-grid-4 measurement-tracker">
 	<li>
-		@if ($order->measurement->half_shoulder)
-			<a href="#half_shoulder-section" class="valid">
-		@else
-			<a href="#half_shoulder-section">
-		@endif
+			<a href="{{{ route('orders.fit', [$order->id, 'half-shoulder']) }}}" class="{{{ $step == 'half-shoulder' ? 'active' : ''  }}} {{{ $order->measurement->half_shoulder ? 'valid' : ''  }}}">
 			<div>
 				<span>1/2 Shoulder</span>
 				@if ($order->measurement->half_shoulder)
@@ -16,11 +12,7 @@
 		</a>
 	</li>
 	<li>
-		@if ($order->measurement->back_width)
-			<a href="#back_width-section" class="valid">
-		@else
-			<a href="#back_width-section">
-		@endif
+			<a href="{{{ route('orders.fit', [$order->id, 'back-width']) }}}" class="{{{ $step == 'back-width' ? 'active' : ''}}} {{{ $order->measurement->back_width ? 'valid' : '' }}}">
 			<div>
 				<span>Back Width</span>
 				@if ($order->measurement->back_width)
@@ -32,11 +24,7 @@
 		</a>
 	</li>
 	<li>
-		@if ($order->measurement->chest)
-			<a href="#chest-section" class="valid">
-		@else
-			<a href="#chest-section">
-		@endif
+			<a href="{{{ route('orders.fit', [$order->id, 'chest']) }}}" class="{{{ $step == 'chest' ? 'active' : ''}}} {{{ $order->measurement->chest ? 'valid' : '' }}}">
 			<div>
 				<span>Chest</span>
 				@if ($order->measurement->chest)
@@ -48,11 +36,7 @@
 		</a>
 	</li>
 	<li>
-		@if ($order->measurement->stomach)
-			<a href="#stomach-section" class="valid">
-		@else
-			<a href="#stomach-section">
-		@endif
+			<a href="{{{ route('orders.fit', [$order->id, 'stomach']) }}}" class="{{{ $step == 'stomach' ? 'active' : ''}}} {{{ $order->measurement->stomach ? 'valid' : '' }}}">
 			<div>
 				<span>Stomach</span>
 				@if ($order->measurement->stomach)
@@ -64,11 +48,7 @@
 		</a>
 	</li>
 	<li>
-		@if ($order->measurement->back_length)
-			<a href="#jacket-length-section"class="valid">
-		@else
-			<a href="#jacket-length-sectio">
-		@endif
+			<a href="{{{ route('orders.fit', [$order->id, 'back-length']) }}}"class="{{{ $step == 'back-length' ? 'active' : ''}}} {{{ $order->measurement->back_length ? 'valid' : '' }}}">
 			<div>
 				<span>Back Length</span>
 				@if ($order->measurement->back_length)
@@ -80,11 +60,7 @@
 		</a>
 	</li>
 	<li>
-		@if ($order->measurement->waist)
-			<a href="#waist-section" class="valid">
-		@else
-			<a href="#waist-section">
-		@endif
+			<a href="{{{ route('orders.fit', [$order->id, 'waist']) }}}" class="{{{ $step == 'waist' ? 'active' : ''}}} {{{ $order->measurement->waist ? 'valid' : '' }}}">
 			<div>
 				<span>Waist</span>
 				@if ($order->measurement->waist)
@@ -96,11 +72,7 @@
 		</a>
 	</li>
 	<li>
-		@if ($order->measurement->arm)
-			<a href="#arm-section" class="valid">
-		@else
-			<a href="#arm-section">
-		@endif
+			<a href="{{{ route('orders.fit', [$order->id, 'arm']) }}}" class="{{{ $step == 'arm' ? 'active' : ''}}} {{{ $order->measurement->arm ? 'valid' : '' }}}">
 			<div>
 				<span>Arm</span>
 				@if ($order->measurement->arm)
@@ -112,11 +84,7 @@
 		</a>
 	</li>
 	<li>
-		@if ($order->measurement->biceps)
-			<a href="#biceps-section" class="valid">
-		@else
-			<a href="#biceps-section">
-		@endif
+			<a href="{{{ route('orders.fit', [$order->id, 'biceps']) }}}" class="{{{ $step == 'biceps' ? 'active' : ''}}} {{{ $order->measurement->biceps ? 'valid' : '' }}}">
 			<div>
 				<span>Biceps</span>
 				@if ($order->measurement->biceps)

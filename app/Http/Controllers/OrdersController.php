@@ -35,7 +35,7 @@ class OrdersController extends Controller {
 	{
 		$order = Order::find($id);
 
-		return view('04-pages.fit.' . $step, ['order' => $order]);
+		return view('04-pages.fit.' . $step, ['order' => $order, 'step' => $step]);
 	}
 
 	public function postFit($id, $step, Request $request)
@@ -56,7 +56,7 @@ class OrdersController extends Controller {
 			}
 		}
 
-		return view('04-pages.fit.' . $step, ['order' => $order]);
+		return view('04-pages.fit.' . $step, ['order' => $order, 'step' => $step]);
 	}
 
 	/**

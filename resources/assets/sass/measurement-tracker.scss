@@ -17,7 +17,7 @@ ul.measurement-tracker {
 		height: 4rem;
 		text-align: center;
 		border: 1px solid $black;
-		border-bottom: 6px solid $primary-color;
+		// border-bottom: 6px solid $primary-color;
 		display: flex;
 		margin: 0;
 		.measurement-value {
@@ -31,9 +31,12 @@ ul.measurement-tracker {
 		&.valid {
 			border-bottom: 6px solid $success-color;
 		}
+		&.active {
+			border-bottom: 6px solid $blue;
+			border: 6px solid $blue;
+		}
 		div {
 			margin: auto;
 		}
-
 	}
 }

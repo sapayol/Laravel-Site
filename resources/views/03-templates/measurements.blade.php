@@ -30,7 +30,7 @@
 				<input type="hidden" name="_token" value="{!! csrf_token() !!}">
 				<label for="@yield('slug')" class="text-input-label">
 					<span class="label-title">@yield('title')</span>
-					<input name="measurements[@yield('slug')]" id="@yield('slug')" type="tel" placeholder="00.00" ng-model="measurement" maxlength="5" mask="99.99" required>
+					<input name="measurements[@yield('slug')]" id="@yield('slug')" type="tel" placeholder="00.00" ng-model="measurement" maxlength="5" mask="99.99" required autofocus>
 					<span class="input-units">{{{ $order->measurement->units }}}</span>
 				</label>
 		    <button type="button" class="text-button"  ng-click="instructions = !instructions">

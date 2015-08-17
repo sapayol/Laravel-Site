@@ -14,7 +14,7 @@
 				</h1>
 				<a href="/jackets/bomber" class="button call-to-action inverted-colors">See Our Collection</a>
 			</div>
-			<div class="filter"></div>
+			{{-- <div class="filter"></div> --}}
 			<video autoplay class="fillWidth">
 				<source src="/videos/hero_short.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
 			</video>
@@ -26,29 +26,7 @@
 @stop
 
 @section('main')
-{{-- 	<div class="large-12 medium-12 small-12 columns text-center hero-image-container">
-		<img class="hero-image" src="images/photos/model-right-profile-closed.jpg" alt="">
-		<h1 class="hero-text">
-			<span class="line1 thin">Tailor-made</span><br>
-			<strong class="line3">Leather Jackets</strong>
-		</h1>
-	</div> --}}
-{{-- 	<div class="bg-video">
-		<h1 class="hero-text">
-			<span class="line1 thin">Tailor-made</span><br>
-			<strong class="line3">Leather Jackets</strong>
-		</h1>
-		<video autoplay id="bgvid">
-			<source src="/videos/hero_short.webm" type="video/webm">
-			<source src="/videos/hero_short.mp4" type="video/mp4">
-		</video>
-	</div> --}}
-
-<!-- Main jumbotron for a primary marketing message or call to action -->
-
-
 	<section class="large-12 medium-12 small-12 columns">
-
 		<article>
 			<a href="/how-it-works"><img class="sidekick-image" src="/images/stock-photos/tailor-supplies.jpg" alt=""></a>
 			<h2 class="thin">Made-to-Measure</h2>
