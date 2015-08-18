@@ -3,10 +3,9 @@ var checkoutController = angular.module('checkoutController', []);
 checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$document', 'notifyUser',  function($scope, $http, $q, $document, notifyUser) {
 
 	init = function() {
+		$scope.address = {};
 		if (sapayol.user !== null) {
-			$scope.user = sapayol.user;
-			$scope.userInfoSubmitted = true;
-			$document.scrollToElement(angular.element('#shipping-info'), 80, 500);
+			$scope.address.name = sapayol.user.name;
 		};
 		if (sapayol.address !== null) {
 			$scope.address = sapayol.address;

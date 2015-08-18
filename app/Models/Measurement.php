@@ -20,4 +20,26 @@ class Measurement extends Model {
     return $this->belongsTo('Order');
   }
 
+  public function getIncompleteMeasurements()
+  {
+  	$results = [];
+    foreach ($this->attributes as $key => $value) {
+    	if (($key != 'size' && $key != 'type' && $key != 'units') && $value == null) {
+				$results[] = $key;
+    	}
+    }
+    return $results;
+  }
+
+  public function getCompleteMeasurements()
+  {
+  	$results = [];
+    foreach ($this->attributes as $key => $value) {
+    	if (($key != 'size' && $key != 'type' && $key != 'units') && $value != null) {
+				$results[$key] = $value;
+    	}
+    }
+    return $results;
+  }
+
 }

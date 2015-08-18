@@ -1,52 +1,62 @@
 .measurement-entry {
-	margin-bottom: 10rem;
 	padding-top: 0;
 	form {
 		margin-top: 1.5rem;
 	}
-	article {
-		margin-bottom: 2rem;
-	}
-	.text-button {
-		font-size: .8rem;
-	}
-	label.text-input-label, fieldset {
-		display: inline-block;
-		width: 49%;
-		margin-top: -1rem;
-	}
-	fieldset.unit-choice {
-		input, label:not(:first-child) {
-			padding: .25rem;
-			position: relative;
-			top: -.3rem;
-		}
-		label {
-			margin-right: 2rem;
-		}
-		width: 80%;
-	}
-	fieldset label:not(:first-child) {
-		margin-left: .3rem;
-	}
-	input[type="tel"] {
-		width: 80%;
-		display: inline-block;
-	}
-	span.input-units {
-		display: inline-block;
-		position: relative;
-		font-weight: 200;
-		left: -3rem;
+	// article {
+	// 	margin-bottom: 2rem;
+	// }
+	p {
+		margin-bottom: .6rem;
 	}
 	h3 {
 		position: absolute;
 		left: -9999px;
 	}
+	.text-input-label {
+		width: 7rem;
+		input {
+			width: 88%;
+		}
+		&.wider {
+			width: 14rem;
+		}
+	}
+	span.measurement-fraction {
+		position: absolute;
+		bottom: 0;
+		left: 3rem;
+		& > span {
+			display: inline-block;
+			font-weight: 200;
+			margin-left: 1.15rem;
+			margin-right: .5rem;
+		}
+		font-size: 1.15rem;
+	}
+	span.input-units {
+		display: inline-block;
+		position: relative;
+		font-weight: 200;
+		right: 2.5rem;
+		bottom: 0;
+	}
 	.player {
 		z-index: 2000;
 		padding-top: 2rem;
 		background: white;
+		position: relative;
+		.text-button {
+			position: absolute;
+			font-size: .8rem;
+			z-index: 3000;
+			right: 0;
+			bottom: -0.7rem;
+			margin-right: 1rem;
+		}
+	}
+	.player-controls {
+		text-align: left;
 	}
 	.player-controls-right {
 		display: inline-block;
@@ -70,4 +80,5 @@
 		padding-top: 1rem;
 		background: $white;
 	}
+
 }

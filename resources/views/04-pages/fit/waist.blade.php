@@ -12,6 +12,10 @@
 	arm
 @stop
 
+@section('input_options')
+	min="80" max="120"
+@stop
+
 @section('instructions')
 	<p>Measure around the hips, right where your jacket length measurement ended.</p>
 	<ul>

@@ -1,4 +1,9 @@
 <form ng-submit="submitShippingInfo({{{ $order->id }}})" name="shippingInfoForm">
+	<label for="name">Name
+		<span class="right" ng-if="showShippingErorrs && shippingInfoForm.name.$invalid">Required</span>
+		<input name="name" type="text" ng-model="address.name" ng-required="true" ng-disabled="shippingInfoSubmitted">
+	</label>
+
 	<label for="address1">Address 1
 		<span class="right" ng-if="showShippingErorrs && shippingInfoForm.address1.$invalid">Required</span>
 		<input name="address1" type="text" ng-model="address.address1" ng-required="true" ng-disabled="shippingInfoSubmitted">

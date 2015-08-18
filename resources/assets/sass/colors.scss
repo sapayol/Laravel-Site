@@ -117,5 +117,15 @@ $leather-brown: #734026;
 	}
 	label  {
 		color: $white;
+		span {
+			color: $black;
+		}
+	}
+	fieldset {
+		background: $white;
+		border: 1px solid $black;
+		label, span {
+			color: $black;
+		}
 	}
 }

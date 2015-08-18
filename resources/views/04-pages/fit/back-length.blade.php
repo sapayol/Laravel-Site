@@ -12,6 +12,10 @@
 	waist
 @stop
 
+@section('input_options')
+	min="80" max="120"
+@stop
+
 @section('instructions')
 	<p>Bend your head forward. The highest bone on the back of your neck that sticks out is your starting point.</p>
 	<p><em>Look straight ahead again for the measurement</em>.</p>

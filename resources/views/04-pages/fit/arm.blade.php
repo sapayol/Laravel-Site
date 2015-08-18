@@ -12,6 +12,10 @@
 	biceps
 @stop
 
+@section('input_options')
+	min="80" max="120"
+@stop
+
 @section('instructions')
 	<p>Start at the shoulder point (where you left off for the shoulder measurement).</p>
 	<p>End right at the wrist, just after the bone that sticks out on the side of your little finger (head of ulna).</p>

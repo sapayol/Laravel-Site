@@ -12,5 +12,11 @@
     @if ($action != 'jackets.show')
       <li><a href="/jackets/bomber">Tailored Jackets</a></li>
     @endif
+    <?php $currentuser = Auth::user(); ?>
+    @if ($currentuser && $currentuser->orders->count() > 0)
+      @if ($action != 'orders.fit')
+        <li><a href="/orders/{{{ $currentuser->orders->first()->id}}}/fit/units">My Order</a></li>
+      @endif
+    @endif
   </ul>
 </nav>

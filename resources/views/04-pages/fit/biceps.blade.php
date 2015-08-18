@@ -9,7 +9,11 @@
 @stop
 
 @section('next_slug')
-	complete
+	note
+@stop
+
+@section('input_options')
+	min="80" max="120"
 @stop
 
 @section('instructions')

@@ -9,13 +9,13 @@
 @stop
 
 @section('main')
-	<section class="large-12 medium-12 small-12 columns" id="user-info">
+{{-- 	<section class="large-12 medium-12 small-12 columns" id="user-info">
 		<h2 class="text-center thin">Your Info</h2>
 		@include('03-templates.checkout.user-info-form')
-	</section>
+	</section> --}}
 
-	<section class="large-12 medium-12 small-12 columns" ng-show="userInfoSubmitted" id="shipping-info">
-		<h2 class="text-center thin">Shipping Info</h2>
+	<section class="large-12 medium-12 small-12 columns" id="shipping-info">
+		<h2 class="text-center thin">Shipping Address</h2>
 		@include('03-templates.checkout.shipping-info-form')
 	</section>
 
@@ -37,6 +37,3 @@
 		</form>
 	</section>
 @stop
-
-
-

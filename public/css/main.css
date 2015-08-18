@@ -9,6 +9,13 @@
     color: white; }
   .inverted-colors label {
     color: white; }
+    .inverted-colors label span {
+      color: #222222; }
+  .inverted-colors fieldset {
+    background: white;
+    border: 1px solid #222222; }
+    .inverted-colors fieldset label, .inverted-colors fieldset span {
+      color: #222222; }
 
 @font-face {
   font-family: NittiGrotesk;
@@ -46,12 +53,12 @@
   z-index: 9999;
   top: -4rem;
   margin-top: .5rem; }
-  .page-wrap.on-home-page {
+  .page-wrap.on-home-page, .page-wrap.on-jacket-page, .page-wrap.with-existing-order {
     top: -5.8rem; }
-  .page-wrap.on-jacket-page {
-    top: -6rem; }
+  .page-wrap.on-home-page.with-existing-order, .page-wrap.on-jacket-page.with-existing-order {
+    top: -7.9rem; }
   .page-wrap.descended {
-    top: 0; }
+    top: 0 !important; }
 
 .centered {
   width: 60%;
@@ -2463,14 +2470,38 @@ input[type="week"], input[type="number"], input[type="email"], input[type="url"]
 input[type="search"], input[type="tel"], input[type="color"] {
   font-size: 24px; }
 
-.text-input-label span.label-title {
+label.text-input-label {
+  display: inline-block;
   position: relative;
-  top: 1.5rem;
-  padding-left: .5rem; }
-.text-input-label input {
-  padding-top: 1.3rem;
-  padding-bottom: 0;
-  height: 3rem; }
+  width: 45%; }
+  label.text-input-label span.label-title {
+    position: absolute;
+    top: .1rem;
+    padding-left: .5rem; }
+  label.text-input-label input {
+    display: inline-block;
+    padding-top: 2rem;
+    padding-bottom: .7rem;
+    margin-bottom: 0; }
+  label.text-input-label input[type="number"] {
+    padding-top: 1.3rem;
+    padding-bottom: 0rem;
+    height: 3rem; }
+  label.text-input-label textarea {
+    padding-top: 1.3rem;
+    font-size: 1rem; }
+
+fieldset.unit-choice {
+  width: 80%; }
+  fieldset.unit-choice input, fieldset.unit-choice label:not(:first-child) {
+    padding: .25rem;
+    position: relative;
+    top: -.3rem; }
+  fieldset.unit-choice label {
+    margin-right: 2rem; }
+
+fieldset label:not(:first-child) {
+  margin-left: .3rem; }
 
 fieldset {
   padding-left: .5rem;
@@ -2537,43 +2568,50 @@ fieldset {
     color: #707070; }
 
 .measurement-entry {
-  margin-bottom: 10rem;
   padding-top: 0; }
   .measurement-entry form {
     margin-top: 1.5rem; }
-  .measurement-entry article {
-    margin-bottom: 2rem; }
-  .measurement-entry .text-button {
-    font-size: .8rem; }
-  .measurement-entry label.text-input-label, .measurement-entry fieldset {
-    display: inline-block;
-    width: 49%;
-    margin-top: -1rem; }
-  .measurement-entry fieldset.unit-choice {
-    width: 80%; }
-    .measurement-entry fieldset.unit-choice input, .measurement-entry fieldset.unit-choice label:not(:first-child) {
-      padding: .25rem;
-      position: relative;
-      top: -.3rem; }
-    .measurement-entry fieldset.unit-choice label {
-      margin-right: 2rem; }
-  .measurement-entry fieldset label:not(:first-child) {
-    margin-left: .3rem; }
-  .measurement-entry input[type="tel"] {
-    width: 80%;
-    display: inline-block; }
+  .measurement-entry p {
+    margin-bottom: .6rem; }
+  .measurement-entry h3 {
+    position: absolute;
+    left: -9999px; }
+  .measurement-entry .text-input-label {
+    width: 7rem; }
+    .measurement-entry .text-input-label input {
+      width: 88%; }
+    .measurement-entry .text-input-label.wider {
+      width: 14rem; }
+  .measurement-entry span.measurement-fraction {
+    position: absolute;
+    bottom: 0;
+    left: 3rem;
+    font-size: 1.15rem; }
+    .measurement-entry span.measurement-fraction > span {
+      display: inline-block;
+      font-weight: 200;
+      margin-left: 1.15rem;
+      margin-right: .5rem; }
   .measurement-entry span.input-units {
     display: inline-block;
     position: relative;
     font-weight: 200;
-    left: -3rem; }
-  .measurement-entry h3 {
-    position: absolute;
-    left: -9999px; }
+    right: 2.5rem;
+    bottom: 0; }
   .measurement-entry .player {
     z-index: 2000;
     padding-top: 2rem;
-    background: white; }
+    background: white;
+    position: relative; }
+    .measurement-entry .player .text-button {
+      position: absolute;
+      font-size: .8rem;
+      z-index: 3000;
+      right: 0;
+      bottom: -0.7rem;
+      margin-right: 1rem; }
+  .measurement-entry .player-controls {
+    text-align: left; }
   .measurement-entry .player-controls-right {
     display: inline-block; }
   .measurement-entry .player-controls button:hover {
@@ -2591,6 +2629,9 @@ fieldset {
   .measurement-entry .measurement-instructions {
     padding-top: 1rem;
     background: white; }
+
+.measurement-tracker-offset {
+  height: 10rem; }
 
 ul.measurement-tracker {
   position: fixed;

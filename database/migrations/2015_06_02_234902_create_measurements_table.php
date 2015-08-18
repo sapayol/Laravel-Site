@@ -18,6 +18,7 @@ class CreateMeasurementsTable extends Migration {
 			$table->string('type')->default('custom');
 			$table->string('units')->default('cm');
 			$table->decimal('size', 9, 2)->nullable();
+			$table->decimal('height', 9, 2)->nullable();
 			$table->decimal('half_shoulder', 9, 2)->nullable();
 			$table->decimal('back_width', 9, 2)->nullable();
 			$table->decimal('back_length', 9, 2)->nullable();

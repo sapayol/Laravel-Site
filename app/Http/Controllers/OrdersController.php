@@ -14,6 +14,7 @@ class OrdersController extends Controller {
 		$jacket = Jacket::where('model', '=', $request->model)->first();
 		$order  = Order::create(array(
 			'status'         => 'new',
+			'user_id'        => Auth::user()->id,
 			'jacket_id'      => $jacket->id,
 			'total'          => $jacket->price // Needs to updated in 2.0 when attributes affect price
 		));
@@ -41,9 +42,8 @@ class OrdersController extends Controller {
 	public function postFit($id, $step, Request $request)
 	{
 		$order = Order::find($id);
-
 		if ($order->measurement === null) {
-			$measurement = Measurement::create(['units' => $request->units]);
+			$measurement = Measurement::create($request->measurements);
 			$order->measurement_id = $measurement->id;
 			$order->save();
 		}
@@ -56,7 +56,14 @@ class OrdersController extends Controller {
 			}
 		}
 
-		return view('04-pages.fit.' . $step, ['order' => $order, 'step' => $step]);
+		if (count($order->measurement->getIncompleteMeasurements()) > 0) {
+			// dd($order->measurement->getIncompleteMeasurements());
+			return view('04-pages.fit.' . $step, ['order' => $order, 'step' => $step]);
+		} else {
+			return redirect()->route('orders.checkout', $order->id);
+		}
+
+
 	}
 
 	/**
@@ -65,7 +72,7 @@ class OrdersController extends Controller {
 	 * @param  int|string $id
 	 * @return string     JsonResponse with Course object or not-found error
 	 */
-	public function show($id)
+	public function checkout($id)
 	{
 		$order = Order::findOrFail($id);
 

@@ -12,6 +12,10 @@
 	stomach
 @stop
 
+@section('input_options')
+	min="80" max="120"
+@stop
+
 @section('instructions')
 	<p>This measurement goes around the widest part of your chest, right across your nipples.</p>
 	<ul>

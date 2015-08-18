@@ -29,6 +29,8 @@ Route::get('/orders/{id}/fit/{step}',            ['uses' => 'OrdersController@ge
 
 Route::post('/orders/{id}/fit/{step}',           ['uses' => 'OrdersController@postFit',   'as' => 'orders.fit']);
 
+Route::get('/orders/{id}/checkout',              ['uses' => 'OrdersController@checkout',  'as' => 'orders.checkout']);
+
 // Route::get('/orders/{id}/fit/units',             ['uses' => 'OrdersController@units',    'as' => 'fit.units']);
 // Route::get('/orders/{id}/fit/shoulder',          ['uses' => 'OrdersController@shoulder', 'as' => 'fit.shoulder']);
 // Route::get('/orders/{id}/fit/back',              ['uses' => 'OrdersController@back',     'as' => 'fit.back']);

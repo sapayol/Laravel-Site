@@ -15,13 +15,14 @@
 <div class="large-4 medium-4 small-12 columns">
 	<h3 class="text-center thin">Fit</h3>
 	<ul class="no-bullet value-list left">
-		<li><small class="value-key">Half Shoulder</small>{{{ $order->measurement->shoulder}}} {{{ $order->measurement->units }}}</li>
-		<li><small class="value-key">Back</small>{{{ $order->measurement->back}}} {{{ $order->measurement->units }}}</li>
+		<li><small class="value-key">Your Height</small>{{{ $order->measurement->height}}} {{{ $order->measurement->units }}}</li>
+		<li><small class="value-key">Half Shoulder</small>{{{ $order->measurement->half_shoulder}}} {{{ $order->measurement->units }}}</li>
+		<li><small class="value-key">Back Width</small>{{{ $order->measurement->back_width}}} {{{ $order->measurement->units }}}</li>
 		<li><small class="value-key">Chest</small>{{{ $order->measurement->chest}}} {{{ $order->measurement->units }}}</li>
 		<li><small class="value-key">Belly / Stomach</small>{{{ $order->measurement->stomach}}} {{{ $order->measurement->units }}}</li>
-		{{-- <li><small class="value-key">Jacket Length</small>{{{ $order->measurement->jacket}}} {{{ $order->measurement->units }}}</li> --}}
+		<li><small class="value-key">Back Length</small>{{{ $order->measurement->back_length}}} {{{ $order->measurement->units }}}</li>
 		<li><small class="value-key">Waist</small>{{{ $order->measurement->waist}}} {{{ $order->measurement->units }}}</li>
-		<li><small class="value-key">Sleeve</small>{{{ $order->measurement->sleeve}}} {{{ $order->measurement->units }}}</li>
+		<li><small class="value-key">Arm</small>{{{ $order->measurement->arm}}} {{{ $order->measurement->units }}}</li>
 		<li><small class="value-key">Biceps</small>{{{ $order->measurement->biceps}}} {{{ $order->measurement->units }}}</li>
 	</ul>
 </div>
@@ -29,7 +30,7 @@
 <div class="large-4 medium-6 small-12 columns">
 	<h3 class="text-center thin">Shipping Info</h3>
 	<ul class="no-bullet value-list left">
-		<li><small class="value-key">Name</small>@{{ user.name }}</li>
+		<li><small class="value-key">Name</small>@{{ address.name }}</li>
 		<li><small class="value-key">Email</small>@{{ user.email }}</li>
 		<li><small class="value-key">Address 1</small> @{{ address.address1 }}</li>
 		<li><small class="value-key">Address 2</small> @{{ address.address2 }}</li>
