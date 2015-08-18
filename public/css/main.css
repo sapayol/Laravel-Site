@@ -2611,7 +2611,8 @@ fieldset {
       bottom: -0.7rem;
       margin-right: 1rem; }
   .measurement-entry .player-controls {
-    text-align: left; }
+    text-align: left;
+    padding-top: 2px; }
   .measurement-entry .player-controls-right {
     display: inline-block; }
   .measurement-entry .player-controls button:hover {
