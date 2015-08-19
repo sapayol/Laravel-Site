@@ -5,7 +5,7 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
 	// The users session info from the server
 
 	$scope.jacket = sapayol.jacket;
-	oldInput = sapayol.session[$scope.jacket.model];
+	oldInput = typeof(sapayol.session[$scope.jacket.model]) !== 'undefined' ? sapayol.session[$scope.jacket.model] : {};
 
 	$scope.jacket.leather_type   = typeof(oldInput.leather_type)   !== 'undefined' ? oldInput.leather_type   : 'lamb heavy';
 	$scope.jacket.leather_color  = typeof(oldInput.leather_color)  !== 'undefined' ? oldInput.leather_color  : 'black';

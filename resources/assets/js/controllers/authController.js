@@ -6,9 +6,6 @@ authController.controller('authCtrl', ['$scope', '$http', '$q', '$timeout', 'Aut
 	  	if (request === 'logout') return logout($scope.user);
 	  	if ($scope.userInfoForm.$valid) {
 	  		register($scope.user);
-		  	// if (request === 'register') register($scope.user);
-		  	// if (request === 'login')    login($scope.user);
-		  	// if (request === 'reset')    resetPassword($scope.user);
 		  } else {
 	  		$scope.showUserErorrs = true;
 	  		focus('emailField');
