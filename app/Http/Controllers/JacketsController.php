@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Jacket;
 use Measurement;
 use Route;
+use JavaScript;
+use Session;
 
 class JacketsController extends Controller {
 
@@ -18,12 +20,15 @@ class JacketsController extends Controller {
 	{
 		$jacket = Jacket::where('model', '=', $model)->first();
 
+
 		return view('04-pages.jackets.show', ['jacket' => $jacket]);
 	}
 
 	public function look($model)
 	{
 		$jacket = Jacket::where('model', '=', $model)->first();
+
+		JavaScript::put(['jacket' => $jacket, 'session' => Session::all()]);
 
 		return view('04-pages.jackets.look', ['jacket' => $jacket]);
 	}

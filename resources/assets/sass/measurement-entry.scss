@@ -3,9 +3,6 @@
 	form {
 		margin-top: 1.5rem;
 	}
-	// article {
-	// 	margin-bottom: 2rem;
-	// }
 	p {
 		margin-bottom: .6rem;
 	}
@@ -40,42 +37,6 @@
 		font-weight: 200;
 		right: 2.5rem;
 		bottom: 0;
-	}
-	.player {
-		z-index: 2000;
-		padding-top: 2rem;
-		background: white;
-		position: relative;
-		.text-button {
-			position: absolute;
-			font-size: .8rem;
-			z-index: 3000;
-			right: 0;
-			bottom: -0.7rem;
-			margin-right: 1rem;
-		}
-	}
-	.player-controls {
-		text-align: left;
-		padding-top: 2px;
-	}
-	.player-controls-right {
-		display: inline-block;
-	}
-	.player-controls button:hover {
-		color: $white;
-		background: #B02428;
-		border-bottom: 3px solid $black;
-	}
-	.player-controls button {
-		background: none;
-		border: 1px solid $black;
-		border-radius: 0;
-		color: black;
-		border-bottom: 3px solid #B02428;
-	}
-	.player-progress-played[value] {
-		color: #B02428;
 	}
 	.measurement-instructions {
 		padding-top: 1rem;

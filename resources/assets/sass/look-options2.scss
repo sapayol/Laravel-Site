@@ -1,10 +1,13 @@
 .look-options2 {
+	input[type="radio"] {
+		position: absolute;
+		left: -9999px;
+	}
 	margin-top: -2rem;
 	padding-bottom: 2rem;
 	fieldset {
 		padding: 0;
 		border: none;
-		// text-align: center;
 	}
 	legend {
 		font-weight: 100;
@@ -13,18 +16,14 @@
 		margin-bottom: .2rem;
 		line-height: 1;
 	}
-	.button-group {
-		margin-left: .1rem;
-		&>li:first-child .button {
-			// border-left: 1px solid $black;
-		}
-	}
+
 	.button[type="submit"] {
 		margin-top: 2rem;
 	}
-	.button:not([type="submit"]) {
+	label:not([type="submit"]) {
 		width: 4.7rem;
 		margin-bottom: 0;
+		margin-left: 0;
 		border: none;
     padding: 0.325rem .475rem 0.3875rem .475rem;
     margin-right: .875rem;
@@ -49,6 +48,12 @@
 		}
 		&.gray {
 			border-color: mix($grey, white, 75%);
+		}
+		&.navy {
+			border-color: $navy;
+		}
+		&.olive {
+			border-color: $olive;
 		}
 		&.pink {
 			border-color: $pink;

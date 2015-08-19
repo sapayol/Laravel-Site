@@ -27,9 +27,14 @@
 
 
 	<section class="small-12 medium-12 large-12 columns">
-		<div class="flex-video">
-	    <iframe width="420" height="315" src="//www.youtube.com/embed/qcM8H08LFKM?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"  frameborder="0" allowfullscreen></iframe>
+		<div class="player">
+		  <video poster="/images/video-posters/jackets/{{{ $jacket->model }}}.png" controls crossorigin>
+		    <source src="/videos/jackets/{{{ $jacket->model }}}.webm" type="video/webm">
+		    <source src="/videos/jackets/{{{ $jacket->model }}}.mp4"  type="video/mp4">
+		    <a href="/videos/jackets/{{{ $jacket->model }}}.mp4">Download</a>
+		  </video>
 		</div>
+
 		<a class="video-caption" ng-show="!measurementsVisible" ng-click="measurementsVisible = !measurementsVisible">Measurements Seen In the Video </a>
 	</section>
 
@@ -117,38 +122,5 @@
 		<br>
 	</section>
 @stop
-
-@section('footer')
-	<div class="alert-box info" data-alert>
-	  <h3><strong><small>Page Description</small></strong></h3>
-		<h4>
-			<small>
-				Enable a close look at the jacket and all the important features/options.
-			</small>
-		</h4>
-
-		<h3><strong><small>Purpose Served</small></strong></h3>
-		<h4>
-			<small>
-				- Visualize the jacket <br>
-				- Answer every important question about the jacket <br>
-				- Convince the audience of the exclusive qualities of the jacket
-			</small>
-		</h4>
-
-		<h3><strong><small>Components</small></strong></h3>
-		<h4>
-			<small>
-				- Main heading <br>
-				- Summary paragraph (lede) <br>
-				- Subheadings <br>
-				- Body copy <br>
-				- Text on top of images to highlight certain things
-			</small>
-		</h4>
-		<a href="#" class="close">&times;</a>
-	</div>
-@stop
-
 
 

@@ -5,7 +5,7 @@
 @stop
 
 @section('slug')
-	back-width
+	back_width
 @stop
 
 @section('next_slug')

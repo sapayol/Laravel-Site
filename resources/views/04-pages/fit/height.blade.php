@@ -6,7 +6,7 @@
 
 @section('main')
 	<section class="large-12 medium-12 small-12 columns inverted-colors measurement-entry">
-		<form action="/orders/{{{ $order->id }}}/fit/half-shoulder" method="POST">
+		<form action="/orders/{{{ $order->id }}}/fit/half_shoulder" method="POST">
 			<p>How tall are you?</p>
 			<label for="height" class="text-input-label">
 				<span class="label-title">Height</span>

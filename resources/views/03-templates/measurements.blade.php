@@ -10,18 +10,19 @@
 		<article class="measurement-entry large-12 medium-12 small-12 columns">
 			<h3>@yield('title')</h3>
 			<div class="player">
-		    <video poster="/images/video-posters/@yield('slug').png" controls crossorigin>
-	        <source src="/videos/@yield('slug').mp4" type="video/mp4">
+		    <video poster="/images/video-posters/measurements/@yield('slug').png" controls crossorigin>
+	        <source src="/videos/@yield('slug').webm" type="video/webm">
+	        <source src="/videos/@yield('slug').mp4"  type="video/mp4">
 	        <a href="/videos/@yield('slug').mp4">Download</a>
 		    </video>
 			  <button type="button" class="text-button"  ng-click="instructions = !instructions">
 		    	<span ng-show="!instructions">Show</span> <span ng-show="instructions">Hide</span> Instructions
 		    </button>
 			</div>
-			<div ng-show="instructions" class="measurement-instructions animated slideInDown" >
+			<div ng-show="instructions" class="measurement-instructions animated slideInDown">
 				@yield('instructions')
 			</div>
-			<form action="/orders/{{{ $order->id}}}/fit/@yield('next_slug')" method="POST" >
+			<form action="/orders/{{{ $order->id}}}/fit/@yield('next_slug')" method="POST">
 				<input type="hidden" name="_token" value="{!! csrf_token() !!}">
 				<label for="@yield('slug')" class="text-input-label" ng-class="{ wider : measurementFraction.length > 0 }">
 					<span class="label-title">@yield('title')</span>

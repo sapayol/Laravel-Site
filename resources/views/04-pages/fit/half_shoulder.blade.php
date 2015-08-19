@@ -5,11 +5,11 @@
 @stop
 
 @section('slug')
-	half-shoulder
+	half_shoulder
 @stop
 
 @section('next_slug')
-	back-width
+	back_width
 @stop
 
 @section('input_options')

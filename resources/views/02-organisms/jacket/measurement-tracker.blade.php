@@ -1,7 +1,7 @@
 <div class="measurement-tracker-offset"></div>
 <ul class="small-block-grid-4 measurement-tracker">
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'half-shoulder']) }}}" class="{{{ $step == 'half-shoulder' ? 'active' : ''  }}} {{{ $order->measurement->half_shoulder ? 'valid' : ''  }}}">
+			<a href="{{{ route('orders.fit', [$order->id, 'half_shoulder']) }}}" class="{{{ $step == 'half_shoulder' ? 'active' : ''  }}} {{{ $order->measurement->half_shoulder ? 'valid' : ''  }}}">
 			<div>
 				<span>1/2 Shoulder</span>
 				@if ($order->measurement->half_shoulder)
@@ -13,7 +13,7 @@
 		</a>
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'back-width']) }}}" class="{{{ $step == 'back-width' ? 'active' : ''}}} {{{ $order->measurement->back_width ? 'valid' : '' }}}">
+			<a href="{{{ route('orders.fit', [$order->id, 'back_width']) }}}" class="{{{ $step == 'back_width' ? 'active' : ''}}} {{{ $order->measurement->back_width ? 'valid' : '' }}}">
 			<div>
 				<span>Back Width</span>
 				@if ($order->measurement->back_width)
@@ -49,7 +49,7 @@
 		</a>
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'back-length']) }}}"class="{{{ $step == 'back-length' ? 'active' : ''}}} {{{ $order->measurement->back_length ? 'valid' : '' }}}">
+			<a href="{{{ route('orders.fit', [$order->id, 'back_length']) }}}"class="{{{ $step == 'back_length' ? 'active' : ''}}} {{{ $order->measurement->back_length ? 'valid' : '' }}}">
 			<div>
 				<span>Back Length</span>
 				@if ($order->measurement->back_length)

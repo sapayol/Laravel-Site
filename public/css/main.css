@@ -2414,6 +2414,9 @@ footer {
 .look-options2 {
   margin-top: -2rem;
   padding-bottom: 2rem; }
+  .look-options2 input[type="radio"] {
+    position: absolute;
+    left: -9999px; }
   .look-options2 fieldset {
     padding: 0;
     border: none; }
@@ -2423,39 +2426,42 @@ footer {
     margin: 0;
     margin-bottom: .2rem;
     line-height: 1; }
-  .look-options2 .button-group {
-    margin-left: .1rem; }
   .look-options2 .button[type="submit"] {
     margin-top: 2rem; }
-  .look-options2 .button:not([type="submit"]) {
+  .look-options2 label:not([type="submit"]) {
     width: 4.7rem;
     margin-bottom: 0;
+    margin-left: 0;
     border: none;
     padding: 0.325rem .475rem 0.3875rem .475rem;
     margin-right: .875rem;
     border-color: white; }
-    .look-options2 .button:not([type="submit"]):hover {
+    .look-options2 label:not([type="submit"]):hover {
       background: none;
       border-width: 2px;
       color: #222222;
       top: 0; }
-    .look-options2 .button:not([type="submit"]).active {
+    .look-options2 label:not([type="submit"]).active {
       border: 2px solid; }
-    .look-options2 .button:not([type="submit"]).black, .look-options2 .button:not([type="submit"]).brown, .look-options2 .button:not([type="submit"]).gray, .look-options2 .button:not([type="submit"]).pink, .look-options2 .button:not([type="submit"]).silver, .look-options2 .button:not([type="submit"]).darkGray, .look-options2 .button:not([type="submit"]).gold {
+    .look-options2 label:not([type="submit"]).black, .look-options2 label:not([type="submit"]).brown, .look-options2 label:not([type="submit"]).gray, .look-options2 label:not([type="submit"]).pink, .look-options2 label:not([type="submit"]).silver, .look-options2 label:not([type="submit"]).darkGray, .look-options2 label:not([type="submit"]).gold {
       border-color: #222222; }
-    .look-options2 .button:not([type="submit"]).black {
+    .look-options2 label:not([type="submit"]).black {
       border-color: #222222; }
-    .look-options2 .button:not([type="submit"]).brown {
+    .look-options2 label:not([type="submit"]).brown {
       border-color: #734026; }
-    .look-options2 .button:not([type="submit"]).gray {
+    .look-options2 label:not([type="submit"]).gray {
       border-color: #888888; }
-    .look-options2 .button:not([type="submit"]).pink {
+    .look-options2 label:not([type="submit"]).navy {
+      border-color: navy; }
+    .look-options2 label:not([type="submit"]).olive {
+      border-color: olive; }
+    .look-options2 label:not([type="submit"]).pink {
       border-color: #DE9CCF; }
-    .look-options2 .button:not([type="submit"]).silver {
+    .look-options2 label:not([type="submit"]).silver {
       border-color: #d9d9d9; }
-    .look-options2 .button:not([type="submit"]).darkGray {
+    .look-options2 label:not([type="submit"]).darkGray {
       border-color: #727272; }
-    .look-options2 .button:not([type="submit"]).gold {
+    .look-options2 label:not([type="submit"]).gold {
       border-color: #e2bb3a; }
 
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"],
@@ -2506,8 +2512,7 @@ fieldset label:not(:first-child) {
 fieldset {
   padding-left: .5rem;
   padding-right: .5rem;
-  padding-top: .1rem;
-  height: 3rem; }
+  padding-top: .1rem; }
 
 .measurement-table {
   font-family: 'HelveticaNeue', 'Helvetica', 'Roboto', 'Arial', 'sans-serif';
@@ -2598,35 +2603,6 @@ fieldset {
     font-weight: 200;
     right: 2.5rem;
     bottom: 0; }
-  .measurement-entry .player {
-    z-index: 2000;
-    padding-top: 2rem;
-    background: white;
-    position: relative; }
-    .measurement-entry .player .text-button {
-      position: absolute;
-      font-size: .8rem;
-      z-index: 3000;
-      right: 0;
-      bottom: -0.7rem;
-      margin-right: 1rem; }
-  .measurement-entry .player-controls {
-    text-align: left;
-    padding-top: 2px; }
-  .measurement-entry .player-controls-right {
-    display: inline-block; }
-  .measurement-entry .player-controls button:hover {
-    color: white;
-    background: #B02428;
-    border-bottom: 3px solid #222222; }
-  .measurement-entry .player-controls button {
-    background: none;
-    border: 1px solid #222222;
-    border-radius: 0;
-    color: black;
-    border-bottom: 3px solid #B02428; }
-  .measurement-entry .player-progress-played[value] {
-    color: #B02428; }
   .measurement-entry .measurement-instructions {
     padding-top: 1rem;
     background: white; }
@@ -2798,22 +2774,35 @@ a.under-button-link {
 .hero-image {
   margin: 0 auto; }
 
-.bg-video {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.player {
+  z-index: 2000;
+  padding-top: 2rem;
+  background: white;
   position: relative; }
-  .bg-video video {
-    background-size: cover; }
+  .player .text-button {
+    position: absolute;
+    font-size: .8rem;
+    z-index: 3000;
+    right: 0;
+    bottom: -0.7rem;
+    margin-right: 1rem; }
+  .player .player-controls {
+    text-align: left;
+    padding-top: 2px; }
+  .player .player-controls-right {
+    display: inline-block; }
+  .player .player-controls button:hover {
+    color: white;
+    background: #B02428;
+    border-bottom: 3px solid #222222; }
+  .player .player-controls button {
+    background: none;
+    border: 1px solid #222222;
+    border-radius: 0;
+    color: black;
+    border-bottom: 3px solid #B02428; }
+  .player .player-progress-played[value] {
+    color: #B02428; }
 
 .homepage-hero-module {
   border-right: none;
