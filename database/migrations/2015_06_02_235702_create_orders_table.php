@@ -24,7 +24,6 @@ class CreateOrdersTable extends Migration {
 			$table->integer('user_id')->unsigned()->nullable();
 			$table->integer('address_id')->unsigned()->nullable();
 			$table->integer('jacket_id')->unsigned()->nullable();
-			$table->integer('measurement_id')->unsigned()->nullable();
 			$table->timestamps();
 		});
 	}

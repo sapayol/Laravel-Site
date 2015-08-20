@@ -30,7 +30,6 @@ class OrdersTableSeeder extends Seeder {
 					'user_id'        => $index,
 					'address_id'     => $index,
 					'jacket_id'      => $jacket->id,
-					'measurement_id' => $faker->numberBetween(1,5)
 				]);
 			}
 		}

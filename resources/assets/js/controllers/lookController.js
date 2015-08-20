@@ -1,6 +1,6 @@
 var lookController = angular.module('lookController', []);
 
-lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session', function($scope, $http, $q, Session) {
+lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session', '$timeout', 'Auth', 'notifyUser', function($scope, $http, $q, Session, $timeout, Auth, notifyUser) {
 
 	// The users session info from the server
 
@@ -19,5 +19,53 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
 		jacket[sapayol.jacket.model] = $scope.jacket;
 		Session.store(jacket);
 	}
+
+	  $scope.submitAuthRequest = function(request) {
+	  	if (request === 'logout') return logout($scope.user);
+	  	if ($scope.userInfoForm.$valid) {
+	  		register($scope.user);
+		  } else {
+	  		$scope.showUserErorrs = true;
+	  		focus('emailField');
+		  }
+	  }
+
+	  $scope.proceedToOrder = function() {
+	 		$timeout(function() {
+		 		createOrderForm.submit();
+	 		}, 100);
+	  }
+
+	  register = function(input) {
+ 			 Auth.register(input.email, input.password)
+ 			 	.then(function(user) {
+ 			 		$scope.user = user;
+					$scope.proceedToOrder();
+    		});
+	  };
+
+	  login = function(input) {
+    	Auth.login(input.email, input.password)
+    		.then(function(user) {
+ 			 		$scope.user = user;
+					$scope.proceedToOrder();
+    		});
+    }
+
+	  resetPassword = function(input) {
+  		Auth.reset(input.email)
+    		.then(function(data) {
+    			notifyUser.of(data);
+    			$scope.reset = false;
+    		});
+	  }
+
+    logout = function () {
+  		Auth.logout()
+    		.then(function(data) {
+					deleteCurrentUser();
+    			notifyUser.of('You were logged out');
+    		});
+    };
 
 }]);

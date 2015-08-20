@@ -43,4 +43,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->hasMany('Order');
     }
 
+    public function unfinishedOrders()
+    {
+        return $this->orders()->where('status', '=', 'started')->orderBy('updated_at');
+    }
+
 }

@@ -34,9 +34,14 @@ class Order extends Model {
     return $this->belongsTo('Jacket');
   }
 
-  public function measurement()
+  public function measurements()
   {
-    return $this->belongsTo('Measurement');
+    return $this->hasMany('Measurement');
+  }
+
+  public function userMeasurements()
+  {
+    return $this->hasOne('Measurement')->where('type', '=', 'user');
   }
 
   public function user()

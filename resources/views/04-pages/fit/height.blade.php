@@ -11,7 +11,7 @@
 			<label for="height" class="text-input-label">
 				<span class="label-title">Height</span>
 				<input name="measurements[height]" id="height" type="tel" placeholder="00.00" ng-model="height" maxlength="6" mask="99999" required>
-				<span class="input-units">{{{ $order->measurement->units }}}</span>
+				<span class="input-units">{{{ $order->userMeasurements->units }}}</span>
 			</label>
 
 		  <input type="hidden" name="_token" value="{{{ csrf_token() }}}">

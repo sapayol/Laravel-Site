@@ -1,96 +1,96 @@
 <div class="measurement-tracker-offset"></div>
 <ul class="small-block-grid-4 measurement-tracker">
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'half_shoulder']) }}}" class="{{{ $step == 'half_shoulder' ? 'active' : ''  }}} {{{ $order->measurement->half_shoulder ? 'valid' : ''  }}}">
+			<a href="{{{ route('orders.fit', [$order->id, 'half_shoulder']) }}}" class="{{{ $step == 'half_shoulder' ? 'active' : ''  }}} {{{ $order->userMeasurements->half_shoulder ? 'valid' : ''  }}}">
 			<div>
 				<span>1/2 Shoulder</span>
-				@if ($order->measurement->half_shoulder)
+				@if ($order->userMeasurements->half_shoulder)
 					<span class="measurement-value">
-						{{{ $order->measurement->half_shoulder }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+						{{{ $order->userMeasurements->half_shoulder }}}<br><span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
 					</span>
 				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'back_width']) }}}" class="{{{ $step == 'back_width' ? 'active' : ''}}} {{{ $order->measurement->back_width ? 'valid' : '' }}}">
+			<a href="{{{ route('orders.fit', [$order->id, 'back_width']) }}}" class="{{{ $step == 'back_width' ? 'active' : ''}}} {{{ $order->userMeasurements->back_width ? 'valid' : '' }}}">
 			<div>
 				<span>Back Width</span>
-				@if ($order->measurement->back_width)
+				@if ($order->userMeasurements->back_width)
 					<span class="measurement-value">
-						{{{ $order->measurement->back_width }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+						{{{ $order->userMeasurements->back_width }}}<br><span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
 					</span>
 				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'chest']) }}}" class="{{{ $step == 'chest' ? 'active' : ''}}} {{{ $order->measurement->chest ? 'valid' : '' }}}">
+			<a href="{{{ route('orders.fit', [$order->id, 'chest']) }}}" class="{{{ $step == 'chest' ? 'active' : ''}}} {{{ $order->userMeasurements->chest ? 'valid' : '' }}}">
 			<div>
 				<span>Chest</span>
-				@if ($order->measurement->chest)
+				@if ($order->userMeasurements->chest)
 					<span class="measurement-value">
-						{{{ $order->measurement->chest }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+						{{{ $order->userMeasurements->chest }}}<br><span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
 					</span>
 				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'stomach']) }}}" class="{{{ $step == 'stomach' ? 'active' : ''}}} {{{ $order->measurement->stomach ? 'valid' : '' }}}">
+			<a href="{{{ route('orders.fit', [$order->id, 'stomach']) }}}" class="{{{ $step == 'stomach' ? 'active' : ''}}} {{{ $order->userMeasurements->stomach ? 'valid' : '' }}}">
 			<div>
 				<span>Stomach</span>
-				@if ($order->measurement->stomach)
+				@if ($order->userMeasurements->stomach)
 					<span class="measurement-value">
-						{{{ $order->measurement->stomach }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+						{{{ $order->userMeasurements->stomach }}}<br><span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
 					</span>
 				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'back_length']) }}}"class="{{{ $step == 'back_length' ? 'active' : ''}}} {{{ $order->measurement->back_length ? 'valid' : '' }}}">
+			<a href="{{{ route('orders.fit', [$order->id, 'back_length']) }}}"class="{{{ $step == 'back_length' ? 'active' : ''}}} {{{ $order->userMeasurements->back_length ? 'valid' : '' }}}">
 			<div>
 				<span>Back Length</span>
-				@if ($order->measurement->back_length)
+				@if ($order->userMeasurements->back_length)
 					<span class="measurement-value">
-						{{{ $order->measurement->back_length }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+						{{{ $order->userMeasurements->back_length }}}<br><span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
 					</span>
 				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'waist']) }}}" class="{{{ $step == 'waist' ? 'active' : ''}}} {{{ $order->measurement->waist ? 'valid' : '' }}}">
+			<a href="{{{ route('orders.fit', [$order->id, 'waist']) }}}" class="{{{ $step == 'waist' ? 'active' : ''}}} {{{ $order->userMeasurements->waist ? 'valid' : '' }}}">
 			<div>
 				<span>Waist</span>
-				@if ($order->measurement->waist)
+				@if ($order->userMeasurements->waist)
 					<span class="measurement-value">
-						{{{ $order->measurement->waist }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+						{{{ $order->userMeasurements->waist }}}<br><span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
 					</span>
 				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'arm']) }}}" class="{{{ $step == 'arm' ? 'active' : ''}}} {{{ $order->measurement->arm ? 'valid' : '' }}}">
+			<a href="{{{ route('orders.fit', [$order->id, 'arm']) }}}" class="{{{ $step == 'arm' ? 'active' : ''}}} {{{ $order->userMeasurements->arm ? 'valid' : '' }}}">
 			<div>
 				<span>Arm</span>
-				@if ($order->measurement->arm)
+				@if ($order->userMeasurements->arm)
 					<span class="measurement-value">
-						{{{ $order->measurement->arm }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+						{{{ $order->userMeasurements->arm }}}<br><span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
 					</span>
 				@endif
 			</div>
 		</a>
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'biceps']) }}}" class="{{{ $step == 'biceps' ? 'active' : ''}}} {{{ $order->measurement->biceps ? 'valid' : '' }}}">
+			<a href="{{{ route('orders.fit', [$order->id, 'biceps']) }}}" class="{{{ $step == 'biceps' ? 'active' : ''}}} {{{ $order->userMeasurements->biceps ? 'valid' : '' }}}">
 			<div>
 				<span>Biceps</span>
-				@if ($order->measurement->biceps)
+				@if ($order->userMeasurements->biceps)
 					<span class="measurement-value">
-						{{{ $order->measurement->biceps }}}<br><span class="measurement-units"> {{{ $order->measurement->units }}}</span>
+						{{{ $order->userMeasurements->biceps }}}<br><span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
 					</span>
 				@endif
 			</div>

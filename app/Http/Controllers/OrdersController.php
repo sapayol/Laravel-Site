@@ -9,30 +9,38 @@ class OrdersController extends Controller {
 
 	public function store(CreateOrderRequest $request)
 	{
-		Auth::loginUsingId($request->user_id);
+		$user = Auth::loginUsingId($request->user_id);
+		$last_order = $user->unfinishedOrders->last();
+
+		if ($last_order && $last_order->userMeasurements) {
+			return view('04-pages.checkout.continue', ['last_order' => $last_order, 'new_order' => $request->input()]);
+		}
 
 		$jacket = Jacket::where('model', '=', $request->model)->first();
 		$order  = Order::create(array(
-			'status'         => 'new',
-			'user_id'        => Auth::user()->id,
-			'jacket_id'      => $jacket->id,
-			'total'          => $jacket->price // Needs to updated in 2.0 when attributes affect price
+			'status'    => 'new',
+			'user_id'   => Auth::user()->id,
+			'jacket_id' => $jacket->id,
+			'total'     => $jacket->price // Needs to updated in 2.0 when attributes affect price
 		));
 
-		$leather_type   = Attribute::where('type', '=', 'leather_type')->where('name',   '=', $request->leather_type)->first();
-		$leather_color  = Attribute::where('type', '=', 'leather_color')->where('name',  '=', $request->leather_color)->first();
-		$lining_color   = Attribute::where('type', '=', 'lining_color')->where('name',   '=', $request->lining_color)->first();
-		$hardware_color = Attribute::where('type', '=', 'hardware_color')->where('name', '=', $request->hardware_color)->first();
-
-		$order->attributes()->attach($leather_type->id);
-		$order->attributes()->attach($leather_color->id);
-		$order->attributes()->attach($lining_color->id);
-		$order->attributes()->attach($hardware_color->id);
+		foreach ($request->jacket_look as $attribute) {
+			$order->attributes()->attach($attribute);
+		}
 
 		return redirect()->route('orders.fit', [$order->id, 'units']);
 	}
 
-	public function getFit($id, $step)
+	public function resetOrder($id, CreateOrderRequest $request)
+	{
+		$order = Order::find($id);
+		$order->status = 'dropped';
+		$order->save();
+
+		return $this->store($request);
+	}
+
+	public function getFit($id, $step = null)
 	{
 		$order = Order::find($id);
 
@@ -42,28 +50,22 @@ class OrdersController extends Controller {
 	public function postFit($id, $step, Request $request)
 	{
 		$order = Order::find($id);
-		if ($order->measurement === null) {
-			$measurement = Measurement::create($request->measurements);
-			$order->measurement_id = $measurement->id;
-			$order->save();
+
+		if (!$order->userMeasurements) {
+			$userMeasurements = Measurement::create(array_merge($request->measurements, ['order_id' => $order->id]));
+		} else {
+			$order->userMeasurements->update($request->measurements);
+			$userMeasurements = $order->userMeasurements;
 		}
 
-		if ($request->measurements !== null) {
-			foreach ($request->measurements as $key => $value) {
-				$key = trim(str_replace('-', '_', $key));
-				$order->measurement->$key = $value;
-				$order->measurement->save();
-			}
-		}
+		$order->status = 'started';
+		$order->save();
 
-		if (count($order->measurement->getIncompleteMeasurements()) > 0) {
-			// dd($order->measurement->getIncompleteMeasurements());
+		if (count($userMeasurements->getIncompleteMeasurements()) > 0) {
 			return view('04-pages.fit.' . $step, ['order' => $order, 'step' => $step]);
 		} else {
 			return redirect()->route('orders.checkout', $order->id);
 		}
-
-
 	}
 
 	/**

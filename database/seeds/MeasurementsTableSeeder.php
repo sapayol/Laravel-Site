@@ -22,7 +22,8 @@ class MeasurementsTableSeeder extends Seeder {
 			'waist'         => 24.2,
 			'arm'           => 18.1,
 			'biceps'        => 6.9,
-			'note'          => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus asperiores earum eaque quo iste velit.'
+			'note'          => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus asperiores earum eaque quo iste velit.',
+			'order_id'      => $faker->numberBetween(1,5)
 		]);
 
 		Measurement::create([
@@ -37,7 +38,8 @@ class MeasurementsTableSeeder extends Seeder {
 			'waist'         => 24.2,
 			'arm'           => 18.1,
 			'biceps'        => 6.9,
-			'note'          => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus asperiores earum eaque quo iste velit.'
+			'note'          => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus asperiores earum eaque quo iste velit.',
+			'order_id'      => $faker->numberBetween(1,5)
 		]);
 
 		Measurement::create([
@@ -52,7 +54,8 @@ class MeasurementsTableSeeder extends Seeder {
 			'waist'         => 24.2,
 			'arm'           => 18.1,
 			'biceps'        => 6.9,
-			'note'          => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus asperiores earum eaque quo iste velit.'
+			'note'          => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus asperiores earum eaque quo iste velit.',
+			'order_id'      => $faker->numberBetween(1,5)
 		]);
 
 		Measurement::create([
@@ -67,7 +70,8 @@ class MeasurementsTableSeeder extends Seeder {
 			'waist'         => 24.2,
 			'arm'           => 18.1,
 			'biceps'        => 6.9,
-			'note'          => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus asperiores earum eaque quo iste velit.'
+			'note'          => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus asperiores earum eaque quo iste velit.',
+			'order_id'      => $faker->numberBetween(1,5)
 		]);
 
 		Measurement::create([
@@ -82,7 +86,8 @@ class MeasurementsTableSeeder extends Seeder {
 			'waist'         => 24.2,
 			'arm'           => 18.1,
 			'biceps'        => 6.9,
-			'note'          => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus asperiores earum eaque quo iste velit.'
+			'note'          => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus asperiores earum eaque quo iste velit.',
+			'order_id'      => $faker->numberBetween(1,5)
 		]);
 
 		Measurement::create([
@@ -97,7 +102,8 @@ class MeasurementsTableSeeder extends Seeder {
 			'waist'         => 24.2,
 			'arm'           => 18.1,
 			'biceps'        => 6.9,
-			'note'          => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus asperiores earum eaque quo iste velit.'
+			'note'          => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus asperiores earum eaque quo iste velit.',
+			'order_id'      => $faker->numberBetween(1,5)
 		]);
 
 

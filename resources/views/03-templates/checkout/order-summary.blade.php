@@ -15,15 +15,15 @@
 <div class="large-4 medium-4 small-12 columns">
 	<h3 class="text-center thin">Fit</h3>
 	<ul class="no-bullet value-list left">
-		<li><small class="value-key">Your Height</small>{{{ $order->measurement->height}}} {{{ $order->measurement->units }}}</li>
-		<li><small class="value-key">Half Shoulder</small>{{{ $order->measurement->half_shoulder}}} {{{ $order->measurement->units }}}</li>
-		<li><small class="value-key">Back Width</small>{{{ $order->measurement->back_width}}} {{{ $order->measurement->units }}}</li>
-		<li><small class="value-key">Chest</small>{{{ $order->measurement->chest}}} {{{ $order->measurement->units }}}</li>
-		<li><small class="value-key">Belly / Stomach</small>{{{ $order->measurement->stomach}}} {{{ $order->measurement->units }}}</li>
-		<li><small class="value-key">Back Length</small>{{{ $order->measurement->back_length}}} {{{ $order->measurement->units }}}</li>
-		<li><small class="value-key">Waist</small>{{{ $order->measurement->waist}}} {{{ $order->measurement->units }}}</li>
-		<li><small class="value-key">Arm</small>{{{ $order->measurement->arm}}} {{{ $order->measurement->units }}}</li>
-		<li><small class="value-key">Biceps</small>{{{ $order->measurement->biceps}}} {{{ $order->measurement->units }}}</li>
+		<li><small class="value-key">Your Height</small>{{{ $order->userMeasurements->height}}} {{{ $order->userMeasurements->units }}}</li>
+		<li><small class="value-key">Half Shoulder</small>{{{ $order->userMeasurements->half_shoulder}}} {{{ $order->userMeasurements->units }}}</li>
+		<li><small class="value-key">Back Width</small>{{{ $order->userMeasurements->back_width}}} {{{ $order->userMeasurements->units }}}</li>
+		<li><small class="value-key">Chest</small>{{{ $order->userMeasurements->chest}}} {{{ $order->userMeasurements->units }}}</li>
+		<li><small class="value-key">Belly / Stomach</small>{{{ $order->userMeasurements->stomach}}} {{{ $order->userMeasurements->units }}}</li>
+		<li><small class="value-key">Back Length</small>{{{ $order->userMeasurements->back_length}}} {{{ $order->userMeasurements->units }}}</li>
+		<li><small class="value-key">Waist</small>{{{ $order->userMeasurements->waist}}} {{{ $order->userMeasurements->units }}}</li>
+		<li><small class="value-key">Arm</small>{{{ $order->userMeasurements->arm}}} {{{ $order->userMeasurements->units }}}</li>
+		<li><small class="value-key">Biceps</small>{{{ $order->userMeasurements->biceps}}} {{{ $order->userMeasurements->units }}}</li>
 	</ul>
 </div>
 

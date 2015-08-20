@@ -15,7 +15,7 @@ class Measurement extends Model {
 
   protected $guarded = array();
 
-  public function orders()
+  public function order()
   {
     return $this->belongsTo('Order');
   }

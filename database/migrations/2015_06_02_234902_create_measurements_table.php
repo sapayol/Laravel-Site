@@ -15,7 +15,8 @@ class CreateMeasurementsTable extends Migration {
 		Schema::create('measurements', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('type')->default('custom');
+			$table->string('type')->default('user');
+			$table->integer('order_id')->unsigned()->nullable();
 			$table->string('units')->default('cm');
 			$table->decimal('size', 9, 2)->nullable();
 			$table->decimal('height', 9, 2)->nullable();
