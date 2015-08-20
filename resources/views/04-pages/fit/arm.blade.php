@@ -4,16 +4,12 @@
 	Arm
 @stop
 
-@section('slug')
-	arm
-@stop
-
-@section('next_slug')
-	biceps
-@stop
-
 @section('input_options')
-	min="80" max="120"
+	@if ($order->userMeasurements->units == 'in')
+		min="22" max="28"
+	@else
+		min="58" max="70"
+	@endif
 @stop
 
 @section('instructions')

@@ -2,7 +2,9 @@
 	<img class="checkout-image right responsive-image" src="/images/stock-photos/jacket-1.jpg">
 </div>
 <div class="large-4 medium-4 small-12 columns">
-	<h3 class="text-center thin">Look</h3>
+	<h3 class="thin left">Look</h3>
+	<a class="right underlined">Change</a>
+	<div class="clearfix"></div>
 	<ul class="no-bullet value-list left">
 		<li><small class="value-key">Jacket </small>{{{ $order->jacket->name }}}	</li>
 		<li><small class="value-key">Leather Type </small>{{{ ucfirst($order->leather_type()->name)  }}}	</li>
@@ -13,7 +15,9 @@
 </div>
 
 <div class="large-4 medium-4 small-12 columns">
-	<h3 class="text-center thin">Fit</h3>
+	<h3 class="thin left">Fit</h3>
+	<a href="/orders/{{{ $order->id }}}/fit/half_shoulder" class="right underlined">Change</a>
+	<div class="clearfix"></div>
 	<ul class="no-bullet value-list left">
 		<li><small class="value-key">Your Height</small>{{{ $order->userMeasurements->height}}} {{{ $order->userMeasurements->units }}}</li>
 		<li><small class="value-key">Half Shoulder</small>{{{ $order->userMeasurements->half_shoulder}}} {{{ $order->userMeasurements->units }}}</li>
@@ -28,10 +32,12 @@
 </div>
 
 <div class="large-4 medium-6 small-12 columns">
-	<h3 class="text-center thin">Shipping Info</h3>
+	<h3 class="thin left">Shipping Info</h3>
+	<a href="#shipping-info" class="right underlined">Change</a>
+	<div class="clearfix"></div>
 	<ul class="no-bullet value-list left">
 		<li><small class="value-key">Name</small>@{{ address.name }}</li>
-		<li><small class="value-key">Email</small>@{{ user.email }}</li>
+		<li><small class="value-key">Email</small>{{{ $order->user->email }}}</li>
 		<li><small class="value-key">Address 1</small> @{{ address.address1 }}</li>
 		<li><small class="value-key">Address 2</small> @{{ address.address2 }}</li>
 		<li><small class="value-key">City</small> @{{ address.city }}</li>
@@ -42,7 +48,9 @@
 </div>
 
 <div class="large-4 medium-6 small-12 columns">
-	<h3 class="text-center thin">Payment Info</h3>
+	<h3 class="thin left">Payment Info</h3>
+	<a href="#payment-info" class="right underlined">Change</a>
+	<div class="clearfix"></div>
 	<ul class="no-bullet value-list left">
 		<li><small class="value-key">Method</small>Credit</li>
 		<li><small class="value-key">Card Type</small>@{{ card.type }}</li>

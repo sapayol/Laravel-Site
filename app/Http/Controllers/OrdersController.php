@@ -40,29 +40,30 @@ class OrdersController extends Controller {
 		return $this->store($request);
 	}
 
-	public function getFit($id, $step = null)
+	public function getFit($id, $step)
 	{
 		$order = Order::find($id);
 
 		return view('04-pages.fit.' . $step, ['order' => $order, 'step' => $step]);
 	}
 
-	public function postFit($id, $step, Request $request)
+	public function postFit($id, Request $request)
 	{
 		$order = Order::find($id);
 
 		if (!$order->userMeasurements) {
-			$userMeasurements = Measurement::create(array_merge($request->measurements, ['order_id' => $order->id]));
+			Measurement::create(array_merge($request->measurements, ['order_id' => $order->id]));
 		} else {
 			$order->userMeasurements->update($request->measurements);
-			$userMeasurements = $order->userMeasurements;
 		}
 
+		$order = Order::find($id);
 		$order->status = 'started';
 		$order->save();
 
-		if (count($userMeasurements->getIncompleteMeasurements()) > 0) {
-			return view('04-pages.fit.' . $step, ['order' => $order, 'step' => $step]);
+		if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
+			$next_step = $incomplete_measurements[0];
+			return redirect()->route('orders.fit', ['id' => $order->id, 'step' => $next_step]);
 		} else {
 			return redirect()->route('orders.checkout', $order->id);
 		}

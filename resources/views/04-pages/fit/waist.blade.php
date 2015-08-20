@@ -4,16 +4,12 @@
 	Waist
 @stop
 
-@section('slug')
-	waist
-@stop
-
-@section('next_slug')
-	arm
-@stop
-
 @section('input_options')
-	min="80" max="120"
+	@if ($order->userMeasurements->units == 'in')
+		min="28" max="40"
+	@else
+		min="72" max="100"
+	@endif
 @stop
 
 @section('instructions')

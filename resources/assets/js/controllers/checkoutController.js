@@ -14,21 +14,9 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 		};
 	}
 
-	$scope.submitUserInfo = function(order_id) {
-	  if ($scope.userInfoForm.$valid) {
-	  	addUserInfoToOrder($scope.user, order_id).then(function(response){
-				$scope.userInfoSubmitted = true;
-				$document.scrollToElement(angular.element('#shipping-info'), 80, 500);
-	  	});
-	  } else {
-	  	$scope.showUserErorrs = true;
-	  }
-	};
-
 	$scope.submitShippingInfo = function(order_id) {
 	  if ($scope.shippingInfoForm.$valid) {
 	  	addShippingInfoToOrder($scope.address, order_id).then(function(response){
-	  		console.log(response);
 				$scope.shippingInfoSubmitted = true;
 				$document.scrollToElement(angular.element('#payment-info'), 80, 500);
 	  	});
@@ -37,24 +25,12 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 	  }
 	};
 
-	addUserInfoToOrder = function(user, order_id) {
-		var deferred = $q.defer();
-		$http.post('/orders/' + order_id, {
-			_method: "PATCH",
-			name: user.name,
-			email: user.email,
-		}).success(function(response, status) {
-			deferred.resolve(response);
-		}).error(function(response, status) {
-			notifyUser.ofApiErrors(response, status);
-		});
-		return deferred.promise;
-	}
 
 	addShippingInfoToOrder = function(address, order_id) {
 		var deferred = $q.defer();
 		$http.post('/orders/' + order_id, {
 			_method: 'PATCH',
+			name:     address.name,
 			address1: address.address1,
 			address2: address.address2,
 			city:     address.city,

@@ -7,7 +7,7 @@
 @section('main')
 
 	<section class="large-12 medium-12 small-12 columns  ">
-		<form action="/orders/{{{ $order->id}}}/fit/complete" method="POST">
+		<form action="/orders/{{{ $order->id}}}/fit" method="POST">
 			<p>Please let us know if you have any additional information you want us to know about your measurements</p>
 
 			<label for="note">

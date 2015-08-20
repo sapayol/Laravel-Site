@@ -4,16 +4,12 @@
 	Back Length
 @stop
 
-@section('slug')
-	back_length
-@stop
-
-@section('next_slug')
-	waist
-@stop
-
 @section('input_options')
-	min="80" max="120"
+	@if ($order->userMeasurements->units == 'in')
+		min="17" max="26"
+	@else
+		min="45" max="65"
+	@endif
 @stop
 
 @section('instructions')

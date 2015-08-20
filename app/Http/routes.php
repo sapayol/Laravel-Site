@@ -22,8 +22,8 @@ Route::get('/jackets/{model}/look',              ['uses' => 'JacketsController@l
 Route::resource('orders', 'OrdersController');
 Route::post('/orders/{id}/process',              ['uses' => 'OrdersController@process',    'as' => 'orders.process']);
 Route::get('/orders/{id}/complete',              ['uses' => 'OrdersController@complete',   'as' => 'orders.complete']);
+Route::post('/orders/{id}/fit',                  ['uses' => 'OrdersController@postFit',    'as' => 'orders.fit']);
 Route::get('/orders/{id}/fit/{step}',            ['uses' => 'OrdersController@getFit',     'as' => 'orders.fit']);
-Route::post('/orders/{id}/fit/{step}',           ['uses' => 'OrdersController@postFit',    'as' => 'orders.fit']);
 Route::get('/orders/{id}/checkout',              ['uses' => 'OrdersController@checkout',   'as' => 'orders.checkout']);
 Route::get('/orders/{id}/complete',              ['uses' => 'OrdersController@complete',   'as' => 'orders.complete']);
 Route::patch('/orders/{id}/reset',               ['uses' => 'OrdersController@resetOrder', 'as' => 'orders.reset']);

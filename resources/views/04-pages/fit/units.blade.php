@@ -21,7 +21,7 @@
 
 	<section class="large-12 medium-12 small-12 columns text-center">
 		<p class="text-left">Will you be measuring in inches or centimeters?</p>
-		<form action="/orders/{{{ $order->id }}}/fit/height" method="POST">
+		<form action="/orders/{{{ $order->id }}}/fit" method="POST">
 			<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
 			<input type="hidden" name="measurements[units]" value="in"/>
 			<button type="submit" class="black button expand">Inches</button>
@@ -29,7 +29,7 @@
 
 		<p>or</p>
 
-		<form action="/orders/{{{ $order->id }}}/fit/height" method="POST">
+		<form action="/orders/{{{ $order->id }}}/fit" method="POST">
 			<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
 			<input type="hidden" name="measurements[units]" value="in"/>
 			<button type="submit" class="black button expand">Centimeters</button>

@@ -15,7 +15,7 @@
 	</section> --}}
 
 	<section class="large-12 medium-12 small-12 columns" id="shipping-info">
-		<h2 class="text-center thin">Shipping Address</h2>
+		<h2 class="text-center thin"><small>Please enter your</small> <br>Shipping Address</h2>
 		@include('03-templates.checkout.shipping-info-form')
 	</section>
 

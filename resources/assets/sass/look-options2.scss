@@ -27,7 +27,6 @@
 		border: none;
     padding: 0.325rem .475rem 0.3875rem .475rem;
     margin-right: .875rem;
-		border-color: white;
     &:hover {
     	background: none;
     	border-width: 2px;
@@ -38,7 +37,7 @@
 			border: 2px solid;
 		}
 		&.black, &.brown, &.gray, &.pink, &.silver, &.darkGray, &.gold {
-			border-color: $black;
+			border-color: $white;
 		}
 		&.black {
 			border-color: $black;

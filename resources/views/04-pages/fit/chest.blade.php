@@ -4,16 +4,12 @@
 	Chest
 @stop
 
-@section('slug')
-	chest
-@stop
-
-@section('next_slug')
-	stomach
-@stop
-
 @section('input_options')
-	min="80" max="120"
+	@if ($order->userMeasurements->units == 'in')
+		min="33" max="44"
+	@else
+		min="85" max="110"
+	@endif
 @stop
 
 @section('instructions')

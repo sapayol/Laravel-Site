@@ -4,16 +4,12 @@
 	Stomach
 @stop
 
-@section('slug')
-	stomach
-@stop
-
-@section('next_slug')
-	back-length
-@stop
-
 @section('input_options')
-	min="80" max="120"
+	@if ($order->userMeasurements->units == 'in')
+		min="28" max="40"
+	@else
+		min="72" max="100"
+	@endif
 @stop
 
 @section('instructions')

@@ -4,16 +4,12 @@
 	Back Width
 @stop
 
-@section('slug')
-	back_width
-@stop
-
-@section('next_slug')
-	chest
-@stop
-
 @section('input_options')
-	min="80" max="120"
+	@if ($order->userMeasurements->units == 'in')
+		min="20" max="80"
+	@else
+		min="85" max="110"
+	@endif
 @stop
 
 @section('instructions')

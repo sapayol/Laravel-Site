@@ -2434,8 +2434,7 @@ footer {
     margin-left: 0;
     border: none;
     padding: 0.325rem .475rem 0.3875rem .475rem;
-    margin-right: .875rem;
-    border-color: white; }
+    margin-right: .875rem; }
     .look-options2 label:not([type="submit"]):hover {
       background: none;
       border-width: 2px;
@@ -2444,7 +2443,7 @@ footer {
     .look-options2 label:not([type="submit"]).active {
       border: 2px solid; }
     .look-options2 label:not([type="submit"]).black, .look-options2 label:not([type="submit"]).brown, .look-options2 label:not([type="submit"]).gray, .look-options2 label:not([type="submit"]).pink, .look-options2 label:not([type="submit"]).silver, .look-options2 label:not([type="submit"]).darkGray, .look-options2 label:not([type="submit"]).gold {
-      border-color: #222222; }
+      border-color: white; }
     .look-options2 label:not([type="submit"]).black {
       border-color: #222222; }
     .look-options2 label:not([type="submit"]).brown {

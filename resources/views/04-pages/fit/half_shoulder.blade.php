@@ -4,16 +4,12 @@
 	Half Shoulder
 @stop
 
-@section('slug')
-	half_shoulder
-@stop
-
-@section('next_slug')
-	back_width
-@stop
-
 @section('input_options')
-	min="80" max="120"
+	@if ($order->userMeasurements->units == 'in')
+		min="5" max="7"
+	@else
+		min="13" max="18"
+	@endif
 @stop
 
 @section('instructions')
