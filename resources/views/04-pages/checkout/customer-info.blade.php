@@ -24,7 +24,7 @@
 		@include('03-templates.checkout.payment-info-form')
 	</section>
 
-	<section ng-show="paymentInfoSubmitted">
+	<section ng-show="paymentInfoSubmitted" id="order-summary">
 		<h2 class="text-center thin">Summary</h2>
 		@include('03-templates.checkout.order-summary')
 	</section>

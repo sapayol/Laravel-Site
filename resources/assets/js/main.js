@@ -15,7 +15,8 @@
     $timeout(function() {
 			$(document).ready(function(){
 			  $('.home-carousel').slick({
-			  	dots: true,
+          dots: true,
+			  	arrows: false,
 			  	mobileFirst: true,
 			  });
 			});

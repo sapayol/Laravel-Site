@@ -2,7 +2,6 @@
   "name": "sapayol_web",
   "version": "0.0.1",
   "dependencies": {
-		"slick.js"            : null,
     "angular-loading-bar" : null,
     "angular-notify"			: null,
     "angular-payments"    : null,

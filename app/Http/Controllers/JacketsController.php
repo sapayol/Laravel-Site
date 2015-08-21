@@ -11,7 +11,7 @@ class JacketsController extends Controller {
 
 	public function index()
 	{
-		$jackets = Jacket::all();
+		$jackets = Jacket::orderBy('active', 'DESC')->get();
 
 		return view('04-pages.jackets.index', ['jackets' => $jackets]);
 	}
@@ -20,8 +20,7 @@ class JacketsController extends Controller {
 	{
 		$jacket = Jacket::where('model', '=', $model)->first();
 
-
-		return view('04-pages.jackets.show', ['jacket' => $jacket]);
+		return view('04-pages.jackets.' . $model, ['jacket' => $jacket]);
 	}
 
 	public function look($model)

@@ -13,27 +13,27 @@ class JacketsTableSeeder extends Seeder {
 		$faker = Faker\Factory::create();
 
 		Jacket::create([
+			'name'   => "Bleecker",
+			'gender' => 'male',
+			'model'  => 'bleecker',
+			'price'  => 1299.00,
+			'active' => 1,
+		]);
+
+		Jacket::create([
 			'name'   => "Double Rider Biker",
 			'gender' => 'male',
-			'model'  => 'double-rider-biker',
+			'model'  => 'double_rider_biker',
 			'price'  => 1279.00,
 			'active' => 1,
 		]);
 
 		Jacket::create([
-			'name'   => "Men's Bomber",
+			'name'   => "Bomber",
 			'gender' => 'male',
 			'model'  => 'bomber',
 			'price'  => 1279.00,
-			'active' => 1,
-		]);
-
-		Jacket::create([
-			'name'   => "Women's Bomber",
-			'gender' => 'female',
-			'model'  => 'biker',
-			'price'  => 1079.00,
-			'active' => 1,
+			'active' => 0,
 		]);
 
 	}

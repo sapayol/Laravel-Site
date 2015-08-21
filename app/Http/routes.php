@@ -15,18 +15,20 @@ Route::get('/',                         				 ['uses' => 'PagesController@comingS
 Route::get('/home',                         		 ['uses' => 'PagesController@index',       'as' => 'pages.home']);
 Route::get('/who-we-are',                        ['uses' => 'PagesController@whoWeAre',    'as' => 'pages.who-we-are']);
 Route::get('/how-it-works',                      ['uses' => 'PagesController@howItWorks',  'as' => 'pages.how-it-works']);
+Route::get('/our-leather',                       ['uses' => 'PagesController@ourLeather',  'as' => 'pages.our-leather']);
 
 Route::resource('jackets', 'JacketsController');
 Route::get('/jackets/{model}/look',              ['uses' => 'JacketsController@look',      'as' => 'jackets.look']);
 
 Route::resource('orders', 'OrdersController');
-Route::post('/orders/{id}/process',              ['uses' => 'OrdersController@process',    'as' => 'orders.process']);
-Route::get('/orders/{id}/complete',              ['uses' => 'OrdersController@complete',   'as' => 'orders.complete']);
 Route::post('/orders/{id}/fit',                  ['uses' => 'OrdersController@postFit',    'as' => 'orders.fit']);
 Route::get('/orders/{id}/fit/{step}',            ['uses' => 'OrdersController@getFit',     'as' => 'orders.fit']);
-Route::get('/orders/{id}/checkout',              ['uses' => 'OrdersController@checkout',   'as' => 'orders.checkout']);
-Route::get('/orders/{id}/complete',              ['uses' => 'OrdersController@complete',   'as' => 'orders.complete']);
 Route::patch('/orders/{id}/reset',               ['uses' => 'OrdersController@resetOrder', 'as' => 'orders.reset']);
+Route::get('/orders/{id}/checkout',              ['uses' => 'OrdersController@checkout',   'as' => 'orders.checkout']);
+Route::post('/orders/{id}/process',              ['uses' => 'OrdersController@process',    'as' => 'orders.process']);
+Route::get('/orders/{id}/complete',              ['uses' => 'OrdersController@complete',   'as' => 'orders.complete']);
+
+Route::get('/users/{id}/orders',                 ['uses' => 'UsersController@userOrders',  'as' => 'users.orders']);
 
 Route::resource('users', 'UsersController');
 

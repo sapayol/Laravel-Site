@@ -16,10 +16,7 @@ class AttributeJacketTableSeeder extends Seeder {
 
     foreach ($jackets as $jacket) {
       foreach ($attributes as $attribute) {
-        // $n = rand(1, 2);
-        // if ($n == 1) {
-          DB::insert('insert into attribute_jacket (attribute_id, jacket_id) values (?, ?)', array($attribute->id, $jacket->id));
-        // }
+        DB::insert('insert into attribute_jacket (attribute_id, jacket_id) values (?, ?)', array($attribute->id, $jacket->id));
       }
     }
 

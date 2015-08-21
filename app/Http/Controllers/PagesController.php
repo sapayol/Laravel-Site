@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 class PagesController extends Controller {
 
 	/*
@@ -32,6 +34,11 @@ class PagesController extends Controller {
 	public function howItWorks()
 	{
 		return view('04-pages.how-it-works');
+	}
+
+	public function ourLeather(Request $request)
+	{
+		return view('04-pages.our-leather', ['jacket' => $request->jacket]);
 	}
 
 }

@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateOrderRequest;
-use JavaScript, Mail, Auth;
+use JavaScript, Mail, Auth, Session;
 use Address, Jacket, Measurement, Attribute, Order, User;
 
 class OrdersController extends Controller {
@@ -23,6 +23,8 @@ class OrdersController extends Controller {
 			'jacket_id' => $jacket->id,
 			'total'     => $jacket->price // Needs to updated in 2.0 when attributes affect price
 		));
+
+		Session::remove('card');
 
 		foreach ($request->jacket_look as $attribute) {
 			$order->attributes()->attach($attribute);
@@ -53,7 +55,7 @@ class OrdersController extends Controller {
 
 		if (!$order->userMeasurements) {
 			Measurement::create(array_merge($request->measurements, ['order_id' => $order->id]));
-		} else {
+		} elseif ($request->measurements) {
 			$order->userMeasurements->update($request->measurements);
 		}
 
@@ -82,7 +84,8 @@ class OrdersController extends Controller {
     JavaScript::put([
 			'order'   => $order,
 			'user'    => $order->user,
-			'address' => $order->address
+			'address' => $order->address,
+			'session' => Session::all()
     ]);
 
 		return view('04-pages.checkout.customer-info', ['order' => $order]);
@@ -99,11 +102,9 @@ class OrdersController extends Controller {
 		$order = Order::findOrFail($id);
 
 		// Check if user with this email exists and return them or create a new record for them
-		if ($request->name && $request->email) {
-			$user = User::firstOrNew(['email' => trim(strtolower($request->email))]);
-			$user->name = $request->name;
-			$user->save();
-			$order->user_id = $user->id;
+		if ($request->name) {
+			$order->user->name = $request->name;
+			$order->user->save();
 		}
 
 		if ($request->address1 && $request->city) {

@@ -2306,7 +2306,10 @@ Copyright (c) 2015 Daniel Eden
   -webkit-animation-name: slideOutUp;
           animation-name: slideOutUp; }
 
-.value-list .value-key {
+.value-list .list-key {
+  display: inline-block;
+  min-width: 4rem; }
+.value-list .list-value {
   display: inline-block;
   min-width: 5rem; }
 
@@ -2714,15 +2717,14 @@ button.text-button {
   font-size: 1rem;
   border-bottom: 2px solid #B02428; }
 
-html, body {
+html, body, p {
   font-size: 20px;
   font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
-  font-weight: 200;
-  letter-spacing: 1; }
+  font-weight: 200; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
-  font-weight: 100; }
+  font-weight: 300; }
 
 h1 {
   font-size: 2.45rem; }

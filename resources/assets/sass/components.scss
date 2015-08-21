@@ -1,5 +1,9 @@
 .value-list {
-	.value-key {
+	.list-key {
+		display: inline-block;
+		min-width: 4rem;
+	}
+	.list-value {
 		display: inline-block;
 		min-width: 5rem;
 	}
