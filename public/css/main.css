@@ -2633,13 +2633,7 @@ fieldset {
     margin: 0;
     /* <-- Apparently some margin are still there even though it's hidden */ }
 
-.measurement-tracker-offset {
-  height: 10rem; }
-
 ul.measurement-tracker {
-  position: fixed;
-  bottom: 0;
-  z-index: 500;
   margin: 0;
   width: 19rem; }
   ul.measurement-tracker li {

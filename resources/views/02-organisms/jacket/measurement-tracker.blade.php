@@ -1,4 +1,3 @@
-<div class="measurement-tracker-offset"></div>
 <ul class="small-block-grid-4 measurement-tracker">
 	<li>
 			<a href="{{{ route('orders.fit', [$order->id, 'half_shoulder']) }}}" class="{{{ $step == 'half_shoulder' ? 'active' : ''  }}} {{{ $order->userMeasurements->half_shoulder ? 'valid' : ''  }}}">

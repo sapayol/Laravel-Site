@@ -21,8 +21,11 @@
 			<div ng-show="instructions" class="measurement-instructions animated slideInDown">
 				@yield('instructions')
 			</div>
-			<form action="/orders/{{{ $order->id}}}/fit" method="POST" name="measurementForm">
+			<form action="/orders/{{{ $order->id}}}/fit" method="POST" name="finalForm">
 				<input type="hidden" name="_token" value="{!! csrf_token() !!}">
+				<input type="hidden" name="measurements[{{{ $step }}}]" value="@{{ measurement }}">
+			</form>
+			<form ng-submit="submitMeasurement('measurements[{{{ $step }}}]')" name="measurementForm">
 				<label for="{{{ $step }}}" class="text-input-label" ng-class="{ wider : measurementFraction.length > 0 }">
 					<span class="label-title">@yield('title')</span>
 					<?php $min = config('measurements.' . $step . '.min.' . $order->userMeasurements->units); ?>
@@ -36,7 +39,7 @@
 					Measurements are usually between {{{ $min }}}  and {{{ $max }}} {{{ $order->userMeasurements->units }}}
 				  <a href="#" class="close">&times;</a>
 				</div>
-				<button type="button" class="black button expand" ng-click="submitMeasurement('measurements[{{{ $step }}}]')">Submit Measurement <span class="chevron chevron--right"></span></button>
+				<button type="button" ng-click="submitMeasurement('measurements[{{{ $step }}}]')" class="black button expand">Submit Measurement <span class="chevron chevron--right"></span></button>
 			</form>
 		</article>
 	</main>
