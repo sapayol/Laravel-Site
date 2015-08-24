@@ -10,7 +10,7 @@
 			<p>How tall are you?</p>
 			<label for="height" class="text-input-label">
 				<span class="label-title">Height</span>
-				<input name="measurements[height]" id="height" type="tel" placeholder="00.00" ng-model="height" maxlength="6" mask="99999" required>
+				<input name="measurements[height]" id="height" type="number" placeholder="00.00" ng-model="height" maxlength="6" mask="99999" required>
 				<span class="input-units">{{{ $order->userMeasurements->units }}}</span>
 			</label>
 
