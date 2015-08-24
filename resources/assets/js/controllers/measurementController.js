@@ -8,7 +8,9 @@ measurementController.controller('measurementCtrl', ['$scope', '$timeout', funct
 	$scope.submitMeasurement = function(step) {
 		if ($scope.measurementForm[step].$error.min || $scope.measurementForm[step].$error.max ) {
 			$scope.displayMinMaxError = true;
-		};
+		} else if ($scope.measurementForm.$valid) {
+			$scope.measurementForm.submit();
+		}
 	}
 
 	$scope.init = function(measurement) {

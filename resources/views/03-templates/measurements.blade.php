@@ -32,11 +32,11 @@
 					<span class="input-units">{{{ $order->userMeasurements->units }}}</span>
 				</label>
 				<br><br>
-				<div class="alert-box alert" data-alert ng-show="displayMinMaxError">
+				<div class="alert-box alert" data-alert ng-if="displayMinMaxError">
 					Measurements are usually between {{{ $min }}}  and {{{ $max }}} {{{ $order->userMeasurements->units }}}
 				  <a href="#" class="close">&times;</a>
 				</div>
-				<button type="submit" class="black button expand" ng-click="submitMeasurement('measurements[{{{ $step }}}]')">Submit Measurement <span class="chevron chevron--right"></span></button>
+				<button type="button" class="black button expand" ng-click="submitMeasurement('measurements[{{{ $step }}}]')">Submit Measurement <span class="chevron chevron--right"></span></button>
 			</form>
 		</article>
 	</main>
