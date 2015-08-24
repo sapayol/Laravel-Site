@@ -10,7 +10,7 @@
       <li><a href="/how-it-works">How It Works</a></li>
     @endif
     @if ($action != 'jackets.show')
-      <li><a href="/jackets/bomber">Tailored Jackets</a></li>
+      <li><a href="/jackets">Tailored Jackets</a></li>
     @endif
     <?php $currentuser = Auth::user(); ?>
     @if ($currentuser && $currentuser->orders->count() > 0)
