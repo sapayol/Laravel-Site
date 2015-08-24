@@ -21,6 +21,7 @@
 			  });
 			});
       $(document).foundation();
+      FastClick.attach(document.body);
     }, 500);
   }])
   .directive('scrollToTop', function() {
