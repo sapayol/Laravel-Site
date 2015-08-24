@@ -1,6 +1,6 @@
 <form name="paymentInfoForm" stripe-form="stripeResponseHandler">
 
-	<label for="number">Credit Card Number
+	<label for="number" class="credit-card-field">Credit Card Number
 		<span class="right" ng-if="showPaymentErorrs && paymentInfoForm.number.$invalid">Required</span>
 		<input id="number"
 					 name="number"
@@ -12,23 +12,10 @@
 					 payments-format="card"
 					 payments-validate="card"
 					 payments-type-model="type">
+					<i class="fa fa-cc-@{{type}} input-icon" ng-if="paymentInfoForm.number.$viewValue && paymentInfoForm.number.$dirty"></i>
 	</label>
 
-	<label for="cvc">CVC <small><a class="underlined" href="">What's This?</a></small>
-		<span class="right" ng-if="showPaymentErorrs && paymentInfoForm.cvc.$invalid">Required</span>
-		<input id="cvc"
-					 name="cvc"
-					 type="tel"
-					 size="4"
-					 ng-model="cvc"
-					 ng-required="true"
-					 ng-disabled="paymentInfoSubmitted"
-					 data-stripe="cvc"
-					 payments-validate="cvc"
-					 payments-format="cvc">
-	</label>
-
-	<label for="email">Expiration Date
+	<label for="email" class="expiry-field">Expiration Date
 		<span class="right" ng-if="showPaymentErorrs && paymentInfoForm.email.$invalid">Required</span>
 		<input id="expiry"
 					 name="expiry"
@@ -40,6 +27,20 @@
 					 payments-validate="expiry"
 					 payments-format="expiry"
 					 placeholder="MM/YYYY">
+	</label>
+
+	<label for="cvc" class="cvc-field">CVC <small><a class="underlined" href="">What's This?</a></small>
+		<span class="right" ng-if="showPaymentErorrs && paymentInfoForm.cvc.$invalid">Required</span>
+		<input id="cvc"
+					 name="cvc"
+					 type="tel"
+					 size="4"
+					 ng-model="cvc"
+					 ng-required="true"
+					 ng-disabled="paymentInfoSubmitted"
+					 data-stripe="cvc"
+					 payments-validate="cvc"
+					 payments-format="cvc">
 	</label>
 
 	<div class="text-center">

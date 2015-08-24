@@ -6,9 +6,6 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 
 	init = function() {
 		$scope.address = {};
-		if (sapayol.user !== null) {
-			$scope.address.name = sapayol.user.name;
-		};
 		if (sapayol.address !== null) {
 			$scope.address = sapayol.address;
 			$scope.shippingInfoSubmitted = true;
@@ -18,6 +15,9 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 			} else{
 				$document.scrollToElement(angular.element('#payment-info'), 80, 500);
 			}
+		};
+		if (sapayol.user !== null) {
+			$scope.address.name = sapayol.user.name;
 		};
 	}
 

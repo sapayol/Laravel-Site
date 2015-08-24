@@ -2345,6 +2345,22 @@ Copyright (c) 2015 Daniel Eden
     display: block;
     margin-top: .5rem; }
 
+.credit-card-field {
+  position: relative; }
+  .credit-card-field i.fa {
+    position: absolute;
+    bottom: 0.6rem;
+    right: 0.8rem;
+    font-size: 1.2rem; }
+
+.expiry-field {
+  display: inline-block;
+  width: 60%; }
+
+.cvc-field {
+  display: inline-block;
+  width: 38%; }
+
 header {
   border-bottom: 1px solid #e2e2e2; }
   header h1 {
