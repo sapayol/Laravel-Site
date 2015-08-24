@@ -4,14 +4,6 @@
 	Back Length
 @stop
 
-@section('input_options')
-	@if ($order->userMeasurements->units == 'in')
-		min="17" max="26"
-	@else
-		min="45" max="65"
-	@endif
-@stop
-
 @section('instructions')
 	<p>Bend your head forward. The highest bone on the back of your neck that sticks out is your starting point.</p>
 	<p><em>Look straight ahead again for the measurement</em>.</p>

@@ -5,12 +5,19 @@ measurementController.controller('measurementCtrl', ['$scope', '$timeout', funct
 
 	$scope.measurementFraction = null;
 
+	$scope.submitMeasurement = function(step) {
+		if ($scope.measurementForm[step].$error.min || $scope.measurementForm[step].$error.max ) {
+			$scope.displayMinMaxError = true;
+		};
+	}
+
 	$scope.init = function(measurement) {
 		$scope.measurement = measurement;
 		$scope.change(measurement);
 	}
 
 	$scope.change = function(measurement) {
+		$scope.displayMinMaxError = false;
 	 	if (typeof(measurement) !== 'undefined' ) {
 			result = Math.round( measurement * 1e2 ) / 1e2;
 			$scope.measurement = result;

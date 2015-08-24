@@ -31,7 +31,7 @@
 
 		<form action="/orders/{{{ $order->id }}}/fit" method="POST">
 			<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
-			<input type="hidden" name="measurements[units]" value="in"/>
+			<input type="hidden" name="measurements[units]" value="cm"/>
 			<button type="submit" class="black button expand">Centimeters</button>
 		</form>
 	</section>

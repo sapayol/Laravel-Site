@@ -4,14 +4,6 @@
 	Arm
 @stop
 
-@section('input_options')
-	@if ($order->userMeasurements->units == 'in')
-		min="22" max="28"
-	@else
-		min="58" max="70"
-	@endif
-@stop
-
 @section('instructions')
 	<p>Start at the shoulder point (where you left off for the shoulder measurement).</p>
 	<p>End right at the wrist, just after the bone that sticks out on the side of your little finger (head of ulna).</p>

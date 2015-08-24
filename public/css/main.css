@@ -2589,6 +2589,8 @@ fieldset {
       width: 88%; }
     .measurement-entry .text-input-label.wider {
       width: 14rem; }
+      .measurement-entry .text-input-label.wider .input-units {
+        right: 2.5rem; }
   .measurement-entry span.measurement-fraction {
     position: absolute;
     bottom: 0;
@@ -2601,13 +2603,19 @@ fieldset {
       margin-right: .5rem; }
   .measurement-entry span.input-units {
     display: inline-block;
-    position: relative;
+    position: absolute;
     font-weight: 200;
-    right: 2.5rem;
+    right: 1.5rem;
     bottom: 0; }
   .measurement-entry .measurement-instructions {
     padding-top: 1rem;
     background: white; }
+  .measurement-entry input::-webkit-outer-spin-button,
+  .measurement-entry input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */ }
 
 .measurement-tracker-offset {
   height: 10rem; }

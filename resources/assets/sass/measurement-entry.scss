@@ -17,6 +17,9 @@
 		}
 		&.wider {
 			width: 14rem;
+			.input-units {
+				right: 2.5rem;
+			}
 		}
 	}
 	span.measurement-fraction {
@@ -33,14 +36,21 @@
 	}
 	span.input-units {
 		display: inline-block;
-		position: relative;
+		position: absolute;
 		font-weight: 200;
-		right: 2.5rem;
+		right: 1.5rem;
 		bottom: 0;
 	}
 	.measurement-instructions {
 		padding-top: 1rem;
 		background: $white;
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    /* display: none; <- Crashes Chrome on hover */
+	    -webkit-appearance: none;
+	    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 	}
 
 }

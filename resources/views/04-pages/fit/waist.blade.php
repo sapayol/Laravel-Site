@@ -4,14 +4,6 @@
 	Waist
 @stop
 
-@section('input_options')
-	@if ($order->userMeasurements->units == 'in')
-		min="28" max="40"
-	@else
-		min="72" max="100"
-	@endif
-@stop
-
 @section('instructions')
 	<p>Measure around the hips, right where your jacket length measurement ended.</p>
 	<ul>

@@ -20,7 +20,7 @@
 			  	mobileFirst: true,
 			  });
 			});
-      // $(document).foundation();
+      $(document).foundation();
     }, 500);
   }])
   .directive('scrollToTop', function() {
