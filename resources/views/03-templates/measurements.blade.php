@@ -44,13 +44,20 @@
 				<button type="button" ng-click="submitMeasurement('measurements[{{{ $step }}}]')" class="black button expand">Submit Measurement <span class="chevron chevron--right"></span></button>
 			</form>
 		</article>
+		<section class="large-12 medium-12 small-12 columns inverted-colors">
+			@include('02-organisms.jacket.measurement-tracker')
+
+			<div>
+				@if ($order->userMeasurements->units == 'in')
+					<a class="underlined">Switch to <strong>cm</strong></a>
+				@else
+					<a class="underlined">Switch to <strong>in</strong></a>
+				@endif
+			</div>
+		</section>
 	</main>
 
-	@include('02-organisms.jacket.measurement-tracker')
-	@include('02-organisms.jacket.measurement-tracker2')
-	@include('02-organisms.jacket.measurement-tracker3')
-	@include('02-organisms.jacket.measurement-tracker4')
-	@include('02-organisms.jacket.measurement-tracker5')
-	@include('02-organisms.jacket.measurement-tracker6')
+
+
 
 @include('00-atoms.meta._foot')

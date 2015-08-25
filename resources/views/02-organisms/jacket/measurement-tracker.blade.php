@@ -1,120 +1,93 @@
-<h4 class="large-12 medium-12 small-12 columns">Measurement Progress</h4>
-<ul class="small-block-grid-3 measurement-tracker">
+<h3 class="text-center">Your Measurements</h3>
+<ul class="no-bullet value-list value-list-wide left">
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'height']) }}}" class="{{{ $step == 'height' ? 'active' : ''  }}} {{{ $order->userMeasurements->height ? 'valid' : ''  }}}">
-			<div>
-				<span class="measurement-title">Height</span>
-				@if ($order->userMeasurements->height)
-					<span class="measurement-value">
-						{{{ $order->userMeasurements->height }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
-					</span>
-				@endif
-			</div>
-		</a>
+		<span class="list-key">Your Height</span>
+		@if ($order->userMeasurements->height)
+			<span class="list-value"><strong>{{{ $order->userMeasurements->height}}}</strong> {{{ $order->userMeasurements->units }}}</span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/height" title=""><span>Change</span></a>
+		@else
+			<span class="list-value"></span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/height" title=""><span>Add</span></a>
+		@endif
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'half_shoulder']) }}}" class="{{{ $step == 'half_shoulder' ? 'active' : ''  }}} {{{ $order->userMeasurements->half_shoulder ? 'valid' : ''  }}}">
-			<div>
-				<span class="measurement-title">1/2 Shoulder</span>
-				@if ($order->userMeasurements->half_shoulder)
-					<span class="measurement-value">
-						{{{ $order->userMeasurements->half_shoulder }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
-					</span>
-				@endif
-			</div>
-		</a>
+		<span class="list-key">Half Shoulder</span>
+		@if ($order->userMeasurements->half_shoulder)
+			<span class="list-value"><strong>{{{ $order->userMeasurements->half_shoulder}}}</strong> {{{ $order->userMeasurements->units }}}</span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/half_shoulder" title=""><span>Change</span></a>
+		@else
+			<span class="list-value"></span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/half_shoulder" title=""><span>Add</span></a>
+		@endif
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'back_width']) }}}" class="{{{ $step == 'back_width' ? 'active' : ''}}} {{{ $order->userMeasurements->back_width ? 'valid' : '' }}}">
-			<div>
-				<span class="measurement-title">Back Width</span>
-				@if ($order->userMeasurements->back_width)
-					<span class="measurement-value">
-						{{{ $order->userMeasurements->back_width }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
-					</span>
-				@endif
-			</div>
-		</a>
+		<span class="list-key">Back Width</span>
+		@if ($order->userMeasurements->back_width)
+			<span class="list-value"><strong>{{{ $order->userMeasurements->back_width}}}</strong> {{{ $order->userMeasurements->units }}}</span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/back_width" title=""><span>Change</span></a>
+		@else
+			<span class="list-value"></span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/back_width" title=""><span>Add</span></a>
+		@endif
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'chest']) }}}" class="{{{ $step == 'chest' ? 'active' : ''}}} {{{ $order->userMeasurements->chest ? 'valid' : '' }}}">
-			<div>
-				<span class="measurement-title">Chest</span>
-				@if ($order->userMeasurements->chest)
-					<span class="measurement-value">
-						{{{ $order->userMeasurements->chest }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
-					</span>
-				@endif
-			</div>
-		</a>
+		<span class="list-key">Chest</span>
+		@if ($order->userMeasurements->chest)
+			<span class="list-value"><strong>{{{ $order->userMeasurements->chest}}}</strong> {{{ $order->userMeasurements->units }}}</span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/chest" title=""><span>Change</span></a>
+		@else
+			<span class="list-value"></span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/chest" title=""><span>Add</span></a>
+		@endif
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'stomach']) }}}" class="{{{ $step == 'stomach' ? 'active' : ''}}} {{{ $order->userMeasurements->stomach ? 'valid' : '' }}}">
-			<div>
-				<span class="measurement-title">Stomach</span>
-				@if ($order->userMeasurements->stomach)
-					<span class="measurement-value">
-						{{{ $order->userMeasurements->stomach }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
-					</span>
-				@endif
-			</div>
-		</a>
+		<span class="list-key">Belly / Stomach</span>
+		@if ($order->userMeasurements->stomach)
+			<span class="list-value"><strong>{{{ $order->userMeasurements->stomach}}}</strong> {{{ $order->userMeasurements->units }}}</span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/stomach" title=""><span>Change</span></a>
+		@else
+			<span class="list-value"></span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/stomach" title=""><span>Add</span></a>
+		@endif
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'back_length']) }}}"class="{{{ $step == 'back_length' ? 'active' : ''}}} {{{ $order->userMeasurements->back_length ? 'valid' : '' }}}">
-			<div>
-				<span class="measurement-title">Back Length</span>
-				@if ($order->userMeasurements->back_length)
-					<span class="measurement-value">
-						{{{ $order->userMeasurements->back_length }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
-					</span>
-				@endif
-			</div>
-		</a>
+		<span class="list-key">Back Length</span>
+		@if ($order->userMeasurements->back_length)
+			<span class="list-value"><strong>{{{ $order->userMeasurements->back_length}}}</strong> {{{ $order->userMeasurements->units }}}</span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/back_length" title=""><span>Change</span></a>
+		@else
+			<span class="list-value"></span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/back_length" title=""><span>Add</span></a>
+		@endif
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'waist']) }}}" class="{{{ $step == 'waist' ? 'active' : ''}}} {{{ $order->userMeasurements->waist ? 'valid' : '' }}}">
-			<div>
-				<span class="measurement-title">Waist</span>
-				@if ($order->userMeasurements->waist)
-					<span class="measurement-value">
-						{{{ $order->userMeasurements->waist }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
-					</span>
-				@endif
-			</div>
-		</a>
+		<span class="list-key">Waist</span>
+		@if ($order->userMeasurements->waist)
+			<span class="list-value"><strong>{{{ $order->userMeasurements->waist}}}</strong> {{{ $order->userMeasurements->units }}}</span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/waist" title=""><span>Change</span></a>
+		@else
+			<span class="list-value"></span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/waist" title=""><span>Add</span></a>
+		@endif
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'arm']) }}}" class="{{{ $step == 'arm' ? 'active' : ''}}} {{{ $order->userMeasurements->arm ? 'valid' : '' }}}">
-			<div>
-				<span class="measurement-title">Arm</span>
-				@if ($order->userMeasurements->arm)
-					<span class="measurement-value">
-						{{{ $order->userMeasurements->arm }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
-					</span>
-				@endif
-			</div>
-		</a>
+		<span class="list-key">Arm</span>
+		@if ($order->userMeasurements->arm)
+			<span class="list-value"><strong>{{{ $order->userMeasurements->arm}}}</strong> {{{ $order->userMeasurements->units }}}</span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/arm" title=""><span>Change</span></a>
+		@else
+			<span class="list-value"></span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/arm" title=""><span>Add</span></a>
+		@endif
 	</li>
 	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'biceps']) }}}" class="{{{ $step == 'biceps' ? 'active' : ''}}} {{{ $order->userMeasurements->biceps ? 'valid' : '' }}}">
-			<div>
-				<span class="measurement-title">Biceps</span>
-				@if ($order->userMeasurements->biceps)
-					<span class="measurement-value">
-						{{{ $order->userMeasurements->biceps }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
-					</span>
-				@endif
-			</div>
-		</a>
+		<span class="list-key">Biceps</span>
+		@if ($order->userMeasurements->biceps)
+			<span class="list-value"><strong>{{{ $order->userMeasurements->biceps}}}</strong> {{{ $order->userMeasurements->units }}}</span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/biceps" title=""><span>Change</span></a>
+		@else
+			<span class="list-value"></span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/biceps" title=""><span>Add</span></a>
+		@endif
 	</li>
 </ul>

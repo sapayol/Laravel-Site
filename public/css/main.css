@@ -2317,6 +2317,8 @@ Copyright (c) 2015 Daniel Eden
 .value-list .list-value {
   display: inline-block;
   min-width: 5rem; }
+.value-list.value-list-wide .list-key {
+  min-width: 7rem; }
 
 .switch.large label, .switch.large input:checked + label {
   background-color: transparent;
