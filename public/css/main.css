@@ -297,21 +297,21 @@ Copyright (c) 2015 Daniel Eden
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0); }
   10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: translate3d(-10px, 0, 0);
-            transform: translate3d(-10px, 0, 0); }
+    -webkit-transform: translate3d(-6px, 0, 0);
+            transform: translate3d(-6px, 0, 0); }
   20%, 40%, 60%, 80% {
-    -webkit-transform: translate3d(10px, 0, 0);
-            transform: translate3d(10px, 0, 0); } }
+    -webkit-transform: translate3d(6px, 0, 0);
+            transform: translate3d(6px, 0, 0); } }
 @keyframes shake {
   0%, 100% {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0); }
   10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: translate3d(-10px, 0, 0);
-            transform: translate3d(-10px, 0, 0); }
+    -webkit-transform: translate3d(-6px, 0, 0);
+            transform: translate3d(-6px, 0, 0); }
   20%, 40%, 60%, 80% {
-    -webkit-transform: translate3d(10px, 0, 0);
-            transform: translate3d(10px, 0, 0); } }
+    -webkit-transform: translate3d(6px, 0, 0);
+            transform: translate3d(6px, 0, 0); } }
 .shake {
   -webkit-animation-name: shake;
           animation-name: shake; }
@@ -2318,7 +2318,9 @@ Copyright (c) 2015 Daniel Eden
   display: inline-block;
   min-width: 5rem; }
 .value-list.value-list-wide .list-key {
-  min-width: 7rem; }
+  min-width: 6.5rem; }
+.value-list.value-list-wide .list-value {
+  min-width: 3.8rem; }
 
 .switch.large label, .switch.large input:checked + label {
   background-color: transparent;
@@ -2611,6 +2613,9 @@ fieldset {
   .measurement-entry .text-input-label {
     width: 7rem;
     margin-left: 1rem; }
+    @media only screen and (max-width: 320px) {
+      .measurement-entry .text-input-label {
+        width: 5.65rem; } }
     .measurement-entry .text-input-label input {
       width: 88%; }
   .measurement-entry span.measurement-fraction {
@@ -2627,11 +2632,13 @@ fieldset {
     display: inline-block;
     position: absolute;
     font-weight: 200;
-    right: 1.5rem;
+    right: 1.2rem;
     bottom: 0; }
   .measurement-entry .measurement-instructions {
     padding-top: 1rem;
     background: white; }
+  .measurement-entry .alert-box {
+    margin-top: -1.8rem; }
   .measurement-entry input::-webkit-outer-spin-button,
   .measurement-entry input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
@@ -3060,9 +3067,9 @@ a.under-button-link {
   background: white;
   position: relative; }
   .player .text-button {
-    position: absolute;
+    position: relative;
     font-size: .8rem;
-    z-index: 3000;
+    z-index: 4000;
     right: 0;
     bottom: -0.7rem;
     margin-right: 1rem; }

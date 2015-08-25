@@ -6,8 +6,12 @@ measurementController.controller('measurementCtrl', ['$scope', '$timeout', funct
 	$scope.measurementFraction = null;
 
 	$scope.submitMeasurement = function(step) {
+		$scope.displayMinMaxError = false;
+		console.log($scope.displayMinMaxError);
 		if ($scope.measurementForm[step].$error.min || $scope.measurementForm[step].$error.max ) {
-			$scope.displayMinMaxError = true;
+			$timeout(function(){
+				$scope.displayMinMaxError = true;
+			}, 100);
 		} else if ($scope.measurementForm.$valid) {
 			finalForm.submit();
 		}

@@ -9,7 +9,10 @@
 	}
 	&.value-list-wide {
 		.list-key {
-			min-width: 7rem;
+			min-width: 6.5rem;
+		}
+		.list-value {
+			min-width: 3.8rem;
 		}
 	}
 }
