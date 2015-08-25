@@ -24,7 +24,10 @@ measurementController.controller('measurementCtrl', ['$scope', '$timeout', funct
 			result = Math.round( measurement * 1e2 ) / 1e2;
 			$scope.measurement = result;
 			resultEight = Math.round(result * 8) / 8;
-			$scope.measurementFraction = getFractionFromDecimal(resultEight);
+			if (getFractionFromDecimal(resultEight) !== '') {
+				console.log(getFractionFromDecimal(resultEight));
+				$scope.measurementFraction = getFractionFromDecimal(resultEight);
+			};
 		} else {
 			$scope.measurementFraction = null;
 		}
@@ -47,7 +50,7 @@ measurementController.controller('measurementCtrl', ['$scope', '$timeout', funct
 		} else if (rightDecimalPart === '0.88') {
 			result = '7/8';
 		} else {
-			result = '';
+			return false;
 		}
 
 		return parseInt(decimal) + "  " + result;

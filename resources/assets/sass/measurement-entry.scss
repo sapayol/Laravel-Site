@@ -12,14 +12,9 @@
 	}
 	.text-input-label {
 		width: 7rem;
+		margin-left: 1rem;
 		input {
 			width: 88%;
-		}
-		&.wider {
-			width: 14rem;
-			.input-units {
-				right: 2.5rem;
-			}
 		}
 	}
 	span.measurement-fraction {

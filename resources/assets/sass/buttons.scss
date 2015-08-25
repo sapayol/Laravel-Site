@@ -46,8 +46,9 @@ a {
 			}
 		}
 	}
-	&:active {
+	&:active, &:focus {
 		background: transparent;
+		color: $black;
 		border-bottom: 1px solid $black;
 		position: relative;
 		top: 3px;

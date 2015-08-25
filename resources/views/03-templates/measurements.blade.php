@@ -26,14 +26,16 @@
 				<input type="hidden" name="measurements[{{{ $step }}}]" value="@{{ measurement }}">
 			</form>
 			<form ng-submit="submitMeasurement('measurements[{{{ $step }}}]')" name="measurementForm">
-				<label for="{{{ $step }}}" class="text-input-label" ng-class="{ wider : measurementFraction.length > 0 }">
+				<span>Your measurement </span>
+				<label for="{{{ $step }}}" class="text-input-label">
 					<span class="label-title">@yield('title')</span>
 					<?php $min = config('measurements.' . $step . '.min.' . $order->userMeasurements->units); ?>
 					<?php $max = config('measurements.' . $step . '.max.' . $order->userMeasurements->units); ?>
 					<input name="measurements[{{{ $step }}}]" id="{{{ $step }}}" type="number" min="{{{ $min }}}" max="{{{ $max }}}" placeholder="00.00" ng-maxlength="7" step="0.01" ng-model="measurement" required ng-change="change(measurement)" ng-value="{{{ $order->userMeasurements->$step }}}">
-					<span class="measurement-fraction" ng-if="measurementFraction.length > 0"><span>or</span> @{{ measurementFraction }}</span>
 					<span class="input-units">{{{ $order->userMeasurements->units }}}</span>
 				</label>
+				<br>
+				<span ng-if="measurementFraction.length > 0">We will round this to @{{ measurementFraction }} <small>{{{ $order->userMeasurements->units }}}</small> </span>
 				<br><br>
 				<div class="alert-box alert" data-alert ng-if="displayMinMaxError">
 					Measurements are usually between {{{ $min }}}  and {{{ $max }}} {{{ $order->userMeasurements->units }}}

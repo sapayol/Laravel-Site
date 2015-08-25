@@ -2600,13 +2600,10 @@ fieldset {
     position: absolute;
     left: -9999px; }
   .measurement-entry .text-input-label {
-    width: 7rem; }
+    width: 7rem;
+    margin-left: 1rem; }
     .measurement-entry .text-input-label input {
       width: 88%; }
-    .measurement-entry .text-input-label.wider {
-      width: 14rem; }
-      .measurement-entry .text-input-label.wider .input-units {
-        right: 2.5rem; }
   .measurement-entry span.measurement-fraction {
     position: absolute;
     bottom: 0;
@@ -2708,8 +2705,9 @@ a {
       border-bottom: 6px solid #B02428; }
       .button.hollow:hover .chevron, a.button.hollow:hover .chevron, button.button.hollow:hover .chevron {
         border-color: white; }
-  .button:active, a.button:active, button.button:active {
+  .button:active, .button:focus, a.button:active, a.button:focus, button.button:active, button.button:focus {
     background: transparent;
+    color: #222222;
     border-bottom: 1px solid #222222;
     position: relative;
     top: 3px; }
