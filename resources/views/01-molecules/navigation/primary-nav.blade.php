@@ -14,7 +14,7 @@
     @endif
     <?php $currentuser = Auth::user(); ?>
     @if ($currentuser && $currentuser->orders->count() > 0)
-      @if ($action != 'orders.fit')
+      @if ($action != 'orders.fit' && $action != 'orders.checkout' && $action != 'orders.complete')
         <li><a href="/users/{{{ $currentuser->id }}}/orders">My Orders</a></li>
       @endif
     @endif

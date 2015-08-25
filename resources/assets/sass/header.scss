@@ -8,5 +8,8 @@ header {
 		font-size: 1rem;
 		text-transform: uppercase;
 		font-weight: 500;
+		&.with-breadcrumbs {
+			margin-bottom: .3rem;
+		}
 	}
 }

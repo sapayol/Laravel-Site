@@ -14,7 +14,7 @@
 		<img class="customization-image" src="/images/stock-photos/jacket-customize.jpg">
 	</section>
 
-	<form class="large-12 medium-12 small-12 columns look-options2" action="/orders" method="POST" name="createOrderForm">
+	<form class="large-12 medium-12 small-12 columns look-options2" action="/orders" method="POST" name="createOrderForm" ng-init="init( {{{ $jacket->leather_types()->first()->id }}}, {{{ $jacket->leather_colors()->first()->id }}}, {{{ $jacket->lining_colors()->first()->id }}}, {{{ $jacket->hardware_colors()->first()->id }}})">
 		<fieldset>
 			<legend>Leather Type</legend>
 			@if ($jacket->leather_types()->count() > 1)
@@ -69,11 +69,11 @@
 
 		<input type="hidden" name="_token"         value="{{{ csrf_token() }}}">
 		<input type="hidden" name="model"          value="{{{ $jacket->model }}}">
-			@if (Auth::guest())
-				<input type="hidden" name="user_id"      value="@{{ user.id }}">
-			@else
-				<input type="hidden" name="user_id"      value="{{{ Auth::user()->id }}}">
-			@endif
+		@if (Auth::guest())
+			<input type="hidden" name="user_id"      value="@{{ user.id }}">
+		@else
+			<input type="hidden" name="user_id"      value="{{{ Auth::user()->id }}}">
+		@endif
 	</form>
 
 	<section class="large-12 medium-12 small-12 columns inverted-colors">

@@ -7,13 +7,36 @@ use Address, Jacket, Measurement, Attribute, Order, User;
 
 class OrdersController extends Controller {
 
+	public function show($id, Request $request)
+	{
+		$order = Order::find($id);
+
+		if ($request->input() == null) {
+			$new_order = [
+				'user_id'          => Auth::id(),
+				'model'            => $order->jacket->model,
+				'jacket_look'			 => [
+					'leather_type'   => $order->jacket->leather_type,
+					'leather_color'  => $order->jacket->leather_color,
+					'lining_color'   => $order->jacket->lining_color,
+					'hardware_color' => $order->jacket->hardware_color
+				]
+			];
+		} else {
+			$new_order = $request->input();
+		}
+
+		return view('04-pages.checkout.continue', ['last_order' => $order, 'new_order' => $new_order]);
+	}
+
 	public function store(CreateOrderRequest $request)
 	{
 		$user = Auth::loginUsingId($request->user_id);
 		$last_order = $user->unfinishedOrders->last();
+		$new_order = $request->input();
 
 		if ($last_order && $last_order->userMeasurements) {
-			return view('04-pages.checkout.continue', ['last_order' => $last_order, 'new_order' => $request->input()]);
+			return view('04-pages.checkout.continue', ['last_order' => $last_order, 'new_order' => $new_order]);
 		}
 
 		$jacket = Jacket::where('model', '=', $request->model)->first();

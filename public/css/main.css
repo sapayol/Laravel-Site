@@ -2376,6 +2376,8 @@ header {
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500; }
+    header h1.with-breadcrumbs {
+      margin-bottom: .3rem; }
 
 footer {
   background: #e2bb3a; }
@@ -2925,7 +2927,7 @@ ul.measurement-tracker6 {
 
 a {
   color: #B02428; }
-  a:hover {
+  a:hover, a:focus {
     color: #70171a; }
 
 .button, a.button, button.button {
