@@ -1,5 +1,5 @@
 <h3 class="text-center">Your Measurements</h3>
-<ul class="no-bullet value-list value-list-wide left">
+<ul class="no-bullet value-list value-list-wide">
 	<li>
 		<span class="list-key">Your Height</span>
 		@if ($order->userMeasurements->height)
