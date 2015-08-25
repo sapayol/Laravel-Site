@@ -27,9 +27,10 @@
 		li {
 			margin-bottom: .5rem;
 			&.active a {
-					border: none;
-					color: $black;
-					display: none;
+				display: none;
+			}
+			&.main-item a {
+				border-color: $success-color;
 			}
 		}
 		a {

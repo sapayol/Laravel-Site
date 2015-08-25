@@ -4,6 +4,7 @@
   var sapayolApp = angular.module('sapayolApp', [
     'controllers',
     'services',
+    'directives',
     'factories',
     'duScroll',
     'cgNotify',

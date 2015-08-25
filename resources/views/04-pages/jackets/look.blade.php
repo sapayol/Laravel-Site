@@ -81,10 +81,10 @@
 			<p>Enter an email address and password to track your progress throughout the order. </p>
 			<p><em>We don’t spam or share your information.</em></p>
 			@include('03-templates.checkout.user-registration-form')
-		@else
-			<h4>Looks like you've started an order as <strong>{{{ Auth::user()->email }}}</strong></h4>
+		@elseif (Auth::user()->unfinishedOrders()->count > 0)
+			<p>Looks like you've started an order as <strong>{{{ Auth::user()->email }}}</strong></p>
 			<div class="text-center">
-				<a href="" ng-click="proceedToOrder()" class="button expand inverted-colors">Finalize Your Order</a>
+				<a href="" ng-click="proceedToOrder()" class="button expand inverted-colors">Continue Your Order</a>
 				<br>
 				<span>or</span>
 				<br><br>

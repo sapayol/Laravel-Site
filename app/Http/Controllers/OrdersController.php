@@ -7,11 +7,20 @@ use Address, Jacket, Measurement, Attribute, Order, User;
 
 class OrdersController extends Controller {
 
+	public function look($id)
+	{
+		$order = Order::find($id);
+
+		JavaScript::put(['jacket' => $order->jacket, 'session' => Session::all()]);
+
+		return view('04-pages.jackets.look', ['jacket' => $order->jacket]);
+	}
+
 	public function show($id, Request $request)
 	{
 		$order = Order::find($id);
 
-		if ($request->input() == null) {
+		if (!$request->old()) {
 			$new_order = [
 				'user_id'          => Auth::id(),
 				'model'            => $order->jacket->model,
@@ -23,7 +32,7 @@ class OrdersController extends Controller {
 				]
 			];
 		} else {
-			$new_order = $request->input();
+			$new_order = $request->old();
 		}
 
 		return view('04-pages.checkout.continue', ['last_order' => $order, 'new_order' => $new_order]);
@@ -35,8 +44,10 @@ class OrdersController extends Controller {
 		$last_order = $user->unfinishedOrders->last();
 		$new_order = $request->input();
 
+		// dd($request->input());
 		if ($last_order && $last_order->userMeasurements) {
-			return view('04-pages.checkout.continue', ['last_order' => $last_order, 'new_order' => $new_order]);
+			return redirect()->route('orders.show', ['id' => $last_order->id])->withInput();
+			// return view('04-pages.checkout.continue', ['last_order' => $last_order, 'new_order' => $new_order]);
 		}
 
 		$jacket = Jacket::where('model', '=', $request->model)->first();

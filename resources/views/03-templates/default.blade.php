@@ -4,7 +4,7 @@
 
 @include('01-molecules.navigation.primary-nav')
 
-	@include('02-organisms.global.header')
+@include('02-organisms.global.header')
 
 	@yield('full-width-hero')
 

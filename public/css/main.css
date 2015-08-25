@@ -76,6 +76,8 @@
 main > section {
   padding-bottom: 1rem;
   padding-top: 1rem; }
+  main > section:last-child {
+    padding-bottom: 4rem; }
 
 main > section > article {
   padding-bottom: 2rem;
@@ -3165,6 +3167,12 @@ a.under-button-link {
 .invisible {
   visibility: hidden; }
 
+.fix-to-top {
+  position: fixed;
+  top: 0;
+  background: white;
+  z-index: 9999; }
+
 @media only screen {
   nav.primary-nav {
     text-align: left;
@@ -3187,9 +3195,9 @@ a.under-button-link {
     nav.primary-nav li {
       margin-bottom: .5rem; }
       nav.primary-nav li.active a {
-        border: none;
-        color: #222222;
         display: none; }
+      nav.primary-nav li.main-item a {
+        border-color: #57ca66; }
     nav.primary-nav a {
       color: #222222;
       border-bottom: 2px solid #B02428;

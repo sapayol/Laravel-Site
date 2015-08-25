@@ -9,3 +9,10 @@
 .invisible {
   visibility: hidden;
 }
+
+.fix-to-top {
+	position: fixed;
+	top: 0;
+	background: $white;
+	z-index: 9999;
+}

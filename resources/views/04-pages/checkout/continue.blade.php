@@ -3,12 +3,11 @@
 @section('main')
 	<section class="large-12 medium-12 small-12 columns">
 		<p>Looks like you already have an order started</p>
-		{{-- <h3 class="text-center thin">Look</h3> --}}
-		<ul class="no-bullet value-list left">
-			<li><small class="value-key">Date Started </small>  {{{ date('M d, Y', strtotime($last_order->created_at)) }}} </li>
-			<li><small class="value-key">Jacket Name  </small>  {{{ $last_order->jacket->name }}} </li>
+		<ul class="no-bullet value-list">
+			<li><small class="list-key">Date Started </small>  {{{ date('M d, Y', strtotime($last_order->created_at)) }}} </li>
+			<li><small class="list-key">Jacket Name  </small>  {{{ $last_order->jacket->name }}} </li>
 			@foreach ($last_order->attributes as $attribute)
-				<li><small class="value-key">{{{ ucwords(str_replace('_', ' ', $attribute->type)) }}}</small> {{{ ucwords($attribute->name) }}} </li>
+				<li><small class="list-key">{{{ ucwords(str_replace('_', ' ', $attribute->type)) }}}</small> {{{ ucwords($attribute->name) }}} </li>
 			@endforeach
 		</ul>
 	</section>

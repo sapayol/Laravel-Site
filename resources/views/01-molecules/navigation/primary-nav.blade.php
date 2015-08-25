@@ -9,14 +9,24 @@
     @if ($action != 'pages.how-it-works')
       <li><a href="/how-it-works">How It Works</a></li>
     @endif
-    @if ($action != 'jackets.show')
+    @if (strpos($action,'jackets') !== 0)
       <li><a href="/jackets">Tailored Jackets</a></li>
     @endif
     <?php $currentuser = Auth::user(); ?>
     @if ($currentuser && $currentuser->orders->count() > 0)
-      @if ($action != 'orders.fit' && $action != 'orders.checkout' && $action != 'orders.complete')
-        <li><a href="/users/{{{ $currentuser->id }}}/orders">My Orders</a></li>
+      @if (strpos($action,'orders') !== 0)
+        <li class="main-item"><a href="/orders/{{{ $currentuser->unfinishedOrders->first()->id }}}">My Jacket</a></li>
       @endif
     @endif
   </ul>
 </nav>
+
+
+@if ($action == 'pages.home')
+  <div class="page-wrap on-home-page {{{ Auth::user() && Auth::user()->orders->count() > 0 ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
+{{-- @elseif (strpos($action, 'jackets') !== false && $action != 'jackets.show') --}}
+  {{-- <div class="page-wrap on-jacket-page {{{ Auth::user() && Auth::user()->orders->count() > 0 ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}"> --}}
+@else
+  <div class="page-wrap {{{ Auth::user() && Auth::user()->orders->count() > 0 ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
+@endif
+
