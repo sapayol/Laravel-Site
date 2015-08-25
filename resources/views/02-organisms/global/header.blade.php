@@ -8,7 +8,7 @@
 @endif
 
 <header class="row">
-	<h1 class="page-title">
+	<h1 class="page-title {{{  $action == 'orders.fit' ? 'with-breadcrumbs' : '' }}}">
 		<?php $action = Request::route()->getAction()['as'] ?>
 	  @if ($action == 'pages.who-we-are')
 			Who We Are
@@ -19,7 +19,13 @@
 		@elseif ($action == 'jackets.look')
 			@yield('title')
 		@elseif ($action == 'orders.fit')
-			{{{ $order->jacket->name  }}} - Fit
+			<a href="" class="underlined">My Order</a>
+			<span class="chevron chevron--right breadcrumb-chevron"></span>
+			<a href="" class="underlined">Look</a>
+			<span class="chevron chevron--right breadcrumb-chevron"></span>
+			<a href="" class="underlined">Fit</a>
+			<span class="chevron chevron--right breadcrumb-chevron"></span>
+			{{{ str_replace('_', ' ', $step) }}}
 	  @endif
 	</h1>
 </header>

@@ -97,6 +97,11 @@ main > section > article {
   border-top: 1px solid black;
   border-right: 1px solid black;
   border-width: 1px; }
+  .chevron.breadcrumb-chevron {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin: 0 .2rem .1rem .2rem; }
 
 .button .chevron {
   display: inline-block;
