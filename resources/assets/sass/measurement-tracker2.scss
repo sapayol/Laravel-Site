@@ -1,4 +1,4 @@
-ul.measurement-tracker {
+ul.measurement-tracker2 {
 	margin: 0;
 	margin-bottom: 2rem;
 		width: 19rem;
@@ -12,7 +12,7 @@ ul.measurement-tracker {
 		background: $black;
 		color: $white;
 		padding: 0;
-		// width: 4.75rem;
+		width: 4.75rem;
 		height: 2.5rem;
 		text-align: center;
 		display: flex;
@@ -56,6 +56,14 @@ ul.measurement-tracker {
 		&.active {
 			// background: $light-blue;
 			border-bottom: 6px solid $light-blue;
+			i.fa-check {
+				display: none;
+			}
+			.measurement-marker {
+				position: relative;
+				top: .15rem;
+				display: inline-block;
+			}
 		}
 		div {
 			margin: auto;

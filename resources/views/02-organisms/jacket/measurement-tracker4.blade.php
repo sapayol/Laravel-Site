@@ -1,18 +1,4 @@
-<h4 class="large-12 medium-12 small-12 columns">Measurement Progress</h4>
-<ul class="small-block-grid-3 measurement-tracker">
-	<li>
-			<a href="{{{ route('orders.fit', [$order->id, 'height']) }}}" class="{{{ $step == 'height' ? 'active' : ''  }}} {{{ $order->userMeasurements->height ? 'valid' : ''  }}}">
-			<div>
-				<span class="measurement-title">Height</span>
-				@if ($order->userMeasurements->height)
-					<span class="measurement-value">
-						{{{ $order->userMeasurements->height }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
-					</span>
-				@endif
-			</div>
-		</a>
-	</li>
+<ul class="small-block-grid-4 measurement-tracker4">
 	<li>
 			<a href="{{{ route('orders.fit', [$order->id, 'half_shoulder']) }}}" class="{{{ $step == 'half_shoulder' ? 'active' : ''  }}} {{{ $order->userMeasurements->half_shoulder ? 'valid' : ''  }}}">
 			<div>
@@ -20,7 +6,6 @@
 				@if ($order->userMeasurements->half_shoulder)
 					<span class="measurement-value">
 						{{{ $order->userMeasurements->half_shoulder }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
 					</span>
 				@endif
 			</div>
@@ -33,7 +18,6 @@
 				@if ($order->userMeasurements->back_width)
 					<span class="measurement-value">
 						{{{ $order->userMeasurements->back_width }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
 					</span>
 				@endif
 			</div>
@@ -46,7 +30,6 @@
 				@if ($order->userMeasurements->chest)
 					<span class="measurement-value">
 						{{{ $order->userMeasurements->chest }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
 					</span>
 				@endif
 			</div>
@@ -59,7 +42,6 @@
 				@if ($order->userMeasurements->stomach)
 					<span class="measurement-value">
 						{{{ $order->userMeasurements->stomach }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
 					</span>
 				@endif
 			</div>
@@ -72,7 +54,6 @@
 				@if ($order->userMeasurements->back_length)
 					<span class="measurement-value">
 						{{{ $order->userMeasurements->back_length }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
 					</span>
 				@endif
 			</div>
@@ -85,7 +66,6 @@
 				@if ($order->userMeasurements->waist)
 					<span class="measurement-value">
 						{{{ $order->userMeasurements->waist }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
 					</span>
 				@endif
 			</div>
@@ -98,7 +78,6 @@
 				@if ($order->userMeasurements->arm)
 					<span class="measurement-value">
 						{{{ $order->userMeasurements->arm }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
 					</span>
 				@endif
 			</div>
@@ -111,7 +90,6 @@
 				@if ($order->userMeasurements->biceps)
 					<span class="measurement-value">
 						{{{ $order->userMeasurements->biceps }}}<span class="measurement-units"> {{{ $order->userMeasurements->units }}}</span>
-						<i class="fa fa-check"></i>
 					</span>
 				@endif
 			</div>

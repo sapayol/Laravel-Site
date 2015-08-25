@@ -47,5 +47,10 @@
 	</main>
 
 	@include('02-organisms.jacket.measurement-tracker')
+	@include('02-organisms.jacket.measurement-tracker2')
+	@include('02-organisms.jacket.measurement-tracker3')
+	@include('02-organisms.jacket.measurement-tracker4')
+	@include('02-organisms.jacket.measurement-tracker5')
+	@include('02-organisms.jacket.measurement-tracker6')
 
 @include('00-atoms.meta._foot')

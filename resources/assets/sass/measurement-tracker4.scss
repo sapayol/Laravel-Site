@@ -1,18 +1,21 @@
-ul.measurement-tracker {
+ul.measurement-tracker4 {
 	margin: 0;
 	margin-bottom: 2rem;
-		width: 19rem;
+	// width: 19rem;
 	li {
 		padding: 0;
+		&:not(:first-child) {
+			// border-left: 1px solid $black;
+		}
 		margin-bottom: .4rem;
 	}
 	a {
 		font-size: .9rem;
 		font-weight: 300;
-		background: $black;
-		color: $white;
+		background: white;
+		color: black;
 		padding: 0;
-		// width: 4.75rem;
+		width: 4.75rem;
 		height: 2.5rem;
 		text-align: center;
 		display: flex;
@@ -21,9 +24,7 @@ ul.measurement-tracker {
 		line-height: 1.2;
 		position: relative;
 		border: 1px solid $black;
-		border-bottom: 6px solid $primary-color;
-		border-right: 1px solid $white;
-		border-left: 1px solid $white;
+		border-bottom: 6px solid $light-primary-color;
 		i.fa-check {
 			color: $success-color;
 		}
@@ -55,7 +56,14 @@ ul.measurement-tracker {
 		}
 		&.active {
 			// background: $light-blue;
-			border-bottom: 6px solid $light-blue;
+			i.fa-check {
+				display: none;
+			}
+			.measurement-marker {
+				position: relative;
+				top: .1rem;
+				display: inline-block;
+			}
 		}
 		div {
 			margin: auto;

@@ -2632,10 +2632,264 @@ fieldset {
 
 ul.measurement-tracker {
   margin: 0;
+  margin-bottom: 2rem;
   width: 19rem; }
   ul.measurement-tracker li {
-    padding: 0; }
+    padding: 0;
+    margin-bottom: .4rem; }
   ul.measurement-tracker a {
+    font-size: .9rem;
+    font-weight: 300;
+    background: #222222;
+    color: white;
+    padding: 0;
+    height: 2.5rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    line-height: 1.2;
+    position: relative;
+    border: 1px solid #222222;
+    border-bottom: 6px solid #B02428;
+    border-right: 1px solid white;
+    border-left: 1px solid white; }
+    ul.measurement-tracker a i.fa-check {
+      color: #57ca66; }
+    ul.measurement-tracker a .measurement-marker {
+      display: none;
+      border-radius: 100%;
+      width: .8rem;
+      height: .8rem;
+      background: #a3c5d7;
+      z-index: 1;
+      margin: auto; }
+    ul.measurement-tracker a .measurement-value {
+      display: block;
+      border-bottom: none;
+      font-weight: 500;
+      line-height: 1; }
+    ul.measurement-tracker a .measurement-units {
+      font-weight: 300; }
+    ul.measurement-tracker a.active {
+      border-bottom: 6px solid #a3c5d7; }
+    ul.measurement-tracker a div {
+      margin: auto; }
+
+ul.measurement-tracker2 {
+  margin: 0;
+  margin-bottom: 2rem;
+  width: 19rem; }
+  ul.measurement-tracker2 li {
+    padding: 0;
+    margin-bottom: .4rem; }
+  ul.measurement-tracker2 a {
+    font-size: .9rem;
+    font-weight: 300;
+    background: #222222;
+    color: white;
+    padding: 0;
+    width: 4.75rem;
+    height: 2.5rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    line-height: 1.2;
+    position: relative;
+    border: 1px solid #222222;
+    border-bottom: 6px solid #B02428;
+    border-right: 1px solid white;
+    border-left: 1px solid white; }
+    ul.measurement-tracker2 a i.fa-check {
+      color: #57ca66; }
+    ul.measurement-tracker2 a .measurement-marker {
+      display: none;
+      border-radius: 100%;
+      width: .8rem;
+      height: .8rem;
+      background: #a3c5d7;
+      z-index: 1;
+      margin: auto; }
+    ul.measurement-tracker2 a .measurement-value {
+      display: block;
+      border-bottom: none;
+      font-weight: 500;
+      line-height: 1; }
+    ul.measurement-tracker2 a .measurement-units {
+      font-weight: 300; }
+    ul.measurement-tracker2 a.active {
+      border-bottom: 6px solid #a3c5d7; }
+      ul.measurement-tracker2 a.active i.fa-check {
+        display: none; }
+      ul.measurement-tracker2 a.active .measurement-marker {
+        position: relative;
+        top: .15rem;
+        display: inline-block; }
+    ul.measurement-tracker2 a div {
+      margin: auto; }
+
+ul.measurement-tracker3 {
+  margin: 0;
+  margin-bottom: 2rem; }
+  ul.measurement-tracker3 li {
+    padding: 0;
+    margin-bottom: .4rem; }
+    ul.measurement-tracker3 li:not(:first-child) {
+      border-left: 1px solid #222222; }
+  ul.measurement-tracker3 a {
+    font-size: .8rem;
+    font-weight: 300;
+    background: white;
+    color: black;
+    padding: 0;
+    width: 4.75rem;
+    height: 2.5rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    line-height: 1.2;
+    position: relative; }
+    ul.measurement-tracker3 a .measurement-marker {
+      display: none;
+      border-radius: 100%;
+      width: 1rem;
+      height: 1rem;
+      background: #a3c5d7;
+      z-index: 1;
+      position: relative;
+      bottom: 0; }
+    ul.measurement-tracker3 a .measurement-value {
+      display: block;
+      border-bottom: none;
+      font-weight: 500;
+      line-height: 1; }
+    ul.measurement-tracker3 a .measurement-units {
+      font-weight: 300; }
+    ul.measurement-tracker3 a.active .measurement-marker {
+      display: block; }
+    ul.measurement-tracker3 a div {
+      margin: auto; }
+
+ul.measurement-tracker4 {
+  margin: 0;
+  margin-bottom: 2rem; }
+  ul.measurement-tracker4 li {
+    padding: 0;
+    margin-bottom: .4rem; }
+  ul.measurement-tracker4 a {
+    font-size: .9rem;
+    font-weight: 300;
+    background: white;
+    color: black;
+    padding: 0;
+    width: 4.75rem;
+    height: 2.5rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    line-height: 1.2;
+    position: relative;
+    border: 1px solid #222222;
+    border-bottom: 6px solid #c86669; }
+    ul.measurement-tracker4 a i.fa-check {
+      color: #57ca66; }
+    ul.measurement-tracker4 a .measurement-marker {
+      display: none;
+      border-radius: 100%;
+      width: .8rem;
+      height: .8rem;
+      background: #a3c5d7;
+      z-index: 1;
+      margin: auto; }
+    ul.measurement-tracker4 a .measurement-value {
+      display: block;
+      border-bottom: none;
+      font-weight: 500;
+      line-height: 1; }
+    ul.measurement-tracker4 a .measurement-units {
+      font-weight: 300; }
+    ul.measurement-tracker4 a.active i.fa-check {
+      display: none; }
+    ul.measurement-tracker4 a.active .measurement-marker {
+      position: relative;
+      top: .1rem;
+      display: inline-block; }
+    ul.measurement-tracker4 a div {
+      margin: auto; }
+
+ul.measurement-tracker5 {
+  margin: 0;
+  margin-bottom: 2rem;
+  width: 19rem; }
+  ul.measurement-tracker5 li {
+    padding: 0; }
+  ul.measurement-tracker5 a {
+    font-size: .9rem;
+    font-weight: 300;
+    background: white;
+    color: black;
+    padding: 0;
+    width: 4.75rem;
+    height: 3rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    line-height: 1.2; }
+    ul.measurement-tracker5 a .measurement-title {
+      border-bottom: 2px solid #B02428; }
+    ul.measurement-tracker5 a .measurement-value {
+      display: block;
+      border-bottom: none;
+      font-weight: 500;
+      line-height: 1; }
+    ul.measurement-tracker5 a .measurement-units {
+      font-weight: 300; }
+    ul.measurement-tracker5 a.active {
+      border-bottom: 6px solid #468aaf;
+      border: 6px solid #468aaf; }
+    ul.measurement-tracker5 a div {
+      margin: auto; }
+
+ul.measurement-tracker6 {
+  margin: 0;
+  width: 19rem; }
+  ul.measurement-tracker6 li {
+    padding: 0; }
+  ul.measurement-tracker6 a {
     font-size: .9rem;
     font-weight: 300;
     background: white;
@@ -2650,18 +2904,18 @@ ul.measurement-tracker {
     display: -ms-flexbox;
     display: flex;
     margin: 0; }
-    ul.measurement-tracker a .measurement-value {
+    ul.measurement-tracker6 a .measurement-value {
       display: block;
       font-weight: 500;
       line-height: 1; }
-    ul.measurement-tracker a .measurement-units {
+    ul.measurement-tracker6 a .measurement-units {
       font-weight: 300; }
-    ul.measurement-tracker a.valid {
+    ul.measurement-tracker6 a.valid {
       border-bottom: 6px solid #57ca66; }
-    ul.measurement-tracker a.active {
+    ul.measurement-tracker6 a.active {
       border-bottom: 6px solid #468aaf;
       border: 6px solid #468aaf; }
-    ul.measurement-tracker a div {
+    ul.measurement-tracker6 a div {
       margin: auto; }
 
 a {
