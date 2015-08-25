@@ -27,7 +27,8 @@
 			{{-- <a href="/orders/{{{ $order->id }}}/fit/units" class="underlined">Fit</a> --}}
 			Fit
 			{{-- <span class="chevron chevron--right breadcrumb-chevron"></span> --}}
-			- {{{ str_replace('_', ' ', $step) }}}
+			<span class="chevron chevron--right breadcrumb-chevron"></span>
+		  {{{ str_replace('_', ' ', $step) }}}
 		@elseif ($action == 'orders.checkout')
 			<a href="/orders/{{{ $order->id }}}" class="underlined">My Order</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
