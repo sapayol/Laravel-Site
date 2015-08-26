@@ -14,13 +14,13 @@
 		</p>
 		<ul>
 			<li>Don’t wear anything thicker than an undershirt or tight t-shirt.</li>
-			<li>Don't round any measurements. Give us fractions (20 1/4) or decimals (20.25).</li>
+			<li>Don't round your measurements to whole numbers.</li>
 			<li><em>It's much easier and more accurate if a friend helps you.</em></li>
 		</ul>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns text-center">
-		<p class="text-left">Will you be measuring in inches or centimeters?</p>
+		<p class="text-left"><strong>Will you be measuring in inches or centimeters?</strong></p>
 		<form action="/orders/{{{ $order->id }}}/fit" method="POST">
 			<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
 			<input type="hidden" name="measurements[units]" value="in"/>

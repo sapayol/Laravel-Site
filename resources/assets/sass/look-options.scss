@@ -30,7 +30,7 @@
 			background: $black;
 			color: $white;
 		}
-		&.black, &.brown, &.gray, &.pink, &.silver, &.darkGray, &.gold {
+		&.black, &.brown, &.gray, &.bordeaux, &.silver, &.darkGray, &.gold {
 			border-color: $black;
 		}
 		&.black {
@@ -42,8 +42,8 @@
 		&.gray {
 			border-bottom-color: mix($grey, white, 75%);
 		}
-		&.pink {
-			border-bottom-color: $pink;
+		&.bordeaux {
+			border-bottom-color: $bordeaux;
 		}
 		&.silver {
 			border-bottom-color: $silver;

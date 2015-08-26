@@ -12,12 +12,9 @@
 	}
 	.text-input-label {
 		width: 7rem;
-		margin-left: 1rem;
+		margin-left: .6rem;
 		@media only screen and (max-width: 320px) {
-			width: 5.65rem;
-		}
-		input {
-			width: 88%;
+			width: 6.05rem;
 		}
 	}
 	span.measurement-fraction {

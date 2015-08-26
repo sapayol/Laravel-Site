@@ -54,6 +54,7 @@
 		<p>We only work with the most luxurious lamb leather available: full-grain, vegetable tanned (chrome-free), drum dyed, with a semi-aniline finish. Our tannery uses the best components and takes the time that’s necessary to produce extraordinary, long-lasting leather that becomes even more beautiful with age. From that leather, the most flawless is set aside for us.</p>
 		<p>Our care about the smallest details carries over to all other materials we use. Our zippers and buttons (YKK Excella) are extremely reliable and at the same time polished down to every single tooth, finished with scratch-resistant, elegant coatings. </p>
 		<p>The lining is made out of a smooth Bemberg Cupro Twill with the exception of the pockets, which are lined with a more robust Tencel fabric.</p>
+		<a href="/our-leather" class="underlined">More about our leather</a>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns">
@@ -70,6 +71,7 @@
 		<p>With vegetable tanning, we’ve chosen the most ecological tanning process, avoiding the usual chromium salts which aren’t biodegradable and become carcinogenic under certain circumstances. Our tannery only uses top-grade chemical components, in the smallest possible amounts, and all wastewater gets treated.</p>
 		<p>It is our goal to not use any plastic and eventually exclusively use natural or recycled materials, from the care instruction label to packaging.</p>
 		<p>Last but not least, our direct shipment from the leather workshop to the customer is the most ecological logistics process we can think of. Other than putting a sheep herd and a master craftsmen in your backyard.</p>
+		<a href="/jackets" class="button call-to-action expand">See Our Jackets</a>
 	</section>
 @stop
 

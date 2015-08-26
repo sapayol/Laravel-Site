@@ -14,8 +14,10 @@
 				</h1>
 				<a href="/jackets" class="button call-to-action inverted-colors">See Our Collection</a>
 			</div>
-			<video autoplay class="fillWidth">
-				<source src="/videos/hero_short.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+			<video autoplay class="fillWidth" poster="/images/video-posters/hero_short.png">
+				<source src="/videos/hero_short.mp4" type="video/mp4" />
+				<source src="/videos/hero_short.webm" type="video/webm" />
+				Your browser does not support the video tag. I suggest you upgrade your browser.
 			</video>
 			<div class="poster hidden">
 				<img src="/images/video-posters/hero_short.png" alt="">

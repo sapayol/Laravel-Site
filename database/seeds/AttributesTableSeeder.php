@@ -62,7 +62,7 @@ class AttributesTableSeeder extends Seeder {
 		//													  	 LINING COLOR															   //
 		//===========================================================================//
 
-			$lining_colors = ['black', 'pink'];
+			$lining_colors = ['black', 'bordeaux'];
 
 			foreach ($lining_colors as $lining_color) {
 				Attribute::create([

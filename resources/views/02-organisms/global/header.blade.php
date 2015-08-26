@@ -1,10 +1,12 @@
-<header class="row" set-class-when-at-top="fix-to-top">
+<header class="row">
 	<h1 class="page-title {{{ strpos($action,'orders') !== 0 || $action === 'jackets.look' ? 'with-breadcrumbs' : '' }}}">
 		<?php $action = Request::route()->getAction()['as'] ?>
 	  @if ($action == 'pages.who-we-are')
 			Who We Are
 		@elseif ($action == 'pages.how-it-works')
 			How It Works
+		@elseif ($action == 'pages.our-leather')
+			Our Leather
 		@elseif ($action == 'jackets.index')
 			Tailored Jackets
 		@elseif ($action == 'jackets.look' || $action == 'jackets.show')

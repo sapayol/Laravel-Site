@@ -22,11 +22,5 @@
 </nav>
 
 
-@if ($action == 'pages.home')
-  <div class="page-wrap on-home-page {{{ Auth::user() && Auth::user()->orders->count() > 0 ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
-{{-- @elseif (strpos($action, 'jackets') !== false && $action != 'jackets.show') --}}
-  {{-- <div class="page-wrap on-jacket-page {{{ Auth::user() && Auth::user()->orders->count() > 0 ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}"> --}}
-@else
-  <div class="page-wrap {{{ Auth::user() && Auth::user()->orders->count() > 0 ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
-@endif
+<div class="page-wrap {{{ strpos($action, 'pages') === 0 ? 'on-info-page' : '' }}} {{{ Auth::user() && Auth::user()->orders->count() > 0 ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
 
