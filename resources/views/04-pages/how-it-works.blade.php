@@ -30,23 +30,23 @@
 		<article>
 			<h3>Alterations</h3>
 			<p>If your piece needs alteration, you can send it to us. We will not charge for the work, you’ll only have to pay for shipping.</p>
-			<a href="mailto:contact@sapayol.com">contact@sapayol.com</a>
+			<a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>
 		</article>
 		<article>
 			<h3>Returns</h3>
 			<p>Because each leather jacket is made exclusively for you, <em>all sales are final</em>.</p>
 			<p>We take extra care in discussing your measurements and any other questions with you before production to make sure you will be satisfied.</p>
-			<a href="mailto:contact@sapayol.com">contact@sapayol.com</a>
+			<a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>
 		</article>
 		<article>
 			<h3>Remakes</h3>
 			<p>In the rare case of defects in materials or workmanship, contact us within 48 hours of receiving your jacket. If it can be fixed, we will fix it 	for free and pay for shipping. If it can’t be fixed, we will remake the jacket for free.</p>
-			<a href="mailto:contact@sapayol.com">contact@sapayol.com</a>
+			<a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>
 		</article>
 		<article>
 			<h3>Warranty</h3>
 			<p>All our jackets come with a 1 year warranty against defects in materials or workmanship. Contact us to fix any issues. We will pay for shipping.</p>
-			<a href="mailto:contact@sapayol.com">contact@sapayol.com</a>
+			<a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>
 		</article>
 	</section>
 @stop

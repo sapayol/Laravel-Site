@@ -55,7 +55,7 @@
   margin-top: .5rem; }
   .page-wrap.on-info-page, .page-wrap.on-jacket-page, .page-wrap.with-existing-order {
     top: -5.8rem; }
-  .page-wrap.on-info-page.with-existing-order, .page-wrap.on-jacket-page.with-existing-order {
+  .page-wrap.home-page.with-existing-order, .page-wrap.on-jacket-page.with-existing-order {
     top: -7.9rem; }
   .page-wrap.descended {
     top: 0 !important; }
