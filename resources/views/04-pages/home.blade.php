@@ -63,7 +63,7 @@
 			</p>
 		</article>
 
-		<a href="/jackets/bomber" class="button hollow expand">Get a Jacket Now</a>
+		<a href="/jackets" class="button hollow expand">Get a Jacket Now</a>
 	</section>
 
 @stop
