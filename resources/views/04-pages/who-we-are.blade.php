@@ -52,9 +52,9 @@
 	<section class="large-12 medium-12 small-12 columns">
 		<h2 class="thin">Materials</h2>
 		<p>We only work with the most luxurious lamb leather available: full-grain, vegetable tanned (chrome-free), drum dyed, with a semi-aniline finish. Our tannery uses the best components and takes the time that’s necessary to produce extraordinary, long-lasting leather that becomes even more beautiful with age. From that leather, the most flawless is set aside for us.</p>
+		<a href="/our-leather" class="underlined">More about our leather</a><br><br>
 		<p>Our care about the smallest details carries over to all other materials we use. Our zippers and buttons (YKK Excella) are extremely reliable and at the same time polished down to every single tooth, finished with scratch-resistant, elegant coatings. </p>
 		<p>The lining is made out of a smooth Bemberg Cupro Twill with the exception of the pockets, which are lined with a more robust Tencel fabric.</p>
-		<a href="/our-leather" class="underlined">More about our leather</a>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns">
