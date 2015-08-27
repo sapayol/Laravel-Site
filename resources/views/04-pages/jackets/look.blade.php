@@ -11,7 +11,9 @@
 @section('main')
 	<section class="large-12 medium-12 small-12 columns">
 		<h2 class="thin text-center">Customize your Jacket</h2>
-		<img class="customization-image" src="/images/stock-photos/jacket-customize.jpg">
+		<img ng-if="jacket.hardware_color == 9"  class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-silver.jpg">
+		<img ng-if="jacket.hardware_color == 10" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-graphite.jpg">
+		<img ng-if="jacket.hardware_color == 11" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-gold.jpg">
 	</section>
 
 	<form class="large-12 medium-12 small-12 columns look-options2" action="/orders" method="POST" name="createOrderForm" ng-init="init( {{{ $jacket->leather_types()->first()->id }}}, {{{ $jacket->leather_colors()->first()->id }}}, {{{ $jacket->lining_colors()->first()->id }}}, {{{ $jacket->hardware_colors()->first()->id }}})">

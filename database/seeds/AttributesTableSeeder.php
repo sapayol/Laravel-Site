@@ -47,7 +47,7 @@ class AttributesTableSeeder extends Seeder {
 		//														 HARDWARE COLOR															   //
 		//===========================================================================//
 
-			$hardware_colors = ['silver', 'dark gray', 'gold'];
+			$hardware_colors = ['silver', 'graphite', 'gold'];
 
 			foreach ($hardware_colors as $hardware_color) {
 				Attribute::create([

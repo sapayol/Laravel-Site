@@ -36,7 +36,7 @@
 		&.active {
 			border: 2px solid;
 		}
-		&.black, &.brown, &.gray, &.bordeaux, &.silver, &.darkGray, &.gold {
+		&.black, &.brown, &.gray, &.bordeaux, &.silver, &.graphite, &.gold {
 			border-color: $white;
 		}
 		&.black {
@@ -60,7 +60,7 @@
 		&.silver {
 			border-color: $silver;
 		}
-		&.darkGray {
+		&.graphite {
 			border-color: mix($dark-grey, white, 75%);
 		}
 		&.gold {
