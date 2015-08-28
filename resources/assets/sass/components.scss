@@ -7,6 +7,9 @@
 		display: inline-block;
 		min-width: 3.8rem;
 	}
+	&.tight-list .list-key {
+		min-width: 4.5rem;
+	}
 }
 
 .switch.large {

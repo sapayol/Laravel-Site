@@ -15,14 +15,19 @@
   .run(['$timeout', function($timeout) {
     $timeout(function() {
 			$(document).ready(function(){
-			  $('.home-carousel').slick({
+			  $('.jacket-carousel').slick({
           dots: true,
 			  	arrows: false,
 			  	mobileFirst: true,
+          focusOnSelect: false
 			  });
-			});
-      $(document).foundation();
-      FastClick.attach(document.body);
+
+        plyr.setup({
+          controls: ["play", "fullscreen"]
+        });
+        $(document).foundation();
+        FastClick.attach(document.body);
+      });
     }, 500);
   }]);
 
@@ -43,9 +48,6 @@
     });
   });
 
-  plyr.setup({
-    controls: ["play", "fullscreen"]
-  });
 
 
 /** Full screen hero video code **/

@@ -10,7 +10,7 @@
 
 	<main class="row">
 		<section class="small-12 medium-12 large-12 columns carousel-container">
-			<div class="home-carousel">
+			<div class="jacket-carousel">
 				@yield('carousel_images')
 			</div>
 		</section>
@@ -35,31 +35,31 @@
 		</section>
 
 		<section ng-show="measurementsVisible">
-			@yield('measurement_chart')
+			@yield('measurement_data')
 			@foreach ($video_measurements as $column)
-				<ul ng-if="metricUnits" class="no-bullet value-list large-6 medium-6 small-6 columns">
+				<ul ng-if="metricUnits" class="no-bullet value-list tight-list large-6 medium-6 small-6 columns">
 					@foreach ($column as $key => $value)
 						<li><small class="list-key">{{{ ucwords(str_replace('_', ' ', $key)) }}}</small> {{{ $value }}} <small>cm</small></li>
 					@endforeach
 				</ul>
 			@endforeach
 			@foreach ($video_measurements as $column)
-				<ul ng-if="!metricUnits" class="no-bullet value-list large-6 medium-6 small-6 columns">
+				<ul ng-if="!metricUnits" class="no-bullet value-list tight-list large-6 medium-6 small-6 columns">
 					@foreach ($column as $key => $value)
-						<li><small class="list-key">{{{ ucwords(str_replace('_', ' ', $key)) }}}</small> {{{ $value  * 2.54 }}} <small>in</small></li>
+						<li><small class="list-key">{{{ ucwords(str_replace('_', ' ', $key)) }}}</small> {{{ round($value  / 2.54, 1) }}} <small>in</small></li>
 					@endforeach
 				</ul>
 			@endforeach
 			<div class="small-12 medium-12 large-12 columns">
 				<p>Model wears a size {{{ $model_size }}} with the following adjustments:</p>
-				<ul ng-if="metricUnits" class="no-bullet value-list left">
+				<ul ng-if="metricUnits" class="no-bullet value-list tight-list left">
 					@foreach ($video_adjustments as $key => $value)
 						<li><small class="list-key">{{{ ucwords(str_replace('_', ' ', $key)) }}}</small> {{{ $value }}} <small>cm</small></li>
 					@endforeach
 				</ul>
-				<ul ng-if="!metricUnits" class="no-bullet value-list left">
+				<ul ng-if="!metricUnits" class="no-bullet value-list tight-list left">
 					@foreach ($video_adjustments as $key => $value)
-						<li><small class="list-key">{{{ ucwords(str_replace('_', ' ', $key)) }}}</small> {{{ $value * 2.54 }}} <small>in</small></li>
+						<li><small class="list-key">{{{ ucwords(str_replace('_', ' ', $key)) }}}</small> {{{ round($value / 2.54, 1) }}} <small>in</small></li>
 					@endforeach
 				</ul>
 				<button ng-click="metricUnits = !metricUnits" class="right button tiny radius">cm / in</button>

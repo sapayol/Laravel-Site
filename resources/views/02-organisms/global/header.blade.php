@@ -1,5 +1,5 @@
 <header class="row">
-	<h1 class="page-title {{{ strpos($action,'orders') === 0 || $action === 'jackets.look' ? 'with-breadcrumbs' : '' }}}">
+	<h1 class="page-title {{{ strpos($action,'orders') === 0 || $action === 'jackets.look'  || $action === 'jackets.show' ? 'with-breadcrumbs' : '' }}}">
 		<?php $action = Request::route()->getAction()['as'] ?>
 	  @if ($action == 'pages.who-we-are')
 			Who We Are

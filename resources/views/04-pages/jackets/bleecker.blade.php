@@ -5,15 +5,15 @@
 @stop
 
 @section('carousel_images')
-  <div><img src="/images/photos/jackets/bleecker/front_open_full_silver.jpg" alt=""></div>
-  <div><img src="/images/photos/jackets/bleecker/left_closed_full_silver.jpg" alt=""></div>
-  <div><img src="/images/photos/jackets/bleecker/side_left_closed_full_silver.jpg" alt=""></div>
-  <div><img src="/images/photos/jackets/bleecker/back_closed_full_silver.jpg" alt=""></div>
-  <div><img src="/images/photos/jackets/bleecker/side_right_closed_full_silver.jpg" alt=""></div>
-  <div><img src="/images/photos/jackets/bleecker/right_closed_full_silver.jpg" alt=""></div>
+  <div><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/front_open_full_silver.jpg" alt=""></div>
+  <div><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/left_closed_full_silver.jpg" alt=""></div>
+  <div><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/side_left_closed_full_silver.jpg" alt=""></div>
+  <div><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/back_closed_full_silver.jpg" alt=""></div>
+  <div><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/side_right_closed_full_silver.jpg" alt=""></div>
+  <div><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/right_closed_full_silver.jpg" alt=""></div>
 @stop
 
-@section('measurement_chart')
+@section('measurement_data')
 	<?php
 		$video_measurements = [
 			'column1' => [

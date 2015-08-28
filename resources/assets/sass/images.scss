@@ -25,4 +25,28 @@
 	margin: 0 auto;
 }
 
-
+.carousel-container {
+	overflow: hidden;
+	height: 36rem;
+	.jacket-carousel {
+		margin-bottom: 0;
+	}
+	.slick-dots {
+		margin-top: 1rem;
+		li {
+	    display: inline-block;
+	    margin: 1rem 1rem;
+	    &.slick-active button {
+				background: $black;
+	    }
+		}
+		button {
+			background: none;
+			border: 1px solid $black;
+	    padding: 5px;
+	    height: 5px;
+	    width: 5px;
+	    border-radius: 100%;
+		}
+	}
+}

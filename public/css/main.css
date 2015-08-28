@@ -2318,6 +2318,8 @@ Copyright (c) 2015 Daniel Eden
 .value-list .list-value {
   display: inline-block;
   min-width: 3.8rem; }
+.value-list.tight-list .list-key {
+  min-width: 4.5rem; }
 
 .switch.large label, .switch.large input:checked + label {
   background-color: transparent;
@@ -3071,6 +3073,26 @@ a.under-button-link {
 .hero-image {
   margin: 0 auto; }
 
+.carousel-container {
+  overflow: hidden;
+  height: 36rem; }
+  .carousel-container .jacket-carousel {
+    margin-bottom: 0; }
+  .carousel-container .slick-dots {
+    margin-top: 1rem; }
+    .carousel-container .slick-dots li {
+      display: inline-block;
+      margin: 1rem 1rem; }
+      .carousel-container .slick-dots li.slick-active button {
+        background: #222222; }
+    .carousel-container .slick-dots button {
+      background: none;
+      border: 1px solid #222222;
+      padding: 5px;
+      height: 5px;
+      width: 5px;
+      border-radius: 100%; }
+
 .player {
   z-index: 2000;
   padding-top: 2rem;
@@ -3214,11 +3236,6 @@ a.under-button-link {
   nav.primary-nav a {
     padding: 0 1rem;
     font-size: .8rem; } }
-.carousel-container {
-  overflow: hidden;
-  height: 45rem; }
-  .carousel-container .home-carousel {
-    margin-bottom: 0; }
 
 
 
