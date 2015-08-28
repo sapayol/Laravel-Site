@@ -8,7 +8,7 @@
 					 size="20"
 					 ng-model="number"
 					 ng-required="true"
-					 ng-disabled="paymentInfoSubmitted"
+					 ng-disabled="paymentInfoDisabled"
 					 payments-format="card"
 					 payments-validate="card"
 					 payments-type-model="type">
@@ -23,7 +23,7 @@
 					 size="4"
 					 ng-model="expiry"
 					 ng-required="true"
-					 ng-disabled="paymentInfoSubmitted"
+					 ng-disabled="paymentInfoDisabled"
 					 payments-validate="expiry"
 					 payments-format="expiry"
 					 placeholder="MM/YYYY">
@@ -37,7 +37,7 @@
 					 size="4"
 					 ng-model="cvc"
 					 ng-required="true"
-					 ng-disabled="paymentInfoSubmitted"
+					 ng-disabled="paymentInfoDisabled"
 					 data-stripe="cvc"
 					 payments-validate="cvc"
 					 payments-format="cvc">
@@ -45,8 +45,10 @@
 
 	<div class="text-center">
 		<br>
-		<input class="button expand" type="submit" value="Proceed To Shipping Info" ng-hide="paymentInfoSubmitted">
-		<em href="" class="under-button-link">Your card will not be charged until you confirm</em>
+
+		<button ng-if="paymentInfoSubmitted" class="button expand" type="submit"  ng-hide="paymentInfoDisabled">Update Payment Info<span class="chevron chevron--right"></span></button>
+		<button ng-if="!paymentInfoSubmitted" class="button expand" type="submit"  ng-hide="paymentInfoDisabled">Proceed To Order Summary<span class="chevron chevron--right"></span></button>
+		<em href="" class="under-button-link">Your card will not be charged until you confirm your order</em>
 		<br>
 	</div>
 

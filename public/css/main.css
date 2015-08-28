@@ -11,6 +11,8 @@
     color: white; }
     .inverted-colors label span {
       color: #222222; }
+    .inverted-colors label i.fa {
+      color: #222222; }
   .inverted-colors fieldset {
     background: white;
     border: 1px solid #222222; }
@@ -2315,13 +2317,9 @@ Copyright (c) 2015 Daniel Eden
 
 .value-list .list-key {
   display: inline-block;
-  min-width: 4rem; }
+  min-width: 6.5rem; }
 .value-list .list-value {
   display: inline-block;
-  min-width: 5rem; }
-.value-list.value-list-wide .list-key {
-  min-width: 6.5rem; }
-.value-list.value-list-wide .list-value {
   min-width: 3.8rem; }
 
 .switch.large label, .switch.large input:checked + label {
@@ -2444,25 +2442,33 @@ footer {
       border-bottom-color: #e2bb3a; }
 
 .look-options2 {
-  margin-top: -2rem;
   padding-bottom: 2rem; }
+  .look-options2 h2 {
+    margin-bottom: 2rem; }
   .look-options2 input[type="radio"] {
     position: absolute;
     left: -9999px; }
+  .look-options2 hr {
+    margin: 0 auto;
+    margin-top: .65rem;
+    margin-bottom: 1.35rem;
+    width: 10rem; }
   .look-options2 fieldset {
     padding: 0;
-    border: none; }
+    border: none;
+    text-align: center;
+    margin-top: 0; }
   .look-options2 legend {
     font-weight: 100;
     padding: 0;
     margin: 0;
-    margin-bottom: .2rem;
+    margin-bottom: 1rem;
     line-height: 1; }
   .look-options2 .button[type="submit"] {
     margin-top: 2rem; }
   .look-options2 label:not([type="submit"]) {
     width: 4.5rem;
-    margin-bottom: 0;
+    margin-bottom: .35rem;
     margin-left: 0;
     border: none;
     padding: 0.325rem .375rem 0.3875rem .375rem;
@@ -3008,6 +3014,9 @@ html, body, p {
   font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
   font-weight: 200; }
 
+small {
+  font-size: 70%; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
   font-weight: 300; }
@@ -3046,6 +3055,9 @@ a.under-button-link {
 .jacket-size-label {
   position: absolute;
   top: .8rem; }
+
+.order-summary strong {
+  font-weight: 400; }
 
 .sidekick-image {
   margin-bottom: 1rem; }

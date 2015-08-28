@@ -4,6 +4,10 @@ html, body, p {
 	font-weight: 200;
 }
 
+small {
+	font-size: 70%;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
 	font-weight: 300;
@@ -57,4 +61,8 @@ a.under-button-link {
 .jacket-size-label {
 	position: absolute;
 	top: .8rem;
+}
+
+.order-summary strong {
+	font-weight: 400;
 }

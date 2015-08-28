@@ -9,23 +9,18 @@
 @stop
 
 @section('main')
-{{-- 	<section class="large-12 medium-12 small-12 columns" id="user-info">
-		<h2 class="text-center thin">Your Info</h2>
-		@include('03-templates.checkout.user-info-form')
-	</section> --}}
-
-	<section class="large-12 medium-12 small-12 columns" id="shipping-info">
+	<section class="large-12 medium-12 small-12 columns" id="address">
 		<h2 class="text-center thin"><small>Please enter your</small> <br>Shipping Address</h2>
-		@include('03-templates.checkout.shipping-info-form')
+		@include('03-templates.checkout.address-form')
 	</section>
 
-	<section class="large-12 medium-12 small-12 columns" ng-show="shippingInfoSubmitted" id="payment-info">
+	<section class="large-12 medium-12 small-12 columns inverted-colors" ng-show="addressSubmitted" id="payment-info">
 		<h2 class="text-center thin">Payment Info</h2>
 		@include('03-templates.checkout.payment-info-form')
 	</section>
 
-	<section ng-show="paymentInfoSubmitted" id="order-summary">
-		<h2 class="text-center thin">Summary</h2>
+	<section class="large-12 medium-12 small-12 columns"  ng-show="paymentInfoSubmitted" id="order-summary">
+		<h2 class="text-center thin">Order Summary</h2>
 		@include('03-templates.checkout.order-summary')
 	</section>
 

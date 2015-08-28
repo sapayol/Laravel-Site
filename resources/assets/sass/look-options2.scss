@@ -1,19 +1,31 @@
 .look-options2 {
+	// margin-top: 2rem;
+	padding-bottom: 2rem;
+	h2 {
+		margin-bottom: 2rem;
+	}
 	input[type="radio"] {
 		position: absolute;
 		left: -9999px;
 	}
-	margin-top: -2rem;
-	padding-bottom: 2rem;
+	hr {
+		margin: 0 auto;
+		margin-top: .65rem;
+		margin-bottom: 1.35rem;
+		width: 10rem;
+	}
 	fieldset {
 		padding: 0;
 		border: none;
+		text-align: center;
+		margin-top: 0;
 	}
 	legend {
 		font-weight: 100;
 		padding: 0;
 		margin: 0;
-		margin-bottom: .2rem;
+		// margin-bottom: .2rem;
+		margin-bottom: 1rem;
 		line-height: 1;
 	}
 
@@ -22,7 +34,7 @@
 	}
 	label:not([type="submit"]) {
 		width: 4.5rem;
-		margin-bottom: 0;
+		margin-bottom: .35rem;
 		margin-left: 0;
 		border: none;
     padding: 0.325rem .375rem 0.3875rem .375rem;

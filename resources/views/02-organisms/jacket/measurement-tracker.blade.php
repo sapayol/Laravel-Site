@@ -1,5 +1,5 @@
 <h3 class="text-center">Your Measurements</h3>
-<ul class="no-bullet value-list value-list-wide">
+<ul class="no-bullet value-list">
 	<li>
 		<span class="list-key">Your Height</span>
 		@if ($order->userMeasurements->height)
@@ -90,4 +90,25 @@
 			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/biceps" title=""><span>Add</span></a>
 		@endif
 	</li>
+	<li><br></li>
+	<li>
+		<span class="list-key">Note</span>
+		@if ($order->userMeasurements->note)
+			<span class="list-value">&nbsp;</span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/note" title=""><span>Change</span></a>
+			<span class="list-value"><em>{{{ $order->userMeasurements->note}}}</em></span>
+		@else
+			<span class="list-value"></span>
+			<a class="underlined" href="/orders/{{{ $order->id }}}/fit/note" title=""><span>Add</span></a>
+		@endif
+	</li>
 </ul>
+
+
+<div>
+	@if ($order->userMeasurements->units == 'in')
+		<a class="underlined">Switch to <strong>centimeters</strong></a>
+	@else
+		<a class="underlined">Switch to <strong>inches</strong></a>
+	@endif
+</div>

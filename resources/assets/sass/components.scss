@@ -1,19 +1,11 @@
 .value-list {
 	.list-key {
 		display: inline-block;
-		min-width: 4rem;
+		min-width: 6.5rem;
 	}
 	.list-value {
 		display: inline-block;
-		min-width: 5rem;
-	}
-	&.value-list-wide {
-		.list-key {
-			min-width: 6.5rem;
-		}
-		.list-value {
-			min-width: 3.8rem;
-		}
+		min-width: 3.8rem;
 	}
 }
 

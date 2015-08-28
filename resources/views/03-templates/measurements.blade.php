@@ -49,14 +49,6 @@
 		</article>
 		<section class="large-12 medium-12 small-12 columns inverted-colors">
 			@include('02-organisms.jacket.measurement-tracker')
-
-			<div>
-				@if ($order->userMeasurements->units == 'in')
-					<a class="underlined">Switch to <strong>cm</strong></a>
-				@else
-					<a class="underlined">Switch to <strong>in</strong></a>
-				@endif
-			</div>
 		</section>
 	</main>
 

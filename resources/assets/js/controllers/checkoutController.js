@@ -8,12 +8,14 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 		$scope.address = {};
 		if (sapayol.address !== null) {
 			$scope.address = sapayol.address;
-			$scope.shippingInfoSubmitted = true;
+			$scope.addressSubmitted = true;
+			$scope.addressDisabled = true;
 			if (typeof($scope.card) !== 'undefined' && typeof($scope.card.id) !== 'undefined') {
 				$scope.paymentInfoSubmitted = true;
+				$scope.paymentInfoDisabled = true;
 				$document.scrollToElement(angular.element('#order-summary'), 80, 500);
 			} else{
-				$document.scrollToElement(angular.element('#payment-info'), 80, 500);
+				$document.scrollToElement(angular.element('#address'), 80, 500);
 			}
 		};
 		if (sapayol.user !== null) {
@@ -21,19 +23,36 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 		};
 	}
 
-	$scope.submitShippingInfo = function(order_id) {
-	  if ($scope.shippingInfoForm.$valid) {
-	  	addShippingInfoToOrder($scope.address, order_id).then(function(response){
-				$scope.shippingInfoSubmitted = true;
-				$document.scrollToElement(angular.element('#payment-info'), 80, 500);
-	  	});
+	$scope.changePaymentInfo = function() {
+		$document.scrollToElement(angular.element('#payment-info'), 80, 500);
+		$scope.paymentInfoDisabled = false;
+		$scope.card = null;
+		Session.store({card: $scope.card});
+	}
+
+	$scope.changeAddress = function() {
+		$document.scrollToElement(angular.element('#address'), 80, 500);
+		$scope.addressDisabled = false;
+	}
+
+	$scope.submitAddress = function(order_id) {
+	  if ($scope.addressForm.$valid) {
+	  	if ($scope.paymentInfoSubmitted) {
+				$document.scrollToElement(angular.element('#order-summary'), 80, 500);
+	  	} else {
+	  		addAddressToOrder($scope.address, order_id).then(function(response){
+					$scope.addressSubmitted = true;
+					$scope.addressDisabled = true;
+					$document.scrollToElement(angular.element('#payment-info'), 80, 500);
+	  		});
+	  	}
 	  } else {
-	  	$scope.showShippingErorrs = true;
+	  	$scope.showAddressErorrs = true;
 	  }
 	};
 
 
-	addShippingInfoToOrder = function(address, order_id) {
+	addAddressToOrder = function(address, order_id) {
 		var deferred = $q.defer();
 		$http.post('/orders/' + order_id, {
 			_method: 'PATCH',
@@ -66,6 +85,7 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 			$scope.stripe_token = response.id;
 			Session.store({card: $scope.card});
 			$scope.paymentInfoSubmitted = true;
+			$scope.paymentInfoDisabled = true;
 			console.log(response);
 		}
 	};
