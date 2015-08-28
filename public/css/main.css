@@ -90,9 +90,6 @@ main > section > article {
   color: white; }
   .primary-color-section p {
     margin-bottom: 0; }
-  .primary-color-section span.subheading {
-    color: #222222;
-    font-weight: 200; }
 
 .chevron {
   display: block;
@@ -3019,7 +3016,8 @@ small {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  line-height: 1.2; }
 
 h1 {
   font-size: 2.45rem; }
