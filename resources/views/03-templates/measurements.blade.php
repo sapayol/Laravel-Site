@@ -16,7 +16,7 @@
 		        <a href="/videos/{{{ $step }}}.mp4">Download</a>
 			    </video>
 				  <button type="button" class="text-button"  ng-click="instructions = !instructions">
-			    	<span ng-show="!instructions">Show</span> <span ng-show="instructions">Hide</span> Instructions
+			    	Click to <span ng-show="!instructions">read</span><span ng-show="instructions">hide</span> Instructions
 			    </button>
 				</div>
 				<div ng-show="instructions" class="measurement-instructions animated slideInDown">

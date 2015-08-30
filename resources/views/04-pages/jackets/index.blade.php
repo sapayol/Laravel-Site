@@ -24,8 +24,6 @@
 						{{{ $jacket->name }}}
 					</a>
 				</h2>
-
-				<h4>${{{ $jacket->price }}}</h4>
 		  </li>
 		@endforeach
 	</ul>

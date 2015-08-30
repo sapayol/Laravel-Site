@@ -83,7 +83,7 @@
 
 	<section class="large-12 medium-12 small-12 columns inverted-colors">
 		@if (Auth::guest())
-			<p>Enter an email address and password to track your progress throughout the order. </p>
+			<p>Enter an email address and password to continue. If you need to leave before you’re finished, your design choices and body measurements will be saved.</p>
 			<p><em>We don’t spam or share your information.</em></p>
 			@include('03-templates.checkout.user-registration-form')
 		@elseif (Auth::user()->unfinishedOrders()->count() > 0)

@@ -31,7 +31,8 @@
 			    <a href="/videos/jackets/{{{ $jacket->model }}}.mp4">Download</a>
 			  </video>
 			</div>
-			<a class="video-caption" ng-show="!measurementsVisible" ng-click="measurementsVisible = !measurementsVisible">Measurements Seen In the Video </a>
+			<br>
+			<a class="video-caption underlined" ng-show="!measurementsVisible" ng-click="measurementsVisible = !measurementsVisible">Measurements Seen In the Video </a>
 		</section>
 
 		<section ng-show="measurementsVisible">

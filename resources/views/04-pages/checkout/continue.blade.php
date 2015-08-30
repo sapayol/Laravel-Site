@@ -30,7 +30,7 @@
 			<input type="hidden" name="jacket_look[hardware_color]" value="{{{ $new_order['jacket_look']['hardware_color'] }}}">
 			<input type="submit" class="button expand hollow"       value="Start a New Order">
 			<label for="retain_measurements">
-				<input type="checkbox" name="retain_measurements" id="retain_measurements">
+				<input type="checkbox" name="retain_measurements" id="retain_measurements" checked="true">
 				Carry over the measurements I already took
 			</label>
 		</form>
