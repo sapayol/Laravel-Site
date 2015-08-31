@@ -3113,6 +3113,9 @@ a.under-heading-link {
       width: 5px;
       border-radius: 100%; }
 
+.jacket-placeholder {
+  padding: 0 1rem; }
+
 .player {
   z-index: 2000;
   padding-top: 2rem;
