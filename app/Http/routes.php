@@ -23,13 +23,13 @@ Route::get('/jackets/{model}/look',              ['uses' => 'JacketsController@l
 
 Route::resource('orders', 'OrdersController');
 Route::get('/orders/{id}/look',                  ['uses' => 'OrdersController@look',       'as' => 'orders.look']);
-Route::post('/orders/{id}/fit',                  ['uses' => 'OrdersController@postFit',    'as' => 'orders.fit',          'middleware' => 'auth']);
-Route::get('/orders/{id}/fit/{step}',            ['uses' => 'OrdersController@getFit',     'as' => 'orders.fit']);
-Route::patch('/orders/{id}/switch_units',        ['uses' => 'OrdersController@switchUnits','as' => 'orders.switch_units', 'middleware' => 'auth']);
-Route::patch('/orders/{id}/reset',               ['uses' => 'OrdersController@resetOrder', 'as' => 'orders.reset',        'middleware' => 'auth']);
-Route::get('/orders/{id}/checkout',              ['uses' => 'OrdersController@checkout',   'as' => 'orders.checkout',     'middleware' => 'auth']);
-Route::post('/orders/{id}/process',              ['uses' => 'OrdersController@process',    'as' => 'orders.process',      'middleware' => 'auth']);
-Route::get('/orders/{id}/complete',              ['uses' => 'OrdersController@complete',   'as' => 'orders.complete',     'middleware' => 'auth']);
+Route::post('/orders/{id}/fit',                  ['uses' => 'OrdersController@postFit',    'as' => 'orders.fit',          'middleware' => ['auth', 'owner']]);
+Route::get('/orders/{id}/fit/{step}',            ['uses' => 'OrdersController@getFit',     'as' => 'orders.fit',          'middleware' => ['auth', 'owner']]);
+Route::patch('/orders/{id}/switch_units',        ['uses' => 'OrdersController@switchUnits','as' => 'orders.switch_units', 'middleware' => ['auth', 'owner']]);
+Route::patch('/orders/{id}/reset',               ['uses' => 'OrdersController@resetOrder', 'as' => 'orders.reset',        'middleware' => ['auth', 'owner']]);
+Route::get('/orders/{id}/checkout',              ['uses' => 'OrdersController@checkout',   'as' => 'orders.checkout',     'middleware' => ['auth', 'owner']]);
+Route::post('/orders/{id}/process',              ['uses' => 'OrdersController@process',    'as' => 'orders.process',      'middleware' => ['auth', 'owner']]);
+Route::get('/orders/{id}/complete',              ['uses' => 'OrdersController@complete',   'as' => 'orders.complete',     'middleware' => ['auth', 'owner']]);
 
 Route::get('/users/{id}/orders',                 ['uses' => 'UsersController@userOrders',  'as' => 'users.orders']);
 

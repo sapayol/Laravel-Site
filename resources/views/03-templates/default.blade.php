@@ -6,6 +6,15 @@
 
 @include('02-organisms.global.header')
 
+	@if (Session::has('message'))
+		<div class="row">
+			<div class="alert-box alert" data-alert>
+	    	{{ Session::get('message') }}
+	    	<a href="#" class="close">&times;</a>
+			</div>
+		</div>
+	@endif
+
 	@yield('full-width-hero')
 
 	<main class="row">
