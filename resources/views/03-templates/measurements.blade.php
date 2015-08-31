@@ -16,13 +16,17 @@
 		        <source src="/videos/measurements/{{{ $step }}}.mp4"  type="video/mp4">
 		        <a href="/videos/{{{ $step }}}.mp4">Download</a>
 			    </video>
-				  <button type="button" class="text-button"  ng-click="instructions = !instructions">
-			    	Click to <span ng-show="!instructions">read</span><span ng-show="instructions">hide</span> Instructions
-			    </button>
 				</div>
-				<div ng-show="instructions" class="measurement-instructions animated slideInDown">
+				<h2>@yield('title')</h2>
+				<div class="measurement-instructions">
 					@yield('instructions')
 				</div>
+{{-- 				<div ng-show="instructions" class="measurement-instructions animated slideInDown">
+					@yield('instructions')
+				</div>
+			  <button type="button" class="text-button" ng-click="instructions = !instructions">
+		    	Click to <span ng-show="!instructions">read</span><span ng-show="instructions">hide</span> Instructions
+		    </button> --}}
 			@endif
 
 			@yield('additional_copy')
@@ -44,7 +48,7 @@
 					<button type="submit" class="black button expand">Submit Measurement <span class="chevron chevron--right"></span></button>
 				</form>
 			@else
-				<form action="/orders/{{{ $order->id}}}/fit" method="POST" name="finalForm">
+				<form action="/orders/{{{ $order->id}}}/fit" method="POST" name="finalForm" class="hidden">
 					<input type="hidden" name="_token" value="{!! csrf_token() !!}">
 					<input type="hidden" name="measurements[{{{ $step }}}]" value="@{{ measurement }}">
 				</form>
@@ -66,8 +70,6 @@
 					<button type="button" ng-click="submitMeasurement('measurements[{{{ $step }}}]')" class="black button expand">Submit Measurement <span class="chevron chevron--right"></span></button>
 				</form>
 			@endif
-
-
 		</article>
 
 

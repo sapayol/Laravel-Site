@@ -1,8 +1,5 @@
 .measurement-entry {
 	padding-top: 0;
-	form {
-		margin-top: 1.5rem;
-	}
 	p {
 		margin-bottom: .6rem;
 	}
@@ -10,9 +7,19 @@
 		position: absolute;
 		left: -9999px;
 	}
+	h2 {
+		float: right;
+		position: relative;
+		top: -2.2rem;
+		font-size: 1.2rem;
+		// min-width: 7rem;
+		width: auto;
+		z-index: 2000;
+		font-weight: 400;
+		margin-right: .5rem;
+	}
 	.text-input-label {
 		width: 7rem;
-		// margin-left: .6rem;
 		@media only screen and (max-width: 320px) {
 			width: 6.05rem;
 		}

@@ -2610,13 +2610,20 @@ fieldset {
 
 .measurement-entry {
   padding-top: 0; }
-  .measurement-entry form {
-    margin-top: 1.5rem; }
   .measurement-entry p {
     margin-bottom: .6rem; }
   .measurement-entry h3 {
     position: absolute;
     left: -9999px; }
+  .measurement-entry h2 {
+    float: right;
+    position: relative;
+    top: -2.2rem;
+    font-size: 1.2rem;
+    width: auto;
+    z-index: 2000;
+    font-weight: 400;
+    margin-right: .5rem; }
   .measurement-entry .text-input-label {
     width: 7rem; }
     @media only screen and (max-width: 320px) {
@@ -3002,7 +3009,7 @@ button.text-button {
   background: none;
   padding: 0;
   color: #222222;
-  font-size: 1rem;
+  font-size: .8rem;
   border-bottom: 2px solid #B02428; }
 
 html, body, p {
@@ -3072,14 +3079,15 @@ a.under-button-link {
 
 .carousel-container {
   overflow: hidden;
-  height: 36rem; }
+  height: 30rem; }
   .carousel-container .jacket-carousel {
     margin-bottom: 0; }
   .carousel-container .slick-dots {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    margin-left: 0; }
     .carousel-container .slick-dots li {
       display: inline-block;
-      margin: 1rem 1rem; }
+      margin: 1rem .8rem; }
       .carousel-container .slick-dots li.slick-active button {
         background: #222222; }
     .carousel-container .slick-dots button {
