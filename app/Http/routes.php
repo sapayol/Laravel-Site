@@ -24,6 +24,7 @@ Route::resource('orders', 'OrdersController');
 Route::get('/orders/{id}/look',                  ['uses' => 'OrdersController@look',       'as' => 'orders.look']);
 Route::post('/orders/{id}/fit',                  ['uses' => 'OrdersController@postFit',    'as' => 'orders.fit']);
 Route::get('/orders/{id}/fit/{step}',            ['uses' => 'OrdersController@getFit',     'as' => 'orders.fit']);
+Route::patch('/orders/{id}/switch_units',        ['uses' => 'OrdersController@switchUnits','as' => 'orders.switch_units']);
 Route::patch('/orders/{id}/reset',               ['uses' => 'OrdersController@resetOrder', 'as' => 'orders.reset']);
 Route::get('/orders/{id}/checkout',              ['uses' => 'OrdersController@checkout',   'as' => 'orders.checkout']);
 Route::post('/orders/{id}/process',              ['uses' => 'OrdersController@process',    'as' => 'orders.process']);

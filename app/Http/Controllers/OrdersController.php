@@ -10,11 +10,11 @@ class OrdersController extends Controller {
 	public function look($id)
 	{
 		$order = Order::find($id);
-
 		JavaScript::put(['jacket' => $order->jacket, 'session' => Session::all()]);
 
 		return view('04-pages.jackets.look', ['jacket' => $order->jacket]);
 	}
+
 
 	public function show($id, Request $request)
 	{
@@ -37,6 +37,7 @@ class OrdersController extends Controller {
 
 		return view('04-pages.checkout.continue', ['last_order' => $order, 'new_order' => $new_order]);
 	}
+
 
 	public function store(CreateOrderRequest $request)
 	{
@@ -67,6 +68,7 @@ class OrdersController extends Controller {
 		return redirect()->route('orders.fit', [$order->id, 'units']);
 	}
 
+
 	public function resetOrder($id, CreateOrderRequest $request)
 	{
 		$order = Order::find($id);
@@ -76,12 +78,13 @@ class OrdersController extends Controller {
 		return $this->store($request);
 	}
 
+
 	public function getFit($id, $step)
 	{
 		$order = Order::find($id);
-
 		return view('04-pages.fit.' . $step, ['order' => $order, 'step' => $step]);
 	}
+
 
 	public function postFit($id, Request $request)
 	{
@@ -105,32 +108,26 @@ class OrdersController extends Controller {
 		}
 	}
 
-	/**
-	 * Return a specific course.
-	 *
-	 * @param  int|string $id
-	 * @return string     JsonResponse with Course object or not-found error
-	 */
-	public function checkout($id)
+
+	public function switchUnits($id)
 	{
-		$order = Order::findOrFail($id);
+		$order = Order::find($id);
+		$measurements = ['height', 'half_shoulder', 'back_width', 'chest', 'stomach', 'back_length', 'waist', 'arm', 'biceps'];
 
-    JavaScript::put([
-			'order'   => $order,
-			'user'    => $order->user,
-			'address' => $order->address,
-			'session' => Session::all()
-    ]);
+		foreach ($measurements as $measurement) {
+			if ($order->userMeasurements->units == 'in') {
+				$order->userMeasurements->$measurement *= 2.54;
+			} else {
+				$order->userMeasurements->$measurement /= 2.54;
+			}
+		}
 
-		return view('04-pages.checkout.customer-info', ['order' => $order]);
+		$order->userMeasurements->units = $order->userMeasurements->units == 'in' ? 'cm' : 'in';
+		$order->userMeasurements->save();
+
+		return redirect()->back();
 	}
 
-	/**
-	 * Return a specific course.
-	 *
-	 * @param  int|string $id
-	 * @return string     JsonResponse with Course object or not-found error
-	 */
 	public function update($id, Request $request)
 	{
 		$order = Order::findOrFail($id);
@@ -158,11 +155,26 @@ class OrdersController extends Controller {
 		return response()->json($order);
 	}
 
+	public function checkout($id)
+	{
+		$order = Order::findOrFail($id);
+
+    JavaScript::put([
+			'order'   => $order,
+			'user'    => $order->user,
+			'address' => $order->address,
+			'session' => Session::all()
+    ]);
+
+		return view('04-pages.checkout.customer-info', ['order' => $order]);
+	}
+
 
 	public function postCheckout()
 	{
 		return redirect()->route('checkout.complete');
 	}
+
 
 	public function process($id, Request $request)
 	{
@@ -208,11 +220,10 @@ class OrdersController extends Controller {
 		}
 	}
 
+
 	public function complete($id) {
 		$order = Order::findOrFail($id);
 		return view('04-pages.checkout.complete', ['order' => $order]);
 	}
-
-
 
 }

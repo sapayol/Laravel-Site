@@ -7,6 +7,8 @@
     color: #c86669; }
   .inverted-colors a {
     color: white; }
+  .inverted-colors .text-button {
+    color: white; }
   .inverted-colors label {
     color: white; }
     .inverted-colors label span {
@@ -2620,7 +2622,7 @@ fieldset {
     position: relative;
     top: -2.2rem;
     font-size: 1.2rem;
-    width: auto;
+    white-space: nowrap;
     z-index: 2000;
     font-weight: 400;
     margin-right: .5rem; }

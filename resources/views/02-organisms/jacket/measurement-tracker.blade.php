@@ -106,9 +106,13 @@
 
 
 <div>
-	@if ($order->userMeasurements->units == 'in')
-		<a class="underlined">Switch to <strong>centimeters</strong></a>
-	@else
-		<a class="underlined">Switch to <strong>inches</strong></a>
-	@endif
+	<form action="/orders/{{{ $order->id }}}/switch_units" method="POST">
+		<input type="hidden" name="_token" value="{!! csrf_token() !!}">
+		<input type="hidden" name="_method" value="PATCH">
+		@if ($order->userMeasurements->units == 'in')
+			<button class="text-button">Switch to <strong>centimeters</strong></button>
+		@else
+			<button class="text-button">Switch to <strong>inches</strong></button>
+		@endif
+	</form>
 </div>
