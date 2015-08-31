@@ -21,11 +21,16 @@ measurementController.controller('measurementCtrl', ['$scope', '$timeout', funct
 		}
 	}
 
-	$scope.init = function(step, measurement, units) {
+	$scope.init = function(step, units, measurement) {
 		$scope.step = step;
-		$scope.measurement = measurement;
 		$scope.units = units;
 		$scope.change(measurement);
+		if ($scope.step == 'height' && $scope.units === 'in') {
+			$scope.feet = parseInt(measurement/12);
+			$scope.inches = parseInt(measurement%12);
+		} else {
+			$scope.measurement = measurement;
+		}
 	}
 
 	$scope.change = function(measurement) {

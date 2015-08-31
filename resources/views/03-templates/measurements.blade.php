@@ -5,7 +5,7 @@
 @include('01-molecules.navigation.primary-nav')
 
 	@include('02-organisms.global.header')
-	<main class="row" ng-controller="measurementCtrl" ng-init="init('{{{ $step }}}', {{{ $order->userMeasurements->$step }}}, '{{{ $order->userMeasurements->units }}}')">
+	<main class="row" ng-controller="measurementCtrl" ng-init="init('{{{ $step }}}', '{{{ $order->userMeasurements->units }}}' {{{ $order->userMeasurements->$step ? ',' . $order->userMeasurements->$step : '' }}} )">
 		<article class="measurement-entry large-12 medium-12 small-12 columns">
 			<h3>@yield('title')</h3>
 			<br>

@@ -96,6 +96,8 @@
 				<br><br>
 				<a href="{{ url('/auth/logout') }}" class="underlined">Login as someone else</a>
 			</div>
+		@else
+			<a href="" ng-click="proceedToOrder()" class="button expand inverted-colors">Proceed To Measurement</a>
 		@endif
 	</section>
 

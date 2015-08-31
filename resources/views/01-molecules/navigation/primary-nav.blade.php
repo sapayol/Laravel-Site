@@ -13,7 +13,7 @@
       <li><a href="/jackets">Tailored Jackets</a></li>
     @endif
     <?php $currentuser = Auth::user(); ?>
-    @if ($currentuser && $currentuser->orders->count() > 0)
+    @if ($currentuser && $currentuser->unfinishedOrders->count() > 0)
       @if (strpos($action,'orders') !== 0)
         <li class="main-item"><a href="/orders/{{{ $currentuser->unfinishedOrders->first()->id }}}">My Jacket</a></li>
       @endif
@@ -22,5 +22,5 @@
 </nav>
 
 
-<div class="page-wrap {{{ $action == 'pages.home' || $action == 'pages.terms' ? 'home-page' : '' }}} {{{ strpos($action, 'pages') === 0 ? 'on-info-page' : '' }}} {{{ Auth::user() && Auth::user()->orders->count() > 0 ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
+<div class="page-wrap {{{ $action == 'pages.home' || $action == 'pages.terms' ? 'home-page' : '' }}} {{{ strpos($action, 'pages') === 0 ? 'on-info-page' : '' }}} {{{ Auth::user() && Auth::user()->unfinishedOrders->count() > 0 || strpos($action, 'orders') === 0  ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
 

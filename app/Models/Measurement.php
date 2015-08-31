@@ -24,7 +24,7 @@ class Measurement extends Model {
   {
   	$results = [];
     foreach ($this->attributes as $key => $value) {
-    	if (($key != 'size' && $key != 'type' && $key != 'units') && $value == null) {
+    	if (($key != 'size' && $key != 'type' && $key != 'units') && ($value == null || $value == '0.00')) {
 				$results[] = $key;
     	}
     }
