@@ -12,7 +12,7 @@
 	}
 	.text-input-label {
 		width: 7rem;
-		margin-left: .6rem;
+		// margin-left: .6rem;
 		@media only screen and (max-width: 320px) {
 			width: 6.05rem;
 		}
@@ -39,9 +39,6 @@
 	.measurement-instructions {
 		padding-top: 1rem;
 		background: $white;
-	}
-	.alert-box {
-		margin-top: -1.8rem;
 	}
 
 	input::-webkit-outer-spin-button,

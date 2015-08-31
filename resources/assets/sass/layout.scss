@@ -5,7 +5,7 @@
 	z-index: 9999;
 	top: -4rem;
 	margin-top: .5rem;
-	&.on-info-page, &.on-jacket-page, &.with-existing-order {
+	&.home-page, &.on-info-page.with-existing-order, &.on-jacket-page, &.with-existing-order {
 		top: -5.8rem;
 	}
 	&.home-page.with-existing-order, &.on-jacket-page.with-existing-order {
@@ -15,6 +15,7 @@
 		top: 0 !important;
 	}
 }
+
 .centered {
 	width: 60%;
 	position: fixed;
