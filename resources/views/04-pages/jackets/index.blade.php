@@ -14,7 +14,7 @@
 		  <li class="text-center">
 				<a href="/jackets/{{{ $jacket->model }}}">
 				@if ($jacket->active)
-					<img src="/images/photos/jackets/{{{ $jacket->model }}}/thumbnail.jpg">
+					<img src="/images/photos/jackets/{{{ $jacket->model }}}/{{{ $jacket->model }}}.svg">
 				@else
 					<img src="http://placehold.it/300x600&text=Coming Soon">
 				@endif

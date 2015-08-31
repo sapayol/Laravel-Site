@@ -41,4 +41,9 @@ class PagesController extends Controller {
 		return view('04-pages.our-leather', ['jacket' => $request->jacket]);
 	}
 
+	public function terms()
+	{
+		return view('04-pages.terms');
+	}
+
 }

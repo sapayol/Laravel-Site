@@ -22,5 +22,5 @@
 </nav>
 
 
-<div class="page-wrap {{{ $action == 'pages.home' ? 'home-page' : '' }}} {{{ strpos($action, 'pages') === 0 ? 'on-info-page' : '' }}} {{{ Auth::user() && Auth::user()->orders->count() > 0 ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
+<div class="page-wrap {{{ $action == 'pages.home' || $action == 'pages.terms' ? 'home-page' : '' }}} {{{ strpos($action, 'pages') === 0 ? 'on-info-page' : '' }}} {{{ Auth::user() && Auth::user()->orders->count() > 0 ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
 

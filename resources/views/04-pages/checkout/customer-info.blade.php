@@ -29,6 +29,7 @@
 			<input type="hidden" name="_token"         value="{!! csrf_token() !!}">
 			<input type="hidden" name="stripe_token"   value="@{{ stripe_token }}">
 			<input type="submit" class="button expand" value="Confirm &amp; Submit Order">
+			<a href="/terms" class="under-button-link">Terms Of Service</a>
 		</form>
 	</section>
 @stop

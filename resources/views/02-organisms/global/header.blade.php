@@ -7,6 +7,8 @@
 			<a ng-click="displayMenu = false">How It Works</a>
 		@elseif ($action == 'pages.our-leather')
 			<a ng-click="displayMenu = false">Our Leather</a>
+		@elseif ($action == 'pages.terms')
+			<a ng-click="displayMenu = false">Terms of Service</a>
 		@elseif ($action == 'jackets.index')
 			<a ng-click="displayMenu = false">Tailored Jackets</a>
 		@elseif ($action == 'jackets.look' || $action == 'jackets.show')

@@ -3050,6 +3050,10 @@ a.under-button-link {
   position: relative;
   top: -1rem; }
 
+a.under-heading-link {
+  margin-top: 0;
+  font-size: .9rem; }
+
 .underlined {
   color: black;
   border-bottom: 2px solid #B02428; }
@@ -3068,6 +3072,11 @@ a.under-button-link {
 
 .order-summary strong {
   font-weight: 400; }
+
+.terms section p {
+  margin-top: 1rem; }
+.terms h2, .terms h3 {
+  margin-bottom: 0; }
 
 .sidekick-image {
   margin-bottom: 1rem; }
@@ -3247,6 +3256,14 @@ a.under-button-link {
   nav.primary-nav a {
     padding: 0 1rem;
     font-size: .8rem; } }
+#terms-nav > ul > li {
+  font-weight: 400; }
+  #terms-nav > ul > li > ul {
+    font-weight: 200; }
+#terms-nav a {
+  font-size: .9rem; }
+#terms-nav .with-nested-list {
+  list-style: none; }
 
 
 

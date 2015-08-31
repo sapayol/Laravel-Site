@@ -58,3 +58,19 @@
 		}
 	}
 }
+
+
+#terms-nav {
+	& > ul > li {
+		font-weight: 400;
+		 & > ul {
+				font-weight: 200;
+		 }
+	}
+	a {
+		font-size: .9rem;
+	}
+	.with-nested-list {
+		list-style: none;
+	}
+}

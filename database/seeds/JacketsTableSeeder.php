@@ -21,17 +21,25 @@ class JacketsTableSeeder extends Seeder {
 		]);
 
 		Jacket::create([
-			'name'   => "Double Rider Biker",
+			'name'   => "Bopgun",
 			'gender' => 'male',
-			'model'  => 'double_rider_biker',
+			'model'  => 'bopgun',
 			'price'  => 1279.00,
 			'active' => 0,
 		]);
 
 		Jacket::create([
-			'name'   => "Bomber",
+			'name'   => "Moto",
 			'gender' => 'male',
-			'model'  => 'bomber',
+			'model'  => 'moto',
+			'price'  => 1279.00,
+			'active' => 0,
+		]);
+
+		Jacket::create([
+			'name'   => "MA1",
+			'gender' => 'male',
+			'model'  => 'ma1',
 			'price'  => 1279.00,
 			'active' => 0,
 		]);

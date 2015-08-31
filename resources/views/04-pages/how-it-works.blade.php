@@ -32,7 +32,7 @@
 			<p>If your piece needs alteration, you can send it to us. We will not charge for the work, you’ll only have to pay for shipping.</p>
 			<a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>
 		</article>
-		<article>
+		<article id="return-policy">
 			<h3>Returns</h3>
 			<p>Because each leather jacket is made exclusively for you, <em>all sales are final</em>.</p>
 			<p>We take extra care in discussing your measurements and any other questions with you before production to make sure you will be satisfied.</p>
