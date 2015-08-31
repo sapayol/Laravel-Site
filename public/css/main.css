@@ -2373,6 +2373,10 @@ Copyright (c) 2015 Daniel Eden
 
 header {
   border-bottom: 1px solid #e2e2e2; }
+  header a {
+    color: #222222; }
+    header a:hover {
+      color: #222222; }
   header h1 {
     background: white;
     display: block;

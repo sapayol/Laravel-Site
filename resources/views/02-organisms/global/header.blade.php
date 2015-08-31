@@ -2,13 +2,13 @@
 	<h1 class="page-title {{{ strpos($action,'orders') === 0 || $action === 'jackets.look'  || $action === 'jackets.show' ? 'with-breadcrumbs' : '' }}}">
 		<?php $action = Request::route()->getAction()['as'] ?>
 	  @if ($action == 'pages.who-we-are')
-			Who We Are
+			<a ng-click="displayMenu = false">Who We Are</a>
 		@elseif ($action == 'pages.how-it-works')
-			How It Works
+			<a ng-click="displayMenu = false">How It Works</a>
 		@elseif ($action == 'pages.our-leather')
-			Our Leather
+			<a ng-click="displayMenu = false">Our Leather</a>
 		@elseif ($action == 'jackets.index')
-			Tailored Jackets
+			<a ng-click="displayMenu = false">Tailored Jackets</a>
 		@elseif ($action == 'jackets.look' || $action == 'jackets.show')
 			<a href="/jackets" class="underlined">Tailored Jackets</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
