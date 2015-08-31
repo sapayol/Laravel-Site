@@ -5,7 +5,7 @@
 @include('01-molecules.navigation.primary-nav')
 
 	@include('02-organisms.global.header')
-	<main class="row" ng-controller="measurementCtrl" ng-init="init({{{ $order->userMeasurements->$step }}})">
+	<main class="row" ng-controller="measurementCtrl" ng-init="init('{{{ $step }}}', {{{ $order->userMeasurements->$step }}}, '{{{ $order->userMeasurements->units }}}')">
 		<article class="measurement-entry large-12 medium-12 small-12 columns">
 			<h3>@yield('title')</h3>
 			<br>
@@ -31,28 +31,24 @@
 
 			@yield('additional_copy')
 
-			@if ($step == 'height' && $order->userMeasurements->units == 'in')
-				<form action="/orders/{{{ $order->id}}}/fit"  method="POST" name="measurementForm">
+			<form action="/orders/{{{ $order->id}}}/fit" method="POST" name="finalForm" class="hidden">
+				<input type="hidden" name="_token" value="{!! csrf_token() !!}">
+				<input type="hidden" name="measurements[{{{ $step }}}]" value="@{{ measurement }}">
+			</form>
+			<form ng-submit="submitMeasurement('measurements[{{{ $step }}}]')" name="measurementForm">
+				@if ($step == 'height' && $order->userMeasurements->units == 'in')
 					<fieldset>
 						<legend>Height</legend>
-						<p>How tall are you?</p>
 						<label for="height-feet" class="text-input-label">
 							<span class="label-title">Feet</span>
-							<input name="measurements[height][ft]" id="height-feet" type="number" placeholder="00" maxlength="2" min="4" max="8" required>
+							<input name="measurements[height][feet]" id="height-feet" type="tel" placeholder="00" maxlength="2" min="4" max="8" required ng-model="feet">
 						</label>
-						<label for="height-feet" class="text-input-label">
+						<label for="height-inches" class="text-input-label">
 							<span class="label-title">Inches</span>
-							<input name="measurements[height][ft]" id="height-feet" type="number" placeholder="00" maxlength="2" min="0" max="11" required>
+							<input name="measurements[height][inches]" id="height-inches" type="tel" placeholder="00" maxlength="2" min="0" max="11" required ng-model="inches">
 						</label>
 					</fieldset>
-					<button type="submit" class="black button expand">Submit Measurement <span class="chevron chevron--right"></span></button>
-				</form>
-			@else
-				<form action="/orders/{{{ $order->id}}}/fit" method="POST" name="finalForm" class="hidden">
-					<input type="hidden" name="_token" value="{!! csrf_token() !!}">
-					<input type="hidden" name="measurements[{{{ $step }}}]" value="@{{ measurement }}">
-				</form>
-				<form ng-submit="submitMeasurement('measurements[{{{ $step }}}]')" name="measurementForm">
+				@else
 					<label for="{{{ $step }}}" class="text-input-label">
 						<span class="label-title">@yield('title')</span>
 						<?php $min = config('measurements.' . $step . '.min.' . $order->userMeasurements->units); ?>
@@ -67,9 +63,9 @@
 					<div class="alert-box alert animated shake" data-alert ng-if="displayMinMaxError">
 						{{{ ucwords(str_replace('_', ' ', $step)) }}} should be between <strong>{{{ $min }}}</strong>  and <strong>{{{ $max }}}</strong> <small>{{{ $order->userMeasurements->units }}}</small>
 					</div>
-					<button type="button" ng-click="submitMeasurement('measurements[{{{ $step }}}]')" class="black button expand">Submit Measurement <span class="chevron chevron--right"></span></button>
-				</form>
-			@endif
+				@endif
+				<button type="button" ng-click="submitMeasurement('measurements[{{{ $step }}}]')" class="black button expand">Submit Measurement <span class="chevron chevron--right"></span></button>
+			</form>
 		</article>
 
 

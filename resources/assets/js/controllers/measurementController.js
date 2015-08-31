@@ -7,7 +7,12 @@ measurementController.controller('measurementCtrl', ['$scope', '$timeout', funct
 
 	$scope.submitMeasurement = function(step) {
 		$scope.displayMinMaxError = false;
-		if ($scope.measurementForm[step].$error.min || $scope.measurementForm[step].$error.max ) {
+		if ($scope.step == 'height' && $scope.units === 'in') {
+			$scope.measurement = (parseInt($scope.feet * 12)) + parseInt($scope.inches);
+			$timeout(function(){
+				finalForm.submit();
+			}, 100);
+		} else if ($scope.measurementForm[step].$error.min || $scope.measurementForm[step].$error.max ) {
 			$timeout(function(){
 				$scope.displayMinMaxError = true;
 			}, 100);
@@ -16,8 +21,10 @@ measurementController.controller('measurementCtrl', ['$scope', '$timeout', funct
 		}
 	}
 
-	$scope.init = function(measurement) {
+	$scope.init = function(step, measurement, units) {
+		$scope.step = step;
 		$scope.measurement = measurement;
+		$scope.units = units;
 		$scope.change(measurement);
 	}
 

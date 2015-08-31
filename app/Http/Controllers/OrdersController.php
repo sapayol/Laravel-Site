@@ -45,10 +45,8 @@ class OrdersController extends Controller {
 		$last_order = $user->unfinishedOrders->last();
 		$new_order = $request->input();
 
-		// dd($request->input());
 		if ($last_order && $last_order->userMeasurements) {
 			return redirect()->route('orders.show', ['id' => $last_order->id])->withInput();
-			// return view('04-pages.checkout.continue', ['last_order' => $last_order, 'new_order' => $new_order]);
 		}
 
 		$jacket = Jacket::where('model', '=', $request->model)->first();
