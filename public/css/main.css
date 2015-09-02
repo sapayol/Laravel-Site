@@ -68,9 +68,9 @@
   z-index: 9999;
   top: -4rem;
   margin-top: .5rem; }
-  .page-wrap.home-page, .page-wrap.on-info-page.with-existing-order, .page-wrap.on-jacket-page, .page-wrap.with-existing-order {
+  .page-wrap.deep-info-page, .page-wrap.on-info-page.with-existing-order, .page-wrap.on-jacket-page, .page-wrap.with-existing-order {
     top: -5.8rem; }
-  .page-wrap.home-page.with-existing-order, .page-wrap.on-jacket-page.with-existing-order {
+  .page-wrap.deep-info-page.with-existing-order, .page-wrap.on-jacket-page.with-existing-order {
     top: -7.9rem; }
   .page-wrap.descended {
     top: 0 !important; }
@@ -2354,14 +2354,13 @@ Copyright (c) 2015 Daniel Eden
     padding-left: .65rem; }
 
 .definition-section {
-  background: #e2bb3a;
   line-height: 1.2; }
   .definition-section h2 {
     margin-bottom: 0;
     font-size: 2.25rem;
     line-height: 1; }
   .definition-section .pronounciation, .definition-section .word-type {
-    color: #606060; }
+    color: #b0b0b0; }
   .definition-section .word-type {
     display: block;
     margin-top: .5rem; }
@@ -3091,6 +3090,9 @@ a.under-heading-link {
   margin-top: 1rem; }
 .terms h2, .terms h3 {
   margin-bottom: 0; }
+
+.primary-color-text {
+  color: #B02428; }
 
 .sidekick-image {
   margin-bottom: 1rem; }

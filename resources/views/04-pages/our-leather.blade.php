@@ -5,7 +5,7 @@
 @stop
 
 @section('main')
-	<section class="small-12 medium-12 large-12 columns">
+	<section class="small-12 medium-12 large-12 columns" id="our-leather-header">
 		<p>Leather is the end result of a process with various stages and the qualities of it are influenced by every step along the way:</p>
 	</section>
 
@@ -25,6 +25,7 @@
 		<p>An animal might have gotten scratches from rocks or bite marks from insects. Sometimes, these imperfections are sanded off. This is then called top-grain/corrected leather and also needs coating and an artificially embossed grain pattern, leading to a less durable leather.</p>
 		<p>If the natural grain-side is left intact, the leather is called full-grain.</p>
 		<p>We exclusively use full-grain leather. Our tannery sorts through every hide and sets the most flawless ones aside for us. Because of that, our jackets have a consistently pristine surface. It also means that we can use almost the entire surface of the hide and allows us to construct our jackets with as little parts and seams as possible.</p>
+		<a href="#our-leather-header" class="under-heading-link underlined">Back to Top</a>
 	</section>
 
 	<section class="small-12 medium-12 large-12 columns" id="tanning-process">
@@ -36,6 +37,7 @@
 		<p>Both tanning methods can be done the right way or more poorly, to save time and money. A tannery can cut corners by using low-grade chemicals, cheaper dye, and most commonly, do things superficially and allow less time for each step. The resulting leather will crack or tear, rub off color and be potentially unsafe.</p>
 		<p>We work exclusively with one of the most innovative tanneries in the world. Only the highest-grade substances are used, state-of-the art methods and equipment are utilized, and extra time is taken to make sure that the skins are properly prepared, tanned and thoroughly dyed with perfectly even color.</p>
 		<p>We don’t cover our leather with a top paint, but add a very thin protective, colorless coat to it – a process called semi-aniline dying. This way, the leather displays its natural grain but is slightly protected from wear and staining.</p>
+		<a href="#our-leather-header" class="under-heading-link underlined">Back to Top</a>
 	</section>
 
 	<section class="small-12 medium-12 large-12 columns" id="animal-treatment">
@@ -43,6 +45,7 @@
 		<p>Apart from the very fundamental difference between bovine skin and sheep skin for example, or the fact that younger animals have more flexible skin than older ones, the health of a skin is also directly affected by the general health of its animal.</p>
 		<p>The meat industry is very broken and an incredible amount of animals are being held under extremely poor conditions. We don’t support that and strive very hard to only use leather from humane and healthy sources.</p>
 		<p>All our lamb skins come from Turkey, where animals are being herded in traditional ways, get ample movement, sunlight, and natural nutrition.</p>
+		<a href="#our-leather-header" class="under-heading-link underlined">Back to Top</a>
 	</section>
 
 	<section class="small-12 medium-12 large-12 columns">

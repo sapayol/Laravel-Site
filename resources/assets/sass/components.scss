@@ -39,7 +39,6 @@
 }
 
 .definition-section {
-	background: $gold;
 	line-height: 1.2;
 	h2 {
 		margin-bottom: 0;
@@ -47,7 +46,7 @@
 		line-height: 1;
 	}
 	.pronounciation, .word-type {
-		color: $grey;
+		color: $light-grey;
 	}
 	.word-type {
 		display: block;

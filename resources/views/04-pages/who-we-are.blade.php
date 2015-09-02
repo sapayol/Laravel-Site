@@ -13,18 +13,15 @@
 		You approach it from a different angle.<br>
 		You find your own way.</p>
 	</section>
-	<section class="large-12 medium-12 small-12 columns primary-color-section">
-		<p>
+	<section class="large-12 medium-12 small-12 columns">
+		<p class="primary-color-text">
 			<strong>Regular doesn’t fit you.</strong>
-	 		<br>
 			We understand.
 		</p>
-	</section>
-	<section class="large-12 medium-12 small-12 columns">
 		<p>It’s the same urge that motivates us to design leather jackets without compromises, to create a company that does things the right way.</p>
 	</section>
 
-	<section class="large-12 medium-12 small-12 columns definition-section">
+	<section class="large-12 medium-12 small-12 columns inverted-colors definition-section">
 		<h2>Sapayol</h2>
 		<span class="pronounciation">[Turkish <strong>sapa</strong>-yol]</span><br>
 		<span class="word-type">noun</span>
@@ -62,8 +59,7 @@
 		<p>The lining is made out of a smooth Bemberg Cupro Twill with the exception of the pockets, which are lined with a more robust Tencel fabric.</p>
 	</section>
 
-	<img src="/images/newyork-istanbul.jpg" alt="New York / Istanbul" class="repsonsive-image">
-	<section class="large-12 medium-12 small-12 columns inverted-colors">
+	<section class="large-12 medium-12 small-12 columns">
 		<h2 class="thin">A New York City company, with production in Istanbul, Turkey</h2>
 		<p>SAPAYOL is based and incorporated in New York City. This city fuels us with energy and inspiration.</p>
 		<p>Our jackets are made in Istanbul, Turkey. The long textile and leather tradition in the region makes it possible to buy top-grade skins, work with a world-class tannery, have our jackets tailored by master craftsmen and source all other materials within a 250 mile radius. In addition to that, we can work with supply partners that pay above-average wage.</p>

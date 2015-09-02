@@ -21,5 +21,5 @@
   </ul>
 </nav>
 
-<div class="page-wrap {{{ $action == 'pages.home' || $action == 'pages.terms' ? 'home-page' : '' }}} {{{ strpos($action, 'pages') === 0 ? 'on-info-page' : '' }}} {{{ Auth::user() && Auth::user()->unfinishedOrders->count() > 0 || strpos($action, 'orders') === 0  ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
+<div class="page-wrap {{{ $action == 'pages.home' || $action == 'pages.terms' || $action == 'pages.our-leather' ? 'deep-info-page' : '' }}} {{{ strpos($action, 'pages') === 0 ? 'on-info-page' : '' }}} {{{ Auth::user() && Auth::user()->unfinishedOrders->count() > 0 || strpos($action, 'orders') === 0  ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
 

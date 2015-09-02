@@ -42,4 +42,9 @@ class Measurement extends Model {
     return $results;
   }
 
+  public function getFraction($attribute)
+  {
+    return $this->$attribute * 10;
+  }
+
 }

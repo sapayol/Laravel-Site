@@ -87,7 +87,7 @@
 
 	</section>
 
-	<section class="large-12 medium-12 small-12 columns inverted-colors">
+	<section class="large-12 medium-12 small-12 columns">
 		@if (Auth::guest())
 			<p>Enter an email address and choose a password to continue. It lets us save your design choices and body measurements.</p>
 			<p>We don’t spam or share your information.</p>
@@ -96,12 +96,12 @@
 		@elseif (Auth::user()->unfinishedOrders()->count() > 0)
 			<p>Looks like you've started an order as <strong>{{{ Auth::user()->email }}}</strong></p>
 			<div class="text-center">
-				<a href="" ng-click="proceedToOrder()" class="button expand inverted-colors">Continue Your Order</a>
+				<a href="" ng-click="proceedToOrder()" class="button expand">Continue Your Order</a>
 				<p>or</p>
 				<a href="{{ url('/auth/logout') }}" class="underlined">Login as someone else</a>
 			</div>
 		@else
-			<a href="" ng-click="proceedToOrder()" class="button expand inverted-colors">Proceed To Measurement</a>
+			<a href="" ng-click="proceedToOrder()" class="button expand">Proceed To Measurement</a>
 		@endif
 	</section>
 

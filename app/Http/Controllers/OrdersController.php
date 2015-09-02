@@ -114,7 +114,7 @@ class OrdersController extends Controller {
 
 		foreach ($measurements as $measurement) {
 			if ($order->userMeasurements->units == 'in') {
-				$order->userMeasurements->$measurement *= 2.54;
+				$order->userMeasurements->$measurement = round($order->userMeasurements->$measurement * 2.54, 0);
 			} else {
 				$order->userMeasurements->$measurement /= 2.54;
 			}

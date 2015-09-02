@@ -5,10 +5,10 @@
 	z-index: 9999;
 	top: -4rem;
 	margin-top: .5rem;
-	&.home-page, &.on-info-page.with-existing-order, &.on-jacket-page, &.with-existing-order {
+	&.deep-info-page, &.on-info-page.with-existing-order, &.on-jacket-page, &.with-existing-order {
 		top: -5.8rem;
 	}
-	&.home-page.with-existing-order, &.on-jacket-page.with-existing-order {
+	&.deep-info-page.with-existing-order, &.on-jacket-page.with-existing-order {
 		top: -7.9rem;
 	}
 	&.descended {
