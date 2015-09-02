@@ -32,7 +32,7 @@ class AttributesTableSeeder extends Seeder {
 		//															LEATHER	TYPE																 //
 		//===========================================================================//
 
-			$leather_types = ['lamb heavy', 'goat', 'calf'];
+			$leather_types = ['lamb', 'goat', 'calf'];
 
 			foreach ($leather_types as $leather_type) {
 				Attribute::create([

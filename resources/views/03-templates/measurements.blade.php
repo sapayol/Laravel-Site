@@ -64,7 +64,10 @@
 						{{{ ucwords(str_replace('_', ' ', $step)) }}} should be between <strong>{{{ $min }}}</strong>  and <strong>{{{ $max }}}</strong> <small>{{{ $order->userMeasurements->units }}}</small>
 					</div>
 				@endif
-				<button type="button" ng-click="submitMeasurement('measurements[{{{ $step }}}]')" class="black button expand">Submit Measurement <span class="chevron chevron--right"></span></button>
+				<div class="text-center">
+					<button type="button" ng-click="submitMeasurement('measurements[{{{ $step }}}]')" class="black button expand">Submit 	Measurement <span class="chevron chevron--right"></span></button>
+					<a class="under-button-link underlined">Order Now, Measure Later</a>
+				</div>
 			</form>
 		</article>
 

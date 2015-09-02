@@ -7,6 +7,17 @@
     color: #c86669; }
   .inverted-colors a {
     color: white; }
+  .inverted-colors .button:hover {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-top: 1px solid white; }
+  .inverted-colors .button.hollow {
+    border: 1px solid white;
+    color: white;
+    border-bottom: 6px solid #B02428; }
+    .inverted-colors .button.hollow:hover {
+      background: white;
+      color: #222222; }
   .inverted-colors .text-button {
     color: white; }
   .inverted-colors label {

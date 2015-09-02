@@ -6,6 +6,18 @@
 
 @section('main')
 	<section class="small-12 medium-12 large-12 columns">
+		<p>Leather is the end result of a process with various stages and the qualities of it are influenced by every step along the way:</p>
+	</section>
+
+	<nav class="small-12 medium-12 large-12 columns">
+		<ul>
+			<li><a href="#leathers" title="">Leathers</a></li>
+			<li><a href="#tanning-process" title="">Tanning Process</a></li>
+			<li><a href="#animal-treatment" title="">Animal Treatment</a></li>
+		</ul>
+	</nav>
+
+	<section class="small-12 medium-12 large-12 columns" id="leathers">
 		<h3>The difference between full-grain, top-grain, genuine, and bonded leather</h3>
 		<p>The most crucial difference in leather quality comes from the fact that every skin is sliced into two pieces: the outer part (grain-side) and the inner part (flesh-side). The outer part is much stronger, has a natural grain, and is much more expensive.</p>
 		<p>So-called genuine and bonded leather is made of the inner part. It is not meant to last long and requires heavy coating as well as an artificially embossed grain pattern to make it look like leather.</p>
@@ -15,7 +27,7 @@
 		<p>We exclusively use full-grain leather. Our tannery sorts through every hide and sets the most flawless ones aside for us. Because of that, our jackets have a consistently pristine surface. It also means that we can use almost the entire surface of the hide and allows us to construct our jackets with as little parts and seams as possible.</p>
 	</section>
 
-	<section class="small-12 medium-12 large-12 columns">
+	<section class="small-12 medium-12 large-12 columns" id="tanning-process">
 		<h3>Chrome vs. vegetable tanning and the importance of a world-class tannery</h3>
 		<p>Animal skin needs to treated chemically to be turned into durable, flexible leather, otherwise, it would decompose. The two most common methods to do this are chrome tanning and vegetable tanning.</p>
 		<p>Chrome tanning uses chromium salts as the main agent. Almost all leather is made through this process today because it is much more simple than vegetable tanning. If not done properly, there is a danger that the chromium salts change nature and become carcinogenic, although strict supervision can almost eliminate this risk. Nevertheless, the chromium salts are not biodegradable.</p>
@@ -26,7 +38,7 @@
 		<p>We don’t cover our leather with a top paint, but add a very thin protective, colorless coat to it – a process called semi-aniline dying. This way, the leather displays its natural grain but is slightly protected from wear and staining.</p>
 	</section>
 
-	<section class="small-12 medium-12 large-12 columns">
+	<section class="small-12 medium-12 large-12 columns" id="animal-treatment">
 		<h3>Healthy animals from humane sources</h3>
 		<p>Apart from the very fundamental difference between bovine skin and sheep skin for example, or the fact that younger animals have more flexible skin than older ones, the health of a skin is also directly affected by the general health of its animal.</p>
 		<p>The meat industry is very broken and an incredible amount of animals are being held under extremely poor conditions. We don’t support that and strive very hard to only use leather from humane and healthy sources.</p>

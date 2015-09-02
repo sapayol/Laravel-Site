@@ -75,7 +75,6 @@
 			<a href="/images/photos/leather/lamb_c_black_close-up.jpg"><img class="sidekick-image" src="/images/photos/leather/lamb_c_black_close-up.jpg" alt=""></a>
 			<p>All our jackets are made with the most exclusive, vegetable tanned, full-grain leather. It’s supple, thick, has a warm touch, and a pleasant smell. With good care, it will not crack or bulge for decades but break in and develop a beautiful patina.</p>
 			<p>Our leather is also absolutely free of the chromium salts that can become carcinogenic, found in almost every other leather garment.</p>
-			<p><em>Leather is the end result of a process with various stages and the qualities of it are influenced by every step along the way:</em></p>
 			<a href="/our-leather?jacket={{{ $jacket->model }}}" class="underlined" title="">Learn more about what makes our leather so special</a>
 		</section>
 
