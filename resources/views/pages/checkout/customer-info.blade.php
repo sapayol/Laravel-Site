@@ -11,17 +11,17 @@
 @section('main')
 	<section class="large-12 medium-12 small-12 columns" id="address">
 		<h2 class="text-center thin"><small>Please enter your</small> <br>Shipping Address</h2>
-		@include('03-organisms.checkout.address-form')
+		@include('partials.checkout.address-form')
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns inverted-colors" ng-show="addressSubmitted" id="payment-info">
 		<h2 class="text-center thin">Payment Info</h2>
-		@include('03-organisms.checkout.payment-info-form')
+		@include('partials.checkout.payment-info-form')
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns"  ng-show="paymentInfoSubmitted" id="order-summary">
 		<h2 class="text-center thin">Order Summary</h2>
-		@include('03-organisms.checkout.order-summary')
+		@include('partials.checkout.order-summary')
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns" ng-show="paymentInfoSubmitted">

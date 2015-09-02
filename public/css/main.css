@@ -75,19 +75,6 @@
   .page-wrap.descended {
     top: 0 !important; }
 
-.centered {
-  width: 60%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
-
-.flex-video {
-  margin-bottom: 1rem; }
-
 main > section, main > article {
   padding-bottom: 2rem;
   padding-top: 1rem; }
@@ -2398,20 +2385,34 @@ header {
     header h1.with-breadcrumbs {
       margin-bottom: .3rem; }
 
-footer {
-  background: #e2bb3a; }
-  footer a.back-to-top-link {
+footer a.back-to-top-link {
+  color: white;
+  background: #B02428;
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: .25rem; }
+  footer a.back-to-top-link p {
+    margin-bottom: 0; }
+footer .chevron {
+  border-color: white;
+  position: relative;
+  left: 50%;
+  margin-left: -15px; }
+footer nav.footer-nav {
+  padding: 1rem 0; }
+  footer nav.footer-nav ul {
+    display: inline-block;
+    margin: 0 auto; }
+    footer nav.footer-nav ul li {
+      margin-left: .8rem; }
+    footer nav.footer-nav ul li:first-child {
+      margin-left: 0; }
+footer .legal {
+  padding: .5rem 0 .8rem 0; }
+  footer .legal a {
+    font-size: .8rem;
     color: white;
-    display: block;
-    padding-top: 2.5rem;
-    padding-bottom: 2rem; }
-    footer a.back-to-top-link p {
-      margin-bottom: 0; }
-  footer .chevron {
-    border-color: white;
-    position: relative;
-    left: 50%;
-    margin-left: -15px; }
+    text-decoration: underline; }
 
 .look-options {
   padding-bottom: 2rem; }
@@ -2628,11 +2629,6 @@ fieldset {
     margin: 0;
     /* <-- Apparently some margin are still there even though it's hidden */ }
 
-a {
-  color: #B02428; }
-  a:hover, a:focus {
-    color: #70171a; }
-
 .button, a.button, button.button {
   -webkit-transition: none;
           transition: none;
@@ -2648,12 +2644,12 @@ a {
   letter-spacing: 1.2; }
   .button .chevron, a.button .chevron, button.button .chevron {
     border-color: white; }
-  .button:hover, a.button:hover, button.button:hover {
+  .button:hover, .button:active, .button:focus, a.button:hover, a.button:active, a.button:focus, button.button:hover, button.button:active, button.button:focus {
     background: transparent;
     border-color: #222222;
     border-bottom: 6px solid #B02428;
     color: #222222; }
-    .button:hover .chevron, a.button:hover .chevron, button.button:hover .chevron {
+    .button:hover .chevron, .button:active .chevron, .button:focus .chevron, a.button:hover .chevron, a.button:active .chevron, a.button:focus .chevron, button.button:hover .chevron, button.button:active .chevron, button.button:focus .chevron {
       border-color: #222222; }
   .button.hollow, a.button.hollow, button.button.hollow {
     color: #222222;
@@ -2662,19 +2658,27 @@ a {
     border-bottom: 6px solid #B02428; }
     .button.hollow .chevron, a.button.hollow .chevron, button.button.hollow .chevron {
       border-color: #222222; }
-    .button.hollow:hover, a.button.hollow:hover, button.button.hollow:hover {
+    .button.hollow:hover, .button.hollow:active, .button.hollow:focus, a.button.hollow:hover, a.button.hollow:active, a.button.hollow:focus, button.button.hollow:hover, button.button.hollow:active, button.button.hollow:focus {
       background: #222222;
       color: white;
       border-color: #222222;
       border-bottom: 6px solid #B02428; }
-      .button.hollow:hover .chevron, a.button.hollow:hover .chevron, button.button.hollow:hover .chevron {
+      .button.hollow:hover .chevron, .button.hollow:active .chevron, .button.hollow:focus .chevron, a.button.hollow:hover .chevron, a.button.hollow:active .chevron, a.button.hollow:focus .chevron, button.button.hollow:hover .chevron, button.button.hollow:active .chevron, button.button.hollow:focus .chevron {
         border-color: white; }
-  .button:active, .button:focus, a.button:active, a.button:focus, button.button:active, button.button:focus {
-    background: transparent;
-    color: #222222;
-    border-bottom: 1px solid #222222;
-    position: relative;
-    top: 3px; }
+  .button.success, a.button.success, button.button.success {
+    border-color: #57ca66;
+    color: white;
+    background: #57ca66;
+    border-bottom: 6px solid #222222; }
+    .button.success .chevron, a.button.success .chevron, button.button.success .chevron {
+      border-color: white; }
+    .button.success:hover, .button.success:active, .button.success:focus, a.button.success:hover, a.button.success:active, a.button.success:focus, button.button.success:hover, button.button.success:active, button.button.success:focus {
+      background: transparent;
+      color: #222222;
+      border-color: #57ca66;
+      border-bottom: 6px solid #222222; }
+      .button.success:hover .chevron, .button.success:active .chevron, .button.success:focus .chevron, a.button.success:hover .chevron, a.button.success:active .chevron, a.button.success:focus .chevron, button.button.success:hover .chevron, button.button.success:active .chevron, button.button.success:focus .chevron {
+        border-color: #222222; }
   .button.bottomless, a.button.bottomless, button.button.bottomless {
     border-bottom: 1px solid #222222; }
     .button.bottomless:hover, .button.bottomless:active, a.button.bottomless:hover, a.button.bottomless:active, button.button.bottomless:hover, button.button.bottomless:active {
@@ -2696,6 +2700,19 @@ button.text-button {
   color: #222222;
   font-size: .8rem;
   border-bottom: 2px solid #B02428; }
+
+a {
+  color: #B02428; }
+  a:hover, a:focus {
+    color: #70171a; }
+
+a.under-button-link {
+  position: relative;
+  top: -1rem; }
+
+a.under-heading-link {
+  margin-top: 0;
+  font-size: .9rem; }
 
 html, body, p {
   font-size: 20px;
@@ -2727,14 +2744,6 @@ article p {
   z-index: 100;
   margin: auto;
   color: #222222; }
-
-a.under-button-link {
-  position: relative;
-  top: -1rem; }
-
-a.under-heading-link {
-  margin-top: 0;
-  font-size: .9rem; }
 
 .underlined {
   color: black;
@@ -2832,12 +2841,7 @@ a.under-heading-link {
   .player .player-progress-played[value] {
     color: #B02428; }
 
-.homepage-hero-module {
-  border-right: none;
-  border-left: none;
-  position: relative; }
-
-.video-container {
+.hero-video-container {
   position: relative;
   bottom: 0%;
   left: 0%;
@@ -2845,57 +2849,55 @@ a.under-heading-link {
   width: 100%;
   overflow: hidden;
   background: white; }
+  .hero-video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute; }
+  .hero-video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%; }
+  .hero-video-container .title-container {
+    z-index: 1000;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    color: #fff; }
+  .hero-video-container .hero-text {
+    color: white;
+    font-size: 2rem;
+    -webkit-animation: changeColor 6s infinite;
+            animation: changeColor 6s infinite; }
+@-webkit-keyframes changeColor {
+  0% {
+    color: white; }
+  50% {
+    color: #222222; }
+  100% {
+    color: white; } }
+@keyframes changeColor {
+  0% {
+    color: white; }
+  50% {
+    color: #222222; }
+  100% {
+    color: white; } }
+  .hero-video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0; }
+  .hero-video-container video.fillWidth {
+    width: 100%; }
 
 @media screen and (max-device-width: 800px) {
-  .video-container {
+  .hero-video-container {
     background: url("/images/hero_short.gif") #000 no-repeat center center;
     background-size: cover; }
 
-  .no-video .video-container video, .touch .video-container video {
+  .no-video .hero-video-container video, .touch .hero-video-container video {
     display: none; } }
-.video-container .poster img {
-  width: 100%;
-  bottom: 0;
-  position: absolute; }
-
-.video-container .filter {
-  z-index: 100;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  width: 100%; }
-
-.video-container .title-container {
-  z-index: 1000;
-  position: absolute;
-  top: 35%;
-  width: 100%;
-  text-align: center;
-  color: #fff; }
-
-.video-container .hero-text {
-  color: white;
-  font-size: 2rem; }
-
-.video-container .link {
-  position: absolute;
-  bottom: 3em;
-  width: 100%;
-  text-align: center;
-  z-index: 1001;
-  font-size: 2em;
-  color: #fff; }
-
-.video-container .link a {
-  color: #fff; }
-
-.video-container video {
-  position: absolute;
-  z-index: 0;
-  bottom: 0; }
-
-.video-container video.fillWidth {
-  width: 100%; }
-
 .show {
   display: block !important; }
 
@@ -2904,6 +2906,15 @@ a.under-heading-link {
 
 .invisible {
   visibility: hidden; }
+
+.centered {
+  width: 60%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
 @media only screen {
   nav.primary-nav {

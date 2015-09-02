@@ -3,7 +3,6 @@
   padding-top: 2rem;
   background: white;
   position: relative;
-  // margin-bottom: 1rem;
   .text-button {
     position: relative;
     font-size: .8rem;
@@ -36,24 +35,7 @@
   }
 }
 
-
-
-.homepage-hero-module {
-  border-right: none;
-  border-left: none;
-  position: relative;
-}
-
-// .no-video .video-container video,
-// .touch .video-container video {
-//   display: none;
-// }
-// .no-video .video-container .poster,
-// .touch .video-container .poster {
-//   display: block !important;
-// }
-
-.video-container {
+.hero-video-container {
   position: relative;
   bottom: 0%;
   left: 0%;
@@ -61,62 +43,55 @@
   width: 100%;
   overflow: hidden;
   background: white;
+  .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+  }
+  .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+  }
+  .title-container {
+    z-index: 1000;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+  }
+  .hero-text {
+    color: white;
+    font-size: 2rem;
+    animation: changeColor 6s infinite;
+  }
+  @keyframes changeColor {
+    0%   {color: $white;}
+    50%  {color: $black;}
+    100% {color: $white;}
+  }
+  video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+  }
+  video.fillWidth {
+    width: 100%;
+  }
 }
 
 @media screen and (max-device-width: 800px) {
-    .video-container {
-         // background: url('/images/video-posters/hero_short.png') #000 no-repeat center center;
-         background: url('/images/hero_short.gif') #000 no-repeat center center;
-         background-size: cover;
-    }
-    .no-video .video-container video, .touch .video-container video {
-        display: none;
-    }
+  .hero-video-container {
+    background: url('/images/hero_short.gif') #000 no-repeat center center;
+    background-size: cover;
+  }
+  .no-video .hero-video-container video, .touch .hero-video-container video {
+    display: none;
+  }
 }
 
 
-.video-container .poster img {
-  width: 100%;
-  bottom: 0;
-  position: absolute;
-}
-.video-container .filter {
-  z-index: 100;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  width: 100%;
-}
-.video-container .title-container {
-  z-index: 1000;
-  position: absolute;
-  top: 35%;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-}
-.video-container .hero-text {
-	color: white;
-  font-size: 2rem;
-  // width: 45%;
-  // margin: 0 auto;
-}
-.video-container .link {
-  position: absolute;
-  bottom: 3em;
-  width: 100%;
-  text-align: center;
-  z-index: 1001;
-  font-size: 2em;
-  color: #fff;
-}
-.video-container .link a {
-  color: #fff;
-}
-.video-container video {
-  position: absolute;
-  z-index: 0;
-  bottom: 0;
-}
-.video-container video.fillWidth {
-  width: 100%;
-}
+
+

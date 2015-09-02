@@ -9,12 +9,13 @@
 @stop
 
 @section('main')
+<div class="large-12 medium-12 small-12 columns">
 	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 		@foreach ($jackets as $jacket)
 		  <li class="text-center">
 				@if ($jacket->active)
 					<a href="/jackets/{{{ $jacket->model }}}">
-						<img src="/images/photos/jackets/{{{ $jacket->model }}}/thumbnail.jpg">
+						<img class="responsive-image" src="/images/photos/jackets/{{{ $jacket->model }}}/thumbnail.jpg">
 					</a>
 					<h2>
 						<a href="/jackets/{{{ $jacket->model }}}">
@@ -29,4 +30,6 @@
 		  </li>
 		@endforeach
 	</ul>
+</div>
+
 @stop

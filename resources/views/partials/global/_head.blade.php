@@ -23,4 +23,4 @@
 		<script src="https://cdn.plyr.io/1.3.3/plyr.js"></script>
 	</head>
 
-	<body "@yield('angular_page_controller')">
+	<body "@yield('angular_page_controller')" id="top">

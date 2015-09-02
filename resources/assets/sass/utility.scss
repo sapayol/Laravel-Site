@@ -1,11 +1,19 @@
-// Classes
 .show {
   display: block !important;
 }
+
 .hidden {
-  // display: none !important;
   display: none;
 }
+
 .invisible {
   visibility: hidden;
+}
+
+.centered {
+	width: 60%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }

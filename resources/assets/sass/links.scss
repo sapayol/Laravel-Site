@@ -1,0 +1,16 @@
+a {
+	color: $primary-color;
+	&:hover, &:focus {
+		color: darken($primary-color, 15%);
+	}
+}
+
+a.under-button-link {
+	position: relative;
+	top: -1rem;
+}
+
+a.under-heading-link {
+	margin-top: 0;
+	font-size: .9rem;
+}

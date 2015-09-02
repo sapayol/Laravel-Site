@@ -5,8 +5,7 @@
 @stop
 
 @section('full-width-hero')
-	<div class="homepage-hero-module">
-		<div class="video-container">
+		<div class="hero-video-container">
 			<div class="title-container">
 				<h1 class="hero-text">
 					<span class="line1 thin">Tailor-made</span><br>
@@ -23,7 +22,6 @@
 				<img src="/images/video-posters/hero_short.png" alt="">
 			</div>
 		</div>
-	</div>
 @stop
 
 @section('main')

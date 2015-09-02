@@ -5,7 +5,7 @@
 @stop
 
 @section('main')
-	<section class="large-12 medium-12 small-12 columns inverted-colors">
+	<section class="large-12 medium-12 small-12 columns">
 		<p>Every SAPAYOL leather jacket is made for you, and no one else. We tailor each piece according to your measurements and customizations and then ship it directly from the atelier to your door.</p>
 	</section>
 
@@ -26,7 +26,7 @@
 		<p>You will be able to track your order via express shipping.</p>
 	</section>
 
-	<section class="large-12 medium-12 small-12 columns inverted-colors">
+	<section class="large-12 medium-12 small-12 columns">
 		<article>
 			<h3>Alterations</h3>
 			<p>If your piece needs alteration, you can send it to us. We will not charge for the work, you’ll only have to pay for shipping.</p>
