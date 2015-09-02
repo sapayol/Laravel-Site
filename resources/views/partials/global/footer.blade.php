@@ -1,9 +1,16 @@
-<footer class="footer">
-	<ul>
-		<li><a href="">Email</a> • </li>
-		<li><a href="">Twitter</a> • </li>
-		<li><a href="">GitHub</a> • </li>
-		<li><a href="">CodePen</a></li>
-	</ul>
-	<p class="copyright">&copy;  Dima Markus • All rights reserved.</p>
+<footer class="inverted-colors text-center">
+	<nav class="footer-nav">
+		<ul class="inline-list">
+			<li><a class="underlined" href="/">Home</a></li>
+			<li>•</li>
+			<li><a class="underlined" href="mailto:contact@sapayol.com">Contact Us</a></li>
+			<li>•</li>
+			<li><a class="underlined" href="https://instagram.com/sapayol/">Instagram</a></li>
+		</ul>
+	</nav>
+	<section class="legal">
+		<span class="copyright">&copy; {{{ date('Y') }}} Sapayol. All rights reserved</span><br>
+		<a href="/terms">Terms &amp; Privacy Policy</a>
+	</section>
+	<a href="#top" class="back-to-top-link" title=""> <i class="chevron chevron--top"></i></a>
 </footer>

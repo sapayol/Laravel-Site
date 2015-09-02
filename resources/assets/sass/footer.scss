@@ -1,10 +1,10 @@
 footer {
-	background: $accent-color;
 	a.back-to-top-link {
 		color: $white;
+	  background: $primary-color;
 		display: block;
-		padding-top: 2.5rem;
-		padding-bottom: 2rem;
+		padding-top: 1rem;
+		padding-bottom: .25rem;
 		p {
 			margin-bottom: 0;
 		}
@@ -14,5 +14,26 @@ footer {
 		position: relative;
 		left: 50%;
 		margin-left: -15px;
+	}
+	nav.footer-nav {
+		padding: 1rem 0;
+		ul {
+			display: inline-block;
+			margin: 0 auto;
+			li {
+				margin-left: .8rem;
+			}
+			li:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	.legal {
+		padding: .5rem 0 .8rem 0;
+		a {
+			font-size: .8rem;
+			color: $white;
+			text-decoration: underline;
+		}
 	}
 }
