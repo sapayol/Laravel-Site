@@ -88,10 +88,10 @@
 .flex-video {
   margin-bottom: 1rem; }
 
-main > section {
-  padding-bottom: 1rem;
+main > section, main > article {
+  padding-bottom: 2rem;
   padding-top: 1rem; }
-  main > section:last-child {
+  main > section:last-child, main > article:last-child {
     padding-bottom: 4rem; }
 
 main > section > article {
@@ -3047,6 +3047,9 @@ h1 {
   h1.with-subheading {
     margin-bottom: -0.3rem; }
 
+article p {
+  margin-bottom: .8rem; }
+
 .large-price {
   font-size: 1.5rem; }
 
@@ -3104,19 +3107,20 @@ a.under-heading-link {
   margin: 0 auto; }
 
 .carousel-container {
-  overflow: hidden;
-  height: 30rem; }
+  padding-bottom: 0; }
   .carousel-container .jacket-carousel {
     margin-bottom: 0; }
   .carousel-container .slick-dots {
+    margin-bottom: 0;
     margin-top: 1rem;
     margin-left: 0; }
     .carousel-container .slick-dots li {
       display: inline-block;
-      margin: 1rem .8rem; }
+      margin: 1rem .8rem 0 .8rem; }
       .carousel-container .slick-dots li.slick-active button {
         background: #222222; }
     .carousel-container .slick-dots button {
+      margin-bottom: 0;
       background: none;
       border: 1px solid #222222;
       padding: 5px;
@@ -3278,6 +3282,9 @@ a.under-heading-link {
   font-size: .9rem; }
 #terms-nav .with-nested-list {
   list-style: none; }
+
+.jacket-summary {
+  padding-top: 0; }
 
 
 

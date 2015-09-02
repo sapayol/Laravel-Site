@@ -61,8 +61,8 @@
 				@endif
 			</fieldset>
 
-			<img ng-if="jacket.lining_color == 12"  class="customization-image" src="/images/photos/linings/bemberg_oxford_black_close-up.jpg">
-			<img ng-if="jacket.lining_color == 13" class="customization-image" src="/images/photos/linings/bemberg_twill_bordeaux_close-up.jpg">
+			<img ng-if="jacket.lining_color == 12"  class="customization-image" src="/images/photos/linings/bemberg_oxford_black.jpg">
+			<img ng-if="jacket.lining_color == 13" class="customization-image" src="/images/photos/linings/bemberg_oxford_bordeaux.jpg">
 			<fieldset>
 				<legend>Lining Color</legend>
 				@if ($jacket->lining_colors()->count() > 1)

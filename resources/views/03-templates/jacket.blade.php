@@ -9,13 +9,13 @@
 	@yield('full-width-hero')
 
 	<main class="row">
-		<section class="small-12 medium-12 large-12 columns carousel-container">
+		<section class="small-12 medium-12 large-12 columns carousel-container text-center">
 			<div class="jacket-carousel">
 				@yield('carousel_images')
 			</div>
 		</section>
 
-		<section class="small-12 medium-12 large-12 columns text-center">
+		<section class="small-12 medium-12 large-12 columns text-center jacket-summary">
 			<h1 class="with-subheading">{{{ $jacket->name }}}</h1>
 			<span class="thin large-price">${{{ number_format($jacket->price) }}}<small> USD</small></span>
 			<a href="{!! route('jackets.look', $jacket->model) !!}" class="button black expand call-to-action">

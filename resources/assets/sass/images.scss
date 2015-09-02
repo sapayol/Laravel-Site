@@ -26,22 +26,25 @@
 }
 
 .carousel-container {
-	overflow: hidden;
-	height: 30rem;
+	// overflow: hidden;
+	// height: 30rem;
+	padding-bottom: 0;
 	.jacket-carousel {
 		margin-bottom: 0;
 	}
 	.slick-dots {
+		margin-bottom: 0;
 		margin-top: 1rem;
 		margin-left: 0;
 		li {
 	    display: inline-block;
-	    margin: 1rem .8rem;
+	    margin: 1rem .8rem 0 .8rem;
 	    &.slick-active button {
 				background: $black;
 	    }
 		}
 		button {
+    	margin-bottom: 0;
 			background: none;
 			border: 1px solid $black;
 	    padding: 5px;

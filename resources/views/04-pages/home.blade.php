@@ -27,43 +27,43 @@
 @stop
 
 @section('main')
-	<section class="large-12 medium-12 small-12 columns">
-		<article>
-			<a href="/how-it-works"><img class="responsive-image" src="/images/photos/other/made-to-measure.jpg" alt=""></a>
-			<h2 class="thin">Made-to-Measure</h2>
-			<p>
-				Your jacket is made exclusively for you, based on your measurements. It will fit you perfectly.<br>
-			</p>
-			<a class="underlined" href="/how-it-works">Find Out More</a>
-		</article>
+	<article class="large-12 medium-12 small-12 columns">
+		<a href="/how-it-works"><img class="responsive-image" src="/images/photos/other/made-to-measure.jpg" alt=""></a>
+		<h2 class="thin">Made-to-Measure</h2>
+		<p>
+			Your jacket is made exclusively for you, based on your measurements. It will fit you perfectly.<br>
+		</p>
+		<a class="underlined" href="/how-it-works">Find Out More</a>
+	</article>
 
-		<article>
-			<a href="/who-we-are"><img class="sidekick-image" src="/images/photos/other/master-craftsmanship.jpg" alt=""></a>
-			<h2 class="thin">Master Craftsmanship</h2>
-			<p>Each piece is made at a select workshop, where the same craftsmen and -women have been perfecting their art together for centuries.<br>
-			</p>
-			<a class="underlined" href="/who-we-are">Find Out More</a>
-		</article>
+	<article class="large-12 medium-12 small-12 columns">
+		<a href="/who-we-are"><img class="sidekick-image" src="/images/photos/other/master-craftsmanship.jpg" alt=""></a>
+		<h2 class="thin">Master Craftsmanship</h2>
+		<p>Each piece is made at a select workshop, where the same craftsmen and -women have been perfecting their art together for centuries.<br>
+		</p>
+		<a class="underlined" href="/who-we-are">Find Out More</a>
+	</article>
 
-		<article>
-			<a href="/who-we-are"><img class="sidekick-image" src="/images/photos/other/finest-materials.jpg" alt=""></a>
-			<h2 class="thin">Finest Materials</h2>
-			<p>
-				From the most precious leather down to the zippers and buttons, we obsess over the quality of the materials we use.<br>
-			</p>
-			<a class="underlined" href="/our-leather">Find Out More</a>
-		</article>
+	<article class="large-12 medium-12 small-12 columns">
+		<a href="/who-we-are"><img class="sidekick-image" src="/images/photos/other/finest-materials.jpg" alt=""></a>
+		<h2 class="thin">Finest Materials</h2>
+		<p>
+			From the most precious leather down to the zippers and buttons, we obsess over the quality of the materials we use.<br>
+		</p>
+		<a class="underlined" href="/our-leather">Find Out More</a>
+	</article>
 
-		<article>
-			<a href="/who-we-are"><img class="sidekick-image" src="/images/photos/other/respect-for-nature.jpg" alt=""></a>
-			<h2 class="thin">Respect for People and Nature</h2>
-			<p>
-				A deep concern for work conditions, our environment, and animals guides every decision we take.<br>
-			</p>
-			<a class="underlined" href="/who-we-are">Find Out More</a>
-		</article>
+	<article class="large-12 medium-12 small-12 columns">
+		<a href="/who-we-are"><img class="sidekick-image" src="/images/photos/other/respect-for-nature.jpg" alt=""></a>
+		<h2 class="thin">Respect for People and Nature</h2>
+		<p>
+			A deep concern for work conditions, our environment, and animals guides every decision we take.<br>
+		</p>
+		<a class="underlined" href="/who-we-are">Find Out More</a>
+	</article>
 
+	<div class="large-12 medium-12 small-12 columns">
 		<a href="/jackets" class="button hollow expand">Get a Jacket Now</a>
-	</section>
+	</div>
 
 @stop

@@ -29,8 +29,8 @@
 	margin-bottom: 1rem;
 }
 
-main > section {
-	padding-bottom: 1rem;
+main > section, main > article {
+	padding-bottom: 2rem;
 	padding-top: 1rem;
 	&:last-child {
 		padding-bottom: 4rem;
@@ -49,3 +49,4 @@ main > section > article {
 		margin-bottom: 0;
 	}
 }
+
