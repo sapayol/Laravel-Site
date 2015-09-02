@@ -24,7 +24,7 @@ class UsersController extends Controller {
 		$user = User::find($id);
 		$last_order = $user->unfinishedOrders->last();
 
-		return view('04-pages.coming-soon');
+		return view('pages.coming-soon');
 	}
 
 

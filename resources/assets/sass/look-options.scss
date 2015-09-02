@@ -1,58 +1,81 @@
 .look-options {
-	margin-top: -2rem;
 	padding-bottom: 2rem;
+	h2 {
+		margin-bottom: 2rem;
+	}
+	input[type="radio"] {
+		position: absolute;
+		left: -9999px;
+	}
+	hr {
+		margin: 0 auto;
+		margin-top: .65rem;
+		margin-bottom: 1.35rem;
+		width: 10rem;
+	}
 	fieldset {
 		padding: 0;
 		border: none;
+		text-align: center;
+		margin-top: 0;
 	}
 	legend {
 		font-weight: 100;
 		padding: 0;
 		margin: 0;
-		margin-bottom: .2rem;
+		// margin-bottom: .2rem;
+		margin-bottom: 1rem;
 		line-height: 1;
 	}
-	.button-group {
-		margin-left: .1rem;
-		&>li:first-child .button {
-			border-left: 1px solid $black;
-		}
-	}
+
 	.button[type="submit"] {
 		margin-top: 2rem;
 	}
-	.button:not([type="submit"]) {
-		margin-bottom: 0;
-		border-color: $black;
-    padding: 0.325rem .875rem 0.3875rem .875rem;
+	label:not([type="submit"]) {
+		width: 4.5rem;
+		margin-bottom: .35rem;
+		margin-left: 0;
+		border: none;
+    padding: 0.325rem .375rem 0.3875rem .375rem;
+    margin-right: .075rem;
+    &:hover {
+    	background: none;
+    	border-width: 2px;
+    	color: $black;
+    	top: 0;
+    }
 		&.active {
-			border-color: $black;
-			background: $black;
-			color: $white;
+			border: 2px solid;
 		}
-		&.black, &.brown, &.gray, &.bordeaux, &.silver, &.darkGray, &.gold {
-			border-color: $black;
+		&.black, &.brown, &.gray, &.bordeaux, &.silver, &.graphite, &.gold {
+			border-color: $white;
 		}
 		&.black {
-			border-bottom-color: black;
+			border-color: $black;
 		}
 		&.brown {
-			border-bottom-color: $leather-brown;
+			border-color: $leather-brown;
 		}
 		&.gray {
-			border-bottom-color: mix($grey, white, 75%);
+			border-color: mix($grey, white, 75%);
+		}
+		&.navy {
+			border-color: $navy;
+		}
+		&.olive {
+			border-color: $olive;
 		}
 		&.bordeaux {
-			border-bottom-color: $bordeaux;
+			border-color: $bordeaux;
 		}
 		&.silver {
-			border-bottom-color: $silver;
+			border-color: $silver;
 		}
-		&.darkGray {
-			border-bottom-color: mix($dark-grey, white, 75%);
+		&.graphite {
+			border-color: mix($dark-grey, white, 75%);
 		}
 		&.gold {
-			border-bottom-color: $gold;
+			border-color: $gold;
 		}
 	}
 }

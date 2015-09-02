@@ -18,32 +18,32 @@ class PagesController extends Controller {
 
 	public function comingSoon()
 	{
-		return view('04-pages.coming-soon');
+		return view('pages.coming-soon');
 	}
 
 	public function index()
 	{
-		return view('04-pages.home');
+		return view('pages.home');
 	}
 
 	public function whoWeAre()
 	{
-		return view('04-pages.who-we-are');
+		return view('pages.info.who-we-are');
 	}
 
 	public function howItWorks()
 	{
-		return view('04-pages.how-it-works');
+		return view('pages.info.how-it-works');
 	}
 
 	public function ourLeather(Request $request)
 	{
-		return view('04-pages.our-leather', ['jacket' => $request->jacket]);
+		return view('pages.info.our-leather', ['jacket' => $request->jacket]);
 	}
 
 	public function terms()
 	{
-		return view('04-pages.terms');
+		return view('pages.info.terms');
 	}
 
 }

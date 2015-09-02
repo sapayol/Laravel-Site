@@ -13,14 +13,14 @@ class JacketsController extends Controller {
 	{
 		$jackets = Jacket::orderBy('active', 'DESC')->get();
 
-		return view('04-pages.jackets.index', ['jackets' => $jackets]);
+		return view('pages.jackets.index', ['jackets' => $jackets]);
 	}
 
 	public function show($model)
 	{
 		$jacket = Jacket::where('model', '=', $model)->first();
 
-		return view('04-pages.jackets.' . $model, ['jacket' => $jacket]);
+		return view('pages.jackets.' . $model, ['jacket' => $jacket]);
 	}
 
 	public function look($model)
@@ -29,14 +29,14 @@ class JacketsController extends Controller {
 
 		JavaScript::put(['jacket' => $jacket, 'session' => Session::all()]);
 
-		return view('04-pages.jackets.look', ['jacket' => $jacket]);
+		return view('pages.jackets.look', ['jacket' => $jacket]);
 	}
 
 	public function fit($model, Request $request)
 	{
 		$jacket = Jacket::where('model', '=', $model)->first();
 
-		return view('04-pages.jackets.fit', [
+		return view('pages.jackets.fit', [
 			'jacket'         => $jacket,
 			'leather_type'   => $request->leather_type,
 			'leather_color'  => $request->leather_color,

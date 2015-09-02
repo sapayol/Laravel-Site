@@ -45,7 +45,7 @@ class AuthController extends Controller
             return view('auth.authenticate');
         }
 
-        return view('04-pages.auth.login');
+        return view('pages.auth.login');
     }
 
      /**

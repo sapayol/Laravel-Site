@@ -12,7 +12,7 @@ class OrdersController extends Controller {
 		$order = Order::find($id);
 		JavaScript::put(['jacket' => $order->jacket, 'session' => Session::all()]);
 
-		return view('04-pages.jackets.look', ['jacket' => $order->jacket]);
+		return view('pages.jackets.look', ['jacket' => $order->jacket]);
 	}
 
 
@@ -35,7 +35,7 @@ class OrdersController extends Controller {
 			$new_order = $request->old();
 		}
 
-		return view('04-pages.checkout.continue', ['last_order' => $order, 'new_order' => $new_order]);
+		return view('pages.checkout.continue', ['last_order' => $order, 'new_order' => $new_order]);
 	}
 
 
@@ -80,7 +80,7 @@ class OrdersController extends Controller {
 	public function getFit($id, $step)
 	{
 		$order = Order::find($id);
-		return view('04-pages.fit.' . $step, ['order' => $order, 'step' => $step]);
+		return view('pages.measurement.' . $step, ['order' => $order, 'step' => $step]);
 	}
 
 
@@ -164,7 +164,7 @@ class OrdersController extends Controller {
 			'session' => Session::all()
     ]);
 
-		return view('04-pages.checkout.customer-info', ['order' => $order]);
+		return view('pages.checkout.customer-info', ['order' => $order]);
 	}
 
 
@@ -206,7 +206,7 @@ class OrdersController extends Controller {
 			$order->payment_id = $charge_attempt->id;
 			$order->save();
 
-		  Mail::send('05-emails.receipt', ['order' => $order], function ($message) use ($order) {
+		  Mail::send('emails.receipt', ['order' => $order], function ($message) use ($order) {
         $message->to($order->user->email, $order->user->name);
         $message->from('ediz@sapayol.com');
         $message->subject('Your Receipt!');
@@ -221,7 +221,7 @@ class OrdersController extends Controller {
 
 	public function complete($id) {
 		$order = Order::findOrFail($id);
-		return view('04-pages.checkout.complete', ['order' => $order]);
+		return view('pages.checkout.complete', ['order' => $order]);
 	}
 
 }
