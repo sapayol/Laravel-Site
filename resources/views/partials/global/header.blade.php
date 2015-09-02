@@ -23,9 +23,7 @@
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			<a href="/orders/{{{ $order->id }}}/look" class="underlined">Look</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
-			{{-- <a href="/orders/{{{ $order->id }}}/fit/units" class="underlined">Fit</a> --}}
 			Fit
-			{{-- <span class="chevron chevron--right breadcrumb-chevron"></span> --}}
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 		  {{{ str_replace('_', ' ', $step) }}}
 		@elseif ($action == 'orders.checkout')
