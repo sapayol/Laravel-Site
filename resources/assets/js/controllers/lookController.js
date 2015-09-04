@@ -52,14 +52,6 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
   		});
   }
 
-  resetPassword = function(input) {
-		Auth.reset(input.email)
-  		.then(function(data) {
-  			notifyUser.of(data);
-  			$scope.reset = false;
-  		});
-  }
-
   logout = function () {
 		Auth.logout()
   		.then(function(data) {
@@ -67,5 +59,18 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
   			notifyUser.of('You were logged out');
   		});
   };
+
+  $scope.resetPassword = function() {
+    if ($scope.userInfoForm.email.$valid) {
+      Auth.reset($scope.user.email)
+        .then(function(data) {
+          notifyUser.of(data);
+          $scope.reset = false;
+        });
+    } else {
+      $scope.showUserErorrs = true;
+    }
+  }
+
 
 }]);
