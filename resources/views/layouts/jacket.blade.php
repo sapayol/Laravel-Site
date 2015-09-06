@@ -6,10 +6,9 @@
 	@include('partials.jacket.image-carousel')
 	@include('partials.jacket.summary')
 	@include('partials.jacket.video')
-
+	@include('partials.jacket.video-measurements')
 	@yield('main')
-
-	@include('partials.jacket.description')
+	@include('partials.jacket.cta')
 </main>
 
 @include('partials.global.footer')

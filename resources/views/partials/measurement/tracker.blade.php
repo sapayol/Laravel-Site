@@ -1,5 +1,5 @@
-<section class="large-12 medium-12 small-12 columns inverted-colors">
-	<h3 class="text-center">Your Measurements</h3>
+<div class="large-12 medium-12 small-12 columns panel">
+	<h4 class="text-center">Your Measurements</h4>
 	<ul class="no-bullet value-list">
 		<li>
 			<span class="list-key">Your Height</span>
@@ -116,4 +116,4 @@
 			@endif
 		</form>
 	</div>
-</section>
+</div>

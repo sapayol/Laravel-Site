@@ -5,5 +5,5 @@
 @stop
 
 @section('additional_copy')
-	<p>How tall are you?</p>
+	<p><br>How tall are you?</p>
 @stop

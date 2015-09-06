@@ -5,6 +5,12 @@ input[type="search"], input[type="tel"], input[type="color"] {
 	font-size: 24px;
 }
 
+form {
+	span.alert {
+		color: $alert-color;
+	}
+}
+
 label.text-input-label {
 	display: inline-block;
 	position: relative;

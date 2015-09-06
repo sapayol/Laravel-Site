@@ -3,7 +3,9 @@
 @include('partials.global.header')
 
 <main class="row measurement-entry" ng-controller="measurementCtrl" ng-init="init('{{{ $step }}}', '{{{ $order->userMeasurements->units }}}' {{{ $order->userMeasurements->$step ? ',' . $order->userMeasurements->$step : '' }}} )">
-	@include('partials.measurement.guide')
+	@if ($step != 'height')
+		@include('partials.measurement.guide')
+	@endif
 	@include('partials.measurement.form')
 	@include('partials.measurement.tracker')
 </main>

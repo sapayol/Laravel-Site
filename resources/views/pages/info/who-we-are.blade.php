@@ -7,18 +7,17 @@
 @section('main')
 
 	<section class="large-12 medium-12 small-12 columns">
-		<p>Something about the way you’re supposed to do things doesn't feel right. The instructions you’re given don’t produce the results you have in mind. And while this might be the shortest path, it’s not the most exciting.</p>
-		<p>You’re curious about what’s behind that door.<br>
-		You don’t back down.<br>
-		You approach it from a different angle.<br>
-		You find your own way.</p>
-	</section>
-	<section class="large-12 medium-12 small-12 columns">
+		<p>Something about the way you’re supposed to do things doesn’t feel right. And the path you're being shown seems to be the shortest, but not very exciting.</p>
+		<p>
+			You want to know what’s behind that door.<br>
+			You approach things from a different angle.<br>
+			You find your own way.
+		</p>
 		<p class="primary-color-text">
 			<strong>Regular doesn’t fit you.</strong>
 			We understand.
 		</p>
-		<p>It’s the same urge that motivates us to design leather jackets without compromises, to create a company that does things the right way.</p>
+		<p>It’s the same urge that motivates us to design leather jackets without compromises. To create a company that does things the right way. To build a community of the curious.</p>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns inverted-colors definition-section">
@@ -29,44 +28,40 @@
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns">
-		<h2 class="thin">Timeless style</h2>
+		<h2 class="thin">We tailor minimalistic leather jackets to your individual measurements.</h2>
 		<p>We take leather jacket classics and reinterpret them according to our design philosophy:</p>
 		<ul>
 			<li>Forever modern</li>
 			<li>Essential</li>
 			<li>Functional</li>
 			<li>Honest</li>
-			</ul>
-	</section>
-
-	<section class="large-12 medium-12 small-12 columns">
-		<h2 class="thin">Perfectly fitted, tailored to your taste</h2>
+		</ul>
 		<p>Every single jacket is made according to your individual measurements. You can tell us if you like your sleeves a little longer or shorter, or any other preference.</p>
 		<p>You can also choose from a selection of lining and hardware colors.</p>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns">
-		<h2 class="thin">Craftsmanship and innovation</h2>
+		<h2 class="thin">Our jackets are made by master tailors.</h2>
 		<p>Know-how, skill, and passion are the fuel of great craftsmen. The studio we work with exclusively is an infinite reserve of all three components. A group of five artisans has been working together since 1998 – the core of it since 1980 – dedicated to producing finest leather garments and pushing their art in every aspect.</p>
 		<p>But good things take time, even after this many years of practice. To meet our quality requirements, four workers will be working on your jacket during seven hours to create the finished product.</p>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns">
-		<h2 class="thin">Materials</h2>
-		<p>We only work with the most luxurious lamb leather available: full-grain, vegetable tanned (chrome-free), drum dyed, with a semi-aniline finish. Our tannery uses the best components and takes the time that’s necessary to produce extraordinary, long-lasting leather that becomes even more beautiful with age. From that leather, the most flawless is set aside for us.</p>
+		<h2 class="thin">Finding the best leather and materials is our obsession.</h2>
+		<p>We only work with the most exclusive leather available: full-grain, vegetable tanned (chrome-free), and semi-aniline dyed. Our tannery uses the best components and takes the time that’s necessary to produce extraordinary, long-lasting leather that becomes even more beautiful with age. From that leather, the most flawless is set aside for us.</p>
 		<a href="/our-leather" class="underlined">More about our leather</a><br><br>
-		<p>Our care about the smallest details carries over to all other materials we use. Our zippers and buttons (YKK Excella) are extremely reliable and at the same time polished down to every single tooth, finished with scratch-resistant, elegant coatings. </p>
+		<p>Our care about the smallest details carries over to all other materials we use. Our zippers and buttons (YKK Excella) are extremely reliable and at the same time polished down to every single tooth, finished with scratch-resistant, elegant coatings.</p>
 		<p>The lining is made out of a smooth Bemberg Cupro Twill with the exception of the pockets, which are lined with a more robust Tencel fabric.</p>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns">
-		<h2 class="thin">A New York City company, with production in Istanbul, Turkey</h2>
+		<h2 class="thin">New York City is our home. Our jackets are tailored in Istanbul, Turkey.</h2>
 		<p>SAPAYOL is based and incorporated in New York City. This city fuels us with energy and inspiration.</p>
 		<p>Our jackets are made in Istanbul, Turkey. The long textile and leather tradition in the region makes it possible to buy top-grade skins, work with a world-class tannery, have our jackets tailored by master craftsmen and source all other materials within a 250 mile radius. In addition to that, we can work with supply partners that pay above-average wage.</p>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns">
-		<h2 class="thin">Doing the Right Thing</h2>
+		<h2 class="thin">Every decision is guided by the greatest respect for people, our environment, and animals.</h2>
 		<p>We believe that everyone we work with and all their employees should feel respected and valued for their work. Not only will that lead to the best possible product, we just don’t like any other type of relationship. That’s why we’ve visited all our supply partners and made sure that their workers have safe and healthy work conditions. We’re proud to know that workers get above-average pay and social insurance.</p>
 		<p>Just as importantly, we see ourselves as part of one big organism. It’s our responsibility – and also in our best interest – to honor and care for our environment and animals. We’re pushing every aspect of our company in that regard.</p>
 		<p>All skins come from Turkey, where animals are being herded in traditional ways and get ample movement, sunlight, and natural nutrition.</p>

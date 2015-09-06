@@ -2486,6 +2486,9 @@ input[type="week"], input[type="number"], input[type="email"], input[type="url"]
 input[type="search"], input[type="tel"], input[type="color"] {
   font-size: 24px; }
 
+form span.alert {
+  color: #B02428; }
+
 label.text-input-label {
   display: inline-block;
   position: relative;
@@ -2635,17 +2638,18 @@ fieldset {
   font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
-  border: 1px solid transparent;
+  border: 1px solid white;
   border-bottom: 6px solid #B02428;
   border-radius: 0;
   color: white;
   background: #222222;
   text-transform: uppercase;
-  letter-spacing: 1.2; }
+  letter-spacing: 1.2;
+  z-index: 2000; }
   .button .chevron, a.button .chevron, button.button .chevron {
     border-color: white; }
   .button:hover, .button:active, .button:focus, a.button:hover, a.button:active, a.button:focus, button.button:hover, button.button:active, button.button:focus {
-    background: transparent;
+    background: white;
     border-color: #222222;
     border-bottom: 6px solid #B02428;
     color: #222222; }
@@ -2653,7 +2657,7 @@ fieldset {
       border-color: #222222; }
   .button.hollow, a.button.hollow, button.button.hollow {
     color: #222222;
-    background: transparent;
+    background: white;
     border: 1px solid #222222;
     border-bottom: 6px solid #B02428; }
     .button.hollow .chevron, a.button.hollow .chevron, button.button.hollow .chevron {

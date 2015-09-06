@@ -4,6 +4,7 @@
 </form>
 <form ng-submit="submitMeasurement('measurements[{{{ $step }}}]')" name="measurementForm" class="large-12 medium-12 small-12 columns">
 	@if ($step == 'height' && $order->userMeasurements->units == 'in')
+	@yield('additional_copy')
 	<fieldset>
 		<legend>Height</legend>
 		<label for="height-feet" class="text-input-label">
