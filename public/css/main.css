@@ -2320,6 +2320,11 @@ Copyright (c) 2015 Daniel Eden
   min-width: 3.8rem; }
 .value-list.tight-list .list-key {
   min-width: 4.5rem; }
+@media only screen and (max-width: 320px) {
+  .value-list.tight-list {
+    font-size: .9rem; }
+    .value-list.tight-list .list-key {
+      min-width: 3.5rem; } }
 
 .switch.large label, .switch.large input:checked + label {
   background-color: transparent;
@@ -2933,8 +2938,9 @@ article p {
     nav.primary-nav .menu-button {
       color: #222222;
       border-bottom: 2px solid #B02428;
-      font-size: 1.25rem;
-      line-height: 1; }
+      font-size: rem;
+      line-height: 1;
+      font-weight: 400; }
       nav.primary-nav .menu-button.open {
         border: none; }
     nav.primary-nav ul {
@@ -2949,7 +2955,7 @@ article p {
       color: #222222;
       border-bottom: 2px solid #B02428;
       font-size: 1rem;
-      font-weight: 500;
+      font-weight: 200;
       text-transform: uppercase;
       margin-bottom: .5rem; } }
 @media only screen and (min-width: 30.063em) {
@@ -2970,7 +2976,8 @@ article p {
   list-style: none; }
 
 .jacket-summary {
-  padding-top: 0; }
+  padding-top: 0;
+  padding-bottom: 0; }
 
 
 
