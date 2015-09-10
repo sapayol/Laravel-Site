@@ -18,6 +18,7 @@ $navy:      navy;
 $bordeaux:  #DE9CCF;
 $grey:      #606060;
 $silver:    #d9d9d9;
+$turquoise: #00d2d2;
 $black:     #222222;
 // $white:     #fffcfb;
 $white:     white;
@@ -56,6 +57,7 @@ $light-white:     mix($white,     white, 50%);
 //===========================================================================//
 $primary-color:         $red;
 $info-color:            $baby-blue;
+$highlight-color:       $turquoise;
 $accent-color:          $gold;
 
 $checkout-breadcrumbs-bg: $white;

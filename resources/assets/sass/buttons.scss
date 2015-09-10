@@ -73,6 +73,14 @@
 			color: $white;
 		}
 	}
+	&.highlight-color {
+		background: $highlight-color;
+		color: $white;
+		&:hover {
+			background: $black;
+			color: $white;
+		}
+	}
 }
 
 .call-to-action {

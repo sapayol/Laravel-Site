@@ -2,6 +2,7 @@ html, body, p {
 	font-size: 20px;
 	font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
 	font-weight: 200;
+	line-height: 1.4;
 }
 
 small {
@@ -72,4 +73,8 @@ article p {
 
 .primary-color-text {
 	color: $primary-color;
+}
+
+hr.wide {
+	border-width: 9px;
 }

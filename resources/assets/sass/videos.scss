@@ -14,13 +14,14 @@
   .player-controls {
     text-align: left;
     padding-top: 2px;
+    box-shadow: none;
   }
   .player-controls-right {
     display: inline-block;
   }
   .player-controls button:hover {
     color: $white;
-    background: #B02428;
+    background: $primary-color;
     border-bottom: 3px solid $black;
   }
   .player-controls button {
@@ -28,10 +29,10 @@
     border: 1px solid $black;
     border-radius: 0;
     color: black;
-    border-bottom: 3px solid #B02428;
+    border-bottom: 3px solid $primary-color;
   }
   .player-progress-played[value] {
-    color: #B02428;
+    color: $primary-color;
   }
 }
 
