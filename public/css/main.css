@@ -2794,6 +2794,9 @@ article p {
 hr.wide {
   border-width: 9px; }
 
+hr.thin {
+  border-width: 1px; }
+
 .sidekick-image {
   margin-bottom: 1rem; }
 

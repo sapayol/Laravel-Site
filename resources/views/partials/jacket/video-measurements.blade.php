@@ -1,6 +1,6 @@
 
-<div class="large-12 medium-12 small-12 columns text-center">
-	<a class="video-caption underlined" ng-show="!measurementsVisible" ng-click="measurementsVisible = !measurementsVisible">Measurements Seen In the Video </a>
+<div class="large-12 medium-12 small-12 columns">
+	<a class="video-caption underlined" ng-show="!measurementsVisible" ng-click="measurementsVisible = !measurementsVisible">Measurements in the images &amp; video </a>
 </div>
 
 <section ng-show="measurementsVisible" class="animated slideInDown">
