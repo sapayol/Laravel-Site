@@ -10,6 +10,14 @@
 				<li><small class="list-key">{{{ ucwords(str_replace('_', ' ', $attribute->type)) }}}</small> {{{ ucwords($attribute->name) }}} </li>
 			@endforeach
 		</ul>
+		<ul class="no-bullet value-list">
+		  <?php $measurements = ['height', 'half_shoulder', 'back_width', 'chest' , 'stomach' , 'back_length', 'waist', 'arm', 'biceps'];	?>
+		  @foreach ($measurements as $measurement)
+			  @if ($last_order->userMeasurements->$measurement != null)
+					<li><small class="list-key">{{{ ucfirst(str_replace('_', ' ', $measurement)) }}}</small>  {{{ $last_order->userMeasurements->$measurement }}} <small>  {{{ $last_order->userMeasurements->units }}}</small></li>
+			  @endif
+			@endforeach
+		</ul>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns">
@@ -31,7 +39,7 @@
 			<input type="submit" class="button expand hollow"       value="Start a New Order">
 			<label for="retain_measurements">
 				<input type="checkbox" name="retain_measurements" id="retain_measurements" checked="true">
-				Carry over the measurements I already took
+				Use the measurements from my last order
 			</label>
 		</form>
 	</section>

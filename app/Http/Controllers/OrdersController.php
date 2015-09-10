@@ -45,9 +45,9 @@ class OrdersController extends Controller {
 		$last_order = $user->unfinishedOrders->last();
 		$new_order = $request->input();
 
-		if ($last_order && $last_order->userMeasurements) {
-			return redirect()->route('orders.show', ['id' => $last_order->id])->withInput();
-		}
+		// if ($last_order && $last_order->userMeasurements) {
+		// 	return redirect()->route('orders.show', ['id' => $last_order->id])->withInput();
+		// }
 
 		$jacket = Jacket::where('model', '=', $request->model)->first();
 		$order  = Order::create(array(
@@ -63,6 +63,21 @@ class OrdersController extends Controller {
 			$order->attributes()->attach($attribute);
 		}
 
+		$step = 'units';
+
+		if ($last_order && $last_order->userMeasurements) {
+			$old_measurements = $last_order->userMeasurements->toArray();
+			unset($old_measurements['id']);
+			unset($old_measurements['created_at']);
+			unset($old_measurements['updated_at']);
+			Measurement::create(array_merge($old_measurements, ['order_id' => $order->id]));
+			if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
+        Session::flash('message', "Looks like we still don't have some of your measurements. Please enter the rest for a perfect fit.");
+				return redirect()->route('orders.fit', [$order->id, $incomplete_measurements[0]]);
+			}
+		}
+
+
 		return redirect()->route('orders.fit', [$order->id, 'units']);
 	}
 
@@ -72,12 +87,12 @@ class OrdersController extends Controller {
 		$order = Order::find($id);
 		$order->status = 'dropped';
 		$order->save();
-
+		dd($request);
 		return $this->store($request);
 	}
 
 
-	public function getFit($id, $step)
+	public function getFit($id, $step = null)
 	{
 		$order = Order::find($id);
 		return view('pages.measurement.' . $step, ['order' => $order, 'step' => $step]);
