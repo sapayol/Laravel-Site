@@ -1,4 +1,4 @@
-<div class="large-12 medium-12 small-12 columns panel">
+<div class="large-12 medium-12 small-12 columns panel measurement-tracker">
 	<h4 class="text-center">Your Measurements</h4>
 	<ul class="no-bullet value-list">
 		<li>
