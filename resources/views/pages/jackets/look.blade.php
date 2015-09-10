@@ -49,7 +49,7 @@
 			<img ng-if="jacket.hardware_color == 10" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-graphite.jpg">
 			<img ng-if="jacket.hardware_color == 11" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-gold.jpg">
 			<fieldset>
-				<legend>Hardware Color</legend>
+				<legend>Zipper & Button Color</legend>
 				@if ($jacket->hardware_colors()->count() > 1)
 					@foreach ($jacket->hardware_colors() as $hardware_color)
 						<label class="button tiny hollow {{{ camel_case($hardware_color->name) }}}" ng-class="{active: jacket.hardware_color == '{{{ $hardware_color->id }}}' }">{{{ $hardware_color->name }}}
@@ -89,12 +89,11 @@
 
 	<section class="large-12 medium-12 small-12 columns">
 		@if (Auth::guest())
-			<p>Enter an email address and choose a password to continue. It lets us save your design choices and body measurements.</p>
-			<p>We don’t spam or share your information.</p>
-			<p>Use your existing credentials if you've already created an account.</p>
+			<p><strong>Enter an email address and choose a password to continue.</strong><br> It lets us save your design choices and body measurements. <br> <br>Use your existing credentials if you've already created an account.</p>
+			<p><em>We don’t spam or share your information.</em></p>
 			@include('partials.checkout.user-registration-form')
 		@elseif (Auth::user()->unfinishedOrders()->count() > 0)
-			<p>Looks like you've started an order as <strong>{{{ Auth::user()->email }}}</strong></p>
+			<p>Looks like you're logged in as <strong>{{{ Auth::user()->email }}}</strong></p>
 			<div class="text-center">
 				<a href="" ng-click="proceedToOrder()" class="button expand">Continue Your Order</a>
 				<p>or</p>

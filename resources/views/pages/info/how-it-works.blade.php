@@ -11,7 +11,6 @@
 
 	<section class="large-12 medium-12 small-12 columns">
 		<h2>Order Process</h2>
-		<p><strong>The following is kind of a process overview / flow chart, with pictograms to be added</strong></p>
 		<h3>1. Choose your model</h3>
 		<h3>2. Customize it</h3>
 		<p>For every model, you can choose hardware and lining colors.</p>
@@ -48,5 +47,6 @@
 			<p>All our jackets come with a 1 year warranty against defects in materials or workmanship. Contact us to fix any issues. We will pay for shipping.</p>
 			<a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>
 		</article>
+		<a href="/jackets" class="button call-to-action expand">See Our Jackets</a>
 	</section>
 @stop
