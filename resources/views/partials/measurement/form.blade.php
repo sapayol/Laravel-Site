@@ -19,21 +19,16 @@
 	@else
 	<label for="{{{ $step }}}" class="text-input-label">
 		<span class="label-title">@yield('title')</span>
-		<?php $min = config('measurements.' . $step . '.min.' . $order->userMeasurements->units); ?>
-		<?php $max = config('measurements.' . $step . '.max.' . $order->userMeasurements->units); ?>
-		<input name="measurements[{{{ $step }}}]" id="{{{ $step }}}" type="number" min="{{{ $min }}}" max="{{{ $max }}}" placeholder="00.00" ng-maxlength="7" step="0.01" ng-model="measurement" required ng-change="change(measurement)" ng-value="{{{ $order->userMeasurements->$step }}}">
+		<input name="measurements[{{{ $step }}}]" id="{{{ $step }}}" type="number" placeholder="00.00" ng-maxlength="7" step="0.01" ng-model="measurement" required ng-change="change(measurement)" ng-value="{{{ $order->userMeasurements->$step }}}">
 		<span class="input-units">{{{ $order->userMeasurements->units }}}</span>
 	</label>
 	<br><br>
 	<div class="alert-box info" data-alert  ng-if="measurementFraction.length > 0">
 		We will round this to <strong>@{{ measurementFraction }}</strong> <small>{{{ $order->userMeasurements->units }}}</small>
 	</div>
-	<div class="alert-box alert animated shake" data-alert ng-if="displayMinMaxError">
-		{{{ ucwords(str_replace('_', ' ', $step)) }}} should be between <strong>{{{ $min }}}</strong>  and <strong>{{{ $max }}}</strong> <small>{{{ $order->userMeasurements->units }}}</small>
-	</div>
 	@endif
 	<div class="text-center">
-		<button type="button" ng-click="submitMeasurement('measurements[{{{ $step }}}]')" class="black button expand">Submit 	Measurement <span class="chevron chevron--right"></span></button>
+		<button type="button" ng-click="submitMeasurement('measurements[{{{ $step }}}]')" class="black button expand">Submit Measurement <span class="chevron chevron--right"></span></button>
 		<a class="under-button-link underlined">Order Now, Measure Later</a>
 	</div>
 </form>

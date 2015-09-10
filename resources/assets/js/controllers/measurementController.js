@@ -38,9 +38,9 @@ measurementController.controller('measurementCtrl', ['$scope', '$timeout', funct
 	 	if (typeof(measurement) !== 'undefined' ) {
 			result = Math.round( measurement * 1e2 ) / 1e2;
 			$scope.measurement = result;
-			resultEight = Math.round(result * 8) / 8;
-			if (getFractionFromDecimal(resultEight) !== '') {
-				$scope.measurementFraction = getFractionFromDecimal(resultEight);
+			decimal = Math.round(result * 8) / 8;
+			if (getFractionFromDecimal(decimal) !== '') {
+				$scope.measurementFraction = getFractionFromDecimal(decimal);
 			};
 		} else {
 			$scope.measurementFraction = null;
