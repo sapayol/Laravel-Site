@@ -2373,6 +2373,9 @@ Copyright (c) 2015 Daniel Eden
   display: inline-block;
   width: 38%; }
 
+.measurement-tracker {
+  margin-top: 1rem; }
+
 header {
   border-bottom: 1px solid #e2e2e2; }
   header a {
@@ -2698,6 +2701,12 @@ fieldset {
     .button.inverted-colors:hover, a.button.inverted-colors:hover, button.button.inverted-colors:hover {
       background: #222222;
       color: white; }
+  .button.highlight-color, a.button.highlight-color, button.button.highlight-color {
+    background: #00d2d2;
+    color: white; }
+    .button.highlight-color:hover, a.button.highlight-color:hover, button.button.highlight-color:hover {
+      background: #222222;
+      color: white; }
 
 .call-to-action {
   margin: 2rem 0 1.25rem 0; }
@@ -2726,7 +2735,8 @@ a.under-heading-link {
 html, body, p {
   font-size: 20px;
   font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
-  font-weight: 200; }
+  font-weight: 200;
+  line-height: 1.4; }
 
 small {
   font-size: 70%; }
@@ -2781,6 +2791,9 @@ article p {
 .primary-color-text {
   color: #B02428; }
 
+hr.wide {
+  border-width: 9px; }
+
 .sidekick-image {
   margin-bottom: 1rem; }
 
@@ -2816,9 +2829,38 @@ article p {
       height: 5px;
       width: 5px;
       border-radius: 100%; }
+      .carousel-container .slick-dots button:focus {
+        outline: none; }
+  .carousel-container .slick-arrow {
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: transparent;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-width: 1px;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    z-index: 1; }
+    .carousel-container .slick-arrow:focus {
+      outline: none; }
+  .carousel-container .slick-next {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    right: 0; }
+  .carousel-container .slick-prev {
+    -webkit-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+            transform: rotate(225deg); }
 
 .jacket-placeholder {
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  height: 15rem; }
 
 .player {
   z-index: 2000;
@@ -2834,7 +2876,8 @@ article p {
     margin-right: 1rem; }
   .player .player-controls {
     text-align: left;
-    padding-top: 2px; }
+    padding-top: 2px;
+    box-shadow: none; }
   .player .player-controls-right {
     display: inline-block; }
   .player .player-controls button:hover {
@@ -2938,9 +2981,9 @@ article p {
     nav.primary-nav .menu-button {
       color: #222222;
       border-bottom: 2px solid #B02428;
-      font-size: rem;
+      font-size: 1rem;
       line-height: 1;
-      font-weight: 400; }
+      font-weight: 200; }
       nav.primary-nav .menu-button.open {
         border: none; }
     nav.primary-nav ul {
@@ -2950,7 +2993,7 @@ article p {
       nav.primary-nav li.active a {
         display: none; }
       nav.primary-nav li.main-item a {
-        border-color: #57ca66; }
+        border-color: #00d2d2; }
     nav.primary-nav a {
       color: #222222;
       border-bottom: 2px solid #B02428;

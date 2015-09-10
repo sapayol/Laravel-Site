@@ -17,7 +17,7 @@
 			$(document).ready(function(){
 			  $('.jacket-carousel').slick({
           dots: true,
-			  	arrows: false,
+			  	arrows: true,
 			  	mobileFirst: true,
           focusOnSelect: false
 			  });
