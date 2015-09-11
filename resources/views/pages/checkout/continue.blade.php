@@ -2,7 +2,7 @@
 
 @section('main')
 	<section class="large-12 medium-12 small-12 columns">
-		<p>Looks like you already have an order started</p>
+		<p>Looks like you were in the middle of an order</p>
 		<ul class="no-bullet value-list">
 			<li><small class="list-key">Date Started </small>  {{{ date('M d, Y', strtotime($last_order->created_at)) }}} </li>
 			<li><small class="list-key">Jacket Name  </small>  {{{ $last_order->jacket->name }}} </li>
@@ -12,10 +12,22 @@
 		</ul>
 		<ul class="no-bullet value-list">
 		  <?php $measurements = ['height', 'half_shoulder', 'back_width', 'chest' , 'stomach' , 'back_length', 'waist', 'arm', 'biceps'];	?>
-		  @foreach ($measurements as $measurement)
-			  @if ($last_order->userMeasurements->$measurement != null)
-					<li><small class="list-key">{{{ ucfirst(str_replace('_', ' ', $measurement)) }}}</small>  {{{ $last_order->userMeasurements->$measurement }}} <small>  {{{ $last_order->userMeasurements->units }}}</small></li>
-			  @endif
+			@foreach ($measurements as $measurement)
+				@if ($measurement == 'note')
+					<li><br></li>
+				@endif
+				<li>
+					<small class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>
+					@if ($last_order->userMeasurements->$measurement)
+						<span class="list-value">
+							@if ($last_order->userMeasurements->units == 'in')
+								<strong decimal-to-fraction="{{{ $last_order->userMeasurements->$measurement }}}">{{{ $last_order->userMeasurements->$measurement }}}</strong> "
+							@else
+								<strong>{{{ $last_order->userMeasurements->$measurement != round($last_order->userMeasurements->$measurement) ?  round($last_order->userMeasurements->$measurement, 1) : round($last_order->userMeasurements->$measurement) }}}</strong> cm
+							@endif
+						</span>
+					@endif
+				</li>
 			@endforeach
 		</ul>
 	</section>

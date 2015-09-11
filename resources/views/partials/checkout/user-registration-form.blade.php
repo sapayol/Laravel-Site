@@ -6,7 +6,7 @@
 
 	<label for="name" ng-hide="resetMode">Password
 		<span class="right alert" ng-if="showUserErorrs && userInfoForm.name.$invalid">Required</span>
-		<input name="name" type="password" ng-model="user.password" ng-required="true" ng-disabled="userInfoSubmitted">
+		<input name="password" type="password" ng-model="user.password" ng-required="true" ng-disabled="userInfoSubmitted">
 	</label>
 
 	<div class="text-center">

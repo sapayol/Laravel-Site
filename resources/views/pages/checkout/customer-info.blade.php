@@ -14,7 +14,7 @@
 		@include('partials.checkout.address-form')
 	</section>
 
-	<section class="large-12 medium-12 small-12 columns inverted-colors" ng-show="addressSubmitted" id="payment-info">
+	<section class="large-12 medium-12 small-12 columns" ng-show="addressSubmitted" id="payment-info">
 		<h2 class="text-center thin">Payment Info</h2>
 		@include('partials.checkout.payment-info-form')
 	</section>
@@ -24,12 +24,12 @@
 		@include('partials.checkout.order-summary')
 	</section>
 
-	<section class="large-12 medium-12 small-12 columns" ng-show="paymentInfoSubmitted">
+	<section class="large-12 medium-12 small-12 columns text-center" ng-show="paymentInfoSubmitted">
 		<form action="/orders/{{{ $order->id}}}/process" method="POST">
 			<input type="hidden" name="_token"         value="{!! csrf_token() !!}">
 			<input type="hidden" name="stripe_token"   value="@{{ stripe_token }}">
 			<input type="submit" class="button expand" value="Confirm &amp; Submit Order">
-			<a href="/terms" class="under-button-link">Terms Of Service</a>
+			<a href="/terms" class="under-button-link underlined">Terms Of Service</a>
 		</form>
 	</section>
 @stop

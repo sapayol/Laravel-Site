@@ -11,6 +11,9 @@
 		min-width: 4.5rem;
 	}
 	@media only screen and (max-width: 320px) {
+		.list-key {
+			min-width: 5rem;
+		}
 		&.tight-list {
 			.list-key {
 				min-width: 3.5rem;
@@ -82,4 +85,16 @@
 
 .measurement-tracker {
 	margin-top: 1rem;
+}
+
+.alert.floating {
+	position: absolute;
+	z-index:  9999;
+	ul {
+		margin-bottom: 0;
+	}
+	a.close {
+		opacity: 0.7;
+		top: 1rem;
+	}
 }

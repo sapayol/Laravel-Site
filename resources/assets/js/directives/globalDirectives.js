@@ -52,6 +52,12 @@ globalDirectives.directive('decimalToFraction', function() {
 			fraction  = userValueToFraction(userValue);
 			result = fraction ? parseInt(userValue) + " " + fraction : parseInt(userValue);
 			$elm[0].textContent = result;
+			if (fraction) {
+				$elm[0].innerHTML = parseInt(userValue) + " <small>" + fraction + "</small>";
+			} else {
+				$elm[0].innerHTML = parseInt(userValue);
+			};
+			result = fraction ? parseInt(userValue) + " " + fraction : parseInt(userValue);
     }
   }
 });

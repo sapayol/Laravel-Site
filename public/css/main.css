@@ -2321,6 +2321,8 @@ Copyright (c) 2015 Daniel Eden
 .value-list.tight-list .list-key {
   min-width: 4.5rem; }
 @media only screen and (max-width: 320px) {
+  .value-list .list-key {
+    min-width: 5rem; }
   .value-list.tight-list {
     font-size: .9rem; }
     .value-list.tight-list .list-key {
@@ -2375,6 +2377,15 @@ Copyright (c) 2015 Daniel Eden
 
 .measurement-tracker {
   margin-top: 1rem; }
+
+.alert.floating {
+  position: absolute;
+  z-index: 9999; }
+  .alert.floating ul {
+    margin-bottom: 0; }
+  .alert.floating a.close {
+    opacity: 0.7;
+    top: 1rem; }
 
 header {
   border-bottom: 1px solid #e2e2e2; }
@@ -2698,7 +2709,7 @@ fieldset {
   .button.inverted-colors, a.button.inverted-colors, button.button.inverted-colors {
     background: white;
     color: #222222; }
-    .button.inverted-colors:hover, a.button.inverted-colors:hover, button.button.inverted-colors:hover {
+    .button.inverted-colors:hover, .button.inverted-colors:active, .button.inverted-colors:focus, a.button.inverted-colors:hover, a.button.inverted-colors:active, a.button.inverted-colors:focus, button.button.inverted-colors:hover, button.button.inverted-colors:active, button.button.inverted-colors:focus {
       background: #222222;
       color: white; }
   .button.highlight-color, a.button.highlight-color, button.button.highlight-color {

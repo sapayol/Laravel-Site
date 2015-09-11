@@ -1,7 +1,7 @@
-<?php $measurements = ['height', 'half_shoulder', 'back_width', 'chest', 'stomach', 'back_length', 'waist', 'arm', 'biceps', 'note'];  ?>
 <div class="large-12 medium-12 small-12 columns panel measurement-tracker">
 	<h4 class="text-center">Your Measurements</h4>
 	<ul class="no-bullet value-list">
+	<?php $measurements = ['height', 'half_shoulder', 'back_width', 'chest', 'stomach', 'back_length', 'waist', 'arm', 'biceps', 'note'];  ?>
 		@foreach ($measurements as $measurement)
 			@if ($measurement == 'note')
 				<li><br></li>
@@ -10,12 +10,12 @@
 				<span class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</span>
 				@if ($order->userMeasurements->$measurement)
 					<span class="list-value">
-					@if ($order->userMeasurements->units == 'in')
-						<strong decimal-to-fraction="{{{ $order->userMeasurements->$measurement }}}">{{{ $order->userMeasurements->$measurement }}}</strong>
-					@else
-						<strong>{{{ $order->userMeasurements->$measurement }}}</strong>
-					@endif
-					{{{ $order->userMeasurements->units }}}</span>
+						@if ($order->userMeasurements->units == 'in')
+							<strong decimal-to-fraction="{{{ $order->userMeasurements->$measurement }}}">{{{ $order->userMeasurements->$measurement }}}</strong> "
+						@else
+							<strong>{{{ $order->userMeasurements->$measurement != round($order->userMeasurements->$measurement) ?  round($order->userMeasurements->$measurement, 1) : round($order->userMeasurements->$measurement) }}}</strong> cm
+						@endif
+					</span>
 					<a class="underlined" href="/orders/{{{ $order->id }}}/fit/{{{ $measurement }}}" title=""><span>Change</span></a>
 				@else
 					<span class="list-value"></span>

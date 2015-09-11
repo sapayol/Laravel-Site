@@ -7,7 +7,7 @@
 		<a href="/jackets/{{{ $order->jacket->model }}}/look" class="right underlined">Change</a>
 		<div class="clearfix"></div>
 		<ul class="no-bullet value-list left">
-			<li><small class="list-key">Jacket </small><strong>{{{ $order->jacket->name }}}	</strong></li>
+			<li><small class="list-key">Jacket Model </small><strong>{{{ $order->jacket->name }}}	</strong></li>
 			<li><small class="list-key">Leather Type </small><strong>{{{ ucfirst($order->leather_type()->name)  }}}	</strong></li>
 			<li><small class="list-key">Leather Color </small><strong>{{{ ucfirst($order->leather_color()->name) }}}	</strong></li>
 			<li><small class="list-key">Lining Color </small><strong>{{{ ucfirst($order->lining_color()->name) }}}	</strong></li>
@@ -19,58 +19,28 @@
 		<h3 class="thin left">Fit</h3>
 		<div class="clearfix"></div>
 		<ul class="no-bullet value-list left">
-			<li>
-				<small class="list-key">Your Height</small>
-				<span  class="list-value"><strong>{{{ $order->userMeasurements->height}}}</strong> {{{ $order->userMeasurements->units }}}</span>
-				<a class="underlined" href="/orders/{{{ $order->id }}}/fit/height" title=""><small>Change</small></a>
-			</li>
-			<li>
-				<small class="list-key">Half Shoulder</small>
-				<span  class="list-value"><strong>{{{ $order->userMeasurements->half_shoulder}}}</strong> {{{ $order->userMeasurements->units }}}</span>
-				<a class="underlined" href="/orders/{{{ $order->id }}}/fit/half_shoulder" title=""><small>Change</small></a>
-			</li>
-			<li>
-				<small class="list-key">Back Width</small>
-				<span  class="list-value"><strong>{{{ $order->userMeasurements->back_width}}}</strong> {{{ $order->userMeasurements->units }}}</span>
-				<a class="underlined" href="/orders/{{{ $order->id }}}/fit/back_width" title=""><small>Change</small></a>
-			</li>
-			<li>
-				<small class="list-key">Chest</small>
-				<span  class="list-value"><strong>{{{ $order->userMeasurements->chest}}}</strong> {{{ $order->userMeasurements->units }}}</span>
-				<a class="underlined" href="/orders/{{{ $order->id }}}/fit/chest" title=""><small>Change</small></a>
-			</li>
-			<li>
-				<small class="list-key">Belly / Stomach</small>
-				<span  class="list-value"><strong>{{{ $order->userMeasurements->stomach}}}</strong> {{{ $order->userMeasurements->units }}}</span>
-				<a class="underlined" href="/orders/{{{ $order->id }}}/fit/stomach" title=""><small>Change</small></a>
-			</li>
-			<li>
-				<small class="list-key">Back Length</small>
-				<span  class="list-value"><strong>{{{ $order->userMeasurements->back_length}}}</strong> {{{ $order->userMeasurements->units }}}</span>
-				<a class="underlined" href="/orders/{{{ $order->id }}}/fit/back_length" title=""><small>Change</small></a>
-			</li>
-			<li>
-				<small class="list-key">Waist</small>
-				<span  class="list-value"><strong>{{{ $order->userMeasurements->waist}}}</strong> {{{ $order->userMeasurements->units }}}</span>
-				<a class="underlined" href="/orders/{{{ $order->id }}}/fit/waist" title=""><small>Change</small></a>
-			</li>
-			<li>
-				<small class="list-key">Arm</small>
-				<span  class="list-value"><strong>{{{ $order->userMeasurements->arm}}}</strong> {{{ $order->userMeasurements->units }}}</span>
-				<a class="underlined" href="/orders/{{{ $order->id }}}/fit/arm" title=""><small>Change</small></a>
-			</li>
-			<li>
-				<small class="list-key">Biceps</small>
-				<span  class="list-value"><strong>{{{ $order->userMeasurements->biceps}}}</strong> {{{ $order->userMeasurements->units }}}</span>
-				<a class="underlined" href="/orders/{{{ $order->id }}}/fit/biceps" title=""><small>Change</small></a>
-			</li>
-			<li><br></li>
-			<li>
-				<small class="list-key">Note</small>
-				<span  class="list-value">&nbsp;</span>
-				<a class="underlined" href="/orders/{{{ $order->id }}}/fit/note" title=""><small>Change</small></a>
-				<span  class="list-value"><em>{{{ $order->userMeasurements->note}}}</em></span>
-			</li>
+			<?php $measurements = ['height', 'half_shoulder', 'back_width', 'chest', 'stomach', 'back_length', 'waist', 'arm', 'biceps', 'note'];  ?>
+			@foreach ($measurements as $measurement)
+				@if ($measurement == 'note')
+					<li><br></li>
+				@endif
+				<li>
+					<small class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>
+					@if ($order->userMeasurements->$measurement)
+						<span class="list-value">
+							@if ($order->userMeasurements->units == 'in')
+								<strong decimal-to-fraction="{{{ $order->userMeasurements->$measurement }}}">{{{ $order->userMeasurements->$measurement }}}</strong> "
+							@else
+								<strong>{{{ $order->userMeasurements->$measurement != round($order->userMeasurements->$measurement) ?  round($order->userMeasurements->$measurement, 1) : round($order->userMeasurements->$measurement) }}}</strong> cm
+							@endif
+						</span>
+						<a class="underlined" href="/orders/{{{ $order->id }}}/fit/{{{ $measurement }}}" title=""><span>Change</span></a>
+					@else
+						<span class="list-value"></span>
+						<a class="underlined" href="/orders/{{{ $order->id }}}/fit/{{{ $measurement }}}" title=""><span>Add</span></a>
+					@endif
+				</li>
+			@endforeach
 		</ul>
 	</div>
 

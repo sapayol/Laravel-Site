@@ -68,7 +68,7 @@
 	&.inverted-colors {
 		background: $white;
 		color: $black;
-		&:hover {
+		&:hover, &:active, &:focus {
 			background: $black;
 			color: $white;
 		}
