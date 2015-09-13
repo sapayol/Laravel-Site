@@ -98,3 +98,9 @@
 		top: 1rem;
 	}
 }
+
+.panel {
+	&.callout {
+		background: mix($primary-color, white, 20%);
+	}
+}

@@ -49,7 +49,7 @@
 			<img ng-if="jacket.hardware_color == 10" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-graphite.jpg">
 			<img ng-if="jacket.hardware_color == 11" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-gold.jpg">
 			<fieldset>
-				<legend>Zipper & Button Color</legend>
+				<legend>Zipper &amp; Button Color</legend>
 				@if ($jacket->hardware_colors()->count() > 1)
 					@foreach ($jacket->hardware_colors() as $hardware_color)
 						<label class="button tiny hollow {{{ camel_case($hardware_color->name) }}}" ng-class="{active: jacket.hardware_color == '{{{ $hardware_color->id }}}' }">{{{ $hardware_color->name }}}

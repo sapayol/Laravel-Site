@@ -1,12 +1,12 @@
 <div class="row collapse order-summary">
 	<div class="large-4 medium-4 small-12 columns">
-		<img class="checkout-image right responsive-image" src="/images/stock-photos/jacket-1.jpg">
+		<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg">
 	</div>
 	<div class="large-4 medium-4 small-12 columns">
 		<h3 class="thin left">Look</h3>
 		<a href="/jackets/{{{ $order->jacket->model }}}/look" class="right underlined">Change</a>
 		<div class="clearfix"></div>
-		<ul class="no-bullet value-list left">
+		<ul class="no-bullet value-list">
 			<li><small class="list-key">Jacket Model </small><strong>{{{ $order->jacket->name }}}	</strong></li>
 			<li><small class="list-key">Leather Type </small><strong>{{{ ucfirst($order->leather_type()->name)  }}}	</strong></li>
 			<li><small class="list-key">Leather Color </small><strong>{{{ ucfirst($order->leather_color()->name) }}}	</strong></li>
@@ -18,7 +18,7 @@
 	<div class="large-4 medium-4 small-12 columns">
 		<h3 class="thin left">Fit</h3>
 		<div class="clearfix"></div>
-		<ul class="no-bullet value-list left">
+		<ul class="no-bullet value-list">
 			<?php $measurements = ['height', 'half_shoulder', 'back_width', 'chest', 'stomach', 'back_length', 'waist', 'arm', 'biceps', 'note'];  ?>
 			@foreach ($measurements as $measurement)
 				@if ($measurement == 'note')
@@ -48,7 +48,7 @@
 		<h3 class="thin left">Shipping Info</h3>
 		<a ng-click="changeAddress()" class="right underlined">Change</a>
 		<div class="clearfix"></div>
-		<ul class="no-bullet value-list left">
+		<ul class="no-bullet value-list">
 			<li><small class="list-key">Name</small><strong>@{{ address.name }}</strong></li>
 			<li><small class="list-key">Email</small><strong>{{{ $order->user->email }}}</strong></li>
 			<li><small class="list-key">Address 1</small><strong>@{{ address.address1 }}</strong></li>
@@ -64,7 +64,7 @@
 		<h3 class="thin left">Payment Info</h3>
 		<a ng-click="changePaymentInfo()" class="right underlined">Change</a>
 		<div class="clearfix"></div>
-		<ul class="no-bullet value-list left">
+		<ul class="no-bullet value-list">
 			<li><small class="list-key">Method</small><strong>Credit</strong></li>
 			<li><small class="list-key">Card Type</small><strong>@{{ card.brand }}</strong></li>
 			<li><small class="list-key">Card Number</small><strong>@{{ card.last4 }}</strong></li>

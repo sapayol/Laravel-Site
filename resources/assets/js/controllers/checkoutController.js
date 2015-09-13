@@ -2,19 +2,24 @@ var checkoutController = angular.module('checkoutController', []);
 
 checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$document', 'notifyUser', 'Session',  function($scope, $http, $q, $document, notifyUser, Session) {
 
-	$scope.card = typeof(sapayol.session['card']) !== 'undefined' ? sapayol.session['card'] : {};
+	$scope.card         = typeof(sapayol.session['card'])         !== 'undefined' ? sapayol.session['card'] : {};
+	$scope.stripe_token = typeof(sapayol.session['stripe_token']) !== 'undefined' ? sapayol.session['stripe_token'] : {};
 
 	init = function() {
 		$scope.address = {};
 		if (sapayol.address !== null) {
-			$scope.address = sapayol.address;
+			$scope.address          = sapayol.address;
 			$scope.addressSubmitted = true;
-			$scope.addressDisabled = true;
-			if (typeof($scope.card) !== 'undefined' && typeof($scope.card.id) !== 'undefined') {
+			$scope.addressDisabled  = true;
+			saved_card_info = (
+				   typeof($scope.stripe_token) !== 'undefined'
+				&& typeof($scope.card)         !== 'undefined'
+				&& typeof($scope.card.id)      !== 'undefined') ? true : false;
+			if (saved_card_info) {
 				$scope.paymentInfoSubmitted = true;
-				$scope.paymentInfoDisabled = true;
+				$scope.paymentInfoDisabled  = true;
 				$document.scrollToElement(angular.element('#order-summary'), 80, 500);
-			} else{
+			} else {
 				$document.scrollToElement(angular.element('#address'), 80, 500);
 			}
 		};
@@ -81,12 +86,15 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 		  	notifyUser.ofErrorMessage(response.error.message);
 	  	};
 	  } else {
-			$scope.card = response.card;
-			$scope.stripe_token = response.id;
-			Session.store({card: $scope.card});
+			$scope.card                 = response.card;
+			$scope.stripe_token         = response.id;
 			$scope.paymentInfoSubmitted = true;
-			$scope.paymentInfoDisabled = true;
-			console.log(response);
+			$scope.paymentInfoDisabled  = true;
+
+			Session.store({
+				card:         $scope.card,
+				stripe_token: $scope.stripe_token
+			});
 		}
 	};
 

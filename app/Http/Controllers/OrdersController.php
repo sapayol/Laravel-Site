@@ -219,6 +219,7 @@ class OrdersController extends Controller {
 
 		if ($charge_attempt) {
 			$order->payment_id = $charge_attempt->id;
+			$order->status     = 'placed';
 			$order->save();
 
 		  Mail::send('emails.receipt', ['order' => $order], function ($message) use ($order) {

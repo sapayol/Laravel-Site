@@ -9,6 +9,10 @@ small {
 	font-size: 70%;
 }
 
+.thin {
+	font-weight: 100;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
 	font-weight: 300;
@@ -41,6 +45,7 @@ article p {
 .underlined {
 	color: black;
 	border-bottom: 2px solid $primary-color;
+	line-height: 1;
 }
 
 .image-caption {
@@ -58,8 +63,14 @@ article p {
 	top: .8rem;
 }
 
-.order-summary strong {
-	font-weight: 400;
+.order-summary {
+	a.right {
+		position: relative;
+		top: .4rem;
+	}
+	strong {
+		font-weight: 400;
+	}
 }
 
 .terms {

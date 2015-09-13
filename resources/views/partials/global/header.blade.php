@@ -1,7 +1,7 @@
 <?php $action = Request::route()->getAction()['as'] ?>
 
 <header class="row">
-	<h1 class="page-title {{{ strpos($action,'orders') === 0 || $action === 'jackets.look'  || $action === 'jackets.show' ? 'with-breadcrumbs' : '' }}}">
+	<h1 class="page-title {{{ (strpos($action,'orders') === 0 && $action != 'orders.complete') || $action === 'jackets.look'  || $action === 'jackets.show' ? 'with-breadcrumbs' : '' }}}">
 	  @if ($action == 'pages.who-we-are')
 			<a ng-click="displayMenu = false">Who We Are</a>
 		@elseif ($action == 'pages.how-it-works')
@@ -34,6 +34,8 @@
 			<a href="/orders/{{{ $order->id }}}/fit/height" class="underlined">Fit</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			Checkout
+		@elseif ($action == 'orders.complete')
+			Checkout Complete!
 	  @endif
 	</h1>
 </header>
