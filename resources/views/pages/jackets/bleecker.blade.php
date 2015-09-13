@@ -48,7 +48,7 @@
 @section('main')
 	<section class="small-12 medium-12 large-12 columns">
 		<a href="/images/photos/leather/lamb_c_black_close-up.jpg"><img class="sidekick-image" src="/images/photos/leather/lamb_c_black_close-up.jpg" alt=""></a>
-		<h2 class="thin">Vegetable tanned, chrome-free, full-grain leather</h2>
+		<h2>Vegetable tanned, chrome-free, full-grain leather</h2>
 		<p>All our jackets are made with the most exclusive, vegetable tanned, full-grain leather. It’s supple, thick, has a warm touch, and a pleasant smell. With good care, it will not crack or bulge for decades but break in and develop a beautiful patina.</p>
 		<a href="/our-leather?jacket={{{ $jacket->model }}}" class="underlined" title="">Click to learn more about what makes our leather so special</a><br><br>
 		<p>Our leather is also absolutely free of the chromium salts that can become carcinogenic, found in almost every other leather garment.</p>
@@ -56,7 +56,7 @@
 	<hr class="thin">
 	<section class="small-12 medium-12 large-12 columns">
 		<a href="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg" alt=""></a>
-		<h2 class="thin">Inside pockets for your valuables</h2>
+		<h2>Inside pockets for your valuables</h2>
 		<p class="image-caption">An inside pocket with a zipper on your right chest holds your note book, Knicks tickets, pay check, or passport.</p>
 		<a href="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" alt=""></a>
 		<p class="image-caption">Slide your phone into a welted pocket that sits conveniently just inside your jacket, on the left side.</p>
@@ -66,13 +66,13 @@
 	<hr class="thin">
 	<section class="small-12 medium-12 large-12 columns">
 		<a href="/images/photos/linings/bemberg_twill_bordeaux_close-up.jpg"><img class="sidekick-image" src="/images/photos/linings/bemberg_twill_bordeaux_close-up.jpg" alt=""></a>
-		<h2 class="thin">Silky, breathable lining</h2>
+		<h2>Silky, breathable lining</h2>
 		<p>We chose a 100% Bemberg Cupro oxford weave for our lining. No other fabric breathes as well, absorbs and releases sweat as quickly, and is at the same time as smooth as silk. It’s the top lining choice of bespoke suit makers.</p>
 	</section>
 	<hr class="thin">
 	<section class="small-12 medium-12 large-12 columns">
 		<a href="/images/photos/hardware/zipper_silver_detail.jpg"><img class="sidekick-image" src="/images/photos/hardware/zipper_silver_detail.jpg" alt=""></a>
-		<h2 class="thin">Super smooth and reliable hardware</h2>
+		<h2>Super smooth and reliable hardware</h2>
 		<p>All zippers are YKK Excella. They combine legendary reliability with smooth elegance. Each tooth is individually polished, which gives the zipper a brilliant shine and prevents scratching of the jacket or your skin.
 		<br>
 		<br>
