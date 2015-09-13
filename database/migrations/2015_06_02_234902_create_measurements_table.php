@@ -22,9 +22,9 @@ class CreateMeasurementsTable extends Migration {
 			$table->decimal('height', 9, 2)->nullable();
 			$table->decimal('half_shoulder', 9, 2)->nullable();
 			$table->decimal('back_width', 9, 2)->nullable();
-			$table->decimal('back_length', 9, 2)->nullable();
 			$table->decimal('chest', 9, 2)->nullable();
 			$table->decimal('stomach', 9, 2)->nullable();
+			$table->decimal('back_length', 9, 2)->nullable();
 			$table->decimal('waist', 9, 2)->nullable();
 			$table->decimal('arm', 9, 2)->nullable();
 			$table->decimal('biceps', 9, 2)->nullable();
