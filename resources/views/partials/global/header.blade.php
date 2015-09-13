@@ -12,10 +12,16 @@
 			<a ng-click="displayMenu = false">Terms of Service</a>
 		@elseif ($action == 'jackets.index')
 			<a ng-click="displayMenu = false">Tailored Jackets</a>
-		@elseif ($action == 'jackets.look' || $action == 'jackets.show')
+		@elseif ($action == 'jackets.show')
 			<a href="/jackets" class="underlined">Tailored Jackets</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			{{{ $jacket->name }}}
+		@elseif ($action == 'jackets.look')
+			<a href="/jackets" class="underlined">Tailored Jackets</a>
+			<span class="chevron chevron--right breadcrumb-chevron"></span>
+			<a href="/jackets/{{{ $jacket->name }}}" class="underlined">{{{ $jacket->name }}}</a>
+			<span class="chevron chevron--right breadcrumb-chevron"></span>
+		  Look
 		@elseif ($action == 'orders.show')
 		  My Jacket
 		@elseif ($action == 'orders.fit')
