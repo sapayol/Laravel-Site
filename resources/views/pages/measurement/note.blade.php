@@ -19,7 +19,5 @@
 			<button type="submit" class="black button expand">Submit Note</button>
 		</form>
 	</section>
-	<section class="large-12 medium-12 small-12 columns inverted-colors">
-		@include('partials.jacket.measurement-tracker')
-	</section>
+	@include('partials.measurement.tracker')
 @stop
