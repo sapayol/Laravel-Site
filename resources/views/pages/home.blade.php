@@ -11,7 +11,7 @@
 					<span class="line1 thin">Tailor-made</span><br>
 					<strong class="line3">Leather Jackets</strong>
 				</h1>
-				<a href="/jackets" class="button call-to-action inverted-colors">See Our Collection</a>
+				<a href="/jackets" class="button call-to-action">See Our Collection</a>
 			</div>
 			<video autoplay class="fillWidth" poster="/images/video-posters/hero_short.png">
 				<source src="/videos/hero_short.mp4" type="video/mp4" />

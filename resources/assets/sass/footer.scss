@@ -22,6 +22,10 @@ footer {
 			margin: 0 auto;
 			li {
 				margin-left: .8rem;
+				a {
+					position: relative;
+					top: .3rem;
+				}
 			}
 			li:first-child {
 				margin-left: 0;

@@ -10,7 +10,7 @@
 	</nav>
 	<section class="legal">
 		<span class="copyright">&copy; {{{ date('Y') }}} SAPAYOL. All rights reserved</span><br>
-		<a href="/terms">Terms, Privacy & Cookie Policy</a>
+		<a href="/terms">Terms, Privacy &amp; Cookie Policy</a>
 	</section>
 	<a href="#top" class="back-to-top-link" title=""> <i class="chevron chevron--top"></i></a>
 </footer>
