@@ -3,11 +3,11 @@
 		<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg">
 	</div>
 	<div class="large-4 medium-4 small-12 columns">
+		<h2>Your {{{ $order->jacket->name }}}</h2>
 		<h3 class="thin left">Look</h3>
 		<a href="/jackets/{{{ $order->jacket->model }}}/look" class="right underlined">Change</a>
 		<div class="clearfix"></div>
 		<ul class="no-bullet value-list">
-			<li><small class="list-key">Jacket Model </small><strong>{{{ $order->jacket->name }}}	</strong></li>
 			<li><small class="list-key">Leather Type </small><strong>{{{ ucfirst($order->leather_type()->name)  }}}	</strong></li>
 			<li><small class="list-key">Leather Color </small><strong>{{{ ucfirst($order->leather_color()->name) }}}	</strong></li>
 			<li><small class="list-key">Lining Color </small><strong>{{{ ucfirst($order->lining_color()->name) }}}	</strong></li>

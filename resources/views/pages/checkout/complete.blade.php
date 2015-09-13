@@ -7,7 +7,7 @@
 @section('main')
 <div class="large-4 medium-4 small-12 columns order-summary">
 	<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg">
-	<h2>Your Bleecker</h2>
+	<h2>Your {{{ $order->jacket->name }}}</h2>
 	<h3 class="thin">Look</h3>
 	<ul class="no-bullet value-list">
 		<li><small class="list-key">Leather Type </small><strong>{{{ ucfirst($order->leather_type()->name)  }}}	</strong></li>
