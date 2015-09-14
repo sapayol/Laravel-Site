@@ -2,7 +2,7 @@
 	<input type="hidden" name="_token" value="{!! csrf_token() !!}">
 	<input type="hidden" name="measurements[{{{ $step }}}]" value="@{{ measurement }}">
 </form>
-<form ng-submit="submitMeasurement('measurements[{{{ $step }}}]')" name="measurementForm" class="large-12 medium-12 small-12 columns">
+<form ng-submit="submitMeasurement('measurements[{{{ $step }}}]')" name="measurementForm">
 	@if ($step == 'height' && $order->userMeasurements->units == 'in')
 	@yield('additional_copy')
 	<fieldset>

@@ -6,7 +6,7 @@
 
 @section('main')
 
-	<section class="large-12 medium-12 small-12 columns">
+	<section class="large-6 medium-10 small-12 columns large-centered medium-centered">
 		<p>
 			We will walk you through every measurement we need to fit your BLEECKER to your body. It's very simple.
 			<br><br>
@@ -19,7 +19,7 @@
 		</ul>
 	</section>
 
-	<section class="large-12 medium-12 small-12 columns text-center">
+	<section class="large-6 medium-10 small-12 columns large-centered medium-centered text-center">
 		<p class="text-left"><strong>Will you be measuring in inches or centimeters?</strong></p>
 		<form action="/orders/{{{ $order->id }}}/fit" method="POST">
 			<input type="hidden" name="_token" value="{{{ csrf_token() }}}">

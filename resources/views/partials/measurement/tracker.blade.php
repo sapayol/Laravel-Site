@@ -1,4 +1,4 @@
-<div class="large-12 medium-12 small-12 columns panel measurement-tracker">
+<div class="panel measurement-tracker">
 	<h4 class="text-center">Your Measurements</h4>
 	<ul class="no-bullet value-list">
 	<?php $measurements = ['height', 'half_shoulder', 'back_width', 'chest', 'stomach', 'back_length', 'waist', 'arm', 'biceps', 'note'];  ?>

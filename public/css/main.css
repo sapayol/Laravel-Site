@@ -130,7 +130,7 @@
     .page-wrap {
       position: static; } }
   .page-wrap.deep-info-page, .page-wrap.on-info-page.with-existing-order, .page-wrap.on-jacket-page, .page-wrap.with-existing-order {
-    top: -5.8rem; }
+    top: -6.5rem; }
   .page-wrap.deep-info-page.with-existing-order, .page-wrap.on-jacket-page.with-existing-order {
     top: -7.9rem; }
   .page-wrap.descended {
@@ -2894,8 +2894,8 @@ hr.thin {
   margin-bottom: 1rem; }
 
 .customization-image {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem; }
+  margin: 1rem auto 1.5rem auto;
+  display: block; }
 
 .hero-image-container {
   overflow: hidden;
@@ -3069,7 +3069,7 @@ hr.thin {
 
 nav.primary-nav {
   text-align: left;
-  padding: 1rem 1rem;
+  padding-top: 1rem;
   padding-bottom: 0; }
   nav.primary-nav .logo {
     border: none;
@@ -3107,7 +3107,8 @@ nav.primary-nav {
 
 @media only screen and (min-width: 40.0625em) {
   nav.primary-nav {
-    padding: 1rem 1rem 2rem 2rem; }
+    padding-top: 1rem;
+    padding-bottom: 2rem; }
     nav.primary-nav .clearfix {
       display: none; }
     nav.primary-nav img {
@@ -3122,17 +3123,6 @@ nav.primary-nav {
       margin-right: 1rem;
       font-size: 1rem;
       line-height: 1; } }
-@media only screen and (min-width: 50.0625em) {
-  nav.primary-nav {
-    margin: 0 auto;
-    width: 95%; } }
-  @media only screen and (min-width: 50.0625em) and (min-width: 67.5625em) {
-    nav.primary-nav {
-      width: 83%; } }
-  @media only screen and (min-width: 50.0625em) and (min-width: 90.0625em) {
-    nav.primary-nav {
-      width: 65%; } }
-
 #terms-nav > ul > li {
   font-weight: 400; }
   #terms-nav > ul > li > ul {

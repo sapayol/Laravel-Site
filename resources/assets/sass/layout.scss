@@ -7,7 +7,8 @@
 	top: -4rem;
 	margin-top: .5rem;
 	&.deep-info-page, &.on-info-page.with-existing-order, &.on-jacket-page, &.with-existing-order {
-		top: -5.8rem;
+		// top: -5.8rem;
+		top: -6.5rem;
 	}
 	&.deep-info-page.with-existing-order, &.on-jacket-page.with-existing-order {
 		top: -7.9rem;

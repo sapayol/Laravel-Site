@@ -1,6 +1,6 @@
 	nav.primary-nav {
 		text-align: left;
-		padding: 1rem 1rem;
+		padding-top: 1rem;
 		padding-bottom: 0;
 		.logo {
 			border: none;
@@ -47,7 +47,8 @@
 
 @media #{$medium-up} {
 	nav.primary-nav {
-		padding: 1rem 1rem 2rem 2rem;
+		padding-top: 1rem;
+		padding-bottom: 2rem;
 		.clearfix {
 			display: none;
 		}
@@ -67,15 +68,6 @@
 			font-size: 1rem;
 			line-height: 1;
 		}
-	}
-}
-
-@media #{$large-up} {
-	nav.primary-nav {
-		margin: 0 auto;
-		width: 95%;
-		@media #{$xlarge-up} { width: 83%; }
-		@media #{$xxlarge-up} { width: 65%; }
 	}
 }
 
