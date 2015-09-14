@@ -1,0 +1,141 @@
+// Here we define the breakpoints which will become the upper border for each media size.
+// The function em-calc() calculates the em-value from a px-value.
+$tiny-breakpoint:   em-calc(320)  !default;
+$small-breakpoint:  em-calc(640)  !default;
+$medium-breakpoint: em-calc(800) !default;
+$large-breakpoint:  em-calc(1080) !default;
+$xlarge-breakpoint: em-calc(1440) !default;
+
+// Here we define the lower and upper bounds for each media size
+$tiny-range:    (0, $tiny-breakpoint) !default; /* 0, 320 */
+$small-range:   ($tiny-breakpoint  + em-calc(1), $small-breakpoint) !default; /* 321px, 640px */
+$medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint) !default; /* 641px, 800px */
+$large-range:   ($medium-breakpoint + em-calc(1), $large-breakpoint)  !default; /* 801px, 1080px */
+$xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint) !default; /* 1081px, 1440px */
+$xxlarge-range: ($xlarge-breakpoint + em-calc(1), em-calc(99999999)) !default; /* 1440px, ... */
+
+// Media Queries
+$screen: "only screen" !default;
+
+$landscape: "#{$screen} and (orientation: landscape)" !default;
+$portrait: "#{$screen} and (orientation: portrait)" !default;
+
+$tiny-up: $screen !default;
+$tiny-only: "#{$screen} and (max-width: #{upper-bound($tiny-range)})" !default;
+
+$small-up: "#{$screen} and (min-width:#{lower-bound($small-range)})" !default;
+$small-only: "#{$screen} and (min-width:#{lower-bound($small-range)}) and (max-width:#{upper-bound($small-range)})" !default;
+
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})" !default;
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})" !default;
+
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})" !default;
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})" !default;
+
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})" !default;
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})" !default;
+
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !default;
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
+
+$retina: (
+  "#{$screen} and (-webkit-min-device-pixel-ratio: 2)",
+  "#{$screen} and (min--moz-device-pixel-ratio: 2)",
+  "#{$screen} and (-o-min-device-pixel-ratio: 2/1)",
+  "#{$screen} and (min-device-pixel-ratio: 2)",
+  "#{$screen} and (min-resolution: 192dpi)",
+  "#{$screen} and (min-resolution: 2dppx)"
+);
+
+// @media #{$tiny-up} { }
+// @media #{$tiny-only} { }
+// @media #{$small-up} { }
+// @media #{$small-only} { }
+// @media #{$medium-up} { }
+// @media #{$medium-only} { }
+// @media #{$large-up} { }
+// @media #{$large-only} { }
+// @media #{$xlarge-up} { }
+// @media #{$xlarge-only} { }
+// @media #{$xxlarge-up} { }
+// @media #{$xxlarge-only} { }
+
+.breakpoint-helper {
+	border-radius: 5px;
+	cursor: move;
+	position: absolute;
+	z-index: 99999;
+	padding: .5rem;
+	ul {
+		font-size: .8rem;
+		margin: 0;
+	}
+	a.close {
+		top: 1rem;
+		opacity: .7;
+	}
+}
+.breakpoint {
+	display: none;
+}
+
+@media #{$tiny-up} {
+	.breakpoint.tiny-up {
+		display: block;
+	}
+}
+@media #{$tiny-only} {
+	.breakpoint.tiny-only {
+		display: block;
+	}
+}
+@media #{$small-up} {
+	.breakpoint.small-up {
+		display: block;
+	}
+}
+@media #{$small-only} {
+	.breakpoint.small-only {
+		display: block;
+	}
+}
+@media #{$medium-up} {
+	.breakpoint.medium-up {
+		display: block;
+	}
+}
+@media #{$medium-only} {
+	.breakpoint.medium-only {
+		display: block;
+	}
+}
+@media #{$large-up} {
+	.breakpoint.large-up {
+		display: block;
+	}
+}
+@media #{$large-only} {
+	.breakpoint.large-only {
+		display: block;
+	}
+}
+@media #{$xlarge-up} {
+	.breakpoint.xlarge-up {
+		display: block;
+	}
+}
+@media #{$xlarge-only} {
+	.breakpoint.xlarge-only {
+		display: block;
+	}
+}
+@media #{$xxlarge-up} {
+	.breakpoint.xxlarge-up {
+		display: block;
+	}
+}
+@media #{$xxlarge-only} {
+	.breakpoint.xxlarge-only {
+		display: block;
+	}
+}

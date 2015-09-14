@@ -24,3 +24,5 @@
 	</head>
 
 	<body "@yield('angular_page_controller')" id="top">
+
+	@include('partials.meta.breakpoint-helper')

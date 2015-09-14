@@ -85,6 +85,8 @@
 
 .call-to-action {
 	margin: 2rem 0 1.25rem 0;
+	@media #{$large-up} { margin: 3rem 0 1.25rem 0; }
+	@media #{$xlarge-up} { margin: 4rem 0 1.25rem 0; }
 }
 
 button.text-button {

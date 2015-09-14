@@ -1,7 +1,8 @@
 .page-wrap {
+	@media #{$medium-up} { position: static; }
+	position: relative;
 	background: $white;
 	transition: all .4s ease;
-	position: relative;
 	z-index: 9999;
 	top: -4rem;
 	margin-top: .5rem;
@@ -16,19 +17,12 @@
 	}
 }
 
-
-
-main > section, main > article {
-	padding-bottom: 2rem;
-	padding-top: 1rem;
+main > section, main > article, main > section > article {
+	padding: 1rem 0 2rem 0;
+	@media #{$medium-up} { padding: 1.5rem 0 2.5rem 0}
 	&:last-child {
 		padding-bottom: 4rem;
 	}
-}
-
-main > section > article {
-	padding-bottom: 2rem;
-	padding-top: 1rem;
 }
 
 .primary-color-section {
