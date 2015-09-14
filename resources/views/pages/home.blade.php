@@ -37,7 +37,7 @@
 	<article class="large-6 medium-6 small-12 columns">
 		<a href="/who-we-are" class="image-link"><img class="sidekick-image" src="/images/photos/other/master-craftsmanship.jpg" alt=""></a>
 		<h2 class="thin">Master Craftsmanship</h2>
-		<p>Each piece is made at a select workshop, where the same craftsmen and -women have been perfecting their art together for centuries.<br>
+		<p>Each piece is made at a select workshop, where the same craftsmen and -women have been perfecting their art together for decades.<br>
 		</p>
 		<a class="underlined" href="/who-we-are">Find Out More</a>
 	</article>
