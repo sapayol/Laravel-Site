@@ -18,6 +18,7 @@
   }
   .player-controls-right {
     display: inline-block;
+    @media #{$medium-up} { float: left; }
   }
   .player-controls button:hover {
     color: $white;
@@ -59,7 +60,7 @@
   .title-container {
     z-index: 1000;
     position: absolute;
-    top: 35%;
+    top: 40%;
     width: 100%;
     text-align: center;
     color: #fff;
@@ -68,6 +69,7 @@
     .button {
       border-color: $black;
       border-bottom: 6px solid $primary-color;
+      margin-top: 1rem;
     }
   }
   @keyframes changeColor {
@@ -87,7 +89,11 @@
 
 @media screen and (max-device-width: 800px) {
   .hero-video-container {
-    background: url('/images/hero_short.gif') #000 no-repeat center center;
+    // background: url('/images/hero_short.gif') #000 no-repeat center center;
+    background: url('/images/1024px halftone 12frames dithering simple 256.gif') #000 no-repeat center center;
+    background: url('/images/768px halftone 16frames no color reduction.gif') #000 no-repeat center center;
+    background: url('/images/768px halftone 12frames no color reduction.gif') #000 no-repeat center center;
+    background: url('/images/480px halftone 24frames no color reduction.gif') #000 no-repeat center center;
     background-size: cover;
   }
   .no-video .hero-video-container video, .touch .hero-video-container video {

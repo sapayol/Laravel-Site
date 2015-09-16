@@ -12,16 +12,18 @@
 	<section class="large-12 medium-12 small-12 columns">
 		<h2>Order Process</h2>
 		<h3>1. Choose your model</h3>
-		<h3>2. Customize it</h3>
+		<h3>2. Design your look</h3>
 		<p>For every model, you can choose hardware and lining colors.</p>
-		<h3>3. Provide measurements</h3>
+		<h3>3. Create an account or log in</h3>
+		<p>An email address and password lets us save the design choices you just made and the body measurements you’re about to enter.</p>
+		<h3>4. Provide measurements</h3>
 		<p>With the help of our video instructions, you can add your measurements to your order.</p>
-		<h3>4. Buy</h3>
+		<h3>5. Buy</h3>
 		<p>We make it very easy for you to pay using your preferred method.</p>
-		<h3>5. Discuss measurements</h3>
+		<h3>6. Discuss measurements</h3>
 		<p>Within a day, we will get in touch with you by phone or email and discuss your measurements. We’ll make sure you’ll get the exact fit you want.</p>
-		<h3>6. Production starts</h3>
-		<h3>7. Direct shipment to your door</h3>
+		<h3>7. Production starts</h3>
+		<h3>8. Direct shipment to your door</h3>
 		<p>You will be able to track your order via express shipping.</p>
 	</section>
 

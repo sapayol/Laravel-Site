@@ -10,8 +10,7 @@
 
 @section('main')
 	<section class="large-12 medium-12 small-12 columns look-options">
-		<h2 class="thin text-center">Customize your jacket</h2>
-
+		<h2 class="thin text-center">Design your look</h2>
 		<form action="/orders" method="POST" name="createOrderForm" ng-init="init( {{{ $jacket->leather_types()->first()->id }}}, {{{ $jacket->leather_colors()->first()->id }}}, {{{ $jacket->lining_colors()->first()->id }}}, {{{ $jacket->hardware_colors()->first()->id }}} )">
 			<fieldset>
 				<legend>Leather Type</legend>
@@ -44,7 +43,24 @@
 					</label>
 				@endif
 			</fieldset>
+			<hr>
 
+
+			<img ng-if="jacket.lining_color == 12"  class="customization-image" src="/images/photos/linings/bemberg_oxford_black.jpg">
+			<img ng-if="jacket.lining_color == 13" class="customization-image" src="/images/photos/linings/bemberg_oxford_bordeaux.jpg">
+			<fieldset>
+				<legend>Lining Color</legend>
+				@if ($jacket->lining_colors()->count() > 1)
+					@foreach ($jacket->lining_colors() as $lining_color)
+						<label class="button tiny hollow {{{ camel_case($lining_color->name) }}}" ng-class="{active: jacket.lining_color == '{{{ $lining_color->id}}}' }">{{{ $lining_color->name }}}
+							<input type="radio" name="jacket_look[lining_color]" ng-model="jacket.lining_color" value="{{{ $lining_color->id }}}" ng-change="updateSessionCache()">
+						</label>
+					@endforeach
+				@else
+					{{{ $jacket->lining_colors()->first()->name }}}
+				@endif
+			</fieldset>
+				<hr>
 			<img ng-if="jacket.hardware_color == 9"  class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-silver.jpg">
 			<img ng-if="jacket.hardware_color == 10" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-graphite.jpg">
 			<img ng-if="jacket.hardware_color == 11" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-gold.jpg">
@@ -61,20 +77,6 @@
 				@endif
 			</fieldset>
 
-			<img ng-if="jacket.lining_color == 12"  class="customization-image" src="/images/photos/linings/bemberg_oxford_black.jpg">
-			<img ng-if="jacket.lining_color == 13" class="customization-image" src="/images/photos/linings/bemberg_oxford_bordeaux.jpg">
-			<fieldset>
-				<legend>Lining Color</legend>
-				@if ($jacket->lining_colors()->count() > 1)
-					@foreach ($jacket->lining_colors() as $lining_color)
-						<label class="button tiny hollow {{{ camel_case($lining_color->name) }}}" ng-class="{active: jacket.lining_color == '{{{ $lining_color->id}}}' }">{{{ $lining_color->name }}}
-							<input type="radio" name="jacket_look[lining_color]" ng-model="jacket.lining_color" value="{{{ $lining_color->id }}}" ng-change="updateSessionCache()">
-						</label>
-					@endforeach
-				@else
-					{{{ $jacket->lining_colors()->first()->name }}}
-				@endif
-			</fieldset>
 
 			<input type="hidden" name="_token"         value="{{{ csrf_token() }}}">
 			<input type="hidden" name="model"          value="{{{ $jacket->model }}}">
@@ -87,20 +89,22 @@
 
 	</section>
 	<div class="clearfix"></div>
-	<section class="large-6 medium-8 small-12 medium-centered large-centered columns panel">
 		@if (Auth::guest())
-			<p><strong>Enter an email address and choose a password to continue.</strong><br> It lets us save your design choices and body measurements. <br> <br>Use your existing credentials if you've already created an account.</p>
-			<p><em>We don’t spam or share your information.</em></p>
-			@include('partials.checkout.user-registration-form')
+			<section class="large-6 medium-8 small-12 medium-centered large-centered columns panel">
+				<p><strong>Enter an email address and choose a password to continue.</strong><br> It lets us save your design choices and body measurements. <br> <br>Use your existing credentials if you've already created an account.</p>
+				<p><em>We don’t spam or share your information.</em></p>
+				@include('partials.checkout.user-registration-form')
 		@elseif (Auth::user()->unfinishedOrders()->count() > 0)
-			<p>Looks like you're logged in as <strong>{{{ Auth::user()->email }}}</strong></p>
-			<div class="text-center">
-				<a href="" ng-click="proceedToOrder()" class="button expand">Continue Your Order</a>
-				<p>or</p>
-				<a href="{{ url('/auth/logout') }}" class="underlined">Login as someone else</a>
-			</div>
+			<section class="large-6 medium-8 small-12 medium-centered large-centered columns panel">
+				<p>Looks like you're logged in as <strong>{{{ Auth::user()->email }}}</strong></p>
+				<div class="text-center">
+					<a href="" ng-click="proceedToOrder()" class="button expand">Continue Your Order</a>
+					<p>or</p>
+					<a href="{{ url('/auth/logout') }}" class="underlined">Log in as someone else</a>
+				</div>
 		@else
-			<a href="" ng-click="proceedToOrder()" class="button expand">Proceed To Measurement</a>
+			<section class="large-6 medium-8 small-12 medium-centered large-centered columns">
+				<a href="" ng-click="proceedToOrder()" class="button expand">Proceed To Measurement</a>
 		@endif
 	</section>
 

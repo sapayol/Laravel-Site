@@ -4,7 +4,7 @@
 	font-weight: 300;
 	font-size: 1.2rem;
 	border: 1px solid $white;
-	border-bottom: 6px solid $primary-color;
+	border-bottom: 6px solid $highlight-color;
 	border-radius: 0;
 	color: $white;
 	background: $black;
@@ -17,7 +17,7 @@
 	&:hover, &:active, &:focus {
 		background: $white;
 		border-color: $black;
-		border-bottom: 6px solid $primary-color;
+		border-bottom: 6px solid $highlight-color;
 		color: $black;
 			.chevron {
 				border-color: $black;
@@ -27,7 +27,7 @@
 		color: $black;
 		background: $white;
 		border: 1px solid $black;
-		border-bottom: 6px solid $primary-color;
+		border-bottom: 6px solid $highlight-color;
 		.chevron {
 			border-color: $black;
 		}
@@ -35,7 +35,7 @@
 			background: $black;
 			color: $white;
 			border-color: $black;
-			border-bottom: 6px solid $primary-color;
+			border-bottom: 6px solid $highlight-color;
 			.chevron {
 				border-color: $white;
 			}

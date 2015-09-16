@@ -1,51 +1,70 @@
-	nav.primary-nav {
-		text-align: left;
-		padding-top: 1rem;
-		padding-bottom: 0;
-		.logo {
-			border: none;
-			margin-bottom: .5rem;
-			img {
-				width: 10rem;
-			}
-		}
-		.menu-button {
-			@media #{$medium-up} { display: none; }
-			color: $black;
-			border-bottom: 2px solid $primary-color;
-			font-size: 1rem;
-			line-height: 1;
-			font-weight: 200;
-			position: relative;
-			top: .1rem;
-			&.open {
-				border: none;
-			}
-		}
-		ul {
-			margin-bottom: 0;
-		}
-		li {
-			margin-bottom: .5rem;
-			&.active a {
-				display: none;
-			}
-			&.main-item a {
-				border-color: $highlight-color;
-			}
-		}
-		a {
-			color: $black;
-			border-bottom: 2px solid $primary-color;
-			font-size: 1rem;
-			font-weight: 200;
-			text-transform: uppercase;
-			margin-bottom: .5rem;
+nav.primary-nav {
+	&:not(:last-child) {
+		margin-bottom: 4rem;
+	}
+	text-align: left;
+	padding-top: 1rem;
+	padding-bottom: 0;
+	.logo {
+		border: none;
+		margin-bottom: .5rem;
+		img {
+			width: 10rem;
 		}
 	}
+	.menu-button {
+		@media #{$medium-up} { display: none; }
+		color: $black;
+		border-bottom: 2px solid $primary-color;
+		font-size: 1rem;
+		line-height: 1;
+		font-weight: 200;
+		position: relative;
+		top: .1rem;
+		&.open {
+			border: none;
+		}
+	}
+	ul {
+		margin-bottom: 0;
+	}
+	li {
+		margin-bottom: .5rem;
+		&.current {
+			display: none;
+		}
+		&.main-item a {
+			border-color: $highlight-color;
+		}
+	}
+	a {
+		color: $black;
+		border-bottom: 2px solid $primary-color;
+		font-size: 1rem;
+		font-weight: 200;
+		text-transform: uppercase;
+		margin-bottom: .5rem;
+	}
+	@media #{$medium-up} {
+		z-index: 9999;
+		.logo img {
+			transform: translateY(.5rem);
+			width: 20rem;
+		}
+		.clearfix {
+			display: none;
+		}
+		ul {
+			float: right;
+		}
+		li.current {
+			display: block;
+		}
+	}
+}
 
 
-@media #{$medium-up} {
+@media #{$large-up} {
 	nav.primary-nav {
 		padding-top: 1rem;
 		padding-bottom: 2rem;
@@ -62,11 +81,14 @@
 		}
 		li {
 			display: inline-block;
-		}
-		a {
-			margin-right: 1rem;
-			font-size: 1rem;
-			line-height: 1;
+			&:last-child  a {
+				margin-right: 0;
+			}
+			a {
+				margin-right: 1rem;
+				font-size: 1rem;
+				line-height: 1;
+			}
 		}
 	}
 }

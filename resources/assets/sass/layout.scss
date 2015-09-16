@@ -1,16 +1,27 @@
 .page-wrap {
-	@media #{$medium-up} { position: static; }
+
+	@media #{$medium-up} {
+		background: transparent;
+		position: static;
+	}
+	@media #{$medium-only} {
+		transform: translateY(-1.7rem);
+		& > header, & > header h1 {
+			background: transparent;
+		}
+		& > header h1 {
+			margin-bottom: .3rem;
+		}
+	}
 	position: relative;
 	background: $white;
 	transition: all .4s ease;
 	z-index: 9999;
 	top: -4rem;
-	margin-top: .5rem;
-	&.deep-info-page, &.on-info-page.with-existing-order, &.on-jacket-page, &.with-existing-order {
-		// top: -5.8rem;
-		top: -6.5rem;
+	&.headless-page, &.on-info-page.with-existing-order, &.on-jacket-page, &.with-existing-order {
+		top: -5.8rem;
 	}
-	&.deep-info-page.with-existing-order, &.on-jacket-page.with-existing-order {
+	&.headless-page.with-existing-order, &.on-jacket-page.with-existing-order {
 		top: -7.9rem;
 	}
 	&.descended {
@@ -26,6 +37,11 @@ main > section, main > article, main > section > article {
 	}
 }
 
+main > p {
+	padding-top: 1rem;
+	margin-bottom: 0;
+}
+
 .primary-color-section {
 	background: $primary-color;
 	color: $white;
@@ -33,4 +49,3 @@ main > section, main > article, main > section > article {
 		margin-bottom: 0;
 	}
 }
-

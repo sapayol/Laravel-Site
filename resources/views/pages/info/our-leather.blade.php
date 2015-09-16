@@ -6,16 +6,18 @@
 
 @section('main')
 	<section class="small-12 medium-12 large-12 columns" id="our-leather-header">
-		<p>Leather is the end result of a process with various stages and the qualities of it are influenced by every step along the way:</p>
+		<p>We don't compromise on the quality of our leather.</p>
+		<p>Truly exceptional leather lasts long, doesn't bulge or tear easily and develops a characteristic patina over time. It features a natural, delicate texture that feels warm and supple. Great leather has a pleasant, unobtrusive smell and a rich color that doesn't rub off.</p>
+		<p>From the very start to finish, we choose the most exclusive parts and methods to get all of these characteristics right:</p>
+		<nav>
+			<ul>
+				<li><a href="#leathers" title="">Full-grain leather</a></li>
+				<li><a href="#tanning-process" title="">World-class tanning</a></li>
+				<li><a href="#animal-treatment" title="">Humane animal treatment</a></li>
+			</ul>
+		</nav>
 	</section>
 
-	<nav class="small-12 medium-12 large-12 columns">
-		<ul>
-			<li><a href="#leathers" title="">Leathers</a></li>
-			<li><a href="#tanning-process" title="">Tanning Process</a></li>
-			<li><a href="#animal-treatment" title="">Animal Treatment</a></li>
-		</ul>
-	</nav>
 
 	<section class="small-12 medium-12 large-12 columns" id="leathers">
 		<h3>The difference between full-grain, top-grain, genuine, and bonded leather</h3>

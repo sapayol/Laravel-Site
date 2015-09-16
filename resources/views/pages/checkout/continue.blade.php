@@ -1,8 +1,8 @@
 @extends('layouts/default')
 
 @section('main')
-	<section class="large-12 medium-12 small-12 columns">
-		<p>Looks like you were in the middle of an order</p>
+	<p class="large-12 medium-12 small-12 columns">Looks like you were in the middle of an order</p>
+	<section class="large-6 medium-6 small-12 columns">
 		<ul class="no-bullet value-list">
 			<li><small class="list-key">Date Started </small>  {{{ date('M d, Y', strtotime($last_order->created_at)) }}} </li>
 			<li><small class="list-key">Jacket Name  </small>  {{{ $last_order->jacket->name }}} </li>
@@ -10,6 +10,8 @@
 				<li><small class="list-key">{{{ ucwords(str_replace('_', ' ', $attribute->type)) }}}</small> {{{ ucwords($attribute->name) }}} </li>
 			@endforeach
 		</ul>
+	</section>
+	<section class="large-6 medium-6 small-12 columns">
 		<ul class="no-bullet value-list">
 		  <?php $measurements = ['height', 'half_shoulder', 'back_width', 'chest' , 'stomach' , 'back_length', 'waist', 'arm', 'biceps'];	?>
 			@foreach ($measurements as $measurement)
@@ -32,7 +34,7 @@
 		</ul>
 	</section>
 
-	<section class="large-12 medium-12 small-12 columns">
+	<section class="large-6 medium-8 small-12 large-centered medium-centered columns">
 		<form action="/orders/{{{ $last_order->id }}}/fit" method="POST">
 			<input type="hidden" name="_token"         value="{!! csrf_token() !!}">
 			<input type="submit" class="button expand" value="Finish My Order">

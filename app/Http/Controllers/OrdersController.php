@@ -87,8 +87,8 @@ class OrdersController extends Controller {
 		$order = Order::find($id);
 		$order->status = 'dropped';
 		$order->save();
-		dd($request);
-		return $this->store($request);
+
+		return redirect()->route('jackets.index');
 	}
 
 

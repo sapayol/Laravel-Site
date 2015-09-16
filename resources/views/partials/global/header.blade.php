@@ -11,21 +11,21 @@
 		@elseif ($action == 'pages.terms')
 			<a ng-click="displayMenu = false">Terms of Service</a>
 		@elseif ($action == 'jackets.index')
-			<a ng-click="displayMenu = false">Tailored Jackets</a>
+			<a ng-click="displayMenu = false">Our Jackets</a>
 		@elseif ($action == 'jackets.show')
-			<a href="/jackets" class="underlined">Tailored Jackets</a>
+			<a href="/jackets" class="underlined">Our Jackets</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			{{{ $jacket->name }}}
 		@elseif ($action == 'jackets.look')
-			<a href="/jackets" class="underlined">Tailored Jackets</a>
+			<a href="/jackets" class="underlined">Our Jackets</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			<a href="/jackets/{{{ $jacket->name }}}" class="underlined">{{{ $jacket->name }}}</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 		  Look
 		@elseif ($action == 'orders.show')
-		  My Jacket
+		  Your Order
 		@elseif ($action == 'orders.fit')
-			<a href="/orders/{{{ $order->id }}}" class="underlined">My Jacket</a>
+			<a href="/orders/{{{ $order->id }}}" class="underlined">Your Order</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			<a href="/orders/{{{ $order->id }}}/look" class="underlined">Look</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
@@ -33,7 +33,7 @@
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 		  {{{ str_replace('_', ' ', $step) }}}
 		@elseif ($action == 'orders.checkout')
-			<a href="/orders/{{{ $order->id }}}" class="underlined">My Jacket</a>
+			<a href="/orders/{{{ $order->id }}}" class="underlined">Your Order</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			<a href="/orders/{{{ $order->id }}}/look" class="underlined">Look</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>

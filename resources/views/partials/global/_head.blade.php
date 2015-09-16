@@ -25,4 +25,4 @@
 
 	<body "@yield('angular_page_controller')" id="top">
 
-	@include('partials.meta.breakpoint-helper')
+	{{-- @include('partials.meta.breakpoint-helper') --}}
