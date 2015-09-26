@@ -5987,12 +5987,13 @@ hr.thin {
   .carousel-container .slick-slide img {
     margin: 0 auto; }
   .carousel-container .slick-dots {
-    margin-bottom: 0;
-    margin-top: 1rem;
-    margin-left: 0; }
+    margin-bottom: 1.5rem;
+    margin-top: .5rem;
+    margin-left: 0;
+    position: static; }
     .carousel-container .slick-dots li {
       display: inline-block;
-      margin: 1rem .8rem 0 .8rem; }
+      margin: 0 .6rem; }
       .carousel-container .slick-dots li.slick-active button {
         background: #222222; }
     .carousel-container .slick-dots button {
@@ -6012,8 +6013,8 @@ hr.thin {
     padding: 0;
     background: none;
     color: transparent;
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     border: none;
     border-top: 1px solid black;
     border-right: 1px solid black;
@@ -6024,6 +6025,8 @@ hr.thin {
     z-index: 1; }
     .carousel-container .slick-arrow:focus {
       outline: none; }
+    .carousel-container .slick-arrow:before {
+      display: none; }
   .carousel-container .slick-next {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -6032,7 +6035,8 @@ hr.thin {
   .carousel-container .slick-prev {
     -webkit-transform: rotate(225deg);
         -ms-transform: rotate(225deg);
-            transform: rotate(225deg); }
+            transform: rotate(225deg);
+    left: 0; }
 
 .jacket-placeholder {
   padding: 0 1rem;

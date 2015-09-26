@@ -5,12 +5,12 @@
 @stop
 
 @section('carousel_images')
-  <div><a href="/images/photos/jackets/bleecker/carousel/right_closed_full_silver.jpg" title=""><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/right_closed_full_silver.jpg" alt=""></a></div>
-  <div><a href="/images/photos/jackets/bleecker/carousel/front_open_full_silver.jpg" title=""><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/front_open_full_silver.jpg" alt=""></a></div>
-  <div><a href="/images/photos/jackets/bleecker/carousel/left_closed_full_silver.jpg" title=""><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/left_closed_full_silver.jpg" alt=""></a></div>
-  <div><a href="/images/photos/jackets/bleecker/carousel/side_left_closed_full_silver.jpg" title=""><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/side_left_closed_full_silver.jpg" alt=""></a></div>
-  <div><a href="/images/photos/jackets/bleecker/carousel/back_closed_full_silver.jpg" title=""><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/back_closed_full_silver.jpg" alt=""></a></div>
-  <div><a href="/images/photos/jackets/bleecker/carousel/side_right_closed_full_silver.jpg" title=""><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/side_right_closed_full_silver.jpg" alt=""></a></div>
+  <div><a href="/images/photos/jackets/bleecker/carousel/right_closed_full_silver.jpg" title=""><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/right_closed_full_silver-medium.jpg" alt=""></a></div>
+  <div><a href="/images/photos/jackets/bleecker/carousel/front_open_full_silver.jpg" title=""><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/front_open_full_silver-medium.jpg" alt=""></a></div>
+  <div><a href="/images/photos/jackets/bleecker/carousel/left_closed_full_silver.jpg" title=""><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/left_closed_full_silver-medium.jpg" alt=""></a></div>
+  <div><a href="/images/photos/jackets/bleecker/carousel/side_left_closed_full_silver.jpg" title=""><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/side_left_closed_full_silver-medium.jpg" alt=""></a></div>
+  <div><a href="/images/photos/jackets/bleecker/carousel/back_closed_full_silver.jpg" title=""><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/back_closed_full_silver-medium.jpg" alt=""></a></div>
+  <div><a href="/images/photos/jackets/bleecker/carousel/side_right_closed_full_silver.jpg" title=""><img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/side_right_closed_full_silver-medium.jpg" alt=""></a></div>
 @stop
 
 @section('measurement_data')

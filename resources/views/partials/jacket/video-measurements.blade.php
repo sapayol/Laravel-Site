@@ -1,8 +1,3 @@
-
-<div class="large-12 medium-12 small-12 columns">
-	<a class="video-caption underlined" ng-show="!measurementsVisible" ng-click="measurementsVisible = !measurementsVisible">Measurements in the images &amp; video </a>
-</div>
-
 <section ng-show="measurementsVisible" class="animated slideInDown">
 	@yield('measurement_data')
 		<ul ng-if="metricUnits" class="no-bullet value-list tight-list large-6 medium-6 small-6 columns">
