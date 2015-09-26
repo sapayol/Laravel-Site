@@ -20,13 +20,24 @@
 		<ul ng-if="!metricUnits" class="no-bullet value-list tight-list large-6 medium-6 small-6 columns">
 			<li><strong><small>Model Measurements</small></strong></li>
 			@foreach ($body_measurements as $key => $value)
-				<li><small class="list-key">{{{ ucwords(str_replace('_', ' ', $key)) }}}</small> {{{ round($value  / 2.54, 1) }}} <small>in</small></li>
+				<li>
+					<small class="list-key">{{{ ucwords(str_replace('_', ' ', $key)) }}}</small>
+					<span decimal-to-fraction="{{{ $value }}}">{{{ $value }}}</span> "
+				</li>
 			@endforeach
 		</ul>
 		<ul ng-if="!metricUnits" class="no-bullet value-list tight-list large-6 medium-6 small-6 columns">
 			<li><strong><small>Jacket Measurements</small></strong></li>
 			@foreach ($jacket_measurements as $key => $value)
-				<li><small class="list-key">{{{ ucwords(str_replace('_', ' ', $key)) }}}</small> {{{ $value !== '' ? round($value  / 2.54, 1) : '--' }}} <small>{{{ $value !== '' ? 'in' : '' }}}</small></li>
+				<li>
+					<small class="list-key">{{{ ucwords(str_replace('_', ' ', $key)) }}}</small>
+					@if ($value == '')
+						--
+					@else
+						<span decimal-to-fraction="{{{ $value }}}">{{{ $value }}}</span>
+					@endif
+					<small>{{{ $value !== '' ? '"' : '' }}}</small>
+				</li>
 				@endforeach
 		</ul>
 	<div class="large-12 medium-12 small-12 columns">
