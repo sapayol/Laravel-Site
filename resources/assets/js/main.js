@@ -48,6 +48,43 @@
     });
   });
 
+$(document).scroll(function(){
+    if($(this).scrollTop()>=$('.stick-to-bottom').position().top){
+
+    }
+})
+
+$(document).ready(function($){
+  //Sticky
+  console.log('offset: ' + $('.stick-to-bottom').offset().top);
+  console.log('position: ' + $('.stick-to-bottom').position().top);
+  var trigger = $('.stick-to-bottom').position().top - 128;
+  console.log('position adjust: ' + trigger);
+  console.log('window: ' + $(window).height());
+  console.log('document: ' + $(document).height());
+
+  var stickyButtonBottom = $('.stick-to-bottom').offset().top - 160;
+  // var stickyButtonBottom = $('.stick-to-bottom').offset().top - $(window).height();
+  var stickyNav = function(){
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop >= trigger) {
+        console.log(trigger);
+        $('.stick-to-bottom').show();
+        $('.stick-to-bottom').addClass('sticky');
+    } else {
+        console.log(scrollTop);
+        $('.stick-to-bottom').hide();
+        $('.stick-to-bottom').removeClass('sticky');
+    }
+  };
+
+  stickyNav();
+
+  $(window).scroll(function() {
+      stickyNav();
+  });
+});
 
 
 /** Full screen hero video code **/

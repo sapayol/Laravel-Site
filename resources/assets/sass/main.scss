@@ -33,3 +33,21 @@
 	padding-bottom: 0;
 }
 
+.button.stick-to-bottom {
+	border: none;
+	border-bottom: 6px solid $highlight-color;
+}
+
+.stick-to-bottom{
+  position: relative;
+}
+
+.stick-to-bottom.sticky{
+	// display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+	margin-bottom: 0;
+}
+
