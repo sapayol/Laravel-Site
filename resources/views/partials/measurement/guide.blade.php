@@ -5,7 +5,7 @@
 	<h3>@yield('title')</h3>
 	<br>
 	<div class="player">
-    <video poster="/images/video-posters/measurements/{{{ $step }}}.png" controls crossorigin>
+    <video poster="/images/video-posters/measurements/{{{ $step }}}.png" controls crossorigin preload="none">
       <source src="/videos/measurements/{{{ $step }}}.webm" type="video/webm">
       <source src="/videos/measurements/{{{ $step }}}.mp4"  type="video/mp4">
       <a href="/videos/{{{ $step }}}.mp4">Download</a>

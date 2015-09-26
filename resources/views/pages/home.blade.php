@@ -14,8 +14,8 @@
 				<a href="/jackets" class="button call-to-action">See Our Collection</a>
 			</div>
 			<video autoplay class="fillWidth" poster="/images/video-posters/hero_short.png">
-				<source src="/videos/hero_short.mp4" type="video/mp4" />
-				<source src="/videos/hero_short.webm" type="video/webm" />
+				<source src="/videos/hero_short.webm" type="video/webm"/>
+				<source src="/videos/hero_short.mp4" type="video/mp4"/>
 				Your browser does not support the video tag. I suggest you upgrade your browser.
 			</video>
 			<div class="poster hidden">
