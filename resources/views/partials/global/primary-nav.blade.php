@@ -1,4 +1,4 @@
-<?php $action = Request::route()->getAction()['as'] ?>
+<?php $action = Request::route() !== null ? Request::route()->getAction()['as'] : null ?>
 
 <div class="row">
   <nav class="primary-nav large-12 medium-12 small-12 columns" role="navigation">

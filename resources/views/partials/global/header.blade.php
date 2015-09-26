@@ -1,4 +1,4 @@
-<?php $action = Request::route()->getAction()['as'] ?>
+<?php $action = Request::route() !== null ? Request::route()->getAction()['as'] : null ?>
 
 <header class="row">
 	<h1 class="page-title {{{ (strpos($action,'orders') === 0 && $action != 'orders.complete') || $action === 'jackets.look'  || $action === 'jackets.show' ? 'with-breadcrumbs' : '' }}}">
