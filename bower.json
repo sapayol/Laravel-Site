@@ -6,7 +6,10 @@
     "angular-notify"			: null,
     "angular-payments"    : null,
     "angular-scroll"      : null,
-    "angular-mask" 		    : null
+    "angular-mask" 		    : null,
+    "foundation"   		    : null,
+    "slick-carousel"   		: null,
+    "plyr"            		: null
   }
 }
 

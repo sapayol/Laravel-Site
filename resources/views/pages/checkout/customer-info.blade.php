@@ -36,3 +36,8 @@
 		</form>
 	</section>
 @stop
+
+@section('additional-scripts')
+		{{-- <link rel="dns-prefetch" href="//js.stripe.com" /> --}}
+    <script src="https://js.stripe.com/v2/"></script>
+@stop

@@ -1,5 +1,6 @@
 a {
 	color: $primary-color;
+	text-decoration: none;
 	&:hover, &:focus {
 		color: darken($primary-color, 15%);
 	}

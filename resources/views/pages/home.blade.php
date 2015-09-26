@@ -9,7 +9,7 @@
 			<div class="title-container">
 				<h1 class="hero-text">
 					<span class="line1 thin">Tailor-made</span><br>
-					<strong class="line3">Leather Jackets</strong>
+					<span class="line3">Leather Jackets</span>
 				</h1>
 				<a href="/jackets" class="button call-to-action">See Our Collection</a>
 			</div>

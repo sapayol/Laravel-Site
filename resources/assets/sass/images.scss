@@ -21,6 +21,9 @@
 	.jacket-carousel {
 		margin-bottom: 0;
 	}
+	.slick-loading .slick-list {
+	  background: #fff url('../images/ajax-loader.gif') center center no-repeat;
+	}
 	.slick-slide img {
 		margin: 0 auto;
 	}
@@ -43,6 +46,9 @@
 	    height: 5px;
 	    width: 5px;
 	    border-radius: 100%;
+			&:before {
+				display: none;
+			}
 			&:focus {
 				outline: none;
 			}

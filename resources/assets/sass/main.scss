@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
-@import "functions";
+@import "foundation/functions";
+@import "foundation/settings";
+@import "foundation/foundation_components";
+
 @import "media-queries";
 @import "colors";
 @import "fonts";
