@@ -69,9 +69,16 @@ class Order extends Model {
     return $this->attributes()->where('type', '=', 'lining_color')->first();
   }
 
+  public function hasStatus() {
+    if ($this->status  !== '' || $this->status !== null) {
+      return true;
+    }
+    return false;
+  }
+
   public function isNew()
   {
-    if ($this->status == 'started' || $this->status  == '' || $this->status == null) {
+    if ($this->status == 'started' || $this->status  == 'new' || $this->hasStatus()) {
       return true;
     }
     return false;

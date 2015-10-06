@@ -18,18 +18,18 @@
 				@if ($measurement == 'note')
 					<li><br></li>
 				@endif
-				<li>
-					<small class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>
-					@if ($last_order->userMeasurements->$measurement)
-						<span class="list-value">
-							@if ($last_order->userMeasurements->units == 'in')
-								<strong decimal-to-fraction="{{{ $last_order->userMeasurements->$measurement }}}">{{{ $last_order->userMeasurements->$measurement }}}</strong> "
-							@else
-								<strong>{{{ $last_order->userMeasurements->$measurement != round($last_order->userMeasurements->$measurement) ?  round($last_order->userMeasurements->$measurement, 1) : round($last_order->userMeasurements->$measurement) }}}</strong> cm
-							@endif
-						</span>
-					@endif
-				</li>
+				@if ($last_order->userMeasurements->$measurement)
+						<li>
+							<small class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>
+								<span class="list-value">
+									@if ($last_order->userMeasurements->units == 'in')
+										<strong decimal-to-fraction="{{{ $last_order->userMeasurements->$measurement }}}">{{{ $last_order->userMeasurements->$measurement }}}</strong> "
+									@else
+										<strong>{{{ $last_order->userMeasurements->$measurement != round($last_order->userMeasurements->$measurement) ?  round($last_order->userMeasurements->$measurement, 1) : round($last_order->userMeasurements->$measurement) }}}</strong> cm
+								@endif
+							</span>
+					</li>
+				@endif
 			@endforeach
 		</ul>
 	</section>
