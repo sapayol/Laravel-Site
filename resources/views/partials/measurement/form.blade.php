@@ -20,7 +20,7 @@
 		<br>
 		<label for="{{{ $step }}}" class="text-input-label">
 			<span class="label-title">@yield('title')</span>
-			<input name="measurements[{{{ $step }}}]" id="{{{ $step }}}" type="number" placeholder="00.00" ng-maxlength="7" {{{ $step=='height' ? max="10" : '' }}} step="0.01" ng-model="measurement" required ng-change="change(measurement)" ng-value="{{{ $order->userMeasurements->$step }}}">
+			<input name="measurements[{{{ $step }}}]" id="{{{ $step }}}" type="number" placeholder="00.00" ng-maxlength="7" {{{ $step=='height' ? 'max="10"' : '' }}} step="0.01" ng-model="measurement" required ng-change="change(measurement)" ng-value="{{{ $order->userMeasurements->$step }}}">
 			<span class="input-units">{{{ $order->userMeasurements->units }}}</span>
 		</label>
 		<br><br>
