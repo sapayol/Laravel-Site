@@ -17,7 +17,7 @@
 			@foreach ($body_measurements as $key => $value)
 				<li>
 					<small class="list-key">{{{ ucwords(str_replace('_', ' ', $key)) }}}</small>
-					<span decimal-to-fraction="{{{ $value }}}">{{{ $value }}}</span> "
+					<span decimal-to-fraction="{{{ $value * .393 }}}">{{{ $value * .393 }}}</span> "
 				</li>
 			@endforeach
 		</ul>
@@ -29,7 +29,7 @@
 					@if ($value == '')
 						--
 					@else
-						<span decimal-to-fraction="{{{ $value }}}">{{{ $value }}}</span>
+						<span decimal-to-fraction="{{{ $value * .393}}}">{{{ $value * .393}}}</span>
 					@endif
 					<small>{{{ $value !== '' ? '"' : '' }}}</small>
 				</li>
