@@ -1,59 +1,11 @@
-(function() {
-  'use strict';
+var homeController = angular.module('homeController', []);
 
-  var sapayolApp = angular.module('sapayolApp', [
-    'controllers',
-    'services',
-    'directives',
-    'factories',
-    'duScroll',
-    'cgNotify',
-    'angularPayments',
-    'angular-loading-bar',
-    'ngMask'
-  ])
-  .run(['$timeout', function($timeout) {
-    $timeout(function() {
-			$(document).ready(function(){
-			  $('.jacket-carousel').slick({
-          dots: true,
-			  	arrows: true,
-			  	mobileFirst: true,
-          focusOnSelect: false
-			  });
+homeController.controller('homeCtrl', ['$scope', function($scope) {
 
-        plyr.setup({
-          controls: ["play", "fullscreen"]
-        });
-        $(document).foundation();
-        if ('ontouchstart' in window) {
-          FastClick.attach(document.body);
-        }
-      });
-    }, 500);
-  }]);
-
-
-  // Smooth scrolling on anchor tags
-  $(function() {
-    $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
-      }
-    });
-  });
-
- /** Full screen hero video code **/
+  /** Full screen hero video code **/
   /********************************************************************/
 
-  $( document ).ready(function() {
+  // $( document ).ready(function() {
 
     // Resive video
     scaleVideoContainer();
@@ -69,7 +21,7 @@
       scaleBannerVideoSize('.hero-video-container video');
     });
 
-  });
+  // });
 
     /** Reusable Functions **/
     /********************************************************************/
@@ -110,7 +62,9 @@
         $(this).width(videoWidth).height(videoHeight);
         $('.hero-video-container video').addClass('fadeIn animated');
       });
+
     }
 
 
-})();
+
+}]);

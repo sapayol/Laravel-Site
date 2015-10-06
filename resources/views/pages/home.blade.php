@@ -1,5 +1,9 @@
 @extends('layouts/default')
 
+@section('angular_page_controller')
+	homeCtrl
+@stop
+
 @section('page_wrap_class')
 	headless-page
 @stop

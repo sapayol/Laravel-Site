@@ -2,7 +2,7 @@
 @include('partials.global.primary-nav')
 @include('partials.global.header')
 
-<main class="row">
+<main class="row" ng-controller="jacketCtrl">
 	@include('partials.jacket.image-carousel')
 	@include('partials.jacket.summary')
 	@include('partials.jacket.video')
