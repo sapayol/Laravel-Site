@@ -45,6 +45,13 @@ nav.primary-nav {
 		text-transform: uppercase;
 		margin-bottom: .5rem;
 	}
+	small a {
+		text-transform: none;
+		font-size: .8rem;
+		position: relative;
+		top: 4px;
+		border-bottom: 1px solid $primary-color;
+	}
 	@media #{$medium-up} {
 		z-index: 9999;
 		.logo img {

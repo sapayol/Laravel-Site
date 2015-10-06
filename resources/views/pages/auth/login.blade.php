@@ -2,18 +2,18 @@
 
 
 @section('main')
-	<section class="large-12 medium-12 small-12 columns">
+	<section class="large-12 medium-12 small-12 columns" ng-controller="authCtrl">
 		@if (count($errors) > 0)
-			<div data-alert class="alert-box alert floating animated shake">
+			<div ng-hide="hideAlert" data-alert class="alert-box alert floating animated shake" ng-init="hideAlert = false">
 				<ul class="no-bullet">
 					@foreach ($errors->all() as $error)
 						<li><small>{{ $error }}</small></li>
 					@endforeach
 				</ul>
-			  <a href="#" class="close">&times;</a>
+			  <a href="#" class="close" ng-click="hideAlert = true">&times;</a>
 			</div>
 		@endif
-		<form role="form" method="POST" action="{{ url('/auth/login') }}">
+		<form role="form" method="POST" action="{{ url('/auth/login') }}" name="userInfoForm">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<label for="email">Email Address
 				<span class="right alert" ng-if="showUserErorrs && userInfoForm.email.$invalid">Invalid email</span>
@@ -25,10 +25,6 @@
 				<input name="password" type="password" ng-model="user.password" ng-required="true" ng-disabled="userInfoSubmitted">
 			</label>
 
-			<label ng-hide="resetMode">
-				<input type="checkbox" name="remember"> Remember Me
-			</label>
-
 			<div class="text-center">
 				<input class="button expand animated slideInDown" type="submit" value="Login" ng-hide="resetMode">
 				<input class="button expand animated slideInUp" type="button" ng-click="resetPassword()" value="Request password reset" ng-hide="!resetMode">
@@ -38,5 +34,4 @@
 			</div>
 		</form>
 	</section>
-
 @endsection

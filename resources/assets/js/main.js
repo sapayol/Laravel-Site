@@ -26,7 +26,9 @@
           controls: ["play", "fullscreen"]
         });
         $(document).foundation();
-        FastClick.attach(document.body);
+        if ('ontouchstart' in window) {
+          FastClick.attach(document.body);
+        }
       });
     }, 500);
   }]);
