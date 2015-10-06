@@ -33,6 +33,6 @@
 		<input name="country" type="text" ng-model="address.country" ng-required="true" ng-disabled="addressDisabled">
 	</label>
 
-	<input ng-if="address.address1" class="button expand" type="submit" value="Update Address" ng-hide="addressDisabled">
-	<input ng-if="!address.address1" class="button expand" type="submit" value="Proceed To Payment Info" ng-hide="addressDisabled">
+	<input ng-if="address.address1 && addressSubmitted" class="button expand" type="submit" value="Update Address" ng-hide="addressDisabled">
+	<input ng-if="!address.address1 || !addressSubmitted" class="button expand" type="submit" value="Proceed To Payment Info" ng-hide="addressDisabled">
 </form>

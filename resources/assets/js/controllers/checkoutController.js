@@ -18,37 +18,38 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 			if (saved_card_info) {
 				$scope.paymentInfoSubmitted = true;
 				$scope.paymentInfoDisabled  = true;
-				$document.scrollToElement(angular.element('#order-summary'), 80, 500);
+				$document.scrollToElement($('#order-summary'), 80, 500);
 			} else {
-				$document.scrollToElement(angular.element('#address'), 80, 500);
+				$document.scrollToElement($('#address'), 80, 500);
 			}
 		};
+    $(document).foundation();
 		if (sapayol.user !== null) {
 			$scope.address.name = sapayol.user.name;
 		};
 	}
 
 	$scope.changePaymentInfo = function() {
-		$document.scrollToElement(angular.element('#payment-info'), 80, 500);
+		$document.scrollToElement($('#payment-info'), 80, 500);
 		$scope.paymentInfoDisabled = false;
 		$scope.card = null;
 		Session.store({card: $scope.card});
 	}
 
 	$scope.changeAddress = function() {
-		$document.scrollToElement(angular.element('#address'), 80, 500);
+		$document.scrollToElement($('#address'), 80, 500);
 		$scope.addressDisabled = false;
 	}
 
 	$scope.submitAddress = function(order_id) {
 	  if ($scope.addressForm.$valid) {
 	  	if ($scope.paymentInfoSubmitted) {
-				$document.scrollToElement(angular.element('#order-summary'), 80, 500);
+				$document.scrollToElement($('#order-summary'), 80, 500);
 	  	} else {
 	  		addAddressToOrder($scope.address, order_id).then(function(response){
 					$scope.addressSubmitted = true;
 					$scope.addressDisabled = true;
-					$document.scrollToElement(angular.element('#payment-info'), 80, 500);
+					$document.scrollToElement($('#payment-info'), 80, 500);
 	  		});
 	  	}
 	  } else {
@@ -96,6 +97,10 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 				stripe_token: $scope.stripe_token
 			});
 		}
+	};
+
+	$scope.closeModal = function() {
+		$('#cvcModal').foundation('reveal', 'close');
 	};
 
 	init();

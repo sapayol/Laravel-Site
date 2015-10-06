@@ -29,7 +29,7 @@
 					 placeholder="MM/YYYY">
 	</label>
 
-	<label for="cvc" class="cvc-field">CVC <small><a class="underlined" href="">What's This?</a></small>
+	<label for="cvc" class="cvc-field">CVC <small><a class="underlined" href="#" data-reveal-id="cvcModal">What's This?</a></small>
 		<span class="right" ng-if="showPaymentErorrs && paymentInfoForm.cvc.$invalid">Required</span>
 		<input id="cvc"
 					 name="cvc"
@@ -53,3 +53,14 @@
 	</div>
 
 </form>
+
+<div id="cvcModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	<br>
+	<p>This is your card's security code. <br><br> On Visa/MasterCard/Discover cards it should be the last 3 digits on the back of your card. <br><br> On AmericanExpress cards, it is the 4 digits off to the right of the card face.</p>
+	<div class="text-center">
+		<img src="/images/cvc-hint.png" alt="" class="responsive-image">
+		<br><br>
+		<a class="underlined" aria-label="Close" ng-click="closeModal()">Close</a>
+	</div>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>

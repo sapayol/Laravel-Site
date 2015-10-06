@@ -6262,6 +6262,10 @@ nav.primary-nav {
   z-index: 9999;
   margin-bottom: 0; }
 
+.reveal-modal {
+  min-height: 30vh;
+  z-index: 9999; }
+
 
 
 /*# sourceMappingURL=../maps/main.css.map */
