@@ -147,7 +147,7 @@ return [
         /*
          * Vendor Service Providers...
          */
-        'Laracasts\Utilities\JavaScript\JavascriptServiceProvider',
+        'Laracasts\Utilities\JavaScript\JavaScriptServiceProvider',
         'Laravel\Cashier\CashierServiceProvider'
 
     ],
