@@ -119,6 +119,6 @@ return [
     |
     */
 
-    'pretend' => true,
+    'pretend' => env('APP_ENV') == 'local' ? true : false,
 
 ];
