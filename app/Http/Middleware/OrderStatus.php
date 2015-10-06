@@ -21,7 +21,7 @@ class OrderStatus
 
         if ($order->status == 'placed' && $order->userMeasurements->getIncompleteMeasurements() > 0) {
             return $next($request);
-        } else if ($order->status == 'placed' || $order->status == 'completed') {
+        } else if (!$order->isNew()) {
             return redirect()->route('orders.complete', $order->id);
         } else {
             return $next($request);

@@ -106,7 +106,6 @@ class OrdersController extends Controller {
 	public function postFit($id, Request $request)
 	{
 		$order = Order::find($id);
-		$order_is_new = $order->status != 'placed' && $order->status != 'completed';
 
 		if (!$order->userMeasurements) {
 			Measurement::create(array_merge($request->measurements, ['order_id' => $order->id]));
@@ -115,7 +114,7 @@ class OrdersController extends Controller {
 		}
 
 		$order = Order::find($id);
-		if ($order_is_new) {
+		if ($order->isNew()) {
 			$order->status = 'started';
 			$order->save();
 		}
@@ -123,7 +122,7 @@ class OrdersController extends Controller {
 		if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
 			$next_step = $incomplete_measurements[0];
 			return redirect()->route('orders.fit', ['id' => $order->id, 'step' => $next_step]);
-		} elseif (!$order_is_new) {
+		} elseif (!$order->isNew()) {
 				return redirect()->route('orders.complete', $order->id);
 		} else {
 			return redirect()->route('orders.checkout', $order->id);
