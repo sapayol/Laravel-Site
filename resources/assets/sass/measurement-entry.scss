@@ -9,13 +9,15 @@
 	}
 	h2 {
 		float: right;
-		position: relative;
-		top: -2.2rem;
+		position: absolute;
+		// top: -2.2rem;
+		margin-top: -2rem;
 		font-size: 1.2rem;
 		white-space: nowrap;
 		z-index: 2000;
+		right: 0;
 		font-weight: 400;
-		margin-right: .5rem;
+		margin-right: 1.5rem;
 	}
 	.text-input-label {
 		width: 7rem;
