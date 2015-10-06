@@ -6,12 +6,14 @@
 
 @section('full-width-hero')
 		<div class="hero-video-container">
-			<div class="title-container">
-				<h1 class="hero-text">
-					<span class="line1 thin">Tailor-made</span><br>
-					<span class="line3">Leather Jackets</span>
-				</h1>
-				<a href="/jackets" class="button call-to-action">See Our Collection</a>
+			<div class="filter">
+				<div class="title-container">
+					<h1 class="hero-text">
+						<span class="line1 thin">Tailor-made</span><br>
+						<span class="line3">Leather Jackets</span>
+					</h1>
+					<a href="/jackets" class="button call-to-action">See Our Collection</a>
+				</div>
 			</div>
 			<video autoplay class="fillWidth" poster="/images/video-posters/hero_short.png">
 				<source src="/videos/hero_short.webm" type="video/webm"/>

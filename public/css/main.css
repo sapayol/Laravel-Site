@@ -5751,13 +5751,14 @@ fieldset {
     left: -9999px; }
   .measurement-entry h2 {
     float: right;
-    position: relative;
-    top: -2.2rem;
+    position: absolute;
+    margin-top: -2rem;
     font-size: 1.2rem;
     white-space: nowrap;
     z-index: 2000;
+    right: 0;
     font-weight: 400;
-    margin-right: .5rem; }
+    margin-right: 1.5rem; }
   .measurement-entry .text-input-label {
     width: 7rem; }
     @media only screen and (max-width: 320px) {
@@ -5962,7 +5963,7 @@ hr.wide {
   border-width: 9px; }
 
 hr.thin {
-  border-width: 1px; }
+  height: 1px; }
 
 .sidekick-image {
   margin-bottom: 1rem; }
@@ -6092,19 +6093,18 @@ hr.thin {
   .hero-video-container .filter {
     z-index: 100;
     position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    height: 100%; }
-  .hero-video-container .title-container {
-    z-index: 1000;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    color: #fff;
     background: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), rgba(88, 80, 80, 0.3), rgba(88, 80, 80, 0.3));
     background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(88, 80, 80, 0.3), rgba(88, 80, 80, 0.3));
     /* Standard syntax */
-    padding: 30% 0; }
+    width: 100%; }
+  .hero-video-container .title-container {
+    text-align: center;
+    margin: 0 auto;
+    z-index: 1000;
+    position: relative;
+    top: 50%;
+    margin-top: -8rem;
+    padding-top: 1rem; }
     .hero-video-container .title-container h1 {
       margin: auto;
       color: white; }
@@ -6112,6 +6112,20 @@ hr.thin {
       border-color: #222222;
       border-bottom: 6px solid #B02428;
       margin-top: 1rem; }
+@-webkit-keyframes changeColor {
+  0% {
+    color: white; }
+  50% {
+    color: #222222; }
+  100% {
+    color: white; } }
+@keyframes changeColor {
+  0% {
+    color: white; }
+  50% {
+    color: #222222; }
+  100% {
+    color: white; } }
   .hero-video-container video {
     position: absolute;
     z-index: 0;

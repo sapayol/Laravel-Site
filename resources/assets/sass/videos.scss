@@ -54,24 +54,20 @@
   .filter {
     z-index: 100;
     position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(88, 80, 80, 0.3), rgba(88, 80, 80, 0.3)); /* Standard syntax */
+    width: 100%;
   }
   .title-container {
-    z-index: 1000;
-    position: absolute;
-    // top: 40%;
-    height: 100%;
-    width: 100%;
     text-align: center;
-    color: #fff;
-    // background: rgba(255, 255, 255, 0.5);
-    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(88, 80, 80, 0.3), rgba(88, 80, 80, 0.3)); /* Standard syntax */
-    // padding-top: 1rem;
-    padding: 30% 0;
+    margin: 0 auto;
+    z-index: 1000;
+    position: relative;
+    top: 50%;
+    margin-top: -8rem;
+    padding-top: 1rem;
     h1 {
-      margin: auto;
-      color: $white;
+        margin: auto;
+        color: white;
     }
     .button {
       border-color: $black;
@@ -79,7 +75,11 @@
       margin-top: 1rem;
     }
   }
-
+  @keyframes changeColor {
+    0%   {color: $white;}
+    50%  {color: $black;}
+    100% {color: $white;}
+  }
   video {
     position: absolute;
     z-index: 0;
@@ -103,7 +103,3 @@
     display: none;
   }
 }
-
-
-
-
