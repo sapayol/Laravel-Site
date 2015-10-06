@@ -1,5 +1,9 @@
 @extends('layouts/default')
 
+@section('page_wrap_class')
+	headless-page
+@stop
+
 @section('title')
 	Terms &amp; Conditions
 @stop
