@@ -13,20 +13,27 @@
 		<li><small class="list-key">Name</small><strong>{{{ $order->user->name }}}</strong></li>
 		<li><small class="list-key">Email</small><strong>{{{ $order->user->email }}}</strong></li>
 		<li><small class="list-key">Address</small><strong>{{{ $order->address->address1 }}}</strong></li>
-		<li><small class="list-key">&nbsp;</small><strong>{{{ $order->address->address2 }}}</strong></li>
+		@if ($order->address->address2 )
+			<li><small class="list-key">&nbsp;</small><strong>{{{ $order->address->address2 }}}</strong></li>
+		@endif
 		<li><small class="list-key">&nbsp;</small><strong>{{{ $order->address->city }}}, {{{ $order->address->province }}} {{{ $order->address->postcode }}}</strong></li>
 		<li><small class="list-key">&nbsp;</small><strong>{{{ $order->address->country }}}</strong></li>
 	</ul>
 	<p>If this information is wrong or you have questions, write us at <a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>.</p>
 </section>
-<h2 class="large-12 medium-8 small-12 columns order-summary">Order Details</h2>
+<h2 class="large-12 medium-8 small-12 columns order-summary">
+	Order Details
+</h2>
+<ul class="large-12 medium-8 small-12 columns order-summary no-bullet value-list">
+	<li><small class="list-key">Order # </small><strong>{{{ $order->id  }}}	</strong></li>
+	<li><small class="list-key">Date </small>{{{ date('M d, Y', strtotime($order->created_at))  }}}	</li>
+</ul>
 <div class="large-6 medium-8 large-uncentered medium-centered small-12 columns order-summary">
 	<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg">
 </div>
 <div class="large-6 medium-8 small-12 columns order-summary">
 	<h3 class="thin">Look</h3>
 	<ul class="no-bullet value-list">
-		<li><small class="list-key">Order # </small><strong>{{{ $order->id  }}}	</strong></li>
 		<li><small class="list-key">Model </small>{{{ $order->jacket->name  }}}	</li>
 		<li><small class="list-key">Leather Type </small>{{{ ucfirst($order->leather_type()->name)  }}}	</li>
 		<li><small class="list-key">Leather Color </small>{{{ ucfirst($order->leather_color()->name) }}}	</li>
@@ -65,10 +72,8 @@
 					<li>{{{  ucwords(str_replace('_', ' ', $incomplete_measurement)) }}}</li>
 				@endforeach
 			</ul>
-			<button class="button hollow">Add Missing Measurements</button>
+			<a href="/orders/{{{ $order->id}}}/fit/{{{ $order->userMeasurements->getIncompleteMeasurements()[0] }}}" class="button hollow">Add Missing Measurements</a>
 		</div>
-	@else
-		<a href="" class="button">Check out our other jackets</a>
 	@endif
 </div>
 
@@ -78,6 +83,10 @@
 		<li><small class="list-key">Method</small><strong>Credit</strong></li>
 		<li><small class="list-key">Total </small><strong>${{{ $order->jacket->price }}}	</strong></li>
 	</ul>
+
+	@if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) <= 0)
+		<a href="/jackets" class="button">Check out our other jackets</a>
+	@endif
 </div>
 
 <div class="clearfix"></div>

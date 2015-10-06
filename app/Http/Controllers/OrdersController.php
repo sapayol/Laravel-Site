@@ -20,6 +20,10 @@ class OrdersController extends Controller {
 	{
 		$order = Order::find($id);
 
+		if (!$order->isNew()) {
+			return redirect()->route('orders.complete', $order->id);
+		}
+
 		if (!$request->old()) {
 			$new_order = [
 				'user_id'          => Auth::id(),
@@ -102,6 +106,7 @@ class OrdersController extends Controller {
 	public function postFit($id, Request $request)
 	{
 		$order = Order::find($id);
+		$order_is_new = $order->status != 'placed' && $order->status != 'completed';
 
 		if (!$order->userMeasurements) {
 			Measurement::create(array_merge($request->measurements, ['order_id' => $order->id]));
@@ -110,12 +115,16 @@ class OrdersController extends Controller {
 		}
 
 		$order = Order::find($id);
-		$order->status = 'started';
-		$order->save();
+		if ($order_is_new) {
+			$order->status = 'started';
+			$order->save();
+		}
 
 		if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
 			$next_step = $incomplete_measurements[0];
 			return redirect()->route('orders.fit', ['id' => $order->id, 'step' => $next_step]);
+		} elseif (!$order_is_new) {
+				return redirect()->route('orders.complete', $order->id);
 		} else {
 			return redirect()->route('orders.checkout', $order->id);
 		}
@@ -227,7 +236,7 @@ class OrdersController extends Controller {
         $message->from('ediz@sapayol.com');
         $message->subject('Your Receipt!');
       });
-
+      Session::flash('message', "Checkout complete!");
 			return redirect()->route('orders.complete', $order->id);
 		}	else {
 			dd($charge_attempt);

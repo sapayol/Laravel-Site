@@ -19,7 +19,9 @@ class OrderStatus
         $order_id = $request->route()->id;
         $order    = Order::find($order_id);
 
-        if ($order->status == 'placed' || $order->status == 'completed') {
+        if ($order->status == 'placed' && $order->userMeasurements->getIncompleteMeasurements() > 0) {
+            return $next($request);
+        } else if ($order->status == 'placed' || $order->status == 'completed') {
             return redirect()->route('orders.complete', $order->id);
         } else {
             return $next($request);
