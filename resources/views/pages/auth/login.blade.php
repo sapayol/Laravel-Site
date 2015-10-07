@@ -1,5 +1,6 @@
 @extends('layouts/default')
 
+
 @section('page_wrap_class')
 	four-levels
 @endsection
