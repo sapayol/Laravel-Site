@@ -15,6 +15,8 @@ class Measurement extends Model {
 
   protected $guarded = array();
 
+  public $measurement_names = ['height', 'half_shoulder', 'back_width', 'chest' , 'stomach' , 'back_length', 'waist', 'arm', 'biceps', 'note'];
+
   public function order()
   {
     return $this->belongsTo('Order');
@@ -23,9 +25,9 @@ class Measurement extends Model {
   public function getIncompleteMeasurements()
   {
   	$results = [];
-    foreach ($this->attributes as $key => $value) {
-    	if (($key != 'size' && $key != 'type' && $key != 'units') && ($value == null || $value == '0.00')) {
-				$results[] = $key;
+    foreach ($this->measurement_names as $key => $measurement_name) {
+      if ($this->$measurement_name == '' || $this->$measurement_name == null) {
+				$results[$key] = $measurement_name;
     	}
     }
     return $results;
@@ -34,9 +36,9 @@ class Measurement extends Model {
   public function getCompleteMeasurements()
   {
   	$results = [];
-    foreach ($this->attributes as $key => $value) {
-    	if (($key != 'size' && $key != 'type' && $key != 'units') && $value != null) {
-				$results[$key] = $value;
+    foreach ($this->measurement_names as $key => $measurement_name) {
+    	if ($this->$measurement_name !== '' && $this->$measurement_name !== null) {
+				$results[$key] = $measurement_name;
     	}
     }
     return $results;
