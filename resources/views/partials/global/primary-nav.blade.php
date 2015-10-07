@@ -1,4 +1,5 @@
 <?php $action = Request::route() !== null ? Request::route()->getAction()['as'] : null ?>
+<?php $uri = Request::route()->getUri(); ?>
 <?php $currentuser = Auth::user(); ?>
 
 <div class="row">
@@ -14,10 +15,10 @@
           @endif
           <a href="/auth/logout">Logout</a>
         </small>
-      @else
+      @elseif (!$currentuser && strpos($uri, 'login') === 0)
         <small class="right"><a href="/auth/login">Login</a></small>
       @endif
-      <li class="{{{ $action == strpos($action, 'jackets') ? 'current' : ''}}}"><a href="/jackets">Our Jackets</a></li>
+      <li class="{{{ strpos($action, 'jackets') ? 'current' : ''}}}"><a href="/jackets">Our Jackets</a></li>
       <li class="{{{ $action == 'pages.who-we-are' ? 'current' : ''}}}"><a href="/who-we-are">Who We Are</a></li>
       <li class="{{{ $action == 'pages.how-it-works' ? 'current' : ''}}}"><a href="/how-it-works">How It Works</a></li>
       @if ($currentuser && $currentuser->unfinishedOrders->count() > 0)

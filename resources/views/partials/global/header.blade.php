@@ -1,4 +1,5 @@
 <?php $action = Request::route() !== null ? Request::route()->getAction()['as'] : null ?>
+<?php $uri = Request::route()->getUri(); ?>
 
 <header class="row">
 	<h1 class="page-title {{{ (strpos($action,'orders') === 0 && $action != 'orders.complete') || $action === 'jackets.look'  || $action === 'jackets.show' ? 'with-breadcrumbs' : '' }}}">
@@ -12,6 +13,8 @@
 			<a ng-click="displayMenu = false">Terms of Service</a>
 		@elseif ($action == 'users.show')
 			<a ng-click="displayMenu = false">Your Profile</a>
+		@elseif (strpos($uri, 'login') !== 0)
+			<a ng-click="displayMenu = false">Login</a>
 		@elseif ($action == 'jackets.index')
 			<a ng-click="displayMenu = false">Our Jackets</a>
 		@elseif ($action == 'jackets.show')

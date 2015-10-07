@@ -1,5 +1,9 @@
 @extends('layouts/default')
 
+@section('page_wrap_class')
+	four-levels
+@endsection
+
 
 @section('main')
 	<section class="large-12 medium-12 small-12 columns" ng-controller="authCtrl">
