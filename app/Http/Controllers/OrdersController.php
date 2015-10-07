@@ -49,16 +49,11 @@ class OrdersController extends Controller {
 
 	public function store(CreateOrderRequest $request)
 	{
-		$user = Auth::loginUsingId($request->user_id);
-		$last_order = $user->unfinishedOrders->last();
-		$new_order = $request->input();
-
-		// if ($last_order && $last_order->userMeasurements) {
-		// 	return redirect()->route('orders.show', ['id' => $last_order->id])->withInput();
-		// }
-
-		$jacket = Jacket::where('model', '=', $request->model)->first();
-		$order  = Order::create(array(
+		$user       = Auth::loginUsingId($request->user_id);
+		$last_order = $user->droppedOrders->last();
+		$new_order  = $request->input();
+		$jacket     = Jacket::where('model', '=', $request->model)->first();
+		$order      = Order::create(array(
 			'status'    => 'new',
 			'user_id'   => Auth::user()->id,
 			'jacket_id' => $jacket->id,
@@ -71,16 +66,12 @@ class OrdersController extends Controller {
 			$order->attributes()->attach($attribute);
 		}
 
-		$step = 'units';
-
-		if ($last_order && $last_order->userMeasurements) {
+		if ($last_order && count($last_order->userMeasurements->getCompleteMeasurements() > 0)) {
 			$old_measurements = $last_order->userMeasurements->toArray();
-			unset($old_measurements['id']);
-			unset($old_measurements['created_at']);
-			unset($old_measurements['updated_at']);
+			unset($old_measurements['id'], $old_measurements['created_at'], $old_measurements['updated_at']);
 			Measurement::create(array_merge($old_measurements, ['order_id' => $order->id]));
 			if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
-        Session::flash('message', "Looks like we still don't have some of your measurements. Please enter the rest for a perfect fit.");
+        Session::flash('message', "Looks you already submitted some of your measurements. Please enter the rest for a perfect fit.");
 				return redirect()->route('orders.fit', [$order->id, array_shift($incomplete_measurements)]);
 			}
 		}

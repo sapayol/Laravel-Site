@@ -10,6 +10,8 @@
 			<a ng-click="displayMenu = false">Our Leather</a>
 		@elseif ($action == 'pages.terms')
 			<a ng-click="displayMenu = false">Terms of Service</a>
+		@elseif ($action == 'users.show')
+			<a ng-click="displayMenu = false">Your Profile</a>
 		@elseif ($action == 'jackets.index')
 			<a ng-click="displayMenu = false">Our Jackets</a>
 		@elseif ($action == 'jackets.show')

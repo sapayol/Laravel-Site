@@ -8,7 +8,12 @@
     <div class="clearfix"></div>
     <ul class="no-bullet">
       @if ($currentuser)
-        <small class="right"><a href="/auth/logout">Logout</a></small>
+        <small class="right">
+          @if ($action !== 'users.show')
+            <a href="{{{ route('users.show', $currentuser->id) }}}">Your Profile</a><br>
+          @endif
+          <a href="/auth/logout">Logout</a>
+        </small>
       @else
         <small class="right"><a href="/auth/login">Login</a></small>
       @endif
