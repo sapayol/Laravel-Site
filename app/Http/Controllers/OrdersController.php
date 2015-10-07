@@ -20,6 +20,10 @@ class OrdersController extends Controller {
 	{
 		$order = Order::find($id);
 
+		if ($order->status == 'new') {
+			return redirect()->back();
+		}
+
 		if (!$order->isNew()) {
 			return redirect()->route('orders.complete', $order->id);
 		}
@@ -77,7 +81,7 @@ class OrdersController extends Controller {
 			Measurement::create(array_merge($old_measurements, ['order_id' => $order->id]));
 			if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
         Session::flash('message', "Looks like we still don't have some of your measurements. Please enter the rest for a perfect fit.");
-				return redirect()->route('orders.fit', [$order->id, $incomplete_measurements[0]]);
+				return redirect()->route('orders.fit', [$order->id, array_shift($incomplete_measurements)]);
 			}
 		}
 
@@ -120,7 +124,7 @@ class OrdersController extends Controller {
 		}
 
 		if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
-			$next_step = $incomplete_measurements[0];
+			$next_step = array_shift($incomplete_measurements);
 			return redirect()->route('orders.fit', ['id' => $order->id, 'step' => $next_step]);
 		} elseif (!$order->isNew()) {
 				return redirect()->route('orders.complete', $order->id);
