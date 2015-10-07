@@ -13,7 +13,7 @@
 			<a ng-click="displayMenu = false">Terms of Service</a>
 		@elseif ($action == 'users.show')
 			<a ng-click="displayMenu = false">Your Profile</a>
-		@elseif (strpos($uri, 'login') !== 0)
+		@elseif (strpos($uri, 'login'))
 			<a ng-click="displayMenu = false">Login</a>
 		@elseif ($action == 'jackets.index')
 			<a ng-click="displayMenu = false">Our Jackets</a>

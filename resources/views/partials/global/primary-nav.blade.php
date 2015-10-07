@@ -15,7 +15,7 @@
           @endif
           <a href="/auth/logout">Logout</a>
         </small>
-      @elseif (!$currentuser && strpos($uri, 'login') === 0)
+      @elseif (!$currentuser && !strpos($uri, 'login'))
         <small class="right"><a href="/auth/login">Login</a></small>
       @endif
       <li class="{{{ strpos($action, 'jackets') ? 'current' : ''}}}"><a href="/jackets">Our Jackets</a></li>
