@@ -15,6 +15,8 @@
 			<a ng-click="displayMenu = false">Your Profile</a>
 		@elseif (strpos($uri, 'login'))
 			<a ng-click="displayMenu = false">Login</a>
+		@elseif (strpos($uri, 'reset'))
+			<a ng-click="displayMenu = false">Password Reset</a>
 		@elseif ($action == 'jackets.index')
 			<a ng-click="displayMenu = false">Our Jackets</a>
 		@elseif ($action == 'jackets.show')
