@@ -5642,37 +5642,40 @@ header {
     header h1.with-breadcrumbs {
       margin-bottom: .3rem; }
 
-footer a.back-to-top-link {
-  color: white;
-  background: #B02428;
-  display: block;
-  padding-top: 1rem;
-  padding-bottom: .25rem; }
-  footer a.back-to-top-link p {
-    margin-bottom: 0; }
-footer .chevron {
-  border-color: white;
+footer {
   position: relative;
-  left: 50%;
-  margin-left: -15px; }
-footer nav.footer-nav {
-  padding: 1rem 0; }
-  footer nav.footer-nav ul {
-    display: inline-block;
-    margin: 0 auto; }
-    footer nav.footer-nav ul li {
-      margin-left: .8rem; }
-      footer nav.footer-nav ul li a {
-        position: relative;
-        top: .3rem; }
-    footer nav.footer-nav ul li:first-child {
-      margin-left: 0; }
-footer .legal {
-  padding: .5rem 0 .8rem 0; }
-  footer .legal a {
-    font-size: .8rem;
+  z-index: 200; }
+  footer a.back-to-top-link {
     color: white;
-    text-decoration: underline; }
+    background: #B02428;
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: .25rem; }
+    footer a.back-to-top-link p {
+      margin-bottom: 0; }
+  footer .chevron {
+    border-color: white;
+    position: relative;
+    left: 50%;
+    margin-left: -15px; }
+  footer nav.footer-nav {
+    padding: 1rem 0; }
+    footer nav.footer-nav ul {
+      display: inline-block;
+      margin: 0 auto; }
+      footer nav.footer-nav ul li {
+        margin-left: .8rem; }
+        footer nav.footer-nav ul li a {
+          position: relative;
+          top: .3rem; }
+      footer nav.footer-nav ul li:first-child {
+        margin-left: 0; }
+  footer .legal {
+    padding: .5rem 0 .8rem 0; }
+    footer .legal a {
+      font-size: .8rem;
+      color: white;
+      text-decoration: underline; }
 
 .look-options {
   padding-bottom: 2rem; }
@@ -5900,7 +5903,7 @@ fieldset {
   background: #222222;
   text-transform: uppercase;
   letter-spacing: 1.2;
-  z-index: 2000; }
+  z-index: 170; }
   .button .chevron, a.button .chevron, button.button .chevron {
     border-color: white; }
   .button:hover, .button:active, .button:focus, a.button:hover, a.button:active, a.button:focus, button.button:hover, button.button:active, button.button:focus {
@@ -6410,7 +6413,7 @@ nav.primary-nav {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 180;
   margin-bottom: 0; }
 
 .reveal-modal {

@@ -3,7 +3,8 @@ var jacketController = angular.module('jacketController', []);
 jacketController.controller('jacketCtrl', ['$scope', function($scope) {
 
   $(document).ready(function($){
-    var trigger = $('.stick-to-bottom').position().top - 128;
+    // var trigger = $('.stick-to-bottom').position().top - 128;
+    var trigger = $('.stick-to-bottom').position().top + 500;
     var stickyButtonBottom = $('.stick-to-bottom').offset().top - 160;
     var stickyNav = function(){
       var scrollTop = $(window).scrollTop();
