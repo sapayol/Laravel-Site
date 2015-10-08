@@ -45,7 +45,9 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: white;
+  // background: white;
+  background: url(../images/photos/other/hero-image.jpg) no-repeat center center fixed;
+  background-size: contain;
   .poster img {
     width: 100%;
     bottom: 0;

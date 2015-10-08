@@ -13,7 +13,18 @@
 @stop
 
 @section('full-width-hero')
-		<div class="hero-video-container">
+		<div class="hero-image-container">
+			<div class="filter">
+				<div class="title-container">
+					<h1 class="hero-text">
+						<span class="line1 thin">Tailor-made</span><br>
+						<span class="line3">Leather Jackets</span>
+					</h1>
+					<a href="/jackets" class="button call-to-action">See Our Collection</a>
+				</div>
+			</div>
+		</div>
+{{-- 		<div class="hero-video-container">
 			<div class="filter">
 				<div class="title-container">
 					<h1 class="hero-text">
@@ -28,10 +39,10 @@
 				<source src="/videos/hero_short.mp4" type="video/mp4"/>
 				Your browser does not support the video tag. I suggest you upgrade your browser.
 			</video>
-			<div class="poster hidden">
+			<div class="poster">
 				<img src="/images/video-posters/hero_short.png" alt="">
 			</div>
-		</div>
+		</div> --}}
 @stop
 
 @section('main')

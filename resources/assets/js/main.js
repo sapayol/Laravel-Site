@@ -77,7 +77,7 @@
     function scaleVideoContainer() {
       var height = $(window).height();
       var unitHeight = parseInt(height) + 'px';
-      $('.hero-video-container').css('height',unitHeight);
+      $('.hero-image-container').css('height',unitHeight);
     }
 
     function initBannerVideoSize(element){
@@ -108,7 +108,7 @@
           $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
         }
         $(this).width(videoWidth).height(videoHeight);
-        $('.hero-video-container video').addClass('fadeIn animated');
+        $('.hero-image-container video').addClass('fadeIn animated');
       });
     }
 

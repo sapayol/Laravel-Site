@@ -6070,8 +6070,43 @@ hr.thin {
   display: block; }
 
 .hero-image-container {
-  overflow: hidden;
-  height: 22rem; }
+  background: url(../images/photos/other/hero-image.jpg) no-repeat center center;
+  background-size: cover; }
+  @media only screen and (min-width: 64.0625em) {
+    .hero-image-container {
+      background: url(../images/photos/other/hero-image.jpg) no-repeat 18% center;
+      background-size: contain; } }
+  .hero-image-container .filter {
+    z-index: 100;
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(88, 80, 80, 0.3) 50%, rgba(229, 229, 229, 0.3) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(88, 80, 80, 0.3) 50%, rgba(229, 229, 229, 0.3) 100%);
+    height: 100%;
+    width: 100%; }
+    @media only screen and (min-width: 64.0625em) {
+      .hero-image-container .filter {
+        background: transparent; } }
+    .hero-image-container .filter .title-container {
+      width: 16rem;
+      margin: 0 auto;
+      z-index: 1000;
+      position: relative;
+      top: 30vh;
+      padding-top: 1rem; }
+      @media only screen and (min-width: 64.0625em) {
+        .hero-image-container .filter .title-container {
+          margin-left: 60%; } }
+      .hero-image-container .filter .title-container h1 {
+        display: block;
+        color: white; }
+        @media only screen and (min-width: 64.0625em) {
+          .hero-image-container .filter .title-container h1 {
+            color: #222222;
+            text-align: left; } }
+      .hero-image-container .filter .title-container .button {
+        display: block;
+        border-color: #222222;
+        border-bottom: 6px solid #B02428;
+        margin-top: 1rem; }
 
 .hero-image {
   margin: 0 auto; }
@@ -6182,7 +6217,8 @@ hr.thin {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: white; }
+  background: url(../images/photos/other/hero-image.jpg) no-repeat center center fixed;
+  background-size: contain; }
   .hero-video-container .poster img {
     width: 100%;
     bottom: 0;
