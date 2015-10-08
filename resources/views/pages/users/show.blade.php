@@ -33,9 +33,13 @@
 						<td>{{{ $order->id }}} </td>
 						<td>{{{ $order->status }}} </td>
 						<td>
-							@foreach ($order->userMeasurements->getCompleteMeasurements() as $measurement)
-								<small>{{{ $measurement }}} <strong>{{{ $order->userMeasurements->$measurement }}}</strong></small><br>
-							@endforeach
+							@if ($order->userMeasurements)
+								@foreach ($order->userMeasurements->getCompleteMeasurements() as $measurement)
+									<small>{{{ $measurement }}} <strong>{{{ $order->userMeasurements->$measurement }}}</strong></small><br>
+								@endforeach
+							@else
+								<small>N/A</small>
+							@endif
 						</td>
 						<td><a href="{{{ route('orders.show', $order->id) }}}" title="">View</a></td>
 					</tr>
