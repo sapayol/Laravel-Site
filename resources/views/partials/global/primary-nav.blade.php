@@ -22,7 +22,7 @@
       <li class="{{{ $action == 'pages.who-we-are' ? 'current' : ''}}}"><a href="/who-we-are">Who We Are</a></li>
       <li class="{{{ $action == 'pages.how-it-works' ? 'current' : ''}}}"><a href="/how-it-works">How It Works</a></li>
       @if ($currentuser && $currentuser->unfinishedOrders->count() > 0)
-        @if (strpos($action,'orders') !== 0)
+        @if (strpos($action,'orders') !== 0 && $action !== 'users.show')
           <li class="main-item"><a href="/orders/{{{ $currentuser->unfinishedOrders->first()->id }}}">Your Order</a></li>
         @endif
       @endif
