@@ -2,7 +2,7 @@
 <?php $uri = Request::route()->getUri(); ?>
 
 <header class="row">
-	<h1 class="page-title {{{ (strpos($action,'orders') === 0 && $action != 'orders.complete') || $action === 'jackets.look'  || $action === 'jackets.show' ? 'with-breadcrumbs' : '' }}}">
+	<h1 class="page-title {{{ ((strpos($action,'orders') === 0 || strpos($action, 'fit') === 0)&& $action != 'orders.complete') || $action === 'jackets.look'  || $action === 'jackets.show' ? 'with-breadcrumbs' : '' }}}">
 	  @if ($action == 'pages.who-we-are')
 			<a ng-click="displayMenu = false">Who We Are</a>
 		@elseif ($action == 'pages.how-it-works')
@@ -31,7 +31,7 @@
 		  Look
 		@elseif ($action == 'orders.show')
 		  Your Order
-		@elseif ($action == 'orders.fit')
+		@elseif ($action == 'fit.next' || $action == 'fit.show')
 			<a href="/orders/{{{ $order->id }}}" class="underlined">Your Order</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			<a href="/orders/{{{ $order->id }}}/look" class="underlined">Look</a>

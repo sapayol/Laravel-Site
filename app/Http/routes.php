@@ -23,8 +23,8 @@ Route::get('/jackets/{model}/look',              ['uses' => 'JacketsController@l
 
 Route::resource('orders', 'OrdersController');
 Route::get('/orders/{id}/look',                  ['uses' => 'OrdersController@look',       'as' => 'orders.look']);
-Route::post('/orders/{id}/fit',                  ['uses' => 'OrdersController@postFit',    'as' => 'orders.fit',          'middleware' => ['auth', 'owner', 'status']]);
-Route::get('/orders/{id}/fit/{step}',            ['uses' => 'OrdersController@getFit',     'as' => 'orders.fit',          'middleware' => ['auth', 'owner', 'status']]);
+Route::post('/orders/{id}/fit',                  ['uses' => 'OrdersController@postFit',    'as' => 'fit.submit',          'middleware' => ['auth', 'owner', 'status']]);
+Route::get('/orders/{id}/fit/{step}',            ['uses' => 'OrdersController@getFit',     'as' => 'fit.show',            'middleware' => ['auth', 'owner', 'status']]);
 Route::patch('/orders/{id}/switch_units',        ['uses' => 'OrdersController@switchUnits','as' => 'orders.switch_units', 'middleware' => ['auth', 'owner', 'status']]);
 Route::patch('/orders/{id}/reset',               ['uses' => 'OrdersController@resetOrder', 'as' => 'orders.reset',        'middleware' => ['auth', 'owner', 'status']]);
 Route::get('/orders/{id}/checkout',              ['uses' => 'OrdersController@checkout',   'as' => 'orders.checkout',     'middleware' => ['auth', 'owner', 'status']]);

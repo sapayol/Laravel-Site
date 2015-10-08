@@ -72,12 +72,12 @@ class OrdersController extends Controller {
 			Measurement::create(array_merge($old_measurements, ['order_id' => $order->id]));
 			if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
         Session::flash('message', "Looks you already submitted some of your measurements. Please enter the rest for a perfect fit.");
-				return redirect()->route('orders.fit', [$order->id, array_shift($incomplete_measurements)]);
+				return redirect()->route('fit.show', [$order->id, array_shift($incomplete_measurements)]);
 			}
 		}
 
 
-		return redirect()->route('orders.fit', [$order->id, 'units']);
+		return redirect()->route('fit.show', [$order->id, 'units']);
 	}
 
 
@@ -94,6 +94,15 @@ class OrdersController extends Controller {
 	public function getFit($id, $step = null)
 	{
 		$order = Order::find($id);
+		if ($step == 'next' && count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) <= 0) {
+			return redirect()->route('fit.show', ['id' => 1,  'step' => 'height']);
+		} elseif ($step == 'next' && count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
+			$step =  array_shift($incomplete_measurements);
+			return redirect()->route('fit.show', ['id' => 1,  'step' => $step]);
+		} elseif ($step == null) {
+			return redirect()->route('fit.show', ['id' => 1,  'step' => 'units']);
+		}
+
 		return view('pages.measurement.' . $step, ['order' => $order, 'step' => $step]);
 	}
 
@@ -116,7 +125,7 @@ class OrdersController extends Controller {
 
 		if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
 			$next_step = array_shift($incomplete_measurements);
-			return redirect()->route('orders.fit', ['id' => $order->id, 'step' => $next_step]);
+			return redirect()->route('fit.show', ['id' => $order->id, 'step' => $next_step]);
 		} elseif (!$order->isNew()) {
 				return redirect()->route('orders.complete', $order->id);
 		} else {

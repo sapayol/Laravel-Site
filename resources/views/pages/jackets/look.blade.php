@@ -98,7 +98,10 @@
 			<section class="large-6 medium-8 small-12 medium-centered large-centered columns panel">
 				<p>Looks like you're logged in as <strong>{{{ Auth::user()->email }}}</strong></p>
 				<div class="text-center">
-					<a href="" ng-click="proceedToOrder()" class="button expand">Continue Your Order</a>
+					<form action="/orders/{{{ Auth::user()->unfinishedOrders->last()->id }}}/fit" method="POST">
+						<input type="hidden" name="_token"         value="{!! csrf_token() !!}">
+						<input type="submit" class="button expand" value="Continue Your Order">
+					</form>
 					<p>or</p>
 					<a href="{{ url('/auth/logout') }}" class="underlined">Log in as someone else</a>
 				</div>
