@@ -6071,7 +6071,8 @@ hr.thin {
 
 .hero-image-container {
   background: url(../images/photos/other/hero-image.jpg) no-repeat center center;
-  background-size: cover; }
+  background-size: cover;
+  margin-bottom: 1rem; }
   @media only screen and (min-width: 64.0625em) {
     .hero-image-container {
       background: url(../images/photos/other/hero-image.jpg) no-repeat 18% center;
@@ -6333,6 +6334,17 @@ nav.primary-nav {
     font-weight: 200;
     text-transform: uppercase;
     margin-bottom: .5rem; }
+  nav.primary-nav .pipe {
+    display: none;
+    margin-left: 1rem;
+    margin-right: .8rem;
+    position: relative;
+    top: 5px;
+    font-size: 1.2rem;
+    line-height: 1; }
+    @media only screen and (min-width: 64.0625em) {
+      nav.primary-nav .pipe {
+        display: inline-block; } }
   nav.primary-nav small a {
     text-transform: none;
     font-size: .8rem;
@@ -6352,7 +6364,7 @@ nav.primary-nav {
       nav.primary-nav ul {
         float: right; }
       nav.primary-nav li.current {
-        display: block; } }
+        display: inline-block; } }
 
 @media only screen and (min-width: 64.0625em) {
   nav.primary-nav {

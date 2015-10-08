@@ -8,16 +8,17 @@
     <a href="" class="right menu-button" ng-class="{open: displayMenu}" ng-click="displayMenu = !displayMenu">MENU </a>
     <div class="clearfix"></div>
     <ul class="no-bullet">
-      @if ($currentuser)
-        <small class="right">
+      <small class="right">
+        <span class="pipe"> | </span>
+        @if ($currentuser)
           @if ($action !== 'users.show')
             <a href="{{{ route('users.show', $currentuser->id) }}}">Your Profile</a><br>
           @endif
           <a href="/auth/logout">Logout</a>
-        </small>
-      @elseif (!$currentuser && !strpos($uri, 'login'))
-        <small class="right"><a href="/auth/login">Login</a></small>
-      @endif
+        @elseif (!$currentuser && !strpos($uri, 'login'))
+          <a href="/auth/login">Login</a>
+        @endif
+      </small>
       <li class="{{{ strpos($action, 'jackets') === 0 ? 'current' : ''}}}"><a href="/jackets">Our Jackets</a></li>
       <li class="{{{ $action == 'pages.who-we-are' ? 'current' : ''}}}"><a href="/who-we-are">Who We Are</a></li>
       <li class="{{{ $action == 'pages.how-it-works' ? 'current' : ''}}}"><a href="/how-it-works">How It Works</a></li>

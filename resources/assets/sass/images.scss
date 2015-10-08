@@ -10,13 +10,13 @@
 .hero-image-container {
   background: url(../images/photos/other/hero-image.jpg) no-repeat center center;
   background-size: cover;
+	margin-bottom: 1rem;
 	@media #{$large-up} {
 	  background: url(../images/photos/other/hero-image.jpg) no-repeat 18% center;
 	  background-size: contain;
 	}
   .filter {
   	z-index: 100;
-    // background: linear-gradient(rgba(0,0,0,0), rgba(255, 255, 255, 0.1), rgba(88, 80, 80, 0.3), rgba(88, 80, 80, 0.3)); /* Standard syntax */
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,  rgba(88, 80, 80, 0.3) 50%, rgba(229,229,229,0.3) 100%);
 		@media #{$large-up} {
 			background: transparent;

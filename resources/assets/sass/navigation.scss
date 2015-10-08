@@ -45,6 +45,18 @@ nav.primary-nav {
 		text-transform: uppercase;
 		margin-bottom: .5rem;
 	}
+	.pipe {
+		@media #{$large-up} {
+			display: inline-block;
+		}
+		display: none;
+		margin-left: 1rem;
+		margin-right: .8rem;
+		position: relative;
+		top: 5px;
+		font-size: 1.2rem;
+		line-height: 1;
+	}
 	small a {
 		text-transform: none;
 		font-size: .8rem;
@@ -65,7 +77,7 @@ nav.primary-nav {
 			float: right;
 		}
 		li.current {
-			display: block;
+			display: inline-block;
 		}
 	}
 }
