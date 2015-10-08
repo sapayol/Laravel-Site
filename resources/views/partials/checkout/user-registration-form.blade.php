@@ -1,7 +1,7 @@
 <form name="userInfoForm" role="form">
 	<label for="email">Email Address
 		<span class="right alert" ng-if="showUserErorrs && userInfoForm.email.$invalid">Invalid email</span>
-		<input name="email" type="email" ng-model="user.email" ng-required="true" ng-disabled="userInfoSubmitted">
+		<input name="email" type="email" ng-model="user.email" ng-required="true" ng-disabled="userInfoSubmitted" placeholder="example@email.com">
 	</label>
 
 	<label for="name" ng-hide="resetMode">Password
