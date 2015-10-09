@@ -1,5 +1,9 @@
 @extends('layouts/default')
 
+@section('page_wrap_class')
+  four-levels
+@stop
+
 @section('title')
 	Fit | Units
 @stop

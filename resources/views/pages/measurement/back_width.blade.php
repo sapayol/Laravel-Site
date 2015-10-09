@@ -1,5 +1,9 @@
 @extends('layouts/measurements')
 
+@section('page_wrap_class')
+  four-levels
+@stop
+
 @section('title')
 	Back Width
 @stop
