@@ -43,7 +43,7 @@ class OrdersController extends Controller {
 			$new_order = $request->old();
 		}
 
-		return view('pages.checkout.continue', ['last_order' => $order, 'new_order' => $new_order]);
+		return view('pages.orders.show', ['last_order' => $order, 'new_order' => $new_order]);
 	}
 
 
@@ -246,7 +246,7 @@ class OrdersController extends Controller {
         $message->from('ediz@sapayol.com');
         $message->subject('Your Receipt!');
       });
-      Session::flash('message', "Checkout complete!");
+      Session::flash('success', "Checkout complete!");
 			return redirect()->route('orders.complete', $order->id);
 		}	else {
 			dd($charge_attempt);
