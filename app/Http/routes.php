@@ -18,22 +18,22 @@ Route::get('/how-it-works',                      ['uses' => 'PagesController@how
 Route::get('/our-leather',                       ['uses' => 'PagesController@ourLeather',  'as' => 'pages.our-leather']);
 Route::get('/terms',                             ['uses' => 'PagesController@terms',       'as' => 'pages.terms']);
 
-Route::resource('jackets', 'JacketsController');
 Route::get('/jackets/{model}/look',              ['uses' => 'JacketsController@look',      'as' => 'jackets.look']);
+Route::resource('jackets', 'JacketsController');
 
-Route::resource('orders', 'OrdersController');
 Route::get('/orders/{id}/look',                  ['uses' => 'OrdersController@look',       'as' => 'orders.look']);
-Route::get('/orders/{id}',                       ['uses' => 'OrdersController@show',       'as' => 'orders.show',         'middleware' => ['auth', 'owner', 'order.placed']]);
-Route::post('/orders/{id}/fit',                  ['uses' => 'OrdersController@postFit',    'as' => 'fit.submit',          'middleware' => ['auth', 'owner', 'order.status']]);
-Route::get('/orders/{id}/fit/{step}',            ['uses' => 'OrdersController@getFit',     'as' => 'fit.show',            'middleware' => ['auth', 'owner', 'order.status']]);
-Route::patch('/orders/{id}/switch_units',        ['uses' => 'OrdersController@switchUnits','as' => 'orders.switch_units', 'middleware' => ['auth', 'owner', 'order.status']]);
-Route::patch('/orders/{id}/reset',               ['uses' => 'OrdersController@resetOrder', 'as' => 'orders.reset',        'middleware' => ['auth', 'owner', 'order.status']]);
-Route::get('/orders/{id}/checkout',              ['uses' => 'OrdersController@checkout',   'as' => 'orders.checkout',     'middleware' => ['auth', 'owner', 'order.status']]);
-Route::post('/orders/{id}/process',              ['uses' => 'OrdersController@process',    'as' => 'orders.process',      'middleware' => ['auth', 'owner']]);
-Route::get('/orders/{id}/complete',              ['uses' => 'OrdersController@complete',   'as' => 'orders.complete',     'middleware' => ['auth', 'owner']]);
+Route::get('/orders/{id}',                       ['uses' => 'OrdersController@show',       'as' => 'orders.show',         'middleware' => ['auth', 'order.owner', 'order.placed']]);
+Route::post('/orders/{id}/fit',                  ['uses' => 'OrdersController@postFit',    'as' => 'fit.submit',          'middleware' => ['auth', 'order.owner', 'order.status']]);
+Route::get('/orders/{id}/fit/{step}',            ['uses' => 'OrdersController@getFit',     'as' => 'fit.show',            'middleware' => ['auth', 'order.owner', 'order.status']]);
+Route::patch('/orders/{id}/switch_units',        ['uses' => 'OrdersController@switchUnits','as' => 'orders.switch_units', 'middleware' => ['auth', 'order.owner', 'order.status']]);
+Route::patch('/orders/{id}/reset',               ['uses' => 'OrdersController@resetOrder', 'as' => 'orders.reset',        'middleware' => ['auth', 'order.owner', 'order.status']]);
+Route::get('/orders/{id}/checkout',              ['uses' => 'OrdersController@checkout',   'as' => 'orders.checkout',     'middleware' => ['auth', 'order.owner', 'order.status']]);
+Route::post('/orders/{id}/process',              ['uses' => 'OrdersController@process',    'as' => 'orders.process',      'middleware' => ['auth', 'order.owner']]);
+Route::get('/orders/{id}/complete',              ['uses' => 'OrdersController@complete',   'as' => 'orders.complete',     'middleware' => ['auth', 'order.owner']]);
+Route::resource('orders', 'OrdersController');
 
-Route::get('/users/{id}/orders',                 ['uses' => 'UsersController@userOrders',  'as' => 'users.orders']);
 
+Route::get('/users/{id}',                        ['uses' => 'UsersController@show',        'as' => 'users.show',          'middleware' => ['auth', 'account.owner']]);
 Route::resource('users', 'UsersController');
 
 // API endpoints for managing the session from JavaScript
