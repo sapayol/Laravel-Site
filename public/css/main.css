@@ -5610,8 +5610,10 @@ Copyright (c) 2015 Daniel Eden
 .measurement-tracker {
   margin-top: 1rem; }
 
-.alert-box a.close {
-  opacity: .7; }
+.alert-box {
+  font-size: .9rem; }
+  .alert-box a.close {
+    opacity: .7; }
 
 .alert-box.highlight {
   background: #00d2d2; }
@@ -5624,7 +5626,7 @@ Copyright (c) 2015 Daniel Eden
   .alert-box.floating ul {
     margin-bottom: 0; }
   .alert-box.floating a.close {
-    opacity: 0.7;
+    opacity: .7;
     top: 1rem; }
 
 .panel.callout {
@@ -5749,7 +5751,13 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"],
 input[type="week"], input[type="number"], input[type="email"], input[type="url"],
 input[type="search"], input[type="tel"], input[type="color"] {
-  font-size: 24px; }
+  font-size: 22px; }
+  @media only screen and (max-width: 20em) {
+    select, textarea, input[type="text"], input[type="password"], input[type="datetime"],
+    input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"],
+    input[type="week"], input[type="number"], input[type="email"], input[type="url"],
+    input[type="search"], input[type="tel"], input[type="color"] {
+      font-size: 20px; } }
 
 form span.alert {
   color: #B02428; }
@@ -5902,7 +5910,7 @@ fieldset {
   -webkit-transition: none;
           transition: none;
   font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 1.2rem;
   border: 1px solid white;
   border-bottom: 6px solid #00d2d2;
@@ -5910,7 +5918,7 @@ fieldset {
   color: white;
   background: #222222;
   text-transform: uppercase;
-  letter-spacing: 1.2;
+  letter-spacing: 0.1em;
   z-index: 170; }
   .button .chevron, a.button .chevron, button.button .chevron {
     border-color: white; }
@@ -6015,7 +6023,7 @@ small {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.2; }
 
 h1 {
@@ -6023,11 +6031,27 @@ h1 {
   h1.with-subheading {
     margin-bottom: -0.3rem; }
 
+section > h2, article > h2 {
+  font-size: 1.953em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-top: .8rem;
+  margin-bottom: .8rem; }
+
+section > h3, article > h3 {
+  font-size: 1.25em;
+  letter-spacing: -0.01em; }
+
 article p {
   margin-bottom: .8rem; }
 
-.large-price {
-  font-size: 1.5rem; }
+.jacket-summary h1 {
+  font-size: 2.441em;
+  letter-spacing: -.05em; }
+.jacket-summary .large-price {
+  font-size: 1.563em;
+  font-weight: 200;
+  letter-spacing: -0.03em; }
 
 .hero-text {
   text-align: center;
@@ -6317,6 +6341,9 @@ nav.primary-nav {
     margin-bottom: .5rem; }
     nav.primary-nav .logo img {
       width: 10rem; }
+      @media only screen and (max-width: 20em) {
+        nav.primary-nav .logo img {
+          width: 7em; } }
   nav.primary-nav .menu-button {
     color: #222222;
     border-bottom: 2px solid #B02428;
@@ -6328,6 +6355,9 @@ nav.primary-nav {
     @media only screen and (min-width: 40.0625em) {
       nav.primary-nav .menu-button {
         display: none; } }
+    @media only screen and (max-width: 20em) {
+      nav.primary-nav .menu-button {
+        top: 0.2em; } }
     nav.primary-nav .menu-button.open {
       border: none; }
   nav.primary-nav ul {
@@ -6344,7 +6374,8 @@ nav.primary-nav {
     font-size: 1rem;
     font-weight: 200;
     text-transform: uppercase;
-    margin-bottom: .5rem; }
+    margin-bottom: .5rem;
+    letter-spacing: .03em; }
   nav.primary-nav .pipe {
     display: none;
     margin-left: 1rem;

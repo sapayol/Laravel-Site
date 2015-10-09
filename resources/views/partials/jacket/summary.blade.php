@@ -1,6 +1,6 @@
 <section class="small-12 medium-12 large-12 columns jacket-summary">
 	<h1 class="with-subheading">{{{ $jacket->name }}}</h1>
-	<span class="thin large-price">${{{ number_format($jacket->price) }}}<small> USD</small></span>
+	<span class="thin large-price"><small>US </small> ${{{ number_format($jacket->price) }}}</span>
 	<p>
 		<br>
 		Perfecto-style biker leather jacket, made of black, heavy lamb leather. You can customize the hardware and lining color.

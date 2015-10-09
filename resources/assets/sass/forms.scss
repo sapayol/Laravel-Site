@@ -2,7 +2,8 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"],
 input[type="week"], input[type="number"], input[type="email"], input[type="url"],
 input[type="search"], input[type="tel"], input[type="color"] {
-	font-size: 24px;
+	font-size: 22px;
+	@media #{$tiny-only} { font-size: 20px; }
 }
 
 form {

@@ -10,6 +10,7 @@ nav.primary-nav {
 		margin-bottom: .5rem;
 		img {
 			width: 10rem;
+			@media #{$tiny-only} { width: 7em; }
 		}
 	}
 	.menu-button {
@@ -21,6 +22,7 @@ nav.primary-nav {
 		font-weight: 200;
 		position: relative;
 		top: .1rem;
+		@media #{$tiny-only} { top: 0.2em; }
 		&.open {
 			border: none;
 		}
@@ -44,6 +46,7 @@ nav.primary-nav {
 		font-weight: 200;
 		text-transform: uppercase;
 		margin-bottom: .5rem;
+		letter-spacing: .03em;
 	}
 	.pipe {
 		@media #{$large-up} {
