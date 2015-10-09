@@ -34,7 +34,11 @@
 		@elseif ($action == 'fit.next' || $action == 'fit.show')
 			<a href="/orders/{{{ $order->id }}}" class="underlined">Your Order</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
-			<a href="/orders/{{{ $order->id }}}/look" class="underlined">Look</a>
+			@if ($order && !$order->isNew())
+				Look
+			@else
+				<a href="/orders/{{{ $order->id }}}/look" class="underlined">Look</a>
+			@endif
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			Fit
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
@@ -48,7 +52,7 @@
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			Checkout
 		@elseif ($action == 'orders.complete')
-			Checkout Complete!
+			Your Placed Order
 	  @endif
 	</h1>
 </header>
@@ -57,6 +61,15 @@
 	<div class="row">
 		<div ng-hide="hideAlert" data-alert class="alert-box highlight animated shake" ng-init="hideAlert = false">
     	{{ Session::get('message') }}
+    	<a href="#" class="close" ng-click="hideAlert = true">&times;</a>
+		</div>
+	</div>
+@endif
+
+@if (Session::has('success'))
+	<div class="row">
+		<div ng-hide="hideAlert" data-alert class="alert-box highlight animated bounceIn" ng-init="hideAlert = false">
+    	{{ Session::get('success') }}
     	<a href="#" class="close" ng-click="hideAlert = true">&times;</a>
 		</div>
 	</div>
