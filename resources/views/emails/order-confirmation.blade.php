@@ -1,12 +1,38 @@
-About the BLEECKER you just received
-Hi … ,
-We hope that you already had the time to try on your custom-tailored BLEECKER.
-How does it feel?
-We would love to hear from you, since we don’t get to see your reaction when you put on your jacket.
-Any feedback, a simple line or a picture would help us in our commitment to guarantee your satisfaction and our desire to always improve.
-We will soon offer a flight jacket and a moto. Sign up here if you would like to be one of the first to know about them.
-Put your BLEECKER on a nice, wide hanger when you’re not wearing it.
-LINK TO CARE INFORMATION
+@extends('layouts/email')
 
-SAPAYOL is based on the concept of doing things your way, of getting off the beaten path, and exploring new ideas or places. Our jackets are designed to be your companion on that road.
-In that sense, go on, be special. Because regular doesn’t fit you.
+@section('title')
+	Thanks for ordering a custom {{{ $order->jacket->name }}}
+@stop
+
+@section('main')
+
+	<p>
+		Hi {{{ $order->user->name }}}, <br>
+		We’re very excited that you’ve decided to order a custom tailored {{{ $order->jacket->name }}} from us.
+		Within the next 24 hours we will reach out to you to go over your measurements and discuss your fit preferences before we start tailoring it.
+	</p>
+
+	<ul>
+		<li>Order Number: {{{ $order->id }}} </li>
+		<li>Shipping Address: {{{ $order->address_id }}} </li>
+		<li>Payment Info:  </li>
+		<li>Model: {{{ $order->jacket->name }}} </li>
+		<li>Look: </li>
+		<li>Fit: </li>
+	</ul>
+
+	<p><a href="https://sapayol.com/our-leather" title="">Learn more about what makes the leather we use to make your jacket so special</a></p>
+
+	<p>We will soon offer a flight jacket and a moto. Sign up here if you would like to be one of the first to know about them.</p>
+
+	@if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0)
+		<p>Looks like we still need the following measurements from you:</p>
+		<ul class="text-left">
+			@foreach ($incomplete_measurements as $incomplete_measurement)
+				<li>{{{  ucwords(str_replace('_', ' ', $incomplete_measurement)) }}}</li>
+			@endforeach
+		</ul>
+		<p>We cannot begin tailoring your jacket until we receive all of your measurements.</p>
+		<a href="/orders/{{{ $order->id}}}/fit/{{{ array_shift($incomplete_measurements) }}}" class="button hollow">Add Missing Measurements</a>
+	@endif
+@stop

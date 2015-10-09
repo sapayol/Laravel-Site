@@ -1,7 +1,7 @@
 @extends('layouts/default')
 
 @section('main')
-	<p class="large-12 medium-12 small-12 columns">We have almost everything we need to create your {{{ $last_order->jacket->name }}} <br><br></p>
+	<p class="large-12 medium-12 small-12 columns">Would you like to use the measurements from your last placed order? <br><br></p>
 	<div class="large-6 medium-8 large-uncentered medium-centered small-12 columns order-summary">
 		<img class="customization-image" src="/images/photos/jackets/{{{ $last_order->jacket->model }}}/hardware-{{{ $last_order->hardware_color()->name }}}.jpg">
 	</div>
@@ -43,7 +43,7 @@
 	<section class="large-6 medium-8 small-12 large-centered medium-centered columns">
 		<form action="/orders/{{{ $last_order->id }}}/fit" method="POST">
 			<input type="hidden" name="_token"         value="{!! csrf_token() !!}">
-			<input type="submit" class="button expand" value="Finish My Order">
+			<input type="submit" class="button expand" value="Use These Measurements">
 		</form>
 		<div class="text-center">or</div>
 		<br>
@@ -56,7 +56,7 @@
 			<input type="hidden" name="jacket_look[leather_color]"  value="{{{ $new_order['jacket_look']['leather_color'] }}}">
 			<input type="hidden" name="jacket_look[lining_color]"   value="{{{ $new_order['jacket_look']['lining_color'] }}}">
 			<input type="hidden" name="jacket_look[hardware_color]" value="{{{ $new_order['jacket_look']['hardware_color'] }}}">
-			<input type="submit" class="button expand hollow"       value="Start a New Order">
+			<input type="submit" class="button expand hollow"       value="Clear My Measurements">
 			<label for="retain_measurements">
 				<input type="checkbox" name="retain_measurements" id="retain_measurements" checked="true">
 				Use the measurements from my last order

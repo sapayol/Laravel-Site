@@ -1,9 +1,14 @@
-Shipping update for your BLEECKER
+@extends('layouts/email')
 
-Order Number:
+@section('title')
+	Shipping update for your {{{ $order->jacket->name }}}
+@stop
 
-Hi …,
-There’s an update from our courier regarding your BLEECKER.
-You can track your package here:
-LINK TO TRACKING (TRACKING NUMBER)
+@section('main')
+	Order Number: {{{ $order->id }}}
 
+	Hi …,
+	There’s an update from our courier regarding your {{{ $order->jacket->name }}}.
+	You can track your package here:
+	LINK TO TRACKING (TRACKING NUMBER)
+@stop

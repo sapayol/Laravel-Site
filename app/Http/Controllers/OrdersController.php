@@ -241,10 +241,10 @@ class OrdersController extends Controller {
 			$order->status     = 'placed';
 			$order->save();
 
-		  Mail::send('emails.receipt', ['order' => $order], function ($message) use ($order) {
+		  Mail::send('emails.order-confirmation', ['order' => $order], function ($message) use ($order) {
         $message->to($order->user->email, $order->user->name);
-        $message->from('ediz@sapayol.com');
-        $message->subject('Your Receipt!');
+        $message->from('contact@sapayol.com');
+        $message->subject('Thanks for ordering a custom ' . $order->jacket->name );
       });
       Session::flash('success', "Checkout complete!");
 			return redirect()->route('orders.complete', $order->id);
