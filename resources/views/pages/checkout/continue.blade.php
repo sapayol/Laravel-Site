@@ -1,7 +1,10 @@
 @extends('layouts/default')
 
 @section('main')
-	<p class="large-12 medium-12 small-12 columns">Looks like you were in the middle of an order <br><br></p>
+	<p class="large-12 medium-12 small-12 columns">We have almost everything we need to create your {{{ $last_order->jacket->name }}} <br><br></p>
+	<div class="large-6 medium-8 large-uncentered medium-centered small-12 columns order-summary">
+		<img class="customization-image" src="/images/photos/jackets/{{{ $last_order->jacket->model }}}/hardware-{{{ $last_order->hardware_color()->name }}}.jpg">
+	</div>
 	<div class="large-6 medium-6 small-12 columns">
 		<h6>Order Details</h6>
 		<ul class="no-bullet value-list">

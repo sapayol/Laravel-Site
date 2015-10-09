@@ -17,6 +17,7 @@ class CreateMeasurementsTable extends Migration {
 			$table->increments('id');
 			$table->string('type')->default('user');
 			$table->integer('order_id')->unsigned()->nullable();
+			$table->integer('user_id')->unsigned()->nullable();
 			$table->string('units')->default('cm');
 			$table->decimal('size', 9, 2)->nullable();
 			$table->decimal('height', 9, 2)->nullable();

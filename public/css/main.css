@@ -5610,12 +5610,20 @@ Copyright (c) 2015 Daniel Eden
 .measurement-tracker {
   margin-top: 1rem; }
 
-.alert.floating {
+.alert-box a.close {
+  opacity: .7; }
+
+.alert-box.highlight {
+  background: #00d2d2; }
+
+.alert-box.floating {
   position: absolute;
-  z-index: 9999; }
-  .alert.floating ul {
+  z-index: 9999;
+  right: 5rem;
+  top: 5rem; }
+  .alert-box.floating ul {
     margin-bottom: 0; }
-  .alert.floating a.close {
+  .alert-box.floating a.close {
     opacity: 0.7;
     top: 1rem; }
 

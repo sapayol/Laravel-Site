@@ -14,7 +14,7 @@
 
 	<section class="large-6 medium-10 small-12 columns large-centered medium-centered">
 		<p>
-			We will walk you through every measurement we need to fit your BLEECKER to your body. It's very simple.
+			We will walk you through every measurement we need to fit your {{{ $order->jacket->name }}} to your body. It's very simple.
 			<br><br>
 			All you need is a tape measure.
 		</p>

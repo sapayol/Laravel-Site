@@ -66,16 +66,17 @@ class OrdersController extends Controller {
 			$order->attributes()->attach($attribute);
 		}
 
-		if ($last_order && count($last_order->userMeasurements->getCompleteMeasurements() > 0)) {
+		if ($last_order && $last_order->userMeasurements->user) {
 			$old_measurements = $last_order->userMeasurements->toArray();
-			unset($old_measurements['id'], $old_measurements['created_at'], $old_measurements['updated_at']);
+			unset($old_measurements['id'], $old_measurements['created_at'], $old_measurements['updated_at'], $old_measurements['user_id'], $old_measurements['user']);
 			Measurement::create(array_merge($old_measurements, ['order_id' => $order->id]));
+			$order->status = 'started';
+			$order->save();
 			if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
         Session::flash('message', "Looks you already submitted some of your measurements. Please enter the rest for a perfect fit.");
 				return redirect()->route('fit.show', [$order->id, array_shift($incomplete_measurements)]);
 			}
 		}
-
 
 		return redirect()->route('fit.show', [$order->id, 'units']);
 	}
@@ -84,6 +85,12 @@ class OrdersController extends Controller {
 	public function resetOrder($id, CreateOrderRequest $request)
 	{
 		$order = Order::find($id);
+
+		if ($request->retain_measurements) {
+			$order->userMeasurements->user_id = $order->user->id;
+			$order->userMeasurements->save();
+		}
+
 		$order->status = 'dropped';
 		$order->save();
 

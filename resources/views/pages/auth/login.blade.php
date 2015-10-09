@@ -8,16 +8,6 @@
 
 @section('main')
 	<section class="large-12 medium-12 small-12 columns" ng-controller="authCtrl">
-		@if (count($errors) > 0)
-			<div ng-hide="hideAlert" data-alert class="alert-box alert floating animated shake" ng-init="hideAlert = false">
-				<ul class="no-bullet">
-					@foreach ($errors->all() as $error)
-						<li><small>{{ $error }}</small></li>
-					@endforeach
-				</ul>
-			  <a href="#" class="close" ng-click="hideAlert = true">&times;</a>
-			</div>
-		@endif
 		<form role="form" method="POST" action="{{ url('/auth/login') }}" name="userInfoForm">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<label for="email">Email Address

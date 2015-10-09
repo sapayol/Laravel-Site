@@ -87,14 +87,30 @@
 	margin-top: 1rem;
 }
 
-.alert.floating {
+
+.alert-box {
+	a.close {
+		opacity: .7;
+	}
+}
+
+.alert-box.highlight {
+	background: $highlight-color;
+}
+
+.alert-box.floating {
 	position: absolute;
 	z-index:  9999;
+	right:  5rem;
+	top: 5rem;
 	ul {
 		margin-bottom: 0;
+		li small {
+
+		}
 	}
 	a.close {
-		opacity: 0.7;
+		opacity: .7;
 		top: 1rem;
 	}
 }

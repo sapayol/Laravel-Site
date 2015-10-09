@@ -22,6 +22,11 @@ class Measurement extends Model {
     return $this->belongsTo('Order');
   }
 
+  public function user()
+  {
+    return $this->belongsTo('User');
+  }
+
   public function getIncompleteMeasurements()
   {
   	$results = [];
