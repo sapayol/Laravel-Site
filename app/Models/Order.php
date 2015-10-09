@@ -69,8 +69,8 @@ class Order extends Model {
     return $this->attributes()->where('type', '=', 'lining_color')->first();
   }
 
-  public function hasStatus() {
-    if ($this->status  !== '' || $this->status !== null) {
+  public function hasNoStatus() {
+    if ($this->status  === '' || $this->status === null) {
       return true;
     }
     return false;
@@ -78,7 +78,7 @@ class Order extends Model {
 
   public function isNew()
   {
-    if ($this->status == 'started' || $this->status  == 'new' || $this->hasStatus()) {
+    if ($this->status == 'started' || $this->status  == 'new' || $this->hasNoStatus()) {
       return true;
     }
     return false;
