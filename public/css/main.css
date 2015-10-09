@@ -6035,7 +6035,6 @@ section > h2, article > h2 {
   font-size: 1.953em;
   letter-spacing: -0.04em;
   line-height: 1.1;
-  margin-top: .8rem;
   margin-bottom: .8rem; }
 
 section > h3, article > h3 {
@@ -6098,10 +6097,10 @@ hr.thin {
   height: 1px; }
 
 .sidekick-image {
-  margin-bottom: 1rem; }
+  margin-bottom: 1.3rem; }
 
 .customization-image {
-  margin: 1rem auto 1.5rem auto;
+  margin: 1rem auto 1.8rem auto;
   display: block; }
 
 .hero-image-container {
