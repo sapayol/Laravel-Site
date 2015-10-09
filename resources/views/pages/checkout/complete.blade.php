@@ -68,11 +68,11 @@
 		<div class="panel callout">
 			<p>Looks like we still need the following measurements from you:</p>
 			<ul class="text-left">
-				@foreach ($order->userMeasurements->getIncompleteMeasurements() as $incomplete_measurement)
+				@foreach ($incomplete_measurements as $incomplete_measurement)
 					<li>{{{  ucwords(str_replace('_', ' ', $incomplete_measurement)) }}}</li>
 				@endforeach
 			</ul>
-			<a href="/orders/{{{ $order->id}}}/fit/{{{ $order->userMeasurements->getIncompleteMeasurements()[0] }}}" class="button hollow">Add Missing Measurements</a>
+			<a href="/orders/{{{ $order->id}}}/fit/{{{ array_shift($incomplete_measurements) }}}" class="button hollow">Add Missing Measurements</a>
 		</div>
 	@endif
 </div>
