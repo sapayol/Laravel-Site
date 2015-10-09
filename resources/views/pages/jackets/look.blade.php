@@ -92,8 +92,8 @@
 		@if (Auth::guest())
 			<section class="large-6 medium-8 small-12 medium-centered large-centered columns panel">
 				<p><strong>Enter an email address and choose a password to continue.</strong><br> It lets us save your design choices and body measurements. <br> <br>Use your existing credentials if you've already created an account.</p>
-				<p><em>We don’t spam or share your information.</em></p>
 				@include('partials.checkout.user-registration-form')
+				<p><em>We don’t spam or share your information.</em></p>
 		@elseif (Auth::user()->unfinishedOrders()->count() > 0)
 			<section class="large-6 medium-8 small-12 medium-centered large-centered columns panel">
 				<p>Looks like you're logged in as <strong>{{{ Auth::user()->email }}}</strong></p>
