@@ -24,7 +24,7 @@
     height: 100%;
     width: 100%;
     .title-container {
-			width: 16rem;
+			width: 17rem;
 	    margin: 0 auto;
 	    z-index: 1000;
 	    position: relative;
@@ -123,6 +123,15 @@
 	.slick-prev {
 	  transform: rotate(225deg);
 	  left: 0;
+	}
+}
+
+@media #{$medium-up} {
+	.jacket-placeholder-container {
+		padding-top: 6rem;
+		h2 {
+			margin-bottom: 0;
+		}
 	}
 }
 

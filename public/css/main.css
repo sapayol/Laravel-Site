@@ -6121,7 +6121,7 @@ hr.thin {
       .hero-image-container .filter {
         background: transparent; } }
     .hero-image-container .filter .title-container {
-      width: 16rem;
+      width: 17rem;
       margin: 0 auto;
       z-index: 1000;
       position: relative;
@@ -6206,6 +6206,11 @@ hr.thin {
             transform: rotate(225deg);
     left: 0; }
 
+@media only screen and (min-width: 40.0625em) {
+  .jacket-placeholder-container {
+    padding-top: 6rem; }
+    .jacket-placeholder-container h2 {
+      margin-bottom: 0; } }
 .jacket-placeholder {
   padding: 0 1rem;
   height: 15rem; }

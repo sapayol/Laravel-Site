@@ -8,7 +8,7 @@
     <a href="" class="right menu-button" ng-class="{open: displayMenu}" ng-click="displayMenu = !displayMenu">MENU </a>
     <div class="clearfix"></div>
     <ul class="no-bullet">
-      <small class="right">
+      <small class="right text-right">
         <span class="pipe"> | </span>
         @if ($currentuser)
           @if ($action !== 'users.show')
