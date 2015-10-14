@@ -66,3 +66,10 @@ fieldset {
 	padding-top: .1rem;
 }
 
+
+// Mailchimp Forms
+
+.mce_inline_error {
+  @extend .alert-box;
+  @extend .alert;
+}

@@ -34,5 +34,9 @@
 			  </li>
 			@endforeach
 		</ul>
+	<hr>
 	</article>
+	<section class="large-4 medium-6 small-12 medium-centered columns">
+		@include('partials.jackets.mailchimp-jacket-form')
+	</section>
 @stop
