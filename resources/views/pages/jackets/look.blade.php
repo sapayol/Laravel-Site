@@ -98,9 +98,6 @@
 				<p><strong>Enter an email address and choose a password to continue.</strong><br>Use your existing credentials if you've already created an account.</p>
 				@include('partials.checkout.user-registration-form')
 		@elseif (Auth::user()->unfinishedOrders()->count() > 0)
-			<div class="large-6 medium-8 small-12 medium-centered large-centered columns">
-				<a href="" ng-click="showLogin = true" ng-hide="showLogin" class="button expand">Proceed To Measurement</a>
-			</div>
 			<section class="large-6 medium-8 small-12 medium-centered large-centered columns">
 				<p>Looks like you're logged in as <strong>{{{ Auth::user()->email }}}</strong></p>
 				<div class="text-center">
