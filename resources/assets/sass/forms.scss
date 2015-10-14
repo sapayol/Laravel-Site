@@ -12,6 +12,11 @@ form {
 	}
 }
 
+label {
+	font-weight: 500;
+	color: $black;
+}
+
 label.text-input-label {
 	display: inline-block;
 	position: relative;
@@ -26,6 +31,7 @@ label.text-input-label {
 		padding-top: 2rem;
 		padding-bottom: .7rem;
 		margin-bottom: 0;
+		box-shadow: none;
 	}
 	input[type="number"] {
 		padding-top: 1.3rem;

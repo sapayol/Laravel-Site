@@ -90,10 +90,11 @@
 }
 
 button.text-button {
+	font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
 	text-align: left;
 	background: none;
 	padding: 0;
 	color: $black;
-	font-size: .8rem;
+	font-size: .9rem;
 	border-bottom: 2px solid $primary-color;
 }
