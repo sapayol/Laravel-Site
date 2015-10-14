@@ -90,12 +90,18 @@
 	</section>
 	<div class="clearfix"></div>
 		@if (Auth::guest())
-			<section class="large-6 medium-8 small-12 medium-centered large-centered columns panel">
-				<p><strong>Enter an email address and choose a password to continue.</strong><br> It lets us save your design choices and body measurements. <br> <br>Use your existing credentials if you've already created an account.</p>
+			<div class="large-6 medium-8 small-12 medium-centered large-centered columns" ng-hide="showLogin">
+				<a href="" ng-click="showLogin = true" class="button expand">Proceed To Measurement</a>
+				<br><br>
+			</div>
+			<section class="large-6 medium-8 small-12 medium-centered large-centered columns slideInDown animated" ng-show="showLogin" ng-init="showLogin = false">
+				<p><strong>Enter an email address and choose a password to continue.</strong><br>Use your existing credentials if you've already created an account.</p>
 				@include('partials.checkout.user-registration-form')
-				<p><br><em>We don’t spam or share your information.</em></p>
 		@elseif (Auth::user()->unfinishedOrders()->count() > 0)
-			<section class="large-6 medium-8 small-12 medium-centered large-centered columns panel">
+			<div class="large-6 medium-8 small-12 medium-centered large-centered columns">
+				<a href="" ng-click="showLogin = true" ng-hide="showLogin" class="button expand">Proceed To Measurement</a>
+			</div>
+			<section class="large-6 medium-8 small-12 medium-centered large-centered columns">
 				<p>Looks like you're logged in as <strong>{{{ Auth::user()->email }}}</strong></p>
 				<div class="text-center">
 					<form action="/orders/{{{ Auth::user()->unfinishedOrders->last()->id }}}/fit" method="POST">
