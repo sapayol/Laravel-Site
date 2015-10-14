@@ -23,10 +23,10 @@
 			<a href="/jackets" class="underlined">Our Jackets</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			{{{ $jacket->name }}}
-		@elseif ($action == 'jackets.look')
+		@elseif ($action == 'orders.look')
 			<a href="/jackets" class="underlined">Our Jackets</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
-			<a href="/jackets/{{{ $jacket->name }}}" class="underlined">{{{ $jacket->name }}}</a>
+			<a href="/jackets/{{{ $jacket->model }}}" class="underlined">{{{ $jacket->name }}}</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 		  Look
 		@elseif ($action == 'orders.show')
