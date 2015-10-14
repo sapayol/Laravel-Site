@@ -24,7 +24,7 @@
 			<span class="input-units">{{{ $order->userMeasurements->units }}}</span>
 		</label>
 		<br><br>
-		<div class="alert-box info" data-alert  ng-if="measurementFraction.length > 0">
+		<div ng-if="measurementFraction.length > 0">
 			We will round this to <strong>@{{ measurementFraction }}</strong> <small>{{{ $order->userMeasurements->units }}}</small>
 		</div>
 	@endif
