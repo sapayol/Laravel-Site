@@ -10,14 +10,20 @@
 	&.tight-list .list-key {
 		min-width: 4.5rem;
 	}
+	@media #{$tiny-only} {
+		font-size: .9rem;
+		.list-key {
+			min-width: 5rem;
+		}
+		.list-value {
+			min-width: 3.4rem;
+		}
+	}
 	@media only screen and (max-width: 320px) {
 		.list-key {
 			min-width: 5rem;
 		}
 		&.tight-list {
-			.list-key {
-				min-width: 3.5rem;
-			}
 			font-size: .9rem;
 		}
 	}

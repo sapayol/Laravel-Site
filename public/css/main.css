@@ -5552,13 +5552,18 @@ Copyright (c) 2015 Daniel Eden
   min-width: 3.8rem; }
 .value-list.tight-list .list-key {
   min-width: 4.5rem; }
+@media only screen and (max-width: 20em) {
+  .value-list {
+    font-size: .9rem; }
+    .value-list .list-key {
+      min-width: 5rem; }
+    .value-list .list-value {
+      min-width: 3.4rem; } }
 @media only screen and (max-width: 320px) {
   .value-list .list-key {
     min-width: 5rem; }
   .value-list.tight-list {
-    font-size: .9rem; }
-    .value-list.tight-list .list-key {
-      min-width: 3.5rem; } }
+    font-size: .9rem; } }
 
 .switch.large label, .switch.large input:checked + label {
   background-color: transparent;
@@ -5926,6 +5931,9 @@ fieldset {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   z-index: 170; }
+  @media only screen and (max-width: 20em) {
+    .button, a.button, button.button {
+      font-size: 1rem; } }
   .button .chevron, a.button .chevron, button.button .chevron {
     border-color: white; }
   .button:hover, .button:active, .button:focus, a.button:hover, a.button:active, a.button:focus, button.button:hover, button.button:active, button.button:focus {
