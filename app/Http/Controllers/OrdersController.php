@@ -147,7 +147,9 @@ class OrdersController extends Controller {
 		$measurements = ['height', 'half_shoulder', 'back_width', 'chest', 'stomach', 'back_length', 'waist', 'arm', 'biceps'];
 
 		foreach ($measurements as $measurement) {
-			if ($order->userMeasurements->units == 'in') {
+			if ($order->userMeasurements->$measurement == null || $order->userMeasurements->$measurement == 0) {
+				$order->userMeasurements->$measurement = null;
+			} elseif ($order->userMeasurements->units == 'in') {
 				$order->userMeasurements->$measurement = round($order->userMeasurements->$measurement * 2.54, 0);
 			} else {
 				$order->userMeasurements->$measurement /= 2.54;
