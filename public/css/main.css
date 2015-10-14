@@ -6142,8 +6142,8 @@ hr.thin {
       background-size: contain; } }
   .hero-image-container .filter {
     z-index: 100;
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(88, 80, 80, 0.3) 50%, rgba(229, 229, 229, 0.3) 100%);
-    background: linear-gradient(to bottom, transparent 0%, rgba(88, 80, 80, 0.3) 50%, rgba(229, 229, 229, 0.3) 100%);
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(88, 80, 80, 0.1) 15%, rgba(88, 80, 80, 0.5) 50%, rgba(229, 229, 229, 0.3) 85%, transparent 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(88, 80, 80, 0.1) 15%, rgba(88, 80, 80, 0.5) 50%, rgba(229, 229, 229, 0.3) 85%, transparent 100%);
     height: 100%;
     width: 100%; }
     @media only screen and (min-width: 64.0625em) {
@@ -6163,6 +6163,7 @@ hr.thin {
         .hero-image-container .filter .title-container {
           margin-left: 60%; } }
       .hero-image-container .filter .title-container h1 {
+        letter-spacing: -0.03em;
         display: block;
         color: white; }
         @media only screen and (min-width: 64.0625em) {

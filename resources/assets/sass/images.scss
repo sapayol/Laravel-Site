@@ -17,7 +17,7 @@
 	}
   .filter {
   	z-index: 100;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,  rgba(88, 80, 80, 0.3) 50%, rgba(229,229,229,0.3) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(88, 80, 80, 0.1) 15%, rgba(88, 80, 80, 0.5) 50%, rgba(229,229,229,0.3) 85%, rgba(0,0,0,0) 100%);
 		@media #{$large-up} {
 			background: transparent;
 		}
@@ -39,6 +39,7 @@
 	        color: $black;
 					text-align: left;
 				}
+				letter-spacing: -0.03em;
 	    	display: block;
  				color: $white;
 	    }
