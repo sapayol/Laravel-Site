@@ -6152,8 +6152,11 @@ hr.thin {
       margin: 0 auto;
       z-index: 1000;
       position: relative;
-      top: 30vh;
+      top: 30%;
       padding-top: 1rem; }
+      @media only screen and (max-width: 20em) {
+        .hero-image-container .filter .title-container {
+          width: 15rem; } }
       @media only screen and (min-width: 64.0625em) {
         .hero-image-container .filter .title-container {
           margin-left: 60%; } }

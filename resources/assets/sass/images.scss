@@ -25,10 +25,11 @@
     width: 100%;
     .title-container {
 			width: 17rem;
+			@media #{$tiny-only} { width: 15rem; }
 	    margin: 0 auto;
 	    z-index: 1000;
 	    position: relative;
-	    top: 30vh;
+	    top: 30%;
 	    padding-top: 1rem;
 			@media #{$large-up} {
 				margin-left: 60%;
