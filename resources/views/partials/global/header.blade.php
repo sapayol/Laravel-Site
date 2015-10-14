@@ -23,7 +23,7 @@
 			<a href="/jackets" class="underlined">Our Jackets</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			{{{ $jacket->name }}}
-		@elseif ($action == 'orders.look')
+		@elseif ($action == 'orders.look' || $action == 'jackets.look')
 			<a href="/jackets" class="underlined">Our Jackets</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			<a href="/jackets/{{{ $jacket->model }}}" class="underlined">{{{ $jacket->name }}}</a>

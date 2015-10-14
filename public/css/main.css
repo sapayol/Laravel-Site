@@ -3333,8 +3333,10 @@ main > p {
   .chevron.breadcrumb-chevron {
     display: inline-block;
     width: 7px;
-    height: 7px;
-    margin: 0 .2rem .1rem .2rem; }
+    height: 7px; }
+    @media only screen and (max-width: 20em) {
+      .chevron.breadcrumb-chevron {
+        margin: 0 .2rem .05rem .2rem; } }
 
 .button .chevron {
   display: inline-block;
