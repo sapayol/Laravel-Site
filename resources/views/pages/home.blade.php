@@ -46,6 +46,17 @@
 @stop
 
 @section('main')
+
+	<section class="small-12 medium-12 large-12 columns">
+		<div class="player">
+		  <video poster="/images/video-posters/outfit.jpg" controls crossorigin preload="none">
+		    <source src="/videos/outfit.webm" type="video/webm">
+		    <source src="/videos/outfit.mp4"  type="video/mp4">
+		    <a href="/videos/outfit.mp4">Download</a>
+		  </video>
+		</div>
+	</section>
+
 	<article class="large-6 medium-6 small-12 columns">
 		<a href="/who-we-are" class="image-link"><img class="sidekick-image" src="/images/photos/other/master-craftsmanship.jpg" alt=""></a>
 		<h2 class="thin">Master Craftsmanship</h2>
