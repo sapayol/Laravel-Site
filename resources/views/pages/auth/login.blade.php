@@ -8,14 +8,17 @@
 
 @section('main')
 	<section class="large-12 medium-12 small-12 columns" ng-controller="authCtrl">
+		<br><br>
 		<form role="form" method="POST" action="{{ url('/auth/login') }}" name="userInfoForm">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
-			<label for="email">Email Address
+			<label for="email" class="text-input-label">
+				<span class="label-title">Email Address</span>
 				<span class="right alert" ng-if="showUserErorrs && userInfoForm.email.$invalid">Invalid email</span>
 				<input name="email" type="email" value="{{ old('email') }}" ng-model="user.email" ng-required="true" ng-disabled="userInfoSubmitted">
 			</label>
 
-			<label for="name" ng-hide="resetMode">Password
+			<label for="name" ng-hide="resetMode" class="text-input-label">
+				<span class="label-title">Password</span>
 				<span class="right alert" ng-if="showUserErorrs && userInfoForm.name.$invalid">Required</span>
 				<input name="password" type="password" ng-model="user.password" ng-required="true" ng-disabled="userInfoSubmitted">
 			</label>

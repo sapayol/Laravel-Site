@@ -14,24 +14,35 @@ form {
 
 label {
 	font-weight: 500;
-	color: $black;
+	// color: $black;
+}
+
+input[type="submit"], button[type="submit"] {
+	// margin-top: 1rem;
+}
+
+.measurement-form label.text-input-label {
+	width: 45%;
+	display: inline-block;
 }
 
 label.text-input-label {
-	display: inline-block;
 	position: relative;
-	width: 45%;
+	// margin-bottom: 1rem;
 	span.label-title {
 		position: absolute;
 		top: .1rem;
 		padding-left: .5rem;
+		z-index: 5;
 	}
 	input {
 		display: inline-block;
 		padding-top: 2rem;
-		padding-bottom: .7rem;
+		padding-bottom: .9rem;
 		margin-bottom: 0;
 		box-shadow: none;
+		font-weight: 200;
+		line-height: 1.1;
 	}
 	input[type="number"] {
 		padding-top: 1.3rem;
@@ -41,6 +52,9 @@ label.text-input-label {
 	textarea {
 	  padding-top: 1.3rem;
 	  font-size: 1rem;
+	}
+	&:last-child {
+		top: -1px;
 	}
 }
 

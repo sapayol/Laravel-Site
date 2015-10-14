@@ -1,10 +1,12 @@
 <form name="userInfoForm" role="form">
-	<label for="email">Email Address
+	<label for="email" class="text-input-label">
+		<span class="label-title">Email Address</span>
 		<span class="right alert" ng-if="showUserErorrs && userInfoForm.email.$invalid">Invalid email</span>
 		<input name="email" type="email" ng-model="user.email" ng-required="true" ng-disabled="userInfoSubmitted">
 	</label>
 
-	<label for="name" ng-hide="resetMode">Password
+	<label for="name" ng-hide="resetMode" class="text-input-label">
+		<span class="label-title">Password</span>
 		<span class="right alert" ng-if="showUserErorrs && userInfoForm.name.$invalid">Required</span>
 		<input name="password" type="password" ng-model="user.password" ng-required="true" ng-disabled="userInfoSubmitted">
 	</label>

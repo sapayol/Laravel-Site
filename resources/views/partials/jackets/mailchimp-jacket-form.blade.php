@@ -2,9 +2,12 @@
 <p>Want to know when new jacket models become available? Leave us your email and we'll notify you.</p>
 
 <form action="//sapayol.us11.list-manage.com/subscribe/post?u=cbc80ecada059be9cc639ede5&amp;id=85d2de29d1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
 		<div class="mc-field-group">
-			<label for="mce-EMAIL">Email Address</label>
-			<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+			<label for="mce-EMAIL" class="text-input-label">
+				<span class="label-title">Email Address</span>
+				<input name="EMAIL" value="" type="email" id="mce-EMAIL">
+			</label>
 		</div>
 
 		<div id="mce-responses" class="clear">
