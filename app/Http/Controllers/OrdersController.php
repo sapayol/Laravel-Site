@@ -43,7 +43,7 @@ class OrdersController extends Controller {
 			$new_order = $request->old();
 		}
 
-		return view('pages.orders.show', ['last_order' => $order, 'new_order' => $new_order]);
+		return view('pages.orders.show', ['order' => $order, 'new_order' => $new_order]);
 	}
 
 
