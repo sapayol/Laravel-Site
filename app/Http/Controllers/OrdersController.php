@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateOrderRequest;
+use App\Jobs\SwitchMeasurementUnits;
 use JavaScript, Mail, Auth, Session;
 use Address, Jacket, Measurement, Attribute, Order, User;
 
@@ -21,14 +22,8 @@ class OrdersController extends Controller {
 		$order = Order::find($id);
 
 		if ($order->status == 'new') return redirect()->back();
-		// if ($order->status == 'new') {
-		// 	return redirect()->back();
-		// }
 
 		if (!$order->isNew()) return redirect()->route('orders.complete', $order->id);
-		// if (!$order->isNew()) {
-		// 	return redirect()->route('orders.complete', $order->id);
-		// }
 
 		if (!$request->old()) {
 			$new_order = [
@@ -51,7 +46,7 @@ class OrdersController extends Controller {
 
 	public function store(CreateOrderRequest $request)
 	{
-    Session::remove('card');
+    Session::remove('card'); // Clear the saved credit card info from the session
 
 		$order = $this->dispatchFrom('App\Jobs\CreateNewOrder', $request);
 
@@ -108,20 +103,7 @@ class OrdersController extends Controller {
 	public function switchUnits($id)
 	{
 		$order = Order::find($id);
-		$measurements = ['height', 'half_shoulder', 'back_width', 'chest', 'stomach', 'back_length', 'waist', 'arm', 'biceps'];
-
-		foreach ($measurements as $measurement) {
-			if ($order->userMeasurements->$measurement == null || $order->userMeasurements->$measurement == 0) {
-				$order->userMeasurements->$measurement = null;
-			} elseif ($order->userMeasurements->units == 'in') {
-				$order->userMeasurements->$measurement = round($order->userMeasurements->$measurement * 2.54, 0);
-			} else {
-				$order->userMeasurements->$measurement /= 2.54;
-			}
-		}
-
-		$order->userMeasurements->units = $order->userMeasurements->units == 'in' ? 'cm' : 'in';
-		$order->userMeasurements->save();
+    $this->dispatch(new SwitchMeasurementUnits($order->userMeasurements));
 
 		return redirect()->back();
 	}
