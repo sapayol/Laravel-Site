@@ -66,15 +66,15 @@
 			</li>
 		@endforeach
 	</ul>
-	@if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0)
+	@if ($uncompleted_measurements = $order->userMeasurements->uncompleted()
 		<div class="panel callout">
 			<p>Looks like we still need the following measurements from you:</p>
 			<ul class="text-left">
-				@foreach ($incomplete_measurements as $incomplete_measurement)
-					<li>{{{  ucwords(str_replace('_', ' ', $incomplete_measurement)) }}}</li>
+				@foreach ($uncompleted_measurements as $uncompleted_measurement)
+					<li>{{{  ucwords(str_replace('_', ' ', $uncompleted_measurement)) }}}</li>
 				@endforeach
 			</ul>
-			<a href="/orders/{{{ $order->id}}}/fit/{{{ array_shift($incomplete_measurements) }}}" class="button hollow">Add Missing Measurements</a>
+			<a href="/orders/{{{ $order->id}}}/fit/{{{ array_shift($uncompleted_measurements) }}}" class="button hollow">Add Missing Measurements</a>
 		</div>
 	@endif
 </div>
@@ -86,7 +86,7 @@
 		<li><small class="list-key">Total </small><strong>${{{ $order->jacket->price }}}	</strong></li>
 	</ul>
 
-	@if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) <= 0)
+	@if ($order->userMeasurements->uncompleted())
 		<a href="/jackets" class="button">Check out our other jackets</a>
 	@endif
 </div>

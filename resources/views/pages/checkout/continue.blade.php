@@ -15,11 +15,11 @@
 			@endforeach
 		</ul>
 	</div>
-	@if (count($last_order->userMeasurements->getCompleteMeasurements()) > 0)
+	@if ($last_order->userMeasurements->completed())
 		<section class="large-6 medium-6 small-12 columns">
 				<h6>Completed Measurements</h6>
 				<ul class="no-bullet value-list">
-					@foreach ($last_order->userMeasurements->getCompleteMeasurements() as $measurement)
+					@foreach ($last_order->userMeasurements->completed() as $measurement)
 						@if ($measurement == 'note')
 							<li><br></li>
 						@endif

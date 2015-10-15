@@ -74,9 +74,9 @@ class OrdersController extends Controller {
 	public function getFit($id, $step = null)
 	{
 		$order = Order::find($id);
-		if ($step == 'next' && count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) <= 0) {
+		if ($step == 'next' && $order->userMeasurements->uncompleted()) {
 			return redirect()->route('fit.show', ['id' => 1,  'step' => 'height']);
-		} elseif ($step == 'next' && count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
+		} elseif ($step == 'next' && $order->userMeasurements->uncompleted()) {
 			$step =  array_shift($incomplete_measurements);
 			return redirect()->route('fit.show', ['id' => 1,  'step' => $step]);
 		} elseif ($step == null) {

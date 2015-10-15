@@ -25,14 +25,14 @@
 
 	<p>We will soon offer a flight jacket and a moto. Sign up here if you would like to be one of the first to know about them.</p>
 
-	@if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0)
+	@if ($uncompleted_measurements = $order->userMeasurements->uncompleted()))
 		<p>Looks like we still need the following measurements from you:</p>
 		<ul class="text-left">
-			@foreach ($incomplete_measurements as $incomplete_measurement)
-				<li>{{{  ucwords(str_replace('_', ' ', $incomplete_measurement)) }}}</li>
+			@foreach ($uncompleted_measurements as $uncomplete_measurement)
+				<li>{{{  ucwords(str_replace('_', ' ', $uncomplete_measurement)) }}}</li>
 			@endforeach
 		</ul>
 		<p>We cannot begin tailoring your jacket until we receive all of your measurements.</p>
-		<a href="/orders/{{{ $order->id}}}/fit/{{{ array_shift($incomplete_measurements) }}}" class="button hollow">Add Missing Measurements</a>
+		<a href="/orders/{{{ $order->id}}}/fit/{{{ array_shift($uncompleted_measurements) }}}" class="button hollow">Add Missing Measurements</a>
 	@endif
 @stop

@@ -34,7 +34,7 @@
 						<td>{{{ $order->status }}} </td>
 						<td>
 							@if ($order->userMeasurements)
-								@foreach ($order->userMeasurements->getCompleteMeasurements() as $measurement)
+								@foreach ($order->userMeasurements->completed() as $measurement)
 									<small>{{{ $measurement }}} <strong>{{{ $order->userMeasurements->$measurement }}}</strong></small><br>
 								@endforeach
 							@else
