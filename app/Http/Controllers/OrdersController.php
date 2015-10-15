@@ -8,6 +8,7 @@ use Address, Jacket, Measurement, Attribute, Order, User;
 
 class OrdersController extends Controller {
 
+
 	public function look($id)
 	{
 		$order = Order::find($id);
@@ -20,11 +21,8 @@ class OrdersController extends Controller {
 	public function show($id, Request $request)
 	{
 		$order = Order::find($id);
-
 		if ($order->status == 'new') return redirect()->back();
-
 		if (!$order->isNew()) return redirect()->route('orders.complete', $order->id);
-
 		if (!$request->old()) {
 			$new_order = [
 				'user_id'          => Auth::id(),
@@ -47,9 +45,7 @@ class OrdersController extends Controller {
 	public function store(CreateOrderRequest $request)
 	{
     Session::remove('card'); // Clear the saved credit card info from the session
-
 		$order = $this->dispatchFrom('App\Jobs\CreateNewOrder', $request);
-
 		if ($order->userMeasurements->completed()) {
       Session::flash('message', "Looks you already submitted some of your measurements. Please enter the rest for a perfect fit.");
       $uncompleted_measurements = $order->userMeasurements->uncompleted();
@@ -72,7 +68,6 @@ class OrdersController extends Controller {
 	{
 		$order = Order::find($id);
 		$uncompleted_measurements = $order->userMeasurements->uncompleted();
-
 		if ($step == 'next' && !$order->userMeasurements->completed()) {
 			return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'height']);
 		} elseif ($step == 'next' && $uncompleted_measurements) {
@@ -94,9 +89,9 @@ class OrdersController extends Controller {
 			return redirect()->route('fit.show', ['id' => $order->id, 'step' => array_shift($uncompleted_measurements)]);
 		} elseif (!$order->isNew()) {
 			return redirect()->route('orders.complete', $order->id);
-		} else {
-			return redirect()->route('orders.checkout', $order->id);
 		}
+
+		return redirect()->route('orders.checkout', $order->id);
 	}
 
 
@@ -108,32 +103,14 @@ class OrdersController extends Controller {
 		return redirect()->back();
 	}
 
+
 	public function update($id, Request $request)
 	{
-		$order = Order::findOrFail($id);
-
-		// Check if user with this email exists and return them or create a new record for them
-		if ($request->name) {
-			$order->user->name = $request->name;
-			$order->user->save();
-		}
-
-		if ($request->address1 && $request->city) {
-			$address = Address::create([
-				'address1' => $request->address1,
-				'address2' => $request->address2,
-				'city'     => $request->city,
-				'postcode' => $request->postcode,
-				'province' => $request->province,
-				'country'  => $request->country,
-			]);
-			$order->address_id = $address->id;
-		}
-
-		$order->save();
+    $order = $this->dispatchFrom('App\Jobs\UpdateOrder', $request, ['id' => $id]);
 
 		return response()->json($order);
 	}
+
 
 	public function checkout($id)
 	{
@@ -150,55 +127,22 @@ class OrdersController extends Controller {
 	}
 
 
-	public function postCheckout()
-	{
-		return redirect()->route('checkout.complete');
-	}
-
-
 	public function process($id, Request $request)
 	{
 		$order = Order::findOrFail($id);
-		$amount = str_replace('.', '', $order->total);
-		$address_string = $order->address->address1 . ' ' . $order->address->address2 . ' | ' . $order->address->city . ', ' . $order->address->province . ' ' . $order->address->postcode;
+    $stripe_charge = $this->dispatchFrom('App\Jobs\ProcessOrderPayment', $request, ['order' => $order]);
 
-		$charge_attempt =	$order->user->charge($amount, [
-			'source' => $request->stripe_token,
-			'description' => 'Order: ' . $order->id,
-			'receipt_email' => $order->user->email,
-			'metadata' => [
-				'name' => $order->user->name,
-				'email' => $order->user->email,
-				'jacket' => $order->jacket->model
-			],
-			'shipping' => [
-				'address' => [
-					'line1'       => $order->address->address1,
-					'line2'       => $order->address->address2,
-					'city'        => $order->address->city,
-					'state'       => $order->address->province,
-					'postal_code' => $order->address->postcode,
-					'country'     => $order->address->country,
-				],
-				'name' => $order->user->name
-			]
-		]);
-
-		if ($charge_attempt) {
-			$order->payment_id = $charge_attempt->id;
-			$order->status     = 'placed';
-			$order->save();
-
-		  Mail::send('emails.order-confirmation', ['order' => $order], function ($message) use ($order) {
+    if ($stripe_charge) {
+      Mail::send('emails.order-confirmation', ['order' => $order], function ($message) use ($order) {
         $message->to($order->user->email, $order->user->name);
         $message->from('contact@sapayol.com');
         $message->subject('Thanks for ordering a custom ' . $order->jacket->name );
       });
       Session::flash('success', "Checkout complete!");
-			return redirect()->route('orders.complete', $order->id);
-		}	else {
-			dd($charge_attempt);
-		}
+      return redirect()->route('orders.complete', $order->id);
+    }
+
+    return 'something went wrong with the payment';
 	}
 
 

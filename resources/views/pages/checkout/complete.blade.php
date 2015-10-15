@@ -45,28 +45,27 @@
 <div class="large-4 medium-8 small-12 columns order-summary">
 	<h3 class="thin">Fit</h3>
 	<ul class="no-bullet value-list">
-		<?php $measurements = ['height', 'half_shoulder', 'back_width', 'chest', 'stomach', 'back_length', 'waist', 'arm', 'biceps', 'note'];  ?>
-		@foreach ($measurements as $measurement)
-			@if ($measurement == 'note')
+		@foreach ($order->userMeasurements->measurement_names as $name)
+			@if ($name == 'note')
 				<li><br></li>
 			@endif
 			<li>
-				@if ($order->userMeasurements->$measurement)
-					<small class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>
+				@if ($order->userMeasurements->$name)
+					<small class="list-key">{{{ ucwords(str_replace('_', ' ', $name)) }}}</small>
 					<span class="list-value">
-						@if ($measurement == 'note')
-							<em>{{{ $order->userMeasurements->$measurement }}}</em>
+						@if ($name == 'note')
+							<em>{{{ $order->userMeasurements->$name }}}</em>
 						@elseif ($order->userMeasurements->units == 'in')
-							<strong decimal-to-fraction="{{{ $order->userMeasurements->$measurement }}}">{{{ $order->userMeasurements->$measurement }}}</strong> "
+							<strong decimal-to-fraction="{{{ $order->userMeasurements->$name }}}">{{{ $order->userMeasurements->$name }}}</strong> "
 						@else
-							<strong>{{{ $order->userMeasurements->$measurement != round($order->userMeasurements->$measurement) ?  round($order->userMeasurements->$measurement, 1) : round($order->userMeasurements->$measurement) }}}</strong> cm
+							<strong>{{{ $order->userMeasurements->$name != round($order->userMeasurements->$name) ?  round($order->userMeasurements->$name, 1) : round($order->userMeasurements->$name) }}}</strong> cm
 						@endif
 					</span>
 				@endif
 			</li>
 		@endforeach
 	</ul>
-	@if ($uncompleted_measurements = $order->userMeasurements->uncompleted()
+	@if ($uncompleted_measurements = $order->userMeasurements->uncompleted())
 		<div class="panel callout">
 			<p>Looks like we still need the following measurements from you:</p>
 			<ul class="text-left">
@@ -86,7 +85,7 @@
 		<li><small class="list-key">Total </small><strong>${{{ $order->jacket->price }}}	</strong></li>
 	</ul>
 
-	@if ($order->userMeasurements->uncompleted())
+	@if (!$order->userMeasurements->uncompleted())
 		<a href="/jackets" class="button">Check out our other jackets</a>
 	@endif
 </div>
