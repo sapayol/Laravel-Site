@@ -84,4 +84,9 @@ class Order extends Model {
     return false;
   }
 
+  public function hasReusableMeasurements()
+  {
+    return $this->userMeasurements->user ? true : false;
+  }
+
 }

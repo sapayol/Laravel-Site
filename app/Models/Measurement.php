@@ -27,7 +27,7 @@ class Measurement extends Model {
     return $this->belongsTo('User');
   }
 
-  public function getIncompleteMeasurements()
+  public function uncompleted()
   {
   	$results = [];
     foreach ($this->measurement_names as $key => $measurement_name) {
@@ -35,10 +35,10 @@ class Measurement extends Model {
 				$results[$key] = $measurement_name;
     	}
     }
-    return $results;
+    return count($results) > 0 ? $results : false;
   }
 
-  public function getCompleteMeasurements()
+  public function completed()
   {
   	$results = [];
     foreach ($this->measurement_names as $key => $measurement_name) {
@@ -46,6 +46,6 @@ class Measurement extends Model {
 				$results[$key] = $measurement_name;
     	}
     }
-    return $results;
+    return count($results) > 0 ? $results : false;
   }
 }

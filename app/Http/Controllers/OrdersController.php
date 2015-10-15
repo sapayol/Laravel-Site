@@ -49,50 +49,23 @@ class OrdersController extends Controller {
 
 	public function store(CreateOrderRequest $request)
 	{
-		$user       = Auth::loginUsingId($request->user_id);
-		$last_order = $user->droppedOrders->last();
-		$new_order  = $request->input();
-		$jacket     = Jacket::where('model', '=', $request->model)->first();
-		$order      = Order::create(array(
-			'status'    => 'new',
-			'user_id'   => Auth::user()->id,
-			'jacket_id' => $jacket->id,
-			'total'     => $jacket->price // Needs to updated in 2.0 when attributes affect price
-		));
+    Session::remove('card');
 
-		Session::remove('card');
+		$order = $this->dispatchFrom('App\Jobs\CreateNewOrder', $request);
 
-		foreach ($request->jacket_look as $attribute) {
-			$order->attributes()->attach($attribute);
-		}
-
-		if ($last_order && $last_order->userMeasurements->user) {
-			$old_measurements = $last_order->userMeasurements->toArray();
-			unset($old_measurements['id'], $old_measurements['created_at'], $old_measurements['updated_at'], $old_measurements['user_id'], $old_measurements['user']);
-			Measurement::create(array_merge($old_measurements, ['order_id' => $order->id]));
-			$order->status = 'started';
-			$order->save();
-			if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
-        Session::flash('message', "Looks you already submitted some of your measurements. Please enter the rest for a perfect fit.");
-				return redirect()->route('fit.show', [$order->id, array_shift($incomplete_measurements)]);
-			}
+		if ($order->userMeasurements->completed()) {
+      Session::flash('message', "Looks you already submitted some of your measurements. Please enter the rest for a perfect fit.");
+      $uncompleted_measurements = $order->userMeasurements->uncompleted();
+			return redirect()->route('fit.show', [$order->id, array_shift($uncompleted_measurements)]);
 		}
 
 		return redirect()->route('fit.show', [$order->id, 'units']);
 	}
 
 
-	public function resetOrder($id, CreateOrderRequest $request)
+	public function resetOrder($id, Request $request)
 	{
-		$order = Order::find($id);
-
-		if ($request->retain_measurements) {
-			$order->userMeasurements->user_id = $order->user->id;
-			$order->userMeasurements->save();
-		}
-
-		$order->status = 'dropped';
-		$order->save();
+    $this->dispatchFrom('App\Jobs\ResetOrder', $request, ['id' => $id]);
 
 		return redirect()->route('jackets.index');
 	}
@@ -116,25 +89,13 @@ class OrdersController extends Controller {
 
 	public function postFit($id, Request $request)
 	{
-		$order = Order::find($id);
+    $order = $this->dispatchFrom('App\Jobs\SubmitMeasurement', $request, ['id' => $id]);
+    $uncompleted_measurements = $order->userMeasurements->uncompleted();
 
-		if (!$order->userMeasurements) {
-			Measurement::create(array_merge($request->measurements, ['order_id' => $order->id]));
-		} elseif ($request->measurements) {
-			$order->userMeasurements->update($request->measurements);
-		}
-
-		$order = Order::find($id);
-		if ($order->isNew()) {
-			$order->status = 'started';
-			$order->save();
-		}
-
-		if (count($incomplete_measurements = $order->userMeasurements->getIncompleteMeasurements()) > 0) {
-			$next_step = array_shift($incomplete_measurements);
-			return redirect()->route('fit.show', ['id' => $order->id, 'step' => $next_step]);
+		if ($uncompleted_measurements) {
+			return redirect()->route('fit.show', ['id' => $order->id, 'step' => array_shift($uncompleted_measurements)]);
 		} elseif (!$order->isNew()) {
-				return redirect()->route('orders.complete', $order->id);
+			return redirect()->route('orders.complete', $order->id);
 		} else {
 			return redirect()->route('orders.checkout', $order->id);
 		}
