@@ -13,46 +13,27 @@
 @stop
 
 @section('full-width-hero')
-		<div class="hero-image-container">
-			<div class="filter">
-				<div class="title-container">
-					<h1 class="hero-text">
-						<span class="line1 thin">Tailor-made</span><br>
-						<span class="line3">Leather Jackets</span>
-					</h1>
-					<a href="/jackets" class="button call-to-action">See Our Collection</a>
-				</div>
+	<div class="hero-image-container">
+		<div class="filter">
+			<div class="title-container">
+				<h1 class="hero-text">
+					<span class="line1 thin">Tailor-made</span><br>
+					<span class="line3">Leather Jackets</span>
+				</h1>
+				<a href="/jackets" class="button call-to-action">See Our Collection</a>
 			</div>
 		</div>
-{{-- 		<div class="hero-video-container">
-			<div class="filter">
-				<div class="title-container">
-					<h1 class="hero-text">
-						<span class="line1 thin">Tailor-made</span><br>
-						<span class="line3">Leather Jackets</span>
-					</h1>
-					<a href="/jackets" class="button call-to-action">See Our Collection</a>
-				</div>
-			</div>
-			<video autoplay class="fillWidth" poster="/images/video-posters/hero_short.png">
-				<source src="/videos/hero_short.webm" type="video/webm"/>
-				<source src="/videos/hero_short.mp4" type="video/mp4"/>
-				Your browser does not support the video tag. I suggest you upgrade your browser.
-			</video>
-			<div class="poster">
-				<img src="/images/video-posters/hero_short.png" alt="">
-			</div>
-		</div> --}}
+	</div>
 @stop
 
 @section('main')
 
 	<section class="small-12 medium-12 large-12 columns">
 		<div class="player">
-		  <video poster="/images/video-posters/outfit.jpg" controls crossorigin preload="none">
-		    <source src="/videos/outfit.webm" type="video/webm">
-		    <source src="/videos/outfit.mp4"  type="video/mp4">
-		    <a href="/videos/outfit.mp4">Download</a>
+		  <video poster="/images/video-posters/home_page.jpg" controls crossorigin preload="none">
+		    <source src="/videos/home_page.webm" type="video/webm">
+		    <source src="/videos/home_page.mp4"  type="video/mp4">
+		    <a href="/videos/home_page.mp4">Download</a>
 		  </video>
 		</div>
 	</section>
