@@ -6114,7 +6114,9 @@ article p {
 .terms section p {
   margin-top: 1rem; }
 .terms h2, .terms h3 {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-top: 2rem;
+  letter-spacing: 0.9px; }
 
 .primary-color-text {
   color: #B02428; }

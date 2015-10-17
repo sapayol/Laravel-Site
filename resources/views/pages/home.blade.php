@@ -39,11 +39,11 @@
 	</section>
 
 	<article class="large-6 medium-6 small-12 columns">
-		<a href="/who-we-are" class="image-link"><img class="sidekick-image" src="/images/photos/other/master-craftsmanship.jpg" alt=""></a>
+		<a href="/who-we-are#master-craftsmanship" class="image-link"><img class="sidekick-image" src="/images/photos/other/master-craftsmanship.jpg" alt=""></a>
 		<h2 class="thin">Master Craftsmanship</h2>
 		<p>Each piece is made at a select workshop, where the same craftsmen and -women have been perfecting their art together for decades.<br>
 		</p>
-		<a class="underlined" href="/who-we-are">Find Out More</a>
+		<a class="underlined" href="/who-we-are#master-craftsmanship">Find Out More</a>
 	</article>
 
 	<article class="large-6 medium-6 small-12 columns">
@@ -56,12 +56,12 @@
 	</article>
 
 	<article class="large-6 medium-6 small-12 columns">
-		<a href="/who-we-are" class="image-link"><img class="sidekick-image" src="/images/photos/other/finest-materials.jpg" alt=""></a>
+		<a href="/who-we-are#best-materials" class="image-link"><img class="sidekick-image" src="/images/photos/other/finest-materials.jpg" alt=""></a>
 		<h2 class="thin">Finest Materials</h2>
 		<p>
 			From the most precious leather down to the zippers and buttons, we obsess over the quality of the materials we use.<br>
 		</p>
-		<a class="underlined" href="/our-leather">Find Out More</a>
+		<a class="underlined" href="/who-we-are#best-materials">Find Out More</a>
 	</article>
 
 	<article class="large-6 medium-6 small-12 columns">
@@ -69,7 +69,7 @@
 		<p>
 			A deep concern for work conditions, our environment, and animals guides every decision we take.<br>
 		</p>
-		<a class="underlined" href="/who-we-are">Find Out More</a>
+		<a class="underlined" href="/who-we-are#respect-nature">Find Out More</a>
 	</article>
 
 	<section class="large-6 medium-6 small-12 large-centered medium-centered columns">
