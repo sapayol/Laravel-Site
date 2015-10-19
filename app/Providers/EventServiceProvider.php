@@ -16,9 +16,6 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\AccountWasCreated' => [
             'App\Listeners\SendAccountConfirmationEmail'
         ],
-        'App\Events\UserRequestedPasswordReset' => [
-            'App\Listeners\SendPasswordResetEmail'
-        ],
         'App\Events\OrderPaymentWasProcessed' => [
             'App\Listeners\SendOrderConfirmations',
         ],
