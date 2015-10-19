@@ -32,9 +32,16 @@ Route::post('/orders/{id}/process',              ['uses' => 'OrdersController@pr
 Route::get('/orders/{id}/complete',              ['uses' => 'OrdersController@complete',   'as' => 'orders.complete',     'middleware' => ['auth', 'order.owner']]);
 Route::resource('orders', 'OrdersController');
 
-
 Route::get('/users/{id}',                        ['uses' => 'UsersController@show',        'as' => 'users.show',          'middleware' => ['auth', 'account.owner']]);
 Route::resource('users', 'UsersController');
+
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
+	Route::get('/',                 ['uses' => 'AdminController@orderIndex',  'as' => 'admin.order-index']);
+	Route::get('/orders',           ['uses' => 'AdminController@orderIndex',  'as' => 'admin.order-index']);
+	Route::get('/orders/{id}',      ['uses' => 'AdminController@showOrder',   'as' => 'admin.show-order']);
+	Route::get('/orders/{id}/edit', ['uses' => 'AdminController@editOrder',   'as' => 'admin.edit-order']);
+	Route::patch('/orders/{id}',    ['uses' => 'AdminController@updateOrder', 'as' => 'admin.update-order']);
+});
 
 // API endpoints for managing the session from JavaScript
 //-------------------------------------------------------------------------
