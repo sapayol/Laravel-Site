@@ -35,7 +35,7 @@ label.text-input-label {
 		padding-left: .5rem;
 		z-index: 5;
 	}
-	input {
+	input, textarea {
 		display: inline-block;
 		padding-top: 2rem;
 		padding-bottom: .9rem;
@@ -49,10 +49,11 @@ label.text-input-label {
 		padding-bottom: 0rem;
 		height: 3rem;
 	}
-	textarea {
-	  padding-top: 1.3rem;
-	  font-size: 1rem;
-	}
+	// textarea {
+	//   padding-top: 1.3rem;
+	//   font-size: 1rem;
+	//   font-weight: 200;
+	// }
 	&:last-child {
 		top: -1px;
 	}

@@ -13,7 +13,7 @@
 		<form action="/orders/{{{ $order->id}}}/fit" method="POST">
 			<p>Please let us know if you have any additional information you want us to know about your measurements</p>
 
-			<label for="note">
+			<label for="note" class="text-input-label">
 				<span class="label-title">Note</span>
 				<textarea name="measurements[note]" id="note" rows=6>{{{ $order->userMeasurements->note }}}</textarea>
 				<span class="input-units">@{{ units }}</span>

@@ -3329,7 +3329,10 @@ main > p {
   .chevron.breadcrumb-chevron {
     display: inline-block;
     width: 7px;
-    height: 7px; }
+    height: 7px;
+    position: relative;
+    top: -2px;
+    margin: 0 2px; }
     @media only screen and (max-width: 20em) {
       .chevron.breadcrumb-chevron {
         margin: 0 .2rem .05rem .2rem; } }
@@ -5783,7 +5786,7 @@ label.text-input-label {
     top: .1rem;
     padding-left: .5rem;
     z-index: 5; }
-  label.text-input-label input {
+  label.text-input-label input, label.text-input-label textarea {
     display: inline-block;
     padding-top: 2rem;
     padding-bottom: .9rem;
@@ -5795,9 +5798,6 @@ label.text-input-label {
     padding-top: 1.3rem;
     padding-bottom: 0rem;
     height: 3rem; }
-  label.text-input-label textarea {
-    padding-top: 1.3rem;
-    font-size: 1rem; }
   label.text-input-label:last-child {
     top: -1px; }
 
