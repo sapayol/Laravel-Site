@@ -78,6 +78,7 @@ class OrdersController extends Controller {
 		}
 
 		$uncompleted_measurements = $order->userMeasurements->uncompleted();
+
 		if ($step == 'next' && !$order->userMeasurements->completed()) {
 			return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'height']);
 		} elseif ($step == 'next' && $uncompleted_measurements) {
