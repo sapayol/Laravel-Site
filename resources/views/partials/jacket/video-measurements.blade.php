@@ -31,7 +31,7 @@
 					@else
 						<span decimal-to-fraction="{{{ $value * .393}}}">{{{ $value * .393}}}</span>
 					@endif
-					<small>{{{ $value !== '' ? '"' : '' }}}</small>
+					{{{ $value !== '' ? '"' : '' }}}
 				</li>
 				@endforeach
 		</ul>

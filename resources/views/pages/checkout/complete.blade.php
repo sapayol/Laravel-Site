@@ -21,9 +21,9 @@
 	</ul>
 	<p>If this information is wrong or you have questions, write us at <a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>.</p>
 </section>
-<h2 class="large-12 medium-8 small-12 columns order-summary">
-	Order Details
-</h2>
+<div class="large-12 medium-8 small-12 columns">
+	<h2>Order Details</h2>
+</div>
 <ul class="large-12 medium-8 small-12 columns order-summary no-bullet value-list">
 	<li><small class="list-key">Order # </small><strong>{{{ $order->id  }}}	</strong></li>
 	<li><small class="list-key">Date </small>{{{ date('M d, Y', strtotime($order->created_at))  }}}	</li>

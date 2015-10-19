@@ -66,20 +66,20 @@
 
 		<article class="row">
 			<section class="large-6 medium-6 small-12 columns">
-				<a href="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg" alt=""></a>
+				<a href="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" alt=""></a>
 			</section>
 			<section class="large-6 medium-6 small-12 columns">
 				<h2>Inside pockets for your valuables</h2>
-				<p class="image-caption">An inside pocket with a zipper on your right chest holds your note book, Knicks tickets, pay check, or passport.</p>
+				<p class="image-caption">Slide your phone into a welted pocket that sits conveniently just inside your jacket, on the left side.</p>
 			</section>
 		</article>
 
 		<article class="row">
 			<section class="large-6 medium-6 small-12 columns">
-				<a href="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" alt=""></a>
+				<a href="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg" alt=""></a>
 			</section>
 			<section class="large-6 medium-6 small-12 columns">
-				<p class="image-caption">Slide your phone into a welted pocket that sits conveniently just inside your jacket, on the left side.</p>
+				<p class="image-caption">An inside pocket with a zipper on your right chest holds your note book, Knicks tickets, pay check, or passport.</p>
 				<h3>Reinforced pockets</h3>
 				<p>All pockets are lined with a Tencel twill, a very strong, eco-friendly fabric that makes sure you don’t lose your keys.</p>
 			</section>

@@ -5585,38 +5585,6 @@ Copyright (c) 2015 Daniel Eden
   .switch.large .switch-text span:last-child {
     padding-left: .65rem; }
 
-.definition-section {
-  line-height: 1.2; }
-  .definition-section h2 {
-    margin-bottom: 0;
-    font-size: 2.25rem;
-    line-height: 1; }
-  .definition-section .pronounciation, .definition-section .word-type {
-    color: #b0b0b0; }
-  .definition-section .word-type {
-    display: block;
-    margin-top: .5rem; }
-
-.credit-card-field {
-  position: relative; }
-  .credit-card-field i.fa {
-    position: absolute;
-    bottom: 0.6rem;
-    right: 0.8rem;
-    font-size: 1.2rem; }
-
-.expiry-field {
-  display: inline-block;
-  width: 60%; }
-
-.cvc-field {
-  display: inline-block;
-  width: 38%; }
-  .cvc-field .label-title small {
-    position: relative;
-    top: -2px;
-    margin-left: .2rem; }
-
 .measurement-tracker {
   margin-top: 1rem; }
 
@@ -5821,6 +5789,26 @@ fieldset {
   padding-left: .5rem;
   padding-right: .5rem;
   padding-top: .1rem; }
+
+.credit-card-field {
+  position: relative; }
+  .credit-card-field i.fa {
+    position: absolute;
+    bottom: 0.6rem;
+    right: 0.8rem;
+    font-size: 1.2rem; }
+
+.expiry-field {
+  display: inline-block;
+  width: 60%; }
+
+.cvc-field {
+  display: inline-block;
+  width: 38%; }
+  .cvc-field .label-title small {
+    position: relative;
+    top: -2px;
+    margin-left: .2rem; }
 
 .measurement-table {
   font-family: 'HelveticaNeue', 'Helvetica', 'Roboto', 'Arial', 'sans-serif';
@@ -6065,6 +6053,8 @@ section h2, article h2 {
   letter-spacing: -0.05em;
   line-height: 1.1;
   margin-bottom: .8rem; }
+  section h2 small, article h2 small {
+    letter-spacing: -0.02rem; }
 
 section h3, article h3 {
   font-size: 1.25em;
@@ -6123,6 +6113,12 @@ hr.wide {
 
 hr.thin {
   height: 1px; }
+
+.definition-section h3 small {
+  color: #222222; }
+.definition-section p {
+  margin-bottom: .5rem;
+  line-height: 1.05; }
 
 .sidekick-image {
   margin-bottom: 1.3rem; }

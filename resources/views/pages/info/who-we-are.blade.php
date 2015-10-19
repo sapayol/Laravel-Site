@@ -19,19 +19,22 @@
 		<p>We understand. It’s the same urge that motivates us to design leather jackets without compromises. To create a company that does things the right way. To build a community of the curious.</p>
 	</section>
 
-	<section class="large-12 medium-12 small-12 columns">
-		<h2>Sapayol</h2>
-		<span class="pronounciation">[Turkish <strong>sapa</strong>-yol]</span><br>
-		<span class="word-type">noun</span>
-		<span class="defition">1. the road less traveled by</span>
-	</section>
+	<hr>
 
-	<section class="large-12 medium-12 small-12 columns inverted-colors definition-section">
-		<h2>Sapayol</h2>
-		<span class="pronounciation">[Turkish <strong>sapa</strong>-yol]</span><br>
-		<span class="word-type">noun</span>
-		<span class="defition">1. the road less traveled by</span>
-	</section>
+	<div class="large-12 medium-12 small-12 columns definition-section">
+		<h3>SAPAYOL <small>|'sapa,yol|</small></h3>
+		<p>
+			noun <br>
+			1. the road less traveled by
+		</p>
+		<p>
+			ORIGIN <br>
+			Turkish
+		</p>
+		<br>
+	</div>
+
+	<hr>
 
 	<section class="large-12 medium-12 small-12 columns">
 		<h2>We tailor minimalistic leather jackets to your individual measurements.</h2>

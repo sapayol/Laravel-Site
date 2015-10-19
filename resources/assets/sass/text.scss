@@ -31,6 +31,9 @@ section h2, article h2 {
 	letter-spacing: -0.05em;
 	line-height: 1.1;
 	margin-bottom: .8rem;
+	small {
+		letter-spacing: -0.02rem;
+	}
 }
 
 section h3, article h3 {
@@ -110,4 +113,16 @@ hr.wide {
 }
 hr.thin {
 	height: 1px;
+}
+
+.definition-section {
+	h3 {
+		small {
+			color: $black;
+		}
+	}
+	p {
+		margin-bottom: .5rem;
+		line-height: 1.05;
+	}
 }

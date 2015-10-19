@@ -11,18 +11,18 @@
 @section('main')
 	<div class="large-8 large-push-4 large-uncentered medium-centered medium-8 small-12 columns">
 		<section id="address">
-			<h2 class="text-center thin"><small>Please enter your</small> <br>Shipping Address</h2> <a ng-click="changeAddress()" class="right underlined show-for-large-up">Change</a>
+			<h2 class="text-center"><small>Please enter your</small> <br>Shipping Address</h2> <a ng-click="changeAddress()" class="right underlined show-for-large-up">Change</a>
 			@include('partials.checkout.address-form')
 		</section>
 		<section ng-show="addressSubmitted" id="payment-info">
-			<h2 class="text-center thin"><small>Please enter your</small> <br>Payment Info</h2> <a ng-click="changePaymentInfo()" class="right underlined show-for-large-up">Change</a>
+			<h2 class="text-center"><small>Please enter your</small> <br>Payment Info</h2> <a ng-click="changePaymentInfo()" class="right underlined show-for-large-up">Change</a>
 			@include('partials.checkout.payment-info-form')
 		</section>
 	</div>
 
 	<div class="large-4 large-pull-8 large-uncentered medium-centered medium-10 small-12 columns">
 		<section ng-show="paymentInfoSubmitted" id="order-summary">
-			<h2 class="text-center thin hide-for-large-up">Order Summary</h2>
+			<h2 class="text-center hide-for-large-up">Order Summary</h2>
 			@include('partials.checkout.order-summary')
 		</section>
 	</div>
