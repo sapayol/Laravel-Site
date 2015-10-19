@@ -7,7 +7,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Mailers\UserMailer;
 
-class SendAccountConfirmationEmail implements ShouldQueue
+class SendAccountConfirmationEmail
 {
 
     private $mailer;
@@ -28,8 +28,8 @@ class SendAccountConfirmationEmail implements ShouldQueue
      * @param  AccountWasCreated   $event
      * @return void
      */
-    public function handle(AccountWasCreated  $event)
+    public function handle(AccountWasCreated $event)
     {
-        $this->mailer->sendAccountConfirmationEmail($event->order);
+        $this->mailer->sendAccountConfirmation($event->user);
     }
 }

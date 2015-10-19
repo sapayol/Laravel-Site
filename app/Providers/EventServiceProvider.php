@@ -13,7 +13,7 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\AccountWasCreated ' => [
+        'App\Events\AccountWasCreated' => [
             'App\Listeners\SendAccountConfirmationEmail'
         ],
         'App\Events\UserRequestedPasswordReset' => [

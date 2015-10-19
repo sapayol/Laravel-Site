@@ -7,7 +7,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Mailers\UserMailer;
 
-class SendPasswordResetEmail implements ShouldQueue
+class SendPasswordResetEmail
 {
 
     private $mailer;

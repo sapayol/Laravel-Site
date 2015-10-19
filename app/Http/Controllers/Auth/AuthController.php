@@ -6,6 +6,7 @@ use Auth;
 use User;
 use Validator;
 use App\Http\Controllers\Controller;
+use App\Events\AccountWasCreated;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Http\Request;
 
@@ -34,6 +35,16 @@ class AuthController extends Controller
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 
+     /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getRegister()
+    {
+        return view('pages.auth.register');
+    }
+
     /**
      * Show the application login form.
      *
@@ -56,6 +67,7 @@ class AuthController extends Controller
      */
     public function postRegister(Request $request)
     {
+
         // Attempt to log the user in
         $this->validate($request, [
             $this->loginUsername() => 'required', 'password' => 'required',
@@ -75,6 +87,8 @@ class AuthController extends Controller
 
         $user = $this->create($request->all());
         Auth::login($user);
+
+        event(new AccountWasCreated($user));
 
         if ($request->wantsJson() || $request->ajax()) {
            return $user->toJson();

@@ -7,7 +7,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Mailers\OrderMailer;
 
-class SendDeliveryNotification implements ShouldQueue
+class SendDeliveryNotification
 {
 
     private $mailer;

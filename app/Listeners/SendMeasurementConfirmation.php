@@ -7,7 +7,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Mailers\OrderMailer;
 
-class SendMeasurementConfirmation implements ShouldQueue
+class SendMeasurementConfirmation
 {
 
     private $mailer;

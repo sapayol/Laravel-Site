@@ -47,7 +47,7 @@ class OrdersController extends Controller {
 	{
     Session::remove('card'); // Clear the saved credit card info from the session
 		$order = $this->dispatchFrom('App\Jobs\CreateNewOrder', $request);
-		if ($order->userMeasurements->completed()) {
+		if ($order->userMeasurements && $order->userMeasurements->completed()) {
       Session::flash('message', "Looks you already submitted some of your measurements. Please enter the rest for a perfect fit.");
       $uncompleted_measurements = $order->userMeasurements->uncompleted();
 			return redirect()->route('fit.show', [$order->id, array_shift($uncompleted_measurements)]);
@@ -68,6 +68,15 @@ class OrdersController extends Controller {
 	public function getFit($id, $step = null)
 	{
 		$order = Order::find($id);
+
+		if ($step == 'units') {
+			return view('pages.measurement.' . $step, ['order' => $order, 'step' => $step]);
+		}
+
+		if ($order->status == 'new') {
+			return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'units']);
+		}
+
 		$uncompleted_measurements = $order->userMeasurements->uncompleted();
 		if ($step == 'next' && !$order->userMeasurements->completed()) {
 			return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'height']);
