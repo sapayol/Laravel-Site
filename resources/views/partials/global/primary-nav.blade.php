@@ -11,6 +11,9 @@
       <small class="right text-right">
         <span class="pipe"> | </span>
         @if ($currentuser)
+          @if ($currentuser->isAdmin())
+            <a href="{{{ route('users.show', $currentuser->id) }}}">Orders</a><br>
+          @endif
           @if ($action !== 'users.show')
             <a href="{{{ route('users.show', $currentuser->id) }}}">Your Profile</a><br>
           @endif
@@ -22,7 +25,7 @@
       <li class="{{{ strpos($action, 'jackets') === 0 ? 'current' : ''}}}"><a href="/jackets">Our Jackets</a></li>
       <li class="{{{ $action == 'pages.who-we-are' ? 'current' : ''}}}"><a href="/who-we-are">Who We Are</a></li>
       <li class="{{{ $action == 'pages.how-it-works' ? 'current' : ''}}}"><a href="/how-it-works">How It Works</a></li>
-      @if ($currentuser && $currentuser->orders && $currentuser->orders->last()->status == 'started')
+      @if ($currentuser && $currentuser->orders->last() && $currentuser->orders->last()->status == 'started')
         @if ((strpos($action,'orders') !== 0 && strpos($action,'fit') !== 0) && $action !== 'users.show')
           <li class="main-item"><a href="/orders/{{{ $currentuser->orders->last()->id }}}">Your Order</a></li>
         @endif

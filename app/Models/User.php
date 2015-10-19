@@ -58,4 +58,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->orders()->where('status', '=', 'started')->orderBy('updated_at');
     }
 
+    public function isAdmin()
+    {
+        return $this->role == 'admin';
+    }
+
 }

@@ -15,12 +15,13 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         // $this->call('AddressesTableSeeder');
+        // $this->call('OrdersTableSeeder');
+        // $this->call('AttributeOrderTableSeeder');
         $this->call('AttributesTableSeeder');
         $this->call('JacketsTableSeeder');
         $this->call('MeasurementsTableSeeder');
-        // $this->call('OrdersTableSeeder');
         $this->call('AttributeJacketTableSeeder');
-        // $this->call('AttributeOrderTableSeeder');
+        $this->call('UsersTableSeeder');
 
         Model::reguard();
     }
