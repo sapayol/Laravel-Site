@@ -5612,6 +5612,10 @@ Copyright (c) 2015 Daniel Eden
 .cvc-field {
   display: inline-block;
   width: 38%; }
+  .cvc-field .label-title small {
+    position: relative;
+    top: -2px;
+    margin-left: .2rem; }
 
 .measurement-tracker {
   margin-top: 1rem; }

@@ -87,6 +87,11 @@
 .cvc-field {
 	display: inline-block;
 	width: 38%;
+	.label-title small {
+		position: relative;
+		top: -2px;
+		margin-left: .2rem;
+	}
 }
 
 .measurement-tracker {
