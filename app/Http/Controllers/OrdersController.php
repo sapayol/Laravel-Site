@@ -93,9 +93,8 @@ class OrdersController extends Controller {
 	public function postFit($id, Request $request)
 	{
     $order = $this->dispatchFrom('App\Jobs\SubmitMeasurement', $request, ['id' => $id]);
-    $uncompleted_measurements = $order->userMeasurements->uncompleted();
 
-		if ($uncompleted_measurements) {
+		if ($order->userMeasurements && $uncompleted_measurements = $order->userMeasurements->uncompleted()) {
 			return redirect()->route('fit.show', ['id' => $order->id, 'step' => array_shift($uncompleted_measurements)]);
 		} elseif (!$order->isNew()) {
 			return redirect()->route('orders.complete', $order->id);
