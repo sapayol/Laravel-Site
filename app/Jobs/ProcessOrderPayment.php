@@ -2,9 +2,10 @@
 
 namespace App\Jobs;
 
+use Illuminate\Contracts\Bus\SelfHandling;
 use App\Jobs\Job;
 use Order;
-use Illuminate\Contracts\Bus\SelfHandling;
+use App\Events\OrderPaymentWasProcessed;
 
 class ProcessOrderPayment extends Job implements SelfHandling
 {
@@ -37,6 +38,8 @@ class ProcessOrderPayment extends Job implements SelfHandling
       $this->order->payment_id = $charge_attempt->id;
       $this->order->status     = 'placed';
       $this->order->save();
+
+      event(new OrderPaymentWasProcessed($this->order));
 
       return $charge_attempt;
     }

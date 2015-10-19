@@ -43,10 +43,7 @@
 	@endif
 
 	<section class="large-6 medium-8 small-12 large-centered medium-centered columns">
-		<form action="/orders/{{{ $order->id }}}/fit" method="POST">
-			<input type="hidden" name="_token"         value="{!! csrf_token() !!}">
-			<input type="submit" class="button expand" value="Finish My Order">
-		</form>
+		<a href="/orders/{{{ $order->id }}}/fit/next" class="button expand">Finish Your Order</a>
 		<div class="text-center">or</div>
 		<br>
 		<form action="/orders/{{{ $order->id }}}/reset" method="POST">

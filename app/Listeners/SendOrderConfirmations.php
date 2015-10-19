@@ -19,10 +19,9 @@ class SendOrderConfirmations
      *
      * @return void
      */
-    public function __construct(OrderMailer $orderMailer, AdminMailer $adminMailer)
+    public function __construct(OrderMailer $orderMailer)
     {
         $this->orderMailer = $orderMailer;
-        $this->adminMailer = $adminMailer;
     }
 
     /**
@@ -34,6 +33,6 @@ class SendOrderConfirmations
     public function handle(OrderPaymentWasProcessed $event)
     {
         $this->orderMailer->sendOrderConfirmation($event->order);
-        $this->adminMailer->sendOrderNotification($event->order);
+        $this->orderMailer->sendOrderNotification($event->order);
     }
 }

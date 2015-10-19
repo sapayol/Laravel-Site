@@ -3,7 +3,6 @@
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateOrderRequest;
 use App\Jobs\SwitchMeasurementUnits;
-use App\Events\OrderPaymentWasProcessed;
 use JavaScript, Mail, Auth, Session;
 use Address, Jacket, Measurement, Attribute, Order, User;
 
@@ -22,8 +21,6 @@ class OrdersController extends Controller {
 	public function show($id, Request $request)
 	{
 		$order = Order::find($id);
-
-   	event(new OrderPaymentWasProcessed($order));
 
 		if ($order->status == 'new') return redirect()->back();
 		if (!$order->isNew()) return redirect()->route('orders.complete', $order->id);
@@ -137,8 +134,6 @@ class OrdersController extends Controller {
     $stripe_charge = $this->dispatchFrom('App\Jobs\ProcessOrderPayment', $request, ['order' => $order]);
 
     if ($stripe_charge) {
-    	event(new OrderPaymentWasProcessed($order));
-
       // Mail::send('emails.order-confirmation', ['order' => $order], function ($message) use ($order) {
       //   $message->to($order->user->email, $order->user->name);
       //   $message->from('contact@sapayol.com');

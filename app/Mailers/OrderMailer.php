@@ -2,69 +2,56 @@
 
 namespace App\Mailers;
 
-use Illuminate\Mail\Mailer as Mail;
 use Order;
 
-class OrderMailer {
+class OrderMailer extends Mailer {
 
-  private $mail;
-
-  private $order;
-
-  function __construct(Mail $mail, Order $order)
+  public function sendOrderConfirmation(Order $order)
   {
-    $this->mail = $mail;
-    $this->order = $order;
-  }
-
-  public function sendToOrderUser($subject, $view)
-  {
-    $this->mail->send($view, $this->order, function($message) use ($subject) {
-        $message->to($this->order->user->email)->subject($subject);
-    });
-  }
-
-  public function sendOrderConfirmation()
-  {
-    $subject = 'Thanks for ordering a custom ' . $this->order->jacket->name;
+    $subject = 'Thanks for ordering a custom ' . $order->jacket->name;
     $view    = 'emails.order-confirmation';
 
-    return  $this->sendToOrderUser($subject, $view);
+    return  $this->sendTo($order->user, $subject, $view, ['order' => $order]);
   }
 
-  public function sendMeasurementConfirmation()
+  public function sendMeasurementConfirmation(Order $order)
   {
-    $subject = 'Final measurements for your ' . $this->order->jacket->name;
+    $subject = 'Final measurements for your ' . $order->jacket->name;
     $view    = 'emails.measurements-confirmation';
 
-    return  $this->sendToOrderUser($subject, $view);
+    return  $this->sendTo($order->user, $subject, $view, ['order' => $order]);
   }
 
-  public function sendProductionStart()
+  public function sendProductionStart(Order $order)
   {
-    $subject = 'Our tailors have started working on your ' . $this->order->jacket->name;
+    $subject = 'Our tailors have started working on your ' . $order->jacket->name;
     $view    = 'emails.production-start';
 
-    return  $this->sendToOrderUser($subject, $view);
+    return  $this->sendTo($order->user, $subject, $view, ['order' => $order]);
   }
 
-  public function sendShippingNotification()
+  public function sendShippingNotification(Order $order)
   {
     $subject = 'Your ' . $order->jacket->name . ' has been handed over to the courier';
     $view    = 'emails.shipping-notification';
 
-    return  $this->sendToOrderUser($subject, $view);
+    return  $this->sendTo($order->user, $subject, $view, ['order' => $order]);
   }
 
-  public function sendDeliveryNotification()
+  public function sendDeliveryNotification(Order $order)
   {
-    $subject = 'About the ' .  $this->order->jacket->name . ' you just received'
+    $subject = 'About the ' .  $order->jacket->name . ' you just received';
     $view    = 'emails.after-delivery';
 
-    return  $this->sendToOrderUser($subject, $view);
+    return  $this->sendTo($order->user, $subject, $view, ['order' => $order]);
   }
 
+  public function sendOrderNotification(Order $order)
+  {
+    $subject =  'A new ' . $order->jacket->name . ' has been ordered';
+    $view    = 'emails.order-notification';
 
-
+    return  $this->sendTo('dima@sapayol.com', $subject, $view, ['order' => $order]);
+  }
 
 }
