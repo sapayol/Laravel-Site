@@ -18,7 +18,7 @@ class ResetOrder extends Job implements SelfHandling
      *
      * @return void
      */
-    public function __construct($retain_measurements, $id)
+    public function __construct($id, $retain_measurements = null)
     {
         $this->retain_measurements = $retain_measurements;
         $this->order = Order::find($id);
