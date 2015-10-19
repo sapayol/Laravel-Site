@@ -13,11 +13,10 @@
 			You approach things from a different angle.<br>
 			You find your own way.
 		</p>
-		<p class="primary-color-text">
-			<strong>Regular doesn’t fit you.</strong>
-			We understand.
+		<p>
+			<em>Regular doesn’t fit you.</em>
 		</p>
-		<p>It’s the same urge that motivates us to design leather jackets without compromises. To create a company that does things the right way. To build a community of the curious.</p>
+		<p>We understand. It’s the same urge that motivates us to design leather jackets without compromises. To create a company that does things the right way. To build a community of the curious.</p>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns">
