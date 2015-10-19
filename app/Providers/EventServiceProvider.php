@@ -13,8 +13,27 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\SomeEvent' => [
-            'App\Listeners\EventListener',
+        'App\Events\AccountWasCreated ' => [
+            'App\Listeners\SendAccountConfirmationEmail'
+        ],
+        'App\Events\UserRequestedPasswordReset' => [
+            'App\Listeners\SendPasswordResetEmail'
+        ],
+        'App\Events\OrderPaymentWasProcessed' => [
+            'App\Listeners\SendOrderConfirmations',
+        ],
+        'App\Events\OrderStatusChangedToReviewed' => [
+            'App\Listeners\SendMeasurementConfirmation'
+        ],
+        'App\Events\OrderStatusChangedToInProgress' => [
+            'App\Listeners\SendProductionStart',
+            'App\Listeners\SendTailorOrderDetails'
+        ],
+        'App\Events\OrderStatusChangedToShipped' => [
+            'App\Listeners\SendShippingNotification'
+        ],
+        'App\Events\OrderStatusChangedToCompleted' => [
+            'App\Listeners\SendDeliveryNotification'
         ],
     ];
 
