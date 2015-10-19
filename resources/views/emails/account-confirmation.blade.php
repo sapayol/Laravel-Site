@@ -1,7 +1,7 @@
 @extends('layouts/email')
 
 @section('title')
-	Your Sapayol account was created
+	Your account at SAPAYOL
 @stop
 
 @section('main')
