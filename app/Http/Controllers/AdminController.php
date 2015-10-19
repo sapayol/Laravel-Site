@@ -5,9 +5,17 @@ use Address, Jacket, Measurement, Attribute, Order, User;
 
 class AdminController extends Controller {
 
-	public function orderIndex()
+	public function dashboard()
 	{
 		$orders = Order::all();
+
+
+		return view('pages.admin.dashboard', ['orders' => $orders]);
+	}
+
+	public function orderIndex()
+	{
+		$orders = Order::paginate(50);
 
 		return view('pages.admin.order-index', ['orders' => $orders]);
 	}

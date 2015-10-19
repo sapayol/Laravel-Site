@@ -36,7 +36,7 @@ Route::get('/users/{id}',                        ['uses' => 'UsersController@sho
 Route::resource('users', 'UsersController');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
-	Route::get('/',                 ['uses' => 'AdminController@orderIndex',  'as' => 'admin.order-index']);
+	Route::get('/',                 ['uses' => 'AdminController@dashboard',   'as' => 'admin.dashboard']);
 	Route::get('/orders',           ['uses' => 'AdminController@orderIndex',  'as' => 'admin.order-index']);
 	Route::get('/orders/{id}',      ['uses' => 'AdminController@showOrder',   'as' => 'admin.show-order']);
 	Route::get('/orders/{id}/edit', ['uses' => 'AdminController@editOrder',   'as' => 'admin.edit-order']);
