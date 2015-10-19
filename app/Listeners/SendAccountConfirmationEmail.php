@@ -5,17 +5,21 @@ namespace App\Listeners;
 use App\Events\AccountWasCreated ;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Mailers\UserMailer;
 
-class SendAccountConfirmationEmail
+class SendAccountConfirmationEmail implements ShouldQueue
 {
+
+    private $mailer;
+
     /**
      * Create the event listener.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(UserMailer $mailer)
     {
-        //
+        $this->mailer = $mailer;
     }
 
     /**
@@ -26,6 +30,6 @@ class SendAccountConfirmationEmail
      */
     public function handle(AccountWasCreated  $event)
     {
-        //
+        $this->mailer->sendAccountConfirmationEmail($event->order);
     }
 }

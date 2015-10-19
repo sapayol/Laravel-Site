@@ -5,17 +5,21 @@ namespace App\Listeners;
 use App\Events\OrderStatusChangedToReviewed;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Mailers\OrderMailer;
 
-class SendMeasurementConfirmation
+class SendMeasurementConfirmation implements ShouldQueue
 {
+
+    private $mailer;
+
     /**
      * Create the event listener.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(OrderMailer $mailer)
     {
-        //
+        $this->mailer = $mailer;
     }
 
     /**
@@ -26,6 +30,6 @@ class SendMeasurementConfirmation
      */
     public function handle(OrderStatusChangedToReviewed $event)
     {
-        //
+        $this->mailer->sendMeasurementConfirmation($event->order);
     }
 }

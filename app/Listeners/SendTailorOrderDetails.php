@@ -5,17 +5,21 @@ namespace App\Listeners;
 use App\Events\OrderStatusChangedToInProgress;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Mailers\AdminMailer;
 
-class SendTailorOrderDetails
+class SendTailorOrderDetails implements ShouldQueue
 {
+
+    private $mailer;
+
     /**
      * Create the event listener.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(AdminMailer $mailer)
     {
-        //
+        $this->mailer = $mailer;
     }
 
     /**
@@ -26,6 +30,6 @@ class SendTailorOrderDetails
      */
     public function handle(OrderStatusChangedToInProgress $event)
     {
-        //
+        $this->mailer->sendTailerOrderDetails($event->order);
     }
 }

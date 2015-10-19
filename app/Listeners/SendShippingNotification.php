@@ -5,17 +5,21 @@ namespace App\Listeners;
 use App\Events\OrderStatusChangedToShipped;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Mailers\AdminMailer;
 
-class SendShippingNotification
+class SendShippingNotification implements ShouldQueue
 {
+
+    private $mailer;
+
     /**
      * Create the event listener.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(AdminMailer $mailer)
     {
-        //
+        $this->mailer = $mailer;
     }
 
     /**
@@ -26,6 +30,6 @@ class SendShippingNotification
      */
     public function handle(OrderStatusChangedToShipped $event)
     {
-        //
+        $this->mailer->sendShippingNotification($event->order);
     }
 }
