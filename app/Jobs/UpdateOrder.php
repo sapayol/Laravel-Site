@@ -8,12 +8,31 @@ use Illuminate\Contracts\Bus\SelfHandling;
 
 class UpdateOrder extends Job implements SelfHandling
 {
+
+    protected  $order;
+
+    protected  $name;
+
+    protected  $address1;
+
+    protected  $address2;
+
+    protected  $city;
+
+    protected  $postcode;
+
+    protected  $province;
+
+    protected  $country;
+
+    protected  $email;
+
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($id, $name, $address1, $address2 = null, $city = null, $postcode = null, $province = null, $country = null)
+    public function __construct($id, $name, $address1, $address2 = null, $city = null, $postcode = null, $province = null, $country = null, $email = null)
     {
         $this->order    = Order::findOrFail($id);
         $this->name     = $name;
@@ -23,6 +42,7 @@ class UpdateOrder extends Job implements SelfHandling
         $this->postcode = $postcode;
         $this->province = $province;
         $this->country  = $country;
+        $this->email    = $email;
     }
 
     /**
@@ -35,6 +55,11 @@ class UpdateOrder extends Job implements SelfHandling
         // Check if user with this email exists and return them or create a new record for them
         if ($this->name) {
             $this->order->user->name = $this->name;
+            $this->order->user->save();
+        }
+
+        if ($this->email) {
+            $this->order->user->email = $this->email;
             $this->order->user->save();
         }
 

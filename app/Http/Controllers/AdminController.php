@@ -1,28 +1,39 @@
 <?php namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use JavaScript;
 use Address, Jacket, Measurement, Attribute, Order, User;
 
 class AdminController extends Controller {
 
 	public function dashboard()
 	{
-		$orders = Order::all();
-
+		$orders = Order::all()->take(5);
 
 		return view('pages.admin.dashboard', ['orders' => $orders]);
 	}
 
-	public function orderIndex()
+	public function orderIndex(Request $request)
 	{
-		$orders = Order::paginate(50);
+		if ($request->status) {
+			$orders = Order::where('status', '=', $request->status)->paginate(50);
+		} else {
+			$orders = Order::paginate(50);
+		}
 
-		return view('pages.admin.order-index', ['orders' => $orders]);
+		return view('pages.admin.order-index', ['orders' => $orders, 'status' => $request->status]);
 	}
 
 	public function showOrder($id)
 	{
 		$order = Order::findOrFail($id);
+
+		JavaScript::put([
+			'order'    => $order,
+			'jacket'   => $order->jacket,
+			'user'     => $order->user,
+			'address'  => $order->address,
+		]);
 
 		return view('pages.admin.show-order', ['order' => $order]);
 	}

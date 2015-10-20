@@ -2113,6 +2113,53 @@ label.error {
     background-color: #a0d3e8;
     color: #333333; }
 
+ul.pagination {
+  display: block;
+  margin-left: -0.3125rem;
+  min-height: 1.5rem; }
+  ul.pagination li {
+    color: #222222;
+    font-size: 0.875rem;
+    height: 1.5rem;
+    margin-left: 0.3125rem; }
+    ul.pagination li a, ul.pagination li button {
+      border-radius: 3px;
+      -webkit-transition: background-color 300ms ease-out;
+              transition: background-color 300ms ease-out;
+      background: none;
+      color: #999999;
+      display: block;
+      font-size: 1em;
+      font-weight: normal;
+      line-height: inherit;
+      padding: 0.0625rem 0.625rem 0.0625rem; }
+    ul.pagination li:hover a,
+    ul.pagination li a:focus, ul.pagination li:hover button,
+    ul.pagination li button:focus {
+      background: #e6e6e6; }
+    ul.pagination li.unavailable a, ul.pagination li.unavailable button {
+      cursor: default;
+      color: #999999; }
+    ul.pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus, ul.pagination li.unavailable:hover button, ul.pagination li.unavailable button:focus {
+      background: transparent; }
+    ul.pagination li.current a, ul.pagination li.current button {
+      background: #008CBA;
+      color: #FFFFFF;
+      cursor: default;
+      font-weight: bold; }
+      ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.pagination li.current button:hover, ul.pagination li.current button:focus {
+        background: #008CBA; }
+  ul.pagination li {
+    display: block;
+    float: left; }
+
+/* Pagination centred wrapper */
+.pagination-centered {
+  text-align: center; }
+  .pagination-centered ul.pagination li {
+    display: inline-block;
+    float: none; }
+
 /* Panels */
 .panel {
   border-style: solid;
@@ -5610,6 +5657,13 @@ Copyright (c) 2015 Daniel Eden
 .panel.callout {
   background: #efd3d4; }
 
+ul.sub-nav {
+  font-size: .8rem; }
+  ul.sub-nav li {
+    margin-left: .75rem; }
+  ul.sub-nav li:first-child {
+    margin-left: 0; }
+
 header {
   border-bottom: 1px solid #e2e2e2; }
   header a {
@@ -6344,6 +6398,12 @@ hr.thin {
 
   .no-video .hero-video-container video, .touch .hero-video-container video {
     display: none; } }
+table.compact-table {
+  border: none; }
+  table.compact-table td {
+    font-size: .9rem;
+    padding: .25rem .5rem; }
+
 .show {
   display: block !important; }
 
@@ -6361,6 +6421,9 @@ hr.thin {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+
+.full-width {
+  width: 100%; }
 
 nav.primary-nav {
   text-align: left;
@@ -6468,6 +6531,23 @@ nav.primary-nav {
   font-size: .9rem; }
 #terms-nav .with-nested-list {
   list-style: none; }
+
+ul.pagination li a {
+  color: #222222;
+  font-weight: 200; }
+ul.pagination li.active span {
+  font-weight: bold;
+  border-radius: 3px;
+  -webkit-transition: background-color 300ms ease-out;
+          transition: background-color 300ms ease-out;
+  background: #e6e6e6;
+  display: block;
+  font-weight: normal;
+  line-height: inherit;
+  padding: 0.0625rem 0.625rem 0.0625rem; }
+ul.pagination li.disabled {
+  padding: 0.0625rem 0.625rem 0.0625rem;
+  color: #999999; }
 
 .jacket-summary {
   padding-top: 0;

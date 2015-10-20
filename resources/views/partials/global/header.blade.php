@@ -19,6 +19,14 @@
 			<a ng-click="displayMenu = false">Password Reset</a>
 		@elseif ($action == 'jackets.index')
 			<a ng-click="displayMenu = false">Our Jackets</a>
+		@elseif ($action == 'admin.order-index')
+			<a ng-click="displayMenu = false">{{{ $status ? ucfirst($status) : 'All' }}} Orders</a>  ({{{ $orders->total() }}})
+		@elseif ($action == 'admin.dashboard')
+			<a ng-click="displayMenu = false">Dashboard</a>
+		@elseif ($action == 'admin.show-order')
+			<a ng-click="displayMenu = false">Order: {{{ $order->id }}} <small>( {{{ date('M d, Y', strtotime($order->created_at))  }}} )</small></a>
+		@elseif ($action == 'admin.edit-order')
+			<a ng-click="displayMenu = false">Edit Order: {{{ $order->id }}}</a>
 		@elseif ($action == 'jackets.show')
 			<a href="/jackets" class="underlined">Our Jackets</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>

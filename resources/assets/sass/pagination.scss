@@ -1,0 +1,22 @@
+ul.pagination {
+	li {
+		a {
+			color: $black;
+			font-weight: 200;
+		}
+		&.active span {
+			font-weight: bold;
+	    border-radius: 3px;
+	    transition: background-color 300ms ease-out;
+	    background: #e6e6e6;
+	    display: block;
+	    font-weight: normal;
+	    line-height: inherit;
+	    padding: 0.0625rem 0.625rem 0.0625rem;
+		}
+		&.disabled {
+	    padding: 0.0625rem 0.625rem 0.0625rem;
+			color: #999999;
+		}
+	}
+}

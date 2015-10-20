@@ -94,3 +94,13 @@
 		background: mix($primary-color, white, 20%);
 	}
 }
+
+ul.sub-nav {
+	li {
+		margin-left: .75rem;
+	}
+	li:first-child {
+		margin-left: 0;
+	}
+	font-size: .8rem;
+}

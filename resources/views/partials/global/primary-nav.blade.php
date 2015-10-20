@@ -12,7 +12,7 @@
         <span class="pipe"> | </span>
         @if ($currentuser)
           @if ($currentuser->isAdmin())
-            <a href="{{{ route('users.show', $currentuser->id) }}}">Orders</a><br>
+            <a href="{{{ route('admin.order-index') }}}">Orders</a><br>
           @endif
           @if ($action !== 'users.show')
             <a href="{{{ route('users.show', $currentuser->id) }}}">Your Profile</a><br>

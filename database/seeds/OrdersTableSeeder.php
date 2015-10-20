@@ -17,13 +17,14 @@ class OrdersTableSeeder extends Seeder {
 		$jackets        = Jacket::all();
 		$shipping_types = ['fedex', 'ups_ground', 'dhl'];
 		$payment_types  = ['paypal', 'stripe'];
+		$statuses       = ['new', 'started', 'placed', 'in-progress', 'shipped', 'completed'];
 
 		foreach ($jackets as $jacket) {
-			foreach (range(1, 50) as $index) {
+			foreach (range(1, 20) as $index) {
 				Order::create([
 					'total'          => $jacket->price,
 					'note'           => $faker->realText(140),
-					'status'         => 'paid',
+					'status'         => $statuses[$faker->numberBetween(0,5)],
 					'shipping_type'  => $shipping_types[$faker->numberBetween(0,1)],
 					'payment_type'   => $payment_types[$faker->numberBetween(0,1)],
 					'payment_id'     => $faker->numberBetween(12344,17425),
