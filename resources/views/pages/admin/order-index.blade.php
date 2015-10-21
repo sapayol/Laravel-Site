@@ -15,7 +15,7 @@
 		<ul class="sub-nav no-bullet inline-list">
 		  <li class="{{{ $status == null ? 'active' : '' }}}" ><a class="underlined" href="{{{ route('admin.order-index') }}}">All</a></li>
 		  <li class="{{{ $status == 'started' ? 'active' : '' }}}" ><a class="underlined" href="{{{ route('admin.order-index', ['status' => 'started']) }}}">Started</a></li>
-		  <li class="{{{ $status == 'placed' ? 'active' : '' }}}" ><a class="underlined" href="{{{ route('admin.order-index', ['status' => 'placed']) }}}">Placed</a></li>
+		  <li class="{{{ $status == 'paid' ? 'active' : '' }}}" ><a class="underlined" href="{{{ route('admin.order-index', ['status' => 'paid']) }}}">Paid</a></li>
 		  <li class="{{{ $status == 'shipped' ? 'active' : '' }}}" ><a class="underlined" href="{{{ route('admin.order-index', ['status' => 'shipped']) }}}">Shipped</a></li>
 		  <li class="{{{ $status == 'completed' ? 'active' : '' }}}" ><a class="underlined" href="{{{ route('admin.order-index', ['status' => 'completed']) }}}">Completed</a></li>
 		</ul>

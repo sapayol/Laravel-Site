@@ -29,27 +29,64 @@ class AdminController extends Controller {
 		$order = Order::findOrFail($id);
 
 		JavaScript::put([
-			'order'    => $order,
-			'jacket'   => $order->jacket,
-			'user'     => $order->user,
-			'address'  => $order->address,
+			'order'             => $order,
+			'user'              => $order->user,
+			'address'           => $order->address,
+			'jacket'            => $order->jacket,
+			'user_measurements' => $order->userMeasurements->measurementsOnly(),
+			'look'            => [
+				'leather_type'   => $order->leather_type(),
+				'leather_color'  => $order->leather_color(),
+				'lining_color'   => $order->lining_color(),
+				'hardware_color' => $order->hardware_color(),
+			],
+			'look_options'    => [
+				'leather_types'   => $order->jacket->leather_types(),
+				'leather_colors'  => $order->jacket->leather_colors(),
+				'lining_colors'   => $order->jacket->lining_colors(),
+				'hardware_colors' => $order->jacket->hardware_colors(),
+			]
 		]);
 
 		return view('pages.admin.show-order', ['order' => $order]);
 	}
 
-	public function editOrder($id)
+	public function updateLook($id, Request $request)
 	{
-		$order = Order::findOrFail($id);
+ 		$order = Order::find($id);
 
-		return view('pages.admin.edit-order', ['order' => $order]);
+    $order->attributes()->sync([
+      $request->leather_type,
+      $request->leather_color,
+      $request->lining_color,
+      $request->hardware_color,
+    ]);
+
+		return response()->json($order);
 	}
 
-	public function updateOrder($id, Request $request)
-	{
-		$order = $this->dispatchFrom('App\Jobs\UpdateUsersOrder', $request);
 
-		return redirect()->route('admin.show-order', $order->id);
+	public function updateFit($id, Request $request)
+	{
+ 		$order = Order::find($id);
+ 		if ($request->type == 'user') {
+		  $order->userMeasurements->height        = $request->height;
+	    $order->userMeasurements->half_shoulder = $request->half_shoulder;
+	    $order->userMeasurements->back_width    = $request->back_width;
+	    $order->userMeasurements->chest         = $request->chest;
+	    $order->userMeasurements->stomach       = $request->stomach;
+	    $order->userMeasurements->back_length   = $request->back_length;
+	    $order->userMeasurements->waist         = $request->waist;
+	    $order->userMeasurements->arm           = $request->arm;
+	    $order->userMeasurements->biceps        = $request->biceps;
+	    $order->userMeasurements->note          = $request->note;
+	    $order->userMeasurements->save();
+
+			return response()->json($order->userMeasurements);
+ 		} else {
+			return response()->json($order->userMeasurements);
+ 		}
+
 	}
 
 }

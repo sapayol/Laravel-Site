@@ -1,16 +1,13 @@
 var editUserController = angular.module('editUserController', []);
 
-editUserController.controller('editUserCtrl', ['$scope', '$http', '$q', 'Session', '$timeout', 'Auth', 'notifyUser', function($scope, $http, $q, Session, $timeout, Auth, notifyUser) {
+editUserController.controller('editUserCtrl', ['$scope', '$http', '$q', 'notifyUser', function($scope, $http, $q, notifyUser) {
 
-  init = function() {
-    $scope.editMode = false;
-    $scope.order    = sapayol.order;
-    $scope.jacket   = sapayol.jacket;
-    $scope.currentData = {
-      user: sapayol.user,
-      address: sapayol.address,
-    }
-  }
+  $scope.editMode    = false;
+  $scope.order       = sapayol.order;
+  $scope.currentData = {
+    user: sapayol.user,
+    address: sapayol.address
+  };
 
   $scope.enterEditMode = function() {
     $scope.newData = angular.copy($scope.currentData);
@@ -40,7 +37,7 @@ editUserController.controller('editUserCtrl', ['$scope', '$http', '$q', 'Session
       city:     newData.address.city,
       postcode: newData.address.postcode,
       province: newData.address.province,
-      country:  newData.address.country,
+      country:  newData.address.country
     }).success(function(response, status) {
       deferred.resolve(response);
     }).error(function(response, status) {
@@ -48,30 +45,5 @@ editUserController.controller('editUserCtrl', ['$scope', '$http', '$q', 'Session
     });
     return deferred.promise;
   }
-
-
-
-
-
-  $scope.updateInstructorOnBackend = function(instructorEnrollment) {
-    if (typeof(instructorEnrollment.id) === 'undefined' ) {
-      Enrollment.create(instructorEnrollment).then(function(enrollment) {
-        $scope.updateViewWithNewInstructor(enrollment);
-      });
-    } else {
-      Enrollment.update(instructorEnrollment).then(function(enrollment) {
-        $scope.updateViewWithNewInstructor(enrollment);
-      });
-    }
-  }
-
-  $scope.updateViewWithNewInstructor = function(enrollment) {
-    $scope.currentInstructor = $scope.selectedInstructor;
-    $scope.instructorEnrollment = enrollment;
-    notifyUser.ofSuccessMessage('New instructor assigned');
-    $scope.editMode = false;
-  }
-
-  init();
 
 }]);

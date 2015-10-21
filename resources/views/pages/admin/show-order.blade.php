@@ -37,49 +37,53 @@
 	</ul>
 </section>
 
-<section class="large-6 medium-8 large-uncentered medium-centered small-12 columns" ng-controller="editUserCtrl" >
-	<h3>Look</h3>
+<section class="large-6 medium-8 large-uncentered medium-centered small-12 columns" ng-controller="editLookCtrl" >
+	<h3 class="left">Look</h3>
+	<a class="right" ng-show="!editMode" ng-click="enterEditMode()">Edit</a>
+  <a class="right" ng-show="editMode"  ng-click="updateLook()">Save</a>
+  <span class="right" ng-show="editMode" > &nbsp; | &nbsp;</span>
+  <a class="right" ng-show="editMode"  ng-click="editMode = !editMode">Cancel</a>
+	<div class="clearfix"></div>
+
+	<div ng-show="editMode" class="animated slideInDown">
+		@include('partials.admin.edit-look-form')
+	</div>
+
 	<ul class="no-bullet value-list">
-		<li><small class="list-key">Model </small>{{{ $order->jacket->name  }}}	</li>
-		<li><small class="list-key">Leather Type </small>{{{ ucfirst($order->leather_type()->name)  }}}	</li>
-		<li><small class="list-key">Leather Color </small>{{{ ucfirst($order->leather_color()->name) }}}	</li>
-		<li><small class="list-key">Lining Color </small>{{{ ucfirst($order->lining_color()->name) }}}	</li>
-		<li><small class="list-key">Hardware Color </small>{{{ ucfirst($order->hardware_color()->name) }}}	</li>
+		<li><small class="list-key">Model </small>@{{ jacket.name  }}	</li>
+		<li><small class="list-key">Leather Type </small>@{{ attributes.leather_type.name.capitalize()  }}	</li>
+		<li><small class="list-key">Leather Color </small>@{{ attributes.leather_color.name.capitalize() }}	</li>
+		<li><small class="list-key">Lining Color </small>@{{ attributes.lining_color.name.capitalize() }} </li>
+		<li><small class="list-key">Hardware Color </small>@{{ attributes.hardware_color.name.capitalize() }}	</li>
 	</ul>
 
-	<h3>Measurements</h3>
-	<ul class="no-bullet value-list">
-		@foreach ($order->userMeasurements->measurement_names as $name)
-			@if ($name == 'note')
-				<li><br></li>
-			@endif
-			<li>
-				@if ($order->userMeasurements->$name)
-					<small class="list-key">{{{ ucwords(str_replace('_', ' ', $name)) }}}</small>
-					<span class="list-value">
-						@if ($name == 'note')
-							<em>{{{ $order->userMeasurements->$name }}}</em>
-						@elseif ($order->userMeasurements->units == 'in')
-							<strong decimal-to-fraction="{{{ $order->userMeasurements->$name }}}">{{{ $order->userMeasurements->$name }}}</strong> "
-						@else
-							<strong>{{{ $order->userMeasurements->$name != round($order->userMeasurements->$name) ?  round($order->userMeasurements->$name, 1) : round($order->userMeasurements->$name) }}}</strong> cm
-						@endif
-					</span>
-				@endif
-			</li>
-		@endforeach
+</section>
+
+<section class="large-6 medium-8 large-uncentered medium-centered small-12 columns" ng-controller="editMeasurementsCtrl" >
+	<h3 class="left">User Measurements</h3>
+	<a class="right" ng-show="!editMode" ng-click="enterEditMode()">Edit</a>
+  <a class="right" ng-show="editMode"  ng-click="updateMeasurements('user')">Save</a>
+  <span class="right" ng-show="editMode" > &nbsp; | &nbsp;</span>
+  <a class="right" ng-show="editMode"  ng-click="editMode = !editMode">Cancel</a>
+	<div class="clearfix"></div>
+
+	<div ng-show="editMode" class="animated slideInDown">
+		@include('partials.admin.edit-measurements-form')
+	</div>
+
+	<ul ng-show="!editMode" class="no-bullet value-list">
+		<li ng-repeat="key in notSorted(currentData.user_measurements)" ng-if="key != 'note'">
+			<span class="list-key">@{{ key.snakeToText() }}</span>
+			<span class="list-value">
+				<strong>@{{ currentData.user_measurements[key] }} </strong><span ng-if="currentData.user_measurements[key]"> {{{ $order->userMeasurements->units }}}</span>
+			</span>
+		</li>
+		<li><br></li>
+		<li>
+			<span class="list-key">Note</span>
+			<span class="list-value"><em>@{{ currentData.user_measurements.note }}</em></span>
+		</li>
 	</ul>
-		@if ($uncompleted_measurements = $order->userMeasurements->uncompleted())
-			<div class="panel callout">
-				<p>Looks like we still need the following measurements from you:</p>
-				<ul class="text-left">
-					@foreach ($uncompleted_measurements as $uncompleted_measurement)
-						<li>{{{  ucwords(str_replace('_', ' ', $uncompleted_measurement)) }}}</li>
-					@endforeach
-				</ul>
-				<a href="/orders/{{{ $order->id}}}/fit/{{{ array_shift($uncompleted_measurements) }}}" class="button hollow">Add Missing Measurements</a>
-			</div>
-		@endif
 
 	<h3>Payment Info</h3>
 	<ul class="no-bullet value-list">

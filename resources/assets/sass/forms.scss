@@ -14,7 +14,7 @@ form {
 
 label {
 	font-weight: 500;
-	// color: $black;
+	color: #676666;
 }
 
 input[type="submit"], button[type="submit"] {
@@ -48,6 +48,13 @@ label.text-input-label {
 		padding-top: 1.3rem;
 		padding-bottom: 0rem;
 		height: 3rem;
+	}
+	select {
+		text-transform: capitalize;
+		padding-top: 1.2rem;
+		font-weight: 200;
+    height: 2.8rem;
+    padding-bottom: 0;
 	}
 	// textarea {
 	//   padding-top: 1.3rem;

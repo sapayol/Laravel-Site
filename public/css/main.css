@@ -5594,7 +5594,8 @@ Copyright (c) 2015 Daniel Eden
 
 .value-list .list-key {
   display: inline-block;
-  min-width: 6.5rem; }
+  min-width: 6.5rem;
+  text-transform: capitalize; }
 .value-list .list-value {
   display: inline-block;
   min-width: 3.8rem; }
@@ -5799,7 +5800,8 @@ form span.alert, form span.mce_inline_error {
   color: #B02428; }
 
 label {
-  font-weight: 500; }
+  font-weight: 500;
+  color: #676666; }
 
 .measurement-form label.text-input-label {
   width: 45%;
@@ -5824,6 +5826,12 @@ label.text-input-label {
     padding-top: 1.3rem;
     padding-bottom: 0rem;
     height: 3rem; }
+  label.text-input-label select {
+    text-transform: capitalize;
+    padding-top: 1.2rem;
+    font-weight: 200;
+    height: 2.8rem;
+    padding-bottom: 0; }
   label.text-input-label:last-child {
     top: -1px; }
 
