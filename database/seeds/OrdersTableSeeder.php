@@ -17,7 +17,7 @@ class OrdersTableSeeder extends Seeder {
 		$jackets        = Jacket::all();
 		$shipping_types = ['fedex', 'ups_ground', 'dhl'];
 		$payment_types  = ['paypal', 'stripe'];
-		$statuses       = ['new', 'started', 'placed', 'in-progress', 'shipped', 'completed'];
+		$statuses       = ['new', 'started', 'paid', 'production', 'shipped', 'completed'];
 
 		foreach ($jackets as $jacket) {
 			foreach (range(1, 20) as $index) {

@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Order;
 
-class OrderPlaced
+class OrderPaid
 {
     /**
      * Handle an incoming request.

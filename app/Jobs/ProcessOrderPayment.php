@@ -36,7 +36,7 @@ class ProcessOrderPayment extends Job implements SelfHandling
 
     if ($charge_attempt) {
       $this->order->payment_id = $charge_attempt->id;
-      $this->order->status     = 'placed';
+      $this->order->status     = 'paid';
       $this->order->save();
 
       event(new OrderPaymentWasProcessed($this->order));

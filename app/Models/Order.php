@@ -11,9 +11,12 @@ class Order extends Model {
 	 *
 	 * @var string
 	 */
-	protected $table = 'orders';
+  protected $table = 'orders';
+
 
   protected $guarded = array();
+
+  public    $statuses = ['new', 'started', 'paid', 'production', 'shipped', 'completed'];
 
 	//===========================================================================//
   //                                RELATIONSHIPS                              //

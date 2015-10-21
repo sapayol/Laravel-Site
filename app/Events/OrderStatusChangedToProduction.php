@@ -7,7 +7,7 @@ use App\Events\Event;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class OrderStatusChangedToInProgress extends Event
+class OrderStatusChangedToProduction extends Event
 {
     use SerializesModels;
 

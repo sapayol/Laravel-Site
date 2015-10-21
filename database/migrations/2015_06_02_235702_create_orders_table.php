@@ -24,6 +24,11 @@ class CreateOrdersTable extends Migration {
 			$table->integer('user_id')->unsigned()->nullable();
 			$table->integer('address_id')->unsigned()->nullable();
 			$table->integer('jacket_id')->unsigned()->nullable();
+			$table->timestamp('started_at')->nullable();
+			$table->timestamp('paid_at')->nullable();
+			$table->timestamp('production_at')->nullable();
+			$table->timestamp('shipped_at')->nullable();
+			$table->timestamp('completed_at')->nullable();
 			$table->timestamps();
 		});
 	}

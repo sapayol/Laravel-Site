@@ -33,6 +33,6 @@ class Kernel extends HttpKernel
         'account.owner' => \App\Http\Middleware\AccountOwner::class,
         'order.owner'   => \App\Http\Middleware\OrderOwner::class,
         'order.status'  => \App\Http\Middleware\OrderStatus::class,
-        'order.placed'  => \App\Http\Middleware\OrderPlaced::class
+        'order.paid'    => \App\Http\Middleware\OrderPaid::class
     ];
 }

@@ -17,21 +17,22 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\SendAccountConfirmationEmail'
         ],
         'App\Events\OrderPaymentWasProcessed' => [
+            'App\Listeners\UpdateEventTimestamp',
             'App\Listeners\SendOrderConfirmations',
         ],
-        'App\Events\OrderStatusChangedToReviewed' => [
-            'App\Listeners\SendMeasurementConfirmation'
-        ],
-        'App\Events\OrderStatusChangedToInProgress' => [
+        'App\Events\OrderStatusChangedToProduction' => [
+            'App\Listeners\UpdateEventTimestamp',
             'App\Listeners\SendProductionStart',
             'App\Listeners\SendTailorOrderDetails'
         ],
         'App\Events\OrderStatusChangedToShipped' => [
+            'App\Listeners\UpdateEventTimestamp',
             'App\Listeners\SendShippingNotification'
         ],
         'App\Events\OrderStatusChangedToCompleted' => [
+            'App\Listeners\UpdateEventTimestamp',
             'App\Listeners\SendDeliveryNotification'
-        ],
+        ]
     ];
 
     /**
