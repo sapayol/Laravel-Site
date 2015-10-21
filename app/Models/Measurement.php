@@ -40,12 +40,27 @@ class Measurement extends Model {
 
   public function completed()
   {
-  	$results = [];
+    $results = [];
     foreach ($this->measurement_names as $key => $measurement_name) {
-    	if ($this->$measurement_name !== '' && $this->$measurement_name !== null) {
-				$results[$key] = $measurement_name;
-    	}
+      if ($this->$measurement_name !== '' && $this->$measurement_name !== null) {
+        $results[$key] = $measurement_name;
+      }
     }
     return count($results) > 0 ? $results : false;
+  }
+
+  public function measurementsOnly()
+  {
+  	$results = [];
+    foreach ($this->measurement_names as $key => $measurement_name) {
+      if ($measurement_name == 'note') {
+        $results[$measurement_name] = $this->note;
+      } elseif ($this->$measurement_name !== '' && $this->$measurement_name !== null) {
+        $results[$measurement_name] = $this->$measurement_name != round($this->$measurement_name) ?  round($this->$measurement_name, 1) : round($this->$measurement_name);
+      } else {
+        $results[$measurement_name] = null;
+      }
+    }
+    return $results;
   }
 }
