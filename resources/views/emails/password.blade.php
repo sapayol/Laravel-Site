@@ -1,7 +1,7 @@
 @extends('layouts/email')
 
 @section('title')
-	Final measurements for your {{{ $order->jacket->name }}}
+	Reset your Sapayol password
 @stop
 
 @section('main')
