@@ -1,8 +1,7 @@
 <div class="panel measurement-tracker">
 	<h4 class="text-center">Your Measurements</h4>
 	<ul class="no-bullet value-list">
-	<?php $measurements = ['height', 'half_shoulder', 'back_width', 'chest', 'stomach', 'back_length', 'waist', 'arm', 'biceps', 'note'];  ?>
-		@foreach ($measurements as $measurement)
+		@foreach ($order->userMeasurements->measurement_names as $measurement)
 			@if ($measurement == 'note')
 				<li><br></li>
 			@endif
