@@ -28,7 +28,9 @@
 					<small class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>
 					@if ($order->userMeasurements->$measurement)
 						<span class="list-value">
-							@if ($order->userMeasurements->units == 'in')
+							@if ($measurement == 'note')
+								<em>{{{ $order->userMeasurements->$measurement }}}</em>
+							@elseif ($order->userMeasurements->units == 'in')
 								<strong decimal-to-fraction="{{{ $order->userMeasurements->$measurement }}}">{{{ $order->userMeasurements->$measurement }}}</strong> "
 							@else
 								<strong>{{{ $order->userMeasurements->$measurement != round($order->userMeasurements->$measurement) ?  round($order->userMeasurements->$measurement, 1) : round($order->userMeasurements->$measurement) }}}</strong> cm
