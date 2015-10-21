@@ -3356,6 +3356,9 @@ main > section, main > article, main > section > article {
   main > section:last-child, main > article:last-child, main > section > article:last-child {
     padding-bottom: 4rem; }
 
+.shrunken-layout main > section, .shrunken-layout main > article, .shrunken-layout main > section > article {
+  padding-bottom: 0; }
+
 main > p {
   padding-top: 1rem;
   margin-bottom: 0; }

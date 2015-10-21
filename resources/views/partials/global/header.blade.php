@@ -24,7 +24,7 @@
 		@elseif ($action == 'admin.dashboard')
 			<a ng-click="displayMenu = false">Dashboard</a>
 		@elseif ($action == 'admin.show-order')
-			<a ng-click="displayMenu = false">Order: {{{ $order->id }}} <small>( {{{ date('M d, Y', strtotime($order->created_at))  }}} )</small></a>
+			<a ng-click="displayMenu = false">Order: {{{ $order->id }}}</a>
 		@elseif ($action == 'admin.edit-order')
 			<a ng-click="displayMenu = false">Edit Order: {{{ $order->id }}}</a>
 		@elseif ($action == 'jackets.show')

@@ -37,6 +37,12 @@ main > section, main > article, main > section > article {
 	}
 }
 
+.shrunken-layout {
+	main > section, main > article, main > section > article {
+		padding-bottom: 0;
+	}
+}
+
 main > p {
 	padding-top: 1rem;
 	margin-bottom: 0;

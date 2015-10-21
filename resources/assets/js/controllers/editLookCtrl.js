@@ -3,6 +3,7 @@ var editLookController = angular.module('editLookController', []);
 editLookController.controller('editLookCtrl', ['$scope', '$http', '$q', 'notifyUser', function($scope, $http, $q, notifyUser) {
 
   $scope.editMode   = false;
+  $scope.jacket     = sapayol.jacket;
   $scope.attributes = sapayol.look;
   $scope.options    = sapayol.look_options;
   $scope.order      = sapayol.order;
