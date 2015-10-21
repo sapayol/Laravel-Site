@@ -18,7 +18,7 @@ class PivotAttributeJacketTable extends Migration {
 			$table->integer('jacket_id')->unsigned()->index('jacket_id_fkey');
 			$table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('cascade');
 			$table->foreign('jacket_id')->references('id')->on('jackets')->onDelete('cascade');
-			$table->timestamp('created');
+			$table->timestamp('created_at');
 		});
 	}
 

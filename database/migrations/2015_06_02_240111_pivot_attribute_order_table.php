@@ -18,7 +18,7 @@ class PivotAttributeOrderTable extends Migration {
 			$table->integer('order_id')->unsigned()->index('order_id_fkey');
 			$table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('cascade');
 			$table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
-			$table->timestamp('created');
+			$table->timestamp('created_at');
 		});
 	}
 
