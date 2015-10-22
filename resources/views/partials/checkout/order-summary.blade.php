@@ -26,14 +26,14 @@
 				@endif
 				<li>
 					<small class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>
-					@if ($order->userMeasurements->$measurement)
+					@if ($order->bodyMeasurements->$measurement)
 						<span class="list-value">
 							@if ($measurement == 'note')
-								<em>{{{ $order->userMeasurements->$measurement }}}</em>
-							@elseif ($order->userMeasurements->units == 'in')
-								<strong decimal-to-fraction="{{{ $order->userMeasurements->$measurement }}}">{{{ $order->userMeasurements->$measurement }}}</strong> "
+								<em>{{{ $order->bodyMeasurements->$measurement }}}</em>
+							@elseif ($order->bodyMeasurements->units == 'in')
+								<strong decimal-to-fraction="{{{ $order->bodyMeasurements->$measurement }}}">{{{ $order->bodyMeasurements->$measurement }}}</strong> "
 							@else
-								<strong>{{{ $order->userMeasurements->$measurement != round($order->userMeasurements->$measurement) ?  round($order->userMeasurements->$measurement, 1) : round($order->userMeasurements->$measurement) }}}</strong> cm
+								<strong>{{{ $order->bodyMeasurements->$measurement != round($order->bodyMeasurements->$measurement) ?  round($order->bodyMeasurements->$measurement, 1) : round($order->bodyMeasurements->$measurement) }}}</strong> cm
 							@endif
 						</span>
 						<a class="underlined" href="/orders/{{{ $order->id }}}/fit/{{{ $measurement }}}" title=""><span>Change</span></a>

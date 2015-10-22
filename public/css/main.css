@@ -5595,28 +5595,6 @@ Copyright (c) 2015 Daniel Eden
   -webkit-animation-name: slideOutUp;
           animation-name: slideOutUp; }
 
-.value-list .list-key {
-  display: inline-block;
-  min-width: 6.5rem;
-  text-transform: capitalize; }
-.value-list .list-value {
-  display: inline-block;
-  min-width: 3.8rem; }
-.value-list.tight-list .list-key {
-  min-width: 4.5rem; }
-@media only screen and (max-width: 20em) {
-  .value-list {
-    font-size: .9rem; }
-    .value-list .list-key {
-      min-width: 5rem; }
-    .value-list .list-value {
-      min-width: 3.4rem; } }
-@media only screen and (max-width: 320px) {
-  .value-list .list-key {
-    min-width: 5rem; }
-  .value-list.tight-list {
-    font-size: .9rem; } }
-
 .switch.large label, .switch.large input:checked + label {
   background-color: transparent;
   padding: .5rem; }
@@ -5874,6 +5852,11 @@ fieldset {
     position: relative;
     top: -2px;
     margin-left: .2rem; }
+
+label.checkboxes li label {
+  font-weight: 200; }
+label.checkboxes ul li:first-child {
+  margin-left: .1rem; }
 
 .measurement-table {
   font-family: 'HelveticaNeue', 'Helvetica', 'Roboto', 'Arial', 'sans-serif';
@@ -6412,7 +6395,7 @@ hr.thin {
 table.compact-table {
   border: none; }
   table.compact-table td {
-    font-size: .9rem;
+    font-size: .8rem;
     padding: .25rem .5rem; }
 
 .show {
@@ -6542,6 +6525,33 @@ nav.primary-nav {
   font-size: .9rem; }
 #terms-nav .with-nested-list {
   list-style: none; }
+
+.value-list .list-key {
+  display: inline-block;
+  min-width: 6.5rem;
+  text-transform: capitalize; }
+.value-list .list-value {
+  display: inline-block;
+  min-width: 3.8rem; }
+.value-list.tight-list .list-key {
+  min-width: 4.5rem; }
+@media only screen and (max-width: 20em) {
+  .value-list {
+    font-size: .9rem; }
+    .value-list .list-key {
+      min-width: 5rem; }
+    .value-list .list-value {
+      min-width: 3.4rem; } }
+@media only screen and (max-width: 320px) {
+  .value-list .list-key {
+    min-width: 5rem; }
+  .value-list.tight-list {
+    font-size: .9rem; } }
+
+.small-6 .value-list .list-key {
+  min-width: 4rem; }
+.small-6 .value-list .list-value {
+  min-width: 3rem; }
 
 ul.pagination li a {
   color: #222222;

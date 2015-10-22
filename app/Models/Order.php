@@ -42,9 +42,14 @@ class Order extends Model {
     return $this->hasMany('Measurement');
   }
 
-  public function userMeasurements()
+  public function bodyMeasurements()
   {
     return $this->hasOne('Measurement')->where('type', '=', 'user');
+  }
+
+  public function productMeasurements()
+  {
+    return $this->hasOne('Measurement')->where('type', '=', 'product');
   }
 
   public function user()
@@ -89,7 +94,7 @@ class Order extends Model {
 
   public function hasReusableMeasurements()
   {
-    return $this->userMeasurements->user ? true : false;
+    return $this->bodyMeasurements->user ? true : false;
   }
 
 }

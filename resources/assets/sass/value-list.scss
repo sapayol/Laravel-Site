@@ -1,0 +1,51 @@
+.value-list {
+	.list-key {
+		display: inline-block;
+		min-width: 6.5rem;
+		text-transform: capitalize;
+	}
+	.list-value {
+		display: inline-block;
+		min-width: 3.8rem;
+	}
+	&.tight-list .list-key {
+		min-width: 4.5rem;
+	}
+	@media #{$tiny-only} {
+		font-size: .9rem;
+		.list-key {
+			min-width: 5rem;
+		}
+		.list-value {
+			min-width: 3.4rem;
+		}
+	}
+	@media only screen and (max-width: 320px) {
+		.list-key {
+			min-width: 5rem;
+		}
+		&.tight-list {
+			font-size: .9rem;
+		}
+	}
+}
+
+.small-6 .value-list  {
+	.list-key {
+		min-width: 4rem;
+	}
+	.list-value {
+		min-width: 3rem;
+	}
+}
+
+// @media #{$tiny-only} {
+// 	.small-6 .value-list  {
+// 		.list-key {
+// 			min-width: 3.5rem;
+// 		}
+// 		.list-value {
+// 			min-width: 2.5rem;
+// 		}
+// 	}
+// }

@@ -118,3 +118,13 @@ fieldset {
 		margin-left: .2rem;
 	}
 }
+
+
+label.checkboxes {
+	li label {
+		font-weight: 200;
+	}
+	ul li:first-child {
+		margin-left: .1rem;
+	}
+}

@@ -32,8 +32,8 @@ class ResetOrder extends Job implements SelfHandling
     public function handle()
     {
         if ($this->retain_measurements) {
-            $this->order->userMeasurements->user_id = $this->order->user->id;
-            $this->order->userMeasurements->save();
+            $this->order->bodyMeasurements->user_id = $this->order->user->id;
+            $this->order->bodyMeasurements->save();
         }
 
         $this->order->status = 'dropped';

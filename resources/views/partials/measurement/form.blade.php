@@ -4,7 +4,7 @@
 </form>
 <form ng-submit="submitMeasurement('measurements[{{{ $step }}}]')" name="measurementForm" class="measurement-form">
 	@yield('additional_copy')
-	@if ($step == 'height' && $order->userMeasurements->units == 'in')
+	@if ($step == 'height' && $order->bodyMeasurements->units == 'in')
 		<fieldset>
 			<legend>Height</legend>
 			<label for="height-feet" class="text-input-label">
@@ -20,12 +20,12 @@
 		<br>
 		<label for="{{{ $step }}}" class="text-input-label">
 			<span class="label-title">@yield('title')</span>
-			<input name="measurements[{{{ $step }}}]" id="{{{ $step }}}" type="number" placeholder="00.00" ng-maxlength="7" {{{ $step=='height' ? 'max="10"' : '' }}} step="0.01" ng-model="measurement" required ng-change="change(measurement)" ng-value="{{{ $order->userMeasurements->$step }}}">
-			<span class="input-units">{{{ $order->userMeasurements->units }}}</span>
+			<input name="measurements[{{{ $step }}}]" id="{{{ $step }}}" type="number" placeholder="00.00" ng-maxlength="7" {{{ $step=='height' ? 'max="10"' : '' }}} step="0.01" ng-model="measurement" required ng-change="change(measurement)" ng-value="{{{ $order->bodyMeasurements->$step }}}">
+			<span class="input-units">{{{ $order->bodyMeasurements->units }}}</span>
 		</label>
 		<br><br>
 		<div ng-if="measurementFraction.length > 0">
-			We will round this to <strong>@{{ measurementFraction }}</strong> <small>{{{ $order->userMeasurements->units }}}</small>
+			We will round this to <strong>@{{ measurementFraction }}</strong> <small>{{{ $order->bodyMeasurements->units }}}</small>
 		</div>
 	@endif
 	<div class="text-center">

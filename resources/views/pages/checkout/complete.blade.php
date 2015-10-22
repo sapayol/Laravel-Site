@@ -45,27 +45,27 @@
 <div class="large-4 medium-8 small-12 columns order-summary">
 	<h3 class="thin">Fit</h3>
 	<ul class="no-bullet value-list">
-		@foreach ($order->userMeasurements->measurement_names as $name)
+		@foreach ($order->bodyMeasurements->measurement_names as $name)
 			@if ($name == 'note')
 				<li><br></li>
 			@endif
 			<li>
-				@if ($order->userMeasurements->$name)
+				@if ($order->bodyMeasurements->$name)
 					<small class="list-key">{{{ ucwords(str_replace('_', ' ', $name)) }}}</small>
 					<span class="list-value">
 						@if ($name == 'note')
-							<em>{{{ $order->userMeasurements->$name }}}</em>
-						@elseif ($order->userMeasurements->units == 'in')
-							<strong decimal-to-fraction="{{{ $order->userMeasurements->$name }}}">{{{ $order->userMeasurements->$name }}}</strong> "
+							<em>{{{ $order->bodyMeasurements->$name }}}</em>
+						@elseif ($order->bodyMeasurements->units == 'in')
+							<strong decimal-to-fraction="{{{ $order->bodyMeasurements->$name }}}">{{{ $order->bodyMeasurements->$name }}}</strong> "
 						@else
-							<strong>{{{ $order->userMeasurements->$name != round($order->userMeasurements->$name) ?  round($order->userMeasurements->$name, 1) : round($order->userMeasurements->$name) }}}</strong> cm
+							<strong>{{{ $order->bodyMeasurements->$name != round($order->bodyMeasurements->$name) ?  round($order->bodyMeasurements->$name, 1) : round($order->bodyMeasurements->$name) }}}</strong> cm
 						@endif
 					</span>
 				@endif
 			</li>
 		@endforeach
 	</ul>
-	@if ($uncompleted_measurements = $order->userMeasurements->uncompleted())
+	@if ($uncompleted_measurements = $order->bodyMeasurements->uncompleted())
 		<div class="panel callout">
 			<p>Looks like we still need the following measurements from you:</p>
 			<ul class="text-left">
@@ -85,7 +85,7 @@
 		<li><small class="list-key">Total </small><strong>${{{ $order->jacket->price }}}	</strong></li>
 	</ul>
 
-	@if (!$order->userMeasurements->uncompleted())
+	@if (!$order->bodyMeasurements->uncompleted())
 		<a href="/jackets" class="button">Check out our other jackets</a>
 	@endif
 </div>

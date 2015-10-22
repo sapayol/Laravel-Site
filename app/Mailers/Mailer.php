@@ -14,11 +14,11 @@ abstract class Mailer {
     $this->mail = $mail;
   }
 
-  public function sendTo($user, $subject, $view, $data = [])
+  public function sendTo($user, $subject, $view, $data = [], $name = null)
   {
-    $this->mail->send($view, $data, function($message) use ($user, $subject) {
+    $this->mail->send($view, $data, function($message) use ($user, $subject, $name) {
       if (gettype($user) == 'string') {
-        $message->to($user)->subject($subject);
+        $message->to($user, $name)->subject($subject);
       } else {
         $message->to($user->email, $user->name)->subject($subject);
       }

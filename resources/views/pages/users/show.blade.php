@@ -35,9 +35,9 @@
 							<td>{{{ $order->id }}} </td>
 							<td>{{{ $order->status }}} </td>
 							<td>
-								@if ($order->userMeasurements && $order->userMeasurements->completed())
-									@foreach ($order->userMeasurements->completed() as $measurement)
-										<small>{{{ $measurement }}} <strong>{{{ $order->userMeasurements->$measurement }}}</strong></small><br>
+								@if ($order->bodyMeasurements && $order->bodyMeasurements->completed())
+									@foreach ($order->bodyMeasurements->completed() as $measurement)
+										<small>{{{ $measurement }}} <strong>{{{ $order->bodyMeasurements->$measurement }}}</strong></small><br>
 									@endforeach
 								@else
 									<small>N/A</small>

@@ -25,7 +25,7 @@
 
 	<p>We will soon offer a flight jacket and a moto. Sign up here if you would like to be one of the first to know about them.</p>
 
-	@if ($uncompleted_measurements = $order->userMeasurements->uncompleted()))
+	@if ($uncompleted_measurements = $order->bodyMeasurements->uncompleted()))
 		<p>Looks like we still need the following measurements from you:</p>
 		<ul class="text-left">
 			@foreach ($uncompleted_measurements as $uncomplete_measurement)

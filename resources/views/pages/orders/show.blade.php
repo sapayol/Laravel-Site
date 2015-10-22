@@ -15,24 +15,24 @@
 			@endforeach
 		</ul>
 	</div>
-	@if ($order->userMeasurements->completed())
+	@if ($order->bodyMeasurements->completed())
 		<section class="large-6 medium-6 small-12 columns">
 				<h6>Completed Measurements</h6>
 				<ul class="no-bullet value-list">
-					@foreach ($order->userMeasurements->completed() as $measurement)
+					@foreach ($order->bodyMeasurements->completed() as $measurement)
 						@if ($measurement == 'note')
 							<li><br></li>
 						@endif
-						@if ($order->userMeasurements->$measurement)
+						@if ($order->bodyMeasurements->$measurement)
 								<li>
 									<small class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>
 										<span class="list-value">
 											@if ($measurement == 'note')
-												<em>{{{ $order->userMeasurements->$measurement }}}</em>
-											@elseif ($order->userMeasurements->units == 'in')
-												<strong decimal-to-fraction="{{{ $order->userMeasurements->$measurement }}}">{{{ $order->userMeasurements->$measurement }}}</strong> "
+												<em>{{{ $order->bodyMeasurements->$measurement }}}</em>
+											@elseif ($order->bodyMeasurements->units == 'in')
+												<strong decimal-to-fraction="{{{ $order->bodyMeasurements->$measurement }}}">{{{ $order->bodyMeasurements->$measurement }}}</strong> "
 											@else
-												<strong>{{{ $order->userMeasurements->$measurement != round($order->userMeasurements->$measurement) ?  round($order->userMeasurements->$measurement, 1) : round($order->userMeasurements->$measurement) }}}</strong> cm
+												<strong>{{{ $order->bodyMeasurements->$measurement != round($order->bodyMeasurements->$measurement) ?  round($order->bodyMeasurements->$measurement, 1) : round($order->bodyMeasurements->$measurement) }}}</strong> cm
 										@endif
 									</span>
 							</li>

@@ -38,9 +38,11 @@ Route::get('/users/{id}',                        ['uses' => 'UsersController@sho
 Route::resource('users', 'UsersController');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
-	Route::get('/',                    ['uses' => 'AdminController@dashboard',   'as' => 'admin.dashboard']);
-	Route::get('/orders',              ['uses' => 'AdminController@orderIndex',  'as' => 'admin.order-index']);
-	Route::get('/orders/{id}',         ['uses' => 'AdminController@showOrder',   'as' => 'admin.show-order']);
+	Route::get('/',                      ['uses' => 'AdminController@dashboard',   'as' => 'admin.dashboard']);
+	Route::get('/orders',                ['uses' => 'AdminController@orderIndex',  'as' => 'admin.order-index']);
+	Route::get('/orders/{id}',           ['uses' => 'AdminController@showOrder',   'as' => 'admin.show-order']);
+	Route::get('/orders/{id}/tailor',   ['uses' => 'AdminController@tailor',      'as' => 'tailor-message']);
+	Route::post('/orders/{id}/tracking', ['uses' => 'AdminController@tracking',      'as' => 'tracking-number']);
 });
 
 // API endpoints for managing the session from JavaScript

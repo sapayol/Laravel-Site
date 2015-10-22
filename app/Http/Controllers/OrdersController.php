@@ -47,9 +47,9 @@ class OrdersController extends Controller {
 	{
     Session::remove('card'); // Clear the saved credit card info from the session
 		$order = $this->dispatchFrom('App\Jobs\CreateNewOrder', $request);
-		if ($order->userMeasurements && $order->userMeasurements->completed()) {
+		if ($order->bodyMeasurements && $order->bodyMeasurements->completed()) {
       Session::flash('message', "Looks you already submitted some of your measurements. Please enter the rest for a perfect fit.");
-      $uncompleted_measurements = $order->userMeasurements->uncompleted();
+      $uncompleted_measurements = $order->bodyMeasurements->uncompleted();
 			return redirect()->route('fit.show', [$order->id, array_shift($uncompleted_measurements)]);
 		}
 
@@ -77,9 +77,9 @@ class OrdersController extends Controller {
 			return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'units']);
 		}
 
-		$uncompleted_measurements = $order->userMeasurements->uncompleted();
+		$uncompleted_measurements = $order->bodyMeasurements->uncompleted();
 
-		if ($step == 'next' && !$order->userMeasurements->completed()) {
+		if ($step == 'next' && !$order->bodyMeasurements->completed()) {
 			return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'height']);
 		} elseif ($step == 'next' && $uncompleted_measurements) {
 			return redirect()->route('fit.show', ['id' => $order->id, 'step' => array_shift($uncompleted_measurements)]);
@@ -97,8 +97,8 @@ class OrdersController extends Controller {
 
     $order = Order::find($id);
 
-    if ($order->userMeasurements) {
-    	if (!$uncompleted_measurements = $order->userMeasurements->uncompleted()) {
+    if ($order->bodyMeasurements) {
+    	if (!$uncompleted_measurements = $order->bodyMeasurements->uncompleted()) {
 				return redirect()->route('orders.checkout', $order->id);
     	} else {
 				return redirect()->route('fit.show', ['id' => $order->id, 'step' => array_shift($uncompleted_measurements)]);
@@ -112,7 +112,7 @@ class OrdersController extends Controller {
 	public function switchUnits($id)
 	{
 		$order = Order::find($id);
-    $this->dispatch(new SwitchMeasurementUnits($order->userMeasurements));
+    $this->dispatch(new SwitchMeasurementUnits($order->bodyMeasurements));
 
 		return redirect()->back();
 	}

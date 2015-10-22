@@ -1,5 +1,5 @@
-<?php $min = config('measurements.' . $step . '.min.' . $order->userMeasurements->units); ?>
-<?php $max = config('measurements.' . $step . '.max.' . $order->userMeasurements->units); ?>
+<?php $min = config('measurements.' . $step . '.min.' . $order->bodyMeasurements->units); ?>
+<?php $max = config('measurements.' . $step . '.max.' . $order->bodyMeasurements->units); ?>
 
 <article>
 	<h3>@yield('title')</h3>
@@ -14,6 +14,6 @@
 	<h2>@yield('title')</h2>
 	<div class="measurement-instructions">
 		@yield('instructions')
-		<em>Usually between <strong>{{{ $min }}}</strong>  and <strong>{{{ $max }}}</strong> <small>{{{ $order->userMeasurements->units }}}</small></em>
+		<em>Usually between <strong>{{{ $min }}}</strong>  and <strong>{{{ $max }}}</strong> <small>{{{ $order->bodyMeasurements->units }}}</small></em>
 	</div>
 </article>

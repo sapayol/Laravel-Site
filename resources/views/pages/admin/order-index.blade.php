@@ -33,7 +33,7 @@
 		<tbody>
 			@foreach ($orders as $order)
 				<tr>
-					<td><a href="{{{ route('admin.show-order', $order->id) }}}">{{{ $order->id }}}</a></td>
+					<td><a href="{{{ route('admin.show-order', $order->id) }}}"><strong>{{{ $order->id }}}</strong></a></td>
 					<td>{{{ ucfirst($order->status) }}}</td>
 					<td>{{{ $order->jacket->name }}}</td>
 					<td>{{{ date('Y-m-d', strtotime($order->updated_at)) }}} <small>{{{ date('h:i a', strtotime($order->updated_at)) }}}</small></td>

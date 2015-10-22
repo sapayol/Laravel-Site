@@ -51,7 +51,15 @@ class OrderMailer extends Mailer {
     $subject =  'A new ' . $order->jacket->name . ' has been ordered';
     $view    = 'emails.order-notification';
 
-    return  $this->sendTo('dima@sapayol.com', $subject, $view, ['order' => $order]);
+    return  $this->sendTo('dima@sapayol.com', $subject, $view, ['order' => $order], 'Ediz Test');
+  }
+
+  public function sendTailorMessage(Order $order, $note = null, $inclusions = null)
+  {
+    $subject =  'Sapayol Jacket Order: ' . $order->id;
+    $view    = 'emails.tailor-message';
+
+    return  $this->sendTo('dima@sapayol.com', $subject, $view, ['order' => $order, 'inclusions' => $inclusions], 'TailorTest');
   }
 
 }

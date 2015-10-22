@@ -52,10 +52,15 @@ class CreateNewOrder extends Job implements SelfHandling
         $order->attributes()->attach($attribute);
       }
 
+      if (!$this->order->productMeasurements) {
+        Measurement::create(array_merge($this->measurements, ['order_id' => $this->order->id, 'type' => 'product']));
+      }
+
+
       $last_order = $this->user->droppedOrders->last();
 
       if ($last_order && $last_order->hasReusableMeasurements()) {
-        $this->dispatch(new AttachOldMeasurementsToOrder($last_order->userMeasurements, $order));
+        $this->dispatch(new AttachOldMeasurementsToOrder($last_order->bodyMeasurements, $order));
       }
 
       return $order;

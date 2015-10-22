@@ -11,7 +11,7 @@ class MeasurementsTableSeeder extends Seeder {
 		$faker = Faker\Factory::create();
 
 		Measurement::create([
-			'units'         => 'cm',
+			'units'         => 'in',
 			'type'          => 'standard',
 			'size'          => 44,
 			'half_shoulder' => 17.2,

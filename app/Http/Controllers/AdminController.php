@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mailers\OrderMailer;
 use JavaScript;
 use Address, Jacket, Measurement, Attribute, Order, User;
 
@@ -16,9 +17,9 @@ class AdminController extends Controller {
 	public function orderIndex(Request $request)
 	{
 		if ($request->status) {
-			$orders = Order::where('status', '=', $request->status)->paginate(50);
+			$orders = Order::where('status', '=', $request->status)->orderBy('id', 'DESC')->paginate(50);
 		} else {
-			$orders = Order::paginate(50);
+			$orders = Order::orderBy('id', 'DESC')->paginate(50);
 		}
 
 		return view('pages.admin.order-index', ['orders' => $orders, 'status' => $request->status]);
@@ -33,7 +34,7 @@ class AdminController extends Controller {
 			'user'              => $order->user,
 			'address'           => $order->address,
 			'jacket'            => $order->jacket,
-			'user_measurements' => $order->userMeasurements->measurementsOnly(),
+			'user_measurements' => $order->bodyMeasurements->measurementsOnly(),
 			'look'            => [
 				'leather_type'   => $order->leather_type(),
 				'leather_color'  => $order->leather_color(),
@@ -70,23 +71,31 @@ class AdminController extends Controller {
 	{
  		$order = Order::find($id);
  		if ($request->type == 'user') {
-		  $order->userMeasurements->height        = $request->height;
-	    $order->userMeasurements->half_shoulder = $request->half_shoulder;
-	    $order->userMeasurements->back_width    = $request->back_width;
-	    $order->userMeasurements->chest         = $request->chest;
-	    $order->userMeasurements->stomach       = $request->stomach;
-	    $order->userMeasurements->back_length   = $request->back_length;
-	    $order->userMeasurements->waist         = $request->waist;
-	    $order->userMeasurements->arm           = $request->arm;
-	    $order->userMeasurements->biceps        = $request->biceps;
-	    $order->userMeasurements->note          = $request->note;
-	    $order->userMeasurements->save();
+		  $order->bodyMeasurements->height        = $request->height;
+	    $order->bodyMeasurements->half_shoulder = $request->half_shoulder;
+	    $order->bodyMeasurements->back_width    = $request->back_width;
+	    $order->bodyMeasurements->chest         = $request->chest;
+	    $order->bodyMeasurements->stomach       = $request->stomach;
+	    $order->bodyMeasurements->back_length   = $request->back_length;
+	    $order->bodyMeasurements->waist         = $request->waist;
+	    $order->bodyMeasurements->arm           = $request->arm;
+	    $order->bodyMeasurements->biceps        = $request->biceps;
+	    $order->bodyMeasurements->note          = $request->note;
+	    $order->bodyMeasurements->save();
 
-			return response()->json($order->userMeasurements);
+			return response()->json($order->bodyMeasurements);
  		} else {
-			return response()->json($order->userMeasurements);
+			return response()->json($order->bodyMeasurements);
  		}
+	}
 
+	public function tailor($id, Request $request, OrderMailer $mailer)
+	{
+		$order = $request->input();
+ 		$order = Order::find($id);
+ 		$mailer->sendTailorMessage($order, $request->note, $request->inclusions);
+ 		return view('emails.tailor-message', ['order' => $order, 'note' => $request->note, 'inclusions' => $request->inclusions]);
+		// return response()->json($order);
 	}
 
 }
