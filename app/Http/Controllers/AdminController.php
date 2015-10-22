@@ -30,11 +30,12 @@ class AdminController extends Controller {
 		$order = Order::findOrFail($id);
 
 		JavaScript::put([
-			'order'             => $order,
-			'user'              => $order->user,
-			'address'           => $order->address,
-			'jacket'            => $order->jacket,
-			'user_measurements' => $order->bodyMeasurements->measurementsOnly(),
+			'order'                => $order,
+			'user'                 => $order->user,
+			'address'              => $order->address,
+			'jacket'               => $order->jacket,
+			'body_measurements'    => $order->bodyMeasurements->measurementsOnly(),
+			'product_measurements' => $order->productMeasurements->measurementsOnly(),
 			'look'            => [
 				'leather_type'   => $order->leather_type(),
 				'leather_color'  => $order->leather_color(),
@@ -69,24 +70,20 @@ class AdminController extends Controller {
 
 	public function updateFit($id, Request $request)
 	{
+		$response =[];
  		$order = Order::find($id);
- 		if ($request->type == 'user') {
-		  $order->bodyMeasurements->height        = $request->height;
-	    $order->bodyMeasurements->half_shoulder = $request->half_shoulder;
-	    $order->bodyMeasurements->back_width    = $request->back_width;
-	    $order->bodyMeasurements->chest         = $request->chest;
-	    $order->bodyMeasurements->stomach       = $request->stomach;
-	    $order->bodyMeasurements->back_length   = $request->back_length;
-	    $order->bodyMeasurements->waist         = $request->waist;
-	    $order->bodyMeasurements->arm           = $request->arm;
-	    $order->bodyMeasurements->biceps        = $request->biceps;
-	    $order->bodyMeasurements->note          = $request->note;
-	    $order->bodyMeasurements->save();
-
-			return response()->json($order->bodyMeasurements);
- 		} else {
-			return response()->json($order->bodyMeasurements);
+		foreach ($order->bodyMeasurements->measurement_names as $name) {
+			$response[] = $name;
+ 			if ($request->type == 'body') {
+			  $order->bodyMeasurements->$name = $request->$name;
+		    $order->bodyMeasurements->save();
+ 			} elseif ($request->type == 'product') {
+			  $order->productMeasurements->$name = $request->$name;
+		    $order->productMeasurements->save();
+ 			}
  		}
+		return response()->json($order->measurements);
+		// return response()->json($response);
 	}
 
 	public function tailor($id, Request $request, OrderMailer $mailer)
@@ -94,8 +91,8 @@ class AdminController extends Controller {
 		$order = $request->input();
  		$order = Order::find($id);
  		$mailer->sendTailorMessage($order, $request->note, $request->inclusions);
- 		return view('emails.tailor-message', ['order' => $order, 'note' => $request->note, 'inclusions' => $request->inclusions]);
-		// return response()->json($order);
+ 		// return view('emails.tailor-message', ['order' => $order, 'note' => $request->note, 'inclusions' => $request->inclusions]);
+		return response()->json($order);
 	}
 
 }

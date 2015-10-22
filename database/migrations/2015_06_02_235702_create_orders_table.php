@@ -21,6 +21,7 @@ class CreateOrdersTable extends Migration {
 			$table->string('shipping_type')->nullable();
 			$table->string('payment_type')->nullable();
 			$table->string('payment_id')->nullable();
+			$table->string('tracking_number')->nullable();
 			$table->integer('user_id')->unsigned()->nullable();
 			$table->integer('address_id')->unsigned()->nullable();
 			$table->integer('jacket_id')->unsigned()->nullable();

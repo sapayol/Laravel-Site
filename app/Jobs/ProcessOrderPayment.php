@@ -4,7 +4,7 @@ namespace App\Jobs;
 
 use Illuminate\Contracts\Bus\SelfHandling;
 use App\Jobs\Job;
-use Order;
+use Order, Measurement;
 use App\Events\OrderPaymentWasProcessed;
 
 class ProcessOrderPayment extends Job implements SelfHandling
@@ -40,6 +40,10 @@ class ProcessOrderPayment extends Job implements SelfHandling
       $this->order->save();
 
       event(new OrderPaymentWasProcessed($this->order));
+
+      if (!$this->order->productMeasurements) {
+        Measurement::create(['order_id' => $this->order->id, 'type' => 'product', 'units' => $this->order->bodyMeasurements->units]);
+      }
 
       return $charge_attempt;
     }

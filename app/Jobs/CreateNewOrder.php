@@ -5,8 +5,8 @@ namespace App\Jobs;
 use App\Jobs\Job;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Auth, Session;
-use Jacket, Order, Measurement;
+use Auth;
+use Jacket, Order;
 use App\Jobs\AttachOldMeasurementsToOrder;
 
 class CreateNewOrder extends Job implements SelfHandling
@@ -51,11 +51,6 @@ class CreateNewOrder extends Job implements SelfHandling
       foreach ($this->jacket_look as $attribute) {
         $order->attributes()->attach($attribute);
       }
-
-      if (!$this->order->productMeasurements) {
-        Measurement::create(array_merge($this->measurements, ['order_id' => $this->order->id, 'type' => 'product']));
-      }
-
 
       $last_order = $this->user->droppedOrders->last();
 

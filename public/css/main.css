@@ -5852,6 +5852,11 @@ fieldset {
     position: relative;
     top: -2px;
     margin-left: .2rem; }
+    @media only screen and (max-width: 20em) {
+      .cvc-field .label-title small {
+        margin-left: .1rem;
+        top: -3px;
+        font-size: 65%; } }
 
 label.checkboxes li label {
   font-weight: 200; }
@@ -6551,7 +6556,12 @@ nav.primary-nav {
 .small-6 .value-list .list-key {
   min-width: 4rem; }
 .small-6 .value-list .list-value {
-  min-width: 3rem; }
+  min-width: 0; }
+
+.value-list-controls {
+  margin-bottom: .5rem; }
+  .value-list-controls h3 {
+    margin-bottom: 0; }
 
 ul.pagination li a {
   color: #222222;

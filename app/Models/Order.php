@@ -44,7 +44,7 @@ class Order extends Model {
 
   public function bodyMeasurements()
   {
-    return $this->hasOne('Measurement')->where('type', '=', 'user');
+    return $this->hasOne('Measurement')->where('type', '=', 'body');
   }
 
   public function productMeasurements()

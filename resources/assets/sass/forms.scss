@@ -116,6 +116,11 @@ fieldset {
 		position: relative;
 		top: -2px;
 		margin-left: .2rem;
+		@media #{$tiny-only} {
+			margin-left: .1rem;
+			top: -3px;
+			font-size: 65%;
+		}
 	}
 }
 
