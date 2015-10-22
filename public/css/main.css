@@ -6042,6 +6042,8 @@ label.checkboxes ul li:first-child {
     .button.highlight-color:hover, a.button.highlight-color:hover, button.button.highlight-color:hover {
       background: #222222;
       color: white; }
+  .button.primary-color, a.button.primary-color, button.button.primary-color {
+    border-bottom: 6px solid #B02428; }
 
 .call-to-action {
   margin: 2rem 0 1.25rem 0; }
@@ -6540,6 +6542,15 @@ nav.primary-nav {
   min-width: 3.8rem; }
 .value-list.tight-list .list-key {
   min-width: 4.5rem; }
+.value-list .multi-line .list-key {
+  position: absolute; }
+.value-list .multi-line div {
+  padding-left: 6.5rem;
+  display: inline-block; }
+  .value-list .multi-line div span:not(.active) {
+    font-size: .8rem; }
+  .value-list .multi-line div span.active {
+    font-weight: bold; }
 @media only screen and (max-width: 20em) {
   .value-list {
     font-size: .9rem; }

@@ -1,5 +1,6 @@
 var controllers = angular.module('controllers', [
-	'adminTasksController',
+	'tailorMessageController',
+	'trackingNumberController',
 	'authController',
 	'checkoutController',
 	'editLookController',

@@ -2,7 +2,7 @@
 
 namespace App\Listeners;
 
-use App\Events\OrderStatusChangedToInProgress;
+use App\Events\OrderStatusChangedToProduction;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Mailers\AdminMailer;
@@ -24,7 +24,7 @@ class UpdateEventTimestamp
     /**
      * Handle the event.
      *
-     * @param  OrderStatusChangedToInProgress  $event
+     * @param  OrderStatusChangedToProduction  $event
      * @return void
      */
     public function handle($event)

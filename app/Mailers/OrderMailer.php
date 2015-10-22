@@ -22,7 +22,7 @@ class OrderMailer extends Mailer {
     return  $this->sendTo($order->user, $subject, $view, ['order' => $order]);
   }
 
-  public function sendProductionStart(Order $order)
+  public function sendCustomerProductionStart(Order $order)
   {
     $subject = 'Our tailors have started working on your ' . $order->jacket->name;
     $view    = 'emails.production-start';

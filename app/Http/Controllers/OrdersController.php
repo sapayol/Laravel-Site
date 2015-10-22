@@ -77,13 +77,17 @@ class OrdersController extends Controller {
 			return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'units']);
 		}
 
-		$uncompleted_measurements = $order->bodyMeasurements->uncompleted();
+		if ($order->bodyMeasurements) {
+			$uncompleted_measurements = $order->bodyMeasurements->uncompleted();
+			$completed_measurements = $order->bodyMeasurements->completed();
+			if ($step == 'next' && !$completed_measurements) {
+				return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'height']);
+			} elseif ($step == 'next' && $uncompleted_measurements) {
+				return redirect()->route('fit.show', ['id' => $order->id, 'step' => array_shift($uncompleted_measurements)]);
+			}
+		}
 
-		if ($step == 'next' && !$order->bodyMeasurements->completed()) {
-			return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'height']);
-		} elseif ($step == 'next' && $uncompleted_measurements) {
-			return redirect()->route('fit.show', ['id' => $order->id, 'step' => array_shift($uncompleted_measurements)]);
-		} elseif ($step == null) {
+		if ($step == null) {
 			return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'units']);
 		}
 
@@ -106,6 +110,8 @@ class OrdersController extends Controller {
 		} elseif (!$order->isNew()) {
 			return redirect()->route('orders.complete', $order->id);
 		}
+
+		return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'height']);
 	}
 
 

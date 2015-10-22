@@ -32,7 +32,7 @@ class SubmitMeasurement extends Job implements SelfHandling
     public function handle()
     {
         if (!$this->order->bodyMeasurements) {
-            Measurement::create(array_merge($this->measurements, ['order_id' => $this->order->id]));
+            Measurement::create(array_merge($this->measurements, ['order_id' => $this->order->id, 'type' => 'body']));
         } elseif ($this->measurements) {
             // Prevents a blank note from holding up the order process
             if (isset($this->measurements['note']) && $this->measurements['note'] == '') {

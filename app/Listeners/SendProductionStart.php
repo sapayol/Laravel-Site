@@ -2,7 +2,7 @@
 
 namespace App\Listeners;
 
-use App\Events\OrderStatusChangedToInProgress;
+use App\Events\OrderStatusChangedToProduction;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Mailers\OrderMailer;
@@ -25,11 +25,11 @@ class SendProductionStart
     /**
      * Handle the event.
      *
-     * @param  OrderStatusChangedToInProgress  $event
+     * @param  OrderStatusChangedToProduction  $event
      * @return void
      */
-    public function handle(OrderStatusChangedToInProgress $event)
+    public function handle(OrderStatusChangedToProduction $event)
     {
-        $this->mailer->sendProductionStart($event->order);
+        $this->mailer->sendCustomerProductionStart($event->order);
     }
 }

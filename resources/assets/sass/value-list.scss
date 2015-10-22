@@ -11,6 +11,21 @@
 	&.tight-list .list-key {
 		min-width: 4.5rem;
 	}
+	.multi-line {
+		.list-key {
+			position: absolute;
+		}
+		div {
+			padding-left: 6.5rem;
+			display: inline-block;
+			span:not(.active) {
+				font-size: .8rem;
+			}
+			span.active {
+				font-weight: bold;
+			}
+		}
+	}
 	@media #{$tiny-only} {
 		font-size: .9rem;
 		.list-key {

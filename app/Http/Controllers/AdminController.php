@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use App\Mailers\OrderMailer;
+use App\Events\OrderStatusChangedToProduction;
+use App\Jobs\SendTailorMessage;
 use JavaScript;
 use Address, Jacket, Measurement, Attribute, Order, User;
 
@@ -70,10 +72,8 @@ class AdminController extends Controller {
 
 	public function updateFit($id, Request $request)
 	{
-		$response =[];
  		$order = Order::find($id);
 		foreach ($order->bodyMeasurements->measurement_names as $name) {
-			$response[] = $name;
  			if ($request->type == 'body') {
 			  $order->bodyMeasurements->$name = $request->$name;
 		    $order->bodyMeasurements->save();
@@ -83,14 +83,20 @@ class AdminController extends Controller {
  			}
  		}
 		return response()->json($order->measurements);
-		// return response()->json($response);
 	}
 
-	public function tailor($id, Request $request, OrderMailer $mailer)
+	public function tailor($order_id, Request $request)
 	{
-		$order = $request->input();
- 		$order = Order::find($id);
- 		$mailer->sendTailorMessage($order, $request->note, $request->inclusions);
+		$order = $this->dispatchFrom('App\Jobs\SendTailorMessage', $request, ['order_id' => $order_id]);
+
+		return response()->json($order);
+ 		// return view('emails.tailor-message', ['order' => $order, 'note' => $request->note, 'inclusions' => $request->inclusions]);
+	}
+
+	public function tracking($order_id, Request $request, OrderMailer $mailer)
+	{
+		$order = $this->dispatchFrom('App\Jobs\UpdateTrackingNumber', $request, ['order_id' => $order_id]);
+
  		// return view('emails.tailor-message', ['order' => $order, 'note' => $request->note, 'inclusions' => $request->inclusions]);
 		return response()->json($order);
 	}

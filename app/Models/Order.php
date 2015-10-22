@@ -97,4 +97,19 @@ class Order extends Model {
     return $this->bodyMeasurements->user ? true : false;
   }
 
+  public function statusStepIs($status)
+  {
+    return array_search($status, $this->statuses);
+  }
+
+  public function statusIsBefore($check)
+  {
+    return $this->statusStepIs($this->status) < $this->statusStepIs($check) ? true : false ;
+  }
+
+  public function statusIsAfter($check)
+  {
+    return $this->statusStepIs($this->status) > $this->statusStepIs($check) ? true : false ;
+  }
+
 }

@@ -85,6 +85,9 @@
 			color: $white;
 		}
 	}
+	&.primary-color {
+		border-bottom: 6px solid $primary-color;
+	}
 }
 
 .call-to-action {
