@@ -22,7 +22,7 @@ abstract class Mailer {
       } else {
         $message->to($user->email, $user->name)->subject($subject);
       }
-      $message->from('contact@sapayol.com', 'Sapayol Leather Jackets');
+      $message->from('contact@sapayol.com', 'SAPAYOL Jackets');
     });
   }
 
