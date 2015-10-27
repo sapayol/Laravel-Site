@@ -16,12 +16,18 @@ globalDirectives.directive('scrollToTop', function() {
 globalDirectives.directive('decimalToFraction', function() {
 
 	roundDownToQuarter = function(number) {
-		result = Math.round( number * 1e2 ) / 1e2;
-		return Math.round(result * 8) / 8;
+		rounded = Math.round( number * 1e2 ) / 1e2;
+		return  Math.round(rounded * 8) / 8;
 	}
 
 	decimalToFraction = function(decimal) {
 		var rightDecimalPart = (decimal % 1).toFixed(2);
+		if (decimal < .13) {
+			return 0;
+		} else if (decimal > .88) {
+			return 1;
+		}
+
 		if (rightDecimalPart === '0.13') {
 			return '1/8';
 		} else if (rightDecimalPart === '0.25') {
@@ -36,8 +42,6 @@ globalDirectives.directive('decimalToFraction', function() {
 			return '3/4';
 		} else if (rightDecimalPart === '0.88') {
 			return '7/8';
-		} else {
-			return false;
 		}
 	}
 
@@ -52,14 +56,19 @@ globalDirectives.directive('decimalToFraction', function() {
     link: function(scope, $elm, attrs, tabsCtrl) {
 			userValue = attrs.decimalToFraction;
 			fraction  = userValueToFraction(userValue);
-			result = fraction ? parseInt(userValue) + " " + fraction : parseInt(userValue);
-			$elm[0].textContent = result;
-			if (fraction) {
-				$elm[0].innerHTML = parseInt(userValue) + " <small>" + fraction + "</small>";
+			if (fraction == 0 ) {
+				$elm[0].innerHTML =  parseInt(userValue)
+			} else if (fraction == 1) {
+				$elm[0].innerHTML = parseInt(userValue) + 1;
 			} else {
-				$elm[0].innerHTML = parseInt(userValue);
-			};
-			result = fraction ? parseInt(userValue) + " " + fraction : parseInt(userValue);
+				result = fraction ? parseInt(userValue) + " " + fraction : parseInt(userValue);
+				$elm[0].textContent = result;
+				if (fraction) {
+					$elm[0].innerHTML = parseInt(userValue) + " <small>" + fraction + "</small>";
+				} else {
+					$elm[0].innerHTML = parseInt(userValue);
+				};
+			}
     }
   }
 });
