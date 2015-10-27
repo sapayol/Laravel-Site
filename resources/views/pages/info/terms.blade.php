@@ -43,7 +43,7 @@
 				<ul>
 					<li><a href="#consent"              title="">Consent</a></li>
 					<li><a href="#disclosure"           title="">Disclosure</a></li>
-					<li><a href="#shopify"              title="">Section 4 - Shopify"</a></li>
+					<li><a href="#hosting"              title="">Hosting and Payment</a></li>
 					<li><a href="#third-party-services" title="">Third-Party Services</a></li>
 					<li><a href="#cookies"              title="">Cookies</a></li>
 					<li><a href="#consent-age"          title="">Age Of Consent</a></li>
@@ -243,15 +243,20 @@
 			<p>We may disclose your personal information if we are required by law to do so or if you violate our Terms of Service.</p>
 		</section>
 
-		<section id="shopify" class="inverted-colors">
-			<h3>SECTION 4 - SHOPIFY</h3>
+		<section id="hosting">
+			<h3>HOSTING AND PAYMENT</h3>
 			<a href="#terms-nav" class="underlined under-heading-link">Back to Top</a>
-			<p>Our store is hosted on Shopify Inc. They provide us with the online e-commerce platform that allows us to sell our products and services to you.</p>
-			<p>Your data is stored through Shopify’s data storage, databases and the general Shopify application. They store your data on a secure server behind a firewall.</p>
-			<p>If you choose a direct payment gateway to complete your purchase, then Shopify stores your credit card data. It is encrypted through the Payment Card Industry Data Security Standard (PCI-DSS). Your purchase transaction data is stored only as long as is necessary to complete your purchase transaction. After that is complete, your purchase transaction information is deleted.</p>
-			<p>All direct payment gateways adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, MasterCard, American Express and Discover.</p>
-			<p>PCI-DSS requirements help ensure the secure handling of credit card information by our store and its service providers.</p>
+			<p>Our website is hosted by DigitalOcean and your data is stored on a secure server behind a firewall.</p>
+			<p>We do not store your credit card information.</p>
+			<p>SAPAYOL uses third party payment processors to assist in processing your personally identifiable payment information securely. Such third party processors’ use of your personal information is governed by their respective privacy policies which may or may not contain privacy protections as protective as this privacy policy.</p>
+			<p>Payments are currently processed and managed using the third party vendors below.</p>
+			<ul>
+				<li><a href="https://stripe.com/terms">Stripe - Terms of Service</a></li>
+			</ul>
 		</section>
+
+
+
 
 		<section id="third-party-services">
 			<h3>THIRD-PARTY SERVICES</h3>
@@ -284,7 +289,8 @@
 				<li>Track the pages you visit via Google Analytics</li>
 				<li>Help us remind you of our products on other websites that you visit via ads</li>
 			</ul>
-			<p>We also share information (anonymously) about your use of our site with our trusted social media, advertising and analytics partners. Read about how Google uses data that we share with them.</p>
+			<p>We also share information (anonymously) about your use of our site with our trusted social media, advertising and analytics partners. <a href="http://www.google.com/policies/privacy/partners/">Read about how Google uses data that we share with them.</a></p>
+
 		</section>
 
 		<section id="consent-age">
