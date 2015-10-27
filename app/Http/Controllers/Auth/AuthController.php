@@ -88,8 +88,6 @@ class AuthController extends Controller
         $user = $this->create($request->all());
         Auth::login($user);
 
-        event(new AccountWasCreated($user));
-
         if ($request->wantsJson() || $request->ajax()) {
            return $user->toJson();
         }

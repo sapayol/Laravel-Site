@@ -13,9 +13,6 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\AccountWasCreated' => [
-            'App\Listeners\SendAccountConfirmationEmail'
-        ],
         'App\Events\OrderPaymentWasProcessed' => [
             'App\Listeners\UpdateEventTimestamp',
             'App\Listeners\SendOrderConfirmations',
