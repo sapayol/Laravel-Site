@@ -16,11 +16,12 @@
 			<br><br>
 			All you need is a tape measure.
 		</p>
+
 		<ul>
 			<li>Don’t wear anything thicker than an undershirt or tight t-shirt.</li>
-			<li>Don't round your measurements to whole numbers.</li>
-			<li><em>It's much easier and more accurate if a friend helps you.</em></li>
+			<li>Enter measurements with a decimal: 39.3 (not 39 1/4)</li>
 		</ul>
+		<p><em>It's much easier and more accurate if a friend helps you.</em></p>
 	</section>
 
 	<section class="large-6 medium-10 small-12 columns large-centered medium-centered text-center">
