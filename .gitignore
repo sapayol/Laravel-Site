@@ -1,4 +1,9 @@
-/public
+/public/css
+/public/fonts
+/public/images
+/public/js
+/public/maps
+/public/videos
 /vendor
 /node_modules
 /storage
