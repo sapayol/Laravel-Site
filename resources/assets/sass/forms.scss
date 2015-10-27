@@ -49,6 +49,11 @@ label.text-input-label {
 		padding-bottom: 0rem;
 		height: 3rem;
 	}
+	input[type="password"] {
+		height: 3rem;
+		padding-top: 1.5rem;
+		padding-bottom: .5rem;
+	}
 	select {
 		text-transform: capitalize;
 		padding-top: 1.2rem;
