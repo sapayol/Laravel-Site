@@ -14,16 +14,7 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen = [
         'App\Events\OrderPaymentWasProcessed' => [
-            'App\Listeners\UpdateEventTimestamp',
-            'App\Listeners\SendOrderConfirmations',
-        ],
-        'App\Events\OrderStatusChangedToShipped' => [
-            'App\Listeners\UpdateEventTimestamp',
-            'App\Listeners\SendShippingNotification'
-        ],
-        'App\Events\OrderStatusChangedToCompleted' => [
-            'App\Listeners\UpdateEventTimestamp',
-            'App\Listeners\SendDeliveryNotification'
+            'App\Listeners\SendOrderConfirmations'
         ]
     ];
 

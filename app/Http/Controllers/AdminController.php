@@ -41,8 +41,8 @@ class AdminController extends Controller {
 			'user'                 => $order->user,
 			'address'              => $order->address,
 			'jacket'               => $order->jacket,
-			'body_measurements'    => $order->bodyMeasurements->measurementsOnly(),
-			'product_measurements' => $order->productMeasurements->measurementsOnly(),
+			'body_measurements'    => $order->bodyMeasurements ? $order->bodyMeasurements->measurementsOnly() : null,
+			'product_measurements' => $order->productMeasurements ? $order->productMeasurements->measurementsOnly() : null,
 			'look'            => [
 				'leather_type'   => $order->leather_type(),
 				'leather_color'  => $order->leather_color(),

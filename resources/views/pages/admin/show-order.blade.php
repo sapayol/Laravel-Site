@@ -45,10 +45,16 @@
 	</ul>
 </section>
 <hr>
+
+@if ($order->statusIsAfter('started'))
 <section>
-	<nav ng-hide="trackingInfo || tailorNote" class="large-6 medium-8 large-uncentered medium-centered small-12 columns">
+	<nav ng-hide="trackingInfo || tailorNote" class="large-6 medium-8 large-uncentered medium-centered small-12 columns" >
 		@if ($order->statusIsBefore('production'))
-			<form action="{{{ route('orders.update', $order->id) }}}" method="POST">
+			@if ($order->bodyMeasurements->uncompleted())
+				<form action="{{{ route('orders.update', $order->id) }}}" method="POST" onsubmit="return confirm('Looks like there are still missing measurements, are you sure you want to send to production?');">
+			@else
+				<form action="{{{ route('orders.update', $order->id) }}}" method="POST">
+			@endif
 				<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
 				<input type="hidden" name="_method" value="PATCH">
 				<input type="hidden" name="status" value="production">
@@ -109,36 +115,40 @@
 	</div>
 	</section>
 <hr>
+@endif
 
-<section class="large-6 medium-8 large-uncentered medium-centered small-12 columns" ng-controller="editUserCtrl" >
-	<h4 class="left">Customer</h4>
-	@if ($order->status !== 'completed')
-		<a class="right" ng-show="!editMode" ng-click="enterEditMode()">Edit</a>
-	@endif
-  <a class="right" ng-show="editMode"  ng-click="updateUser()">Save</a>
-  <span class="right" ng-show="editMode" > &nbsp; | &nbsp;</span>
-  <a class="right" ng-show="editMode"  ng-click="editMode = !editMode">Cancel</a>
-	<div class="clearfix"></div>
 
-	<div ng-show="editMode" class="animated fadeIn">
-		@include('partials.admin.edit-user-form')
-	</div>
-
-	<ul class="no-bullet value-list" ng-show="!editMode">
-		<li><small class="list-key">Name</small><strong>@{{ currentData.user.name }}</strong></li>
-		<li><small class="list-key">Email</small><a href="mailto:@{{ currentData.user.email }}">@{{ currentData.user.email }}</a></li>
-		<li><small class="list-key">Address</small>@{{ currentData.address.address1 }}</li>
-		@if ($order->address->address2 )
-			<li><small class="list-key">&nbsp;</small>@{{ currentData.address.address2 }}</li>
+@if ($order->address)
+	<section class="large-6 medium-8 large-uncentered medium-centered small-12 columns" ng-controller="editUserCtrl" >
+		<h4 class="left">Customer</h4>
+		@if ($order->status !== 'completed')
+			<a class="right" ng-show="!editMode" ng-click="enterEditMode()">Edit</a>
 		@endif
-		<li><small class="list-key">&nbsp;</small>@{{ currentData.address.city }}, @{{ currentData.address.province }} @{{ currentData.address.postcode }}</li>
-		<li><small class="list-key">&nbsp;</small>@{{ currentData.address.country }}</li>
-	</ul>
-</section>
+	  <a class="right" ng-show="editMode"  ng-click="updateUser()">Save</a>
+	  <span class="right" ng-show="editMode" > &nbsp; | &nbsp;</span>
+	  <a class="right" ng-show="editMode"  ng-click="editMode = !editMode">Cancel</a>
+		<div class="clearfix"></div>
+
+		<div ng-show="editMode" class="animated fadeIn">
+			@include('partials.admin.edit-user-form')
+		</div>
+
+		<ul class="no-bullet value-list" ng-show="!editMode">
+			<li><small class="list-key">Name</small><strong>@{{ currentData.user.name }}</strong></li>
+			<li><small class="list-key">Email</small><a href="mailto:@{{ currentData.user.email }}">@{{ currentData.user.email }}</a></li>
+			<li><small class="list-key">Address</small>@{{ currentData.address.address1 }}</li>
+			@if ($order->address->address2 )
+				<li><small class="list-key">&nbsp;</small>@{{ currentData.address.address2 }}</li>
+			@endif
+			<li><small class="list-key">&nbsp;</small>@{{ currentData.address.city }}, @{{ currentData.address.province }} @{{ currentData.address.postcode }}</li>
+			<li><small class="list-key">&nbsp;</small>@{{ currentData.address.country }}</li>
+		</ul>
+	</section>
+@endif
 
 <section class="large-6 medium-8 large-uncentered medium-centered small-12 columns" ng-controller="editLookCtrl" >
 	<h3 class="left">Look</h3>
-	@if ($order->status !== 'completed')
+	@if ($order->status !== 'completed' && $order->statusIsAfter('started'))
 		<a class="right" ng-show="!editMode" ng-click="enterEditMode()">Edit</a>
 	@endif
   <a class="right" ng-show="editMode"  ng-click="updateLook()">Save</a>
@@ -157,7 +167,6 @@
 		<li><small class="list-key">Lining Color </small>@{{ attributes.lining_color.name.capitalize() }} </li>
 		<li><small class="list-key">Hardware Color </small>@{{ attributes.hardware_color.name.capitalize() }}	</li>
 	</ul>
-
 </section>
 
 <section class="large-12 medium-12 small-12 columns">
@@ -166,7 +175,7 @@
 			<div class="large-6 medium-8 large-uncentered medium-centered small-6 columns" ng-controller="editMeasurementsCtrl" ng-init="init( '{{{$type}}}' )" >
 				<div class="value-list-controls">
 					<h3>{{{ ucwords($type)}}}</h3>
-					@if ($order->status !== 'completed')
+					@if ($order->status !== 'completed' && $order->statusIsAfter('started'))
 						<a ng-show="!editMode" ng-click="enterEditMode()">Edit</a>
 					@endif
 				  <a ng-show="editMode"  ng-click="updateMeasurements( '{{{ $type }}}' )">Save</a>
@@ -187,7 +196,7 @@
 							<span ng-if="currentData[key]">
 								@if ($type == 'body')
 									{{{ $order->bodyMeasurements->units == 'in' ? '"' : 'cm' }}}
-								@elseif ($type == 'product')
+								@elseif ($type == 'product' && $order->productMeasurements)
 									{{{ $order->productMeasurements->units == 'in' ? '"' : 'cm' }}}
 								@endif
 							</span>
@@ -205,13 +214,15 @@
 	</div>
 </section>
 
-<section class="large-6 medium-8 large-uncentered medium-centered small-12 columns">
-	<h3>Payment Info</h3>
-	<ul class="no-bullet value-list">
-		<li><small class="list-key">Method</small><strong>Credit</strong></li>
-		<li><small class="list-key">Total </small><strong>${{{ $order->jacket->price }}}	</strong></li>
-	</ul>
-	<br><br>
-</section>
+@if ($order->statusIsAfter('started'))
+	<section class="large-6 medium-8 large-uncentered medium-centered small-12 columns">
+		<h3>Payment Info</h3>
+		<ul class="no-bullet value-list">
+			<li><small class="list-key">Method</small><strong>Credit</strong></li>
+			<li><small class="list-key">Total </small><strong>${{{ $order->jacket->price }}}	</strong></li>
+		</ul>
+		<br><br>
+	</section>
+@endif
 
 @stop
