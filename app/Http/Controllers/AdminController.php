@@ -2,12 +2,17 @@
 
 use Illuminate\Http\Request;
 use App\Mailers\OrderMailer;
-use App\Events\OrderStatusChangedToProduction;
 use App\Jobs\SendTailorMessage;
 use JavaScript;
 use Address, Jacket, Measurement, Attribute, Order, User;
 
 class AdminController extends Controller {
+
+	private $mailer;
+
+	function __construct(OrderMailer $mailer) {
+		$this->mailer = $mailer;
+	}
 
 	public function dashboard()
 	{
@@ -87,18 +92,12 @@ class AdminController extends Controller {
 
 	public function tailor($order_id, Request $request)
 	{
-		$order = $this->dispatchFrom('App\Jobs\SendTailorMessage', $request, ['order_id' => $order_id]);
+	  $order = Order::find($order_id);
+    $this->mailer->sendTailorMessage($order, $request->note, $request->inclusions);
 
 		return response()->json($order);
  		// return view('emails.tailor-message', ['order' => $order, 'note' => $request->note, 'inclusions' => $request->inclusions]);
 	}
 
-	public function tracking($order_id, Request $request, OrderMailer $mailer)
-	{
-		$order = $this->dispatchFrom('App\Jobs\UpdateTrackingNumber', $request, ['order_id' => $order_id]);
-
- 		// return view('emails.tailor-message', ['order' => $order, 'note' => $request->note, 'inclusions' => $request->inclusions]);
-		return response()->json($order);
-	}
 
 }

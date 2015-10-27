@@ -18,23 +18,23 @@
 		<li class="multi-line"><small class="list-key">Status</small><div>
 		 @if ($order->status == 'completed')
 			<span class="{{{ $order->status == 'completed' ? 'active' : '' }}}">Completed</span>
-		 	<small>( {{{ date('Y-m-d h:i', strtotime($order->completed_at)) }}} )</small><br>
+		 	<small>( {{{ date('Y-m-d h:i a', strtotime($order->completed_at)) }}} )</small><br>
 		 @endif
 		 @if ($order->statusIsAfter('production'))
 			<span class="{{{ $order->status == 'shipped' ? 'active' : '' }}}">Shipped</span>
-		 	<small>( {{{ date('Y-m-d h:i', strtotime($order->shipped_at)) }}} )</small><br>
+		 	<small>( {{{ date('Y-m-d h:i a', strtotime($order->shipped_at)) }}} )</small><br>
 		 @endif
 		 @if ($order->statusIsAfter('paid'))
 			<span class="{{{ $order->status == 'production' ? 'active' : '' }}}">Production</span>
-		 	<small>( {{{ date('Y-m-d h:i', strtotime($order->production_at)) }}} )</small><br>
+		 	<small>( {{{ date('Y-m-d h:i a', strtotime($order->production_at)) }}} )</small><br>
 		 @endif
 		 @if ($order->statusIsAfter('started'))
 			<span class="{{{ $order->status == 'paid' ? 'active' : '' }}}">Paid</span>
-		 	<small>( {{{ date('Y-m-d h:i', strtotime($order->paid_at)) }}} )</small><br>
+		 	<small>( {{{ date('Y-m-d h:i a', strtotime($order->paid_at)) }}} )</small><br>
 		 @endif
 		 @if ($order->statusIsAfter('new'))
 			<span class="{{{ $order->status == 'started' ? 'active' : '' }}}">Started</span>
-		 	<small>( {{{ date('Y-m-d h:i', strtotime($order->created_at)) }}} )</small><br>
+		 	<small>( {{{ date('Y-m-d h:i a', strtotime($order->created_at)) }}} )</small><br>
 		 @endif
 		 		</div>
 
@@ -48,30 +48,44 @@
 <section>
 	<nav ng-hide="trackingInfo || tailorNote" class="large-6 medium-8 large-uncentered medium-centered small-12 columns">
 		@if ($order->statusIsBefore('production'))
-			<a href="" class="button expand small primary-color" ng-click="setStatusToProduction()">Start Production</a>
+			<form action="{{{ route('orders.update', $order->id) }}}" method="POST">
+				<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
+				<input type="hidden" name="_method" value="PATCH">
+				<input type="hidden" name="status" value="production">
+				<input type="submit" class="button expand small" value="Start Production">
+			</form>
 		@endif
 		@if ($order->statusIsBefore('shipped') && $order->statusIsAfter('paid'))
-			<a href="" class="button expand small" ng-click="trackingInfo = true; taskMode = true; focus('tracking-number');">Add Tracking Info</a>
+			<a href="" class="button expand small" ng-click="trackingInfo = true; taskMode = true; focus('tracking-number');">Add Tracking Number</a>
 		@endif
 		@if ($order->status == ('shipped'))
-			<a href="" class="button expand small" ng-click="setStatusToComplete()">Complete Order</a>
+			<form action="{{{ route('orders.update', $order->id) }}}" method="POST">
+				<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
+				<input type="hidden" name="_method" value="PATCH">
+				<input type="hidden" name="status" value="completed">
+				<input type="submit" class="button expand small" value="Complete Order">
+			</form>
 		@endif
 		<a href="" class="button expand small primary-color" ng-click="tailorNote = true; taskMode = true;">Email Tailor</a>
 		<a href="https://dashboard.stripe.com/payments/{{{ $order->payment_id }}}" class="button expand small  primary-color">View Stripe Payment</a>
 	</nav>
 
-	<form ng-controller="trackingNumberCtrl" ng-submit="submitTrackingNumber()" ng-show="trackingInfo" class="large-6 medium-8 large-uncentered medium-centered small-12 columns animated fadeIn">
-		<br>
-		<label for="tracking-number" class="text-input-label">
-			<span class="label-title">Tracking Number</span>
-			<input type="text" ng-model="trackingNumber" name="tracking-number" id="tracking-number" required>
-		</label>
-			<button class="button small expand">Add Tracking Number</button>
-		<br>
-	</form>
-	<div ng-show="trackingInfo" class="text-center">
-		<a class="text-center under-button-link underlined" ng-click="trackingInfo = false">Cancel</a>
-	</div>
+	@if ($order->statusIsBefore('shipping'))
+		<form action="{{{ route('orders.update', $order->id) }}}" method="POST" class="large-6 medium-8 large-uncentered medium-centered small-12 columns animated fadeIn">
+			<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
+			<input type="hidden" name="_method" value="PATCH">
+			<br>
+			<label for="tracking-number" class="text-input-label">
+				<span class="label-title">Tracking Number</span>
+				<input type="text" name="tracking_number" id="tracking-number" required>
+			</label>
+				<button class="button small expand">Submit Tracking Number</button>
+			<br>
+		</form>
+		<div ng-show="trackingInfo" class="text-center">
+			<a class="text-center under-button-link underlined" ng-click="trackingInfo = false">Cancel</a>
+		</div>
+	@endif
 
 	<form ng-controller="tailorMessageCtrl" ng-submit="submitTailorMessage()"  ng-show="tailorNote" class="large-6 medium-8 large-uncentered medium-centered small-12 columns animated fadeIn">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">

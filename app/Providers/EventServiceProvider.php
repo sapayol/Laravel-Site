@@ -17,11 +17,6 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\UpdateEventTimestamp',
             'App\Listeners\SendOrderConfirmations',
         ],
-        'App\Events\OrderStatusChangedToProduction' => [
-            'App\Listeners\UpdateEventTimestamp',
-            'App\Listeners\SendProductionStart',
-            'App\Listeners\SendTailorOrderDetails'
-        ],
         'App\Events\OrderStatusChangedToShipped' => [
             'App\Listeners\UpdateEventTimestamp',
             'App\Listeners\SendShippingNotification'

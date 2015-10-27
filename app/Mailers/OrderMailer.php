@@ -30,12 +30,12 @@ class OrderMailer extends Mailer {
     return  $this->sendTo($order->user, $subject, $view, ['order' => $order]);
   }
 
-  public function sendShippingNotification(Order $order)
+  public function sendShippingNotification(Order $order, $tracking_number)
   {
     $subject = 'Your ' . $order->jacket->name . ' has been handed over to the courier';
     $view    = 'emails.shipping-notification';
 
-    return  $this->sendTo($order->user, $subject, $view, ['order' => $order]);
+    return  $this->sendTo($order->user, $subject, $view, ['order' => $order, 'tracking_number' => $tracking_number]);
   }
 
   public function sendDeliveryNotification(Order $order)

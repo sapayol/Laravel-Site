@@ -128,7 +128,12 @@ class OrdersController extends Controller {
 	{
     $order = $this->dispatchFrom('App\Jobs\UpdateOrder', $request, ['id' => $id]);
 
-		return response()->json($order);
+    if ($request->ajax() || $request->wantsJson()) {
+			return response()->json($order);
+    }
+
+	  Session::flash('success', "Order updated");
+    return redirect()->back();
 	}
 
 

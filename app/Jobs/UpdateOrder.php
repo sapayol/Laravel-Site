@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use App\Jobs\Job;
 use Order, Address;
+use App\Mailers\OrderMailer;
 use Illuminate\Contracts\Bus\SelfHandling;
 
 class UpdateOrder extends Job implements SelfHandling
@@ -27,22 +28,28 @@ class UpdateOrder extends Job implements SelfHandling
 
     protected  $email;
 
+    protected  $status;
+
+    protected  $tracking_number;
+
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($id, $name, $address1, $address2 = null, $city = null, $postcode = null, $province = null, $country = null, $email = null)
+    public function __construct($id, $name = null, $address1 = null, $address2 = null, $city = null, $postcode = null, $province = null, $country = null, $email = null, $status = null, $tracking_number = null)
     {
-        $this->order    = Order::findOrFail($id);
-        $this->name     = $name;
-        $this->address1 = $address1;
-        $this->address2 = $address2;
-        $this->city     = $city;
-        $this->postcode = $postcode;
-        $this->province = $province;
-        $this->country  = $country;
-        $this->email    = $email;
+        $this->order           = Order::findOrFail($id);
+        $this->name            = $name;
+        $this->address1        = $address1;
+        $this->address2        = $address2;
+        $this->city            = $city;
+        $this->postcode        = $postcode;
+        $this->province        = $province;
+        $this->country         = $country;
+        $this->email           = $email;
+        $this->status          = $status;
+        $this->tracking_number = $tracking_number;
     }
 
     /**
@@ -50,8 +57,29 @@ class UpdateOrder extends Job implements SelfHandling
      *
      * @return void
      */
-    public function handle()
+    public function handle(OrderMailer $mailer)
     {
+        if ($this->status && $this->order->statusIsBefore($this->status)) {
+            $this->order->status = $this->status;
+            if ($this->status == 'production') {
+                $this->order->production_at = date('y-m-d h:i:s');
+                $mailer->sendCustomerProductionStart($this->order);
+            }
+            if ($this->status == 'completed') {
+                $this->order->completed_at = date('y-m-d h:i:s');
+                $mailer->sendDeliveryNotification($this->order);
+            }
+        }
+
+        if ($this->tracking_number) {
+            $this->order->tracking_number = $this->tracking_number;
+            if ($this->order->statusIsBefore('shipped')) {
+                $this->order->status = 'shipped';
+                $this->order->shipped_at = date('y-m-d h:i:s');
+                $mailer->sendShippingNotification($this->order, $this->tracking_number);
+            }
+        }
+
         // Check if user with this email exists and return them or create a new record for them
         if ($this->name) {
             $this->order->user->name = $this->name;

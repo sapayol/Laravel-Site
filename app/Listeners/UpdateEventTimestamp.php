@@ -2,7 +2,6 @@
 
 namespace App\Listeners;
 
-use App\Events\OrderStatusChangedToProduction;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Mailers\AdminMailer;
@@ -24,7 +23,7 @@ class UpdateEventTimestamp
     /**
      * Handle the event.
      *
-     * @param  OrderStatusChangedToProduction  $event
+     * @param  UpdateEventTimestamp $event
      * @return void
      */
     public function handle($event)
@@ -32,9 +31,6 @@ class UpdateEventTimestamp
       switch (get_class($event)) {
         case 'App\Events\OrderPaymentWasProcessed':
           $event->order->paid_at = date('y-m-d h:i:s');
-          break;
-        case 'App\Events\OrderStatusChangedToProduction':
-          $event->order->production_at = date('y-m-d h:i:s');
           break;
         case 'App\Events\OrderStatusChangedToShipped':
           $event->order->shipped_at = date('y-m-d h:i:s');

@@ -19,7 +19,7 @@
 
 		<ul>
 			<li>Don’t wear anything thicker than an undershirt or tight t-shirt.</li>
-			<li>Enter measurements with a decimal: 39.3 (not 39 1/4)</li>
+			<li>Enter measurements as a decimal: 39.3 (not 39 1/4)</li>
 		</ul>
 		<p><em>It's much easier and more accurate if a friend helps you.</em></p>
 	</section>

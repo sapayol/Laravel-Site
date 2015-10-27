@@ -52,7 +52,7 @@
 		<div class="clearfix"></div>
 		<ul class="no-bullet value-list">
 			<li><small class="list-key">Name</small><strong>@{{ address.name }}</strong></li>
-			<li><small class="list-key">Email</small><strong><a href="" title=""  data-reveal-id="myModal" class="underlined">{{{ $order->user->email }}}</a></strong></li>
+			<li><small class="list-key">Email</small><strong>{{{ $order->user->email }}}</a></li>
 			<li><small class="list-key">Address 1</small><strong>@{{ address.address1 }}</strong></li>
 			<li><small class="list-key">Address 2</small><strong>@{{ address.address2 }}</strong></li>
 			<li><small class="list-key">City</small><strong>@{{ address.city }}</strong></li>
@@ -74,18 +74,4 @@
 			<li><small class="list-key">Total </small><strong>${{{ $order->jacket->price }}}	</strong></li>
 		</ul>
 	</div>
-</div>
-
-
-<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-		<section class="large-6 medium-8 small-12 medium-centered large-centered columns panel">
-			<br><br>
-			<p>Looks you are placing this order as <strong>{{{ Auth::user()->email }}}</strong></p>
-			<div class="text-center">
-				<a href="" ng-click="closeModal()" class="button expand">Continue</a>
-				<p>or</p>
-				<a href="{{ url('/auth/logout') }}" class="underlined">Log in as someone else</a>
-			</div>
-
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
