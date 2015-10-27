@@ -22,7 +22,7 @@
 	<hr>
 
 	<div class="large-12 medium-12 small-12 columns definition-section">
-		<h3>SAPAYOL <small>|'sapa,yol|</small></h3>
+		<h3>SAPAYOL</h3>
 		<p>
 			noun <br>
 			1. the road less traveled by
