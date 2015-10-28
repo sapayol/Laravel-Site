@@ -6,9 +6,9 @@
 
 @section('main')
 <section class="large-6 medium-8 large-uncentered medium-centered small-12 columns order-summary ">
-	<p>We’re very excited that you’ve decided to order a custom tailored BLEECKER from us.</p>
+	<p>We&rsquo;re very excited that you&rsquo;ve decided to order a custom tailored BLEECKER from us.</p>
 	<p>Within the next 24 hours we will reach out to you to go over your measurements and discuss your fit preferences before we start tailoring it.</p>
-	<p>Let’s make sure we have the right contact details from you:</p>
+	<p>Let&rsquo;s make sure we have the right contact details from you:</p>
 	<ul class="no-bullet value-list">
 		<li><small class="list-key">Name</small><strong>{{{ $order->user->name }}}</strong></li>
 		<li><small class="list-key">Email</small><strong>{{{ $order->user->email }}}</strong></li>

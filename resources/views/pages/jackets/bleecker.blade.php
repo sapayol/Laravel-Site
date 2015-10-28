@@ -52,8 +52,8 @@
 				<a href="/images/photos/leather/lamb_c_black_close-up.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/leather/lamb_c_black_close-up.jpg" alt=""></a>
 			</section>
 			<section class="large-6 medium-6 small-12 columns">
-				<h2>Vegetable tanned, chrome-free, full-grain leather</h2>
-				<p>All our jackets are made with the most exclusive, vegetable tanned, full-grain leather. It’s supple, thick, has a warm touch, and a pleasant smell. With good care, it will not crack or bulge for decades but break in and develop a beautiful patina.</p>
+				<h2>Vegetable tanned, chrome&ndash;free, full&ndash;grain leather</h2>
+				<p>All our jackets are made with the most exclusive, vegetable tanned, full&ndash;grain leather. It’s supple, thick, has a warm touch, and a pleasant smell. With good care, it will not crack or bulge for decades but break in and develop a beautiful patina.</p>
 			</section>
 			<section class="large-6 medium-6 small-12 columns">
 				<a href="/our-leather?jacket={{{ $jacket->model }}}" class="underlined" title="">Click to learn more about what makes our leather so special</a><br><br>
@@ -81,7 +81,7 @@
 			<section class="large-6 medium-6 small-12 columns">
 				<p class="image-caption">An inside pocket with a zipper on your right chest holds your note book, Knicks tickets, pay check, or passport.</p>
 				<h3>Reinforced pockets</h3>
-				<p>All pockets are lined with a Tencel twill, a very strong, eco-friendly fabric that makes sure you don’t lose your keys.</p>
+				<p>All pockets are lined with a Tencel twill, a very strong, eco&ndash;friendly fabric that makes sure you don’t lose your keys.</p>
 			</section>
 		</article>
 		<hr class="thin">
@@ -115,7 +115,7 @@
 				<a href="/images/photos/hardware/snap_silver_detail.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/hardware/snap_silver_detail.jpg" alt=""></a>
 			</section>
 			<section class="large-6 medium-6 small-12 columns">
-				<p>The buttons on our jackets are spring-type snaps from YKK, made purely out of nickel-free alloys. They receive the same beautiful coatings as our zippers and provide reliable closure without the need to pull too hard and damage the leather when you open them.</p>
+				<p>The buttons on our jackets are spring&ndash;type snaps from YKK, made purely out of nickel&ndash;free alloys. They receive the same beautiful coatings as our zippers and provide reliable closure without the need to pull too hard and damage the leather when you open them.</p>
 			</section>
 		</article>
 	</div>

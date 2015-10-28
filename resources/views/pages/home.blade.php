@@ -17,7 +17,7 @@
 		<div class="filter">
 			<div class="title-container">
 				<h1 class="hero-text">
-					<span class="line1 thin">Tailor-made</span><br>
+					<span class="line1 thin">Tailor&ndash;made</span><br>
 					<span class="line3">Leather Jackets</span>
 				</h1>
 				<a href="/jackets" class="button call-to-action">See Our Collection</a>
@@ -41,14 +41,14 @@
 	<article class="large-6 medium-6 small-12 columns">
 		<a href="/who-we-are#master-craftsmanship" class="image-link"><img class="sidekick-image" src="/images/photos/other/master-craftsmanship.jpg" alt=""></a>
 		<h2 class="thin">Master Craftsmanship</h2>
-		<p>Each piece is made at a select workshop, where the same craftsmen and -women have been perfecting their art together for decades.<br>
+		<p>Each piece is made at a select workshop, where the same craftsmen and <span class="no-wrap">&ndash;women</span> have been perfecting their art together for decades.<br>
 		</p>
 		<a class="underlined" href="/who-we-are#master-craftsmanship">Find Out More</a>
 	</article>
 
 	<article class="large-6 medium-6 small-12 columns">
 		<a href="/how-it-works" class="image-link"><img class="sidekick-image" src="/images/photos/other/made-to-measure.jpg" alt=""></a>
-		<h2 class="thin">Made-to-Measure</h2>
+		<h2 class="thin">Made&ndash;to&ndash;Measure</h2>
 		<p>
 			Your jacket is made exclusively for you, based on your measurements. It will fit you perfectly.<br>
 		</p>

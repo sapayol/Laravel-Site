@@ -7,16 +7,16 @@
 @section('main')
 
 	<section class="large-12 medium-12 small-12 columns">
-		<p>Something about the way you’re supposed to do things doesn’t feel right. And the path you're being shown seems to be the shortest, but not very exciting.</p>
+		<p>Something about the way you&rsquo;re supposed to do things doesn&rsquo;t feel right. And the path you&rsquo;re being shown seems to be the shortest, but not very exciting.</p>
 		<p>
-			You want to know what’s behind that door.<br>
+			You want to know what&rsquo;s behind that door.<br>
 			You approach things from a different angle.<br>
 			You find your own way.
 		</p>
 		<p>
-			<em>Regular doesn’t fit you.</em>
+			<em>Regular doesn&rsquo;t fit you.</em>
 		</p>
-		<p>We understand. It’s the same urge that motivates us to design leather jackets without compromises. To create a company that does things the right way. To build a community of the curious.</p>
+		<p>We understand. It&rsquo;s the same urge that motivates us to design leather jackets without compromises. To create a company that does things the right way. To build a community of the curious.</p>
 	</section>
 
 	<hr>
@@ -51,30 +51,30 @@
 
 	<section class="large-12 medium-12 small-12 columns" id="master-craftsmanship">
 		<h2>Our jackets are made by master tailors.</h2>
-		<p>Know-how, skill, and passion are the fuel of great craftsmen. The studio we work with exclusively is an infinite reserve of all three components. A group of five artisans has been working together since 1998 – the core of it since 1980 – dedicated to producing finest leather garments and pushing their art in every aspect.</p>
-		<p>But good things take time, even after this many years of practice. To meet our quality requirements, four workers will be working on your jacket during seven hours to create the finished product.</p>
+		<p>Know&ndash;how, skill, and passion are the fuel of great craftsmen. The studio we work with exclusively is an infinite reserve of all three components. A group of five artisans has been working together since 1998 &ndash; the core of it since 1980 &ndash; dedicated to producing finest leather garments and pushing their art in every aspect.</p>
+		<p>But good things take time, even after this many years of practice. To meet our quality requirements, four people will be working on your jacket over a period of seven hours to create the finished product.</p>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns" id="best-materials">
 		<h2>Finding the best leather and materials is our obsession.</h2>
-		<p>We only work with the most exclusive leather available: full-grain, vegetable tanned (chrome-free), and semi-aniline dyed. Our tannery uses the best components and takes the time that’s necessary to produce extraordinary, long-lasting leather that becomes even more beautiful with age. From that leather, the most flawless is set aside for us.</p>
+		<p>We only work with the most exclusive leather available: full&ndash;grain, vegetable tanned (chrome&ndash;free), and aniline dyed. Our tannery uses the best components and takes the time that&rsquo;s necessary to produce extraordinary, long-lasting leather that becomes even more beautiful with age. From that leather, the most flawless is set aside for us.</p>
 		<a href="/our-leather" class="underlined">More about our leather</a><br><br>
-		<p>Our care about the smallest details carries over to all other materials we use. Our zippers and buttons (YKK Excella) are extremely reliable and at the same time polished down to every single tooth, finished with scratch-resistant, elegant coatings.</p>
-		<p>The lining is made out of a smooth Bemberg Cupro Twill with the exception of the pockets, which are lined with a more robust Tencel fabric.</p>
+		<p>Our care about the smallest details carries over to all other materials we use. Our zippers and buttons (YKK Excella) are extremely reliable and at the same time polished down to every single tooth, finished with scratch&ndash;resistant, elegant coatings.</p>
+		<p>The lining is made out of a smooth Bemberg Cupro oxford weave with the exception of the pockets, which are lined with a more robust Tencel fabric.</p>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns">
 		<h2>New York City is our home. Our jackets are tailored in Istanbul, Turkey.</h2>
 		<p>SAPAYOL is based and incorporated in New York City. This city fuels us with energy and inspiration.</p>
-		<p>Our jackets are made in Istanbul, Turkey. The long textile and leather tradition in the region makes it possible to buy top-grade skins, work with a world-class tannery, have our jackets tailored by master craftsmen and source all other materials within a 250 mile radius. In addition to that, we can work with supply partners that pay above-average wage.</p>
+		<p>Our jackets are made in Istanbul, Turkey. The long textile and leather tradition in the region makes it possible to buy top&ndash;grade skins, work with a world&ndash;class tannery, have our jackets tailored by master craftsmen and source all materials within a 250 mile radius. In addition to that, we can work with supply partners that pay above&ndash;average wage.</p>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns" id="respect-nature">
 		<h2>Every decision is guided by the greatest respect for people, our environment, and animals.</h2>
-		<p>We believe that everyone we work with and all their employees should feel respected and valued for their work. Not only will that lead to the best possible product, we just don’t like any other type of relationship. That’s why we’ve visited all our supply partners and made sure that their workers have safe and healthy work conditions. We’re proud to know that workers get above-average pay and social insurance.</p>
-		<p>Just as importantly, we see ourselves as part of one big organism. It’s our responsibility – and also in our best interest – to honor and care for our environment and animals. We’re pushing every aspect of our company in that regard.</p>
+		<p>We believe that everyone we work with and all their employees should feel respected and valued for their work. Not only will that lead to the best possible product, we just don&rsquo;t like any other type of relationship. That&rsquo;s why we&rsquo;ve visited all our supply partners and made sure that their workers have safe and healthy work conditions. We&rsquo;re proud to know that workers get above-average pay and social insurance.</p>
+		<p>Just as importantly, we see ourselves as part of one big organism. It&rsquo;s our responsibility &ndash; and also in our best interest &ndash; to honor and care for our environment and animals. We&rsquo;re pushing every aspect of our company in that regard.</p>
 		<p>All skins come from Turkey, where animals are being herded in traditional ways and get ample movement, sunlight, and natural nutrition.</p>
-		<p>With vegetable tanning, we’ve chosen the most ecological tanning process, avoiding the usual chromium salts which aren’t biodegradable and become carcinogenic under certain circumstances. Our tannery only uses top-grade chemical components, in the smallest possible amounts, and all wastewater gets treated.</p>
+		<p>With vegetable tanning, we&rsquo;ve chosen the most ecological tanning process, avoiding the usual chromium salts which aren&rsquo;t biodegradable and become carcinogenic under certain circumstances. Our tannery only uses top-grade chemical components, in the smallest possible amounts, and all wastewater gets treated.</p>
 		<p>It is our goal to not use any plastic and eventually exclusively use natural or recycled materials, from the care instruction label to packaging.</p>
 		<p>Last but not least, our direct shipment from the leather workshop to the customer is the most ecological logistics process we can think of. Other than putting a sheep herd and a master craftsmen in your backyard.</p>
 		<a href="/jackets" class="button call-to-action expand">See Our Jackets</a>

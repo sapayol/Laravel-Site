@@ -95,7 +95,7 @@
 				<br><br>
 			</div>
 			<section class="large-6 medium-8 small-12 medium-centered large-centered columns slideInDown animated" ng-show="showLogin" ng-init="showLogin = false">
-				<p><strong>Enter an email address and choose a password to continue.</strong><br>Use your existing credentials if you've already created an account.</p>
+				<p><strong>Enter an email address and choose a password to continue.</strong><br>Use your existing credentials if you&rsquo;ve already created an account.</p>
 				@include('partials.checkout.user-registration-form')
 		@elseif (Auth::user()->unfinishedOrders()->count() > 0)
 			<section class="large-6 medium-8 small-12 medium-centered large-centered columns">

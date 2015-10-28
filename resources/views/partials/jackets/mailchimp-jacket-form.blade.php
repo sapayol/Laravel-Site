@@ -1,5 +1,5 @@
 
-<p>Want to know when new jacket models become available? Leave us your email and we'll notify you.</p>
+<p>Want to know when new jacket models become available? Leave us your email and we&rsquo;ll notify you.</p>
 
 <form action="//sapayol.us11.list-manage.com/subscribe/post?u=cbc80ecada059be9cc639ede5&amp;id=85d2de29d1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 

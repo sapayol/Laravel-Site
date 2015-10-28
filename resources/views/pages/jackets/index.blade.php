@@ -10,7 +10,7 @@
 
 @section('main')
 	<article class="large-12 medium-12 small-12 columns">
-		<p class="medium-text-center">Choose the model you would like to customize and have tailor-made.</p>
+		<p class="medium-text-center">Choose the model you would like to customize and have tailor&ndash;made.</p>
 		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
 			@foreach ($jackets as $jacket)
 			  <li class="text-center">
