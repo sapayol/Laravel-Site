@@ -105,3 +105,11 @@ button.text-button {
 	font-size: .9rem;
 	border-bottom: 2px solid $primary-color;
 }
+
+button.expand-on-small {
+	@extend .expand;
+	@media #{$medium-up} {
+		width: inherit;
+		padding: auto;
+	}
+}

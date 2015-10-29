@@ -29,13 +29,19 @@
 	}
 }
 
-main > section, main > article, main > section > article {
+main > section, main > article, main > section > article, main > article > section {
 	padding: 1rem 0 2rem 0;
 	@media #{$medium-up} { padding: 1.5rem 0 2.5rem 0}
 	&:last-child {
 		padding-bottom: 4rem;
 	}
 }
+
+section.panel {
+	margin-bottom: 2rem;
+	@media #{$medium-up} { margin-bottom: 2.5rem 0}
+}
+
 
 .shrunken-layout {
 	main > section, main > article, main > section > article {
@@ -53,5 +59,16 @@ main > p {
 	color: $white;
 	p {
 		margin-bottom: 0;
+	}
+}
+
+section.responsive-section {
+	display: flex;
+	flex-direction: column;
+	@media #{$medium-up} { flex-direction: row }
+	div.columns:not(.image-container) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 }
