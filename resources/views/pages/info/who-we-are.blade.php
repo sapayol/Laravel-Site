@@ -6,7 +6,9 @@
 
 @section('main')
 
+
 	<section class="large-12 medium-12 small-12 columns">
+		<img class="sidekick-image" src="/images/photos/other/tailor-supplies.jpg" alt="">
 		<p>Something about the way you&rsquo;re supposed to do things doesn&rsquo;t feel right. And the path you&rsquo;re being shown seems to be the shortest, but not very exciting.</p>
 		<p>
 			You want to know what&rsquo;s behind that door.<br>
@@ -50,12 +52,14 @@
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns" id="master-craftsmanship">
+		<img class="sidekick-image" src="/images/photos/other/tailor-ironing.jpg" alt="">
 		<h2>Our jackets are made by master tailors.</h2>
 		<p>Know&ndash;how, skill, and passion are the fuel of great craftsmen. The studio we work with exclusively is an infinite reserve of all three components. A group of five artisans has been working together since 1998 &ndash; the core of it since 1980 &ndash; dedicated to producing finest leather garments and pushing their art in every aspect.</p>
 		<p>But good things take time, even after this many years of practice. To meet our quality requirements, four people will be working on your jacket over a period of seven hours to create the finished product.</p>
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns" id="best-materials">
+		<img class="sidekick-image" src="/images/photos/other/tailor-cutting.jpg" alt="">
 		<h2>Finding the best leather and materials is our obsession.</h2>
 		<p>We only work with the most exclusive leather available: full&ndash;grain, vegetable tanned (chrome&ndash;free), and aniline dyed. Our tannery uses the best components and takes the time that&rsquo;s necessary to produce extraordinary, long-lasting leather that becomes even more beautiful with age. From that leather, the most flawless is set aside for us.</p>
 		<a href="/our-leather" class="underlined">More about our leather</a><br><br>
@@ -64,8 +68,9 @@
 	</section>
 
 	<section class="large-12 medium-12 small-12 columns">
-		<h2>New York City is our home. Our jackets are tailored in Istanbul, Turkey.</h2>
+		<h2>New York City is our home.</h2>
 		<p>SAPAYOL is based and incorporated in New York City. This city fuels us with energy and inspiration.</p>
+		<h2> Our jackets are made in Istanbul, Turkey.</h2>
 		<p>Our jackets are made in Istanbul, Turkey. The long textile and leather tradition in the region makes it possible to buy top&ndash;grade skins, work with a world&ndash;class tannery, have our jackets tailored by master craftsmen and source all materials within a 250 mile radius. In addition to that, we can work with supply partners that pay above&ndash;average wage.</p>
 	</section>
 
