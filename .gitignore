@@ -9,3 +9,6 @@
 /storage
 /.sass-cache
 .env
+.DS_Store
+.Spotlight-V100
+.Trashes
