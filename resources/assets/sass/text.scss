@@ -1,5 +1,6 @@
 html, body, p {
 	font-size: 20px;
+	@media #{$medium-up} { font-size: 23px; }
 	font-family: NittiGrotesk, HelveticaNeue, Helvetica, Arial, sans-serif;
 	font-weight: 200;
 	line-height: 1.4;
@@ -73,6 +74,7 @@ article p {
 }
 
 .image-caption {
+	margin-top: 1rem;
 	margin-bottom: 2rem;
 	display: inline-block;
 }
@@ -125,4 +127,10 @@ hr.thin {
 		margin-bottom: .5rem;
 		line-height: 1.05;
 	}
+}
+
+.responsive-section {
+	 a {
+	 	width: auto;
+	 }
 }

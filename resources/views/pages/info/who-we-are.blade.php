@@ -53,7 +53,7 @@
 
 		<hr>
 
-		<section class="row responsive-section" id="master-craftsmanship">
+		<section class="row flex-section" id="master-craftsmanship">
 			<div class="medium-6 medium-push-6 small-12 columns image-container">
 				<img class="sidekick-image" src="/images/photos/other/tailor-ironing.jpg" alt="">
 			</div>
@@ -66,7 +66,7 @@
 			</div>
 		</section>
 
-		<section class="row responsive-section" id="best-materials">
+		<section class="row flex-section" id="best-materials">
 			<div class="large-6 medium-12 small-12 columns image-container">
 				<img class="sidekick-image" src="/images/photos/other/tailor-cutting.jpg" alt="">
 			</div>

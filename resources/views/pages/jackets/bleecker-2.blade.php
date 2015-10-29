@@ -65,22 +65,25 @@
 
 	<hr class="thin">
 
-	<section class="row">
-		<h2 class="text-center">Inside pockets for your valuables</h2>
-		<br>
-		<br>
+	<section class="row flex-section">
 		<div class="large-6 medium-6 small-12 columns">
 			<a href="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" alt=""></a>
+		</div>
+		<div class="large-6 medium-6 small-12 columns">
+			<h2>Inside pockets for your valuables</h2>
 			<p class="image-caption">Slide your phone into a welted pocket that sits conveniently just inside your jacket, on the left side.</p>
 		</div>
+	</section>
 
+	<section class="row flex-section">
 		<div class="large-6 medium-6 small-12 columns">
 			<a href="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg" alt=""></a>
-
-			<p class="image-caption">An inside pocket with a zipper on your right chest holds your note book, Knicks tickets, pay check, or passport.</p>
 		</div>
-		<br>
-		<p class="text-center"> <em>All pockets are lined with a Tencel twill, a very strong, eco&ndash;friendly fabric that makes sure you don’t lose your keys.</em></p>
+		<div class="large-6 medium-6 small-12 columns">
+			<p class="image-caption">An inside pocket with a zipper on your right chest holds your note book, Knicks tickets, pay check, or passport.</p>
+			<h3>Reinforced pockets</h3>
+			<p>All pockets are lined with a Tencel twill, a very strong, eco&ndash;friendly fabric that makes sure you don’t lose your keys.</p>
+		</div>
 	</section>
 
 	<hr class="thin">
@@ -97,19 +100,26 @@
 
 	<hr class="thin">
 
-	<section class="row">
-		<h2 class="text-center">Super smooth and reliable hardware</h2><br><br>
+	<section class="row flex-section">
 		<div class="large-6 medium-6 small-12 columns">
 			<a href="/images/photos/hardware/zipper_silver_detail.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/hardware/zipper_silver_detail.jpg" alt=""></a>
-			<p class="image-caption">All zippers are YKK Excella. They combine legendary reliability with smooth elegance. Each tooth is individually polished, which gives the zipper a brilliant shine and prevents scratching of the jacket or your skin.
+		</div>
+		<div class="large-6 medium-6 small-12 columns">
+			<h2>Super smooth and reliable hardware</h2>
+			<p>All zippers are YKK Excella. They combine legendary reliability with smooth elegance. Each tooth is individually polished, which gives the zipper a brilliant shine and prevents scratching of the jacket or your skin.
 				<br>
 				<br>
 				YKK Excella zippers don’t contain Nickel.
 			</p>
 		</div>
+	</section>
+
+	<section class="row flex-section">
 		<div class="large-6 medium-6 small-12 columns">
 			<a href="/images/photos/hardware/snap_silver_detail.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/hardware/snap_silver_detail.jpg" alt=""></a>
-			<p class="image-caption">The buttons on our jackets are spring&ndash;type snaps from YKK, made purely out of nickel&ndash;free alloys. They receive the same beautiful coatings as our zippers and provide reliable closure without the need to pull too hard and damage the leather when you open them.</p>
+		</div>
+		<div class="large-6 medium-6 small-12 columns">
+			<p>The buttons on our jackets are spring&ndash;type snaps from YKK, made purely out of nickel&ndash;free alloys. They receive the same beautiful coatings as our zippers and provide reliable closure without the need to pull too hard and damage the leather when you open them.</p>
 		</div>
 	</section>
 </article>

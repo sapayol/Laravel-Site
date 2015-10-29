@@ -5,8 +5,10 @@
 		<br>
 		Perfecto&ndash;style biker leather jacket, made of black, heavy lamb leather. You can customize the hardware and lining color.
 	</p>
-	<a href="{!! route('jackets.look', $jacket->model) !!}" class="button animated slideInUp expand call-to-action">Design Yours Now</a>
-	<a href="{!! route('jackets.look', $jacket->model) !!}" class="button stick-to-bottom animated slideInUp expand call-to-action">
+	<div class="text-center">
+		<a href="{!! route('jackets.look', $jacket->model) !!}" class="button expand-for-small animated slideInUp call-to-action">Design Yours Now</a>
+	</div>
+	<a href="{!! route('jackets.look', $jacket->model) !!}" class="button hide-for-medium-up stick-to-bottom animated slideInUp expand call-to-action">
 		Design yours now
 	</a>
 </section>

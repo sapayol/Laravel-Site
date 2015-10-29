@@ -62,7 +62,7 @@ main > p {
 	}
 }
 
-section.responsive-section {
+section.flex-section {
 	display: flex;
 	flex-direction: column;
 	@media #{$medium-up} { flex-direction: row }
