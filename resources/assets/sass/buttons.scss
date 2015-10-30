@@ -106,10 +106,10 @@ button.text-button {
 	border-bottom: 2px solid $primary-color;
 }
 
-button.expand-on-small {
+.button.expand-on-small {
 	@extend .expand;
 	@media #{$medium-up} {
 		width: inherit;
-		padding: auto;
-	}
+    padding: 1rem 2rem 1.0625rem 2rem;
+  }
 }

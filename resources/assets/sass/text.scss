@@ -42,6 +42,12 @@ section h3, article h3 {
 	letter-spacing: -0.01em;
 }
 
+ol {
+	h3 {
+		margin-bottom: .05rem;
+	}
+}
+
 article p {
 	margin-bottom: .8rem;
 }
@@ -134,3 +140,4 @@ hr.thin {
 	 	width: auto;
 	 }
 }
+
