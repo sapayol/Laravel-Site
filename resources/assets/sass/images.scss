@@ -99,32 +99,42 @@
 	.slick-arrow {
 	  margin: 0;
 	  padding: 0;
-		background: none;
 		color: transparent;
-	  width: 45px;
-	  height: 45px;
 	  border: none;
-	  border-top: 1px solid black;
-	  border-right: 1px solid black;
-	  border-width: 1px;
 	  position: absolute;
-	  top: 50%;
 	  margin-top: -15px;
 	  z-index: 1;
+    height: 100%;
+    background: transparent;
+    top: 0;
+    width: 4rem;
 	  &:focus {
 	  	outline: none;
 	  }
 	  &:before {
-	  	display: none;
+		  border-top: 1px solid black;
+		  border-right: 1px solid black;
+		  border-width: 1px;
+	  	display: block;
+	  	content: "";
+		  width: 45px;
+		  height: 45px;
+		  position: relative;
 	  }
 	}
 	.slick-next {
-	  transform: rotate(45deg);
-	  right: 0;
+		&:before {
+		  transform: rotate(45deg);
+		  // right: 1rem;
+		}
+	  right: -1.7rem;
 	}
 	.slick-prev {
-	  transform: rotate(225deg);
-	  left: 0;
+		&:before {
+		  transform: rotate(225deg);
+		  left: 1rem;
+		}
+	  left: -1rem;
 	}
 }
 
