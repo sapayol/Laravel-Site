@@ -29,7 +29,8 @@
 		</div>
 	@endif
 	<div class="text-center">
-		<button type="button" ng-click="submitMeasurement('measurements[{{{ $step }}}]')" class="black button expand">Submit Measurement <span class="chevron chevron--right"></span></button>
+		<button type="button" ng-click="submitMeasurement('measurements[{{{ $step }}}]')" class="black button expand-on-small">Submit Measurement <span class="chevron chevron--right"></span></button>
+		<br class="hide-for-small-only">
 		@if ($order->status == 'started')
 			<a href="/orders/{{{ $order->id }}}/checkout" class="under-button-link underlined">Order Now, Measure Later</a>
 		@endif
