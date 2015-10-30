@@ -54,6 +54,15 @@
 	}
 }
 
+
+span.value-list-action, a.value-list-action:not(.underlined) {
+	position: relative;
+	top: .25rem;
+}
+span.value-list-action {
+	top: .2rem;
+}
+
 .value-list-controls {
 	margin-bottom: .5rem;
 	h3 {

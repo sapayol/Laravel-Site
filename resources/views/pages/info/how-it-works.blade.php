@@ -5,7 +5,7 @@
 @stop
 
 @section('main')
-	<article class="large-6 large-centered medium-8 medium-centered small-12 columns">
+	<article class="large-6 medium-8 medium-centered small-12 columns">
 		<p>Every SAPAYOL leather jacket is made for you, and no one else. We tailor each piece according to your measurements and customizations and then ship it directly from the atelier to your door.</p>
 		<ol>
 			<br>

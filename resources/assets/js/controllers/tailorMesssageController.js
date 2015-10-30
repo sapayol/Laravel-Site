@@ -7,9 +7,10 @@ tailorMessageController.controller('tailorMessageCtrl', ['$scope', '$http', '$q'
   $scope.submitTailorMessage = function() {
     sendMessageOnServer().then(function(data) {
         notifyUser.ofSuccessMessage('Message sent to tailor');
-        $scope.tailorMode = false;
-        $scope.taskMode = false;
-        location.reload();
+        $scope.$parent.tailorNote = false;
+        $scope.$parent.taskMode = false;
+        $scope.note = null;
+        $scope.inclusions = null;
       });
   }
 
