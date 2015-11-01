@@ -87,7 +87,7 @@
 
 	<section class="row flex-section">
 		<div class="large-6 medium-6 small-12 columns">
-			<a href="/images/photos/linings/bemberg_twill_bordeaux_close-up.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/linings/bemberg_twill_bordeaux_close-up.jpg" alt=""></a>
+			<a href="/images/photos/linings/bemberg_twill_bordeaux_close-up.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/linings/bemberg_oxford_black_close-up.jpg" alt=""></a>
 		</div>
 		<div class="large-6 medium-6 small-12 columns">
 			<h2>Silky, breathable lining</h2>

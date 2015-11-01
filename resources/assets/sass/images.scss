@@ -17,7 +17,8 @@
 	}
   .filter {
   	z-index: 100;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(88, 80, 80, 0.1) 15%, rgba(88, 80, 80, 0.5) 50%, rgba(229,229,229,0.3) 85%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(88, 80, 80, 0.1) 15%, rgba(88, 80, 80, 0.45) 40%, rgba(88, 80, 80, 0.5) 50%, rgba(88, 80, 80, 0.45) 60%, rgba(88, 80, 80, 0.1) 85%, rgba(0,0,0,0) 100%);
+    // background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(88, 80, 80, 0.1) 15%, rgba(88, 80, 80, 0.5) 50%, rgba(229,229,229,0.3) 85%, rgba(0,0,0,0) 100%);
 		@media #{$large-up} {
 			background: transparent;
 		}
