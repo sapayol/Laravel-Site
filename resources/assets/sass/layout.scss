@@ -21,7 +21,7 @@
 	&.headless-page, &.on-info-page.with-existing-order, &.on-jacket-page, &.with-existing-order, &.four-levels {
 		top: -5.8rem;
 	}
-	&.headless-page.with-existing-order, &.on-jacket-page.with-existing-order {
+	&.four-levels.with-existing-order, &.headless-page.with-existing-order, &.on-jacket-page.with-existing-order {
 		top: -7.9rem;
 	}
 	&.descended {
