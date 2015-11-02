@@ -18,6 +18,8 @@ measurementController.controller('measurementCtrl', ['$scope', '$timeout', funct
 			}, 100);
 		} else if ($scope.measurementForm.$valid) {
 			finalForm.submit();
+		} else {
+			$scope.showFormErorrs = true;
 		}
 	}
 

@@ -22,6 +22,9 @@ input[type="submit"], button[type="submit"] {
 }
 
 .measurement-form label.text-input-label {
+	@media #{$medium-up} {
+		width: 100%;
+	}
 	width: 45%;
 	display: inline-block;
 }
@@ -131,6 +134,13 @@ fieldset {
 
 
 label.checkboxes {
+	padding-top: .1rem;
+	padding-left: .5rem;
+	padding-bottom: 0;
+	border: 1px solid #cccccc;
+	ul {
+		margin-bottom: 0;
+	}
 	li label {
 		font-weight: 200;
 	}

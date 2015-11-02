@@ -6,7 +6,19 @@
 		<div class="mc-field-group">
 			<label for="mce-EMAIL" class="text-input-label">
 				<span class="label-title">Email Address</span>
-				<input name="EMAIL" value="" type="email" id="mce-EMAIL">
+				@if (Auth::user())
+					<input name="EMAIL" value="{{{ Auth::user()->email }}}" type="email" id="mce-EMAIL">
+				@else
+					<input name="EMAIL" value="" type="email" id="mce-EMAIL">
+				@endif
+			</label>
+			<label class="text-left checkboxes">
+				<span class="label-title">Jacket Model</span>
+				<ul class="inline-list">
+					<li><label><input type="checkbox" checked="true" name="inclusions[look]" value=""> Bopgun</label></li>
+					<li><label><input type="checkbox" checked="true" name="inclusions[body-fit]" value=""> Moto</label></li>
+					<li><label><input type="checkbox" checked="true" name="inclusions[product-fit]" value=""> MA1</label></li>
+				</ul>
 			</label>
 		</div>
 

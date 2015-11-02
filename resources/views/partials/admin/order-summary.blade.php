@@ -25,6 +25,6 @@
 		</div>
 	</li>
 	@if ($order->status == 'shipped' || $order->statusIsAfter('shipped'))
-		<li><small class="list-key">Tracking #</small><a href="https://www.google.com/#q={{{ $order->tracking_number }}}">{{{ $order->tracking_number }}}</a></li>
+		<li><small class="list-key">Tracking #</small><a target="_blank" href="https://www.google.com/#q={{{ $order->tracking_number }}}">{{{ $order->tracking_number }}}</a></li>
 	@endif
 </ul>

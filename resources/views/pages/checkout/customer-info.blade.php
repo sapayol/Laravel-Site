@@ -9,7 +9,7 @@
 @stop
 
 @section('main')
-	<div class="large-8 large-push-4 large-uncentered medium-centered medium-8 small-12 columns">
+	<div class="large-4 large-push-4 large-uncentered medium-centered medium-8 small-12 columns">
 		<section id="address">
 			<h2 class="text-center"><small>Please enter your</small> <br>Shipping Address</h2> <a ng-click="changeAddress()" class="right underlined show-for-large-up">Change</a>
 			@include('partials.checkout.address-form')
@@ -20,13 +20,13 @@
 		</section>
 	</div>
 
-	<div class="large-4 large-pull-8 large-uncentered medium-centered medium-10 small-12 columns">
+	<div class="large-4 large-pull-4 large-uncentered medium-centered medium-10 small-12 columns">
 		<section ng-show="paymentInfoSubmitted" id="order-summary">
 			<h2 class="text-center hide-for-large-up">Order Summary</h2>
 			@include('partials.checkout.order-summary')
 		</section>
 	</div>
-
+	<div class="clearfix"></div>
 	<section class="large-6 medium-centered medium-8 small-12 columns text-center" ng-show="paymentInfoSubmitted">
 		<form  action="/orders/{{{ $order->id}}}/process" method="POST">
 			<input type="hidden" name="_token"         value="{!! csrf_token() !!}">

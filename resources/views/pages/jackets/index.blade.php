@@ -36,7 +36,13 @@
 		</ul>
 	<hr>
 	</article>
-	<section class="large-4 medium-6 small-12 medium-centered columns">
+	<div class="clearfix"></div>
+	<section  ng-hide="notifyForm" class="text-center">
+		<a class="underlined" href="" ng-click="notifyForm = true">Notify me when new models arrive</a>
+		<br>
+		<br>
+	</section>
+	<section ng-show="notifyForm" class="large-4 medium-6 small-12 medium-centered columns animated fadeIn">
 		@include('partials.jackets.mailchimp-jacket-form')
 	</section>
 @stop

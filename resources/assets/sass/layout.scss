@@ -65,7 +65,7 @@ main > p {
 section.flex-section {
 	display: flex;
 	flex-direction: column;
-	@media #{$medium-up} { flex-direction: row }
+	@media #{$large-up} { flex-direction: row }
 	div.columns:not(.image-container) {
 		display: flex;
 		flex-direction: column;

@@ -49,10 +49,11 @@
 <article class="large-12 medium-12 small-12 columns">
 
 	<section class="row flex-section">
-		<div class="large-6 medium-6 small-12 columns">
+		<div class="large-6 medium-12 small-12 columns">
 			<a href="/images/photos/leather/lamb_c_black_close-up.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/leather/lamb_c_black_close-up.jpg" alt=""></a>
 		</div>
-		<div class="large-6 medium-6 small-12 columns">
+		<div class="large-6 medium-12 small-12 columns">
+			<br>
 			<h2>Vegetable tanned, chrome&ndash;free, full&ndash;grain leather</h2>
 			<p>All our jackets are made with the most exclusive, vegetable tanned, full&ndash;grain leather. It’s supple, thick, has a warm touch, and a pleasant smell. With good care, it will not crack or bulge for decades but break in and develop a beautiful patina.</p>
 			<p>Our leather is also absolutely free of the chromium salts that can become carcinogenic, found in almost every other leather garment.</p>
@@ -69,12 +70,12 @@
 		<h2 class="text-center">Inside pockets for your valuables</h2>
 		<br>
 		<br>
-		<div class="large-6 medium-6 small-12 columns">
+		<div class="large-6 medium-12 small-12 columns">
 			<a href="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" alt=""></a>
 			<p class="image-caption">Slide your phone into a welted pocket that sits conveniently just inside your jacket, on the left side.</p>
 		</div>
 
-		<div class="large-6 medium-6 small-12 columns">
+		<div class="large-6 medium-12 small-12 columns">
 			<a href="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg" alt=""></a>
 
 			<p class="image-caption">An inside pocket with a zipper on your right chest holds your note book, Knicks tickets, pay check, or passport.</p>

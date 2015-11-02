@@ -9,7 +9,7 @@
 @stop
 
 @section("main")
-	<section class="small-12 medium-12 large-12 columns" id="our-leather-header">
+	<section class="small-12 medium-10 large-8 medium-centered columns" id="our-leather-header">
 		<p>We don&rsquo;t compromise on the quality of our leather.</p>
 		<p>Truly exceptional leather lasts long, doesn&rsquo;t bulge or tear easily and develops a characteristic patina over time. It features a natural, delicate texture that feels warm and supple. Great leather has a pleasant, unobtrusive smell and a rich color that doesn&rsquo;t rub off.</p>
 		<p>From the very start to finish, we choose the most exclusive parts and methods to get all of these characteristics right:</p>
@@ -23,7 +23,7 @@
 	</section>
 
 
-	<section class="small-12 medium-12 large-12 columns" id="leathers">
+	<section class="small-12 medium-10 large-8 medium-centered columns" id="leathers">
 		<h2>The difference between full&ndash;grain, top&ndash;grain, genuine, and bonded leather</h2>
 		<p>The most crucial difference in leather quality comes from the fact that every skin is sliced into two pieces: the outer part (grain&ndash;side) and the inner part (flesh&ndash;side). The outer part is much stronger, has a natural grain, and is much more expensive.</p>
 		<p>So&ndash;called genuine and bonded leather is made of the inner part. It is not meant to last long and requires heavy coating as well as an artificially embossed grain pattern to make it look like leather.</p>
@@ -34,7 +34,7 @@
 		<a href="#our-leather-header" class="under-heading-link underlined">Back to Top</a>
 	</section>
 
-	<section class="small-12 medium-12 large-12 columns" id="tanning-process">
+	<section class="small-12 medium-10 large-8 medium-centered columns" id="tanning-process">
 		<h2>Chrome vs. vegetable tanning and the importance of a world&ndash;class tannery</h2>
 		<p>Animal skin needs to treated chemically to be turned into durable, flexible leather, otherwise, it would decompose. The two most common methods to do this are chrome tanning and vegetable tanning.</p>
 		<p>Chrome tanning uses chromium salts as the main agent. Almost all leather is made through this process today because it is much more simple than vegetable tanning. If not done properly, there is a danger that the chromium salts change nature and become carcinogenic, although strict supervision can almost eliminate this risk. Nevertheless, the chromium salts are not biodegradable.</p>
@@ -46,7 +46,7 @@
 		<a href="#our-leather-header" class="under-heading-link underlined">Back to Top</a>
 	</section>
 
-	<section class="small-12 medium-12 large-12 columns" id="animal-treatment">
+	<section class="small-12 medium-10 large-8 medium-centered columns" id="animal-treatment">
 		<h2>Healthy animals from humane sources</h2>
 		<p>Apart from the very fundamental difference between bovine skin and sheep skin for example, or the fact that younger animals have more flexible skin than older ones, the health of a skin is also directly affected by the general health of its animal.</p>
 		<p>The meat industry is very broken and an incredible amount of animals are being held under extremely poor conditions. We don&rsquo;t support that and strive very hard to only use leather from humane and healthy sources.</p>
@@ -54,7 +54,7 @@
 		<a href="#our-leather-header" class="under-heading-link underlined">Back to Top</a>
 	</section>
 
-	<section class="small-12 medium-12 large-12 columns">
+	<section class="small-12 medium-8 large-6 medium-centered columns">
 		@if ($jacket)
 			<a href="/jackets/{{{ $jacket }}}" class="button expand">Go Back To Your Jacket</a>
 		@else

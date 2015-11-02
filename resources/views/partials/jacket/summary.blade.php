@@ -1,4 +1,4 @@
-<section class="small-12 medium-8 medium-centered large-8 columns jacket-summary">
+<section class="small-12 medium-9 large-6 medium-centered columns jacket-summary">
 	<h1 class="with-subheading">{{{ $jacket->name }}}</h1>
 	<span class="thin large-price"><small>US </small> ${{{ number_format($jacket->price) }}}</span>
 	<p>
@@ -8,7 +8,7 @@
 	<div class="text-center">
 		<a href="{!! route('jackets.look', $jacket->model) !!}" class="button expand-for-small animated slideInUp call-to-action">Design Yours Now</a>
 	</div>
-	<a href="{!! route('jackets.look', $jacket->model) !!}" class="button  stick-to-bottom animated slideInUp expand call-to-action">
+	<a href="{!! route('jackets.look', $jacket->model) !!}" class="button stick-to-bottom animated slideInUp expand call-to-action">
 		Design yours now
 	</a>
 </section>

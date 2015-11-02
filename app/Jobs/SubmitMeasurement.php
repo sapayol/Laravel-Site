@@ -31,6 +31,10 @@ class SubmitMeasurement extends Job implements SelfHandling
      */
     public function handle()
     {
+
+        foreach ($this->measurements as $measurement) {
+            str_replace(',', '.', $measurement);
+        }
         if (!$this->order->bodyMeasurements) {
             Measurement::create(array_merge($this->measurements, ['order_id' => $this->order->id, 'type' => 'body']));
         } elseif ($this->measurements) {
