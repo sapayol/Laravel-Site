@@ -17,24 +17,21 @@
 			</form>
 		</li>
 		@foreach ($order->bodyMeasurements->measurement_names as $measurement)
-			@if ($measurement == 'note')
-				<li><br></li>
+			@if ($measurement != 'note')
+				<li>
+					<span class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</span>
+					@if ($order->bodyMeasurements->$measurement)
+						<span class="list-value">
+							@if ($order->bodyMeasurements->units == 'in')
+								<strong decimal-to-fraction="{{{ $order->bodyMeasurements->$measurement }}}">{{{ $order->bodyMeasurements->$measurement }}}</strong> "
+							@else
+								<strong>{{{ $order->bodyMeasurements->$measurement != round($order->bodyMeasurements->$measurement) ?  round($order->bodyMeasurements->$measurement, 1) : round($order->bodyMeasurements->$measurement) }}}</strong> <small>cm</small>
+							@endif
+						</span>
+						<a class="underlined" href="/orders/{{{ $order->id }}}/fit/{{{ $measurement }}}" title=""><span>Change</span></a>
+					@endif
+				</li>
 			@endif
-			<li>
-				<span class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</span>
-				@if ($order->bodyMeasurements->$measurement)
-					<span class="list-value">
-						@if ($measurement == 'note')
-							<em>{{{ $order->bodyMeasurements->$measurement }}}</em>
-						@elseif ($order->bodyMeasurements->units == 'in')
-							<strong decimal-to-fraction="{{{ $order->bodyMeasurements->$measurement }}}">{{{ $order->bodyMeasurements->$measurement }}}</strong> "
-						@else
-							<strong>{{{ $order->bodyMeasurements->$measurement != round($order->bodyMeasurements->$measurement) ?  round($order->bodyMeasurements->$measurement, 1) : round($order->bodyMeasurements->$measurement) }}}</strong> <small>cm</small>
-						@endif
-					</span>
-					<a class="underlined" href="/orders/{{{ $order->id }}}/fit/{{{ $measurement }}}" title=""><span>Change</span></a>
-				@endif
-			</li>
 		@endforeach
 	</ul>
 </div>

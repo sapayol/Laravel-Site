@@ -1,9 +1,8 @@
 <?php $min = config('measurements.' . $step . '.min.' . $order->bodyMeasurements->units); ?>
 <?php $max = config('measurements.' . $step . '.max.' . $order->bodyMeasurements->units); ?>
 
-<article>
+<div>
 	<h3>@yield('title')</h3>
-	<br>
 	<div class="player">
     <video poster="/images/video-posters/measurements/{{{ $step }}}.png" controls crossorigin preload="none">
       <source src="/videos/measurements/{{{ $step }}}.webm" type="video/webm">
@@ -16,4 +15,4 @@
 		@yield('instructions')
 		<em>Usually between <strong>{{{ $min }}}</strong>  and <strong>{{{ $max }}}</strong> <small>{{{ $order->bodyMeasurements->units }}}</small></em>
 	</div>
-</article>
+</div>

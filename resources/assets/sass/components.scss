@@ -26,17 +26,18 @@
 
 
 .measurement-tracker {
-	margin-top: 1rem;
+	// margin-top: 1rem;
 	margin-bottom: 0;
 	form button {
 		margin-bottom: 0;
-		font-size: .9rem;
+		font-size: 1rem;
 	}
 }
 
 
 .alert-box {
 	font-size: .9rem;
+	font-weight: 200;
 	a.close {
 		opacity: .7;
 	}

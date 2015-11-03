@@ -72,3 +72,9 @@ section.flex-section {
 		justify-content: center;
 	}
 }
+
+.reverse-with-flex {
+	display: flex;
+	flex-direction: column;
+	@media #{$large-up} { 	flex-direction: column-reverse; }
+}

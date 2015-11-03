@@ -1,10 +1,15 @@
+
 <form action="/orders/{{{ $order->id}}}/fit" method="POST" name="finalForm" class="hidden">
 	<input type="hidden" name="_token" value="{!! csrf_token() !!}">
 	<input type="hidden" name="measurements[{{{ $step }}}]" value="@{{ measurement }}">
 </form>
 <form ng-submit="submitMeasurement('measurements[{{{ $step }}}]')" name="measurementForm" class="measurement-form">
 	@yield('additional_copy')
-	<div class="alert alert-box" ng-if="showFormErorrs">Invalid measurement. Enter measurements as a decimal: 39.3 (not 39 &frac14;)</div>
+	<div class="alert alert-box animated fadeIn" ng-if="showFormErorrs">
+	- Enter measurements as a decimal.<br>
+	<small>&nbsp;&nbsp; For example: 39.3 (not 39 &frac14;)</small> <br>
+	- Don’t enter any letters or hyphens.
+	</div>
 	@if ($step == 'height' && $order->bodyMeasurements->units == 'in')
 		<fieldset>
 			<legend>Height</legend>
@@ -21,6 +26,8 @@
 		<br>
 		<label for="{{{ $step }}}" class="text-input-label">
 			<span class="left label-title">@yield('title')</span>
+			<span class="right alert animated shake" ng-if="showFormErorrs && measurement !== ''">Invalid measurement</span>
+			<span class="right alert animated shake" ng-if="displayRequiredError">Measurement required</span>
 			<input name="measurements[{{{ $step }}}]" id="{{{ $step }}}" type="number" placeholder="00.00" ng-maxlength="7" {{{ $step=='height' ? 'max="10"' : '' }}} step="0.01" ng-model="measurement" required ng-change="change(measurement)" ng-value="{{{ $order->bodyMeasurements->$step }}}">
 			<span class="input-units">{{{ $order->bodyMeasurements->units }}}</span>
 		</label>

@@ -9,6 +9,8 @@ input[type="search"], input[type="tel"], input[type="color"] {
 form {
 	span.alert {
 		color: $alert-color;
+    position: absolute;
+    right: 0.5rem;
 	}
 }
 
@@ -23,9 +25,9 @@ input[type="submit"], button[type="submit"] {
 
 .measurement-form label.text-input-label {
 	@media #{$medium-up} {
-		width: 100%;
 	}
-	width: 45%;
+		width: 100%;
+	// width: 45%;
 	display: inline-block;
 }
 

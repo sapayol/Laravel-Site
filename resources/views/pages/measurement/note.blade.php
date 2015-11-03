@@ -20,7 +20,13 @@
 			</label>
 
 		  <input type="hidden" name="_token" value="{{{ csrf_token() }}}">
-			<button type="submit" class="black button expand">Submit Note</button>
+				<div class="text-center">
+				<button type="submit" class="black button expand">Submit Note</button>
+				<br class="hide-for-small-only">
+				@if ($order->status == 'started')
+					<a href="/orders/{{{ $order->id }}}/checkout" class="under-button-link underlined">Skip Note</a>
+				@endif
+			</div>
 		</form>
 		@include('partials.measurement.tracker')
 	</section>

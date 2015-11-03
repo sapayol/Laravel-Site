@@ -6,15 +6,15 @@ measurementController.controller('measurementCtrl', ['$scope', '$timeout', funct
 	$scope.measurementFraction = null;
 
 	$scope.submitMeasurement = function(step) {
-		$scope.displayMinMaxError = false;
+		$scope.displayRequiredError = false;
 		if ($scope.step == 'height' && $scope.units === 'in') {
 			$scope.measurement = (parseInt($scope.feet * 12)) + parseInt($scope.inches);
 			$timeout(function(){
 				finalForm.submit();
 			}, 100);
-		} else if ($scope.measurementForm[step].$error.min || $scope.measurementForm[step].$error.max ) {
+		} else if ($scope.measurementForm[step].$error.required) {
 			$timeout(function(){
-				$scope.displayMinMaxError = true;
+				$scope.displayRequiredError = true;
 			}, 100);
 		} else if ($scope.measurementForm.$valid) {
 			finalForm.submit();

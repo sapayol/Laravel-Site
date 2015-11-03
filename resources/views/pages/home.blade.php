@@ -67,7 +67,7 @@
 			<a class="underlined" href="/who-we-are#best-materials">Find Out More</a>
 		</article>
 		<article class="large-6 medium-6 small-12 columns">
-			<a href="/who-we-are#respect-nature" class="image-link"><img class="sidekick-image" src="/images/photos/other/respect-for-nature.jpg" alt=""></a>
+			<a href="/who-we-are#respect-nature" class="image-link"><img class="sidekick-image" src="/images/photos/other/respect-for-people.jpg" alt=""></a>
 			<h2 class="thin">Respect for People and Nature</h2>
 			<p>
 				A deep concern for work conditions, our environment, and animals guides every decision we take.<br>

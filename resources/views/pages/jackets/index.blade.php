@@ -38,7 +38,7 @@
 	</article>
 	<div class="clearfix"></div>
 	<section  ng-hide="notifyForm" class="text-center">
-		<a class="underlined" href="" ng-click="notifyForm = true">Notify me when new models arrive</a>
+		<a class="underlined" href="" ng-click="notifyForm = true">Get notified when new models arrive</a>
 		<br>
 		<br>
 	</section>

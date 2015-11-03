@@ -8,5 +8,4 @@
 	</div>
 	<br>
 	<a class="video-caption underlined" ng-show="!measurementsVisible" ng-click="measurementsVisible = !measurementsVisible">Measurements in the images &amp; video </a>
-	<hr class="thin">
 </section>

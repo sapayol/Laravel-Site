@@ -1,9 +1,9 @@
 <div class="row collapse medium-uncollapse order-summary">
-	<div class="large-12 medium-12 small-12 columns">
+	<div class="large-4 medium-12 small-12 columns">
 		<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg">
+		{{-- <h2>Your {{{ $order->jacket->name }}}</h2> --}}
 	</div>
-	<h2 class="large-12 medium-12 small-12 columns">Your {{{ $order->jacket->name }}}</h2>
-	<div class="large-12 medium-6 small-12 columns">
+	<div class="large-4 medium-6 small-12 columns">
 		<h3 class="thin left">Look</h3>
 		<a href="/jackets/{{{ $order->jacket->model }}}/look" class="right underlined">Change</a>
 		<div class="clearfix"></div>
@@ -15,7 +15,7 @@
 		</ul>
 	</div>
 
-	<div class="large-12 medium-6 small-12 columns">
+	<div class="large-4 medium-6 small-12 columns">
 		<h3 class="thin left">Fit</h3>
 		<div class="clearfix"></div>
 		<ul class="no-bullet value-list">
