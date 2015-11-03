@@ -26,7 +26,7 @@
       <li class="{{{ $action == 'pages.who-we-are' ? 'current' : ''}}}"><a href="/who-we-are">Who We Are</a></li>
       <li class="{{{ $action == 'pages.how-it-works' ? 'current' : ''}}}"><a href="/how-it-works">How It Works</a></li>
       @if ($currentuser && $currentuser->orders->last() && $currentuser->orders->last()->status == 'started')
-        @if ((strpos($action,'orders') !== 0 && strpos($action,'fit') !== 0) && $action !== 'users.show')
+        @if ((strpos($action,'orders') !== 0 && strpos($action,'fit') !== 0) && $action !== 'users.show' || $action = 'jackets.index')
           <li class="main-item"><a href="/orders/{{{ $currentuser->orders->last()->id }}}">Your Order</a></li>
         @endif
       @endif
@@ -36,5 +36,5 @@
 
 
 
-<div class="@yield('page_wrap_class') page-wrap {{{ strpos($action, 'pages') === 0 ? 'on-info-page' : '' }}} {{{ Auth::user() && Auth::user()->unfinishedOrders->count() > 0 || strpos($action, 'orders') === 0  ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
+<div class="@yield('page_wrap_class') page-wrap {{{ strpos($action, 'pages') === 0 ? 'on-info-page' : '' }}} {{{ Auth::user() && Auth::user()->unfinishedOrders->count() > 0 && strpos($action, 'orders') === 0  ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
 
