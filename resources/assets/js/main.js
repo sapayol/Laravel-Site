@@ -52,7 +52,8 @@
       var height = $(window).height();
       var unitHeight = parseInt(height) + 'px';
       $('.hero-image-container').css('height',unitHeight);
-    }();
+    };
+    scaleImageContainer();
   });
 
   String.prototype.capitalize = function() {
