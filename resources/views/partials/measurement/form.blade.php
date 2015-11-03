@@ -7,7 +7,7 @@
 	@yield('additional_copy')
 	<div class="alert alert-box animated fadeIn" ng-if="showFormErorrs">
 	- Enter measurements as a decimal.<br>
-	<small>&nbsp;&nbsp; For example: 39.3 (not 39 &frac14;)</small> <br>
+	<small>&nbsp;&nbsp; For example: 39.3 (not 39 &frac14; or 39,3)</small> <br>
 	- Don’t enter any letters or symbols.
 	</div>
 	@if ($step == 'height' && $order->bodyMeasurements->units == 'in')
