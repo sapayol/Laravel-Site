@@ -18,8 +18,8 @@
 	h2 {
 		float: right;
 		position: absolute;
-		// top: -2.2rem;
-		margin-top: -2rem;
+		margin-top: -1.6rem;
+		@media #{$medium-up} { margin-top: -1.45rem; }
 		white-space: nowrap;
 		z-index: 2000;
 		right: 0;
