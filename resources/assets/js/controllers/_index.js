@@ -8,7 +8,7 @@ var controllers = angular.module('controllers', [
 	'editUserController',
 	'globalController',
 	'jacketController',
-	'homeController',
 	'lookController',
-	'measurementController'
+	'measurementController',
+	'videoController'
 ]);

@@ -29,7 +29,7 @@
 @section('main')
 
 	<section class="small-12 medium-12 large-12 columns">
-		<div class="player">
+		<div class="player" ng-controller="VideoCtrl">
 		  <video poster="/images/video-posters/home_page.jpg" controls crossorigin preload="none">
 		    <source src="/videos/home_page.webm" type="video/webm">
 		    <source src="/videos/home_page.mp4"  type="video/mp4">
