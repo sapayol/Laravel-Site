@@ -74,6 +74,9 @@
 			</p>
 			<a class="underlined" href="/who-we-are#respect-nature">Find Out More</a>
 		</article>
+
+		<div class="clearfix"></div>
+
 		<section class="large-4 medium-6 small-12 medium-centered columns">
 			<a href="/jackets" class="button hollow expand call-to-action">Get a Jacket Now</a>
 		</section>
