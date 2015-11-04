@@ -19,18 +19,6 @@ label {
 	color: #676666;
 }
 
-input[type="submit"], button[type="submit"] {
-	// margin-top: 1rem;
-}
-
-.measurement-form label.text-input-label {
-	@media #{$medium-up} {
-	}
-		width: 100%;
-	// width: 45%;
-	display: inline-block;
-}
-
 label.text-input-label {
 	position: relative;
 	// margin-bottom: 1rem;
@@ -76,26 +64,38 @@ label.text-input-label {
 	}
 }
 
+.measurement-form {
+	label.text-input-label {
+		width: 100%;
+		display: inline-block;
+	}
+	fieldset.label-row {
+		label {
+			width: 47%;
+			display: inline-block;
+		}
+	}
+}
 
-fieldset.unit-choice {
-	input, label:not(:first-child) {
-		padding: .25rem;
-		position: relative;
-		top: -.3rem;
-	}
-	label {
-		margin-right: 2rem;
-	}
-	width: 80%;
-}
-fieldset label:not(:first-child) {
-	margin-left: .3rem;
-}
 
 fieldset {
 	padding-left: .5rem;
 	padding-right: .5rem;
 	padding-top: .1rem;
+	label:not(:first-child) {
+		margin-left: .3rem;
+	}
+	&.unit-choice {
+		input, label:not(:first-child) {
+			padding: .25rem;
+			position: relative;
+			top: -.3rem;
+		}
+		label {
+			margin-right: 2rem;
+		}
+		width: 80%;
+	}
 }
 
 
