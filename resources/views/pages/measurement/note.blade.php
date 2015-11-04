@@ -24,7 +24,7 @@
 				<button type="submit" class="black button expand">Submit Note</button>
 				<br class="hide-for-small-only">
 				@if ($order->status == 'started')
-					<a href="/orders/{{{ $order->id }}}/checkout" class="under-button-link underlined">Skip Note</a>
+					<a href="/orders/{{{ $order->id }}}/checkout" class="under-button-link underlined">Skip this step</a>
 				@endif
 			</div>
 		</form>
