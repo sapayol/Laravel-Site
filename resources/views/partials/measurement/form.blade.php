@@ -32,9 +32,11 @@
 			<span class="input-units">{{{ $order->bodyMeasurements->units }}}</span>
 		</label>
 		<br>
-		<div ng-if="measurementFraction.length > 0">
-			We will round this to <strong>@{{ measurementFraction }}</strong> <small>{{{ $order->bodyMeasurements->units }}}</small>
-		</div>
+		@if ($order->bodyMeasurements->units == 'in')
+			<div ng-if="measurementFraction.length > 0">
+				We will round this to <strong>@{{ measurementFraction }}</strong> <small>{{{ $order->bodyMeasurements->units }}}</small>
+			</div>
+		@endif
 	@endif
 	<div class="text-center">
 		<button type="button" ng-click="submitMeasurement('measurements[{{{ $step }}}]')" class="black small button expand">Submit Measurement <span class="chevron chevron--right"></span></button>
