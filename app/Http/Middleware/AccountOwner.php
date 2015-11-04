@@ -47,7 +47,6 @@ class AccountOwner
         if ($this->auth->user()->id == $user_id) {
             return $next($request);
         } else {
-            Session::flash('message', 'You can only access your own profile.');
             return redirect()->route('pages.home');
         }
 
