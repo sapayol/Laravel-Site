@@ -11,7 +11,7 @@
 	Don’t enter any letters or symbols.
 	</div>
 	@if ($step == 'height' && $order->bodyMeasurements->units == 'in')
-		<fieldset>
+		<fieldset class="label-row">
 			<legend>Height</legend>
 			<label for="height-feet" class="text-input-label">
 				<span class="label-title">Feet</span>
