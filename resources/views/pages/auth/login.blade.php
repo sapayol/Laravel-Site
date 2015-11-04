@@ -24,7 +24,7 @@
 			</label>
 
 			<div class="text-center">
-				<input class="button expand animated slideInDown" type="submit" value="Login" ng-hide="resetMode">
+				<input class="button expand animated slideInDown" type="submit" value="Log in" ng-hide="resetMode">
 				<input class="button expand animated slideInUp" type="button" ng-click="resetPassword()" value="Request password reset" ng-hide="!resetMode">
 				<a ng-click="resetMode = true" class="underlined under-button-link" ng-hide="resetMode">Reset my password</a>
 				<a ng-click="resetMode = false" class="underlined under-button-link animated slideInUp" ng-hide="!resetMode">Try logging in again</a>
