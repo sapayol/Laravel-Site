@@ -3,3 +3,4 @@
 		@yield('carousel_images')
 	</div>
 </section>
+<div class="clearfix"></div>
