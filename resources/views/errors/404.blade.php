@@ -2,7 +2,6 @@
 
 
 @section('main')
-
 	<section class="large-12 medium-12 small-12 columns">
 		<h1>Page not found.</h1>
 		<p>Looks like something went wrong. Please make sure the URL in the address bar is correct.</p>
@@ -14,5 +13,4 @@
 			<a href="/home" class="button expand">Return to SAPAYOL.com</a>
 		</div>
 	</section>
-
 @stop

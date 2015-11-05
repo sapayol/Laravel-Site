@@ -1,8 +1,5 @@
-<?php $action = Request::route() !== null ? Request::route()->getAction()['as'] : null ?>
-<?php $uri = Request::route()->getUri(); ?>
-
 <header class="row">
-	<h1 class="page-title {{{ ((strpos($action,'orders') === 0 || strpos($action, 'fit') === 0)&& $action != 'orders.complete') || $action === 'jackets.look'  || $action === 'jackets.show' ? 'with-breadcrumbs' : '' }}}">
+	<h1 class="page-title {{{ ((strpos($action,'orders') === 0 || strpos($action, 'fit') === 0) && $action != 'orders.complete' && $action != 'orders.show') || $action === 'jackets.look'  || $action === 'jackets.show' ? 'with-breadcrumbs' : '' }}}">
 	  @if ($action == 'pages.who-we-are')
 			<a ng-click="displayMenu = false">Who We Are</a>
 		@elseif ($action == 'pages.how-it-works')
@@ -13,9 +10,11 @@
 			<a ng-click="displayMenu = false">Terms of Service</a>
 		@elseif ($action == 'users.show')
 			<a ng-click="displayMenu = false">Your Profile</a>
-		@elseif (strpos($uri, 'login'))
+		@elseif (strpos($current_uri, 'login'))
 			<a ng-click="displayMenu = false">Login</a>
-		@elseif (strpos($uri, 'reset'))
+		@elseif (strpos($current_uri, 'register'))
+			<a ng-click="displayMenu = false">Register</a>
+		@elseif (strpos($current_uri, 'reset'))
 			<a ng-click="displayMenu = false">Password Reset</a>
 		@elseif ($action == 'jackets.index')
 			<a ng-click="displayMenu = false">Our Jackets</a>
@@ -27,6 +26,8 @@
 			<a ng-click="displayMenu = false">Order: {{{ $order->id }}}</a>
 		@elseif ($action == 'admin.edit-order')
 			<a ng-click="displayMenu = false">Edit Order: {{{ $order->id }}}</a>
+		@elseif ($action == 'orders.show')
+		  Your Order
 		@elseif ($action == 'jackets.show')
 			<a href="/jackets" class="underlined">Our Jackets</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
@@ -37,8 +38,6 @@
 			<a href="/jackets/{{{ $jacket->model }}}" class="underlined">{{{ $jacket->name }}}</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 		  Look
-		@elseif ($action == 'orders.show')
-		  Your Order
 		@elseif ($action == 'fit.next' || $action == 'fit.show')
 			<a href="/orders/{{{ $order->id }}}" class="underlined">Your Order</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
@@ -64,32 +63,3 @@
 	  @endif
 	</h1>
 </header>
-
-@if (Session::has('message'))
-	<div class="row">
-		<div ng-hide="hideAlert" data-alert class="alert-box highlight animated shake" ng-init="hideAlert = false">
-    	{{ Session::get('message') }}
-    	<a href="#" class="close" ng-click="hideAlert = true">&times;</a>
-		</div>
-	</div>
-@endif
-
-@if (Session::has('success'))
-	<div class="row">
-		<div ng-hide="hideAlert" data-alert class="alert-box highlight animated bounceIn" ng-init="hideAlert = false">
-    	{{ Session::get('success') }}
-    	<a href="#" class="close" ng-click="hideAlert = true">&times;</a>
-		</div>
-	</div>
-@endif
-
-@if (count($errors) > 0)
-	<div ng-hide="hideAlert" data-alert class="alert-box alert animated shake" ng-init="hideAlert = false">
-		<ul class="no-bullet">
-			@foreach ($errors->all() as $error)
-				<li><small>{{ $error }}</small></li>
-			@endforeach
-		</ul>
-	  <a href="#" class="close" ng-click="hideAlert = true">&times;</a>
-	</div>
-@endif

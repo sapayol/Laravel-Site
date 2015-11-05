@@ -31,17 +31,4 @@ class JacketsController extends Controller {
 
 		return view('pages.jackets.look', ['jacket' => $jacket]);
 	}
-
-	public function fit($model, Request $request)
-	{
-		$jacket = Jacket::where('model', '=', $model)->first();
-
-		return view('pages.jackets.fit', [
-			'jacket'         => $jacket,
-			'leather_type'   => $request->leather_type,
-			'leather_color'  => $request->leather_color,
-			'lining_color'   => $request->lining_color,
-			'hardware_color' => $request->hardware_color
-		]);
-	}
 }

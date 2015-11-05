@@ -30,8 +30,9 @@ class AuthController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Request $request)
     {
+        parent::__construct($request);
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 

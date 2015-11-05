@@ -10,7 +10,8 @@ class AdminController extends Controller {
 
 	private $mailer;
 
-	function __construct(OrderMailer $mailer) {
+	function __construct(OrderMailer $mailer, Request $request) {
+		parent::__construct($request);
 		$this->mailer = $mailer;
 	}
 
