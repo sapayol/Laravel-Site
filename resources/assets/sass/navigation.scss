@@ -9,8 +9,7 @@ nav.primary-nav {
 		border: none;
 		margin-bottom: .5rem;
 		img {
-			width: 10rem;
-			@media #{$tiny-only} { width: 7em; }
+			width: 7rem;
 		}
 	}
 	.menu-button {
