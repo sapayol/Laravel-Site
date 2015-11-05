@@ -1,6 +1,7 @@
 @include('partials.global._head')
 @include('partials.global.primary-nav')
 @include('partials.global.header')
+@include('partials.global.messages')
 
 <main class="row" ng-controller="jacketCtrl">
 	@include('partials.jacket.image-carousel')
