@@ -15,8 +15,6 @@ nav.primary-nav {
 	}
 	.menu-button {
 		@media #{$medium-up} { display: none; }
-		color: $black;
-		border-bottom: 2px solid $primary-color;
 		font-size: 1rem;
 		line-height: 1;
 		font-weight: 200;
@@ -35,37 +33,24 @@ nav.primary-nav {
 		&.current {
 			display: none;
 		}
-		&.main-item a {
-			border-color: $highlight-color;
-		}
 	}
 	a {
-		color: $black;
-		border-bottom: 2px solid $primary-color;
 		font-size: 1rem;
 		font-weight: 200;
 		text-transform: uppercase;
 		margin-bottom: .5rem;
 		letter-spacing: .03em;
 	}
-	.pipe {
-		@media #{$large-up} {
-			display: inline-block;
+	.secondary-nav {
+		position: absolute;
+		right: 1rem;
+		top: 3.3rem;
+		 a {
+		 	display: block;
+			text-transform: none;
+			font-size: .8rem;
+			margin-bottom: 0;
 		}
-		display: none;
-		margin-left: 1rem;
-		margin-right: .8rem;
-		position: relative;
-		top: 5px;
-		font-size: 1.2rem;
-		line-height: 1;
-	}
-	small a {
-		text-transform: none;
-		font-size: .8rem;
-		position: relative;
-		top: 4px;
-		border-bottom: 1px solid $primary-color;
 	}
 	@media #{$medium-up} {
 		z-index: 9999;
@@ -83,13 +68,12 @@ nav.primary-nav {
 			display: inline-block;
 		}
 	}
-}
-
-
-@media #{$large-up} {
-	nav.primary-nav {
+	@media #{$large-up} {
 		padding-top: 1rem;
-		padding-bottom: 2rem;
+		padding-bottom: 1rem;
+		hr {
+			margin: 0;
+		}
 		.clearfix {
 			display: none;
 		}
@@ -103,17 +87,22 @@ nav.primary-nav {
 		}
 		li {
 			display: inline-block;
-			&:last-child  a {
-				margin-right: 0;
-			}
 			a {
-				margin-right: 1rem;
 				font-size: 1rem;
 				line-height: 1;
+				margin-left: 1rem;
 			}
+			&:first-child  a {
+				margin-left: 0;
+			}
+		}
+		.secondary-nav {
+			top: 2.5rem;
 		}
 	}
 }
+
+
 
 #terms-nav {
 	& > ul > li {

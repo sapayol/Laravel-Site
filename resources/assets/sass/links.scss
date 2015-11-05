@@ -4,19 +4,35 @@ a {
 	&:hover, &:focus {
 		color: darken($primary-color, 15%);
 	}
+	&.underlined {
+		color: black;
+		border-bottom: 2px solid $primary-color;
+		line-height: 1;
+		&.small {
+			border-width: 1px;
+		}
+	}
+  &.under-button-link {
+		position: relative;
+		top: -1rem;
+	}
+  &.under-heading-link {
+		margin-top: 0;
+		font-size: .9rem;
+	}
+  &.image-link {
+		display: block;
+		text-align: center;
+	}
+	&.highlight-color {
+		border-color: $highlight-color;
+	}
 }
 
-a.under-button-link {
-	position: relative;
-	top: -1rem;
+a.underlined small, small a.underlined {
+	border-width: 1px;
 }
 
-a.under-heading-link {
-	margin-top: 0;
-	font-size: .9rem;
-}
 
-a.image-link {
-	display: block;
-	text-align: center;
-}
+
+
