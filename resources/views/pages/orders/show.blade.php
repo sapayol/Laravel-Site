@@ -1,7 +1,7 @@
 @extends('layouts/default')
 
-@section('page_wrap_class')
-	header-page
+@section('title')
+  Your Order
 @stop
 
 @section('main')

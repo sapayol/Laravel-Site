@@ -1,7 +1,7 @@
 @extends('layouts/default')
 
 @section('title')
-	Fit | Units
+	Fit | Note
 @stop
 
 @section('main')

@@ -4,14 +4,6 @@
   Your Profile
 @stop
 
-@section('page_wrap_class')
-  nav-item-page
-@stop
-
-@section('header')
-	<h1>Your Profile</h1>
-@stop
-
 @section('main')
 	<section class="large-12 medium-12 small-12 columns">
 		<h4>{{{ $user->name }}}</h4>
@@ -50,6 +42,5 @@
 			</table>
 		</section>
 	@endif
-
 @stop
 

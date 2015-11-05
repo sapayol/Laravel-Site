@@ -21,7 +21,6 @@ label {
 
 label.text-input-label {
 	position: relative;
-	// margin-bottom: 1rem;
 	span.label-title {
 		position: absolute;
 		top: .1rem;
@@ -54,15 +53,15 @@ label.text-input-label {
     height: 2.8rem;
     padding-bottom: 0;
 	}
-	// textarea {
-	//   padding-top: 1.3rem;
-	//   font-size: 1rem;
-	//   font-weight: 200;
-	// }
+	&:not(:last-child) input {
+		border-bottom: none;
+	}
 	&:last-child {
 		top: -1px;
 	}
 }
+
+
 
 .measurement-form {
 	label.text-input-label {
