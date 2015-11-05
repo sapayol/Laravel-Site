@@ -11,7 +11,6 @@
 						 ng-required="true"
 						 ng-disabled="paymentInfoDisabled"
 						 payments-format="card"
-						 payments-validate="card"
 						 payments-type-model="type">
 						<i class="fa fa-cc-@{{type}} input-icon" ng-if="paymentInfoForm.number.$viewValue && paymentInfoForm.number.$dirty"></i>
 		</label>
@@ -27,7 +26,6 @@
 						 ng-model="expiry"
 						 ng-required="true"
 						 ng-disabled="paymentInfoDisabled"
-						 payments-validate="expiry"
 						 payments-format="expiry"
 						 placeholder="MM/YYYY">
 		</label>
@@ -43,15 +41,13 @@
 						 ng-required="true"
 						 ng-disabled="paymentInfoDisabled"
 						 data-stripe="cvc"
-						 payments-validate="cvc"
 						 payments-format="cvc">
 		</label>
 	</div>
 
 	<div class="text-center">
-		<br>
 		<button ng-if="paymentInfoSubmitted" class="button expand" type="submit"  ng-hide="paymentInfoDisabled">Update Payment Info<span class="chevron chevron--right"></span></button>
-		<button ng-if="!paymentInfoSubmitted" class="button expand" type="submit"  ng-hide="paymentInfoDisabled">Proceed To Order Summary<span class="chevron chevron--right"></span></button>
+		<button ng-if="!paymentInfoSubmitted" class="button expand" type="submit"  ng-hide="paymentInfoDisabled">Submit Payment Info<span class="chevron chevron--right"></span></button>
 		<em class="hide-for-large-up">Your card will not be charged until you confirm your order</em>
 		<br>
 	</div>

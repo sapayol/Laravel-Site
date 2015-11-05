@@ -5,6 +5,11 @@
 		<input id="name" name="name" type="text" ng-model="address.name" ng-required="true" ng-disabled="addressDisabled">
 	</label>
 
+	<label for="email" class="text-input-label">
+		<span class="label-title">Email</span>
+		<input id="email" name="email" type="text" disabled value="{{{ $order->user->email }}}">
+	</label>
+
 	<label for="address1" class="text-input-label">
 		<span class="label-title">Address 1</span>
 		<span class="right" ng-if="showAddressErorrs && addressForm.address1.$invalid">Required</span>
@@ -34,7 +39,7 @@
 		<input id="province" name="province" type="text" ng-model="address.province" ng-required="true" ng-disabled="addressDisabled">
 	</label>
 
-	<label for="country" class="text-input-label">
+	<label for="country" class="text-input-label retain-border">
 		<span class="label-title">Country</span>
 		<span class="right" ng-if="showAddressErorrs && addressForm.country.$invalid">Required</span>
 		<input id="country" name="country" type="text" ng-model="address.country" ng-required="true" ng-disabled="addressDisabled">

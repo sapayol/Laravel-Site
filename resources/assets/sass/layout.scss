@@ -37,6 +37,11 @@ main > section, main > article, main > section > article, main > article > secti
 	}
 }
 
+.columns > section {
+	padding: 1rem 0 2rem 0;
+	@media #{$medium-up} { padding: 1.5rem 0 2.5rem 0}
+}
+
 section.panel {
 	margin-bottom: 2rem;
 	@media #{$medium-up} { margin-bottom: 2.5rem 0}

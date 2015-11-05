@@ -1,6 +1,6 @@
 var checkoutController = angular.module('checkoutController', []);
 
-checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$document', 'notifyUser', 'Session',  function($scope, $http, $q, $document, notifyUser, Session) {
+checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$document', 'notifyUser', 'Session', '$timeout', function($scope, $http, $q, $document, notifyUser, Session, $timeout) {
 
 	$scope.card         = typeof(sapayol.session['card'])         !== 'undefined' ? sapayol.session['card'] : {};
 	$scope.stripe_token = typeof(sapayol.session['stripe_token']) !== 'undefined' ? sapayol.session['stripe_token'] : {};
@@ -18,6 +18,11 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 			if (saved_card_info) {
 				$scope.paymentInfoSubmitted = true;
 				$scope.paymentInfoDisabled  = true;
+				$timeout(function(){
+					$('#number').val('XXXX XXXX XXXX ' + $scope.card.last4);
+					$('#expiry').val($scope.card.exp_month + '/' + $scope.card.exp_year);
+					$('#cvc').val('XXX');
+				}, 300);
 				$document.scrollToElement($('#order-summary'), 80, 500);
 			} else {
 				$document.scrollToElement($('#address'), 80, 500);
@@ -32,7 +37,11 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 	$scope.changePaymentInfo = function() {
 		$document.scrollToElement($('#payment-info'), 80, 500);
 		$scope.paymentInfoDisabled = false;
+		$scope.paymentInfoSubmitted = false;
 		$scope.card = null;
+		$('#number').val(null);
+		$('#expiry').val(null);
+		$('#cvc').val(null);
 		Session.store({card: $scope.card});
 	}
 

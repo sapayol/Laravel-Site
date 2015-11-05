@@ -6,10 +6,10 @@
 
 @section('main')
 	<p class="large-12 medium-12 small-12 columns">We have almost everything we need to create your {{{ $order->jacket->name }}} <br><br></p>
-	<div class="large-6 medium-8 large-uncentered medium-centered small-12 columns order-summary">
+	<section class="large-4 medium-8 large-uncentered medium-centered small-12 columns order-summary">
 		<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg">
-	</div>
-	<div class="large-6 medium-6 small-12 columns">
+	</section>
+	<section class="large-4 medium-6 small-12 columns">
 		<h6>Order Details</h6>
 		<ul class="no-bullet value-list">
 			<li><small class="list-key">Date Started </small>  {{{ date('M d, Y', strtotime($order->created_at)) }}} </li>
@@ -18,9 +18,9 @@
 				<li><small class="list-key">{{{ ucwords(str_replace('_', ' ', $attribute->type)) }}}</small> {{{ ucwords($attribute->name) }}} </li>
 			@endforeach
 		</ul>
-	</div>
+	</section>
 	@if ($order->bodyMeasurements->completed())
-		<section class="large-6 medium-6 small-12 columns">
+		<section class="large-4 medium-6 small-12 columns">
 				<h6>Completed Measurements</h6>
 				<ul class="no-bullet value-list">
 					@foreach ($order->bodyMeasurements->completed() as $measurement)
