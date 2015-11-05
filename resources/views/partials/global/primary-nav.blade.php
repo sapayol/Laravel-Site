@@ -36,5 +36,5 @@
 
 
 
-<div class="@yield('page_wrap_class') page-wrap {{{ strpos($action, 'pages') === 0 ? 'on-info-page' : '' }}} {{{ Auth::user() && Auth::user()->unfinishedOrders->count() > 0 && strpos($action, 'orders') === 0  ? 'with-existing-order' : '' }}}" ng-class="{descended: displayMenu}">
+<div class="@yield('page_wrap_class') page-wrap" ng-class="{descended: displayMenu}">
 

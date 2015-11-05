@@ -1,5 +1,9 @@
 @extends('layouts/default')
 
+@section("page_wrap_class")
+	nav-item-page
+@stop
+
 @section('title')
 	{{{ $jacket->name }}}
 @stop

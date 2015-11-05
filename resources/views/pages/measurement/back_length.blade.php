@@ -1,7 +1,7 @@
 @extends('layouts/measurements')
 
 @section('page_wrap_class')
-  four-levels
+  header-page
 @stop
 
 @section('title')

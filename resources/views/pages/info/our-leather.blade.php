@@ -1,11 +1,7 @@
 @extends("layouts/default")
 
-@section("page_wrap_class")
-	headless-page
-@stop
-
 @section("title")
-	Who We Are
+	Our Leather
 @stop
 
 @section("main")

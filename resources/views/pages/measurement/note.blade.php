@@ -1,15 +1,11 @@
 @extends('layouts/default')
 
-@section('page_wrap_class')
-  four-levels
-@stop
-
 @section('title')
 	Fit | Units
 @stop
 
 @section('main')
-	<section class="large-12 medium-12 small-12 columns">
+	<section class=" small-12 medium-5 large-8 medium-push-7  large-push-4 columns">
 		<form action="/orders/{{{ $order->id}}}/fit" method="POST">
 			<p>Please let us know if you have any additional information you want us to know about your measurements.</p>
 
@@ -28,6 +24,8 @@
 				@endif
 			</div>
 		</form>
+	</section>
+	<section class="small-12 medium-7 large-4 medium-pull-5  large-pull-8 columns">
 		@include('partials.measurement.tracker')
 	</section>
 @stop

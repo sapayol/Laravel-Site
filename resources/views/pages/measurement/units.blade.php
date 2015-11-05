@@ -1,22 +1,16 @@
 @extends('layouts/default')
 
-@section('page_wrap_class')
-	four-levels
-@stop
-
 @section('title')
 	Fit | Units
 @stop
 
 @section('main')
-
 	<section class="large-6 medium-10 small-12 columns large-centered medium-centered">
 		<p>
 			We will walk you through every measurement we need to fit your {{{ $order->jacket->name }}} to your body. It&rsquo;s very simple.
 			<br><br>
 			All you need is a tape measure.
 		</p>
-
 		<ul>
 			<li>Don’t wear anything thicker than an undershirt or tight t-shirt.</li>
 			<li>Enter measurements as a decimal: 39.3 (not 39 &frac14;)</li>

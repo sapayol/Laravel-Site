@@ -1,16 +1,10 @@
 @extends('layouts/default')
 
-@section('page_wrap_class')
-	headless-page
-@stop
-
 @section('title')
 	Terms &amp; Conditions
 @stop
 
 @section('main')
-
-
 	<nav class="large-12 medium-12 small-12 columns" id="terms-nav">
 		<ul>
 			<li><a href="#overview" title="">Overview</a></li>

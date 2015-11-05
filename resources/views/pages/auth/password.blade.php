@@ -1,51 +1,26 @@
 @extends('layouts/default')
 
+@section('title')
+	Password
+@endsection
 
 @section('main')
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Reset Password</div>
-				<div class="panel-body">
-					@if (session('status'))
-						<div class="alert alert-success">
-							{{ session('status') }}
-						</div>
-					@endif
-
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
-
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/password/email') }}">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">
-									Send Password Reset Link
-								</button>
-							</div>
-						</div>
-					</form>
-				</div>
+	<section class="large-4 medium-6 small-12 medium-centered columns">
+		<br><br>
+		@if (session('status'))
+			<div class="alert alert-success">
+				{{ session('status') }}
 			</div>
-		</div>
-	</div>
-</div>
+		@endif
+		<form class="form-horizontal" role="form" method="POST" action="{{ url('/password/email') }}">
+			<input type="hidden" name="_token" value="{{ csrf_token() }}">
+			<label class="text-input-label">
+				<span class="label-title">E-Mail Address</span>
+				<input type="email" class="form-control" name="email" value="{{ old('email') }}">
+			</label>
+			<button type="submit" class="button expand">
+				Send Password Reset Link
+			</button>
+		</form>
+	</section>
 @endsection

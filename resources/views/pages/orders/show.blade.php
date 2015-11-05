@@ -1,5 +1,9 @@
 @extends('layouts/default')
 
+@section('page_wrap_class')
+	header-page
+@stop
+
 @section('main')
 	<p class="large-12 medium-12 small-12 columns">We have almost everything we need to create your {{{ $order->jacket->name }}} <br><br></p>
 	<div class="large-6 medium-8 large-uncentered medium-centered small-12 columns order-summary">

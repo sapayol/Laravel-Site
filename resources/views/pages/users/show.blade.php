@@ -5,7 +5,7 @@
 @stop
 
 @section('page_wrap_class')
-  four-levels
+  nav-item-page
 @stop
 
 @section('header')

@@ -1,5 +1,9 @@
 @extends('layouts/jacket')
 
+@section("page_wrap_class")
+	nav-item-page
+@stop
+
 @section('title')
 	Bleecker
 @stop

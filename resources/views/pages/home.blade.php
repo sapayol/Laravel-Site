@@ -5,7 +5,7 @@
 @stop
 
 @section('page_wrap_class')
-	four-levels
+	headless-page
 @stop
 
 @section('title')

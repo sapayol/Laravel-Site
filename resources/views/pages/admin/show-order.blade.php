@@ -4,11 +4,6 @@
 	Order: {{{ $order->id }}}
 @stop
 
-@section('page_wrap_class')
-	four-levels shrunken-layout
-@endsection
-
-
 @section('main')
 
 	<section class="large-6 medium-8 large-uncentered medium-centered small-12 columns">

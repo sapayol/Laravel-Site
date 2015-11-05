@@ -1,11 +1,11 @@
 @extends('layouts/default')
 
-@section('title')
-	Jackets
+@section("page_wrap_class")
+	nav-item-page
 @stop
 
-@section('header')
-	<h1>Our Jackets</h1>
+@section('title')
+	Jackets
 @stop
 
 @section('main')
