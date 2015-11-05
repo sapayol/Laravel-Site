@@ -11,14 +11,14 @@
 @section('main')
 
 
-		<div class="small-12 medium-8 large-6 medium-centered large-uncentered columns">
+		<div class="small-12 medium-8 large-4 medium-centered large-uncentered columns">
 			<section id="address">
 				<h2 class="text-center"><small>Please enter your</small> <br>Shipping Address</h2> <a ng-click="changeAddress()" ng-show="addressSubmitted" class="right underlined show-for-large-up">Change</a>
 				<div class="clearfix"></div>
 				@include('partials.checkout.address-form')
 			</section>
 		</div>
-		<div class="small-12 medium-8 large-6 medium-centered large-uncentered columns">
+		<div class="small-12 medium-8 large-6 medium-centered large-uncentered columns animated fadeIn">
 			<section ng-show="addressSubmitted" id="payment-info">
 				<h2 class="text-center"><small>Please enter your</small> <br>Payment Info</h2> <a ng-show="paymentInfoSubmitted" ng-click="changePaymentInfo()" class="right underlined show-for-large-up">Change</a>
 				<div class="clearfix"></div>

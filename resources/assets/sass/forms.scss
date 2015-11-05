@@ -53,7 +53,7 @@ label.text-input-label {
     height: 2.8rem;
     padding-bottom: 0;
 	}
-	&:not(:last-child) input {
+	&:not(:last-child):not(.retain-border) input {
 		border-bottom: none;
 	}
 	&:last-child {
@@ -107,6 +107,7 @@ fieldset {
 
 .credit-card-field {
 	position: relative;
+	z-index: 300;
 	i.fa {
 		position: absolute;
     bottom: 0.6rem;
@@ -114,13 +115,18 @@ fieldset {
     font-size: 1.2rem;
 	}
 }
-.expiry-field {
-	display: inline-block;
-	width: 60%;
+.expiry-field  {
+	position: relative;
+	top: -1px;
+	input {
+		border-top: none;
+	}
 }
 .cvc-field {
-	display: inline-block;
-	width: 38%;
+	input {
+		border-top: none;
+		border-left: none;
+	}
 	.label-title small {
 		position: relative;
 		top: -2px;
@@ -138,7 +144,7 @@ label.checkboxes {
 	padding-top: .1rem;
 	padding-left: .5rem;
 	padding-bottom: 0;
-	border: 1px solid #cccccc;
+	border: 1px solid $light-grey;
 	ul {
 		margin-bottom: 0;
 	}
