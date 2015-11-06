@@ -26,6 +26,13 @@
 			}
 		}
 	}
+	.note-row {
+		a {
+			position: relative;
+			left: 4.2rem;
+			top: -.35rem;
+		}
+	}
 	@media #{$tiny-only} {
 		font-size: .9rem;
 		.list-key {
