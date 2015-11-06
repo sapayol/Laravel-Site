@@ -138,7 +138,7 @@ class OrdersController extends Controller {
 			'session' => Session::all()
     ]);
 
-		return view('pages.checkout.customer-info', ['order' => $order]);
+		return view('pages.orders.checkout', ['order' => $order]);
 	}
 
 
@@ -164,7 +164,7 @@ class OrdersController extends Controller {
 
 	public function complete($id) {
 		$order = Order::findOrFail($id);
-		return view('pages.checkout.complete', ['order' => $order]);
+		return view('pages.orders.complete', ['order' => $order]);
 	}
 
 }
