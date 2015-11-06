@@ -53,10 +53,6 @@ nav.primary-nav {
 	}
 	@media #{$medium-up} {
 		z-index: 9999;
-		.logo img {
-			transform: translateY(.5rem);
-			width: 20rem;
-		}
 		.clearfix {
 			display: none;
 		}
@@ -75,9 +71,6 @@ nav.primary-nav {
 		}
 		.clearfix {
 			display: none;
-		}
-		img {
-			width: 14rem;
 		}
 		ul {
 			float: right;
