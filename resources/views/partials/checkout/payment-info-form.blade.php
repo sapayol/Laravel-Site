@@ -48,8 +48,8 @@
 	<div class="text-center">
 		<button ng-if="paymentInfoSubmitted" class="button expand" type="submit"  ng-hide="paymentInfoDisabled">Update Payment Info<span class="chevron chevron--right"></span></button>
 		<button ng-if="!paymentInfoSubmitted" class="button expand" type="submit"  ng-hide="paymentInfoDisabled">Submit Payment Info<span class="chevron chevron--right"></span></button>
-		<em class="hide-for-large-up">Your card will not be charged until you confirm your order</em>
-		<br>
+		<em>Your card will not be charged until you confirm your order</em>
+		<br><br><br>
 	</div>
 
 </form>
