@@ -68,17 +68,17 @@ class OrdersController extends Controller {
 	public function getFit($id, $step = null)
 	{
 		$order = Order::find($id);
-		$uncompleted_measurements = $order->bodyMeasurements ? $order->bodyMeasurements->uncompleted() : null;
-		$completed_measurements   = $order->bodyMeasurements ? $order->bodyMeasurements->completed() : null;
 
-		if ($step == null || $order->status == 'new' || $step == 'units' ) {
-			return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'units']);
-		} elseif ($step == 'next' && !$completed_measurements) {
-			return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'height']);
-		} elseif ($step == 'next' && $uncompleted_measurements) {
-			return redirect()->route('fit.show', ['id' => $order->id, 'step' => array_shift($uncompleted_measurements)]);
-		} elseif ($step == 'next') {
-			return redirect()->route('orders.checkout', $order->id);
+		if ($step == 'next' || $step == null) {
+			$uncompleted_measurements = $order->bodyMeasurements ? $order->bodyMeasurements->uncompleted() : null;
+			$completed_measurements   = $order->bodyMeasurements ? $order->bodyMeasurements->completed() : null;
+			if (!$completed_measurements) {
+				return redirect()->route('fit.show', ['id' => $order->id, 'step' => 'height']);
+			} elseif ($uncompleted_measurements) {
+				return redirect()->route('fit.show', ['id' => $order->id, 'step' => array_shift($uncompleted_measurements)]);
+			} else {
+				return redirect()->route('orders.checkout', $order->id);
+			}
 		}
 
 		return view('pages.measurement.' . $step, ['order' => $order, 'step' => $step]);
