@@ -45,6 +45,8 @@
 				<p>You can also choose from a selection of lining and hardware colors.</p>
 				<div class="text-center">
 					<a href="{{ route('jackets.index') }}" class="button call-to-action expand-on-small">See Our Jackets</a>
+					<br>
+					<a href="mailto:contact@sapayol.com"  class="under-button-link underlined">Contact Us</a>
 				</div>
 			</div>
 		</section>
@@ -101,6 +103,8 @@
 				<p>Last but not least, our direct shipment from the leather workshop to the customer is the most ecological logistics process we can think of. Other than putting a sheep herd and a master craftsmen in your backyard.</p>
 				<div class="text-center">
 					<a href="{{ route('jackets.index') }}" class="button call-to-action expand-on-small">See Our Jackets</a>
+					<br>
+					<a href="mailto:contact@sapayol.com"  class="under-button-link underlined">Contact Us</a>
 				</div>
 			</div>
 		</section>
