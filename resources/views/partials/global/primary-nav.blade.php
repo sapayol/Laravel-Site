@@ -18,8 +18,8 @@
     </div>
     <ul class="no-bullet">
       <li class="{{{ strpos($action, 'jackets') === 0 ? 'current' : ''}}}"><a class="underlined" href="/jackets">Our Jackets</a></li>
-      <li class="{{{ $action == 'pages.who-we-are' ? 'current' : ''}}}"><a class="underlined" href="/who-we-are">Who We Are</a></li>
       <li class="{{{ $action == 'pages.how-it-works' ? 'current' : ''}}}"><a class="underlined" href="/how-it-works">How It Works</a></li>
+      <li class="{{{ $action == 'pages.who-we-are' ? 'current' : ''}}}"><a class="underlined" href="/who-we-are">Who We Are</a></li>
     </ul>
   </nav>
 </div>
