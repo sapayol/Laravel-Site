@@ -10,7 +10,20 @@ videoController.controller('videoCtrl', ['$scope', function($scope) {
 	    media.addEventListener("playing", function() {
 	      playerControls.addClass('descended');
 	    });
+
+	    // This script gets the svg icons that are the video player controls
+      var a = new XMLHttpRequest(),
+	        b = document.body;
+        a.open("GET", "https://cdn.plyr.io/1.3.3/sprite.svg", true);
+        a.send();
+        a.onload = function(){
+          var c = document.createElement("div");
+          c.style.display = "none";
+          c.innerHTML = a.responseText;
+          b.insertBefore(c, b.childNodes[0]);
+        }
 	  });
+
 }]);
 
 

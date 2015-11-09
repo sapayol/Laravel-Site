@@ -15,23 +15,30 @@
   .run(['$timeout', function($timeout) {
     $timeout(function() {
 			$(document).ready(function(){
-			  $('.jacket-carousel').slick({
-          dots: true,
-			  	arrows: true,
-			  	mobileFirst: true,
-          focusOnSelect: false
-			  });
-        $(document).foundation();
-        if ('ontouchstart' in window) {
-          FastClick.attach(document.body);
-        }
+        appInit();
       });
     }, 500);
   }]);
 
+  function appInit() {
+    scaleImageContainer();
 
-  // Smooth scrolling on anchor tags
-  $(function() {
+    //Initialize carousel
+    $('.jacket-carousel').slick({
+      dots: true,
+      arrows: true,
+      mobileFirst: true,
+      focusOnSelect: false
+    });
+    // Initialize Foundation
+    $(document).foundation();
+
+    // Initialize FastClick
+    if ('ontouchstart' in window) {
+      FastClick.attach(document.body);
+    }
+
+    // Smooth scrolling on anchor tags
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
@@ -44,17 +51,15 @@
         }
       }
     });
-  });
+
+  };
 
   // Full screen hero image code
-  $( document ).ready(function() {
-    function scaleImageContainer() {
-      var height = $(window).height();
-      var unitHeight = parseInt(height) + 'px';
-      $('.hero-image-container').css('height',unitHeight);
-    };
-    scaleImageContainer();
-  });
+  function scaleImageContainer() {
+    var height = $(window).height();
+    var unitHeight = parseInt(height) + 'px';
+    $('.hero-image-container').css('height',unitHeight);
+  };
 
   String.prototype.capitalize = function() {
       return this.charAt(0).toUpperCase() + this.slice(1);
