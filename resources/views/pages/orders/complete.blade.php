@@ -121,4 +121,30 @@
 @stop
 
 
+@section('additional-scripts')
+	<!-- Google Analytics E-Commerce Tracking -->
+	<script>
+		jQuery( document ).ready(function() {
+			ga('require', 'ecommerce');
 
+			ga('ecommerce:addTransaction', {
+				'id':          '{{{ $order->id }}}',                          // Transaction ID. Required
+				'affiliation': 'sapayol.com',                                 // Affiliation or store name
+				'revenue':     "{{{ str_replace(',', '', $order->total) }}}", // Grand Total
+				'shipping':    '0',                                           // Shipping
+				'tax':         '0'                                            // Tax
+			});
+
+			ga('ecommerce:addItem', {
+			  'id':       '{{{  $order->id }}}',                            // Transaction ID. Required.
+			  'name':     '{{{  $order->jacket->name }}}',                  // Product name. Required.
+			  'sku':      '{{{ $order->jacket->id }}}',                     // SKU/code.
+			  'category': 'Jacket',                                         // Category or variation.
+			  'price':    '{{{ $order->jacket->price }}}',                  // Unit price.
+			  'quantity': '1'                                               // Quantity.
+			});
+
+			ga('ecommerce:send');
+		});
+	</script>
+@stop
