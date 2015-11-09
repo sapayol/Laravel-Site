@@ -131,6 +131,11 @@ class OrdersController extends Controller {
 	{
 		$order = Order::findOrFail($id);
 
+		// Update the order with latest jacket look from the session
+		$jacket = Session::get($order->jacket->model);
+		$jacket_look = [$jacket['leather_type'], $jacket['leather_color'], $jacket['lining_color'], $jacket['hardware_color']];
+    $order->attributes()->sync($jacket_look);
+
     JavaScript::put([
 			'order'   => $order,
 			'user'    => $order->user,
@@ -148,12 +153,6 @@ class OrdersController extends Controller {
     $stripe_charge = $this->dispatchFrom('App\Jobs\ProcessOrderPayment', $request, ['order' => $order]);
 
     if ($stripe_charge) {
-      // Mail::send('emails.order-confirmation', ['order' => $order], function ($message) use ($order) {
-      //   $message->to($order->user->email, $order->user->name);
-      //   $message->from('contact@sapayol.com');
-      //   $message->subject('Thanks for ordering a custom ' . $order->jacket->name );
-      // });
-
       Session::flash('success', "Checkout complete!");
       return redirect()->route('orders.complete', $order->id);
     }
