@@ -43,19 +43,19 @@ globalDirectives.directive('decimalToFraction', function() {
 		}
 
 		if (rightDecimalPart === '0.13') {
-			return '1/8';
+			return ' &frac18;';
 		} else if (rightDecimalPart === '0.25') {
-			return '1/4';
+			return ' &frac14;';
 		} else if (rightDecimalPart === '0.38') {
-			return '3/8';
+			return ' &frac38;';
 		} else if (rightDecimalPart === '0.50') {
-			return '1/2';
+			return ' &frac12;';
 		} else if (rightDecimalPart === '0.63') {
-			return '5/8';
+			return ' &frac58;';
 		} else if (rightDecimalPart === '0.75') {
-			return '3/4';
+			return ' &frac34;';
 		} else if (rightDecimalPart === '0.88') {
-			return '7/8';
+			return ' &frac78;';
 		}
 	}
 
