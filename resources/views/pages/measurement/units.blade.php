@@ -13,7 +13,7 @@
 		</p>
 		<ul>
 			<li>Don’t wear anything thicker than an undershirt or tight t-shirt.</li>
-			<li>Enter measurements as a decimal: 39.3 (not 39 &frac14;)</li>
+			<li>Enter measurements as a decimal. For example: 39.3 (not 39 &frac14; or 39,3)</li>
 		</ul>
 		<p><em>It&rsquo;s much easier and more accurate if a friend helps you.</em></p>
 	</section>
