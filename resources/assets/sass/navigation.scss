@@ -52,18 +52,6 @@ nav.primary-nav {
 		}
 	}
 	@media #{$medium-up} {
-		z-index: 9999;
-		.clearfix {
-			display: none;
-		}
-		ul {
-			float: right;
-		}
-		li.current {
-			display: inline-block;
-		}
-	}
-	@media #{$large-up} {
 		padding-top: 1rem;
 		padding-bottom: 1rem;
 		hr {
@@ -80,7 +68,7 @@ nav.primary-nav {
 		li {
 			display: inline-block;
 			a {
-				font-size: 1rem;
+				font-size: .9rem;
 				line-height: 1;
 				margin-left: 1rem;
 			}
@@ -90,6 +78,13 @@ nav.primary-nav {
 		}
 		.secondary-nav {
 			top: 2.5rem;
+		}
+	}
+	@media #{$large-up} {
+		li {
+			a {
+				font-size: 1rem;
+			}
 		}
 	}
 }

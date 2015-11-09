@@ -5,7 +5,7 @@
 		position: static;
 	}
 	@media #{$medium-only} {
-		transform: translateY(-1.7rem);
+		// transform: translateY(-1.7rem);
 		& > header, & > header h1 {
 			background: transparent;
 		}

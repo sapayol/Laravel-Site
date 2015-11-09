@@ -6,7 +6,7 @@
 
 @section('main')
 
-	<div class="small-12 medium-8 large-7 medium-centered columns">
+	<div class="small-12 medium-10 large-7 medium-centered columns">
 		<section>
 			<p>We&rsquo;re very excited that you&rsquo;ve decided to order a custom tailored BLEECKER from us.</p>
 			<p>Within the next 24 hours we will reach out to you to go over your measurements and discuss your fit preferences before we start tailoring it.</p>
@@ -32,7 +32,7 @@
 			</ul>
 			<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg">
 
-			<div class="large-6 small-12 columns">
+			<div class="large-6 medium-6 small-12 columns">
 				<h3 class="thin">Look</h3>
 				<ul class="no-bullet value-list">
 					<li><small class="list-key">Model </small>{{{ $order->jacket->name  }}}	</li>
@@ -64,7 +64,7 @@
 				</ul>
 			</div>
 
-			<div class="large-6 small-12 columns">
+			<div class="large-6 medium-6 small-12 columns">
 				<h3 class="thin">Fit</h3>
 				@if ($order->bodyMeasurements->completed())
 					<ul class="no-bullet value-list">

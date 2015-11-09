@@ -24,7 +24,5 @@
   </nav>
 </div>
 
-
-
 <div class="@yield('page_wrap_class') page-wrap" ng-class="{descended: displayMenu}">
 

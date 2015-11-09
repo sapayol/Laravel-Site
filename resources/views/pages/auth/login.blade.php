@@ -5,7 +5,7 @@
 @endsection
 
 @section('main')
-	<section class="large-4 medium-6 small-12 medium-centered columns" ng-controller="authCtrl">
+	<section class="large-4 medium-7 small-12 medium-centered columns" ng-controller="authCtrl">
 		<br><br>
 		<form role="form" method="POST" action="{{ url('/auth/login') }}" name="userInfoForm">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
