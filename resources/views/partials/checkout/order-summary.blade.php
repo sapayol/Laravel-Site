@@ -25,6 +25,7 @@
 					<li class="note-row">
 						<small class="left list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>
 						<span class="right list-value"><em>{{{ $order->bodyMeasurements->$measurement }}}</em></span>
+						<div class="clearfix"></div>
 						<a class="underlined" href="/orders/{{{ $order->id }}}/fit/{{{ $measurement }}}" title="">
 							<span>{{{ $order->bodyMeasurements->$measurement ? 'Change' : 'Add' }}}</span>
 						</a>
