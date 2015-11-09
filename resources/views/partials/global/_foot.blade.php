@@ -11,6 +11,7 @@
         @yield('additional-scripts')
 
         <script>
+        // This script gets the svg icons that are the video player controls
         (function(d, p){
             var a = new XMLHttpRequest(),
                 b = d.body;
