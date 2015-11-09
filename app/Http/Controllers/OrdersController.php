@@ -23,7 +23,7 @@ class OrdersController extends Controller {
 		$order = Order::find($id);
 
 		if ($order->status == 'new') return redirect()->back();
-		if (!$order->isNew()) return redirect()->route('orders.complete', $order->id);
+		if ($order->statusIsAfter('started')) return redirect()->route('orders.complete', $order->id);
 		if (!$request->old()) {
 			$new_order = [
 				'user_id'          => Auth::id(),
@@ -97,7 +97,7 @@ class OrdersController extends Controller {
     	} else {
 				return redirect()->route('fit.show', ['id' => $order->id, 'step' => array_shift($uncompleted_measurements)]);
     	}
-		} elseif (!$order->isNew()) {
+		} elseif ($order->statusIsAfter('started')) {
 			return redirect()->route('orders.complete', $order->id);
 		}
 

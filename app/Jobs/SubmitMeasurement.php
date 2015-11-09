@@ -46,7 +46,7 @@ class SubmitMeasurement extends Job implements SelfHandling
             $this->order->bodyMeasurements->update($this->measurements);
         }
 
-        if ($this->order->isNew()) {
+        if ($this->order->statusIsBefore('started')) {
             $this->order->status = 'started';
             $this->order->save();
         }

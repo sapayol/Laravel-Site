@@ -84,14 +84,6 @@ class Order extends Model {
     return false;
   }
 
-  public function isNew()
-  {
-    if ($this->status == 'started' || $this->status  == 'new' || $this->hasNoStatus()) {
-      return true;
-    }
-    return false;
-  }
-
   public function hasReusableMeasurements()
   {
     return $this->bodyMeasurements->user ? true : false;

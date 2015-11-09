@@ -41,7 +41,7 @@
 		@elseif ($action == 'fit.next' || $action == 'fit.show')
 			<a href="/orders/{{{ $order->id }}}" class="underlined">Your Order</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
-			@if ($order && !$order->isNew())
+			@if ($order && $order->statusIsAfter('started'))
 				Look
 			@else
 				<a href="/orders/{{{ $order->id }}}/look" class="underlined">Look</a>

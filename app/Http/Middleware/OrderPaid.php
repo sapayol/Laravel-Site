@@ -19,7 +19,7 @@ class OrderPaid
         $order_id = $request->route()->id;
         $order    = Order::find($order_id);
 
-        if (!$order->isNew()) {
+        if ($order->statusIsAfter('started')) {
             return redirect()->route('orders.complete', $order->id);
         } else {
             return $next($request);

@@ -21,7 +21,7 @@ class OrderStatus
 
         if ($order->status == 'paid' && $order->bodyMeasurements->uncompleted()) {
             return $next($request);
-        } else if (!$order->isNew()) {
+        } else if ($order->statusIsAfter('started')) {
             return redirect()->route('orders.complete', $order->id);
         } else {
             return $next($request);
