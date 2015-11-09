@@ -2,7 +2,7 @@
 	<label for="name" class="text-input-label">
 		<span class="label-title">Name</span>
 		<span class="right" ng-if="showAddressErorrs && addressForm.name.$invalid">Required</span>
-		<input id="name" name="name" type="text" ng-model="address.name" ng-required="true" ng-disabled="addressDisabled">
+		<input id="name" name="name" type="text" ng-model="address.name" ng-required="true" ng-disabled="addressDisabled" autofocus>
 	</label>
 
 	<label for="email" class="text-input-label">

@@ -12,6 +12,20 @@ globalDirectives.directive('scrollToTop', function() {
 });
 
 
+globalDirectives.directive('enterToSubmit', function () {
+  return function (scope, element, attrs) {
+    element.bind("keydown keypress", function (event) {
+      if(event.which === 13) {
+        scope.$apply(function (){
+          scope.$eval(attrs.enterToSubmit);
+        });
+
+        event.preventDefault();
+      }
+    });
+  };
+});
+
 
 globalDirectives.directive('decimalToFraction', function() {
 

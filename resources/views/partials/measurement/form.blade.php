@@ -15,11 +15,11 @@
 			<legend>Height</legend>
 			<label for="height-feet" class="text-input-label retain-border">
 				<span class="label-title">Feet</span>
-				<input name="measurements[height][feet]" id="height-feet" type="tel" placeholder="00" maxlength="2" min="4" max="8" required ng-model="feet">
+				<input name="measurements[height][feet]" id="height-feet" type="tel" placeholder="00" maxlength="2" min="4" max="8" required ng-model="feet" enter-to-submit="submitMeasurement('measurements[{{{ $step }}}]')" autofocus>
 			</label>
 			<label for="height-inches" class="text-input-label">
 				<span class="label-title">Inches</span>
-				<input name="measurements[height][inches]" id="height-inches" type="tel" placeholder="00" maxlength="2" min="0" max="11" required ng-model="inches">
+				<input name="measurements[height][inches]" id="height-inches" type="tel" placeholder="00" maxlength="2" min="0" max="11" required ng-model="inches" enter-to-submit="submitMeasurement('measurements[{{{ $step }}}]')">
 			</label>
 		</fieldset>
 	@else
@@ -28,7 +28,7 @@
 			<span class="left label-title">@yield('title')</span>
 			<span class="right alert animated shake" ng-if="showFormErorrs && measurement !== ''">Invalid measurement</span>
 			<span class="right alert animated shake" ng-if="displayRequiredError">Measurement required</span>
-			<input name="measurements[{{{ $step }}}]" id="{{{ $step }}}" type="number" placeholder="00.00" ng-maxlength="7" {{{ $step=='height' ? 'max="10"' : '' }}} step="0.01" ng-model="measurement" required ng-change="change(measurement)" ng-value="{{{ $order->bodyMeasurements->$step }}}">
+			<input name="measurements[{{{ $step }}}]" id="{{{ $step }}}" type="number" placeholder="00.00" ng-maxlength="7" {{{ $step=='height' ? 'max="10"' : '' }}} step="0.01" ng-model="measurement" required ng-change="change(measurement)" ng-value="{{{ $order->bodyMeasurements->$step }}}" enter-to-submit="submitMeasurement('measurements[{{{ $step }}}]')" autofocus>
 			<span class="input-units">{{{ $order->bodyMeasurements->units }}}</span>
 		</label>
 		<br>
