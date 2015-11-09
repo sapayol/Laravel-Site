@@ -8,6 +8,10 @@
 	Jackets
 @stop
 
+@section('header')
+	<a ng-click="displayMenu = false">Our Jackets</a>
+@stop
+
 @section('main')
 	<article class="large-12 medium-12 small-12 columns">
 		<p class="medium-text-center">Choose the model you would like to customize and have tailor&ndash;made.</p>

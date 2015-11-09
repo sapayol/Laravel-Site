@@ -4,6 +4,10 @@
   Your Order
 @stop
 
+@section('header')
+  Your Order
+@stop
+
 @section('main')
 
 	<div>

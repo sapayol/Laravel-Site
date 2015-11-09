@@ -4,6 +4,10 @@
 	Password Reset
 @endsection
 
+@section('header')
+	<a ng-click="displayMenu = false">Password Reset</a>
+@endsection
+
 @section('main')
 	<section class="large-4 medium-6 small-12 medium-centered columns">
 		<br><br>

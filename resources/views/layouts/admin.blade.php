@@ -1,6 +1,10 @@
 @include('partials.global._head')
 @include('partials.global.primary-nav')
-@include('partials.global.header')
+
+<header class="row">
+	<h1>@yield('header')</h1>
+</header>
+
 @include('partials.global.messages')
 
 <main class="row">

@@ -4,6 +4,11 @@
   Your Profile
 @stop
 
+
+@section('header')
+	<a ng-click="displayMenu = false">Your Profile</a>
+@stop
+
 @section('main')
 	<section class="large-12 medium-12 small-12 columns">
 		<h4>{{{ $user->name }}}</h4>

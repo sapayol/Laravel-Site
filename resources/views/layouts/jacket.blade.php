@@ -1,6 +1,14 @@
 @include('partials.global._head')
 @include('partials.global.primary-nav')
-@include('partials.global.header')
+
+<header class="row">
+	<h1>
+		<a href="/jackets" class="underlined">Our Jackets</a>
+		<span class="chevron chevron--right breadcrumb-chevron"></span>
+		{{{ $jacket->name }}}
+	</h1>
+</header>
+
 @include('partials.global.messages')
 
 <main class="row" ng-controller="jacketCtrl">

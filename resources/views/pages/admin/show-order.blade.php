@@ -4,6 +4,10 @@
 	Order: {{{ $order->id }}}
 @stop
 
+@section('header')
+	<a ng-click="displayMenu = false">Order: {{{ $order->id }}}</a>
+@stop
+
 @section('main')
 
 	<section class="large-6 medium-8 large-uncentered medium-centered small-12 columns">

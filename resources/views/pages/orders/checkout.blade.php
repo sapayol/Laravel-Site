@@ -1,11 +1,21 @@
 @extends('layouts/single-column')
 
+@section('angular_page_controller')
+	ng-controller="checkoutCtrl"
+@stop
+
 @section('title')
 	{{{ $order->jacket->name }}}
 @stop
 
-@section('angular_page_controller')
-	ng-controller="checkoutCtrl"
+@section('header')
+	<a href="/orders/{{{ $order->id }}}" class="underlined">Your Order</a>
+	<span class="chevron chevron--right breadcrumb-chevron"></span>
+	<a href="/orders/{{{ $order->id }}}/look" class="underlined">Look</a>
+	<span class="chevron chevron--right breadcrumb-chevron"></span>
+	<a href="/orders/{{{ $order->id }}}/fit/height" class="underlined">Fit</a>
+	<span class="chevron chevron--right breadcrumb-chevron"></span>
+	Checkout
 @stop
 
 @section('main')

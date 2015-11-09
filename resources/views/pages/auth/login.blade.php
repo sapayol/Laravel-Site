@@ -4,6 +4,10 @@
 	Login
 @endsection
 
+@section('header')
+	<a ng-click="displayMenu = false">Login</a>
+@endsection
+
 @section('main')
 	<section class="large-4 medium-7 small-12 medium-centered columns" ng-controller="authCtrl">
 		<br><br>

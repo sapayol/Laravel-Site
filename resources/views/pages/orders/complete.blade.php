@@ -4,6 +4,10 @@
 	{{{ $order->jacket->name }}}
 @stop
 
+@section('header')
+	Your Placed Order
+@stop
+
 @section('main')
 
 	<div class="small-12 medium-10 large-7 medium-centered columns">

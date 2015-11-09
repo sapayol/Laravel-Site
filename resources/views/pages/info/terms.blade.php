@@ -4,6 +4,10 @@
 	Terms &amp; Conditions
 @stop
 
+@section('header')
+	<a ng-click="displayMenu = false">Terms of Service</a>
+@stop
+
 @section('main')
 	<nav class="large-12 medium-12 small-12 columns" id="terms-nav">
 		<ul>

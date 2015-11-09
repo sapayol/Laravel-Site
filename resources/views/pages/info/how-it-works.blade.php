@@ -8,6 +8,10 @@
 	How It Works
 @stop
 
+@section('header')
+	<a ng-click="displayMenu = false">How It Works</a>
+@stop
+
 @section('main')
 	<article class="small-12 medium-10 large-7 medium-centered columns">
 		<p>Every SAPAYOL leather jacket is made for you, and no one else. We tailor each piece according to your measurements and customizations and then ship it directly from the atelier to your door.</p>

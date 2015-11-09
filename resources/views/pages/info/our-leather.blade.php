@@ -4,6 +4,10 @@
 	Our Leather
 @stop
 
+@section("header")
+	<a ng-click="displayMenu = false">Our Leather</a>
+@stop
+
 @section("main")
 	<section class="small-12 medium-10 large-8 medium-centered columns" id="our-leather-header">
 		<p>We don&rsquo;t compromise on the quality of our leather.</p>

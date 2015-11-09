@@ -8,6 +8,10 @@
 	Who We Are
 @stop
 
+@section('header')
+	<a ng-click="displayMenu = false">Who We Are</a>
+@stop
+
 @section('main')
 	<article class="large-12 medium-12 small-12 columns">
 		<section class="row">

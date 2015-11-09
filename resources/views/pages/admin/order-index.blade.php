@@ -4,6 +4,10 @@
 	{{{ $status }}} Orders
 @stop
 
+@section('header')
+	<a ng-click="displayMenu = false">{{{ $status ? ucfirst($status) : 'All' }}} Orders</a>  ({{{ $orders->total() }}})
+@stop
+
 @section('main')
 	<div class="large-12 medium-12 small-12 columns text-center">
 		<br>

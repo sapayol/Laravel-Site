@@ -4,6 +4,10 @@
 	Register
 @endsection
 
+@section('header')
+	<a ng-click="displayMenu = false">Register</a>
+@endsection
+
 @section('main')
 	<section class="large-4 medium-7 small-12 medium-centered columns">
 		<br><br>

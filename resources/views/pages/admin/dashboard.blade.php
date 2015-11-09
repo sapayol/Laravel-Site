@@ -4,8 +4,11 @@
 	Sapayol Admin
 @stop
 
-@section('main')
+@section('header')
+	<a ng-click="displayMenu = false">Dashboard</a>
+@stop
 
+@section('main')
 	<div class="large-12 medium-12 small-12 columns">
 		<br>
 		<h3 class="left">Latest Orders</h3><a class="right" href="{{{ route('admin.order-index') }}}">All Orders</a>
@@ -39,5 +42,4 @@
 		</label>
 		<a href="/admin/orders/@{{ order_number }}" class="button small expand">View Order</a>
 	</section>
-
 @stop

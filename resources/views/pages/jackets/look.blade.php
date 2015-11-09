@@ -8,6 +8,22 @@
 	{{{ $jacket->name }}}
 @stop
 
+@section('header')
+	@if ($action == 'orders.look')
+		<a href="/orders/{{{ $order->id }}}" class="underlined">Your Order</a>
+		<span class="chevron chevron--right breadcrumb-chevron"></span>
+			Look
+		<span class="chevron chevron--right breadcrumb-chevron"></span>
+		<a href="/orders/{{{ $order->id }}}/fit/next" class="underlined">Fit</a>
+	@else
+		<a href="/jackets" class="underlined">Our Jackets</a>
+		<span class="chevron chevron--right breadcrumb-chevron"></span>
+		<a href="/jackets/{{{ $jacket->model }}}" class="underlined">{{{ $jacket->name }}}</a>
+		<span class="chevron chevron--right breadcrumb-chevron"></span>
+	  Look
+	@endif
+@stop
+
 @section('angular_page_controller')
 	ng-controller="lookAndFitCtrl"
 @stop

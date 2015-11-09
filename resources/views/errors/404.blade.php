@@ -1,5 +1,12 @@
 @extends('layouts/default')
 
+@section('page_wrap_class')
+	headless-page
+@stop
+
+@section('title')
+  404 Page Not Found
+@stop
 
 @section('main')
 	<section class="large-12 medium-12 small-12 columns">
