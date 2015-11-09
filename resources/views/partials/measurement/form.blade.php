@@ -13,7 +13,7 @@
 	@if ($step == 'height' && $order->bodyMeasurements->units == 'in')
 		<fieldset class="label-row">
 			<legend>Height</legend>
-			<label for="height-feet" class="text-input-label">
+			<label for="height-feet" class="text-input-label retain-border">
 				<span class="label-title">Feet</span>
 				<input name="measurements[height][feet]" id="height-feet" type="tel" placeholder="00" maxlength="2" min="4" max="8" required ng-model="feet">
 			</label>
