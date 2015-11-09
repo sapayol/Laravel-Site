@@ -9,7 +9,7 @@
         @include('partials.global.php-to-js')
 
         @if (app()->env === 'production')
-            @include('partials.google-analytics')
+            @include('partials.global.google-analytics')
         @endif
 
         @yield('additional-scripts')
