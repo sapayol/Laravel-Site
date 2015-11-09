@@ -35,12 +35,12 @@
 
 
 	@if ($order->address)
-		<section class="large-4 medium-6 small-12 columns" ng-controller="editUserCtrl" >
+		<section class="large-4 medium-7 small-12 columns" ng-controller="editUserCtrl" >
 			@include('partials.admin.order-customer')
 		</section>
 	@endif
 
-	<section class="large-3 medium-6 small-12 columns" ng-controller="editLookCtrl" >
+	<section class="large-3 medium-5 small-12 columns" ng-controller="editLookCtrl" >
 		@include('partials.admin.order-look')
 	</section>
 

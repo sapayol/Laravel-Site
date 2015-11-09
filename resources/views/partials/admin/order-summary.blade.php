@@ -3,23 +3,23 @@
 	<li class="multi-line"><small class="list-key">Status</small>
 		<div>
 			@if ($order->status == 'completed')
-			<span class="{{{ $order->status == 'completed' ? 'active' : '' }}}">Completed</span>
+				<span class="list-value {{{ $order->status == 'completed' ? 'active' : '' }}}">Completed</span>
 				<small>( {{{ date('Y-m-d h:i a', strtotime($order->completed_at)) }}} )</small><br>
 			@endif
 			@if ($order->statusIsAfter('production'))
-			<span class="{{{ $order->status == 'shipped' ? 'active' : '' }}}">Shipped</span>
+				<span class="list-value {{{ $order->status == 'shipped' ? 'active' : '' }}}">Shipped</span>
 				<small>( {{{ date('Y-m-d h:i a', strtotime($order->shipped_at)) }}} )</small><br>
 			@endif
 			@if ($order->statusIsAfter('paid'))
-			<span class="{{{ $order->status == 'production' ? 'active' : '' }}}">Production</span>
+				<span class="list-value {{{ $order->status == 'production' ? 'active' : '' }}}">Production</span>
 				<small>( {{{ date('Y-m-d h:i a', strtotime($order->production_at)) }}} )</small><br>
 			@endif
 			@if ($order->statusIsAfter('started'))
-			<span class="{{{ $order->status == 'paid' ? 'active' : '' }}}">Paid</span>
+				<span class="list-value {{{ $order->status == 'paid' ? 'active' : '' }}}">Paid</span>
 				<small>( {{{ date('Y-m-d h:i a', strtotime($order->paid_at)) }}} )</small><br>
 			@endif
 			@if ($order->statusIsAfter('new'))
-			<span class="{{{ $order->status == 'started' ? 'active' : '' }}}">Started</span>
+				<span class="list-value {{{ $order->status == 'started' ? 'active' : '' }}}">Started</span>
 				<small>( {{{ date('Y-m-d h:i a', strtotime($order->created_at)) }}} )</small><br>
 			@endif
 		</div>
