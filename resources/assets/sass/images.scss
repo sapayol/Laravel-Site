@@ -14,6 +14,9 @@
   background: url(../images/photos/other/hero-image.jpg) no-repeat center center;
   background-size: cover;
 	margin-bottom: 1rem;
+	@media #{$medium-only} {
+    background-size: 30rem;
+	}
 	@media #{$large-up} {
 	  background: url(../images/photos/other/hero-image.jpg) no-repeat 18% center;
 	  background-size: contain;
