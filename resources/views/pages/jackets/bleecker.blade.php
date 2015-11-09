@@ -56,7 +56,7 @@
 		<div class="large-6 medium-12 small-12 columns">
 			<a href="/images/photos/leather/lamb_c_black_close-up.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/leather/lamb_c_black_close-up.jpg" alt=""></a>
 		</div>
-		<div class="large-6 medium-12 small-12 columns">
+		<div class="large-6 medium-10 small-12 medium-centered columns">
 			<br>
 			<h2>Vegetable tanned, chrome&ndash;free, full&ndash;grain leather</h2>
 			<p>All our jackets are made with the most exclusive, vegetable tanned, full&ndash;grain leather. It’s supple, thick, has a warm touch, and a pleasant smell. With good care, it will not crack or bulge for decades but break in and develop a beautiful patina.</p>
@@ -74,14 +74,13 @@
 		<h2 class="text-center">Inside pockets for your valuables</h2>
 		<br>
 		<br>
-		<div class="large-6 medium-12 small-12 columns">
+		<div class="large-6 medium-6 small-12 columns">
 			<a href="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" alt=""></a>
 			<p class="image-caption">Slide your phone into a welted pocket that sits conveniently just inside your jacket, on the left side.</p>
 		</div>
 
-		<div class="large-6 medium-12 small-12 columns">
+		<div class="large-6 medium-6 small-12 columns">
 			<a href="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg" alt=""></a>
-
 			<p class="image-caption">An inside pocket with a zipper on your right chest holds your note book, Knicks tickets, pay check, or passport.</p>
 		</div>
 		<br>
@@ -91,10 +90,11 @@
 	<hr class="thin">
 
 	<section class="row flex-section">
-		<div class="large-6 medium-6 small-12 columns">
+		<div class="large-6 medium-12 small-12 columns">
 			<a href="/images/photos/linings/bemberg_oxford_black_close-up.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/linings/bemberg_oxford_black_close-up.jpg" alt=""></a>
 		</div>
-		<div class="large-6 medium-6 small-12 columns">
+		<div class="large-6 medium-10 small-12 medium-centered columns">
+			<br class="hide-for-large hide-for-small">
 			<h2>Silky, breathable lining</h2>
 			<p>We chose a 100% Bemberg Cupro oxford weave for our lining. No other fabric breathes as well, absorbs and releases sweat as quickly, and is at the same time as smooth as silk. It’s the top lining choice of bespoke suit makers.</p>
 		</div>

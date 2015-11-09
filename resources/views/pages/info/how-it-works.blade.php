@@ -9,7 +9,7 @@
 @stop
 
 @section('main')
-	<article class="large-6 medium-8 medium-centered small-12 columns">
+	<article class="small-12 medium-10 large-7 medium-centered columns">
 		<p>Every SAPAYOL leather jacket is made for you, and no one else. We tailor each piece according to your measurements and customizations and then ship it directly from the atelier to your door.</p>
 		<ol>
 			<br>
@@ -52,7 +52,7 @@
 		</div>
 	</article>
 	<hr>
-	<article class="large-12 medium-12 small-12 columns">
+	<article class="small-12 medium-10 large-12 medium-centered columns">
 		<ul class="large-block-grid-2">
 			<li id="return-policy">
 				<h3>Returns</h3>

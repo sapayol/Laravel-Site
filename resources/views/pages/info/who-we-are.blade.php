@@ -11,7 +11,7 @@
 @section('main')
 	<article class="large-12 medium-12 small-12 columns">
 		<section class="row">
-			<div class="medium-8 medium-centered columns">
+			<div class="medium-10 large-8 medium-centered columns">
 				<p>Something about the way you&rsquo;re supposed to do things doesn&rsquo;t feel right. And the path you&rsquo;re being shown seems to be the shortest, but not very exciting.</p>
 				<p>
 					You want to know what&rsquo;s behind that door. You approach things from a different angle. You find your own way. <em>Regular doesn&rsquo;t fit you.</em>
@@ -21,7 +21,7 @@
 		</section>
 		<hr>
 		<section class="row">
-			<div class="medium-8 medium-centered columns definition-section">
+			<div class="small-12 medium-10 large-8 medium-centered columns definition-section">
 				<br>
 				<h3>SAPAYOL</h3>
 				<p> noun <br> 1. the road less traveled by </p>
@@ -31,7 +31,7 @@
 		<hr>
 
 		<section class="row">
-			<div class="large-8 medium-centered medium-12 small-12 columns">
+			<div class="small-12 medium-10 large-8 medium-centered columns">
 				<h2 class="text-center">We tailor minimalistic leather jackets to your individual measurements.</h2>
 				<br>
 				<p>We take leather jacket classics and reinterpret them according to our design philosophy:</p>
@@ -54,11 +54,12 @@
 		<hr>
 
 		<section class="row flex-section" id="master-craftsmanship">
-			<div class="large-6 medium-12 large-push-6 small-12 columns image-container">
+			<div class="small-12 medium-10 large-6 large-push-6 columns medium-centered image-container">
 				<img class="sidekick-image" src="/images/photos/other/tailor-ironing.jpg" alt="">
 			</div>
-			<div class="large-6 medium-12 large-pull-6  small-12 columns">
+			<div class="small-12 medium-10 large-6 large-pull-6 medium-centered columns">
 				<div>
+					<br class="hide-for-large">
 					<h2>Our jackets are made by master tailors.</h2>
 					<p>Know&ndash;how, skill, and passion are the fuel of great craftsmen. The studio we work with exclusively is an infinite reserve of all three components. A group of five artisans has been working together since 1998 &ndash; the core of it since 1980 &ndash; dedicated to producing finest leather garments and pushing their art in every aspect.</p>
 					<p>But good things take time, even after this many years of practice. To meet our quality requirements, four people will be working on your jacket over a period of seven hours to create the finished product.</p>
@@ -67,10 +68,10 @@
 		</section>
 
 		<section class="row flex-section" id="best-materials">
-			<div class="large-6 medium-12 small-12 columns image-container">
+			<div class="small-12 large-6 medium-10 medium-centered columns image-container">
 				<img class="sidekick-image" src="/images/photos/other/tailor-cutting.jpg" alt="">
 			</div>
-			<div class="large-6 medium-12 small-12 columns" id="best-materials">
+			<div class="small-12 large-6 medium-10 medium-centered columns" id="best-materials">
 				<div>
 					<h2>Finding the best leather and materials is our obsession.</h2>
 					<p>We only work with the most exclusive leather available: full&ndash;grain, vegetable tanned (chrome&ndash;free), and aniline dyed. Our tannery uses the best components and takes the time that&rsquo;s necessary to produce extraordinary, long-lasting leather that becomes even more beautiful with age. From that leather, the most flawless is set aside for us.</p>
@@ -84,7 +85,7 @@
 		<hr>
 
 		<section class="row">
-			<div class="large-8 large-centered medium-12 small-12 columns">
+			<div class="small-12 medium-10 large-8 medium-centered columns">
 				<h2>New York City is our home.</h2>
 				<p>SAPAYOL is based and incorporated in New York City. This city fuels us with energy and inspiration.</p>
 				<h2> Our jackets are made in Istanbul, Turkey.</h2>
@@ -93,7 +94,7 @@
 		</section>
 
 		<section class="row" id="respect-nature">
-			<div class="large-8 large-centered medium-12 small-12 columns">
+			<div class="small-12 medium-10 large-8 medium-centered columns">
 				<h2>Every decision is guided by the greatest respect for people, our environment, and animals.</h2>
 				<p>We believe that everyone we work with and all their employees should feel respected and valued for their work. Not only will that lead to the best possible product, we just don&rsquo;t like any other type of relationship. That&rsquo;s why we&rsquo;ve visited all our supply partners and made sure that their workers have safe and healthy work conditions. We&rsquo;re proud to know that workers get above-average pay and social insurance.</p>
 				<p>Just as importantly, we see ourselves as part of one big organism. It&rsquo;s our responsibility &ndash; and also in our best interest &ndash; to honor and care for our environment and animals. We&rsquo;re pushing every aspect of our company in that regard.</p>

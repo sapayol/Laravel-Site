@@ -42,7 +42,7 @@
 		<br>
 		<br>
 	</section>
-	<section ng-show="notifyForm" class="large-4 medium-6 small-12 medium-centered columns animated fadeIn">
+	<section ng-show="notifyForm" class="large-4 medium-7 small-12 medium-centered columns animated fadeIn">
 		@include('partials.jackets.mailchimp-jacket-form')
 	</section>
 @stop
