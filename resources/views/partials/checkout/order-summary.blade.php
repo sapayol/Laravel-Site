@@ -1,6 +1,6 @@
 	<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg">
 
-	<section class="large-6 medium-8 small-12 columns">
+	<section class="large-6 medium-6 small-12 columns">
 		<h3 class="thin left">Look</h3>
 		<a href="/jackets/{{{ $order->jacket->model }}}/look" class="right underlined">Change</a>
 		<div class="clearfix"></div>
@@ -14,7 +14,7 @@
 	</section>
 
 
-	<section class="large-6 medium-8 small-12 columns">
+	<section class="large-6 medium-6 small-12 columns">
 		<h3 class="thin left">Fit</h3>
 		<div class="clearfix"></div>
 		<ul class="no-bullet value-list">
@@ -50,4 +50,5 @@
 			@endforeach
 		</ul>
 	</section>
+	<div class="clearfix"></div>
 

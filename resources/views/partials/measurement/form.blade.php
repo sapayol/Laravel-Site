@@ -24,6 +24,13 @@
 		</fieldset>
 	@else
 		<br>
+		@if ($order->bodyMeasurements->units == 'in')
+			<div class="animated fadeIn" ng-if="measurementFraction.length > 0">
+				We will round this to <strong>@{{ measurementFraction }}</strong> <small>{{{ $order->bodyMeasurements->units }}}</small>
+				<br>
+				<br>
+			</div>
+		@endif
 		<label for="{{{ $step }}}" class="text-input-label">
 			<span class="left label-title">@yield('title')</span>
 			<span class="right alert animated shake" ng-if="showFormErorrs && measurement !== ''">Invalid measurement</span>
@@ -32,11 +39,6 @@
 			<span class="input-units">{{{ $order->bodyMeasurements->units }}}</span>
 		</label>
 		<br>
-		@if ($order->bodyMeasurements->units == 'in')
-			<div ng-if="measurementFraction.length > 0">
-				We will round this to <strong>@{{ measurementFraction }}</strong> <small>{{{ $order->bodyMeasurements->units }}}</small>
-			</div>
-		@endif
 	@endif
 	<div class="text-center">
 		<button type="button" ng-click="submitMeasurement('measurements[{{{ $step }}}]')" class="black small button expand">Submit Measurement </button>

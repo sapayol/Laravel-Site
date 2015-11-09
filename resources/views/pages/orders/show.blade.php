@@ -1,15 +1,18 @@
-@extends('layouts/default')
+@extends('layouts/single-column')
 
 @section('title')
   Your Order
 @stop
 
 @section('main')
-	<p class="large-12 medium-12 small-12 columns">We have almost everything we need to create your {{{ $order->jacket->name }}} <br><br></p>
-	<section class="large-4 medium-8 large-uncentered medium-centered small-12 columns order-summary">
+
+	<div>
+		<br><br>
+		<p>We have almost everything we need to create your {{{ $order->jacket->name }}}</p><br>
 		<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg">
-	</section>
-	<section class="large-4 medium-6 small-12 columns">
+	</div>
+
+	<section class="large-6 medium-6 small-12 columns">
 		<h6>Order Details</h6>
 		<ul class="no-bullet value-list">
 			<li><small class="list-key">Date Started </small>  {{{ date('M d, Y', strtotime($order->created_at)) }}} </li>
@@ -19,34 +22,36 @@
 			@endforeach
 		</ul>
 	</section>
+
+
 	@if ($order->bodyMeasurements->completed())
-		<section class="large-4 medium-6 small-12 columns">
-				<h6>Completed Measurements</h6>
-				<ul class="no-bullet value-list">
-					@foreach ($order->bodyMeasurements->completed() as $measurement)
-						@if ($measurement == 'note')
-							<li><br></li>
-						@endif
-						@if ($order->bodyMeasurements->$measurement)
-								<li>
-									<small class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>
-										<span class="list-value">
-											@if ($measurement == 'note')
-												<em>{{{ $order->bodyMeasurements->$measurement }}}</em>
-											@elseif ($order->bodyMeasurements->units == 'in')
-												<strong decimal-to-fraction="{{{ $order->bodyMeasurements->$measurement }}}">{{{ $order->bodyMeasurements->$measurement }}}</strong> "
-											@else
-												<strong>{{{ $order->bodyMeasurements->$measurement != round($order->bodyMeasurements->$measurement) ?  round($order->bodyMeasurements->$measurement, 1) : round($order->bodyMeasurements->$measurement) }}}</strong> cm
-										@endif
-									</span>
-							</li>
-						@endif
+		<section class="large-6 medium-6 small-12 columns">
+			<h6>Completed Measurements</h6>
+			<ul class="no-bullet value-list">
+				@foreach ($order->bodyMeasurements->completed() as $measurement)
+					@if ($measurement == 'note')
+						<li><br></li>
+					@endif
+					@if ($order->bodyMeasurements->$measurement)
+						<li>
+							<small class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>
+								<span class="list-value">
+									@if ($measurement == 'note')
+										<em>{{{ $order->bodyMeasurements->$measurement }}}</em>
+									@elseif ($order->bodyMeasurements->units == 'in')
+										<strong decimal-to-fraction="{{{ $order->bodyMeasurements->$measurement }}}">{{{ $order->bodyMeasurements->$measurement }}}</strong> "
+									@else
+										<strong>{{{ $order->bodyMeasurements->$measurement != round($order->bodyMeasurements->$measurement) ?  round($order->bodyMeasurements->$measurement, 1) : round($order->bodyMeasurements->$measurement) }}}</strong> cm
+								@endif
+							</span>
+						</li>
+					@endif
 				@endforeach
 			</ul>
 		</section>
 	@endif
 
-	<section class="large-6 medium-8 small-12 large-centered medium-centered columns">
+	<section>
 		<a href="/orders/{{{ $order->id }}}/fit/next" class="button expand">Finish Your Order</a>
 		<div class="text-center">or</div>
 		<br>

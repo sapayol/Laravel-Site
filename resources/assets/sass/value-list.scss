@@ -42,12 +42,18 @@
 			min-width: 3.4rem;
 		}
 	}
-	@media only screen and (max-width: 320px) {
+}
+
+@media #{$medium-only} {
+	.medium-6 .value-list  {
 		.list-key {
 			min-width: 5rem;
 		}
-		&.tight-list {
-			font-size: .9rem;
+		.list-value {
+			min-width: 2.5rem;
+		}
+		.note-row a {
+			left: 2.9rem;
 		}
 	}
 }
@@ -77,13 +83,3 @@ span.value-list-action {
 	}
 }
 
-// @media #{$tiny-only} {
-// 	.small-6 .value-list  {
-// 		.list-key {
-// 			min-width: 3.5rem;
-// 		}
-// 		.list-value {
-// 			min-width: 2.5rem;
-// 		}
-// 	}
-// }

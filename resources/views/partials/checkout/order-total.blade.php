@@ -16,4 +16,3 @@
 		<strong class="list-value"><small>$ </small>{{{ $order->total }}}</strong>
 	</li>
 </ul>
-<br>
