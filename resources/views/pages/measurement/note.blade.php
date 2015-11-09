@@ -11,7 +11,7 @@
 
 			<label for="note" class="text-input-label">
 				<span class="label-title">Note</span>
-				<textarea name="measurements[note]" id="note" rows=6>{{{ $order->bodyMeasurements->note }}}</textarea>
+				<textarea name="measurements[note]" id="note" rows=6 autofocus>{{{ $order->bodyMeasurements->note }}}</textarea>
 				<span class="input-units">@{{ units }}</span>
 			</label>
 
