@@ -41,6 +41,12 @@ class AdminPrivileges
             } else {
                 return redirect()->guest('auth/login');
             }
+        } elseif ($this->auth->user()->role !== 'admin') {
+            if ($request->ajax()) {
+                return response('Unauthorized.', 401);
+            } else {
+                return redirect()->route('pages.home');
+            }
         }
 
         return $next($request);
