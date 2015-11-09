@@ -62,7 +62,7 @@
 					</li>
 					<li>
 						<small class="list-key">Order Total</small>
-						<span class="list-value"><small>$ </small>{{{ $order->total }}}</span>
+						<span class="list-value"><small>$ </small>&nbsp;{{{ $order->total }}}</span>
 					</li>
 					<li><small class="list-key">Payment Method</small>Credit</li>
 				</ul>
