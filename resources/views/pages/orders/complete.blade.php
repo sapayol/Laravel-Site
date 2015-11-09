@@ -124,7 +124,7 @@
 @section('additional-scripts')
 	<!-- Google Analytics E-Commerce Tracking -->
 	<script>
-		jQuery( document ).ready(function() {
+		$(document).ready(function() {
 			ga('require', 'ecommerce');
 
 			ga('ecommerce:addTransaction', {
