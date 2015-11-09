@@ -14,7 +14,7 @@ class OrdersController extends Controller {
 		$order = Order::find($id);
 		JavaScript::put(['jacket' => $order->jacket, 'session' => Session::all()]);
 
-		return view('pages.jackets.look', ['jacket' => $order->jacket]);
+		return view('pages.jackets.look', ['order' => $order, 'jacket' => $order->jacket]);
 	}
 
 
