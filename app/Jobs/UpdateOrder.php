@@ -92,15 +92,26 @@ class UpdateOrder extends Job implements SelfHandling
         }
 
         if ($this->address1 && $this->city) {
-            $address = Address::create([
-                'address1' => $this->address1,
-                'address2' => $this->address2,
-                'city'     => $this->city,
-                'postcode' => $this->postcode,
-                'province' => $this->province,
-                'country'  => $this->country,
-            ]);
-            $this->order->address_id = $address->id;
+            if ($this->order->address) {
+                $this->order->address->update([
+                    'address1' => $this->address1,
+                    'address2' => $this->address2,
+                    'city'     => $this->city,
+                    'postcode' => $this->postcode,
+                    'province' => $this->province,
+                    'country'  => $this->country,
+                ]);
+            } else {
+                $address = Address::create([
+                    'address1' => $this->address1,
+                    'address2' => $this->address2,
+                    'city'     => $this->city,
+                    'postcode' => $this->postcode,
+                    'province' => $this->province,
+                    'country'  => $this->country,
+                ]);
+                $this->order->address_id = $address->id;
+            }
         }
 
         $this->order->save();

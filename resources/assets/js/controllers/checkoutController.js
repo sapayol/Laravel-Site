@@ -53,12 +53,16 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 	$scope.submitAddress = function(order_id) {
 	  if ($scope.addressForm.$valid) {
 	  	if ($scope.paymentInfoSubmitted) {
-				$document.scrollToElement($('#order-summary'), 80, 500);
+	  		addAddressToOrder($scope.address, order_id).then(function(response){
+	  			$scope.addressSubmitted = true;
+					$scope.addressDisabled = true;
+					$document.scrollToElement($('#order-summary'), 80, 750);
+	  		});
 	  	} else {
 	  		addAddressToOrder($scope.address, order_id).then(function(response){
 					$scope.addressSubmitted = true;
 					$scope.addressDisabled = true;
-					$document.scrollToElement($('#payment-info'), 80, 500);
+					$document.scrollToElement($('#order-total'), 80, 500);
 	  		});
 	  	}
 	  } else {
