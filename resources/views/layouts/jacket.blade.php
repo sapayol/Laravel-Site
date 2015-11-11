@@ -12,12 +12,14 @@
 @include('partials.global.messages')
 
 <main class="row" ng-controller="jacketCtrl">
-	@include('partials.jacket.image-carousel')
-	@include('partials.jacket.summary')
-	@include('partials.jacket.video')
-	@include('partials.jacket.video-measurements')
-	@yield('main')
-	@include('partials.jacket.cta')
+	<div class="large-10 medium-10 medium-centered small-12 columns">
+		@include('partials.jacket.image-carousel')
+		@include('partials.jacket.summary')
+		@include('partials.jacket.video')
+		@include('partials.jacket.video-measurements')
+		@yield('main')
+		@include('partials.jacket.cta')
+	</div>
 </main>
 
 @include('partials.global.footer')
