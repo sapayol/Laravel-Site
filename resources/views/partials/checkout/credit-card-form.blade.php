@@ -58,7 +58,7 @@
 	<br>
 	<p>This is your card&rsquo;s security code. <br><br> On Visa/MasterCard/Discover cards it should be the last 3 digits on the back of your card. <br><br> On AmericanExpress cards, it is the 4 digits off to the right of the card face.</p>
 	<div class="text-center">
-		<img src="/images/cvc-hint.png" alt="" class="responsive-image">
+		<img src="/images/cvc-hint.png" alt="Credit Card Diagram" class="responsive-image">
 		<br><br>
 		<a class="underlined" aria-label="Close" ng-click="closeModal()">Close</a>
 	</div>

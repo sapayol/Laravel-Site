@@ -34,7 +34,7 @@
 				<li><small class="list-key">Order # </small><strong>{{{ $order->id  }}}	</strong></li>
 				<li><small class="list-key">Placed On </small>{{{ date('M d, Y', strtotime($order->created_at))  }}}	</li>
 			</ul>
-			<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg">
+			<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg" alt="Jacket Photo">
 
 			<div class="large-6 medium-6 small-12 columns">
 				<h3 class="thin">Look</h3>

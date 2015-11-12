@@ -1,4 +1,4 @@
-	<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg">
+	<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg" alt="Jacket Photo">
 
 	<section class="large-6 medium-6 small-12 columns">
 		<h3 class="thin left">Look</h3>

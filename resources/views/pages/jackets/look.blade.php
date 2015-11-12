@@ -66,8 +66,8 @@
 			<hr>
 
 
-			<img ng-if="jacket.lining_color == 12"  class="customization-image" src="/images/photos/linings/bemberg_oxford_black.jpg">
-			<img ng-if="jacket.lining_color == 13" class="customization-image" src="/images/photos/linings/bemberg_oxford_bordeaux.jpg">
+			<img ng-if="jacket.lining_color == 12"  class="customization-image" src="/images/photos/linings/bemberg_oxford_black.jpg"  alt="Black Lining Image">
+			<img ng-if="jacket.lining_color == 13" class="customization-image" src="/images/photos/linings/bemberg_oxford_bordeaux.jpg" alt="Bordeaux Lining Image">
 			<fieldset>
 				<legend>Lining Color</legend>
 				@if ($jacket->lining_colors()->count() > 1)
@@ -81,9 +81,9 @@
 				@endif
 			</fieldset>
 				<hr>
-			<img ng-if="jacket.hardware_color == 9"  class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-silver.jpg">
-			<img ng-if="jacket.hardware_color == 10" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-graphite.jpg">
-			<img ng-if="jacket.hardware_color == 11" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-gold.jpg">
+			<img ng-if="jacket.hardware_color == 9"  class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-silver.jpg" alt="Jacket With Silver Hardware">
+			<img ng-if="jacket.hardware_color == 10" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-graphite.jpg" alt="Jacket With Graphite Hardware">
+			<img ng-if="jacket.hardware_color == 11" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-gold.jpg" alt="Jacket With Gold Hardware">
 			<fieldset>
 				<legend>Zipper &amp; Button Color</legend>
 				@if ($jacket->hardware_colors()->count() > 1)

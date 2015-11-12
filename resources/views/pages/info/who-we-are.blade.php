@@ -60,7 +60,7 @@
 <div class="large-11 medium-11 small-12 medium-centered columns">
 		<section class="row flex-section" id="master-craftsmanship">
 			<div class="small-12 medium-10 large-6 large-push-6 columns medium-centered image-container">
-				<img class="sidekick-image" src="/images/photos/other/tailor-ironing.jpg" alt="">
+				<img class="sidekick-image" src="/images/photos/other/tailor-ironing.jpg" alt="Tailor Ironing">
 			</div>
 			<div class="small-12 medium-10 large-6 large-pull-6 medium-centered columns">
 				<div>
@@ -74,7 +74,7 @@
 
 		<section class="row flex-section" id="best-materials">
 			<div class="small-12 large-6 medium-10 medium-centered columns image-container">
-				<img class="sidekick-image" src="/images/photos/other/tailor-cutting.jpg" alt="">
+				<img class="sidekick-image" src="/images/photos/other/tailor-cutting.jpg" alt="Tailor Cutting Leather">
 			</div>
 			<div class="small-12 large-6 medium-10 medium-centered columns" id="best-materials">
 				<div>

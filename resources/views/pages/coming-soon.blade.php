@@ -10,7 +10,7 @@
 
 @section('main')
 	<div class="centered text-center">
-		<img src="images/logo-black.svg" alt="	Sapayol Logo" class="logo">
+		<img src="images/logo-black.svg" alt="Sapayol Logo" class="logo">
 		<br><br>
 		<h1 class="thin">Coming Soon</h1>
 	</div>

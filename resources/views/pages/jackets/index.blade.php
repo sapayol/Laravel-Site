@@ -20,7 +20,7 @@
 			  <li class="text-center">
 					@if ($jacket->active)
 						<a href="/jackets/{{{ $jacket->model }}}">
-							<img class="responsive-image" src="/images/photos/jackets/{{{ $jacket->model }}}/thumbnail.jpg">
+							<img class="responsive-image" src="/images/photos/jackets/{{{ $jacket->model }}}/thumbnail.jpg" alt="Jacket Placeholder Image">
 						</a>
 						<h2>
 							<a class="underlined" href="/jackets/{{{ $jacket->model }}}">
@@ -29,7 +29,7 @@
 						</h2>
 					@else
 						<div class="jacket-placeholder-container">
-							<img class="jacket-placeholder" src="/images/photos/jackets/{{{ $jacket->model }}}/{{{ $jacket->model }}}.svg">
+							<img class="jacket-placeholder" src="/images/photos/jackets/{{{ $jacket->model }}}/{{{ $jacket->model }}}.svg" alt="Jacket Placeholder Image">
 							<h2>{{{ $jacket->name }}}</h2>
 							<h3><em>Coming Soon</em></h3>
 							<br>

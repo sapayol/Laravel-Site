@@ -13,7 +13,7 @@
 	<div>
 		<br><br>
 		<p>We have almost everything we need to create your {{{ $order->jacket->name }}}</p><br>
-		<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg">
+		<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg" alt="Jacket Photo">
 	</div>
 
 	<section class="large-6 medium-6 small-12 columns">

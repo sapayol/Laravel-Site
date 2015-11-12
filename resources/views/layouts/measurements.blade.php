@@ -22,7 +22,7 @@
 <main class="row measurement-entry" ng-controller="measurementCtrl" ng-init="init('{{{ $step }}}', '{{{ $order->bodyMeasurements->units }}}' {{{ $order->bodyMeasurements->$step ? ',' . $order->bodyMeasurements->$step : '' }}} )">
 	<section class=" small-12 medium-5 large-8 medium-push-7  large-push-4 columns">
 		@if ($step == 'height')
-			<img src="/images/photos/other/height.jpg" alt="">
+			<img src="/images/photos/other/height.jpg" alt="Height Diagram">
 			<p><br>How tall are you?</p>
 		@else
 			@include('partials.measurement.guide')
