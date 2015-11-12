@@ -23,8 +23,7 @@
     position: relative;
     top: -3rem;
     text-align: left;
-    padding-top: 2px;
-    @media #{$medium-up} { padding-top: 0.55rem; }
+    padding-top: 0.55rem;
     box-shadow: none;
     border-bottom: 1px solid $light-grey;
     transition: top 1s ease-in-out;
@@ -41,12 +40,21 @@
         border-bottom: 2px solid $primary-color;
       }
     }
+    .player-controls-left {
+      float: left;
+    }
     .player-controls-right {
       display: inline-block;
-      @media #{$medium-up} { float: left; }
+      float: right;
+      margin-top: 0;
     }
   }
   .player-progress-played[value] {
     color: $primary-color;
   }
+}
+
+.player-fullscreen .player-controls, .player.fullscreen-active .player-controls {
+  z-index: 300;
+  top: initial;
 }
