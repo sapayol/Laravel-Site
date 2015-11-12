@@ -18,14 +18,14 @@ class JacketsController extends Controller {
 
 	public function show($model)
 	{
-		$jacket = Jacket::where('model', '=', $model)->first();
+		$jacket = Jacket::where('model', '=', $model)->firstOrFail();
 
 		return view('pages.jackets.' . $model, ['jacket' => $jacket]);
 	}
 
 	public function look($model)
 	{
-		$jacket = Jacket::where('model', '=', $model)->first();
+		$jacket = Jacket::where('model', '=', $model)->firstOrFail();
 
 		// If a user already has an order started then use the look choices from that order
 		if ($this->current_user && $this->current_user->unfinishedOrders()->count() > 0) {
