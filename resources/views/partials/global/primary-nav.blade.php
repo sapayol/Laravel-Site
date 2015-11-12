@@ -1,6 +1,6 @@
 <div class="row">
   <nav class="primary-nav large-12 medium-12 small-12 columns" role="navigation">
-    <a href="/home" class="logo left"><img src="/images/logo-black.svg" alt="Sapayol Logo"></a></li>
+    <a href="/home" class="logo left"><img src="/images/logo-black.svg" alt="Sapayol Logo"></a>
     <a href="" class="right underlined menu-button" ng-class="{open: displayMenu}" ng-click="displayMenu = !displayMenu">MENU </a>
     <div class="clearfix"></div>
     <div class="right text-right secondary-nav">

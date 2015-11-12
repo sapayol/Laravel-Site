@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title> SAPAYOL | @yield('title') </title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<link rel="home" href="{{ getenv('SITE_URL') }}" />
+		<link rel="home" href="{{ getenv('SITE_URL') }}"/>
 		@if (app()->env == 'production')
 			<link rel="stylesheet" href="/css/combo.min.css">
 		@else
@@ -18,5 +17,3 @@
 	</head>
 
 	<body "@yield('angular_page_controller')" id="top">
-
-	{{-- @include('partials.meta.breakpoint-helper') --}}
