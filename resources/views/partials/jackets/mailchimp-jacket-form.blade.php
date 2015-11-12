@@ -15,9 +15,9 @@
 			<label class="text-left checkboxes">
 				<span class="label-title">Jacket Model</span>
 				<ul class="inline-list">
-					<li><label><input type="checkbox" checked="true" name="models[bopgun]" value=""> Bopgun</label></li>
-					<li><label><input type="checkbox" checked="true" name="models[moto]" value=""> Moto</label></li>
-					<li><label><input type="checkbox" checked="true" name="models[ma1]" value=""> MA1</label></li>
+	    		<li><label for="mce-group[11153]-11153-0"><input type="checkbox" value="1" checked="true" name="group[11153][1]" id="mce-group[11153]-11153-0"> Bopgun</label></li>
+					<li><label for="mce-group[11153]-11153-1"><input type="checkbox" value="2" checked="true" name="group[11153][2]" id="mce-group[11153]-11153-1"> Moto</label></li>
+					<li><label for="mce-group[11153]-11153-2"><input type="checkbox" value="4" checked="true" name="group[11153][4]" id="mce-group[11153]-11153-2"> MA1</label></li>
 				</ul>
 			</label>
 		</div>
