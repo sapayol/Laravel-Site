@@ -5,7 +5,7 @@
 @stop
 
 @section('title')
-	Jackets
+	Our Jackets
 @stop
 
 @section('header')

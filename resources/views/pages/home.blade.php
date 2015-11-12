@@ -9,7 +9,7 @@
 @stop
 
 @section('title')
-  Home
+  Leather Jackets
 @stop
 
 @section('full-width-hero')
