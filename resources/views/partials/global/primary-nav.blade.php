@@ -1,3 +1,11 @@
+<?php
+  if (request()->route()  && array_key_exists('as', request()->route()->getAction())) {
+    $action = request()->route()->getAction()['as'];
+  } else {
+    $action = null;
+  }
+ ?>
+
 <div class="row">
   <nav class="primary-nav large-12 medium-12 small-12 columns" role="navigation">
     <a href="/home" class="logo left"><img src="/images/logo-black.svg" alt="Sapayol Logo"></a>
@@ -12,7 +20,7 @@
           <a href="/orders/{{{ $current_user->orders->last()->id }}}" class=" highlight-color">Your Order</a>
         @endif
         <a class="" href="/auth/logout">Logout</a>
-      @elseif (!$current_user && !strpos($current_uri, 'login'))
+      @elseif (!$current_user)
         <a class="" href="/auth/login">Login</a>
       @endif
     </div>

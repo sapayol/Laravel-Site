@@ -41,12 +41,18 @@
 	<hr>
 	</article>
 	<div class="clearfix"></div>
-	<section  ng-hide="notifyForm" class="text-center">
-		<a class="underlined" href="" ng-click="notifyForm = true">Get notified when new models arrive</a>
-		<br>
-		<br>
-	</section>
-	<section ng-show="notifyForm" class="large-4 medium-7 small-12 medium-centered columns animated fadeIn">
+	<?php  $show_form = strpos(request()->fullUrl(), 'jacket-updates') ?>
+
+	@if (!$show_form)
+		<section ng-hide="notifyForm" class="text-center" id="jacket-updates">
+			<a class="underlined" href="" ng-click="notifyForm = true">Get notified when new models arrive</a><br><br>
+		</section>
+	@endif
+	@if ($show_form)
+		<section class="large-4 medium-7 small-12 medium-centered columns animated fadeIn">
+	@else
+		<section ng-show="notifyForm" class="large-4 medium-7 small-12 medium-centered columns animated fadeIn">
+	@endif
 		@include('partials.jackets.mailchimp-jacket-form')
 	</section>
 @stop
