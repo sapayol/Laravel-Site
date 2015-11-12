@@ -19,7 +19,7 @@
 			<br>
 			<h2 class="text-center">Order Process</h2>
 			<li>
-				<h3>Choose a model</h3>
+				<h3>Choose a jacket model</h3>
 				<p></p>
 			</li>
 			<li>
