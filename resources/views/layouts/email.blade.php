@@ -26,7 +26,7 @@
 								<tr>
 									<td class="content-block">
 										<br><br>
-										<a href="{{{ env('SITE_URL') }}}"><img src="https://sapayol.com/images/logo-black.svg" alt="SAPAYOL Logo" class="logo"></a>
+										<a href="{{{ env('SITE_URL') }}}"><img src="https://sapayol.com/images/logo-black.svg" alt="SAPAYOL Logo" class="logo" style="text-align: center; width: 150px; margin-bottom: 16px;"></a>
 										<br><br>
 									</td>
 								</tr>

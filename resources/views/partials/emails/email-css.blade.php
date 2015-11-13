@@ -64,12 +64,6 @@ body {
   border-radius: 3px;
 }
 
-.logo {
-  text-align: center;
-  width: 150px;
-  margin-bottom: 16px;
-}
-
 .content-wrap {
   padding: 20px;
 }
@@ -164,10 +158,7 @@ a.underlined {
 .button, a.button, button.button {
   font-weight: 200;
   font-size: 1.2rem;
-  border: 1px solid white;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
+  border: 1px solid black;
   border-bottom: 6px solid #B02428;
   border-radius: 0;
   color: white;
@@ -303,22 +294,5 @@ a.underlined {
   }
 }
 
-
-small {
-  font-size: 85%;
-}
-
-.value-list {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-.value-list li .list-key {
-  display: inline-block;
-  min-width: 90px;
-}
-
-.value-list.tight-list li .list-key {
-  min-width: 65px;
 }
 /*# sourceMappingURL=styles.css.map */

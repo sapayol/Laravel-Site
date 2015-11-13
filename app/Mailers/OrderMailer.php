@@ -59,7 +59,7 @@ class OrderMailer extends Mailer {
     $subject =  'SAPAYOL Jacket Order: ' . $order->id;
     $view    = 'emails.tailor-message';
 
-    return  $this->sendTo(env('TAILOR_EMAIL'), $subject, $view, ['order' => $order, 'inclusions' => $inclusions], 'TailorTest');
+    return  $this->sendTo(env('TAILOR_EMAIL'), $subject, $view, ['order' => $order, 'note' => $note, 'inclusions' => $inclusions], 'TailorTest');
   }
 
 }

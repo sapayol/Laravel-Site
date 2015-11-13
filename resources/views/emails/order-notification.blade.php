@@ -24,7 +24,11 @@
 				<td width="250px">@include('partials.emails.jacket-info')</td>
 			</tr>
 			<tr>
-				<td width="250px">@include('partials.emails.payment-info')</td>
+				<td width="250px">
+					@include('partials.emails.payment-info')
+					<br>
+					<a href="https://dashboard.stripe.com/payments/{{{ $order->payment_id }}}" class="underlined">View Stripe Payment</a>
+				</td>
 				<td width="250px">@include('partials.emails.body-measurements')</td>
 			</tr>
 		</tbody>

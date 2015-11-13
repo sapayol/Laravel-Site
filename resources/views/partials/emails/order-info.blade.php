@@ -1,9 +1,9 @@
 <h3>Order Info</h3>
 <br>
-<ul class="value-list tight-list">
-	<li><small class="list-key">Order #</small><strong>{{{ $order->id }}}</strong></li>
-	<li><small class="list-key">Name</small><strong>{{{ $order->user->name }}}</strong></li>
-	<li><small class="list-key">Address</small></li>
+<ul style="list-style: none; margin-left: 0; padding-left: 0;">
+	<li><small style="font-size: 85%; display: inline-block; min-width: 65px;">Order #</small><strong>{{{ $order->id }}}</strong></li>
+	<li><small style="font-size: 85%; display: inline-block; min-width: 65px;">Name</small><strong>{{{ $order->user->name }}}</strong></li>
+	<li><small style="font-size: 85%; display: inline-block; min-width: 65px;">Address</small></li>
 	<li><strong>{{{ $order->address->address1 }}}</strong></li>
 	@if ($order->address->address2 )
 		<li><strong>{{{ $order->address->address2 }}}</strong></li>
