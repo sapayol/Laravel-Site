@@ -1,15 +1,3 @@
-@extends('layouts/default')
-
-@section("page_wrap_class")
-	nav-item-page
-@stop
-
-@section('title')
-	{{{ $jacket->name }}}
-@stop
-
-@section('header')
-
 <?php
   if (request()->route()  && array_key_exists('as', request()->route()->getAction())) {
     $action = request()->route()->getAction()['as'];
@@ -18,19 +6,34 @@
   }
  ?>
 
-	@if ($action == 'orders.look')
-		<a href="/orders/{{{ $order->id }}}" class="underlined">Your Order</a>
-		<span class="chevron chevron--right breadcrumb-chevron"></span>
-			Look
-		<span class="chevron chevron--right breadcrumb-chevron"></span>
-		<a href="/orders/{{{ $order->id }}}/fit/next" class="underlined">Fit</a>
-	@else
-		<a href="/jackets" class="underlined">Our Jackets</a>
-		<span class="chevron chevron--right breadcrumb-chevron"></span>
-		<a href="/jackets/{{{ $jacket->model }}}" class="underlined">{{{ $jacket->name }}}</a>
-		<span class="chevron chevron--right breadcrumb-chevron"></span>
-	  Look
+@extends('layouts/default')
+
+@section("page_wrap_class")
+	@if ($action == 'jackets.look')
+		nav-item-page
 	@endif
+@stop
+
+@section('title')
+	{{{ $jacket->name }}}
+@stop
+
+@section('header')
+	<h1 class="with-breadcrumbs">
+		@if ($action == 'orders.look')
+			<a href="/orders/{{{ $order->id }}}" class="underlined">Your Order</a>
+			<span class="chevron chevron--right breadcrumb-chevron"></span>
+				Look
+			<span class="chevron chevron--right breadcrumb-chevron"></span>
+			<a href="/orders/{{{ $order->id }}}/fit/next" class="underlined">Fit</a>
+		@else
+			<a href="/jackets" class="underlined">Our Jackets</a>
+			<span class="chevron chevron--right breadcrumb-chevron"></span>
+			<a href="/jackets/{{{ $jacket->model }}}" class="underlined">{{{ $jacket->name }}}</a>
+			<span class="chevron chevron--right breadcrumb-chevron"></span>
+		  Look
+		@endif
+	</h1>
 @stop
 
 @section('angular_page_controller')

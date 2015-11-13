@@ -9,6 +9,7 @@
 @stop
 
 @section('header')
+	<h1 class="with-breadcrumbs">
 	<a href="/orders/{{{ $order->id }}}" class="underlined">Your Order</a>
 	<span class="chevron chevron--right breadcrumb-chevron"></span>
 	<a href="/orders/{{{ $order->id }}}/look" class="underlined">Look</a>
@@ -16,6 +17,7 @@
 	<a href="/orders/{{{ $order->id }}}/fit/height" class="underlined">Fit</a>
 	<span class="chevron chevron--right breadcrumb-chevron"></span>
 	Checkout
+	</h1>
 @stop
 
 @section('main')
