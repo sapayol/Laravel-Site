@@ -42,7 +42,7 @@ class Measurement extends Model {
   {
     $results = [];
     foreach ($this->measurement_names as $key => $measurement_name) {
-      if (($this->$measurement_name !== '' && $this->$measurement_name !== null) && $measurement_name !== 'note')) {
+      if (($this->$measurement_name !== '' && $this->$measurement_name !== null) && $measurement_name !== 'note') {
         $results[$key] = $measurement_name;
       }
     }
