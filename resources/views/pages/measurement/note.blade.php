@@ -4,6 +4,23 @@
 	Fit | Note
 @stop
 
+@section('header')
+	<h1 class="with-breadcrumbs">
+			<a href="/orders/{{{ $order->id }}}" class="underlined">Your Order</a>
+			<span class="chevron chevron--right breadcrumb-chevron"></span>
+			@if ($order && $order->statusIsAfter('started'))
+				Look
+			@else
+				<a href="/orders/{{{ $order->id }}}/look" class="underlined">Look</a>
+			@endif
+			<span class="chevron chevron--right breadcrumb-chevron"></span>
+			Fit
+			<span class="chevron chevron--right breadcrumb-chevron"></span>
+		  Note
+	</h1>
+@stop
+
+
 @section('main')
 	<section class=" small-12 medium-5 large-8 medium-push-7  large-push-4 columns">
 		<form action="/orders/{{{ $order->id}}}/fit" method="POST">
