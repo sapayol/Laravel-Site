@@ -305,7 +305,7 @@ a.underlined {
 
 
 small {
-  font-size: 90%;
+  font-size: 85%;
 }
 
 .value-list {

@@ -4,10 +4,23 @@
 	Reset your Sapayol password
 @stop
 
-@section('main')
+@section('row1')
+	<p>
+		Looks like you requested to reset your password on sapayol.com
+	</p>
+	<br>
+@stop
 
-	Click here to reset your password: {{ url('password/reset/'.$token) }}
+@section('row2')
 
-	If this request was not made by you, please let us know by replying to this email.
+	<div class="text-center">
+		<a href=" {{ env('SITE_URL') . ('/password/reset/'.$token) }}" class="button">Reset Your Password</a>
+	</div>
+@stop
 
+@section('row3')
+	<p>
+	<br><br>
+		If this request was not made by you, please let us know by replying to this email.
+	</p>
 @stop

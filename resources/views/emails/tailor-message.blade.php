@@ -4,118 +4,33 @@
 Sapayol Jacket Order: {{{ $order->id }}}
 @stop
 
-@section('main')
+@section('row1')
+	@if (isset($note))
+		<p>{{{ $note }}}</p>
+		<br><br>
+	@else
+	 <p>
+	 	Hi,
+		<br><br>
+		Here's the latest look order <strong>{{{ $order->id }}}</strong>
+	 </p>
+	@endif
+@stop
 
-<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+
+@section('row2')
 	<tr>
-		<td align="left" valign="top">
-			<table border="0" cellpadding="20" cellspacing="0" width="400">
-				@if (isset($note))
-					<tr>
-						<td>
-							{{{ $note }}}
-						</td>
-					</tr>
-				@endif
-				{{----------------------------------------------------------------------------------}}
-				{{--                                  ORDER INFO                                    }}
-				{{----------------------------------------------------------------------------------}}
-				<tr>
-					<td align="left" valign="top">
-						<table border="0" cellpadding="0" cellspacing="0" width="100%">
-							<tr>
-								<td width="35%"><small>Order #</small></td>
-								<td>{{{ $order->id }}}</td>
-							</tr>
-							<tr>
-								<td width="35%"><small>Placed On:</small></td>
-								<td>{{{ date('Y-m-d h:i', strtotime($order->paid_at)) }}}</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-
-				{{----------------------------------------------------------------------------------}}
-				{{--                                     LOOK                                       }}
-				{{----------------------------------------------------------------------------------}}
-				<tr>
-					<td align="left" valign="top">
-						@if (isset($inclusions['look']))
-						<table width="100%" class="value-list-table">
-							<tbody>
-								<tr>
-									<td width="35%"><small>Model</small></td>
-									<td><strong>{{{ ucwords($order->jacket->name) }}}</strong></td>
-								</tr>
-								<tr>
-									<td width="35%"><small>Leather Type</small></td>
-									<td><strong>{{{ ucwords($order->leather_type()->name) }}}</strong></td>
-								</tr>
-								<tr>
-									<td width="35%"><small>Leather Color</small></td>
-									<td><strong>{{{ ucwords($order->leather_color()->name) }}}</strong></td>
-								</tr>
-								<tr>
-									<td width="35%"><small>Lining Color</small></td>
-									<td><strong>{{{ ucwords($order->lining_color()->name) }}}</strong></td>
-								</tr>
-								<tr>
-									<td width="35%"><small>Hardware Color</small></td>
-									<td><strong>{{{ ucwords($order->hardware_color()->name) }}}</strong></td>
-								</tr>
-							</tbody>
-						</table>
-						@endif
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<table width="100%">
-							<tr>
-								{{----------------------------------------------------------------------------------}}
-								{{--                               BODY MEASUREMENTS                                }}
-								{{----------------------------------------------------------------------------------}}
-								<td align="left" valign="top">
-									@if (isset($inclusions['product_fit']))
-									<table width="100%" class="value-list-table">
-										<caption>Body <br> Measurements</caption>
-										<tbody>
-											@foreach ($order->productMeasurements->measurement_names as $name)
-											<tr>
-												<td><small>{{{ ucwords(str_replace('_', ' ', $name)) }}}</small></td>
-												<td><strong>{{{ $order->bodyMeasurements->$name }}}12.3 "</strong></td>
-											</tr>
-											@endforeach
-										</tbody>
-									</table>
-									@endif
-								</td>
-
-								{{----------------------------------------------------------------------------------}}
-								{{--                              PRODUCT MEASUREMENTS                              }}
-								{{----------------------------------------------------------------------------------}}
-								<td align="left" valign="top">
-									@if (isset($inclusions['product_fit']))
-									<table width="100%" class="value-list-table">
-										<caption>Product <br>Measurements</caption>
-										<tbody>
-											@foreach ($order->productMeasurements->measurement_names as $name)
-											<tr>
-												<td><small>{{{ ucwords(str_replace('_', ' ', $name)) }}}</small></td>
-												<td><strong>{{{ $order->bodyMeasurements->$name }}}45 cm</strong></td>
-											</tr>
-											@endforeach
-										</tbody>
-									</table>
-									@endif
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-			</table>
-		</td>
+		<td>@include('partials.emails.order-info')</td>
+		@if (isset($inclusions['look']))
+			<td>@include('partials.emails.jacket-info')</td>
+		@endif
 	</tr>
-</table>
-
+	<tr>
+		@if (isset($inclusions['body_fit']))
+			<td>@include('partials.emails.body-measurements')</td>
+		@endif
+		@if (isset($inclusions['product_fit']))
+			<td>@include('partials.emails.jacket-measurements')</td>
+		@endif
+	</tr>
 @stop
