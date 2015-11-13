@@ -1,6 +1,6 @@
 <h3 class="thin left">Payment Info</h3>
 <br>
-<ul class="no-bullet value-list">
+<ul class="value-list tight-list">
 	<li>
 		<small class="list-key">{{{ ucwords($order->jacket->model) }}}</small>
 		<span class="list-value"><small>$ </small>&nbsp;{{{ $order->jacket->price }}}</span>

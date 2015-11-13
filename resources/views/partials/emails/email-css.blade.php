@@ -315,6 +315,10 @@ small {
 }
 .value-list li .list-key {
   display: inline-block;
-  min-width: 100px;
+  min-width: 90px;
+}
+
+.value-list.tight-list li .list-key {
+  min-width: 65px;
 }
 /*# sourceMappingURL=styles.css.map */
