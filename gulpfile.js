@@ -21,11 +21,11 @@ gulp.task('default',    ['sync', 'browserSync']);
 gulp.task('libs',       ['css-vendor', 'js-vendor']);
 
 gulp.task('build', function(callback) {
-  runSequence('clean', ['css', 'css-vendor', 'js', 'js-vendor'], ['images', 'fonts'], callback);
+  runSequence('clean', ['css', 'css-vendor', 'js', 'js-vendor'], ['fonts'], callback);
 });
 
 gulp.task('build-prod', function(callback) {
-  runSequence('clean', ['css-prod', 'css-vendor-prod','js-prod', 'js-vendor-prod'], 'css-combine', ['images', 'fonts'], callback);
+  runSequence('clean', ['css-prod', 'css-vendor-prod','js-prod', 'js-vendor-prod'], 'css-combine', ['fonts'], callback);
 });
 
 
@@ -34,14 +34,7 @@ gulp.task('build-prod', function(callback) {
 //===========================================================================//
 
 gulp.task('clean', function() {
-  del(['public/css/**', 'public/js/**', 'public/images/**', 'public/fonts/**', '!public/css', '!public/js', '!public/images', '!public/fonts']);
-});
-
-gulp.task('images', function() {
-  return gulp.src('resources/assets/images/**/*')
-    .pipe(plumber())
-    .pipe(changed('public/images'))
-    .pipe(gulp.dest('public/images'));
+  del(['public/css/**', 'public/js/**', 'public/fonts/**', '!public/css', '!public/js', '!public/fonts']);
 });
 
 gulp.task('fonts', function() {

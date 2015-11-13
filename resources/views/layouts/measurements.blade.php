@@ -31,7 +31,9 @@
 	<section class="small-12 medium-7 large-4 medium-pull-5  large-pull-8 columns">
 		<div class="row collapse reverse-with-flex">
 			<section class="small-12 medium-12 large-12 columns">
+				<br class="show-for-small">
 				@include('partials.measurement.form')
+				<br class="show-for-small">
 			</section>
 			<section class="small-12 medium-12 large-12 columns">
 				@include('partials.measurement.tracker')
