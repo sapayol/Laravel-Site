@@ -1,7 +1,7 @@
-<section ng-show="measurementsVisible" class="animated slideInDown">
+<section ng-show="measurementsVisible" class="animated slideInDown large-10 medium-10 medium-centered small-12 columns">
 	@yield('measurement_data')
 
-		<div class="large-6 meidum-8 small-12">
+		<div class="large-6 medium-8 small-12">
 		<ul ng-if="metricUnits" class="no-bullet value-list tight-list large-6 medium-6 small-6 columns">
 			<li><strong><small>Model Measurements</small></strong></li>
 			@foreach ($body_measurements as $key => $value)

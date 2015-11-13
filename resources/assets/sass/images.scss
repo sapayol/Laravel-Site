@@ -135,11 +135,11 @@
 	  }
 	}
 	.slick-next {
+		right: 0;
 		&:before {
 		  transform: rotate(45deg);
-		  // right: 1rem;
+		  right: -1.7rem;
 		}
-	  right: -1.7rem;
 	}
 	.slick-prev {
 		&:before {

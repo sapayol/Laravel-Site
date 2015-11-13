@@ -81,7 +81,7 @@
 			<a href="/images/photos/leather/lamb_c_black_close-up.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/leather/lamb_c_black_close-up.jpg" alt="Lamb Leather Close Up"></a>
 		</div>
 		<div class="large-6 medium-10 small-12 medium-centered columns">
-			<br>
+			<br class="hide-for-small">
 			<h2>Vegetable tanned, chrome&ndash;free, full&ndash;grain leather</h2>
 			<p>All our jackets are made with the most exclusive, vegetable tanned, full&ndash;grain leather. It’s supple, thick, has a warm touch, and a pleasant smell. With good care, it will not crack or bulge for decades but break in and develop a beautiful patina.</p>
 			<p>Our leather is also absolutely free of the chromium salts that can become carcinogenic, found in almost every other leather garment.</p>
@@ -97,7 +97,7 @@
 	<section class="row">
 		<h2 class="text-center">Inside pockets for your valuables</h2>
 		<br>
-		<br>
+		<br class="hide-for-small">
 		<div class="large-6 medium-6 small-12 columns">
 			<a href="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" alt="Interior Left Pocket Photo"></a>
 			<p class="image-caption">Slide your phone into a welted pocket that sits conveniently just inside your jacket, on the left side.</p>
@@ -127,7 +127,9 @@
 	<hr class="thin">
 
 	<section class="row">
-		<h2 class="text-center">Super smooth and reliable hardware</h2><br><br>
+		<h2 class="text-center">Super smooth and reliable hardware</h2>
+		<br class="hide-for-small">
+		<br>
 		<div class="large-6 medium-6 small-12 columns">
 			<a href="/images/photos/hardware/zipper_silver_detail.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/hardware/zipper_silver_detail.jpg" alt="Zipper Photo"></a>
 			<p class="image-caption">All zippers are YKK Excella. They combine legendary reliability with smooth elegance. Each tooth is individually polished, which gives the zipper a brilliant shine and prevents scratching of the jacket or your skin.
