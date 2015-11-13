@@ -9,6 +9,15 @@
 @stop
 
 @section('header')
+
+<?php
+  if (request()->route()  && array_key_exists('as', request()->route()->getAction())) {
+    $action = request()->route()->getAction()['as'];
+  } else {
+    $action = null;
+  }
+ ?>
+
 	@if ($action == 'orders.look')
 		<a href="/orders/{{{ $order->id }}}" class="underlined">Your Order</a>
 		<span class="chevron chevron--right breadcrumb-chevron"></span>
