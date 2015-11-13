@@ -11,14 +11,17 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
 		$scope.jacket.leather_color  = typeof(oldInput.leather_color)  !== 'undefined' ? oldInput.leather_color  : leather_color;
 		$scope.jacket.lining_color   = typeof(oldInput.lining_color)   !== 'undefined' ? oldInput.lining_color   : lining_color;
 		$scope.jacket.hardware_color = typeof(oldInput.hardware_color) !== 'undefined' ? oldInput.hardware_color : hardware_color;
-	}
+    $scope.updateSessionCache();
+  }
 
-	// Update the session on the server to match the changes that the user makes
-	$scope.updateSessionCache = function() {
-		var jacket = {};
-		jacket[sapayol.jacket.model] = $scope.jacket;
-		Session.store(jacket);
-	}
+  // Update the session on the server to match the changes that the user makes
+  $scope.updateSessionCache = function() {
+    var jacket = {};
+    jacket[sapayol.jacket.model] = $scope.jacket;
+    Session.store(jacket);
+  }
+
+
 
   $scope.submitAuthRequest = function(request) {
   	if (request === 'logout') return logout($scope.user);
@@ -71,6 +74,7 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
       $scope.showUserErorrs = true;
     }
   }
+
 
 
 }]);
