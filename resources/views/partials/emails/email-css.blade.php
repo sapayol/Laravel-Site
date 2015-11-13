@@ -66,7 +66,7 @@ body {
 
 .logo {
   text-align: center;
-  width: 300px;
+  width: 150px;
   margin-bottom: 16px;
 }
 
@@ -152,8 +152,13 @@ hr {
     LINKS & BUTTONS
 ------------------------------------- */
 a {
-  color: #348eda;
-  text-decoration: underline;
+  color: #B02428;
+}
+
+a.underlined {
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid #B02428
 }
 
 .button, a.button, button.button {
@@ -163,7 +168,7 @@ a {
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-top: 1px solid black;
-  border-bottom: 6px solid #00d2d2;
+  border-bottom: 6px solid #B02428;
   border-radius: 0;
   color: white;
   background: black;
@@ -298,4 +303,18 @@ a {
   }
 }
 
+
+small {
+  font-size: 90%;
+}
+
+.value-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.value-list li .list-key {
+  display: inline-block;
+  min-width: 100px;
+}
 /*# sourceMappingURL=styles.css.map */

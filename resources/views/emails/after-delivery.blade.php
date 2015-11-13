@@ -27,6 +27,7 @@
 	<p>We will soon offer a flight jacket and a moto. Sign up if you would like to be one of the first to know about them.</p>
 	<br>
 	<div class="text-center">
+		<br>
 		<a href="{{{ env('SITE_URL') }}}/jackets?jacket-updates" class="button">Sign Up For Updates</a>
 	</div>
 @stop

@@ -25,7 +25,9 @@
 							<table width="100%" cellpadding="0" cellspacing="0">
 								<tr>
 									<td class="content-block">
+										<br><br>
 										<a href="{{{ env('SITE_URL') }}}"><img src="https://sapayol.com/images/logo-black.svg" alt="SAPAYOL Logo" class="logo"></a>
+										<br><br>
 									</td>
 								</tr>
 								<tr>
@@ -55,7 +57,12 @@
 								</tr>
 								<tr>
 									<td class="content-block">
-										@yield('row5')
+										@yield('row6')
+									</td>
+								</tr>
+								<tr>
+									<td class="content-block">
+										@yield('row7')
 									</td>
 								</tr>
 							</table>
