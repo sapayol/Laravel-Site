@@ -1,13 +1,13 @@
 <form ng-submit="submitAddress({{{ $order->id }}})" name="addressForm">
+	<label for="email" class="text-input-label">
+		<span class="label-title">Email</span>
+		<input id="email" name="email" type="text" disabled value="{{{ $order->user->email }}}">
+	</label>
+
 	<label for="name" class="text-input-label">
 		<span class="label-title">Name</span>
 		<span class="right" ng-if="showAddressErorrs && addressForm.name.$invalid">Required</span>
 		<input id="name" name="name" type="text" ng-model="address.name" ng-required="true" ng-disabled="addressDisabled" autofocus>
-	</label>
-
-	<label for="email" class="text-input-label">
-		<span class="label-title">Email</span>
-		<input id="email" name="email" type="text" disabled value="{{{ $order->user->email }}}">
 	</label>
 
 	<label for="address1" class="text-input-label">
