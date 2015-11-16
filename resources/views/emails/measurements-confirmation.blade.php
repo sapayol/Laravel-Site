@@ -34,8 +34,6 @@
 
 
 @section('row4')
-	NOTES
-	<br>
 	<br>
 	<br>
 	<hr>

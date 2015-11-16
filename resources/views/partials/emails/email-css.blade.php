@@ -248,7 +248,7 @@ a.underlined {
 .invoice .invoice-items .total td {
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 /* -------------------------------------

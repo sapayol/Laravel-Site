@@ -14,10 +14,10 @@
 
 @section('row3')
 	<p>
-		Your {{{ $order->jacket->name }}} is being shipped express by TURPEX with:
+		Your {{{ $order->jacket->name }}} is being shipped express to:
 	</p>
 
-	<ul class="value-list">
+	<ul style="list-style: none;" class="value-list">
 		<li><strong>{{{ $order->user->name }}}</strong></li>
 		<li><strong>{{{ $order->address->address1 }}}</strong></li>
 		@if ($order->address->address2 )
@@ -26,21 +26,23 @@
 		<li><strong>{{{ $order->address->city }}}, {{{ $order->address->province }}} {{{ $order->address->postcode }}}</strong></li>
 		<li><strong>{{{ $order->address->country }}}</strong></li>
 	</ul>
-
-
-	<p>
-		You can track your package here: 	<a href="#" class="underlined">LINK TO TRACKING (TRACKING NUMBER)</a>
-	</p>
-
 @stop
 
+
 @section('row4')
+	<p style="text-align: center;">
+		<br><br>
+		<a href="https://track.aftership.com/{{{ $order->tracking_number }}}" class="button underlined">Track Your Package</a>
+	</p>
+@stop
+
+@section('row5')
 	<em>
 		Be aware that it might take our logistics partner some time to correctly display the status of the shipment.
 	</em>
 @stop
 
-@section('row5')
+@section('row6')
 	<table>
 		<tbody>
 			<tr>
