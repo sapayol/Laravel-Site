@@ -5,7 +5,7 @@
 @stop
 
 @section('title')
-	{{{ $order->jacket->name }}}
+{{{ $order->jacket->name }}}
 @stop
 
 @section('header')

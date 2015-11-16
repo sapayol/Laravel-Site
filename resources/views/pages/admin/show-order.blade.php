@@ -1,7 +1,7 @@
 @extends('layouts/default')
 
 @section('title')
-	Order: {{{ $order->id }}}
+Order: {{{ $order->id }}}
 @stop
 
 @section('header')

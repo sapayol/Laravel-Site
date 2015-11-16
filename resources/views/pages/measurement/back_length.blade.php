@@ -5,7 +5,7 @@
 @stop
 
 @section('title')
-	Back Length
+Back Length
 @stop
 
 @section('instructions')

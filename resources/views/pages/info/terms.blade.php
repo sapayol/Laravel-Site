@@ -1,7 +1,7 @@
 @extends('layouts/default')
 
 @section('title')
-	Terms &amp; Conditions
+Terms &amp; Conditions
 @stop
 
 @section('header')

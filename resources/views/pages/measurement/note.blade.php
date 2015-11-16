@@ -1,7 +1,7 @@
 @extends('layouts/default')
 
 @section('title')
-	Fit | Note
+Fit | Note
 @stop
 
 @section('header')

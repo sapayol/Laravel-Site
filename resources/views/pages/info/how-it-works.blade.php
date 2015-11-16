@@ -5,7 +5,11 @@
 @stop
 
 @section('title')
-	How It Works
+How It Works
+@stop
+
+@section('description')
+Learn how you can order a made-to-measure leather jacket, how long it takes and get information about our return policy.
 @stop
 
 @section('header')
@@ -15,6 +19,7 @@
 @section('main')
 	<article class="small-12 medium-10 large-7 medium-centered columns">
 		<p>Every SAPAYOL leather jacket is made for you, and no one else. We tailor each piece according to your measurements and customizations and then ship it directly from the atelier to your door.</p>
+		<p>It takes less than 3 weeks from your order to delivery.</p>
 		<ol>
 			<br>
 			<h2 class="text-center">Order Process</h2>
@@ -36,7 +41,7 @@
 			</li>
 			<li>
 				<h3>Buy</h3>
-				<p>We accept all major credit cards.</p>
+				<p>We accept all major credit and debit cards. <br> We currently don't support PayPal, wire transfers, or checks.</p>
 			</li>
 			<li>
 				<h3>Discuss measurements</h3>

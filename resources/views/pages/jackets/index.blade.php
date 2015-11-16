@@ -5,7 +5,11 @@
 @stop
 
 @section('title')
-	Our Jackets
+Our Jackets
+@stop
+
+@section('description')
+Our selection of premium leather jacket styles, including double rider, flight jacket (bomber), and moto (coffee racer).
 @stop
 
 @section('header')

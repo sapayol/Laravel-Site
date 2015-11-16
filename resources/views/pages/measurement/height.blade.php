@@ -1,5 +1,5 @@
 @extends('layouts/measurements')
 
 @section('title')
-	Height
+Height
 @stop

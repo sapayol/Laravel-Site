@@ -1,7 +1,7 @@
 @extends('layouts/single-column')
 
 @section('title')
-  Your Order
+Your Order
 @stop
 
 @section('header')

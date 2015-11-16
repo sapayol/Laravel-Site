@@ -15,7 +15,11 @@
 @stop
 
 @section('title')
-	{{{ $jacket->name }}}
+{{{ $jacket->name }}}
+@stop
+
+@section('description')
+Design the look of your made-to-measure Bleecker leather jacket.
 @stop
 
 @section('header')

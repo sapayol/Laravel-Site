@@ -5,7 +5,11 @@
 @stop
 
 @section('title')
-	Bleecker
+Bleecker
+@stop
+
+@section('description')
+Our made-to-measure double rider biker leather jacket.
 @stop
 
 @section('carousel_images')

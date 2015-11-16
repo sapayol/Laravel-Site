@@ -1,7 +1,7 @@
 @extends('layouts/measurements')
 
 @section('title')
-	Arm
+Arm
 @stop
 
 @section('instructions')

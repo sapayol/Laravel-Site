@@ -1,7 +1,7 @@
 @extends('layouts/default')
 
 @section('title')
-  Your Profile
+Your Profile
 @stop
 
 

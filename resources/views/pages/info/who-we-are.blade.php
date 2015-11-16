@@ -5,7 +5,11 @@
 @stop
 
 @section('title')
-	Who We Are
+Who We Are
+@stop
+
+@section('description')
+SAPAYOL is a New York City based company that is committed to master craftsmanship, finest materials, and respect for people, the environment, and animals.
 @stop
 
 @section('header')

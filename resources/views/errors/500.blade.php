@@ -5,7 +5,7 @@
 @stop
 
 @section('title')
-  500 Page Not Found
+500 Page Not Found
 @stop
 
 @section('main')

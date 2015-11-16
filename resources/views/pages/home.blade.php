@@ -9,7 +9,11 @@
 @stop
 
 @section('title')
-  Leather Jackets
+Leather Jackets
+@stop
+
+@section('description')
+SAPAYOL offers made-to-measure, customizable leather jackets, tailored by master craftsmen from the finest vegetable tanned leather.
 @stop
 
 @section('full-width-hero')

@@ -1,7 +1,7 @@
 @extends('layouts/default')
 
 @section('title')
-	Password
+Password
 @endsection
 
 @section('main')

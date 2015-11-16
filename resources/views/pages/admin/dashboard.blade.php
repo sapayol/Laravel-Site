@@ -1,7 +1,7 @@
 @extends('layouts/default')
 
 @section('title')
-	Sapayol Admin
+Admin
 @stop
 
 @section('header')

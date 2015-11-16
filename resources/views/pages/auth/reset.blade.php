@@ -1,7 +1,7 @@
 @extends('layouts/default')
 
 @section('title')
-	Password Reset
+Password Reset
 @endsection
 
 @section('header')

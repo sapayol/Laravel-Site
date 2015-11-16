@@ -1,7 +1,7 @@
 @extends('layouts/measurements')
 
 @section('title')
-	Half Shoulder
+Half Shoulder
 @stop
 
 @section('instructions')

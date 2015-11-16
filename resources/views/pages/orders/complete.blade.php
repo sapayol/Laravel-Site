@@ -5,7 +5,7 @@
 @stop
 
 @section('header')
-	Your Placed Order
+Your Placed Order
 @stop
 
 @section('main')

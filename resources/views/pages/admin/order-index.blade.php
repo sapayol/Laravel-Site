@@ -1,7 +1,7 @@
 @extends('layouts/default')
 
 @section('title')
-	{{{ $status }}} Orders
+{{{ $status }}} Orders
 @stop
 
 @section('header')

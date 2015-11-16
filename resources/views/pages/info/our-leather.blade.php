@@ -1,7 +1,11 @@
 @extends("layouts/default")
 
 @section("title")
-	Our Leather
+Our Leather
+@stop
+
+@section("description")
+Learn more about our full-grain, vegetable tanned leather.
 @stop
 
 @section("header")

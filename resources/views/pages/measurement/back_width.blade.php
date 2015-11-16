@@ -1,7 +1,7 @@
 @extends('layouts/measurements')
 
 @section('title')
-	Back Width
+Back Width
 @stop
 
 @section('instructions')

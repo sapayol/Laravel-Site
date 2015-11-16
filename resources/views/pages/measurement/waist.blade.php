@@ -1,7 +1,7 @@
 @extends('layouts/measurements')
 
 @section('title')
-	Waist
+Waist
 @stop
 
 @section('instructions')

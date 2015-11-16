@@ -5,7 +5,7 @@
 @stop
 
 @section('title')
-  404 Page Not Found
+404 Page Not Found
 @stop
 
 @section('main')

@@ -1,7 +1,7 @@
 @extends('layouts/measurements')
 
 @section('title')
-	Biceps
+Biceps
 @stop
 
 @section('instructions')
