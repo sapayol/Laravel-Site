@@ -99,9 +99,11 @@ Our made-to-measure double rider biker leather jacket.
 	<hr class="thin">
 
 	<section class="row">
-		<h2 class="text-center">Inside pockets for your valuables</h2>
-		<br>
-		<br class="hide-for-small">
+		<div class="large-12 medium-12 small-12 columns">
+			<h2>Inside pockets for your valuables</h2>
+			<br class="hide-for-small">
+			<br>
+		</div>
 		<div class="large-6 medium-6 small-12 columns">
 			<a href="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-left-square.jpg" alt="Interior Left Pocket Photo"></a>
 			<p class="image-caption">Slide your phone into a welted pocket that sits conveniently just inside your jacket, on the left side.</p>
@@ -131,9 +133,11 @@ Our made-to-measure double rider biker leather jacket.
 	<hr class="thin">
 
 	<section class="row">
-		<h2 class="text-center">Super smooth and reliable hardware</h2>
-		<br class="hide-for-small">
-		<br>
+		<div class="large-12 medium-12 small-12 columns">
+			<h2>Super smooth and reliable hardware</h2>
+			<br class="hide-for-small">
+			<br>
+		</div>
 		<div class="large-6 medium-6 small-12 columns">
 			<a href="/images/photos/hardware/zipper_silver_detail.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/hardware/zipper_silver_detail.jpg" alt="Zipper Photo"></a>
 			<p class="image-caption">All zippers are YKK Excella. They combine legendary reliability with smooth elegance. Each tooth is individually polished, which gives the zipper a brilliant shine and prevents scratching of the jacket or your skin.

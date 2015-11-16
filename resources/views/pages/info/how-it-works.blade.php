@@ -63,45 +63,14 @@ Learn how you can order a made-to-measure leather jacket, how long it takes and 
 	<hr>
 	<article class="small-12 medium-10 large-7 medium-centered columns">
 			<h2 class="text-center">Warranty</h2>
-			<p>All our jackets come with a 1 year warranty against defects in materials or workmanship. Contact us to fix any issues. We will pay for shipping.</p>
+			<p>All our jackets come with a 1 year warranty against the rare case of defects in materials or workmanship. Contact us to confirm the issue. If it can be fixed, we will fix it for free and pay for shipping. If it can’t be fixed, we will remake the jacket for free.</p>
 	</article>
 		<hr>
-{{-- 	<article class="small-12 medium-10 large-12 medium-centered columns">
-		<ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1">
-			<li id="return-policy">
-				<h3>Returns</h3>
-				<p>Because each leather jacket is made exclusively for you, <em>all sales are final</em>.</p>
-				<p>We take extra care in discussing your measurements and any other questions with you before production to make sure you will be satisfied.</p>
-				<p>The only exception to this rule is if your jacket deviates significantly from the measurements we agreed on. After we&rsquo;ve confirmed the issue with you, you can send us the unused jacket in the same condition that you received it. We will remake the jacket for free and pay for shipping.</p>
-				<a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>
-			</li>
-			<li>
-				<h3>Remakes</h3>
-				<p>In the rare case of defects in materials or workmanship, contact us within 48 hours of receiving your jacket. If it can be fixed, we will fix it 	for free and pay for shipping. If it can&rsquo;t be fixed, we will remake the jacket for free.</p>
-				<a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>
-			</li>
-			<li>
-				<h3>Repairs</h3>
-				<p>Should you get any tears, abrasions or holes in your jacket, you can send it to us at any time and we will repair it by replacing the damaged part with a new one of the same leather quality. We will not charge for work, all you will have to cover are shipping costs and materials.</p>
-				<a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>
-			</li>
-			<li>
-				<h3>Warranty</h3>
-				<p>All our jackets come with a 1 year warranty against defects in materials or workmanship. Contact us to fix any issues. We will pay for shipping.</p>
-				<a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>
-			</li>
-		</ul>
-	</article> --}}
 	<article class="small-12 medium-10 large-10 medium-centered columns">
-		<ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1">
+		<ul class="large-block-grid-2 medium-block-grid-2 small-block-grid-1">
 			<li>
 				<h3>Repairs</h3>
 				<p>Should you get any tears, abrasions or holes in your jacket, you can send it to us at any time and we will repair it by replacing the damaged part with a new one of the same leather quality. We will not charge for work, all you will have to cover are shipping costs and materials.</p>
-				<a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>
-			</li>
-			<li>
-				<h3>Remakes</h3>
-				<p>In the rare case of defects in materials or workmanship, contact us within 48 hours of receiving your jacket. If it can be fixed, we will fix it 	for free and pay for shipping. If it can&rsquo;t be fixed, we will remake the jacket for free.</p>
 				<a class="underlined" href="mailto:contact@sapayol.com">contact@sapayol.com</a>
 			</li>
 			<li id="return-policy">
@@ -113,6 +82,4 @@ Learn how you can order a made-to-measure leather jacket, how long it takes and 
 			</li>
 		</ul>
 	</article>
-
-
 @stop
