@@ -19,12 +19,12 @@
 			<br>
 			<h2 class="text-center">Order Process</h2>
 			<li>
-				<h3>Choose a jacket model</h3>
+				<h3>Choose a jacket style</h3>
 				<p></p>
 			</li>
 			<li>
 				<h3>Design your look</h3>
-				<p>For every model, you can choose hardware and lining colors.</p>
+				<p>For every style, you can choose hardware and lining colors.</p>
 			</li>
 			<li>
 				<h3>Create an account or log in</h3>

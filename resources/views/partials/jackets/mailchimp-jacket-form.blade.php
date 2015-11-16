@@ -13,7 +13,7 @@
 				@endif
 			</label>
 			<label class="text-left checkboxes">
-				<span class="label-title">Jacket Model</span>
+				<span class="label-title">Jacket Style</span>
 				<ul class="inline-list">
 	    		<li><label for="mce-group[11153]-11153-0"><input type="checkbox" value="1" checked="true" name="group[11153][1]" id="mce-group[11153]-11153-0"> Bopgun</label></li>
 					<li><label for="mce-group[11153]-11153-1"><input type="checkbox" value="2" checked="true" name="group[11153][2]" id="mce-group[11153]-11153-1"> Moto</label></li>

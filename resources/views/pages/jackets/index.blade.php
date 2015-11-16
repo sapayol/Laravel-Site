@@ -45,7 +45,7 @@
 
 	@if (!$show_form)
 		<section ng-hide="notifyForm" class="text-center" id="jacket-updates">
-			<a class="underlined" href="" ng-click="notifyForm = true">Get notified when new models arrive</a><br><br>
+			<a class="underlined" href="" ng-click="notifyForm = true">Get notified when new jacket-styles arrive</a><br><br>
 		</section>
 	@endif
 	@if ($show_form)
