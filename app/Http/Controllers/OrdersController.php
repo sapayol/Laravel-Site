@@ -46,7 +46,12 @@ class OrdersController extends Controller {
 	public function store(CreateOrderRequest $request)
 	{
     Session::remove('card'); // Clear the saved credit card info from the session
-		$order = $this->dispatchFrom('App\Jobs\CreateNewOrder', $request);
+    $last_order = Auth::user()->orders->last();
+    if ($last_order && ($last_order->status == 'new' || $last_order->status == 'started')) {
+    	$order = $last_order;
+    } else {
+	 	  $order = $this->dispatchFrom('App\Jobs\CreateNewOrder', $request);
+    }
 		if ($order->bodyMeasurements && $order->bodyMeasurements->completed()) {
       Session::flash('message', "Looks you already submitted some of your measurements. Please enter the rest for a perfect fit.");
       $uncompleted_measurements = $order->bodyMeasurements->uncompleted();
