@@ -1,7 +1,7 @@
 <h3 class="thin left">Jacket Measurements</h3>
 <br>
 <ul style="list-style: none; margin-left: 0; padding-left: 0;">
-	<?php $measurements = ['height', 'half_shoulder', 'back_width', 'chest', 'stomach', 'back_length', 'waist', 'arm', 'biceps', 'note'];  ?>
+	<?php $measurements = ['height', 'half_shoulder', 'back_width', 'chest', 'stomach', 'back_length', 'waist', 'arm', 'biceps'];  ?>
 	@foreach ($measurements as $measurement)
 		<li>
 			<small style="font-size: 85%; display: inline-block; min-width: 90px;">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>

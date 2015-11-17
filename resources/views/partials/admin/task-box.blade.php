@@ -1,10 +1,6 @@
 <nav ng-hide="trackingInfo || tailorNote"  >
 	@if ($order->statusIsBefore('production'))
-		@if ($order->bodyMeasurements->uncompleted())
-			<form action="{{{ route('orders.update', $order->id) }}}" method="POST" onsubmit="return confirm('Looks like there are still missing measurements, are you sure you want to send to production?');">
-		@else
-			<form action="{{{ route('orders.update', $order->id) }}}" method="POST">
-		@endif
+		<form action="{{{ route('orders.update', $order->id) }}}" method="POST" onsubmit="return confirm('Are you sure you want to send to production?');">
 			<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
 			<input type="hidden" name="_method" value="PATCH">
 			<input type="hidden" name="status" value="production">

@@ -11,7 +11,7 @@
 
 @section('row2')
 	<p>
-		This email confirms what we’ve been discussing regarding the fit of your {{{ $order->jacket->name }}}. Please take a close look again at the final measurements and let us know within the next 12 hours if you see something unexpected.
+		This email confirms what we’ve been discussing regarding the fit of your {{{ $order->jacket->name }}}. Please take a close look again at the final measurements and reply to this email within the next 12 hours if you see something unexpected.
 	</p>
 @stop
 
