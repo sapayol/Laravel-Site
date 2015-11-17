@@ -18,7 +18,7 @@ Our selection of premium leather jacket styles, including double rider, flight j
 
 @section('main')
 	<article class="large-12 medium-12 small-12 columns">
-		<p class="medium-text-center">Choose the model you would like to customize and have tailor&ndash;made.</p>
+		<p class="medium-text-center">Choose the style you would like to customize and have tailor&ndash;made.</p>
 		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
 			@foreach ($jackets as $jacket)
 			  <li class="text-center">
@@ -49,7 +49,7 @@ Our selection of premium leather jacket styles, including double rider, flight j
 
 	@if (!$show_form)
 		<section ng-hide="notifyForm" class="text-center" id="jacket-updates">
-			<a class="underlined" href="" ng-click="notifyForm = true">Get notified when new jacket-styles arrive</a><br><br>
+			<a class="underlined" href="" ng-click="notifyForm = true">Get notified when new jacket styles arrive</a><br><br>
 		</section>
 	@endif
 	@if ($show_form)

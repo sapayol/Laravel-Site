@@ -100,7 +100,7 @@ Our made-to-measure double rider biker leather jacket.
 
 	<section class="row">
 		<div class="large-12 medium-12 small-12 columns">
-			<h2>Inside pockets for your valuables</h2>
+			<h2 class="medium-text-center">Inside pockets for your valuables</h2>
 			<br class="hide-for-small">
 			<br>
 		</div>
@@ -112,9 +112,12 @@ Our made-to-measure double rider biker leather jacket.
 		<div class="large-6 medium-6 small-12 columns">
 			<a href="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-right-square.jpg" alt="Interior Right Pocket Photo "></a>
 			<p class="image-caption">An inside pocket with a zipper on your right chest holds your note book, Knicks tickets, pay check, or passport.</p>
+			<br>
 		</div>
-		<br>
-		<p class="text-center"> <em>All pockets are lined with a Tencel twill, a very strong, eco&ndash;friendly fabric that makes sure you don’t lose your keys.</em></p>
+		<div class="clearfix"></div>
+		<div class="large-12 medium-12 small-12 columns">
+			<p class="medium-text-center"> <em>All pockets are lined with a Tencel twill, a very strong, eco&ndash;friendly fabric that makes sure you don’t lose your keys.</em></p>
+		</div>
 	</section>
 
 	<hr class="thin">
@@ -134,7 +137,7 @@ Our made-to-measure double rider biker leather jacket.
 
 	<section class="row">
 		<div class="large-12 medium-12 small-12 columns">
-			<h2>Super smooth and reliable hardware</h2>
+			<h2 class="medium-text-center">Super smooth and reliable hardware</h2>
 			<br class="hide-for-small">
 			<br>
 		</div>

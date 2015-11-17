@@ -40,7 +40,7 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 
 		<section class="row">
 			<div class="small-12 medium-10 large-8 medium-centered columns">
-				<h2>We tailor minimalistic leather jackets to your individual measurements.</h2>
+				<h2 class="medium-text-center">We tailor minimalistic leather jackets to your individual measurements.</h2>
 				<br>
 				<p>We take leather jacket classics and reinterpret them according to our design philosophy:</p>
 				<ul>
