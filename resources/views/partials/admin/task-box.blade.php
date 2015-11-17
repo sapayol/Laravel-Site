@@ -10,6 +10,10 @@
 			<input type="hidden" name="status" value="production">
 			<input type="submit" class="button expand small" value="Start Production">
 		</form>
+		<form action="{{{ route('admin.confirm-order', $order->id) }}}" method="POST">
+			<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
+			<input type="submit" class="button expand primary-color small" value="Send Confirmation Email">
+		</form>
 	@endif
 	@if ($order->statusIsBefore('shipped') && $order->statusIsAfter('paid'))
 		<a href="" class="button expand small" ng-click="trackingInfo = true; taskMode = true; focus('tracking-number');">Add Tracking Number</a>

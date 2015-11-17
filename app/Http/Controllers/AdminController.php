@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use App\Mailers\OrderMailer;
 use App\Jobs\SendTailorMessage;
 use JavaScript;
+use Session;
 use Address, Jacket, Measurement, Attribute, Order, User;
 
 class AdminController extends Controller {
@@ -90,13 +91,21 @@ class AdminController extends Controller {
 		return response()->json($order->measurements);
 	}
 
+	public function confirm($order_id, Request $request)
+	{
+	  $order = Order::find($order_id);
+    $this->mailer->sendMeasurementConfirmation($order);
+	  Session::flash('success', "Measurement confirmation email sent.");
+		return redirect()->back();
+	}
+
+
 	public function tailor($order_id, Request $request)
 	{
 	  $order = Order::find($order_id);
     $this->mailer->sendTailorMessage($order, $request->note, $request->inclusions);
 
 		return response()->json($order);
- 		// return view('emails.tailor-message', ['order' => $order, 'note' => $request->note, 'inclusions' => $request->inclusions]);
 	}
 
 

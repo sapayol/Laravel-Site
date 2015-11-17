@@ -42,6 +42,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 	Route::get('/orders',                ['uses' => 'AdminController@orderIndex',  'as' => 'admin.order-index']);
 	Route::get('/orders/{id}',           ['uses' => 'AdminController@showOrder',   'as' => 'admin.show-order']);
 	Route::post('/orders/{id}/tailor',   ['uses' => 'AdminController@tailor',      'as' => 'tailor-message']);
+	Route::post('/orders/{id}/confirm',  ['uses' => 'AdminController@confirm',     'as' => 'admin.confirm-order']);
 	Route::post('/orders/{id}/tracking', ['uses' => 'AdminController@tracking',    'as' => 'tracking-number']);
 });
 

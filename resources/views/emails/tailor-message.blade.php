@@ -20,17 +20,23 @@ Sapayol Jacket Order: {{{ $order->id }}}
 
 @section('row2')
 	<tr>
-		<td>@include('partials.emails.order-info')</td>
+		<td width="250px">@include('partials.emails.order-info')</td>
 		@if (isset($inclusions['look']))
-			<td>@include('partials.emails.jacket-info')</td>
+			<td width="250px">@include('partials.emails.jacket-info')</td>
+		@else
+			<td width="250px"></td>
 		@endif
 	</tr>
 	<tr>
 		@if (isset($inclusions['body_fit']))
-			<td>@include('partials.emails.body-measurements')</td>
+			<td width="250px">@include('partials.emails.body-measurements')</td>
+		@else
+			<td width="250px"></td>
 		@endif
 		@if (isset($inclusions['product_fit']))
-			<td>@include('partials.emails.jacket-measurements')</td>
+			<td width="250px">@include('partials.emails.jacket-measurements')</td>
+		@else
+			<td width="250px"></td>
 		@endif
 	</tr>
 @stop
