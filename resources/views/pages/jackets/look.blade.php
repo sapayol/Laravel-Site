@@ -80,8 +80,6 @@ Design the look of your made-to-measure Bleecker leather jacket.
 				@endif
 			</fieldset>
 			<hr>
-
-
 			<img ng-if="jacket.lining_color == 12"  class="customization-image" src="/images/photos/linings/bemberg_oxford_black.jpg"  alt="Black Lining Image">
 			<img ng-if="jacket.lining_color == 13" class="customization-image" src="/images/photos/linings/bemberg_oxford_bordeaux.jpg" alt="Bordeaux Lining Image">
 			<fieldset>
@@ -96,7 +94,7 @@ Design the look of your made-to-measure Bleecker leather jacket.
 					{{{ $jacket->lining_colors()->first()->name }}}
 				@endif
 			</fieldset>
-				<hr>
+			<hr>
 			<img ng-if="jacket.hardware_color == 9"  class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-silver.jpg" alt="Jacket With Silver Hardware">
 			<img ng-if="jacket.hardware_color == 10" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-graphite.jpg" alt="Jacket With Graphite Hardware">
 			<img ng-if="jacket.hardware_color == 11" class="customization-image" src="/images/photos/jackets/{{{ $jacket->model }}}/hardware-gold.jpg" alt="Jacket With Gold Hardware">
@@ -112,8 +110,6 @@ Design the look of your made-to-measure Bleecker leather jacket.
 					{{{ $jacket->hardware_colors()->first()->name }}}
 				@endif
 			</fieldset>
-
-
 			<input type="hidden" name="_token"         value="{{{ csrf_token() }}}">
 			<input type="hidden" name="model"          value="{{{ $jacket->model }}}">
 			@if (Auth::guest())

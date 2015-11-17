@@ -282,10 +282,7 @@ Terms &amp; Conditions
 				<li>Remember that you are logged in and that your session is secure. You need to be logged in to complete an order.</li>
 			</ul>
 			<p>The following cookies are not strictly necessary, but are required to provide you with the best user experience and also to tell us which pages you find most interesting (anonymously). Cookies, that:</p>	<ul>
-				<li>Geotargeting Cookies:</li>
-				<li>Offer Live Chat Support (If available)</li>
 				<li>Track the pages you visit via Google Analytics</li>
-				<li>Help us remind you of our products on other websites that you visit via ads</li>
 			</ul>
 			<p>We also share information (anonymously) about your use of our site with our trusted social media, advertising and analytics partners. <a href="http://www.google.com/policies/privacy/partners/">Read about how Google uses data that we share with them.</a></p>
 

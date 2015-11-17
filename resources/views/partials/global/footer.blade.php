@@ -1,3 +1,4 @@
+<div class="clearfix"></div>
 <footer class="inverted-colors text-center">
 	<nav class="footer-nav">
 		<ul class="inline-list">
