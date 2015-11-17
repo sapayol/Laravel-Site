@@ -12,7 +12,6 @@
 @stop
 
 @section('row2')
-
 	<div class="text-center">
 		<a href=" {{ env('SITE_URL') . ('/password/reset/'.$token) }}" class="button">Reset Your Password</a>
 	</div>

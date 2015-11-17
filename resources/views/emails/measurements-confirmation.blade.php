@@ -26,8 +26,6 @@
 				<td width="250px">@include('partials.emails.your-measurements')</td>
 				<td width="250px">@include('partials.emails.jacket-measurements')</td>
 			</tr>
-			<tr>
-			</tr>
 		</tbody>
 	</table>
 @stop
