@@ -18,8 +18,7 @@
 		Any feedback, a simple line or a picture would help us in our commitment to guarantee your satisfaction and our desire to always improve. You can reply directly to this email if you want to reach out.
 	</p>
 	<p>
-		Put your {{{ $order->jacket->name }}} on a nice, wide hanger when you’re not wearing it.<br>
-		<a href="#">How to care for your jacket</a>
+		Put your {{{ $order->jacket->name }}} on a nice, wide hanger when you’re not wearing it.
 	</p>
 @stop
 
