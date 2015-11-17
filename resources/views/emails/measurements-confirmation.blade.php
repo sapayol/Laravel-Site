@@ -32,14 +32,7 @@
 	</table>
 @stop
 
-
 @section('row4')
-	<br>
-	<br>
-	<hr>
-@stop
-
-@section('row5')
 	<table>
 		<tbody>
 			<tr>
