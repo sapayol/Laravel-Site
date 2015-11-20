@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'ediz@sapayol.com', 'name' => 'SAPAYOL'],
+    'from' => ['address' => 'contact@sapayol.com', 'name' => 'SAPAYOL'],
 
     /*
     |--------------------------------------------------------------------------
