@@ -165,7 +165,12 @@ class OrdersController extends Controller {
     if ($stripe_charge) {
       Session::flash('success', "Checkout complete!");
       return redirect()->route('orders.complete', $order->id);
+    } else {
+ 	    Session::remove('card'); // Clear the saved credit card info from the session
+    	Session::flash('alert', "Looks like your credit card was declined. Please contact your bank or try another card.");
+      return redirect()->route('orders.checkout', $order->id);
     }
+
 
     return 'something went wrong with the payment';
 	}
