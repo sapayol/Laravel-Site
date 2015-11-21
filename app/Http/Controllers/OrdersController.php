@@ -52,10 +52,15 @@ class OrdersController extends Controller {
     } else {
 	 	  $order = $this->dispatchFrom('App\Jobs\CreateNewOrder', $request);
     }
-		if ($order->bodyMeasurements && $order->bodyMeasurements->completed()) {
-      Session::flash('message', "Looks you already submitted some of your measurements. Please enter the rest for a perfect fit.");
+		if ($order->bodyMeasurements) {
+			$completed_measurements = $order->bodyMeasurements->completed();
       $uncompleted_measurements = $order->bodyMeasurements->uncompleted();
-			return redirect()->route('fit.show', [$order->id, array_shift($uncompleted_measurements)]);
+			if ($uncompleted_measurements && $completed_measurements) {
+	      Session::flash('message', "Looks you already submitted some of your measurements. Please enter the rest for a perfect fit.");
+				return redirect()->route('fit.show', [$order->id, array_shift($uncompleted_measurements)]);
+			} else {
+				return redirect()->route('orders.checkout', $order->id);
+			}
 		}
 
 		return redirect()->route('fit.show', [$order->id, 'units']);
