@@ -81,7 +81,7 @@ Our made-to-measure double rider biker leather jacket.
 <article class="large-12 medium-12 small-12 columns">
 
 	<section class="row flex-section">
-		<div class="large-6 medium-12 small-12 columns">
+		<div class="large-6 medium-10 small-12 medium-centered large-uncentered columns">
 			<a href="/images/photos/leather/lamb_c_black_close-up-large.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/leather/lamb_c_black_close-up-medium.jpg" alt="Lamb Leather Close Up"></a>
 		</div>
 		<div class="large-6 medium-10 small-12 medium-centered columns">
@@ -123,7 +123,7 @@ Our made-to-measure double rider biker leather jacket.
 	<hr class="thin">
 
 	<section class="row flex-section">
-		<div class="large-6 medium-12 small-12 columns">
+		<div class="large-6 medium-10 small-12 medium-centered large-uncentered columns">
 			<a href="/images/photos/linings/bemberg_oxford_black_close-up-large.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/linings/bemberg_oxford_black_close-up-medium.jpg" alt="Bemberg Oxford Lining Photo"></a>
 		</div>
 		<div class="large-6 medium-10 small-12 medium-centered columns">

@@ -1,3 +1,8 @@
+.medium-12 > a > .sidekick-image, .customization-image {
+	@media #{$medium-only} and (orientation: landscape) {
+		width: 55%;
+	}
+}
 .sidekick-image {
 	margin-bottom: 1.3rem;
 }
@@ -73,6 +78,7 @@
 	}
 	.slick-slide img {
 		@media #{$medium-up} {	width: 75%; }
+		@media #{$medium-only} and (orientation: landscape) {	width: 40%; }
 		@media #{$large-up} {	width: 40%; }
 	 	cursor: zoom-in;
 		margin: 0 auto;

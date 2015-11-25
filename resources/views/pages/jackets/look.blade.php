@@ -45,7 +45,7 @@ Design the look of your made-to-measure Bleecker leather jacket.
 @stop
 
 @section('main')
-	<section class="large-12 medium-12 small-12 columns look-options">
+	<section class="large-12 medium-10 medium-centered small-12 columns look-options">
 		<h2 class="thin text-center">Design your look</h2>
 		<form action="/orders" method="POST" name="createOrderForm" ng-init="init( {{{ $jacket->leather_types()->first()->id }}}, {{{ $jacket->leather_colors()->first()->id }}}, {{{ $jacket->lining_colors()->first()->id }}}, {{{ $jacket->hardware_colors()->first()->id }}} )">
 			<fieldset>
