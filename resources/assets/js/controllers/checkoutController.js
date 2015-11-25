@@ -90,7 +90,7 @@ checkoutController.controller('checkoutCtrl', ['$scope', '$http', '$q', '$docume
 		return deferred.promise;
 	}
 
-	Stripe.setPublishableKey('pk_test_G2k7gKlVNK1rpGMDeF5FDIhO');
+	Stripe.setPublishableKey(sapayol.stripe_key);
 
 	$scope.stripeResponseHandler = function(status, response) {
 		if(response.error) {

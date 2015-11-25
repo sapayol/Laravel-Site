@@ -150,7 +150,8 @@ class OrdersController extends Controller {
 			'order'   => $order,
 			'user'    => $order->user,
 			'address' => $order->address,
-			'session' => Session::all()
+			'session' => Session::all(),
+			'stripe_key' => env('STRIPE_PUBLISHABLE')
     ]);
 
 		return view('pages.orders.checkout', ['order' => $order]);
