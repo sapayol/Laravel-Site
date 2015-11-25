@@ -12,7 +12,7 @@
     <a href="" class="right underlined menu-button" ng-class="{open: displayMenu}" ng-click="displayMenu = !displayMenu">MENU </a>
     <div class="clearfix"></div>
     <div class="right text-right secondary-nav">
-      @if ($current_user)
+      @if (isset($current_user))
         @if ($current_user->isAdmin())
           <a class="" href="{{{ route('admin.order-index') }}}">All Orders</a>
         @endif
@@ -20,7 +20,7 @@
           <a href="/orders/{{{ $current_user->orders->last()->id }}}" class=" highlight-color">Your Order</a>
         @endif
         <a class="" href="/auth/logout">Logout</a>
-      @elseif (!$current_user)
+      @else
         <a class="" href="/auth/login">Login</a>
       @endif
     </div>
