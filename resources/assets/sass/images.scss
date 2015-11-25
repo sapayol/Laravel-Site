@@ -1,4 +1,4 @@
-.medium-12 > a > .sidekick-image, .customization-image {
+.sidekick-image-large, .customization-image {
 	@media #{$medium-only} and (orientation: landscape) {
 		width: 55%;
 	}

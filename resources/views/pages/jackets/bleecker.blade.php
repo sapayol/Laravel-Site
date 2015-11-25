@@ -110,7 +110,7 @@ Our made-to-measure double rider biker leather jacket.
 		</div>
 
 		<div class="large-6 medium-6 small-12 columns">
-			<a href="/images/photos/jackets/bleecker/interior-pocket-right-square-large.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-right-square-medium.jpg" alt="Interior Right Pocket Photo "></a>
+			<a href="/images/photos/jackets/bleecker/interior-pocket-right-square-large.jpg" class="image-link"><img class="sidekick-image sidekick-image-large" src="/images/photos/jackets/bleecker/interior-pocket-right-square-medium.jpg" alt="Interior Right Pocket Photo "></a>
 			<p class="image-caption">An inside pocket with a zipper on your right chest holds your note book, Knicks tickets, pay check, or passport.</p>
 			<br>
 		</div>
