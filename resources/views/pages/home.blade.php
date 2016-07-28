@@ -28,9 +28,8 @@ SAPAYOL offers made-to-measure, customizable leather jackets, tailored by master
 
 @section('main')
 
-		<section class="small-12 medium-12 large-12 columns">
+{{-- 		<section class="small-12 medium-12 large-12 columns">
 			<div class="player" ng-controller="videoCtrl">
-			  {{-- <video poster="/images/video-posters/home_page.jpg" controls crossorigin preload="none"> --}}
 			  <video poster="/images/video-posters/home_page.jpg" controls crossorigin>
 			    <source src="/videos/home_page.webm" type="video/webm">
 			    <source src="/videos/home_page.mp4"  type="video/mp4">
@@ -38,7 +37,7 @@ SAPAYOL offers made-to-measure, customizable leather jackets, tailored by master
 			  </video>
 			</div>
 		</section>
-
+ --}}
 		<div class="row wide">
 		<article class="large-6 medium-6 small-12 columns">
 			<a href="/who-we-are#master-craftsmanship" class="image-link"><img class="sidekick-image" src="/images/photos/other/master-craftsmanship.jpg" alt="Master Craftsmanship"></a>
