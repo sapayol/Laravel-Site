@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Jacket;
 
 class PagesController extends Controller {
 
@@ -23,7 +24,8 @@ class PagesController extends Controller {
 
 	public function index()
 	{
-		return view('pages.home');
+		$jackets = Jacket::orderBy('active', 'DESC')->get();
+		return view('pages.home', ['jackets' => $jackets]);
 	}
 
 	public function whoWeAre()
