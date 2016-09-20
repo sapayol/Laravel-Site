@@ -16,6 +16,6 @@
 	</div>
 	<div class="clearfix"></div>
 	<div class="large-12 medium-12 small-12 columns">
-		<p class="medium-text-center"> <em>All pockets are lined with a Tencel twill, a very strong, eco&ndash;friendly fabric that makes sure you don’t lose your keys.</em></p>
+		<p class="medium-text-center"> <em>All pockets are lined with a Tencel twill, a very strong, eco&#8208;friendly fabric that makes sure you don’t lose your keys.</em></p>
 	</div>
 </section>

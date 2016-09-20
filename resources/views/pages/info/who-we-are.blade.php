@@ -75,7 +75,7 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 						<div>
 							<br class="hide-for-large">
 							<h2>Our jackets are made by master tailors.</h2>
-							<p>Know&ndash;how, skill, and passion are the fuel of great craftsmen. The studio we work with exclusively is an infinite reserve of all three components. A group of five artisans has been working together since 1998 &ndash; the core of it since 1980 &ndash; dedicated to producing finest leather garments and pushing their art in every aspect.</p>
+							<p>Know&#8208;how, skill, and passion are the fuel of great craftsmen. The studio we work with exclusively is an infinite reserve of all three components. A group of five artisans has been working together since 1998 &#8208; the core of it since 1980 &#8208; dedicated to producing finest leather garments and pushing their art in every aspect.</p>
 							<p>But good things take time, even after this many years of practice. To meet our quality requirements, four people will be working on your jacket over a period of seven hours to create the finished product.</p>
 						</div>
 					</div>
@@ -89,8 +89,8 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 						<div>
 							<br class="hide-for-large">
 							<h2>Finding the best leather and materials is our obsession.</h2>
-							<p>We only work with the most exclusive leather available: full&ndash;grain, vegetable tanned (chrome&ndash;free), and aniline dyed. Our tannery uses the best components and takes the time that&rsquo;s necessary to produce extraordinary, long-lasting leather that becomes even more beautiful with age. From that leather, the most flawless is set aside for us.</p>
-							<p>Our care about the smallest details carries over to all other materials we use. Our zippers and buttons (YKK Excella) are extremely reliable and at the same time polished down to every single tooth, finished with scratch&ndash;resistant, elegant coatings.</p>
+							<p>We only work with the most exclusive leather available: full&#8208;grain, vegetable tanned (chrome&#8208;free), and aniline dyed. Our tannery uses the best components and takes the time that&rsquo;s necessary to produce extraordinary, long-lasting leather that becomes even more beautiful with age. From that leather, the most flawless is set aside for us.</p>
+							<p>Our care about the smallest details carries over to all other materials we use. Our zippers and buttons (YKK Excella) are extremely reliable and at the same time polished down to every single tooth, finished with scratch&#8208;resistant, elegant coatings.</p>
 							<p>The lining is made out of a smooth Bemberg Cupro oxford weave with the exception of the pockets, which are lined with a more robust Tencel fabric.</p>
 							<a href="/our-leather" class="underlined">More about our leather</a><br><br>
 						</div>
@@ -108,7 +108,7 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 						<h2>New York City is our home.</h2>
 						<p>SAPAYOL is based and incorporated in New York City. This city fuels us with energy and inspiration.</p>
 						<h2> Our jackets are made in Istanbul, Turkey.</h2>
-						<p>The long textile and leather tradition in the region makes it possible to buy top&ndash;grade skins, work with a world&ndash;class tannery, have our jackets tailored by master craftsmen and source all materials within a 250 mile radius. In addition to that, we can work with supply partners that pay above&ndash;average wage.</p>
+						<p>The long textile and leather tradition in the region makes it possible to buy top&#8208;grade skins, work with a world&#8208;class tannery, have our jackets tailored by master craftsmen and source all materials within a 250 mile radius. In addition to that, we can work with supply partners that pay above&#8208;average wage.</p>
 					</div>
 				</section>
 
@@ -116,11 +116,11 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 					<div class="small-12 medium-10 large-10 medium-centered columns">
 						<h2>Every decision is guided by the greatest respect for people, our environment, and animals.</h2>
 						<p>We believe that everyone we work with and all their employees should feel respected and valued for their work. Not only will that lead to the best possible product, we just don&rsquo;t like any other type of relationship. That&rsquo;s why we&rsquo;ve visited all our supply partners and made sure that their workers have safe and healthy work conditions. We&rsquo;re proud to know that workers get above-average pay and social insurance.</p>
-						<p>Just as importantly, we see ourselves as part of one big organism. It&rsquo;s our responsibility &ndash; and also in our best interest &ndash; to honor and care for our environment and animals. We&rsquo;re pushing every aspect of our company in that regard.</p>
+						<p>Just as importantly, we see ourselves as part of one big organism. It&rsquo;s our responsibility &#8208; and also in our best interest &#8208; to honor and care for our environment and animals. We&rsquo;re pushing every aspect of our company in that regard.</p>
 						<p>All skins come from Turkey, where animals are being herded in traditional ways and get ample movement, sunlight, and natural nutrition.</p>
 						<p>With vegetable tanning, we&rsquo;ve chosen the most ecological tanning process, avoiding the usual chromium salts which aren&rsquo;t biodegradable and become carcinogenic under certain circumstances. Our tannery only uses top-grade chemical components, in the smallest possible amounts, and all wastewater gets treated.</p>
 						<p>It is our goal to not use any plastic and eventually exclusively use natural or recycled materials, from the care instruction label to packaging.</p>
-						<p>Last but not least, our direct shipment from the leather workshop to the customer is the most ecological logistics process we can think of. Other than putting a sheep herd and a master craftsmen in your backyard.</p>
+						<p>Last but not least, our direct shipment from the leather workshop to the customer is the most ecological logistics process we can think of. Other than putting a sheep herd and a master craftsman in your backyard.</p>
 						<div class="text-center">
 							<a href="{{ route('jackets.index') }}" class="button call-to-action expand-on-small">See Our Jackets</a>
 							<br>
