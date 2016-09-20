@@ -19,6 +19,17 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 @section('main')
 	<article class="large-12 medium-12 small-12 columns">
 		<section class="row">
+			<div class="large-10 medium-10 medium-centered small-12 columns">
+				<div class="player" ng-controller="videoCtrl">
+				  <video poster="/images/video-posters/sapayol_vapur.jpg" controls crossorigin preload="none">
+				    <source src="/videos/sapayol_vapur.webm" type="video/webm">
+				    <source src="/videos/sapayol_vapur.mp4"  type="video/mp4">
+				    <a href="/videos/sapayol_vapur.mp4">Download</a>
+				  </video>
+				</div>
+			</div>
+		</section>
+		<section class="row">
 			<div class="medium-10 large-8 medium-centered columns">
 				<p>Something about the way you&rsquo;re supposed to do things doesn&rsquo;t feel right. And the path you&rsquo;re being shown seems to be the shortest, but not very exciting.</p>
 				<p>
@@ -42,13 +53,6 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 			<div class="small-12 medium-10 large-8 medium-centered columns">
 				<h2 class="medium-text-center">We tailor minimalistic leather jackets to your individual measurements.</h2>
 				<br>
-				<p>We take leather jacket classics and reinterpret them according to our design philosophy:</p>
-				<ul>
-					<li>Forever modern</li>
-					<li>Essential</li>
-					<li>Functional</li>
-					<li>Honest</li>
-				</ul>
 				<p>Every single jacket is made according to your individual measurements. You can tell us if you like your sleeves a little longer or shorter, or any other preference.</p>
 				<p>You can also choose from a selection of lining and hardware colors.</p>
 				<div class="text-center">
