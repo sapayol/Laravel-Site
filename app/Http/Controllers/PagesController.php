@@ -33,6 +33,11 @@ class PagesController extends Controller {
 		return view('pages.info.who-we-are');
 	}
 
+	public function about()
+	{
+		return view('pages.info.about');
+	}
+
 	public function howItWorks()
 	{
 		return view('pages.info.how-it-works');
