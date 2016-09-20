@@ -73,82 +73,11 @@ Our made-to-measure double rider biker leather jacket.
 @stop
 
 @section('main')
-<article class="large-12 medium-12 small-12 columns">
-
-	<section class="row flex-section">
-		<div class="large-6 medium-10 small-12 medium-centered large-uncentered columns">
-			<a href="/images/photos/leather/lamb_c_black_close-up-large.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/leather/lamb_c_black_close-up-medium.jpg" alt="Lamb Leather Close Up"></a>
-		</div>
-		<div class="large-6 medium-10 small-12 medium-centered columns">
-			<br class="hide-for-small">
-			<h2>Vegetable tanned, chrome&ndash;free, full&ndash;grain leather</h2>
-			<p>All our jackets are made with the most exclusive, vegetable tanned, full&ndash;grain leather. It’s supple, thick, has a warm touch, and a pleasant smell. With good care, it will not crack or bulge for decades but break in and develop a beautiful patina.</p>
-			<p>Our leather is also absolutely free of the chromium salts that can become carcinogenic, found in almost every other leather garment.</p>
-			<br>
-			<div class="text-left">
-				<a href="/our-leather?jacket={{{ $jacket->model }}}" class="underlined" title="">Learn more about what makes our leather so special</a><br><br>
-			</div>
-		</div>
-	</section>
-
-	<hr class="thin">
-
-	<section class="row">
-		<div class="large-12 medium-12 small-12 columns">
-			<h2 class="medium-text-center">Inside pockets for your valuables</h2>
-			<br class="hide-for-small">
-			<br>
-		</div>
-		<div class="large-6 medium-6 small-12 columns">
-			<a href="/images/photos/jackets/bleecker/interior-pocket-left-square-large.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/jackets/bleecker/interior-pocket-left-square-medium.jpg" alt="Interior Left Pocket Photo"></a>
-			<p class="image-caption">Slide your phone into a welted pocket that sits conveniently just inside your jacket, on the left side.</p>
-		</div>
-
-		<div class="large-6 medium-6 small-12 columns">
-			<a href="/images/photos/jackets/bleecker/interior-pocket-right-square-large.jpg" class="image-link"><img class="sidekick-image sidekick-image-large" src="/images/photos/jackets/bleecker/interior-pocket-right-square-medium.jpg" alt="Interior Right Pocket Photo "></a>
-			<p class="image-caption">An inside pocket with a zipper on your right chest holds your note book, Knicks tickets, pay check, or passport.</p>
-			<br>
-		</div>
-		<div class="clearfix"></div>
-		<div class="large-12 medium-12 small-12 columns">
-			<p class="medium-text-center"> <em>All pockets are lined with a Tencel twill, a very strong, eco&ndash;friendly fabric that makes sure you don’t lose your keys.</em></p>
-		</div>
-	</section>
-
-	<hr class="thin">
-
-	<section class="row flex-section">
-		<div class="large-6 medium-10 small-12 medium-centered large-uncentered columns">
-			<a href="/images/photos/linings/bemberg_oxford_black_close-up-large.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/linings/bemberg_oxford_black_close-up-medium.jpg" alt="Bemberg Oxford Lining Photo"></a>
-		</div>
-		<div class="large-6 medium-10 small-12 medium-centered columns">
-			<br class="hide-for-large hide-for-small">
-			<h2>Silky, breathable lining</h2>
-			<p>We chose a 100% Bemberg Cupro oxford weave for our lining. No other fabric breathes as well, absorbs and releases sweat as quickly, and is at the same time as smooth as silk. It’s the top lining choice of bespoke suit makers.</p>
-		</div>
-	</section>
-
-	<hr class="thin">
-
-	<section class="row">
-		<div class="large-12 medium-12 small-12 columns">
-			<h2 class="medium-text-center">Super smooth and reliable hardware</h2>
-			<br class="hide-for-small">
-			<br>
-		</div>
-		<div class="large-6 medium-6 small-12 columns">
-			<a href="/images/photos/hardware/zipper-silver_detail-large.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/hardware/zipper-silver_detail-medium.jpg" alt="Zipper Photo"></a>
-			<p class="image-caption">All zippers are YKK Excella. They combine legendary reliability with smooth elegance. Each tooth is individually polished, which gives the zipper a brilliant shine and prevents scratching of the jacket or your skin.
-				<br>
-				<br>
-				YKK Excella zippers don’t contain Nickel.
-			</p>
-		</div>
-		<div class="large-6 medium-6 small-12 columns">
-			<a href="/images/photos/hardware/snap-silver_detail-large.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/hardware/snap-silver_detail-medium.jpg" alt="Jacket Buttons Photo"></a>
-			<p class="image-caption">The buttons on our jackets are spring&ndash;type snaps from YKK, made purely out of nickel&ndash;free alloys. They receive the same beautiful coatings as our zippers and provide reliable closure without the need to pull too hard and damage the leather when you open them.</p>
-		</div>
-	</section>
-</article>
-
+	<article class="large-12 medium-12 small-12 columns">
+		<h2>Finest Materials</h2>
+		<p>
+			From the most precious leather down to the zippers and buttons, we obsess over the quality of the materials we use.
+			<a href="/leather-materials?jacket={{{ $jacket->model }}}" class="underlined">Learn more</a>
+		</p>
+	</article>
 @stop
