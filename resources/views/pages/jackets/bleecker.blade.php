@@ -14,34 +14,29 @@ Our made-to-measure double rider biker leather jacket.
 
 @section('carousel_images')
   <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/right_closed_full_silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/right_closed_full_silver-medium.jpg" alt="Right Closed Full Silver">
+  	<a href="/images/photos/jackets/bleecker/carousel/front_closed_full-silver-large.jpg" title="">
+  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/front_closed_full-silver-medium.jpg" alt="Front Closed Full Silver">
   </a>
   </div>
   <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/front_open_full_silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/front_open_full_silver-medium.jpg" alt="Front Open Full Silver">
+  	<a href="/images/photos/jackets/bleecker/carousel/side_right_closed_full-silver-large.jpg" title="">
+  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/side_right_closed_full-silver-medium.jpg" alt="Side Right Closed Full Silver">
   </a>
   </div>
   <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/left_closed_full_silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/left_closed_full_silver-medium.jpg" alt="Left Closed Full Silver">
+  	<a href="/images/photos/jackets/bleecker/carousel/back_closed_full-silver-large.jpg" title="">
+  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/back_closed_full-silver-medium.jpg" alt="Back Closed Full Silver">
   </a>
   </div>
   <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/side_left_closed_full_silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/side_left_closed_full_silver-medium.jpg" alt="Side Left Closed Full Silver">
-  </a>
+  	<a href="/images/photos/jackets/bleecker/carousel/shoulder_detail-silver-large.jpg" title="">
+  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/shoulder_detail-silver-medium.jpg" alt="Shoulder Detail Silver">
+	  </a>
   </div>
   <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/back_closed_full_silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/back_closed_full_silver-medium.jpg" alt="Back Closed Full Silver">
-  </a>
-  </div>
-  <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/side_right_closed_full_silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/side_right_closed_full_silver-medium.jpg" alt="Side Right Closed Full Silver">
-  </a>
+  	<a href="/images/photos/jackets/bleecker/carousel/sleeve_detail-silver-large.jpg" title="">
+  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/sleeve_detail-silver-medium.jpg" alt="Sleeve Detail Silver">
+	  </a>
   </div>
 @stop
 
@@ -142,7 +137,7 @@ Our made-to-measure double rider biker leather jacket.
 			<br>
 		</div>
 		<div class="large-6 medium-6 small-12 columns">
-			<a href="/images/photos/hardware/zipper_silver_detail-large.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/hardware/zipper_silver_detail-medium.jpg" alt="Zipper Photo"></a>
+			<a href="/images/photos/hardware/zipper-silver_detail-large.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/hardware/zipper-silver_detail-medium.jpg" alt="Zipper Photo"></a>
 			<p class="image-caption">All zippers are YKK Excella. They combine legendary reliability with smooth elegance. Each tooth is individually polished, which gives the zipper a brilliant shine and prevents scratching of the jacket or your skin.
 				<br>
 				<br>
@@ -150,7 +145,7 @@ Our made-to-measure double rider biker leather jacket.
 			</p>
 		</div>
 		<div class="large-6 medium-6 small-12 columns">
-			<a href="/images/photos/hardware/snap_silver_detail-large.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/hardware/snap_silver_detail-medium.jpg" alt="Jacket Buttons Photo"></a>
+			<a href="/images/photos/hardware/snap-silver_detail-large.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/hardware/snap-silver_detail-medium.jpg" alt="Jacket Buttons Photo"></a>
 			<p class="image-caption">The buttons on our jackets are spring&ndash;type snaps from YKK, made purely out of nickel&ndash;free alloys. They receive the same beautiful coatings as our zippers and provide reliable closure without the need to pull too hard and damage the leather when you open them.</p>
 		</div>
 	</section>
