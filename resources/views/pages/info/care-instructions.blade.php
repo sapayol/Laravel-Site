@@ -38,5 +38,8 @@ Care Instructions
 			<p>Loose dirt and small stains can be removed by brushing it with a very soft brush or sponge. Test on an unnoticeable part of the jacket.</p>
 			<p>For more persistent dirt and stains, have it cleaned by a professional.</p>
 		</section>
+		<section>
+			<a href="/our-jackets" class="button">See Our Other Jackets</a>
+		</section>
 	</article>
 @stop
