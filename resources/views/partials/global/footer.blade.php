@@ -7,6 +7,8 @@
 			<li><a class="underlined" href="mailto:contact@sapayol.com">Contact Us</a></li>
 			<li>•</li>
 			<li><a class="underlined" href="https://instagram.com/sapayol/">Instagram</a></li>
+			<li>•</li>
+			<li><a class="underlined" href="/media">Media</a></li>
 		</ul>
 	</nav>
 	<section class="legal">
