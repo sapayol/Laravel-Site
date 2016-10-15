@@ -21,10 +21,10 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 		<section class="row">
 			<div class="large-10 medium-10 medium-centered small-12 columns">
 				<div class="player" ng-controller="videoCtrl">
-				  <video poster="/images/video-posters/sapayol_vapur.jpg" controls crossorigin preload="none">
-				    <source src="/videos/sapayol_vapur.webm" type="video/webm">
-				    <source src="/videos/sapayol_vapur.mp4"  type="video/mp4">
-				    <a href="/videos/sapayol_vapur.mp4">Download</a>
+				  <video poster="/images/video-posters/who_we_are.jpg" controls crossorigin preload="none">
+				    <source src="/videos/who_we_are.webm" type="video/webm">
+				    <source src="/videos/who_we_are.mp4"  type="video/mp4">
+				    <a href="/videos/who_we_are.mp4">Download</a>
 				  </video>
 				</div>
 			</div>
