@@ -33,9 +33,9 @@ class PagesController extends Controller {
 		return view('pages.info.who-we-are');
 	}
 
-	public function about()
+	public function media()
 	{
-		return view('pages.info.about');
+		return view('pages.info.media');
 	}
 
 	public function howItWorks()
