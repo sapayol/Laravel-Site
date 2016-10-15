@@ -32,9 +32,8 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
       hardware_color = 'gold';
     }
     $scope.front_image = lining_color + '-' + hardware_color
-    $scope.back_image = 'back-' + hardware_color
+    $scope.back_image = $scope.jacket.model === 'e-161' ? 'back' : 'back-' + hardware_color
   }
-
 
   $scope.submitAuthRequest = function(request) {
   	if (request === 'logout') return logout($scope.user);
