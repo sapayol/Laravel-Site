@@ -20,7 +20,7 @@ class JacketsController extends Controller {
 	public function show($model)
 	{
 		$jacket = Jacket::where('model', '=', $model)->firstOrFail();
-
+		JavaScript::put(['jacket' => $jacket, 'session' => Session::all()]);
 		return view('pages.jackets.' . $model, ['jacket' => $jacket]);
 	}
 

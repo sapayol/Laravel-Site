@@ -15,12 +15,25 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
   }
 
   // Update the session on the server to match the changes that the user makes
+
   $scope.updateSessionCache = function() {
     var jacket = {};
+    setPreviewImageName()
     jacket[sapayol.jacket.model] = $scope.jacket;
     Session.store(jacket);
   }
 
+  setPreviewImageName = function() {
+    var lining_color = $scope.jacket.lining_color === '13' ? 'red' : 'black';
+    var hardware_color = 'silver';
+    if ($scope.jacket.hardware_color === '10') {
+      hardware_color = 'gray';
+    } else if ($scope.jacket.hardware_color === '11') {
+      hardware_color = 'gold';
+    }
+    $scope.front_image = lining_color + '-' + hardware_color
+    $scope.back_image = 'back-' + hardware_color
+  }
 
 
   $scope.submitAuthRequest = function(request) {
