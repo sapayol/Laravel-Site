@@ -30,6 +30,18 @@
 					{{{ $jacket->hardware_colors()->first()->name }}}
 				@endif
 			</fieldset>
+			@if ($jacket->model === 'linden')
+				<hr>
+				<fieldset>
+					<legend>Collar</legend>
+					<label class="button tiny hollow" ng-class="{active: jacket.collar == '{{{ $hardware_color->id }}}' }">Plain
+						<input type="radio" name="jacket_look[hardware_color]" ng-model="jacket.collar" value="{{{ $hardware_color->id }}}" ng-change="updateSessionCache()">
+					</label>
+					<label class="button tiny hollow" ng-class="{active: jacket.collar == '{{{ $hardware_color->id }}}' }">Wool
+						<input type="radio" name="jacket_look[hardware_color]" ng-model="jacket.collar" value="{{{ $hardware_color->id }}}" ng-change="updateSessionCache()">
+					</label>
+				</fieldset>
+			@endif
 			<input type="hidden" name="_token"         value="{{{ csrf_token() }}}">
 			<input type="hidden" name="model"          value="{{{ $jacket->model }}}">
 			@if (Auth::guest())
@@ -38,6 +50,7 @@
 				<input type="hidden" name="user_id"      value="{{{ Auth::user()->id }}}">
 			@endif
 		</form>
+
 
 	</section>
 	<div class="clearfix"></div>
@@ -62,3 +75,4 @@
 				<a href="" ng-click="proceedToOrder()" class="button expand">Proceed To Measurement</a>
 		@endif
 	</section>
+
