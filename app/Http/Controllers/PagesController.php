@@ -25,7 +25,8 @@ class PagesController extends Controller {
 	public function index()
 	{
 		$jackets = Jacket::orderBy('active', 'DESC')->get();
-		return view('pages.home', ['jackets' => $jackets]);
+		$randomModel = $jackets->random()->model;
+		return view('pages.home', ['jackets' => $jackets, 'randomModel' => $randomModel]);
 	}
 
 	public function whoWeAre()
