@@ -73,11 +73,21 @@ Our made-to-measure double rider biker leather jacket.
 @stop
 
 @section('main')
-	<article class="large-12 medium-12 small-12 columns">
-		<h2>Finest Materials</h2>
-		<p>
-			From the most precious leather down to the zippers and buttons, we obsess over the quality of the materials we use.
-			<a href="/leather-materials?jacket={{{ $jacket->model }}}" class="underlined">Learn more</a>
-		</p>
-	</article>
+  <div class="row">
+    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/mott/details/zipper-lg.jpg" title="">
+      <img class="responsive-image" src="/images/photos/jackets/mott/details/zipper-md.jpg" alt="Zipper">
+    </a>
+    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/mott/details/sleeve-lg.jpg" title="">
+      <img class="responsive-image" src="/images/photos/jackets/mott/details/sleeve-md.jpg" alt="Sleeve">
+    </a>
+    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/mott/details/pocket-lg.jpg" title="">
+      <img class="responsive-image" src="/images/photos/jackets/mott/details/pocket-md.jpg" alt="Pocket">
+    </a>
+    <div class="large-6 medium-6 small-12 columns">
+      <h2>Finest materials</h2>
+      <p>
+        From the most precious leather down to the zippers and buttons, we obsess over the quality of the materials we use. <a href="/leather-materials?jacket={{{ $jacket->model }}}" class="underlined">Learn more</a>
+      </p>
+    </div>
+  </div>
 @stop
