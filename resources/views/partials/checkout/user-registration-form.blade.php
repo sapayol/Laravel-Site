@@ -1,4 +1,4 @@
-<form name="userInfoForm" role="form">
+<form name="userInfoForm" role="form"  ng-controller='lookAndFitCtrl'>
 	<label for="email" class="text-input-label">
 		<span class="label-title">Email Address</span>
 		<span class="right alert" ng-if="showUserErorrs && userInfoForm.email.$invalid">Invalid email</span>
