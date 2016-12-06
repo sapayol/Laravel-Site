@@ -5,6 +5,6 @@
 	<div class="large-6 medium-10 small-12 medium-centered columns">
 		<br class="hide-for-large hide-for-small">
 		<h2>Fur Collar</h2>
-		<p>copy coming soon...</p>
+		<p>The detachable fur collar on the Linden comes from Merino sheep, known to have the finest and softest wool of any sheep. It will keep you perfectly warm, without overheating.</p>
 	</div>
 </section>

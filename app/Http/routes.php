@@ -17,7 +17,6 @@ Route::get('/home',                         		 ['uses' => 'PagesController@index
 Route::get('/who-we-are',                        ['uses' => 'PagesController@whoWeAre',     'as' => 'pages.who-we-are']);
 Route::get('/media',                             ['uses' => 'PagesController@media',        'as' => 'pages.media']);
 Route::get('/how-it-works',                      ['uses' => 'PagesController@howItWorks',   'as' => 'pages.how-it-works']);
-Route::get('/our-leather',                       ['uses' => 'PagesController@ourLeather',   'as' => 'pages.our-leather']);
 Route::get('/leather-materials',                 ['uses' => 'PagesController@materials',    'as' => 'pages.leather-materials']);
 Route::get('/care-instructions',                 ['uses' => 'PagesController@instructions', 'as' => 'pages.care-instructions']);
 Route::get('/terms',                             ['uses' => 'PagesController@terms',        'as' => 'pages.terms']);

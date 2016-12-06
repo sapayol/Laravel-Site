@@ -44,11 +44,6 @@ class PagesController extends Controller {
 		return view('pages.info.how-it-works');
 	}
 
-	public function ourLeather(Request $request)
-	{
-		return view('pages.info.our-leather', ['jacket' => $request->jacket]);
-	}
-
 	public function materials(Request $request)
 	{
 		return view('pages.info.leather-materials', ['jacket' => $request->jacket]);

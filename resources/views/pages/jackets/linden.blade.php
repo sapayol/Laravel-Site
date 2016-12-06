@@ -15,32 +15,32 @@ Our made-to-measure double rider biker leather jacket.
 @section('carousel_images')
   <div>
   	<a href="/images/photos/jackets/linden/carousel/front_closed-silver-lg.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/front_closed-silver-md.jpg" alt="Front Closed Silver">
-  </a>
+    	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/front_closed-silver-md.jpg" alt="Front Closed Silver">
+    </a>
   </div>
   <div>
   	<a href="/images/photos/jackets/linden/carousel/right_profile_closed-silver-lg.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/right_profile_closed-silver-md.jpg" alt="Right Profile Closed Silver">
-  </a>
+    	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/right_profile_closed-silver-md.jpg" alt="Right Profile Closed Silver">
+    </a>
   </div>
   <div>
   	<a href="/images/photos/jackets/linden/carousel/back_closed-silver-lg.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/back_closed-silver-md.jpg" alt="Back Closed Silver">
-  </a>
+    	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/back_closed-silver-md.jpg" alt="Back Closed Silver">
+    </a>
   </div>
   <div>
   	<a href="/images/photos/jackets/linden/carousel/collar_detail-silver-lg.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/collar_detail-silver-md.jpg" alt="Collar Detail Silver">
+    	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/collar_detail-silver-md.jpg" alt="Collar Detail Silver">
 	  </a>
   </div>
   <div>
   	<a href="/images/photos/jackets/linden/carousel/pocket_detail-silver-lg.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/pocket_detail-silver-md.jpg" alt="Sleeve Detail Silver">
+    	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/pocket_detail-silver-md.jpg" alt="Sleeve Detail Silver">
 	  </a>
   </div>
   <div>
   	<a href="/images/photos/jackets/linden/carousel/inner_pocket_detail-silver-lg.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/inner_pocket_detail-silver-md.jpg" alt="Inner Pocket Detail Silver">
+  	 <img class="responsive-image" src="/images/photos/jackets/linden/carousel/inner_pocket_detail-silver-md.jpg" alt="Inner Pocket Detail Silver">
 	  </a>
   </div>
 @stop
