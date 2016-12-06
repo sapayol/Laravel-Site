@@ -10,7 +10,9 @@
     'cgNotify',
     'angularPayments',
     'angular-loading-bar',
-    'ngMask'
+    'ngMask',
+    'vAccordion',
+    'ngAnimate'
   ])
   .config(['$interpolateProvider', function($interpolateProvider) {
     $interpolateProvider.startSymbol('[[').endSymbol(']]');

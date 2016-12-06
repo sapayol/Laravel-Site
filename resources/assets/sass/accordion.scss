@@ -1,0 +1,10 @@
+@import "../../../storage/bower_components/v-accordion/src/vAccordion/styles/vAccordion";
+
+.vAccordion--default v-pane.is-expanded > v-pane-header {
+    border-bottom-color: $red;
+}
+
+.vAccordion--default v-pane-header::after,
+.vAccordion--default v-pane-header::before {
+  background-color: $red;
+}

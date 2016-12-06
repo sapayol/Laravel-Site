@@ -25,8 +25,6 @@ Learn more about our full-grain, vegetable tanned leather.
 			</ul>
 		</nav>
 	</section>
-
-
 	<section class="small-12 medium-10 large-8 medium-centered columns" id="leathers">
 		<h2>The difference between full&#8208;grain, top&#8208;grain, genuine, and bonded leather</h2>
 		<p>The most crucial difference in leather quality comes from the fact that every skin is sliced into two pieces: the outer part (grain&#8208;side) and the inner part (flesh&#8208;side). The outer part is much stronger, has a natural grain, and is much more expensive.</p>
