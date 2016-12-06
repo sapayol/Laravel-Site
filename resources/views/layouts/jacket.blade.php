@@ -16,9 +16,10 @@
 	@include('partials.jacket.summary')
 	@include('partials.jacket.video')
 	@include('partials.jacket.video-measurements')
-	<div class="small-12 medium-11 large-10 columns medium-centered columns">
+	<div class="small-12 medium-11 large-10 columns medium-centered">
 		@yield('main')
 	</div>
+	<div class="clearfix"></div>
 	@include('partials.jacket.look')
 </main>
 
