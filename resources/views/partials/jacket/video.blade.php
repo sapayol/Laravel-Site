@@ -5,5 +5,8 @@
 	    <source src="/videos/jackets/{{{ $jacket->model }}}.mp4"  type="video/mp4">
 	    <a href="/videos/jackets/{{{ $jacket->model }}}.mp4">Download</a>
 	  </video>
+    <div class="overlay">
+      <button ng-click='onPlayClick()' class="play-button"></button>
+    </div>
 	</div>
 </div>

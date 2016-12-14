@@ -9,6 +9,9 @@
       <source src="/videos/measurements/{{{ $step }}}.mp4"  type="video/mp4">
       <a href="/videos/{{{ $step }}}.mp4">Download</a>
     </video>
+    <div class="overlay">
+      <button ng-click='onPlayClick()' class="play-button"></button>
+    </div>
 	</div>
 	<h2>@yield('title')</h2>
 	<div class="measurement-instructions">
