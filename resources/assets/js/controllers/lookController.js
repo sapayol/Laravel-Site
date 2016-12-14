@@ -19,12 +19,12 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
 
   $scope.updateSessionCache = function() {
     var jacket = {};
-    setPreviewImageName()
+    $scope.setPreviewImageName()
     jacket[sapayol.jacket.model] = $scope.jacket;
     Session.store(jacket);
   }
 
-  setPreviewImageName = function() {
+  $scope.setPreviewImageName = function() {
     var lining_color = $scope.jacket.lining_color === '13' ? 'red' : 'black';
     var hardware_color = 'silver';
     if ($scope.jacket.hardware_color === '10') {
@@ -32,9 +32,16 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
     } else if ($scope.jacket.hardware_color === '11') {
       hardware_color = 'gold';
     }
-    $scope.front_image = lining_color + '-' + hardware_color
-    const sameBack = $scope.jacket.model === 'e-161' || $scope.jacket.model === 'linden'
-    $scope.back_image = sameBack ? 'back' : 'back-' + hardware_color
+    if ($scope.jacket.model === 'linden') {
+      var collar_color = 'collar-' + ($scope.jacket.collar_color === '14' ? 'black' : 'gray');
+      $scope.front_image = lining_color + '-' + hardware_color + '-' + collar_color;
+      const sameBack = $scope.jacket.model === 'e-161';
+      $scope.back_image = sameBack ? 'back' : 'back-' + hardware_color + '-' + collar_color;
+    } else {
+      $scope.front_image = lining_color + '-' + hardware_color;
+      const sameBack = $scope.jacket.model === 'e-161';
+      $scope.back_image = sameBack ? 'back' : 'back-' + hardware_color;
+    }
   }
 
   $scope.submitAuthRequest = function(request) {

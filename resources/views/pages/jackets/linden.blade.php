@@ -79,14 +79,14 @@ Our made-to-measure double rider biker leather jacket.
 
 @section('main')
   <div class="row">
-    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/linden/details/zipper-lg.jpg" title="">
-      <img class="responsive-image" src="/images/photos/jackets/linden/details/zipper-md.jpg" alt="Zipper">
+    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/linden/details/collar-lg.jpg" title="">
+      <img class="responsive-image" src="/images/photos/jackets/linden/details/collar-md.jpg" alt="Collar">
     </a>
-    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/linden/details/shoulder-lg.jpg" title="">
-      <img class="responsive-image" src="/images/photos/jackets/linden/details/shoulder-md.jpg" alt="Shoulder">
+    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/linden/details/pocket-lg.jpg" title="">
+      <img class="responsive-image" src="/images/photos/jackets/linden/details/pocket-md.jpg" alt="Pocket">
     </a>
-    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/linden/details/chest-lg.jpg" title="">
-      <img class="responsive-image" src="/images/photos/jackets/linden/details/chest-md.jpg" alt="Chest">
+    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/linden/details/knits-lg.jpg" title="">
+      <img class="responsive-image" src="/images/photos/jackets/linden/details/knits-md.jpg" alt="Knits">
     </a>
     <div class="large-6 medium-6 small-12 columns">
       <h2>Finest materials</h2>
