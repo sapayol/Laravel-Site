@@ -1,9 +1,39 @@
 .player {
   z-index: 2000;
   @media #{$medium-up} { padding-top: 0; }
+  margin-bottom: 2rem;
   padding-top: 2rem;
   background: white;
   position: relative;
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .play-button {
+    z-index: 999;
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid $red;
+    padding: 0;
+    background: none;
+    transition: transform .1s;
+    transform: scale(1);
+    outline-style: none;
+    &:hover {
+      transition: transform .1s;
+      transform: scale(1.1);
+    }
+  }
+  &.playing .play-button {
+    display: none;
+  }
   &:hover {
     cursor: pointer;
   }
