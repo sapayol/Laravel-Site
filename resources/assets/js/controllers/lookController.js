@@ -6,11 +6,12 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
 	$scope.jacket = sapayol.jacket;
 	oldInput = typeof(sapayol.session[$scope.jacket.model]) !== 'undefined' ? sapayol.session[$scope.jacket.model] : {};
 
-	$scope.init = function(leather_type, leather_color, lining_color, hardware_color) {
+	$scope.init = function(leather_type, leather_color, lining_color, hardware_color, collar_color) {
 		$scope.jacket.leather_type   = typeof(oldInput.leather_type)   !== 'undefined' ? oldInput.leather_type   : leather_type;
 		$scope.jacket.leather_color  = typeof(oldInput.leather_color)  !== 'undefined' ? oldInput.leather_color  : leather_color;
 		$scope.jacket.lining_color   = typeof(oldInput.lining_color)   !== 'undefined' ? oldInput.lining_color   : lining_color;
-		$scope.jacket.hardware_color = typeof(oldInput.hardware_color) !== 'undefined' ? oldInput.hardware_color : hardware_color;
+    $scope.jacket.hardware_color = typeof(oldInput.hardware_color) !== 'undefined' ? oldInput.hardware_color : hardware_color;
+		$scope.jacket.collar_color   = typeof(oldInput.collar_color)   !== 'undefined' ? oldInput.collar_color   : collar_color;
     $scope.updateSessionCache();
   }
 

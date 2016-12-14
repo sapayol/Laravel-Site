@@ -47,4 +47,9 @@ class Jacket extends Model {
     return $this->attributes()->where('type', '=', 'lining_color')->get();
   }
 
+  public function collar_colors()
+  {
+   return $this->attributes()->where('type', '=', 'collar_color')->get();
+  }
+
 }

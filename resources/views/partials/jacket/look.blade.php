@@ -1,6 +1,12 @@
 	<section ng-controller='lookAndFitCtrl' class="large-12 medium-10 medium-centered small-12 columns look-options">
 		<h2 class="thin text-center">Design your look</h2>
-		<form action="/orders" method="POST" name="createOrderForm" ng-init="init( {{{ $jacket->leather_types()->first()->id }}}, {{{ $jacket->leather_colors()->first()->id }}}, {{{ $jacket->lining_colors()->first()->id }}}, {{{ $jacket->hardware_colors()->first()->id }}} )">
+		<form action="/orders" method="POST" name="createOrderForm" ng-init="init(
+		 {{{ $jacket->leather_types()->first()->id }}},
+		 {{{ $jacket->leather_colors()->first()->id }}},
+		 {{{ $jacket->lining_colors()->first()->id }}},
+		 {{{ $jacket->hardware_colors()->first()->id }}},
+		 {{{ $jacket->collar_colors()->count() > 0  ? $jacket->collar_colors()->first()->id : 0 }}}
+		 )">
 			<div class="row">
 				<img class="medium-6 columns" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/[[front_image]].jpg"  alt="Jacket Front Preview">
 				<img class="medium-6 columns" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/[[back_image]].jpg"  alt="Jacket Back Preview">
@@ -34,12 +40,15 @@
 				<hr>
 				<fieldset>
 					<legend>Collar</legend>
-					<label class="button tiny hollow" ng-class="{active: jacket.collar == '{{{ $hardware_color->id }}}' }">Plain
-						<input type="radio" name="jacket_look[hardware_color]" ng-model="jacket.collar" value="{{{ $hardware_color->id }}}" ng-change="updateSessionCache()">
-					</label>
-					<label class="button tiny hollow" ng-class="{active: jacket.collar == '{{{ $hardware_color->id }}}' }">Wool
-						<input type="radio" name="jacket_look[hardware_color]" ng-model="jacket.collar" value="{{{ $hardware_color->id }}}" ng-change="updateSessionCache()">
-					</label>
+				@if ($jacket->collar_colors()->count() > 1)
+					@foreach ($jacket->collar_colors() as $collar_color)
+						<label class="button tiny hollow {{{ camel_case($collar_color->name) }}}" ng-class="{active: jacket.collar_color == '{{{ $collar_color->id }}}' }">{{{ $collar_color->name }}}
+							<input type="radio" name="jacket_look[collar_color]" ng-model="jacket.collar_color" value="{{{ $collar_color->id }}}" ng-change="updateSessionCache()">
+						</label>
+					@endforeach
+				@else
+					{{{ $jacket->hardware_colors()->first()->name }}}
+				@endif
 				</fieldset>
 			@endif
 			<input type="hidden" name="_token"         value="{{{ csrf_token() }}}">
