@@ -77,6 +77,11 @@ class Order extends Model {
     return $this->attributes()->where('type', '=', 'lining_color')->first();
   }
 
+  public function collar_color()
+  {
+    return $this->attributes()->where('type', '=', 'collar_color')->first();
+  }
+
   public function hasNoStatus() {
     if ($this->status  === '' || $this->status === null) {
       return true;

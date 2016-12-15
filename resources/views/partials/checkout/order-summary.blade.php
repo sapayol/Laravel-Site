@@ -10,6 +10,9 @@
 			<li><small class="list-key">Leather Color </small><strong>{{{ ucfirst($order->leather_color()->name) }}}	</strong></li>
 			<li><small class="list-key">Lining Color </small><strong>{{{ ucfirst($order->lining_color()->name) }}}	</strong></li>
 			<li><small class="list-key">Hardware Color </small><strong>{{{ ucfirst($order->hardware_color()->name) }}}	</strong></li>
+			@if ($order->collar_color())
+				<li><small class="list-key">Collar Color </small><strong>{{{ ucfirst($order->collar_color()->name) }}}	</strong></li>
+			@endif
 		</ul>
 	</section>
 
