@@ -4,11 +4,20 @@ videoController.controller('videoCtrl', ['$scope', function($scope) {
 	$(document).ready(function(){
   	plyr.setup({
   		controls: ["play", "fullscreen", "volume"]
-	  });
+    });
     var media = document.querySelectorAll(".player")[0].plyr.media;
+    var player = $(".player");
     var playerControls = $(".player-controls");
     media.addEventListener("playing", function() {
       playerControls.addClass('descended');
+    });
+    media.addEventListener("loadstart", function() {
+      console.log('video loading')
+      player.addClass('loading');
+    });
+    media.addEventListener("canplay", function() {
+      console.log('video done loading')
+      player.removeClass('loading');
     });
 
     $scope.onPlayClick = function () {
