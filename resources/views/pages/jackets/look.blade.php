@@ -143,7 +143,6 @@ Design the look of your made-to-measure Bleecker leather jacket.
 		@endif
 	</section>
 
-
 @stop
 
 

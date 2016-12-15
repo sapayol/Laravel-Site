@@ -17,6 +17,7 @@
 @import "look-options";
 @import "hacks";
 @import "forms";
+@import "jackets";
 @import "measurement-table";
 @import "measurement-entry";
 @import "buttons";
@@ -29,11 +30,6 @@
 @import "navigation";
 @import "value-list";
 @import "pagination";
-
-.jacket-summary {
-	padding-top: 0;
-	padding-bottom: 0;
-}
 
 .button.stick-to-bottom {
 	border: none;

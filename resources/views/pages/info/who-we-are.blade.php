@@ -55,7 +55,10 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 		<section class="row">
 			<div class="small-12 medium-10 large-8 medium-centered columns">
 				<a href="/images/photos/who-we-are/who-we-are1-lg.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/who-we-are/who-we-are1-md.jpg" alt="Who We Are 1"></a>
+				<br>
+				<br>
 				<h2 class="medium-text-center">We tailor minimalistic leather jackets to your individual measurements.</h2>
+				<br>
 				<br>
 				<p>Every single jacket is made according to your individual measurements. You can tell us if you like your sleeves a little longer or shorter, or any other preference.</p>
 				<p>You can also choose from a selection of lining and hardware colors.</p>
@@ -92,7 +95,6 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 					<div class="small-12 large-6 medium-10 medium-centered columns" id="best-materials">
 						<div>
 							<br class="hide-for-large">
-							<a href="/images/photos/who-we-are/who-we-are2-lg.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/who-we-are/who-we-are2-md.jpg" alt="Who We Are 2"></a>
 							<h2>Finding the best leather and materials is our obsession.</h2>
 							<p>We only work with the most exclusive leather available: full&#8208;grain, vegetable tanned (chrome&#8208;free), and aniline dyed. Our tannery uses the best components and takes the time that&rsquo;s necessary to produce extraordinary, long-lasting leather that becomes even more beautiful with age. From that leather, the most flawless is set aside for us.</p>
 							<p>Our care about the smallest details carries over to all other materials we use. Our zippers and buttons (YKK Excella) are extremely reliable and are polished down to every single tooth, finished with scratch&#8208;resistant, elegant coatings.</p>
@@ -110,7 +112,10 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 			<div class="large-10 medium-11 small-12 medium-centered columns">
 				<section class="row">
 					<div class="small-12 medium-10 large-10 medium-centered columns">
+						<a href="/images/photos/who-we-are/who-we-are2-lg.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/who-we-are/who-we-are2-md.jpg" alt="Who We Are 2"></a>
+						<br><br>
 						<a href="/images/photos/who-we-are/who-we-are3-lg.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/who-we-are/who-we-are3-md.jpg" alt="Who We Are 3"></a>
+						<br><br>
 						<h2>New York City is our home.</h2>
 						<p>SAPAYOL is based and incorporated in New York City. This city fuels us with energy and inspiration.</p>
 						<h2> Our jackets are made in Istanbul, Turkey.</h2>
@@ -121,6 +126,7 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 				<section class="row" id="respect-nature">
 					<div class="small-12 medium-10 large-10 medium-centered columns">
 						<a href="/images/photos/who-we-are/who-we-are4-lg.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/who-we-are/who-we-are4-md.jpg" alt="Who We Are 4"></a>
+						<br><br>
 						<h2>Every decision is guided by the greatest respect for people, our environment, and animals.</h2>
 						<p>We believe that everyone we work with and all their employees should feel respected and valued for their work. Not only will that lead to the best possible product, we just don&rsquo;t like any other type of relationship. That&rsquo;s why we&rsquo;ve visited all our supply partners and made sure that their workers have safe and healthy work conditions. We&rsquo;re proud to know that workers get above-average pay and social insurance.</p>
 						<p>Just as importantly, we see ourselves as part of one big organism. It&rsquo;s our responsibility &#8208; and also in our best interest &#8208; to honor and care for our environment and animals. We&rsquo;re pushing every aspect of our company in that regard.</p>

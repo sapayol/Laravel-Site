@@ -1,4 +1,5 @@
-	<section ng-controller='lookAndFitCtrl' class="large-12 medium-10 medium-centered small-12 columns look-options">
+	<section ng-controller='lookAndFitCtrl' class="large-9 medium-10 medium-centered small-12 columns look-options">
+		<hr class="thin full-width">
 		<h2 class="thin text-center">Design your look</h2>
 		<form action="/orders" method="POST" name="createOrderForm" ng-init="init(
 		 {{{ $jacket->leather_types()->first()->id }}},

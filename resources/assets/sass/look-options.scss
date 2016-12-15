@@ -1,7 +1,9 @@
 .look-options {
 	padding-bottom: 2rem;
+	margin-top: 2rem;
 	h2 {
-		margin-bottom: 2rem;
+		margin-top: 4rem;
+		margin-bottom: 0;
 	}
 	input[type="radio"] {
 		position: absolute;
@@ -12,6 +14,9 @@
 		margin-top: .65rem;
 		margin-bottom: 1.35rem;
 		width: 10rem;
+		&.full-width {
+			width: 100%;
+		}
 	}
 	fieldset {
 		padding: 0;

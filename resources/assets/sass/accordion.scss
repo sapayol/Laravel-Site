@@ -1,7 +1,15 @@
 @import "../../../storage/bower_components/v-accordion/src/vAccordion/styles/vAccordion";
 
+.vAccordion--default v-pane-header {
+  margin-top: 1rem;
+}
+
+.vAccordion--default v-pane {
+  margin-bottom: 2rem;
+}
+
 .vAccordion--default v-pane.is-expanded > v-pane-header {
-    border-bottom-color: $red;
+  border-bottom-color: $red;
 }
 
 .vAccordion--default v-pane-header::after,

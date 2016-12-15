@@ -1,5 +1,8 @@
 <v-accordion class="vAccordion--default" multiple>
   <v-pane>
+    <a href="/images/photos/leather/leather_hero-lg.jpg" title="">
+      <img class="responsive-image" src="/images/photos/leather/leather_hero-md.jpg" alt="Our Leather">
+    </a>
     <v-pane-header>
       <h2>We don&rsquo;t compromise on the quality of our leather.</h2>
     </v-pane-header>

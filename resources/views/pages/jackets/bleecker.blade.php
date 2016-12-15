@@ -84,9 +84,12 @@ Our made-to-measure double rider biker leather jacket.
       <img class="responsive-image" src="/images/photos/jackets/bleecker/details/chest-md.jpg" alt="Chest">
     </a>
     <div class="large-6 medium-6 small-12 columns">
+      <br>
       <h2>Finest materials</h2>
       <p>
-        From the most precious leather down to the zippers and buttons, we obsess over the quality of the materials we use. <a href="/leather-materials?jacket={{{ $jacket->model }}}" class="underlined">Learn more</a>
+        From the most precious leather down to the zippers and buttons, we obsess over the quality of the materials we use.
+        <br>
+        <a href="/leather-materials?jacket={{{ $jacket->model }}}" class="underlined">Learn more</a>
       </p>
     </div>
   </div>

@@ -14,12 +14,7 @@ Learn more about our full-grain, vegetable tanned leather.
 @stop
 
 @section("main")
-	<section class="small-12 medium-10 large-8 medium-centered columns">
-		<a href="/images/photos/leather/leather_hero-lg.jpg" title="">
-  		<img class="responsive-image" src="/images/photos/leather/leather_hero-md.jpg" alt="Our Leather">
-	  </a>
-	</section>
-	<article class="large-12 medium-12 small-12 columns">
+	<article class="small-12 medium-10 large-8 medium-centered large-centered columns">
 		@include('partials.info.leather-accordion')
 	</article>
 	<article class="large-12 medium-12 small-12 columns">
