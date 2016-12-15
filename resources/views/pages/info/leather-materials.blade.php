@@ -41,5 +41,9 @@ Learn more about our full-grain, vegetable tanned leather.
 		@include('partials.info.knits')
 		<hr class="thin">
 		@include('partials.info.collar')
+		<hr class="thin">
+		@include('partials.info.care-instructions')
 	</article>
+
+
 @stop
