@@ -38,8 +38,13 @@ Care Instructions
 			<p>Loose dirt and small stains can be removed by brushing it with a very soft brush or sponge. Test on an unnoticeable part of the jacket.</p>
 			<p>For more persistent dirt and stains, have it cleaned by a professional.</p>
 		</section>
+		<hr class="thin">
 		<section>
-			<a href="/our-jackets" class="button">See Our Other Jackets</a>
+			<h2>What do you think of your jacket?</h2>
+			<p>
+				We'd love to hear form you.
+				<a href="mailto:contact@sapayol.com" class="underlined">Email Us</a>
+			</p>
 		</section>
 	</article>
 @stop
