@@ -14,9 +14,9 @@
     'vAccordion',
     'ngAnimate'
   ])
-  .config(['$interpolateProvider', function($interpolateProvider) {
-    $interpolateProvider.startSymbol('[[').endSymbol(']]');
-  }])
+  // .config(['$interpolateProvider', function($interpolateProvider) {
+  //   $interpolateProvider.startSymbol('[[').endSymbol(']]');
+  // }])
   .run(['$timeout', function($timeout) {
     $timeout(function() {
 			$(document).ready(function(){
