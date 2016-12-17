@@ -45,7 +45,9 @@ class OrdersController extends Controller {
 
 	public function store(CreateOrderRequest $request)
 	{
-    Session::remove('card'); // Clear the saved credit card info from the session
+    // Clear the saved credit card info from the session
+    Session::remove('card');
+
     $last_order = Auth::user()->orders->last();
     if ($last_order && ($last_order->status == 'new' || $last_order->status == 'started')) {
     	$order = $last_order;

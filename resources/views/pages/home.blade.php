@@ -21,8 +21,7 @@ SAPAYOL offers made-to-measure, customizable leather jackets, tailored by master
 			    <source src="/videos/jackets/{{ $randomModel }}.mp4"  type="video/mp4">
 			    <a href="/videos/jackets/{{ $randomModel }}.mp4">Download</a>
 			  </video>
-			  <div class="overlay">
-			  	<button ng-click='onPlayClick()' class="play-button"></button>
+				@include('partials.global.play-button')
 			  </div>
 			</div>
 			<div class="title-container">

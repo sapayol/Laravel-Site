@@ -61,9 +61,9 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
   }
 
   register = function(input) {
-       Auth.register(input.email, input.password)
-        .then(function(user) {
-          $scope.user = user;
+     Auth.register(input.email, input.password)
+      .then(function(user) {
+        $scope.user = user;
         $scope.proceedToOrder();
       });
   };
