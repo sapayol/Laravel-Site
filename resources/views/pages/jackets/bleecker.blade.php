@@ -14,28 +14,28 @@ Our made-to-measure double rider biker leather jacket.
 
 @section('carousel_images')
   <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/front_closed_full-silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/front_closed_full-silver-medium.jpg" alt="Front Closed Full Silver">
+  	<a href="/images/photos/jackets/bleecker/carousel/front_closed_silver_large.jpg" title="">
+  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/front_closed_silver_medium.jpg" alt="Front Closed Silver">
   </a>
   </div>
   <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/side_right_closed_full-silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/side_right_closed_full-silver-medium.jpg" alt="Side Right Closed Full Silver">
+  	<a href="/images/photos/jackets/bleecker/carousel/45-left_closed_silver_large.jpg" title="">
+  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/45-left_closed_silver_medium.jpg" alt="45 Left Closed Silver">
   </a>
   </div>
   <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/back_closed_full-silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/back_closed_full-silver-medium.jpg" alt="Back Closed Full Silver">
+  	<a href="/images/photos/jackets/bleecker/carousel/side-left_closed_silver_large.jpg" title="">
+  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/side-left_closed_silver_large.jpg" alt="Side left Closed Silver">
   </a>
   </div>
   <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/shoulder_detail-silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/shoulder_detail-silver-medium.jpg" alt="Shoulder Detail Silver">
+  	<a href="/images/photos/jackets/bleecker/carousel/back_closed_silver_large.jpg" title="">
+  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/back_closed_silver_medium.jpg" alt="Back Closed Silver">
 	  </a>
   </div>
   <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/sleeve_detail-silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/sleeve_detail-silver-medium.jpg" alt="Sleeve Detail Silver">
+  	<a href="/images/photos/jackets/bleecker/carousel/front_open_silver_large.jpg" title="">
+  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/front_open_silver_medium.jpg" alt="Front Open Silver">
 	  </a>
   </div>
 @stop
@@ -74,15 +74,9 @@ Our made-to-measure double rider biker leather jacket.
 
 @section('main')
   <div class="row">
-    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/bleecker/details/sleeve-lg.jpg" title="">
-      <img class="responsive-image" src="/images/photos/jackets/bleecker/details/sleeve-md.jpg" alt="Sleeve">
-    </a>
-    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/bleecker/details/shoulder-lg.jpg" title="">
-      <img class="responsive-image" src="/images/photos/jackets/bleecker/details/shoulder-md.jpg" alt="Shoulder">
-    </a>
-    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/bleecker/details/chest-lg.jpg" title="">
-      <img class="responsive-image" src="/images/photos/jackets/bleecker/details/chest-md.jpg" alt="Chest">
-    </a>
+    <img class="large-6 medium-6 small-12 columns responsive-image" src="/images/photos/jackets/bleecker/details/actionback.jpg" alt="Actionback">
+    <img class="large-6 medium-6 small-12 columns responsive-image" src="/images/photos/jackets/bleecker/details/chest.jpg" alt="Chest">
+    <img class="large-6 medium-6 small-12 columns responsive-image" src="/images/photos/jackets/bleecker/details/cuff-zipper.jpg" alt="Cuff Zipper">
     <div class="large-6 medium-6 small-12 columns">
       <br>
       <h2>Finest materials</h2>
