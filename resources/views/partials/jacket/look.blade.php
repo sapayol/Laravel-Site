@@ -9,9 +9,10 @@
 		 {{{ $jacket->collar_colors()->count() > 0  ? $jacket->collar_colors()->first()->id : 0 }}}
 		 )">
 			<div class="row">
-				<img class="medium-6 columns" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ front_image }}.jpg"  alt="Jacket Front Preview">
-				<img class="medium-6 columns" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ back_image }}.jpg"  alt="Jacket Back Preview">
+				<img class="medium-6 columns" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ front_image }}-medium.jpg"  alt="Jacket Front Preview">
+				<img class="medium-6 columns" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ back_image }}-medium.jpg"  alt="Jacket Back Preview">
 			</div>
+			<br><br>
 			<fieldset>
 				<legend>Lining Color</legend>
 				@if ($jacket->lining_colors()->count() > 1)
