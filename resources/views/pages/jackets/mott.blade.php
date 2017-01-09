@@ -13,31 +13,25 @@ Our made-to-measure double rider biker leather jacket.
 @stop
 
 @section('carousel_images')
-  <div>
-  	<a href="/images/photos/jackets/mott/carousel/front_closed_full-silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/mott/carousel/front_closed_full-silver-medium.jpg" alt="Front Closed Full Silver">
-  </a>
-  </div>
-  <div>
-  	<a href="/images/photos/jackets/mott/carousel/side_right_closed_full-silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/mott/carousel/side_right_closed_full-silver-medium.jpg" alt="Side Right Closed Full Silver">
-  </a>
-  </div>
-  <div>
-  	<a href="/images/photos/jackets/mott/carousel/back_closed_full-silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/mott/carousel/back_closed_full-silver-medium.jpg" alt="Back Closed Full Silver">
-  </a>
-  </div>
-  <div>
-  	<a href="/images/photos/jackets/mott/carousel/shoulder_detail-silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/mott/carousel/collar_detail-silver-medium.jpg" alt="Collar Detail Silver">
-	  </a>
-  </div>
-  <div>
-  	<a href="/images/photos/jackets/mott/carousel/sleeve_detail-silver-large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/mott/carousel/sleeve_detail-silver-medium.jpg" alt="Sleeve Detail Silver">
-	  </a>
-  </div>
+  <?php
+    $carouselImageNames = [
+      'front_closed_silver',
+      '45-left_closed_silver',
+      'side-left_closed_silver',
+      'back_closed_silver',
+      'front_open_silver',
+    ]
+  ?>
+
+  @foreach ($carouselImageNames as $name)
+    <div>
+      <a href="/images/photos/jackets/mott/carousel/{{{ $name }}}-large.jpg" title="">
+        <img
+          class="responsive-image"
+          src="/images/photos/jackets/mott/carousel/{{{ $name }}}-medium.jpg" alt="{{{ $name }}}">
+      </a>
+    </div>
+  @endforeach
 @stop
 
 @section('measurement_data')
@@ -74,15 +68,9 @@ Our made-to-measure double rider biker leather jacket.
 
 @section('main')
   <div class="row">
-    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/mott/details/zipper-lg.jpg" title="">
-      <img class="responsive-image" src="/images/photos/jackets/mott/details/zipper-md.jpg" alt="Zipper">
-    </a>
-    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/mott/details/sleeve-lg.jpg" title="">
-      <img class="responsive-image" src="/images/photos/jackets/mott/details/sleeve-md.jpg" alt="Sleeve">
-    </a>
-    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/mott/details/pocket-lg.jpg" title="">
-      <img class="responsive-image" src="/images/photos/jackets/mott/details/pocket-md.jpg" alt="Pocket">
-    </a>
+    @foreach (['collar', 'cuff-zipper', 'pocket'] as $name)
+      <img class="large-6 medium-6 small-12 columns responsive-image" src="/images/photos/jackets/mott/details/{{{ $name }}}.jpg" alt="{{{ $name }}}">
+    @endforeach
     <div class="large-6 medium-6 small-12 columns">
       <br>
       <h2>Finest materials</h2>
