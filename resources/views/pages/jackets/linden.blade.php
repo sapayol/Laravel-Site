@@ -13,36 +13,31 @@ Our made-to-measure double rider biker leather jacket.
 @stop
 
 @section('carousel_images')
+
+<?php
+  $carouselImageNames = [
+    'front_closed_silver_fur-black',
+    '45-left_closed_silver_fur-black',
+    'side-left_closed_silver_fur-black',
+    'back_closed_silver_fur-black',
+    'front_open_silver_fur-black',
+    '45-left_closed_silver_fur-gray',
+    'front_closed_silver_fur-gray',
+    '45-left_closed_silver_fur-none',
+    'front_closed_silver_fur-none',
+  ]
+?>
+
+@foreach ($carouselImageNames as $name)
   <div>
-  	<a href="/images/photos/jackets/linden/carousel/front_closed-silver-lg.jpg" title="">
-    	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/front_closed-silver-md.jpg" alt="Front Closed Silver">
+    <a href="/images/photos/jackets/linden/carousel/{{{ $name }}}_large.jpg" title="">
+      <img
+        class="responsive-image"
+        src="/images/photos/jackets/linden/carousel/{{{ $name }}}_medium.jpg" alt="{{{ $name }}}">
     </a>
   </div>
-  <div>
-  	<a href="/images/photos/jackets/linden/carousel/right_profile_closed-silver-lg.jpg" title="">
-    	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/right_profile_closed-silver-md.jpg" alt="Right Profile Closed Silver">
-    </a>
-  </div>
-  <div>
-  	<a href="/images/photos/jackets/linden/carousel/back_closed-silver-lg.jpg" title="">
-    	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/back_closed-silver-md.jpg" alt="Back Closed Silver">
-    </a>
-  </div>
-  <div>
-  	<a href="/images/photos/jackets/linden/carousel/collar_detail-silver-lg.jpg" title="">
-    	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/collar_detail-silver-md.jpg" alt="Collar Detail Silver">
-	  </a>
-  </div>
-  <div>
-  	<a href="/images/photos/jackets/linden/carousel/pocket_detail-silver-lg.jpg" title="">
-    	<img class="responsive-image" src="/images/photos/jackets/linden/carousel/pocket_detail-silver-md.jpg" alt="Sleeve Detail Silver">
-	  </a>
-  </div>
-  <div>
-  	<a href="/images/photos/jackets/linden/carousel/inner_pocket_detail-silver-lg.jpg" title="">
-  	 <img class="responsive-image" src="/images/photos/jackets/linden/carousel/inner_pocket_detail-silver-md.jpg" alt="Inner Pocket Detail Silver">
-	  </a>
-  </div>
+@endforeach
+
 @stop
 
 @section('measurement_data')
@@ -79,15 +74,9 @@ Our made-to-measure double rider biker leather jacket.
 
 @section('main')
   <div class="row">
-    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/linden/details/collar-lg.jpg" title="">
-      <img class="responsive-image" src="/images/photos/jackets/linden/details/collar-md.jpg" alt="Collar">
-    </a>
-    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/linden/details/pocket-lg.jpg" title="">
-      <img class="responsive-image" src="/images/photos/jackets/linden/details/pocket-md.jpg" alt="Pocket">
-    </a>
-    <a class="large-6 medium-6 small-12 columns" href="/images/photos/jackets/linden/details/knits-lg.jpg" title="">
-      <img class="responsive-image" src="/images/photos/jackets/linden/details/knits-md.jpg" alt="Knits">
-    </a>
+    @foreach (['fur', 'interior-pocket', 'waist'] as $name)
+      <img class="large-6 medium-6 small-12 columns responsive-image" src="/images/photos/jackets/linden/details/{{{ $name }}}.jpg" alt="{{{ $name }}}">
+    @endforeach
     <div class="large-6 medium-6 small-12 columns">
       <h2>Finest materials</h2>
       <p>
