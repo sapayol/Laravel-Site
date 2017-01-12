@@ -50,9 +50,9 @@ class OrdersController extends Controller {
 
     $last_order = Auth::user()->orders->last();
     if ($last_order && ($last_order->status == 'new' || $last_order->status == 'started')) {
-    	$order = $last_order;
+      $order = $last_order;
     } else {
-	 	  $order = $this->dispatchFrom('App\Jobs\CreateNewOrder', $request);
+      $order = $this->dispatchFrom('App\Jobs\CreateNewOrder', $request);
     }
 		if ($order->bodyMeasurements) {
 			$completed_measurements = $order->bodyMeasurements->completed();

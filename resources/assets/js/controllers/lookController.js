@@ -33,10 +33,11 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
       hardware_color = 'gold';
     }
     if ($scope.jacket.model === 'linden') {
-      var collar_color = 'collar-' + ($scope.jacket.collar_color === '14' ? 'black' : 'gray');
+      var collar_color = ($scope.jacket.collar_color === '14' ? 'black' : 'gray');
       $scope.front_image = lining_color + '-' + hardware_color + '-' + collar_color;
       const sameBack = $scope.jacket.model === 'e-161';
-      $scope.back_image = sameBack ? 'back' : 'back-' + hardware_color + '-' + collar_color;
+      // $scope.back_image = sameBack ? 'back' : 'back-' + hardware_color + '-' + collar_color;
+      $scope.back_image = sameBack ? 'back' : 'back-' + collar_color;
     } else {
       $scope.front_image = lining_color + '-' + hardware_color;
       const sameBack = $scope.jacket.model === 'e-161';
@@ -63,7 +64,7 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
   register = function(input) {
      Auth.register(input.email, input.password)
       .then(function(user) {
-        $scope.user = user;
+        $scope.$parent.user = user;
         $scope.proceedToOrder();
       });
   };
@@ -71,7 +72,7 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
   login = function(input) {
     Auth.login(input.email, input.password)
       .then(function(user) {
-          $scope.user = user;
+        $scope.$parent.user = user;
         $scope.proceedToOrder();
       });
   }
