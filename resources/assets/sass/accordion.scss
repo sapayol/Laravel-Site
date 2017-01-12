@@ -1,11 +1,20 @@
 @import "../../../storage/bower_components/v-accordion/src/vAccordion/styles/vAccordion";
 
+.vAccordion--default img {
+  width: 100%;
+}
+
 .vAccordion--default v-pane-header {
   margin-top: 1rem;
 }
 
+.vAccordion--default v-pane-content {
+
+}
+
 .vAccordion--default v-pane {
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 .vAccordion--default v-pane.is-expanded > v-pane-header {

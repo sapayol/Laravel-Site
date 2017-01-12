@@ -14,24 +14,12 @@ Learn more about our full-grain, vegetable tanned leather.
 @stop
 
 @section("main")
-	<article class="small-12 medium-10 large-8 medium-centered large-centered columns">
-		@include('partials.info.leather-accordion')
-	</article>
-	<article class="large-12 medium-12 small-12 columns">
 		@include('partials.info.leather')
+		@include('partials.info.leather-accordion')
 		<hr class="thin">
 		@include('partials.info.lining')
 		<hr class="thin">
 		@include('partials.info.hardware')
-		<hr class="thin">
-		<section class="row">
-			<div class="large-6 medium-6 small-12 columns">
-				<a href="/images/photos/linings/lining-lg.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/linings/lining-md.jpg" alt="Lining"></a>
-			</div>
-			<div class="large-6 medium-6 small-12 columns">
-				<a href="/images/photos/other/craftsmanship-lg.jpg" class="image-link"><img class="sidekick-image" src="/images/photos/other/craftsmanship-md.jpg" alt="Craftsmanship"></a>
-			</div>
-		</section>
 		<hr class="thin">
 		@include('partials.info.knits')
 		<hr class="thin">

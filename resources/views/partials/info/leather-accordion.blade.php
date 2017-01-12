@@ -1,30 +1,17 @@
 <v-accordion class="vAccordion--default" multiple>
-  <v-pane>
-    <a href="/images/photos/leather/leather_hero-lg.jpg" title="">
-      <img class="responsive-image" src="/images/photos/leather/leather_hero-md.jpg" alt="Our Leather">
-    </a>
+  <img class="responsive-image full-width" src="/images/photos/leather_materials/leather_hero.jpg" alt="Jacket Chest">
+  <v-pane class="large-9 medium-10 medium-centered columns">
     <v-pane-header>
       <h2>We don&rsquo;t compromise on the quality of our leather.</h2>
     </v-pane-header>
     <v-pane-content>
       <p>Truly exceptional leather lasts long, doesn&rsquo;t bulge or tear easily and develops a characteristic patina over time. It features a natural, delicate texture that feels warm and supple. Great leather has a pleasant, unobtrusive smell and a rich color that doesn&rsquo;t rub off.</p>
       <p>From the very start to finish, we choose the most exclusive parts and methods to get all of these characteristics right:</p>
-      <nav>
-        <ul>
-          <li><a href="#leathers" title="">Full&#8208;grain leather</a></li>
-          <li><a href="#tanning-process" title="">World&#8208;class tanning</a></li>
-          <li><a href="#animal-treatment" title="">Humane animal treatment</a></li>
-        </ul>
-      </nav>
     </v-pane-content>
   </v-pane>
 
-  <v-pane>
-    <div>
-      <a href="/images/photos/leather/leather2-lg.jpg" title="">
-        <img class="responsive-image" src="/images/photos/leather/leather2-md.jpg" alt="Our Leather">
-      </a>
-    </div>
+  <img class="responsive-image full-witdh" src="/images/photos/leather_materials/leather2.jpg" alt="Our Leather">
+  <v-pane class="large-9 medium-10 medium-centered columns">
     <v-pane-header>
       <h2>The difference between full&#8208;grain, top&#8208;grain, genuine, and bonded leather</h2>
     </v-pane-header>
@@ -38,12 +25,8 @@
     </v-pane-content>
   </v-pane>
 
-  <v-pane>
-    <div>
-      <a href="/images/photos/leather/leather3-lg.jpg" title="">
-        <img class="responsive-image" src="/images/photos/leather/leather3-md.jpg" alt="Our Leather 3">
-      </a>
-    </div>
+  <img class="responsive-image full-width" src="/images/photos/leather_materials/leather3.jpg" alt="Our Leather 3">
+  <v-pane class="large-9 medium-10 medium-centered columns">
     <v-pane-header>
       <h2>Chrome vs. vegetable tanning and the importance of a world&#8208;class tannery</h2>
     </v-pane-header>
@@ -59,12 +42,9 @@
     </v-pane-content>
   </v-pane>
 
-  <v-pane>
-    <div>
-      <a href="/images/photos/leather/leather1-lg.jpg" title="">
-        <img class="responsive-image" src="/images/photos/leather/leather1-md.jpg" alt="Our Leather 1">
-      </a>
-    </div>
+  <img class="responsive-image full-width" src="/images/photos/leather_materials/leather1.jpg" alt="Our Leather 1">
+
+   <v-pane class="large-9 medium-10 medium-centered columns">
     <v-pane-header>
       <h2>Healthy animals from humane sources</h2>
     </v-pane-header>
