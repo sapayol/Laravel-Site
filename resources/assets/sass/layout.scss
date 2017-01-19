@@ -1,3 +1,7 @@
+body {
+	background: $white;
+}
+
 .page-wrap {
 	@media #{$medium-up} {
 		background: transparent;

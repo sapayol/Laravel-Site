@@ -3,7 +3,7 @@
   @media #{$medium-up} { padding-top: 0; }
   margin-bottom: 2rem;
   padding-top: 2rem;
-  background: white;
+  background: $white;
   position: relative;
   .overlay {
     position: absolute;
@@ -61,6 +61,7 @@
     border-bottom: 1px solid $light-grey;
     transition: top 1s ease-in-out;
     z-index: 100;
+    background: $white;
     &.descended {
       top: .45rem;
     }

@@ -12,7 +12,7 @@
           stroke="#000000"
           stroke-width="6"
           stroke-linejoin="round"
-          fill="#FFFFFF"
+          fill="#F9F8F6"
           fill-rule="evenodd"
           points="360 334 254 393.708861 254 274.291139">
         </polygon>
