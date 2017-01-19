@@ -56,7 +56,6 @@
 			<input type="hidden" name="_token"         value="{{{ csrf_token() }}}">
 			<input type="hidden" name="model"          value="{{{ $jacket->model }}}">
 			@if (Auth::guest())
-			Im a guest
 				<input type="hidden" name="user_id" value="@{{ user.id }}">
 			@else
 				<input type="hidden" name="user_id" value="{{{ Auth::user()->id }}}">
