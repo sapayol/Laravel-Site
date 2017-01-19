@@ -10,8 +10,8 @@
 	border-top: 1px solid $black;
 	border-bottom: 6px solid $highlight-color;
 	border-radius: 0;
-	color: $white;
-	background: $black;
+	color: $black;
+	background: white;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	z-index: 170;
@@ -19,12 +19,12 @@
 		border-color: $white;
 	}
 	&:hover, &:active, &:focus {
-		background: $white;
-		border-color: $black;
+		background: $black;
+		border-color: white;
 		border-bottom: 6px solid $highlight-color;
-		color: $black;
+		color: white;
 			.chevron {
-				border-color: $black;
+				border-color: white;
 			}
 	}
 	&.hollow {
