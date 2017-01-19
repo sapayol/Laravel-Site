@@ -31,7 +31,7 @@ Care Instructions
 		</section>
 		<section>
 			<h2>Sunshine</h2>
-			<p>It’s absolutely ok to wear your jacket on a bright, sunny day. Just don’t leave it behind a glass window or have some parts of it exposed to sunlight while others are in the shade for an extended period.</p>
+			<p>It’s absolutely ok to wear your jacket on a bright, sunny day. Just don’t leave it behind a glass window or have some parts of it exposed to sunlight while other parts are in the shade for an extended period.</p>
 		</section>
 		<section>
 			<h2>Dirt and Stains</h2>
@@ -42,7 +42,7 @@ Care Instructions
 		<section>
 			<h2>What do you think of your jacket?</h2>
 			<p>
-				We'd love to hear form you.
+				We'd love to hear from you.
 				<a href="mailto:contact@sapayol.com" class="underlined">Email Us</a>
 			</p>
 		</section>
