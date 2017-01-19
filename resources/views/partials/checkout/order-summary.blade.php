@@ -1,8 +1,12 @@
-	<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg" alt="Jacket Photo">
+<?php
+	$imageName = $order->lining_color()->name . '-' . $order->hardware_color()->name;
+?>
+
+	<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/variations/{{{ $imageName }}}-medium.jpg" alt="Jacket Photo">
 
 	<section class="large-6 medium-6 small-12 columns">
 		<h3 class="thin left">Look</h3>
-		<a href="/jackets/{{{ $order->jacket->model }}}/look" class="right underlined">Change</a>
+		<a href="/jackets/{{{ $order->jacket->model }}}" class="right underlined">Change</a>
 		<div class="clearfix"></div>
 		<ul class="no-bullet value-list">
 			<li><small class="list-key">Model</small><strong>{{{ ucfirst($order->jacket->name)  }}}	</strong></li>
