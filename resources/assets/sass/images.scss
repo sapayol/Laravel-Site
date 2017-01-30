@@ -4,7 +4,10 @@
 	}
 }
 .sidekick-image {
+	display: inherit;
+	margin: 0 auto;
 	margin-bottom: 1.3rem;
+	padding: 0;
 }
 
 .customization-image {
@@ -162,9 +165,6 @@
 		h2 {
 			margin-bottom: 0;
 		}
-	}
-	.sidekick-image {
-		margin-bottom: 0;
 	}
 }
 

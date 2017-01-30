@@ -31,9 +31,7 @@ Our made-to-measure double rider biker leather jacket.
 @foreach ($carouselImageNames as $name)
   <div>
     <a href="/images/photos/jackets/linden/carousel/{{{ $name }}}_large.jpg" title="">
-      <img
-        class="responsive-image"
-        src="/images/photos/jackets/linden/carousel/{{{ $name }}}_medium.jpg" alt="{{{ $name }}}">
+      <img src="/images/photos/jackets/linden/carousel/{{{ $name }}}_medium.jpg" alt="{{{ $name }}}">
     </a>
   </div>
 @endforeach
@@ -75,15 +73,14 @@ Our made-to-measure double rider biker leather jacket.
 @section('main')
   <div class="row">
     @foreach (['fur', 'interior-pocket', 'waist'] as $name)
-      <img class="large-6 medium-6 small-12 columns responsive-image" src="/images/photos/jackets/linden/details/{{{ $name }}}.jpg" alt="{{{ $name }}}">
+      <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/linden/details/{{{ $name }}}.jpg" alt="{{{ $name }}}">
     @endforeach
     <div class="large-6 medium-6 small-12 columns">
       <h2>Finest materials</h2>
       <p>
         From the most precious leather down to the zippers and buttons, we obsess over the quality of the materials we use.
         <br>
-        <a href="/leather?jacket={{{ $jacket->model }}}" class="underlined">Learn more (leather)</a>
-        <a href="/materials?jacket={{{ $jacket->model }}}" class="underlined">Learn more (materials)</a>
+        <a href="/materials?jacket={{{ $jacket->model }}}" class="underlined">Learn more</a>
       </p>
     </div>
   </div>

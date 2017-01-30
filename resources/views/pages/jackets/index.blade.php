@@ -24,7 +24,7 @@ Our selection of premium leather jacket styles, including double rider, flight j
 			  <li class="text-center">
 					@if ($jacket->active)
 						<a href="/jackets/{{{ $jacket->model }}}">
-							<img class="responsive-image" src="/images/photos/jackets/{{{ $jacket->model }}}/thumbnail.jpg" alt="Jacket Placeholder Image">
+							<img src="/images/photos/jackets/{{{ $jacket->model }}}/thumbnail.jpg" alt="Jacket Placeholder Image">
 						</a>
 						<h2>
 							<a class="underlined" href="/jackets/{{{ $jacket->model }}}">

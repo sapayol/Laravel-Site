@@ -15,27 +15,27 @@ Our made-to-measure double rider biker leather jacket.
 @section('carousel_images')
   <div>
   	<a href="/images/photos/jackets/bleecker/carousel/front_closed_silver_large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/front_closed_silver_medium.jpg" alt="Front Closed Silver">
+  	<img src="/images/photos/jackets/bleecker/carousel/front_closed_silver_medium.jpg" alt="Front Closed Silver">
   </a>
   </div>
   <div>
   	<a href="/images/photos/jackets/bleecker/carousel/45-left_closed_silver_large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/45-left_closed_silver_medium.jpg" alt="45 Left Closed Silver">
+  	<img src="/images/photos/jackets/bleecker/carousel/45-left_closed_silver_medium.jpg" alt="45 Left Closed Silver">
   </a>
   </div>
   <div>
   	<a href="/images/photos/jackets/bleecker/carousel/side-left_closed_silver_large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/side-left_closed_silver_large.jpg" alt="Side left Closed Silver">
+  	<img src="/images/photos/jackets/bleecker/carousel/side-left_closed_silver_large.jpg" alt="Side left Closed Silver">
   </a>
   </div>
   <div>
   	<a href="/images/photos/jackets/bleecker/carousel/back_closed_silver_large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/back_closed_silver_medium.jpg" alt="Back Closed Silver">
+  	<img src="/images/photos/jackets/bleecker/carousel/back_closed_silver_medium.jpg" alt="Back Closed Silver">
 	  </a>
   </div>
   <div>
   	<a href="/images/photos/jackets/bleecker/carousel/front_open_silver_large.jpg" title="">
-  	<img class="responsive-image" src="/images/photos/jackets/bleecker/carousel/front_open_silver_medium.jpg" alt="Front Open Silver">
+  	<img src="/images/photos/jackets/bleecker/carousel/front_open_silver_medium.jpg" alt="Front Open Silver">
 	  </a>
   </div>
 @stop
@@ -74,17 +74,16 @@ Our made-to-measure double rider biker leather jacket.
 
 @section('main')
   <div class="row">
-    <img class="large-6 medium-6 small-12 columns responsive-image" src="/images/photos/jackets/bleecker/details/actionback.jpg" alt="Actionback">
-    <img class="large-6 medium-6 small-12 columns responsive-image" src="/images/photos/jackets/bleecker/details/chest.jpg" alt="Chest">
-    <img class="large-6 medium-6 small-12 columns responsive-image" src="/images/photos/jackets/bleecker/details/cuff-zipper.jpg" alt="Cuff Zipper">
+    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/actionback.jpg" alt="Actionback">
+    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/chest.jpg" alt="Chest">
+    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/cuff-zipper.jpg" alt="Cuff Zipper">
     <div class="large-6 medium-6 small-12 columns">
       <br>
       <h2>Finest materials</h2>
       <p>
         From the most precious leather down to the zippers and buttons, we obsess over the quality of the materials we use.
         <br>
-        <a href="/leather?jacket={{{ $jacket->model }}}" class="underlined">Learn more (leather)</a>
-        <a href="/materials?jacket={{{ $jacket->model }}}" class="underlined">Learn more (materials)</a>
+        <a href="/materials?jacket={{{ $jacket->model }}}" class="underlined">Learn more</a>
       </p>
     </div>
   </div>
