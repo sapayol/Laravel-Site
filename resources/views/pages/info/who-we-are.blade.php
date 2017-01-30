@@ -77,8 +77,7 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 		<p>We only work with the most exclusive leather available: full&#8208;grain, vegetable tanned (chrome&#8208;free), and aniline dyed. Our tannery uses the best components and takes the time that&rsquo;s necessary to produce extraordinary, long-lasting leather that becomes even more beautiful with age. From that leather, the most flawless is set aside for us.</p>
 		<p>Our care about the smallest details carries over to all other materials we use. Our zippers and buttons (YKK Excella) are extremely reliable and are polished down to every single tooth, finished with scratch&#8208;resistant, elegant coatings.</p>
 		<p>The lining is made out of a smooth Bemberg Cupro oxford weave with the exception of the pockets, which are lined with a more robust Tencel fabric.</p>
-		<a href="/leather" class="underlined">More about our leather</a><br><br>
-		<a href="/materials" class="underlined">More about our materials</a><br><br>
+		<a href="/materials" class="underlined">More about our leather &amp; materials</a><br><br>
 	</section>
 
 	<hr>

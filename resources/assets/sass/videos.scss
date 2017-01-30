@@ -2,6 +2,7 @@
   z-index: 2000;
   @media #{$medium-up} { padding-top: 0; }
   margin-bottom: 2rem;
+  padding: 0;
   padding-top: 2rem;
   background: $white;
   position: relative;
@@ -13,9 +14,10 @@
     display: none;
     align-items: center;
     justify-content: center;
+    z-index: -1;
     @media #{$small-up} {
       display: flex;
-      z-index: -1;
+      z-index: 200;
     }
   }
   .play-button {
