@@ -65,10 +65,12 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 		</div>
 	</section>
 
-	<img class="responsive-image full-width" src="/images/photos/who-we-are/craftsmanship3.jpg" alt="Who We Are 3">
-	<br><br>
+	<div class="text-center">
+		<img class="responsive-image" src="/images/photos/who-we-are/craftsmanship3.jpg" alt="Who We Are 3">
+	</div>
+	<br>
 
-	<section class="large-9 medium-10 medium-centered columns">
+	<section class="large-7 medium-10 medium-centered columns">
 		<br class="hide-for-large">
 		<h2>Our jackets are made by master tailors.</h2>
 		<p>Know&#8208;how, skill, and passion are the fuel of great craftsmen. We work exclusively with a studio that possesses an infinite reserve of these values. Members of this atelier have been working together since 1980, dedicated to producing the finest leather garments and pushing their art in every respect.</p>
@@ -84,7 +86,8 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 		<p>We only work with the most exclusive leather available: full&#8208;grain, vegetable tanned (chrome&#8208;free), and aniline dyed. Our tannery uses the best components and takes the time that&rsquo;s necessary to produce extraordinary, long-lasting leather that becomes even more beautiful with age. From that leather, the most flawless is set aside for us.</p>
 		<p>Our care about the smallest details carries over to all other materials we use. Our zippers and buttons (YKK Excella) are extremely reliable and are polished down to every single tooth, finished with scratch&#8208;resistant, elegant coatings.</p>
 		<p>The lining is made out of a smooth Bemberg Cupro oxford weave with the exception of the pockets, which are lined with a more robust Tencel fabric.</p>
-		<a href="/leather-materials" class="underlined">More about our leather</a><br><br>
+		<a href="/leather" class="underlined">More about our leather</a><br><br>
+		<a href="/materials" class="underlined">More about our materials</a><br><br>
 	</section>
 
 	<hr>

@@ -21,7 +21,8 @@
     <a href="https://sapayol.com/jackets/bleecker/look">jackets/bleecker/look</a>
     <a href="https://sapayol.com/how-it-works">how-it-works</a>
     <a href="https://sapayol.com/who-we-are">who-we-are</a>
-    <a href="https://sapayol.com/leather-materials">Leather & Materials</a>
+    <a href="https://sapayol.com/leather">Leather</a>
+    <a href="https://sapayol.com/materials">Materials</a>
     <a href="https://sapayol.com/auth/login">login</a>
     <a href="https://sapayol.com/terms">Terms</a>
 	</div>

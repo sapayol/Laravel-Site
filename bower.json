@@ -9,8 +9,7 @@
     "angular-mask" 		    : null,
     "foundation"   		    : null,
     "slick-carousel"   		: null,
-    "plyr"                : null,
-    "v-accordion"         : null
+    "plyr"                : null
   }
 }
 

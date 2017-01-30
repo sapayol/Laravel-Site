@@ -83,7 +83,8 @@ Our made-to-measure double rider biker leather jacket.
       <p>
         From the most precious leather down to the zippers and buttons, we obsess over the quality of the materials we use.
         <br>
-        <a href="/leather-materials?jacket={{{ $jacket->model }}}" class="underlined">Learn more</a>
+        <a href="/leather?jacket={{{ $jacket->model }}}" class="underlined">Learn more (leather)</a>
+        <a href="/materials?jacket={{{ $jacket->model }}}" class="underlined">Learn more (materials)</a>
       </p>
     </div>
   </div>
