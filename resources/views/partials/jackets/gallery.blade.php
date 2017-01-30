@@ -11,7 +11,7 @@
 							{{{ $jacket->name }}}
 						</a>
 					</h2>
-					<span>${{{ number_format($jacket->price) }}}</span>
+					<span>US ${{{ number_format($jacket->price) }}}</span>
 				@else
 					<div class="jacket-placeholder-container">
 						<img class="jacket-placeholder" src="/images/photos/jackets/{{{ $jacket->model }}}/{{{ $jacket->model }}}.svg" alt="Jacket Placeholder Image">

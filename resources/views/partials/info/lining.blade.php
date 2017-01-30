@@ -7,7 +7,7 @@
   <div class="large-6 medium-6 small-12 columns">
     <img class="sidekick-image" src="/images/photos/leather_materials/lining-red.jpg" alt="Red Lining">
   </div>
-  <div class="large-6 medium-6 small-12 columns">
+  <div class="large-6 medium-6 small-12 columns hide-for-small">
     <img class="sidekick-image" src="/images/photos/leather_materials/lining-black.jpg" alt="Black Lining">
   </div>
   <div class="clearfix"></div>
