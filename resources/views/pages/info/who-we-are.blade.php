@@ -59,7 +59,7 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 		<p>Every single jacket is made according to your individual measurements. You can tell us if you like your sleeves a little longer or shorter, or any other preference.</p>
 		<p>You can also choose from a selection of lining and hardware colors.</p>
 		<div class="text-center">
-			<a href="{{ route('jackets.index') }}" class="button call-to-action expand-on-small">See Our Jackets</a>
+			<a href="{{ route('home') }}#jackets" class="button call-to-action expand-on-small">See Our Jackets</a>
 			<br>
 			<a href="mailto:contact@sapayol.com"  class="under-button-link underlined">Contact Us</a>
 		</div>
