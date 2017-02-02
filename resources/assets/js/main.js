@@ -11,7 +11,6 @@
     'angularPayments',
     'angular-loading-bar',
     'ngMask',
-    'vAccordion',
     'ngAnimate'
   ])
   // .config(['$interpolateProvider', function($interpolateProvider) {
