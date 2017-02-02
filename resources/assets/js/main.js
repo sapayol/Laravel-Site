@@ -11,7 +11,6 @@
     'angularPayments',
     'angular-loading-bar',
     'ngMask',
-    'ngAnimate'
   ])
   // .config(['$interpolateProvider', function($interpolateProvider) {
   //   $interpolateProvider.startSymbol('[[').endSymbol(']]');
