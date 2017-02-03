@@ -13,6 +13,7 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
     $scope.jacket.hardware_color = typeof(oldInput.hardware_color) !== 'undefined' ? oldInput.hardware_color : hardware_color;
 		$scope.jacket.collar_color   = typeof(oldInput.collar_color)   !== 'undefined' ? oldInput.collar_color   : collar_color;
     $scope.updateSessionCache();
+    $scope.showBack = false;
   }
 
   // Update the session on the server to match the changes that the user makes

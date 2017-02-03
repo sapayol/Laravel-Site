@@ -18,6 +18,23 @@
 			width: 100%;
 		}
 	}
+	.lookDesigner {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		@media #{$medium-up} {
+			flex-direction: row;
+		}
+	}
+	.image-section {
+		text-align: center;
+		width: 50%;
+		margin-right: 1rem;
+		a.underlined {
+			position: relative;
+			top: -2rem;
+		}
+	}
 	fieldset {
 		padding: 0;
 		border: none;
