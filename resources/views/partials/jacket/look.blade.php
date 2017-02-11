@@ -1,28 +1,31 @@
-	<section ng-controller='lookAndFitCtrl' class="large-9 medium-10 medium-centered small-12 columns look-options">
+	<section ng-controller='lookAndFitCtrl' class="large-10 medium-12 small-12 large-centered columns look-options">
 		<hr class="thin full-width">
-		<h2 class="thin text-center">Design your look</h2>
+		<h2 class="thin text-center hide-for-medium-up">Design your look</h2>
 		<div class="lookDesigner">
-			<div class="image-section">
-				<a href="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ front_image }}-large.jpg">
-					<img ng-if="!showBack" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ front_image }}-medium.jpg"  alt="Jacket Front Preview">
-				</a>
-				<a href="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ back_image }}-large.jpg">
-					<img ng-if="showBack" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ back_image }}-medium.jpg"  alt="Jacket Back Preview">
-				</a>
+			<div class="image-section"  id="design-your-look">
+				<img ng-if="!showBack" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ front_image }}-medium.jpg"  alt="Jacket Front Preview">
+				<img ng-if="showBack" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ back_image }}-medium.jpg"  alt="Jacket Back Preview">
 				<a class="underlined" ng-click="showBack = !showBack">
 					<small>Show
 						<span ng-if="!showBack">Back</span>
 						<span ng-if="showBack">Front</span>
 					</small>
 				</a>
+				<a href="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ front_image }}-large.jpg" class="underlined" ng-if="!showBack">
+					<small>Enlarge</small>
+				</a>
+				<a href="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ back_image }}-large.jpg" class="underlined" ng-if="showBack">
+					<small>Enlarge</small>
+				</a>
 			</div>
-			<form action="/orders" method="POST" name="createOrderForm" ng-init="init(
+			<form class="look-options-form" action="/orders" method="POST" name="createOrderForm" ng-init="init(
 			 {{{ $jacket->leather_types()->first()->id }}},
 			 {{{ $jacket->leather_colors()->first()->id }}},
 			 {{{ $jacket->lining_colors()->first()->id }}},
 			 {{{ $jacket->hardware_colors()->first()->id }}},
 			 {{{ $jacket->collar_colors()->count() > 0  ? $jacket->collar_colors()->first()->id : 0 }}}
 			 )">
+				<h2 class="thin hide-for-small">Design your look</h2>
 				<br><br>
 				<fieldset>
 					<legend>Lining Color</legend>
@@ -79,7 +82,7 @@
 
 	@if (Auth::guest())
 		<div class="large-6 medium-8 small-12 medium-centered large-centered columns" ng-hide="showLogin">
-			<a href="" ng-click="showLogin = true" class="button expand">Proceed To Measurement</a>
+			<a href="" ng-click="showLogin = true" class="button expand">Add Your Measurements</a>
 			<br><br>
 		</div>
 		<div class="large-6 medium-8 small-12 medium-centered large-centered columns slideInDown animated" ng-show="showLogin" ng-init="showLogin = false">
@@ -92,13 +95,13 @@
 		<div class="large-6 medium-8 small-12 medium-centered large-centered columns">
 				<p class="medium-text-center">Looks like you're logged in as <strong>{{{ Auth::user()->email }}}</strong></p>
 				<div class="text-center">
-					<a href="/orders/{{{ Auth::user()->unfinishedOrders->last()->id }}}/fit/next" class="button">Continue Your Order</a>
+					<a href="/orders/{{{ Auth::user()->unfinishedOrders->last()->id }}}/fit/next" class="button">Finsh Your Jacket</a>
 					<p>or</p>
 					<a href="{{ url('/auth/logout') }}" class="underlined">Log in as someone else</a>
 				</div>
 		@else
 			<div class="large-6 medium-8 small-12 medium-centered large-centered columns">
-				<a href="" ng-click="proceedToOrder()" class="button expand">Proceed To Measurement</a>
+				<a href="" ng-click="proceedToOrder()" class="button expand">Add Your Measurements</a>
 		@endif
 	</div>
 
