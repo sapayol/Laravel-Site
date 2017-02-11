@@ -31,7 +31,7 @@ Design the look of your made-to-measure Bleecker leather jacket.
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			<a href="/orders/{{{ $order->id }}}/fit/next" class="underlined">Fit</a>
 		@else
-			<a href="/jackets" class="underlined">Our Jackets</a>
+			<a href="/#jackets" class="underlined">Our Jackets</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			<a href="/jackets/{{{ $jacket->model }}}" class="underlined">{{{ $jacket->name }}}</a>
 			<span class="chevron chevron--right breadcrumb-chevron"></span>

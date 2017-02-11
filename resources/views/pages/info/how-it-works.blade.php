@@ -57,7 +57,7 @@ Learn how you can order a made-to-measure leather jacket, how long it takes and 
 			</li>
 		</ol>
 		<div class="text-center">
-			<a href="/jackets" class="button call-to-action expand-on-small">Start An Order Now</a>
+			<a href="/#jackets" class="button call-to-action expand-on-small">Start An Order Now</a>
 		</div>
 	</article>
 	<hr>

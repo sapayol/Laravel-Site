@@ -108,7 +108,7 @@ Your Placed Order
 
 		<div class="text-center">
 			@if (!$order->bodyMeasurements->uncompleted())
-				<a 	href="/jackets" class="button">Check out our other jackets</a>
+				<a 	href="/#jackets" class="button">Check out our other jackets</a>
 			@else
 				<a href="/orders/{{{ $order->id}}}/fit/{{{ array_shift($uncompleted_measurements) }}}" class="button expand-for-small hollow">Add Missing 	Measurements</a>
 			@endif
