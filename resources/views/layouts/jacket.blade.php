@@ -3,7 +3,7 @@
 
 <header class='row'>
 	<h1 class='with-breadcrumbs'>
-		<a href='/jackets' class='underlined'>Our Jackets</a>
+		<a href='/#jackets' class='underlined'>Our Jackets</a>
 		<span class='chevron chevron--right breadcrumb-chevron'></span>
 		{{{ $jacket->name }}}
 	</h1>
