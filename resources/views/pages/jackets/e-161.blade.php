@@ -9,7 +9,7 @@ E-161
 @stop
 
 @section('description')
-Our made-to-measure double rider biker leather jacket.
+MA-1 style bomber leather jacket
 @stop
 
 @section('carousel_images')

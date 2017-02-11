@@ -9,7 +9,7 @@ Bleecker
 @stop
 
 @section('description')
-Our made-to-measure double rider biker leather jacket.
+Double rider biker leather jacket
 @stop
 
 @section('carousel_images')

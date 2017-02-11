@@ -5,8 +5,7 @@ Our Materials
 @stop
 
 @section("description")
-{{-- NEED UPDATED DESCRIPTION!!! --}}
-Learn more about our full-grain, vegetable tanned leather.
+Learn more about the quality of the materials we use
 @stop
 
 @section("header")

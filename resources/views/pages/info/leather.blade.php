@@ -5,7 +5,6 @@ Our Leather
 @stop
 
 @section("description")
-{{-- NEED UPDATED DESCRIPTION!!! --}}
 Learn more about our full-grain, vegetable tanned leather.
 @stop
 

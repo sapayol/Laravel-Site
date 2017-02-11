@@ -9,7 +9,7 @@ Mott
 @stop
 
 @section('description')
-Our made-to-measure double rider biker leather jacket.
+Cafe racer (Moto) leather jacket
 @stop
 
 @section('carousel_images')

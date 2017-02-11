@@ -9,7 +9,7 @@ Linden
 @stop
 
 @section('description')
-Our made-to-measure double rider biker leather jacket.
+A-2 style flight leather jacket
 @stop
 
 @section('carousel_images')
