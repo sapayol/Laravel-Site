@@ -31,7 +31,8 @@
       dots: true,
       arrows: true,
       mobileFirst: true,
-      focusOnSelect: false
+      focusOnSelect: false,
+      adaptiveHeight: true,
     });
     // Initialize Foundation
     $(document).foundation();

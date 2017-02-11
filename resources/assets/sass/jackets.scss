@@ -1,13 +1,35 @@
 .jacket-page {
   padding-bottom: 3rem;
+  .jacket-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+    width: 50%;
+    padding: 0 5%;
+    padding-left: 7%;
+    h1 {
+      font-size: 2.441em;
+      letter-spacing: -.04em;
+    }
+    .large-price {
+      font-size: 1.563em;
+      font-weight: 200;
+      letter-spacing: -0.03em;
+    }
+  }
 }
 
-.jacket-summary {
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 3rem;
-}
 
 .jacket-body img {
   margin-bottom: 1rem;
+}
+
+.jacket-expo {
+  display: flex;
+  flex-direction: column;
+  @media #{$medium-up} {
+    flex-direction: row;
+  }
 }

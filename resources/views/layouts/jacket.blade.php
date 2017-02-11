@@ -12,8 +12,11 @@
 @include('partials.global.messages')
 
 <main class='row jacket-page' ng-controller='jacketCtrl'>
-	@include('partials.jacket.image-carousel')
-	@include('partials.jacket.summary')
+	<div class="small-12 medium-11 large-10 columns medium-centered jacket-expo">
+		@include('partials.jacket.image-carousel')
+		@include('partials.jacket.summary')
+	</div>
+	<div class="clearfix"></div>
 	@include('partials.jacket.video')
 	@include('partials.jacket.video-measurements')
 	<div class="small-12 medium-11 large-9 columns medium-centered jacket-body">

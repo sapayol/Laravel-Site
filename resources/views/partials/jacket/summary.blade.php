@@ -1,4 +1,4 @@
-<section class="small-12 medium-9 large-6 medium-centered columns jacket-summary">
+<section class="jacket-summary">
 	<h1 class="with-subheading">
     {{{ $jacket->name }}}
   </h1>
@@ -6,7 +6,10 @@
   <br>
   @if ($jacket->collar_colors()->count() > 0)
     including detachable merino wool collar
+    <br>
+    <br>
   @endif
+  <em>Free shipping worldwide. Taxes and duties included.</em>
   <br>
-	<em>Free shipping worldwide. Taxes and duties included.</em>
+  <a href="#design-your-look" class="button primary">Create Your Own</a>
 </section>

@@ -72,6 +72,9 @@
 }
 
 .carousel-container {
+  @media #{$medium-up} {
+		width: 50%;
+	}
 	padding-bottom: 0;
 	.jacket-carousel {
 		margin-bottom: 0;
@@ -80,9 +83,9 @@
 	  background: #fff url('../images/ajax-loader.gif') center center no-repeat;
 	}
 	.slick-slide img {
-		@media #{$medium-up} {	width: 75%; }
-		@media #{$medium-only} and (orientation: landscape) {	width: 40%; }
-		@media #{$large-up} {	width: 40%; }
+		// @media #{$medium-up} {	width: 75%; }
+		// @media #{$medium-only} and (orientation: landscape) {	width: 40%; }
+		// @media #{$large-up} {	width: 40%; }
 	 	cursor: zoom-in;
 		margin: 0 auto;
 	}
@@ -145,17 +148,23 @@
 	}
 	.slick-next {
 		right: 0;
+		@media #{$medium-up} {
+			right: -2rem;
+		}
 		&:before {
 		  transform: rotate(45deg);
 		  right: -1.7rem;
 		}
 	}
 	.slick-prev {
+		right: -1rem;
+		@media #{$medium-up} {
+			left: -3rem;
+		}
 		&:before {
 		  transform: rotate(225deg);
 		  left: 1rem;
 		}
-	  left: -1rem;
 	}
 }
 
