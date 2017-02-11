@@ -100,7 +100,7 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 		<p>It is our goal to not use any plastic and eventually exclusively use natural or recycled materials, from the care instruction label to packaging.</p>
 		<p>Last but not least, our direct shipment from the leather workshop to the customer is the most ecological logistics process we can think of. Other than putting a sheep herd and a master craftsman in your backyard.</p>
 		<div class="text-center">
-			<a href="{{ route('jackets.index') }}" class="button call-to-action expand-on-small">See Our Jackets</a>
+			<a href="{{ route('home') }}#jackets" class="button call-to-action expand-on-small">See Our Jackets</a>
 			<br>
 			<a href="mailto:contact@sapayol.com"  class="under-button-link underlined">Contact Us</a>
 		</div>
