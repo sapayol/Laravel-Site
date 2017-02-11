@@ -18,6 +18,10 @@ Learn more about our full-grain, vegetable tanned leather.
   <section class="large-7 medium-9 medium-centered columns">
     <br>
     <p>We obsess over the quality of the materials we use, which shows in exclusive leather that gets tanned specifically for us and every detail of our jackets – zippers, buttons, lining, knits, and wool.</p>
+  </section>
+  <img class="large-9 medium-centered columns sidekick-image" src="/images/photos/leather_materials/leather_hero.jpg" alt="Jacket Chest">
+  <div class="clearfix"></div>
+  <section class="large-7 medium-9 medium-centered columns">
     <br>
     <h2 class="text-center">Vegetable tanned, chrome&#8208;free, full&#8208;grain leather</h2>
     <br>

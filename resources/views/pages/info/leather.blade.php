@@ -15,8 +15,6 @@ Learn more about our full-grain, vegetable tanned leather.
 
 @section("main")
 
-  <img class="large-9 medium-centered columns sidekick-image" src="/images/photos/leather_materials/leather_hero.jpg" alt="Jacket Chest">
-  <div class="clearfix"></div>
   <section class="large-7 medium-9 medium-centered columns">
     <h2>We don&rsquo;t compromise on the quality of our leather.</h2>
     <p>Truly exceptional leather lasts long, doesn&rsquo;t bulge or tear easily and develops a characteristic patina over time. It features a natural, delicate texture that feels warm and supple. Great leather has a pleasant, unobtrusive smell and a rich color that doesn&rsquo;t rub off.</p>
