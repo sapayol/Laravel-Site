@@ -23,7 +23,9 @@
 		@yield('main')
 	</div>
 	<div class="clearfix"></div>
+	<hr class="thin full-width">
 	@include('partials.jacket.look')
+	@include('partials.jacket.auth')
 </main>
 
 @include('partials.global.footer')

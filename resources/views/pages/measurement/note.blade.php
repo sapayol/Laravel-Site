@@ -11,7 +11,7 @@ Fit | Note
 			@if ($order && $order->statusIsAfter('started'))
 				Look
 			@else
-				<a href="/orders/{{{ $order->id }}}/look" class="underlined">Look</a>
+				<a href="/orders/{{{ $order->id }}}" class="underlined">Look</a>
 			@endif
 			<span class="chevron chevron--right breadcrumb-chevron"></span>
 			Fit

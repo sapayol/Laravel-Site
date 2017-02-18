@@ -25,6 +25,7 @@ Route::get('/terms',                             ['uses' => 'PagesController@ter
 Route::get('/jackets/{model}/look',              ['uses' => 'JacketsController@look',       'as' => 'jackets.look']);
 Route::resource('jackets', 'JacketsController');
 
+// TODO - Delete this look route. Look now goes to jacket page.
 Route::get('/orders/{id}/look',                  ['uses' => 'OrdersController@look',        'as' => 'orders.look']);
 Route::patch('/orders/{id}/look/',               ['uses' => 'AdminController@updateLook',   'as' => 'orders.update_look']);
 Route::patch('/orders/{id}/fit/',                ['uses' => 'AdminController@updateFit',    'as' => 'orders.update_fit']);

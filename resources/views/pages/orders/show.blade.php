@@ -1,7 +1,11 @@
-@extends('layouts/single-column')
+@extends('layouts/wide-single-column')
 
 @section('title')
 Your Order
+@stop
+
+@section("page_wrap_class")
+	show-order-page
 @stop
 
 @section('header')
@@ -10,26 +14,13 @@ Your Order
 
 @section('main')
 
-	<div>
+	<div class="text-center">
 		<br><br>
-		<p>We have almost everything we need to create your {{{ $order->jacket->name }}}</p><br>
-		<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg" alt="Jacket Photo">
+		<p>We have almost everything we need to create your {{{ $order->jacket->name }}}</p>
 	</div>
 
-	<section class="large-6 medium-6 small-12 columns">
-		<h6>Order Details</h6>
-		<ul class="no-bullet value-list">
-			<li><small class="list-key">Date Started </small>  {{{ date('M d, Y', strtotime($order->created_at)) }}} </li>
-			<li><small class="list-key">Jacket Name  </small>  {{{ $order->jacket->name }}} </li>
-			@foreach ($order->attributes as $attribute)
-				<li><small class="list-key">{{{ ucwords(str_replace('_', ' ', $attribute->type)) }}}</small> {{{ ucwords($attribute->name) }}} </li>
-			@endforeach
-		</ul>
-	</section>
-
-
 	@if ($order->bodyMeasurements->completed())
-		<section class="large-6 medium-6 small-12 columns">
+		<section class="large-12 medium-10 small-9 small-centered columns">
 			<h6>Completed Measurements</h6>
 			<ul class="no-bullet value-list">
 				@foreach ($order->bodyMeasurements->completed() as $measurement)
@@ -55,7 +46,15 @@ Your Order
 		</section>
 	@endif
 
-	<section>
+	<div class="clearfix"></div>
+
+	<hr class="thin full-width">
+
+	@include('partials.jacket.look')
+
+
+
+	<section class="large-8 medium-7 medium-centered columns">
 		<a href="/orders/{{{ $order->id }}}/fit/next" class="button expand">Finish Your Order</a>
 		<div class="text-center">or</div>
 		<br>

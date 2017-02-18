@@ -24,22 +24,22 @@ class JacketsController extends Controller {
 		return view('pages.jackets.' . $model, ['jacket' => $jacket]);
 	}
 
-	public function look($model)
-	{
-		$jacket = Jacket::where('model', '=', $model)->firstOrFail();
-		$current_user = Auth::user();
+	// public function look($model)
+	// {
+	// 	$jacket = Jacket::where('model', '=', $model)->firstOrFail();
+	// 	$current_user = Auth::user();
 
-		// If a user already has an order started then use the look choices from that order
-		if ($current_user && $current_user->unfinishedOrders()->count() > 0) {
-			$jacket_array = $jacket->toArray();
-			foreach ($current_user->unfinishedOrders->last()->attributes as $attribute) {
-				$jacket_array[$attribute->type] = $attribute->id;
-			}
-			Session::put($model, $jacket_array);
-		}
+	// 	// If a user already has an order started then use the look choices from that order
+	// 	if ($current_user && $current_user->unfinishedOrders()->count() > 0) {
+	// 		$jacket_array = $jacket->toArray();
+	// 		foreach ($current_user->unfinishedOrders->last()->attributes as $attribute) {
+	// 			$jacket_array[$attribute->type] = $attribute->id;
+	// 		}
+	// 		Session::put($model, $jacket_array);
+	// 	}
 
-		JavaScript::put(['jacket' => $jacket, 'session' => Session::all()]);
+	// 	JavaScript::put(['jacket' => $jacket, 'session' => Session::all()]);
 
-		return view('pages.jackets.look', ['jacket' => $jacket]);
-	}
+	// 	return view('pages.jackets.look', ['jacket' => $jacket]);
+	// }
 }

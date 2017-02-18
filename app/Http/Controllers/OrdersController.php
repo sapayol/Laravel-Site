@@ -8,38 +8,30 @@ use Address, Jacket, Measurement, Attribute, Order, User;
 
 class OrdersController extends Controller {
 
-
-	public function look($id)
-	{
-		$order = Order::find($id);
-		JavaScript::put(['jacket' => $order->jacket, 'session' => Session::all()]);
-
-		return view('pages.jackets.look', ['order' => $order, 'jacket' => $order->jacket]);
-	}
-
-
 	public function show($id, Request $request)
 	{
 		$order = Order::find($id);
+    $jacket = $order->jacket;
 
-		if ($order->status == 'new') return redirect()->back();
-		if ($order->statusIsAfter('started')) return redirect()->route('orders.complete', $order->id);
-		if (!$request->old()) {
-			$new_order = [
-				'user_id'          => Auth::id(),
-				'model'            => $order->jacket->model,
-				'jacket_look'			 => [
-					'leather_type'   => $order->jacket->leather_type,
-					'leather_color'  => $order->jacket->leather_color,
-					'lining_color'   => $order->jacket->lining_color,
-					'hardware_color' => $order->jacket->hardware_color
-				]
-			];
-		} else {
-			$new_order = $request->old();
-		}
+    if ($order->status == 'new') return redirect()->back();
+    if ($order->statusIsAfter('started')) return redirect()->route('orders.complete', $order->id);
+    if (!$request->old()) {
+      $new_order = [
+        'user_id'          => Auth::id(),
+        'model'            => $jacket->model,
+        'jacket_look'      => [
+          'leather_type'   => $jacket->leather_type,
+          'leather_color'  => $jacket->leather_color,
+          'lining_color'   => $jacket->lining_color,
+          'hardware_color' => $jacket->hardware_color
+        ]
+      ];
+    } else {
+      $new_order = $request->old();
+    }
 
-		return view('pages.orders.show', ['order' => $order, 'new_order' => $new_order]);
+    JavaScript::put(['jacket' => $jacket, 'session' => Session::all()]);
+		return view('pages.orders.show', ['order' => $order, 'jacket' => $jacket, 'new_order' => $new_order]);
 	}
 
 
