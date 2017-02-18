@@ -23,6 +23,7 @@
 @include('partials.global.messages')
 
 <main class="row measurement-entry" ng-controller="measurementCtrl" ng-init="init('{{{ $step }}}', '{{{ $order->bodyMeasurements->units }}}' {{{ $order->bodyMeasurements->$step ? ',' . $order->bodyMeasurements->$step : '' }}} )">
+
 	<section class="small-12 medium-12 large-12 columns">
 		@if ($step == 'height')
 			<img src="/images/photos/height.jpg" alt="Height Diagram">
@@ -41,9 +42,11 @@
 		@include('partials.measurement.form')
 		<br class="show-for-small">
 	</section>
+
 	<section class="small-12 medium-7 large-6 medium-centered columns">
 		@include('partials.measurement.tracker')
 	</section>
+
 </main>
 
 @include('partials.global.footer')
