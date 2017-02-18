@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateOrderRequest;
 use App\Jobs\SwitchMeasurementUnits;
-use JavaScript, Mail, Auth, Session;
+use JavaScript, Mail, Auth, Session, URL;
 use Address, Jacket, Measurement, Attribute, Order, User;
 
 class OrdersController extends Controller {
@@ -65,7 +65,9 @@ class OrdersController extends Controller {
 	{
     $this->dispatchFrom('App\Jobs\ResetOrder', $request, ['id' => $id]);
 
-		return redirect()->route('jackets.index');
+    $url = URL::route('home') . '#jackets';
+
+		return redirect()->to($url);
 	}
 
 
