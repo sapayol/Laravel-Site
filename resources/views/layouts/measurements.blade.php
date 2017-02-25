@@ -31,13 +31,18 @@
 		@else
 			@include('partials.measurement.guide')
 		@endif
-		<div class="medium-7 large-6 medium-centered columns measurement-instructions">
-			@yield('instructions')
-			<em>Usually between <strong>{{{ $min }}}</strong>  and <strong>{{{ $max }}}</strong> <small>{{{ $order->bodyMeasurements->units }}}</small></em>
-		</div>
 	</section>
 
-	<section class="small-12 medium-7 large-6 medium-centered columns">
+	<div class="clearfix"></div>
+
+	<div class="medium-7 large-6 medium-centered columns measurement-instructions">
+		@yield('instructions')
+		<em>Usually between <strong>{{{ $min }}}</strong>  and <strong>{{{ $max }}}</strong> <small>{{{ $order->bodyMeasurements->units }}}</small></em>
+	</div>
+
+	<div class="clearfix"></div>
+
+	<section class="medium-7 large-6 medium-centered columns">
 		<br class="show-for-small">
 		@include('partials.measurement.form')
 		<br class="show-for-small">

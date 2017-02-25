@@ -19,7 +19,7 @@
 	<div class="clearfix"></div>
 	@include('partials.jacket.video')
 	@include('partials.jacket.video-measurements')
-	<div class="small-12 medium-11 large-9 columns medium-centered jacket-body">
+	<div class="small-12 medium-11 large-10 columns medium-centered jacket-body">
 		@yield('main')
 	</div>
 	<div class="clearfix"></div>

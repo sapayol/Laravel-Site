@@ -37,11 +37,15 @@ Learn more about the quality of the materials we use
       <br class="hide-for-small">
       <br>
     </div>
-    <div class="large-6 medium-6 columns">
-      <img class="sidekick-image" src="/images/photos/leather_materials/lining-red.jpg" alt="Red Lining">
-    </div>
-    <div class="large-6 medium-6 columns hide-for-small">
-      <img class="sidekick-image" src="/images/photos/leather_materials/lining-black.jpg" alt="Black Lining">
+    <div class="large-9 medium-10 medium-centered columns">
+      <div class="row two-column-wrapper">
+        <div class="large-6 medium-6 columns">
+          <img class="sidekick-image" src="/images/photos/leather_materials/lining-red.jpg" alt="Red Lining">
+        </div>
+        <div class="large-6 medium-6 columns hide-for-small">
+          <img class="sidekick-image" src="/images/photos/leather_materials/lining-black.jpg" alt="Black Lining">
+        </div>
+      </div>
     </div>
     <div class="clearfix"></div>
     <div class="large-9 medium-10 medium-centered columns">
@@ -58,17 +62,23 @@ Learn more about the quality of the materials we use
       <br class="hide-for-small">
       <br>
     </div>
-    <div class="large-6 medium-6 small-12 columns">
-      <img class="sidekick-image " src="/images/photos/leather_materials/zipper_silver_detail.jpg" alt="Zipper Detail">
-      <p class="image-caption">All zippers are YKK Excella. They combine legendary reliability with smooth elegance. Each tooth is individually polished, which gives the zipper a brilliant shine and prevents scratching of the jacket or your skin.
-        <br>
-        <br>
-        YKK Excella zippers don’t contain Nickel.
-      </p>
-    </div>
-    <div class="large-6 medium-6 small-12 columns">
-      <img class="sidekick-image" src="/images/photos/leather_materials/snap_silver_detail.jpg" alt="Snap Detail">
-      <p class="image-caption">The buttons on our jackets are spring&#8208;type snaps from YKK, made purely out of nickel&#8208;free alloys. They receive the same beautiful coatings as our zippers and provide reliable closure without the need to pull too hard and damage the leather when you open them.</p>
+    <div class="large-9 medium-10 medium-centered columns">
+      <div class="row two-column-wrapper">
+
+        <div class="large-6 medium-6 small-12 columns">
+          <img class="sidekick-image " src="/images/photos/leather_materials/zipper_silver_detail.jpg" alt="Zipper Detail">
+          <p class="image-caption">All zippers are YKK Excella. They combine legendary reliability with smooth elegance. Each tooth is individually polished, which gives the zipper a brilliant shine and prevents scratching of the jacket or your skin.
+            <br>
+            <br>
+            YKK Excella zippers don’t contain Nickel.
+          </p>
+        </div>
+        <div class="large-6 medium-6 small-12 columns">
+          <img class="sidekick-image" src="/images/photos/leather_materials/snap_silver_detail.jpg" alt="Snap Detail">
+          <p class="image-caption">The buttons on our jackets are spring&#8208;type snaps from YKK, made purely out of nickel&#8208;free alloys. They receive the same beautiful coatings as our zippers and provide reliable closure without the need to pull too hard and damage the leather when you open them.</p>
+
+        </div>
+      </div>
     </div>
   </section>
 

@@ -88,6 +88,9 @@
       float: right;
       margin-top: 0;
     }
+    .player-volume[type=range]::-webkit-slider-thumb {
+      background: $black;
+    }
   }
   .player-progress-played[value] {
     color: $primary-color;
@@ -97,8 +100,4 @@
 .player-fullscreen .player-controls, .player.fullscreen-active .player-controls {
   z-index: 300;
   top: initial;
-}
-
-.jacket-video {
-  padding: 0;
 }

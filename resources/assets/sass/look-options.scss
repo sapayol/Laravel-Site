@@ -36,17 +36,17 @@
 		text-align: center;
 		@media #{$medium-up} {
 			width: 50%;
+			padding-right: 0.9375rem;
 		}
-		margin-left: 1rem;
 		a.underlined {
 			position: relative;
 			top: -2rem;
 			&:first-of-type {
 				float: left;
-				margin-left: 20%;
+				margin-left: 19%;
 			}
 			float: right;
-			margin-right: 20%;
+			margin-right: 19%;
 		}
 		img {
 			display: block;
@@ -64,6 +64,13 @@
 	}
 	fieldset, .look-options-form h2{
 		margin-left: 2rem;
+	}
+	form {
+		@media #{$medium-up} {
+			width: 17rem;
+		}
+		width: 16rem;
+    margin: 0 auto;
 	}
 	legend {
 		font-weight: 200;

@@ -1,37 +1,18 @@
-<section ng-controller='lookAndFitCtrl' class="large-{{{ !empty($order) ? '12' : '10' }}} medium-12 small-12 large-centered columns look-options">
-	@if (empty($order))
-		<h2 class="thin text-center hide-for-medium-up">{{{ !empty($order) ? 'Change' : 'Design' }}} your look</h2>
-	@endif
-	<div class="lookDesigner">
-		<div class="image-section"  id="design-your-look">
-			<img ng-if="!showBack" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ front_image }}-medium.jpg"  alt="Jacket Front Preview">
-			<img ng-if="showBack" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ back_image }}-medium.jpg"  alt="Jacket Back Preview">
-			<a class="underlined" ng-click="showBack = !showBack">
-				<small>Show
-					<span ng-if="!showBack">Back</span>
-					<span ng-if="showBack">Front</span>
-				</small>
-			</a>
-			<a href="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ front_image }}-large.jpg" class="underlined" ng-if="!showBack">
-				<small>Enlarge</small>
-			</a>
-			<a href="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ back_image }}-large.jpg" class="underlined" ng-if="showBack">
-				<small>Enlarge</small>
-			</a>
-		</div>
-		<div class="look-options-form">
-			<form action="/orders" method="POST" name="createOrderForm" ng-init="init(
+	<section ng-controller='lookAndFitCtrl' class="large-9 medium-10 medium-centered small-12 columns look-options">
+		<hr class="thin full-width">
+		<h2 class="thin text-center">Design your look</h2>
+		<form action="/orders" method="POST" name="createOrderForm" ng-init="init(
 		 {{{ $jacket->leather_types()->first()->id }}},
 		 {{{ $jacket->leather_colors()->first()->id }}},
 		 {{{ $jacket->lining_colors()->first()->id }}},
 		 {{{ $jacket->hardware_colors()->first()->id }}},
 		 {{{ $jacket->collar_colors()->count() > 0  ? $jacket->collar_colors()->first()->id : 0 }}}
 		 )">
-		 	@if (empty($order))
-				<h2 class="thin hide-for-small">
-					{{{ !empty($order) ? 'Change' : 'Design' }}} your look <br><br>
-				</h2>
-			@endif
+			<div class="row">
+				<img class="medium-6 columns" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ front_image }}-medium.jpg"  alt="Jacket Front Preview">
+				<img class="medium-6 columns" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ back_image }}-medium.jpg"  alt="Jacket Back Preview">
+			</div>
+			<br><br>
 			<fieldset>
 				<legend>Lining Color</legend>
 				@if ($jacket->lining_colors()->count() > 1)
@@ -44,6 +25,7 @@
 					{{{ $jacket->lining_colors()->first()->name }}}
 				@endif
 			</fieldset>
+			<hr>
 			<fieldset>
 				<legend>Zipper &amp; Button Color</legend>
 				@if ($jacket->hardware_colors()->count() > 1)
@@ -57,6 +39,7 @@
 				@endif
 			</fieldset>
 			@if ($jacket->model === 'linden')
+				<hr>
 				<fieldset>
 					<legend>Collar</legend>
 				@if ($jacket->collar_colors()->count() > 1)
@@ -68,10 +51,6 @@
 				@else
 					{{{ $jacket->hardware_colors()->first()->name }}}
 				@endif
-					<label class="button tiny hollow" >None
-						<input type="radio" name="jacket_look[collar_color]" ng-model="jacket.collar_color" value="0">
-					</label>
-					<br>&nbsp;&nbsp;&nbsp;+ $100
 				</fieldset>
 			@endif
 			<input type="hidden" name="_token"         value="{{{ csrf_token() }}}">
@@ -81,11 +60,34 @@
 			@else
 				<input type="hidden" name="user_id" value="{{{ Auth::user()->id }}}">
 			@endif
-			</form>
+		</form>
+	</section>
+
+	<div class="clearfix"></div>
+
+	@if (Auth::guest())
+		<div class="large-6 medium-8 small-12 medium-centered large-centered columns" ng-hide="showLogin">
+			<a href="" ng-click="showLogin = true" class="button expand">Proceed To Measurement</a>
+			<br><br>
 		</div>
+		<div class="large-6 medium-8 small-12 medium-centered large-centered columns slideInDown animated" ng-show="showLogin" ng-init="showLogin = false">
+			<p>
+				<strong>Enter an email address and choose a password to continue.</strong>
+				<br>Use your existing credentials if you&rsquo;ve already created an account.
+			</p>
+			@include('partials.checkout.user-registration-form')
+	@elseif (Auth::user()->unfinishedOrders()->count() > 0)
+		<div class="large-6 medium-8 small-12 medium-centered large-centered columns">
+				<p class="medium-text-center">Looks like you're logged in as <strong>{{{ Auth::user()->email }}}</strong></p>
+				<div class="text-center">
+					<a href="/orders/{{{ Auth::user()->unfinishedOrders->last()->id }}}/fit/next" class="button">Continue Your Order</a>
+					<p>or</p>
+					<a href="{{ url('/auth/logout') }}" class="underlined">Log in as someone else</a>
+				</div>
+		@else
+			<div class="large-6 medium-8 small-12 medium-centered large-centered columns">
+				<a href="" ng-click="proceedToOrder()" class="button expand">Proceed To Measurement</a>
+		@endif
 	</div>
-	<br>
-	@if (empty($order))
-		@include('partials.jacket.auth')
-	@endif
-</section>
+
+

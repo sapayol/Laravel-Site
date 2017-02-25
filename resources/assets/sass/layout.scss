@@ -108,3 +108,14 @@ section.flex-section {
 .show-order-page section:first-of-type {
 	padding-bottom: 0;
 }
+
+.two-column-wrapper {
+	@media #{$medium-up} {
+		.columns:first-child {
+			padding-left: 0;
+		}
+		.columns:last-child {
+			padding-right: 0;
+		}
+	}
+}

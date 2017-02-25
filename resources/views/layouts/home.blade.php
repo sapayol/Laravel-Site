@@ -7,10 +7,9 @@
 
 @include('partials.global.messages')
 
-	@yield('full-width-hero')
-
 <div class="row">
-	<main class="small-12 medium-11 large-9 medium-centered columns">
+  <main class="small-12 medium-11 large-9 medium-centered columns">
+  	@yield('full-width-hero')
 		@yield('main')
 	</main>
 </div>
