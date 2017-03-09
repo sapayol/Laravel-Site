@@ -27,7 +27,6 @@
 	<section class="small-12 medium-12 large-12 columns">
 		@if ($step == 'height')
 			<img src="/images/photos/height.jpg" alt="Height Diagram">
-			<p><br>How tall are you?</p>
 		@else
 			@include('partials.measurement.guide')
 		@endif
@@ -37,7 +36,11 @@
 
 	<div class="medium-7 large-6 medium-centered columns measurement-instructions">
 		@yield('instructions')
-		<em>Usually between <strong>{{{ $min }}}</strong>  and <strong>{{{ $max }}}</strong> <small>{{{ $order->bodyMeasurements->units }}}</small></em>
+		@if ($step == 'height')
+			<p>How tall are you?</p>
+		@else
+			<em>Usually between <strong>{{{ $min }}}</strong>  and <strong>{{{ $max }}}</strong> <small>{{{ $order->bodyMeasurements->units }}}</small></em>
+		@endif
 	</div>
 
 	<div class="clearfix"></div>
