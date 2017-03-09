@@ -11,11 +11,11 @@
         <br>Use your existing credentials if you&rsquo;ve already created an account.
       </p>
       @include('partials.checkout.user-registration-form')
-  @elseif (Auth::user()->unfinishedOrders()->count() > 0)
+  @elseif ($unfinished_order)
     <div class="large-6 medium-8 small-12 medium-centered large-centered columns">
         <p class="medium-text-center">Looks like you're logged in as <strong>{{{ Auth::user()->email }}}</strong></p>
         <div class="text-center">
-          <a href="/orders/{{{ Auth::user()->unfinishedOrders->last()->id }}}/fit/next" class="button">Finish Your Jacket</a>
+          <a href="/orders/{{{ $unfinished_order->id }}}/fit/next" class="button">Finish Your Jacket</a>
           <p>or</p>
           <a href="{{ url('/auth/logout') }}" class="underlined">Log in as someone else</a>
         </div>
