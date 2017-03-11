@@ -8,7 +8,7 @@ measurementController.controller('measurementCtrl', ['$scope', '$timeout', funct
 	$scope.submitMeasurement = function(step) {
 		$scope.displayRequiredError = false;
 		if ($scope.step == 'height' && $scope.units === 'in') {
-			$scope.measurement = (parseInt($scope.feet * 12)) + parseInt($scope.inches);
+			$scope.measurement = (parseInt($scope.feet * 12)) + parseInt($scope.inches ? $scope.inches : 0);
 			$timeout(function(){
 				finalForm.submit();
 			}, 100);
