@@ -73,7 +73,10 @@
 					</label>
 					<br>&nbsp;&nbsp;&nbsp;+ $100
 				</fieldset>
+				<input type="hidden" name="jacket_look[collar_color]" value="{{{ $collar_color->id }}}">
 			@endif
+			<input type="hidden" name="jacket_look[hardware_color]" value="{{{ $hardware_color->id }}}">
+			<input type="hidden" name="jacket_look[lining_color]" value="{{{ $lining_color->id }}}">
 			<input type="hidden" name="_token"         value="{{{ csrf_token() }}}">
 			<input type="hidden" name="model"          value="{{{ $jacket->model }}}">
 			@if (Auth::guest())
