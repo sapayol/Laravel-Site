@@ -58,7 +58,7 @@
 			</fieldset>
 			@if ($jacket->model === 'linden')
 				<fieldset>
-					<legend>Collar</legend>
+					<legend>Collar <small>+ $100</small></legend>
 				@if ($jacket->collar_colors()->count() > 1)
 					@foreach ($jacket->collar_colors() as $collar_color)
 						<label class="button tiny hollow {{{ camel_case($collar_color->name) }}}" ng-class="{active: jacket.collar_color == '{{{ $collar_color->id }}}' }">{{{ $collar_color->name }}}
@@ -67,11 +67,12 @@
 					@endforeach
 					<label class="button tiny hollow" >None
 						<input type="radio" name="jacket_look[collar_color]" ng-model="jacket.collar_color" value="0" ng-change="updateSessionCache()">
+						<div class="attribute-price">- $100</div>
 					</label>
 				@else
 					{{{ $jacket->hardware_colors()->first()->name }}}
 				@endif
-					<br>&nbsp;&nbsp;&nbsp;+ $100
+					<br>
 				</fieldset>
 				<input type="hidden" name="jacket_look[collar_color]" value="{{{ $collar_color->id }}}">
 			@endif
