@@ -139,7 +139,7 @@ class OrdersController extends Controller {
 
 		// Update the order with latest jacket look from the session
 		$jacket = Session::get($order->jacket->model);
-		$jacket_look = [$jacket['leather_type'], $jacket['leather_color'], $jacket['lining_color'], $jacket['hardware_color']];
+		$jacket_look = [$jacket['leather_type'], $jacket['leather_color'], $jacket['lining_color'], $jacket['hardware_color'], $jacket['collar_color']];
     $order->attributes()->sync($jacket_look);
 
     JavaScript::put([

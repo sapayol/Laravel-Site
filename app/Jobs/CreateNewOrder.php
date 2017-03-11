@@ -6,7 +6,7 @@ use App\Jobs\Job;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Auth;
-use Jacket, Order;
+use Attribute, Jacket, Order;
 use App\Jobs\AttachOldMeasurementsToOrder;
 
 class CreateNewOrder extends Job implements SelfHandling
@@ -41,15 +41,25 @@ class CreateNewOrder extends Job implements SelfHandling
     public function handle()
     {
       $jacket = Jacket::where('model', '=', $this->model)->first();
+
+      $attributes = Attribute::find(array_values($this->jacket_look));
+
+      $jacket_price = $jacket->price;
+      foreach ($attributes as $attribute) {
+        $jacket_price += $attribute->price;
+      }
+
       $order  = Order::create(array(
         'status'    => 'new',
         'user_id'   => $this->user->id,
         'jacket_id' => $jacket->id,
-        'total'     => $jacket->price // Needs to updated in 2.0 when attributes affect price
+        'total'     => $jacket_price // Needs to be updated in 2.0 when attributes affect price
       ));
 
       foreach ($this->jacket_look as $attribute) {
-        $order->attributes()->attach($attribute);
+        if ($attribute !== '0') {
+          $order->attributes()->attach($attribute);
+        }
       }
 
       $last_order = $this->user->droppedOrders->last();
