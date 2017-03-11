@@ -62,8 +62,10 @@
 		border: none;
 		margin-top: 0;
 	}
-	fieldset, .look-options-form h2{
-		margin-left: 2rem;
+	@media #{$medium-up} {
+		fieldset, .look-options-form h2 {
+			margin-left: 2rem;
+		}
 	}
 	form {
 		@media #{$medium-up} {
