@@ -67,13 +67,6 @@
 			margin-left: 2rem;
 		}
 	}
-	form {
-		@media #{$medium-up} {
-			width: 17rem;
-		}
-		width: 16rem;
-    margin: 0 auto;
-	}
 	legend {
 		font-weight: 200;
 		padding: 0;
@@ -90,7 +83,6 @@
 	}
 	label:not([type="submit"]) {
 		width: 4.5rem;
-		margin-bottom: .35rem;
 		margin-left: 0;
 		border: none;
     padding: 0.325rem .375rem 0.3875rem .375rem;
@@ -137,7 +129,7 @@
 	}
 	label.text-input-label {
 		width: 100%;
-		padding-top: 0;
+		padding: 0;
 	}
 }
 
