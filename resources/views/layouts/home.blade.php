@@ -9,7 +9,8 @@
 
 <div class="row">
   <main class="small-12 medium-11 large-9 medium-centered columns">
-  	@yield('full-width-hero')
+  	<br><br>
+    @yield('full-width-hero')
 		@yield('main')
 	</main>
 </div>
