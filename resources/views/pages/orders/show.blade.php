@@ -19,39 +19,14 @@ Your Order
 		<p>We have almost everything we need to create your {{{ $order->jacket->name }}}</p>
 	</div>
 
-	@if ($order->bodyMeasurements->completed())
-		<section class="large-12 medium-10 small-9 small-centered columns">
-			<h6>Completed Measurements</h6>
-			<ul class="no-bullet value-list">
-				@foreach ($order->bodyMeasurements->completed() as $measurement)
-					@if ($measurement == 'note')
-						<li><br></li>
-					@endif
-					@if ($order->bodyMeasurements->$measurement)
-						<li>
-							<small class="list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>
-								<span class="list-value">
-									@if ($measurement == 'note')
-										<em>{{{ $order->bodyMeasurements->$measurement }}}</em>
-									@elseif ($order->bodyMeasurements->units == 'in')
-										<strong decimal-to-fraction="{{{ $order->bodyMeasurements->$measurement }}}">{{{ $order->bodyMeasurements->$measurement }}}</strong> "
-									@else
-										<strong>{{{ $order->bodyMeasurements->$measurement != round($order->bodyMeasurements->$measurement) ?  round($order->bodyMeasurements->$measurement, 1) : round($order->bodyMeasurements->$measurement) }}}</strong> cm
-								@endif
-							</span>
-						</li>
-					@endif
-				@endforeach
-			</ul>
-		</section>
-	@endif
-
-	<div class="clearfix"></div>
-
-	<hr class="thin full-width">
 
 	@include('partials.jacket.look')
 
+	<div class="clearfix"></div>
+
+	@if ($order->bodyMeasurements->completed())
+		@include('partials.measurement.tracker')
+	@endif
 
 
 	<section class="large-8 medium-7 medium-centered columns">

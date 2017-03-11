@@ -31,6 +31,12 @@
 		@media #{$medium-up} {
 			flex-direction: row;
 		}
+		&.reversed {
+			flex-direction: column-reverse;
+			@media #{$medium-up} {
+				flex-direction: row;
+			}
+		}
 	}
 	.image-section {
 		text-align: center;
