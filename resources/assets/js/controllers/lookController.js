@@ -35,6 +35,9 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
     }
     if ($scope.jacket.model === 'linden') {
       var collar_color = ($scope.jacket.collar_color === '14' ? 'black' : 'gray');
+      if ($scope.jacket.collar_color === '0') {
+        collar_color = 'none'
+      }
       $scope.front_image = lining_color + '-' + hardware_color + '-' + collar_color;
       const sameBack = $scope.jacket.model === 'e-161';
       // $scope.back_image = sameBack ? 'back' : 'back-' + hardware_color + '-' + collar_color;

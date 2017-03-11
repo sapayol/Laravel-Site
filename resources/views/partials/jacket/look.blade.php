@@ -65,12 +65,12 @@
 							<input type="radio" name="jacket_look[collar_color]" ng-model="jacket.collar_color" value="{{{ $collar_color->id }}}" ng-change="updateSessionCache()">
 						</label>
 					@endforeach
+					<label class="button tiny hollow" >None
+						<input type="radio" name="jacket_look[collar_color]" ng-model="jacket.collar_color" value="0" ng-change="updateSessionCache()">
+					</label>
 				@else
 					{{{ $jacket->hardware_colors()->first()->name }}}
 				@endif
-					<label class="button tiny hollow" >None
-						<input type="radio" name="jacket_look[collar_color]" ng-model="jacket.collar_color" value="0">
-					</label>
 					<br>&nbsp;&nbsp;&nbsp;+ $100
 				</fieldset>
 				<input type="hidden" name="jacket_look[collar_color]" value="{{{ $collar_color->id }}}">
