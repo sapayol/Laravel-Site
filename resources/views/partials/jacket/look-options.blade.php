@@ -46,7 +46,6 @@
         @endforeach
         <label class="button tiny hollow" >None
           <input type="radio" name="jacket_look[collar_color]" ng-model="jacket.collar_color" value="0" ng-change="updateSessionCache()">
-          <div class="attribute-price">- $100</div>
         </label>
       @else
         {{{ $jacket->hardware_colors()->first()->name }}}

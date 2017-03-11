@@ -45,7 +45,7 @@ Your Order
 			<input type="submit" class="button expand hollow"       value="Start a New Order">
 			<label for="retain_measurements">
 				<input type="checkbox" name="retain_measurements" id="retain_measurements" checked="true">
-				Use the measurements from my last order
+				Reuse your current measurements
 			</label>
 		</form>
 	</section>
