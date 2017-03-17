@@ -27,10 +27,10 @@
 					<li><br></li>
 					<li class="note-row">
 						<small class="left list-key">{{{ ucwords(str_replace('_', ' ', $measurement)) }}}</small>
-						<span class="right list-value"><em>{{{ $order->bodyMeasurements->$measurement }}}</em></span>
 						<a class="underlined" href="/orders/{{{ $order->id }}}/fit/{{{ $measurement }}}" title="">
 							<span>{{{ $order->bodyMeasurements->$measurement ? 'Change' : 'Add' }}}</span>
 						</a>
+						<div class="list-value"><em>{{{ $order->bodyMeasurements->$measurement }}}</em></div>
 					</li>
 				@else
 					<li>
