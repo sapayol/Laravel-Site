@@ -54,28 +54,38 @@ Your Placed Order
 				<ul class="no-bullet value-list">
 					<li>
 						<small class="list-key">{{{ $order->jacket->model }}}</small>
-						<span class="list-value"><small>$ </small>&nbsp;{{{ $order->jacket->price }}}</span>
+						<span class="list-value line-item-price ">
+							<span><small>$ </small>{{{ $order->jacket->price }}}</span>
+						</span>
 					</li>
 					@foreach ($order->attributes as $attribute)
 						@if ($attribute->price !== '0.00')
 							<li>
 								{{-- TODO - Make list key dynamic depending on attribute --}}
 								<small class="list-key">Collar</small>
-								<span class="list-value"><small>$ </small>&nbsp;&nbsp;&nbsp;{{{ $attribute->price }}}</span>
+								<span class="list-value line-item-price">
+									<span><small>$ </small>{{{ $attribute->price }}}</span>
+								</span>
 							</li>
 						@endif
 					@endforeach
 					<li>
 						<small class="list-key">Shipping</small>
-						<span class="list-value"><small>$ </small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.00</span>
+						<span class="list-value line-item-price">
+							<span><small>$ </small>0.00</span>
+						</span>
 					</li>
 					<li>
 						<small class="list-key">Taxes</small>
-						<span class="list-value"><small>$ </small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.00</span>
+						<span class="list-value line-item-price">
+							<span><small>$ </small>0.00</span>
+						</span>
 					</li>
 					<li>
 						<small class="list-key">Order Total</small>
-						<span class="list-value"><small>$ </small>&nbsp;{{{ $order->total }}}</span>
+						<span class="list-value line-item-price">
+							<span><small>$ </small>{{{ $order->total }}}</span>
+						</span>
 					</li>
 					<li><small class="list-key">Payment Method</small>Credit</li>
 				</ul>

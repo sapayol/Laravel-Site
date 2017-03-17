@@ -36,6 +36,15 @@
 			top: -.35rem;
 		}
 	}
+	.line-item-price {
+		text-align: right;
+		small {
+			display: inline-block;
+			float: left;
+			top: .35rem;
+			position: relative;
+		}
+	}
 	@media #{$tiny-only} {
 		font-size: .9rem;
 		.list-key {
