@@ -18,7 +18,7 @@ Learn more about the quality of the materials we use
     <br>
     <p>We obsess over the quality of the materials we use, which shows in exclusive leather that gets tanned specifically for us and every detail of our jackets – zippers, buttons, lining, knits, and wool.</p>
   </section>
-  <img class="large-9 medium-centered columns sidekick-image" src="/images/photos/leather_materials/leather_hero.jpg" alt="Jacket Chest">
+  <img class="large-10 columns sidekick-image" src="/images/photos/leather_materials/leather_hero.jpg" alt="Jacket Chest">
   <div class="clearfix"></div>
   <section class="large-7 medium-9 medium-centered columns">
     <br>
@@ -32,13 +32,13 @@ Learn more about the quality of the materials we use
   <hr class="thin">
 
   <section class="row">
-    <div class="large-9 medium-10 medium-centered columns">
+    <div class="large-10 large-centered columns">
       <h2 class="medium-text-center">Silky, breathable lining</h2>
       <br class="hide-for-small">
       <br>
     </div>
-    <div class="large-9 medium-10 medium-centered columns">
-      <div class="row two-column-wrapper">
+    <div class="large-10 large-centered columns">
+      <div class="row">
         <div class="large-6 medium-6 columns">
           <img class="sidekick-image" src="/images/photos/leather_materials/lining-red.jpg" alt="Red Lining">
         </div>
@@ -48,7 +48,7 @@ Learn more about the quality of the materials we use
       </div>
     </div>
     <div class="clearfix"></div>
-    <div class="large-9 medium-10 medium-centered columns">
+    <div class="large-10 large-centered columns">
       <br><br>
       <p>We chose a 100% Bemberg Cupro oxford weave for our lining. No other fabric breathes as well, absorbs and releases sweat as quickly, and is at the same time as smooth as silk. It’s the top lining choice of bespoke suit makers. All pockets are lined with a Tencel twill, a very strong, eco–friendly fabric that makes sure you don’t lose your keys.</p>
     </div>
@@ -57,13 +57,13 @@ Learn more about the quality of the materials we use
   <hr class="thin">
 
   <section class="row">
-    <div class="large-9 medium-10 medium-centered columns">
+    <div class="large-10 large-centered columns">
       <h2 class="medium-text-center">Super smooth and reliable hardware</h2>
       <br class="hide-for-small">
       <br>
     </div>
-    <div class="large-9 medium-10 medium-centered columns">
-      <div class="row two-column-wrapper">
+    <div class="large-10 large-centered columns">
+      <div class="row">
 
         <div class="large-6 medium-6 small-12 columns">
           <img class="sidekick-image " src="/images/photos/leather_materials/zipper_silver_detail.jpg" alt="Zipper Detail">
@@ -84,7 +84,7 @@ Learn more about the quality of the materials we use
 
   <hr class="thin">
 
-  <img class="large-9 medium-centered columns sidekick-image" src="/images/photos/leather_materials/ribbing.jpg" alt="Knits">
+  <img class="large-10 columns sidekick-image" src="/images/photos/leather_materials/ribbing.jpg" alt="Knits">
   <div class="clearfix"></div>
   <section class="large-7 medium-9 medium-centered columns">
     <h2 class="text-center">Knits</h2>
@@ -93,7 +93,7 @@ Learn more about the quality of the materials we use
 
   <hr class="thin">
 
-  <img class="large-9 medium-centered columns sidekick-image" src="/images/photos/leather_materials/fur.jpg" alt="Fur Collar Photo">
+  <img class="large-10 columns sidekick-image" src="/images/photos/leather_materials/fur.jpg" alt="Fur Collar Photo">
   <div class="clearfix"></div>
   <section class="large-7 medium-9 medium-centered columns">
     <h2 class="text-center">Wool Collar</h2>

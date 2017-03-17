@@ -21,7 +21,7 @@ Learn more about our full-grain, vegetable tanned leather.
   </section>
 
 
-  <img class="large-9 medium-centered columns sidekick-image" src="/images/photos/leather_materials/leather2.jpg" alt="Our Leather">
+  <img class="large-10 medium-centered columns sidekick-image" src="/images/photos/leather_materials/leather2.jpg" alt="Our Leather">
   <div class="clearfix"></div>
   <section class="large-7 medium-9 medium-centered columns">
     <h2>The difference between full&#8208;grain, top&#8208;grain, genuine, and bonded leather</h2>
@@ -34,7 +34,7 @@ Learn more about our full-grain, vegetable tanned leather.
   </section>
 
 
-  <img class="large-9 medium-centered columns sidekick-image" src="/images/photos/leather_materials/leather3.jpg" alt="Our Leather 3">
+  <img class="large-10 medium-centered columns sidekick-image" src="/images/photos/leather_materials/leather3.jpg" alt="Our Leather 3">
   <div class="clearfix"></div>
   <section class="large-7 medium-9 medium-centered columns">
     <h2>Chrome vs. vegetable tanning and the importance of a world&#8208;class tannery</h2>
@@ -48,7 +48,7 @@ Learn more about our full-grain, vegetable tanned leather.
   </section>
 
 
-  <img class="large-9 medium-centered columns sidekick-image" src="/images/photos/leather_materials/leather1.jpg" alt="Our Leather 1">
+  <img class="large-10 medium-centered columns sidekick-image" src="/images/photos/leather_materials/leather1.jpg" alt="Our Leather 1">
   <div class="clearfix"></div>
   <section class="large-7 medium-9 medium-centered columns">
     <h2>Healthy animals from humane sources</h2>

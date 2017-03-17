@@ -18,7 +18,7 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 
 @section('main')
 
-	<div class="player large-9 medium-centered columns" ng-controller="videoCtrl">
+	<div class="player large-10 medium-centered columns" ng-controller="videoCtrl">
 		<br><br>
 	  <video poster="/images/video-posters/who_we_are.jpg" controls crossorigin preload="none">
 	    <source src="/videos/who_we_are.webm" type="video/webm">
@@ -49,7 +49,7 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 
 	<div class="clearfix"></div>
 
-  <img class="large-9 medium-centered columns sidekick-image" src="/images/photos/who-we-are/craftsmanship1.jpg" alt="Who We Are 1">
+  <img class="large-10 medium-centered columns sidekick-image" src="/images/photos/who-we-are/craftsmanship1.jpg" alt="Who We Are 1">
   <div class="clearfix"></div>
 	<section class="large-7 medium-9 medium-centered columns">
 		<h2>We tailor minimalistic leather jackets to your individual measurements.</h2>
@@ -62,7 +62,7 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 		</div>
 	</section>
 
-	<img class="large-9 medium-centered columns sidekick-image" src="/images/photos/who-we-are/craftsmanship3.jpg" alt="Who We Are 3">
+	<img class="large-10 medium-centered columns sidekick-image" src="/images/photos/who-we-are/craftsmanship3.jpg" alt="Who We Are 3">
   <div class="clearfix"></div>
 	<section class="large-7 medium-9 medium-centered columns">
 		<h2>Our jackets are made by master tailors.</h2>
@@ -70,7 +70,7 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 		<p>To meet our quality requirements, five specialists will be working on your jacket over a period of seven hours to create your finished product.</p>
 	</section>
 
-	<img class="large-9 medium-centered columns sidekick-image" src="/images/photos/who-we-are/craftsmanship2.jpg" alt="Who We Are 2">
+	<img class="large-10 medium-centered columns sidekick-image" src="/images/photos/who-we-are/craftsmanship2.jpg" alt="Who We Are 2">
   <div class="clearfix"></div>
 	<section class="large-7 medium-9 medium-centered columns" id="best-materials">
 		<h2>Finding the best leather and materials is our obsession.</h2>
@@ -89,7 +89,7 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 		<p>The long textile and leather tradition in the region makes it possible to buy top&#8208;grade skins, work with a world&#8208;class tannery, have our jackets tailored by master craftsmen and source all materials within a 250 mile radius. In addition to that, we can work with supply partners that pay above&#8208;average wage.</p>
 	</section>
 
-  <img class="large-9 medium-centered columns sidekick-image" src="/images/photos/who-we-are/craftsmanship4.jpg" alt="Who We Are 4">
+  <img class="large-10 medium-centered columns sidekick-image" src="/images/photos/who-we-are/craftsmanship4.jpg" alt="Who We Are 4">
   <div class="clearfix"></div>
 	<section class="large-7 medium-9 medium-centered columns" id="respect-nature">
 		<h2>Every decision is guided by the greatest respect for people, our environment, and animals.</h2>
