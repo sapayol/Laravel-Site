@@ -2,7 +2,8 @@
 	@if (empty($order))
 		<h2 class="thin text-center hide-for-medium-up">{{{ !empty($order) ? 'Change' : 'Design' }}} your look <br><br></h2>
 	@endif
-	<div class="lookDesigner {{ $currentPath = '/orders/{id}' ? 'reversed' : ''}}">
+	<?php $orderPage = Request::route()->getName() === 'orders.show';	?>
+	<div class="lookDesigner {{ $orderPage ? 'reversed' : ''}}">
 		@include('partials.jacket.look-options')
 		@include('partials.jacket.look-image')
 	</div>
