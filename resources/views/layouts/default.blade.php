@@ -9,9 +9,11 @@
 
 	@yield('full-width-hero')
 
-<main class="large-12 medium-12 small-12 columns">
-	@yield('main')
-</main>
+<div class="row">
+  <main class="large-12 medium-12 small-12 columns">
+	 @yield('main')
+  </main>
+</div>
 
 @include('partials.global.footer')
 @include('partials.global._foot')
