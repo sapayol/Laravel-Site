@@ -1,4 +1,4 @@
-<section ng-controller='lookAndFitCtrl' class="large-{{{ !empty($order) ? '12' : '10' }}} medium-12 small-12 large-centered columns look-options">
+<section ng-controller='lookAndFitCtrl' class="large-{{{ !empty($order) ? '12' : '12' }}} medium-12 small-12 large-centered columns look-options">
 	@if (empty($order))
 		<h2 class="thin text-center hide-for-medium-up">{{{ !empty($order) ? 'Change' : 'Design' }}} your look <br><br></h2>
 	@endif
