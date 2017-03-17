@@ -18,8 +18,8 @@ body {
   -webkit-text-size-adjust: none;
   width: 100% !important;
   height: 100%;
-  line-height: 1.6em;
-  /* 1.6em * 14px = 22.4px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
+  line-height: 1.6rem;
+  /* 1.6rem * 14px = 22.4px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
   /*line-height: 22px;*/
 }
 
@@ -29,7 +29,7 @@ table td {
 }
 
 /* -------------------------------------
-    BODY & CONTAINER
+    BODY &amp; CONTAINER
 ------------------------------------- */
 body {
   background-color: #f6f6f6;
@@ -95,7 +95,7 @@ h1, h2, h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #000;
   margin: 40px 0 0;
-  line-height: 1.2em;
+  line-height: 1.2rem;
   font-weight: 400;
 }
 

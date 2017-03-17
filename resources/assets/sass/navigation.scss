@@ -20,7 +20,7 @@ nav.primary-nav {
 		font-weight: 200;
 		position: relative;
 		top: .1rem;
-		@media #{$tiny-only} { top: 0.2em; }
+		@media #{$tiny-only} { top: 0.2rem; }
 		&.open {
 			border: none;
 		}
@@ -39,7 +39,7 @@ nav.primary-nav {
 		font-weight: 200;
 		text-transform: uppercase;
 		margin-bottom: .5rem;
-		letter-spacing: .03em;
+		letter-spacing: .03rem;
 	}
 	.secondary-nav {
 		position: absolute;
