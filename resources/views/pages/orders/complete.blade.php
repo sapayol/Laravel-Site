@@ -41,10 +41,13 @@ Your Placed Order
 				<h3 class="thin">Look</h3>
 				<ul class="no-bullet value-list">
 					<li><small class="list-key">Model </small>{{{ $order->jacket->name  }}}	</li>
-					<li><small class="list-key">Leather Type </small>{{{ ucfirst($order->leather_type()->name)  }}}	</li>
-					<li><small class="list-key">Leather Color </small>{{{ ucfirst($order->leather_color()->name) }}}	</li>
-					<li><small class="list-key">Lining Color </small>{{{ ucfirst($order->lining_color()->name) }}}	</li>
-					<li><small class="list-key">Hardware Color </small>{{{ ucfirst($order->hardware_color()->name) }}}	</li>
+					<li><small class="list-key">Leather Type </small>{{{ ucfirst($order->leather_type()->name)  }}}</li>
+					<li><small class="list-key">Leather Color </small>{{{ ucfirst($order->leather_color()->name) }}}</li>
+					<li><small class="list-key">Lining Color </small>{{{ ucfirst($order->lining_color()->name) }}}</li>
+					<li><small class="list-key">Hardware Color </small>{{{ ucfirst($order->hardware_color()->name) }}}</li>
+					@if ($order->collar_color())
+						<li><small class="list-key">Collar Color </small>{{{ ucfirst($order->collar_color()->name) }}}</li>
+					@endif
 				</ul>
 
 				<h3 class="thin">Payment Info</h3>
@@ -53,6 +56,15 @@ Your Placed Order
 						<small class="list-key">{{{ $order->jacket->model }}}</small>
 						<span class="list-value"><small>$ </small>&nbsp;{{{ $order->jacket->price }}}</span>
 					</li>
+					@foreach ($order->attributes as $attribute)
+						@if ($attribute->price !== '0.00')
+							<li>
+								{{-- TODO - Make list key dynamic depending on attribute --}}
+								<small class="list-key">Collar</small>
+								<span class="list-value"><small>$ </small>&nbsp;&nbsp;&nbsp;{{{ $attribute->price }}}</span>
+							</li>
+						@endif
+					@endforeach
 					<li>
 						<small class="list-key">Shipping</small>
 						<span class="list-value"><small>$ </small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.00</span>
@@ -68,6 +80,8 @@ Your Placed Order
 					<li><small class="list-key">Payment Method</small>Credit</li>
 				</ul>
 			</div>
+
+
 
 			<div class="large-6 medium-6 small-12 columns">
 				<h3 class="thin">Fit</h3>
