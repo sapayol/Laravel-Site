@@ -56,6 +56,15 @@ Learn more about our full-grain, vegetable tanned leather.
     <p>The meat industry is very broken and an incredible amount of animals are being held under extremely poor conditions. We don&rsquo;t support that and strive very hard to only use leather from humane and healthy sources.</p>
     <p><em>All our lamb skins come from Turkey, where animals are being herded in traditional ways, get ample movement, sunlight, and natural nutrition.</em></p>
   </section>
+  <section class="row">
+    <div class="large-12 medium-12 small-12 text-center">
+      @if($jacket)
+        <a href="/jackets/<?php echo e($jacket); ?>" class="button">Go Back To Your Jacket</a>
+      @else
+        <a href="/jackets" class="button">See Our Jackets</a>
+      @endif
+    </div>
+  </section>
 
 	<hr class="thin">
 

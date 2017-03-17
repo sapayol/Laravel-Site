@@ -26,7 +26,7 @@ Learn more about the quality of the materials we use
     <br>
     <p>All our jackets are made with the most exclusive, vegetable tanned, full&#8208;grain leather. It’s supple, thick, has a warm touch, and a pleasant smell. With good care, it will not crack or bulge for decades but break in and develop a beautiful patina.</p>
     <p>Our leather is also absolutely free of the chromium salts that can become carcinogenic, found in almost every other leather garment.</p>
-    <a class="underlined" href="/leather">Learn more about leather and why we consider ours to be one of the finest in the world.</a>
+    <a class="underlined" href="/leather?jacket=<?php echo e($jacket); ?>">Learn more about leather and why we consider ours to be one of the finest in the world.</a>
   </section>
 
   <hr class="thin">
@@ -98,6 +98,15 @@ Learn more about the quality of the materials we use
   <section class="large-7 medium-9 medium-centered columns">
     <h2 class="text-center">Wool Collar</h2>
     <p>The detachable collar on the Linden comes from Merino sheep, known to have the finest and softest wool of any sheep. It will keep you perfectly warm, without overheating.</p>
+  </section>
+  <section class="row">
+    <div class="large-12 medium-12 small-12 text-center">
+      @if($jacket)
+        <a href="/jackets/<?php echo e($jacket); ?>" class="button">Go Back To Your Jacket</a>
+      @else
+        <a href="/jackets" class="button">See Our Jackets</a>
+      @endif
+    </div>
   </section>
 
   <hr class="thin">
