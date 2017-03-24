@@ -135,11 +135,19 @@ class OrdersController extends Controller {
 
 	public function checkout($id)
 	{
-		$order = Order::findOrFail($id);
+    $order = Order::findOrFail($id);
 
 		// Update the order with latest jacket look from the session
 		$jacket = Session::get($order->jacket->model);
-		$jacket_look = [$jacket['leather_type'], $jacket['leather_color'], $jacket['lining_color'], $jacket['hardware_color'], $jacket['collar_color']];
+
+    $attributes = ['leather_type', 'leather_color', 'lining_color', 'hardware_color', 'collar_color'];
+
+    foreach ($attributes as $attribute) {
+      if ($jacket[$attribute]) {
+        $jacket_look[] = $jacket[$attribute];
+      }
+    }
+
     $order->attributes()->sync($jacket_look);
 
     JavaScript::put([
