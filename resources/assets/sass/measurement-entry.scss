@@ -68,3 +68,10 @@
 	}
 
 }
+
+.note-entry {
+	@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+  	width: 59%;
+  	left: 42%;
+  }
+}
