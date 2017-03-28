@@ -10,7 +10,7 @@
 	@yield('full-width-hero')
 
 <div class="row">
-	<main class="small-12 medium-11 large-8 medium-centered columns">
+	<main class="small-12 medium-11 large-10 columns medium-centered">
 		@yield('main')
 	</main>
 </div>
