@@ -4,7 +4,7 @@
  $width = !empty($order) ? $ORDER_PAGE_WIDTH : $JACKET_PAGE_WIDTH;
 ?>
 
-<section ng-controller='lookAndFitCtrl' class="large-{{{ $width }}} medium-11 small-12 medium-centered columns look-options">
+<section id="design-your-look" ng-controller='lookAndFitCtrl' class="large-{{{ $width }}} medium-11 small-12 medium-centered columns look-options">
 	@if (empty($order))
 		<h2 class="thin text-center hide-for-medium-up">{{{ !empty($order) ? 'Change' : 'Design' }}} your look <br><br></h2>
 	@endif
