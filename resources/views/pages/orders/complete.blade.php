@@ -50,6 +50,17 @@ Your Placed Order
 					@endif
 				</ul>
 
+				<?php
+					$attribute_map = [
+						"leather_color" => "Leather Color",
+						"leather_type" => "Leather",
+						"hardware_color" => "Hardware",
+						"lining_color" => "Lining",
+						"collar_color" => "Collars",
+					];
+				?>
+
+
 				<h3 class="thin">Payment Info</h3>
 				<ul class="no-bullet value-list">
 					<li>
@@ -59,10 +70,10 @@ Your Placed Order
 						</span>
 					</li>
 					@foreach ($order->attributes as $attribute)
-						@if ($attribute->price !== '0.00')
+						@if ($attribute->price !== '0.00' && $attribute->price !== null)
 							<li>
 								{{-- TODO - Make list key dynamic depending on attribute --}}
-								<small class="list-key">Collar</small>
+								<small class="list-key">{{{ $attribute_map[$attribute->type] }}}</small>
 								<span class="list-value line-item-price">
 									<span><small>$ </small>{{{ $attribute->price }}}</span>
 								</span>
