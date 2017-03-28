@@ -56,6 +56,21 @@
 	}
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	.medium-6 .value-list {
+		.list-key {
+			min-width: 4.8rem;
+		}
+		.list-value {
+			min-width: 2.5rem;
+		}
+		a.underlined {
+			font-size: .7rem;
+		}
+	}
+}
+
+
 @media #{$medium-only} and (orientation: portrait)  {
 	.medium-6 .value-list {
 		.list-key {
