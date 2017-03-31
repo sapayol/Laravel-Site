@@ -56,7 +56,7 @@ Your Placed Order
 						"leather_type" => "Leather",
 						"hardware_color" => "Hardware",
 						"lining_color" => "Lining",
-						"collar_color" => "Collars",
+						"collar_color" => "Collar",
 					];
 				?>
 
