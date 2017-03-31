@@ -44,16 +44,16 @@ class CreateNewOrder extends Job implements SelfHandling
 
       $attributes = Attribute::find(array_values($this->jacket_look));
 
-      $jacket_price = $jacket->price;
+      $total_price = $jacket->price;
       foreach ($attributes as $attribute) {
-        $jacket_price += $attribute->price;
+        $total_price += $attribute->price;
       }
 
       $order  = Order::create(array(
         'status'    => 'new',
         'user_id'   => $this->user->id,
         'jacket_id' => $jacket->id,
-        'total'     => $jacket_price // Needs to be updated in 2.0 when attributes affect price
+        'total'     => $total_price
       ));
 
       foreach ($this->jacket_look as $attribute) {
