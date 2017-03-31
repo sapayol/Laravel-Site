@@ -17,7 +17,7 @@
 
 @section('row3')
 	<div class="text-center">
-		<img style="width: 350px" src="/images/photos/jackets/{{{ $order->jacket->model }}}/hardware-{{{ $order->hardware_color()->name }}}.jpg" alt="Jacket Photo">
+  	@include('partials.jacket.preview-image')
 	</div>
 @stop
 
