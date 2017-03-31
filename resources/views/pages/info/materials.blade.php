@@ -18,7 +18,7 @@ Learn more about the quality of the materials we use
     <br>
     <p>We obsess over the quality of the materials we use, which shows in exclusive leather that gets tanned specifically for us and every detail of our jackets – zippers, buttons, lining, knits, and wool.</p>
   </section>
-  <img class="large-10 columns sidekick-image" src="/images/photos/leather_materials/leather_hero.jpg" alt="Jacket Chest">
+  <img class="large-10 medium-centered columns sidekick-image" src="/images/photos/leather_materials/leather_hero.jpg" alt="Jacket Chest">
   <div class="clearfix"></div>
   <section class="large-7 medium-9 medium-centered columns">
     <br>
@@ -84,7 +84,7 @@ Learn more about the quality of the materials we use
 
   <hr class="thin">
 
-  <img class="large-10 columns sidekick-image" src="/images/photos/leather_materials/ribbing.jpg" alt="Knits">
+  <img class="large-10 medium-centered columns sidekick-image" src="/images/photos/leather_materials/ribbing.jpg" alt="Knits">
   <div class="clearfix"></div>
   <section class="large-7 medium-9 medium-centered columns">
     <h2 class="text-center">Knits</h2>
@@ -93,7 +93,7 @@ Learn more about the quality of the materials we use
 
   <hr class="thin">
 
-  <img class="large-10 columns sidekick-image" src="/images/photos/leather_materials/fur.jpg" alt="Fur Collar Photo">
+  <img class="large-10 medium-centered columns sidekick-image" src="/images/photos/leather_materials/fur.jpg" alt="Fur Collar Photo">
   <div class="clearfix"></div>
   <section class="large-7 medium-9 medium-centered columns">
     <h2 class="text-center">Wool Collar</h2>
