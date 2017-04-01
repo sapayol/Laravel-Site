@@ -1,3 +1,13 @@
+<?php
+	$attribute_map = [
+		"leather_color" => "Leather Color",
+		"leather_type" => "Leather",
+		"hardware_color" => "Hardware",
+		"lining_color" => "Lining",
+		"collar_color" => "Collar",
+	];
+?>
+
 <h3 class="thin left">Payment Info</h3>
 <br>
 <ul style="list-style: none; margin-left: 0; padding-left: 0;">
