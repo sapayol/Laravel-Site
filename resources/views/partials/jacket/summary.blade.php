@@ -5,7 +5,7 @@
   <span class="thin large-price">US ${{{ number_format($jacket->price) }}}</span>
   <br>
   @if ($jacket->collar_colors()->count() > 0)
-    add US $70 for detachable merino wool collar
+    Add US $70 for detachable merino wool collar.
     <br>
     <br>
   @endif
