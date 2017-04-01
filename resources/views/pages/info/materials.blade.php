@@ -22,9 +22,9 @@ Learn more about the quality of the materials we use
   <div class="clearfix"></div>
   <section class="large-7 medium-9 medium-centered columns">
     <br>
-    <h2 class="text-center">Vegetable tanned, chrome&#8208;free, full&#8208;grain leather</h2>
+    <h2 class="text-center">Vegetable tanned, chrome-free, full-grain leather</h2>
     <br>
-    <p>All our jackets are made with the most exclusive, vegetable tanned, full&#8208;grain leather. It’s supple, thick, has a warm touch, and a pleasant smell. With good care, it will not crack or bulge for decades but break in and develop a beautiful patina.</p>
+    <p>All our jackets are made with the most exclusive, vegetable tanned, full-grain leather. It’s supple, thick, has a warm touch, and a pleasant smell. With good care, it will not crack or bulge for decades but break in and develop a beautiful patina.</p>
     <p>Our leather is also absolutely free of the chromium salts that can become carcinogenic, found in almost every other leather garment.</p>
     <a class="underlined" href="/leather?jacket=<?php echo e($jacket); ?>">Learn more about leather and why we consider ours to be one of the finest in the world.</a>
   </section>
@@ -75,7 +75,7 @@ Learn more about the quality of the materials we use
         </div>
         <div class="large-6 medium-6 small-12 columns">
           <img class="sidekick-image" src="/images/photos/leather_materials/snap_silver_detail.jpg" alt="Snap Detail">
-          <p class="image-caption">The buttons on our jackets are spring&#8208;type snaps from YKK, made purely out of nickel&#8208;free alloys. They receive the same beautiful coatings as our zippers and provide reliable closure without the need to pull too hard and damage the leather when you open them.</p>
+          <p class="image-caption">The buttons on our jackets are spring-type snaps from YKK, made purely out of nickel-free alloys. They receive the same beautiful coatings as our zippers and provide reliable closure without the need to pull too hard and damage the leather when you open them.</p>
 
         </div>
       </div>

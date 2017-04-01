@@ -18,7 +18,7 @@ Our selection of premium leather jacket styles, including double rider, flight j
 
 @section('main')
 	<article class="large-12 medium-12 small-12 columns">
-		<p class="medium-text-center">Choose the style you would like to customize and have tailor&#8208;made.</p>
+		<p class="medium-text-center">Choose the style you would like to customize and have tailor-made.</p>
 		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
 			@foreach ($jackets as $jacket)
 			  <li class="text-center">
