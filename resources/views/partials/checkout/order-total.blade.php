@@ -16,7 +16,6 @@
 	@foreach ($order->attributes as $attribute)
 		@if ($attribute->price !== '0.00' && $attribute->price !== null)
 			<li>
-				{{-- TODO - Make list key dynamic depending on attribute --}}
 				<small class="list-key">{{{ $attribute_map[$attribute->type] }}}</small>
 				<span class="list-value"><small>$ </small>&nbsp;&nbsp;&nbsp;{{{ $attribute->price }}}</span>
 			</li>
