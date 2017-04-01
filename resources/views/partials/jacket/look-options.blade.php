@@ -37,7 +37,7 @@
     </fieldset>
     @if ($jacket->model === 'linden')
       <fieldset>
-        <legend>Collar <small>+ $100</small></legend>
+        <legend>Collar <small>+ $70</small></legend>
       @if ($jacket->collar_colors()->count() > 1)
         @foreach ($jacket->collar_colors() as $collar_color)
           <label class="button tiny hollow {{{ camel_case($collar_color->name) }}}" ng-class="{active: jacket.collar_color == '{{{ $collar_color->id }}}' }">{{{ $collar_color->name }}}
