@@ -12,7 +12,7 @@ Your Placed Order
 
 	<div class="small-12 medium-10 large-7 medium-centered columns">
 		<section>
-			<p>We&rsquo;re very excited that you&rsquo;ve decided to order a custom tailored BLEECKER from us.</p>
+			<p>We&rsquo;re very excited that you&rsquo;ve decided to order a custom tailored {{{ $order->jacket->name }}} from us.</p>
 			<p>Within the next 24 hours we will reach out to you to go over your measurements and discuss your fit preferences before we start tailoring it.</p>
 			<p>Let&rsquo;s make sure we have the right contact details from you:</p>
 			<ul class="no-bullet value-list">
