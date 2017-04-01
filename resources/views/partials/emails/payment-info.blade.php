@@ -21,7 +21,7 @@
 				{{-- TODO - Make list key dynamic depending on attribute --}}
 				<small class="list-key">{{{ $attribute_map[$attribute->type] }}}</small>
 				<span class="list-value line-item-price">
-					<span><small>$ </small>{{{ $attribute->price }}}</span>
+					<span><small>$ </small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{{ $attribute->price }}}</span>
 				</span>
 			</li>
 		@endif
