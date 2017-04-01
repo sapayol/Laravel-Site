@@ -17,7 +17,7 @@
 		@if ($attribute->price !== '0.00' && $attribute->price !== null)
 			<li>
 				<small class="list-key">{{{ $attribute_map[$attribute->type] }}}</small>
-				<span class="list-value"><small>$ </small>&nbsp;&nbsp;&nbsp;{{{ $attribute->price }}}</span>
+				<span class="list-value"><small>$ </small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{{ $attribute->price }}}</span>
 			</li>
 		@endif
 	@endforeach
