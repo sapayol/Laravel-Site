@@ -25,6 +25,10 @@ editLookController.controller('editLookCtrl', ['$scope', '$http', '$q', 'notifyU
       return hardware_color.id == $scope.attributes.hardware_color.id;
     })[0];
 
+    $scope.selectedCollarColor = $scope.options.collar_colors.filter(function(collar_color) {
+      return collar_color.id == $scope.attributes.collar_color.id;
+    })[0];
+
     $scope.editMode = true;
   };
 
@@ -34,7 +38,8 @@ editLookController.controller('editLookCtrl', ['$scope', '$http', '$q', 'notifyU
         leather_type:   $scope.selectedLeatherType,
         leather_color:  $scope.selectedLeatherColor,
         lining_color:   $scope.selectedLiningColor,
-        hardware_color: $scope.selectedHardwareColor
+        hardware_color: $scope.selectedHardwareColor,
+        collar_color:   $scope.selectedCollarColor,
       }
       notifyUser.ofSuccessMessage('Look successfully updated');
         $scope.editMode = false;
@@ -48,7 +53,8 @@ editLookController.controller('editLookCtrl', ['$scope', '$http', '$q', 'notifyU
       leather_type:    $scope.selectedLeatherType.id,
       leather_color:   $scope.selectedLeatherColor.id,
       lining_color:    $scope.selectedLiningColor.id,
-      hardware_color: $scope.selectedHardwareColor.id,
+      hardware_color:  $scope.selectedHardwareColor.id,
+      collar_color:    $scope.selectedCollarColor.id,
     }).success(function(response, status) {
       deferred.resolve(response);
     }).error(function(response, status) {

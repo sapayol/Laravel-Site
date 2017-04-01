@@ -49,12 +49,14 @@ class AdminController extends Controller {
 				'leather_color'  => $order->leather_color(),
 				'lining_color'   => $order->lining_color(),
 				'hardware_color' => $order->hardware_color(),
+				'collar_color'   => $order->collar_color(),
 			],
 			'look_options'    => [
 				'leather_types'   => $order->jacket->leather_types(),
 				'leather_colors'  => $order->jacket->leather_colors(),
 				'lining_colors'   => $order->jacket->lining_colors(),
 				'hardware_colors' => $order->jacket->hardware_colors(),
+				'collar_colors'   => $order->jacket->collar_colors(),
 			]
 		]);
 
@@ -70,6 +72,7 @@ class AdminController extends Controller {
       $request->leather_color,
       $request->lining_color,
       $request->hardware_color,
+      $request->collar_color,
     ]);
 
 		return response()->json($order);

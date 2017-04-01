@@ -17,4 +17,7 @@
 	<li><small class="list-key">Leather Color </small>@{{ attributes.leather_color.name.capitalize() }}	</li>
 	<li><small class="list-key">Lining Color </small>@{{ attributes.lining_color.name.capitalize() }} </li>
 	<li><small class="list-key">Hardware Color </small>@{{ attributes.hardware_color.name.capitalize() }}	</li>
+  @if ($order->collar_color())
+     <li><small class="list-key">Collar </small>@{{ attributes.collar_color.name.capitalize() }} </li>
+  @endif
 </ul>

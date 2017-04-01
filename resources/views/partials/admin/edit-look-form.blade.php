@@ -26,4 +26,11 @@
 			  <option></option>
 	    </select>
 		</label>
+
+		<label for="collar_color" class="text-input-label">
+			<span class="label-title">Collar Color</span>
+		  <select id="collar_color" ng-model="selectedCollarColor" ng-show="editMode" ng-options="collar_color as collar_color.name for collar_color in options.collar_colors">
+			  <option></option>
+	    </select>
+		</label>
 	</form>
