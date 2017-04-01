@@ -12,7 +12,14 @@
 								{{{ $jacket->name }}}
 							</a>
 						</h2>
-						<span>US ${{{ number_format($jacket->price) }}}</span>
+							@if ($jacket->model === 'linden')
+								<span class="price-note">
+									<small>starts at<br></small>
+							@else
+								<span>
+							@endif
+							US ${{{ number_format($jacket->price) }}}
+						</span>
 					@else
 						<div class="jacket-placeholder-container">
 							<img class="jacket-placeholder" src="/images/photos/jackets/{{{ $jacket->model }}}/{{{ $jacket->model }}}.svg" alt="Jacket Placeholder Image">
