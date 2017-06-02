@@ -1,5 +1,9 @@
 @extends('layouts/default')
 
+@section('page_wrap_class')
+padded-columns
+@stop
+
 @section('title')
 Order: {{{ $order->id }}}
 @stop
