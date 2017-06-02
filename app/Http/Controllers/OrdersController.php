@@ -150,6 +150,11 @@ class OrdersController extends Controller {
 
     $order->attributes()->sync($jacket_look);
 
+    if (!isset($order->measurements['note']) || $order->measurements['note'] == '') {
+      $order->measurements['note'] = '-';
+      $order->save();
+    }
+
     JavaScript::put([
 			'order'   => $order,
 			'user'    => $order->user,
