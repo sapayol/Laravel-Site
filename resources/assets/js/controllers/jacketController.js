@@ -9,7 +9,7 @@ jacketController.controller('jacketCtrl', ['$scope', '$http', '$q', 'Session', '
   }
 
   // If the session has no jacket, set the default color to 'black'
-  $scope.leather_color = typeof(jacket['leather_color']) !== 'undefined' ? getColorName(jacket['leather_color']) : 'black'
+  $scope.leather_color = typeof(jacket) !== 'undefined' ? getColorName(jacket['leather_color']) : 'black'
 
   $scope.$on('changePageColor', function (event, color_id) {
     $scope.leather_color = getColorName(color_id);
