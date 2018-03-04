@@ -1,6 +1,6 @@
 var lookController = angular.module('lookController', []);
 
-lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session', '$timeout', 'Auth', 'notifyUser', function($scope, $http, $q, Session, $timeout, Auth, notifyUser) {
+lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$q', 'Session', '$timeout', 'Auth', 'notifyUser', function($rootScope, $scope, $http, $q, Session, $timeout, Auth, notifyUser) {
 
 	// The users session info from the server
 	$scope.jacket = sapayol.jacket;
@@ -16,8 +16,12 @@ lookController.controller('lookAndFitCtrl', ['$scope', '$http', '$q', 'Session',
     $scope.showBack = false;
   }
 
-  // Update the session on the server to match the changes that the user makes
+  $scope.changeJacketColor = function(input) {
+    $rootScope.$broadcast('changePageColor', $scope.jacket.leather_color);
+    $scope.updateSessionCache();
+  }
 
+  // Update the session on the server to match the changes that the user makes
   $scope.updateSessionCache = function() {
     var jacket = {};
     $scope.setPreviewImageName()

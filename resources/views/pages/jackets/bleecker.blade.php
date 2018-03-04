@@ -13,31 +13,23 @@ Double rider biker leather jacket
 @stop
 
 @section('carousel_images')
-  <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/front_closed_silver_large.jpg" title="">
-  	<img src="/images/photos/jackets/bleecker/carousel/front_closed_silver_medium.jpg" alt="Front Closed Silver">
-  </a>
-  </div>
-  <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/45-left_closed_silver_large.jpg" title="">
-  	<img src="/images/photos/jackets/bleecker/carousel/45-left_closed_silver_medium.jpg" alt="45 Left Closed Silver">
-  </a>
-  </div>
-  <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/side-left_closed_silver_large.jpg" title="">
-  	<img src="/images/photos/jackets/bleecker/carousel/side-left_closed_silver_large.jpg" alt="Side left Closed Silver">
-  </a>
-  </div>
-  <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/back_closed_silver_large.jpg" title="">
-  	<img src="/images/photos/jackets/bleecker/carousel/back_closed_silver_medium.jpg" alt="Back Closed Silver">
-	  </a>
-  </div>
-  <div>
-  	<a href="/images/photos/jackets/bleecker/carousel/front_open_silver_large.jpg" title="">
-  	<img src="/images/photos/jackets/bleecker/carousel/front_open_silver_medium.jpg" alt="Front Open Silver">
-	  </a>
-  </div>
+  <?php
+    $carouselImageNames = [
+      'front_closed_silver',
+      '45-left_closed_silver',
+      'side-left_closed_silver',
+      'back_closed_silver',
+      'front_open_silver',
+    ]
+  ?>
+
+  @foreach ($carouselImageNames as $name)
+    <div>
+      <a href="/images/photos/jackets/bleecker/carousel/@{{leather_color}}/{{{ $name }}}_large.jpg" title="">
+        <img src="/images/photos/jackets/bleecker/carousel/@{{leather_color}}/{{{ $name }}}_medium.jpg" alt="{{{ $name }}}">
+      </a>
+    </div>
+  @endforeach
 @stop
 
 @section('measurement_data')
@@ -74,12 +66,13 @@ Double rider biker leather jacket
 
 @section('main')
   <div class="row">
-    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/actionback.jpg" alt="Actionback">
-    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/chest.jpg" alt="Chest">
-    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/cuff-zipper.jpg" alt="Cuff Zipper">
+    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/@{{leather_color}}/actionback.jpg" alt="Actionback">
+    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/@{{leather_color}}/chest.jpg" alt="Chest">
+    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/@{{leather_color}}/cuff-zipper.jpg" alt="Cuff Zipper">
     <div class="large-6 medium-6 small-12 columns">
       <br>
-      <h2>Finest materials</h2>
+      <h2>Finest materials
+</h2>
       <p>
         From the most precious leather down to the zippers and buttons, we obsess over the quality of the materials we use.
         <br>

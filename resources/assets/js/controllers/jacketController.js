@@ -1,30 +1,17 @@
 var jacketController = angular.module('jacketController', []);
 
-jacketController.controller('jacketCtrl', ['$scope', function($scope) {
+jacketController.controller('jacketCtrl', ['$scope', '$http', '$q', 'Session', '$timeout', 'Auth', 'notifyUser', function($scope, $http, $q, Session, $timeout, Auth, notifyUser) {
 
-  // $(document).ready(function($){
-  //   // var trigger = $('.stick-to-bottom').position().top - 128;
-  //   if (!$('.stick-to-bottom')) {
-  //     return
-  //   }
-  //   var trigger = $('.stick-to-bottom').position().top + 500;
-  //   var stickyButtonBottom = $('.stick-to-bottom').offset().top - 160;
-  //   var stickyNav = function(){
-  //     var scrollTop = $(window).scrollTop();
-  //     if (scrollTop >= trigger) {
-  //         $('.stick-to-bottom').show();
-  //         $('.stick-to-bottom').addClass('sticky');
-  //     } else {
-  //         $('.stick-to-bottom').hide();
-  //         $('.stick-to-bottom').removeClass('sticky');
-  //     }
-  //   };
+  const jacket = sapayol.session[sapayol.jacket.name.toLowerCase()]
 
-  //   stickyNav();
+  const getColorName = function(id) {
+    return id === '1' ? 'black' : 'brown';
+  }
 
-  //   $(window).scroll(function() {
-  //       stickyNav();
-  //   });
-  // });
+  $scope.leather_color = getColorName(jacket['leather_color'])
+
+  $scope.$on('changePageColor', function (event, color_id) {
+    $scope.leather_color = getColorName(color_id);
+  });
 
 }]);

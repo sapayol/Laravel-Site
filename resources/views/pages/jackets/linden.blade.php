@@ -30,8 +30,8 @@ A-2 style flight leather jacket
 
 @foreach ($carouselImageNames as $name)
   <div>
-    <a href="/images/photos/jackets/linden/carousel/{{{ $name }}}_large.jpg" title="">
-      <img src="/images/photos/jackets/linden/carousel/{{{ $name }}}_medium.jpg" alt="{{{ $name }}}">
+    <a href="/images/photos/jackets/linden/carousel/@{{leather_color}}/{{{ $name }}}_large.jpg" title="">
+      <img src="/images/photos/jackets/linden/carousel/@{{leather_color}}/{{{ $name }}}_medium.jpg" alt="{{{ $name }}}">
     </a>
   </div>
 @endforeach
@@ -73,7 +73,7 @@ A-2 style flight leather jacket
 @section('main')
   <div class="row">
     @foreach (['fur', 'interior-pocket', 'waist'] as $name)
-      <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/linden/details/{{{ $name }}}.jpg" alt="{{{ $name }}}">
+      <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/linden/details/@{{leather_color}}/{{{ $name }}}.jpg" alt="{{{ $name }}}">
     @endforeach
     <div class="large-6 medium-6 small-12 columns">
       <h2>Finest materials</h2>
