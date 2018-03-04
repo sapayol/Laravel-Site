@@ -11,6 +11,20 @@
         {{{ !empty($order) ? 'Change' : 'Design' }}} your look <br><br>
       </h2>
     @endif
+
+    <fieldset>
+      <legend>Leather Color</legend>
+      @if ($jacket->leather_colors()->count() > 1)
+        @foreach ($jacket->leather_colors() as $leather_color)
+          <label class="button tiny hollow {{{ camel_case($leather_color->name) }}}" ng-class="{active: jacket.leather_color == '{{{ $leather_color->id}}}' }">{{{ $leather_color->name }}}
+            <input type="radio" name="jacket_look[leather_color]" ng-model="jacket.leather_color" value="{{{ $leather_color->id }}}" ng-change="changeJacketColor()">
+          </label>
+        @endforeach
+      @else
+        {{{ $jacket->leather_colors()->first()->name }}}
+      @endif
+    </fieldset>
+
     <fieldset>
       <legend>Lining Color</legend>
       @if ($jacket->lining_colors()->count() > 1)
@@ -23,6 +37,7 @@
         {{{ $jacket->lining_colors()->first()->name }}}
       @endif
     </fieldset>
+
     <fieldset>
       <legend>Zipper &amp; Button Color</legend>
       @if ($jacket->hardware_colors()->count() > 1)
