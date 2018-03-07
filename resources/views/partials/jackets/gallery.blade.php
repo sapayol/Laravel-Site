@@ -15,17 +15,15 @@
 						</a>
 
 						<div class="look-options">
-							<fieldset>
-					      @if ($jacket->leather_colors()->count() > 1)
-					        @foreach ($jacket->leather_colors() as $leather_color)
-					          <label class="button tiny hollow {{{ camel_case($leather_color->name) }}}" ng-class="{active: leather_color == '{{{ $leather_color->id}}}' }">{{{ $leather_color->name }}}
-					            <input type="radio" name="leather_color" ng-model="leather_color" value="{{{ $leather_color->id }}}"  ng-change="updateSessionCache()">
-					       		</label>
-					        @endforeach
-					      @else
-					        {{{ $jacket->leather_colors()->first()->name }}}
-					      @endif
-					    </fieldset>
+					    @if ($jacket->leather_colors()->count() > 1)
+				        @foreach ($jacket->leather_colors() as $leather_color)
+				          <label class="button tiny hollow {{{ camel_case($leather_color->name) }}}" ng-class="{active: leather_color == '{{{ $leather_color->id}}}' }">{{{ $leather_color->name }}}
+				            <input type="radio" name="leather_color" ng-model="leather_color" value="{{{ $leather_color->id }}}"  ng-change="updateSessionCache()">
+				       		</label>
+				        @endforeach
+				      @else
+				        {{{ $jacket->leather_colors()->first()->name }}}
+				      @endif
 				    </div>
 
 						@if ($jacket->model === 'linden')
