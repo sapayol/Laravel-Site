@@ -87,7 +87,6 @@ section.flex-section {
 	@media #{$medium-up} { 	flex-direction: column-reverse; }
 }
 
-
 .x-large-block-grid-4 {
 	@media #{$xlarge-up} {
 	  @include block-grid(

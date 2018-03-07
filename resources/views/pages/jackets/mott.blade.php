@@ -25,8 +25,8 @@ Cafe racer (Moto) leather jacket
 
   @foreach ($carouselImageNames as $name)
     <div>
-      <a href="/images/photos/jackets/mott/carousel/@{{leather_color}}/{{{ $name }}}-large.jpg" title="">
-        <img src="/images/photos/jackets/mott/carousel/@{{leather_color}}/{{{ $name }}}-medium.jpg" alt="{{{ $name }}}">
+      <a href="/images/photos/jackets/mott/carousel/@{{ getColorName(leather_color) }}/{{{ $name }}}-large.jpg" title="">
+        <img src="/images/photos/jackets/mott/carousel/@{{ getColorName(leather_color) }}/{{{ $name }}}-medium.jpg" alt="{{{ $name }}}">
       </a>
     </div>
   @endforeach
@@ -67,7 +67,7 @@ Cafe racer (Moto) leather jacket
 @section('main')
   <div class="row">
     @foreach (['collar', 'cuff-zipper', 'pocket'] as $name)
-      <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/mott/details/@{{leather_color}}/{{{ $name }}}.jpg" alt="{{{ $name }}}">
+      <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/mott/details/@{{ getColorName(leather_color) }}/{{{ $name }}}.jpg" alt="{{{ $name }}}">
     @endforeach
     <div class="large-6 medium-6 small-12 columns">
       <br>

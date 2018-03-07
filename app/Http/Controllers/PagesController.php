@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Jacket;
+use JavaScript;
+use Session;
 
 class PagesController extends Controller {
 
@@ -26,6 +28,7 @@ class PagesController extends Controller {
 	{
 		$jackets = Jacket::orderBy('active', 'DESC')->get();
 		$randomModel = $jackets->random()->model;
+		JavaScript::put(['jackets' => $jackets->keyBy('model'), 'session' => Session::all()]);
 		return view('pages.home', ['jackets' => $jackets, 'randomModel' => $randomModel]);
 	}
 

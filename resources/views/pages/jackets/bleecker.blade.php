@@ -25,8 +25,8 @@ Double rider biker leather jacket
 
   @foreach ($carouselImageNames as $name)
     <div>
-      <a href="/images/photos/jackets/bleecker/carousel/@{{leather_color}}/{{{ $name }}}_large.jpg" title="">
-        <img src="/images/photos/jackets/bleecker/carousel/@{{leather_color}}/{{{ $name }}}_medium.jpg" alt="{{{ $name }}}">
+      <a href="/images/photos/jackets/bleecker/carousel/@{{ getColorName(leather_color) }}/{{{ $name }}}_large.jpg" title="">
+        <img src="/images/photos/jackets/bleecker/carousel/@{{ getColorName(leather_color) }}/{{{ $name }}}_medium.jpg" alt="{{{ $name }}}">
       </a>
     </div>
   @endforeach
@@ -66,9 +66,9 @@ Double rider biker leather jacket
 
 @section('main')
   <div class="row">
-    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/@{{leather_color}}/actionback.jpg" alt="Actionback">
-    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/@{{leather_color}}/chest.jpg" alt="Chest">
-    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/@{{leather_color}}/cuff-zipper.jpg" alt="Cuff Zipper">
+    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/@{{ getColorName(leather_color) }}/actionback.jpg" alt="Actionback">
+    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/@{{ getColorName(leather_color) }}/chest.jpg" alt="Chest">
+    <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/bleecker/details/@{{ getColorName(leather_color) }}/cuff-zipper.jpg" alt="Cuff Zipper">
     <div class="large-6 medium-6 small-12 columns">
       <br>
       <h2>Finest materials

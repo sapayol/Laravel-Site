@@ -25,8 +25,8 @@ MA-1 style bomber leather jacket
 
   @foreach ($carouselImageNames as $name)
     <div>
-      <a href="/images/photos/jackets/e-161/carousel/@{{leather_color}}/{{{ $name }}}_large.jpg" title="">
-        <img src="/images/photos/jackets/e-161/carousel/@{{leather_color}}/{{{ $name }}}_medium.jpg" alt="{{{ $name }}}">
+      <a href="/images/photos/jackets/e-161/carousel/@{{ getColorName(leather_color) }}/{{{ $name }}}_large.jpg" title="">
+        <img src="/images/photos/jackets/e-161/carousel/@{{ getColorName(leather_color) }}/{{{ $name }}}_medium.jpg" alt="{{{ $name }}}">
       </a>
     </div>
   @endforeach
@@ -67,7 +67,7 @@ MA-1 style bomber leather jacket
 @section('main')
   <div class="row">
     @foreach (['collar', 'interior-pocket', 'waist'] as $name)
-      <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/e-161/details/@{{leather_color}}/{{{ $name }}}.jpg" alt="{{{ $name }}}">
+      <img class="large-6 medium-6 small-12 columns" src="/images/photos/jackets/e-161/details/@{{ getColorName(leather_color) }}/{{{ $name }}}.jpg" alt="{{{ $name }}}">
     @endforeach
     <div class="large-6 medium-6 small-12 columns">
       <h2>Finest materials</h2>
