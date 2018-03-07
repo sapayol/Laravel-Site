@@ -16,8 +16,13 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
     $scope.showBack = false;
   }
 
+  getColorName = function(id) {
+    return id === '1' ? 'black' : 'brown';
+  }
+
   $scope.changeJacketColor = function() {
     $rootScope.$broadcast('changePageColor', $scope.jacket.leather_color);
+    window.location.hash = getColorName($scope.jacket.leather_color);
     $scope.updateSessionCache();
   }
 
