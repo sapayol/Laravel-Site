@@ -16,7 +16,7 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
     $scope.showBack = false;
   }
 
-  $scope.changeJacketColor = function(input) {
+  $scope.changeJacketColor = function() {
     $rootScope.$broadcast('changePageColor', $scope.jacket.leather_color);
     $scope.updateSessionCache();
   }

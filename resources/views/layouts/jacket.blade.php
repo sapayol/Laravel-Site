@@ -11,7 +11,7 @@
 
 @include('partials.global.messages')
 
-<main class='row jacket-page' ng-controller='jacketCtrl'>
+<main class='row jacket-page' ng-controller='jacketCtrl' ng-init="init('{{{ $jacket->model }}}')">
 	<div class="small-12 medium-11 large-10 columns medium-centered jacket-expo">
 		@include('partials.jacket.image-carousel')
 		@include('partials.jacket.summary')
