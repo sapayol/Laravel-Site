@@ -12,4 +12,4 @@
   }
 ?>
 
-<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/variations/{{{ $front_image }}}-medium.jpg" alt="Jacket Photo">
+<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/variations/{{{ $order->leather_color()->name }}}/{{{ $front_image }}}-medium.jpg" alt="Jacket Photo">

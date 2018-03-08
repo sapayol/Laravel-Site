@@ -42,7 +42,7 @@
 		@include('partials.checkout.credit-card-form')
 	</section>
 
-	<section ng-show="paymentInfoSubmitted" id="order-summary" class="checkout">
+	<section ng-show="paymentInfoSubmitted" id="order-summary" class="checkout" ng-controller="jacketCtrl">
 		<h2>Your Jacket</h2>
 		@include('partials.checkout.order-summary')
 	</section>

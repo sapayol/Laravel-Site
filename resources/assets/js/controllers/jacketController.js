@@ -2,7 +2,6 @@ var jacketController = angular.module('jacketController', []);
 
 jacketController.controller('jacketCtrl', ['$scope', '$http', '$q', 'Session', '$timeout', 'Auth', 'notifyUser', function($scope, $http, $q, Session, $timeout, Auth, notifyUser) {
 
-
   var getHashColor = function() {
     if (window.location.hash) {
       const hash = window.location.hash.substring(1)

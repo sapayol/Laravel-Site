@@ -67,13 +67,18 @@ class AdminController extends Controller {
 	{
  		$order = Order::find($id);
 
-    $order->attributes()->sync([
+ 		$attributes = [
       $request->leather_type,
       $request->leather_color,
       $request->lining_color,
       $request->hardware_color,
-      $request->collar_color,
-    ]);
+    ];
+
+    if ($request->collar_color) {
+    	array_push($attirbutes, $request->collar_color);
+    }
+
+    $order->attributes()->sync($attributes);
 
 		return response()->json($order);
 	}

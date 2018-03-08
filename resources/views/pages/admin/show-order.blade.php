@@ -14,8 +14,9 @@ Order: {{{ $order->id }}}
 
 @section('main')
 
-	<section class="large-6 medium-8 large-uncentered medium-centered small-12 columns">
+	<section class="large-6 medium-8 large-uncentered medium-centered small-12 columns" ng-controller="jacketCtrl">
 		@include('partials.admin.order-summary')
+		@include('partials.jacket.preview-image')
 	</section>
 
 	<hr class="show-for-small-only">
@@ -35,6 +36,8 @@ Order: {{{ $order->id }}}
 			</div>
 		</section>
 		<hr>
+	@else
+		<div class="clearfix"></div>
 	@endif
 
 

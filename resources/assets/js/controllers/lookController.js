@@ -22,7 +22,10 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
 
   $scope.changeJacketColor = function() {
     $rootScope.$broadcast('changePageColor', $scope.jacket.leather_color);
-    window.location.hash = getColorName($scope.jacket.leather_color);
+    const onJacketPage = window.location.href.indexOf('jackets') > -1
+    if (onJacketPage) {
+      window.location.hash = getColorName($scope.jacket.leather_color);
+    }
     $scope.updateSessionCache();
   }
 
@@ -49,7 +52,7 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
       }
       $scope.front_image = lining_color + '-' + hardware_color + '-' + collar_color;
       const sameBack = $scope.jacket.model === 'e-161';
-      // $scope.back_image = sameBack ? 'back' : 'back-' + hardware_color + '-' + collar_color;
+
       $scope.back_image = sameBack ? 'back' : 'back-' + collar_color;
     } else {
       $scope.front_image = lining_color + '-' + hardware_color;

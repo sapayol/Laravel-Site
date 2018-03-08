@@ -41,6 +41,10 @@ editLookController.controller('editLookCtrl', ['$scope', '$http', '$q', 'notifyU
         hardware_color: $scope.selectedHardwareColor,
         collar_color:   $scope.selectedCollarColor,
       }
+      if ($scope.selectedCollarColor) {
+        $scope.attributes.collar_color = $scope.selectedCollarColor
+      }
+      location.reload();
       notifyUser.ofSuccessMessage('Look successfully updated');
         $scope.editMode = false;
       });
@@ -48,14 +52,18 @@ editLookController.controller('editLookCtrl', ['$scope', '$http', '$q', 'notifyU
 
   updateAttributesOnServer = function() {
     var deferred = $q.defer();
-    $http.post('/orders/' + $scope.order.id + '/look', {
+    const query = {
       _method: 'PATCH',
       leather_type:    $scope.selectedLeatherType.id,
       leather_color:   $scope.selectedLeatherColor.id,
       lining_color:    $scope.selectedLiningColor.id,
       hardware_color:  $scope.selectedHardwareColor.id,
-      collar_color:    $scope.selectedCollarColor.id,
-    }).success(function(response, status) {
+    }
+    if ($scope.selectedCollarColor) {
+      query.collar_color = $scope.selectedCollarColor
+    }
+    $http.post('/orders/' + $scope.order.id + '/look', query)
+    .success(function(response, status) {
       deferred.resolve(response);
     }).error(function(response, status) {
       notifyUser.ofApiErrors(response, status);

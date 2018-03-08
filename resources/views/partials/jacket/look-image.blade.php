@@ -1,4 +1,4 @@
-<div class="image-section">
+<div class="image-section" ng-controller="jacketCtrl" ng-init="init('{{{ $jacket->model }}}')">
   <img ng-if="!showBack" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ getColorName(leather_color) }}/@{{ front_image }}-medium.jpg"  alt="Jacket Front Preview">
   <img ng-if="showBack" ng-src="/images/photos/jackets/{{{ $jacket->model }}}/variations/@{{ getColorName(leather_color) }}/@{{ back_image }}-medium.jpg"  alt="Jacket Back Preview">
   <a class="underlined" ng-click="showBack = !showBack">
