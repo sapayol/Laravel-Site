@@ -112,7 +112,7 @@
 		&.active {
 			border: 2px solid;
 		}
-		&.black, &.brown, &.gray, &.bordeaux, &.silver, &.graphite, &.gold {
+		&.black, &.brown, &.cream, &.gray, &.bordeaux, &.silver, &.olive, &.orange, &.graphite, &.gold, {
 			border-color: $white;
 		}
 		&.black {
@@ -120,6 +120,9 @@
 		}
 		&.brown {
 			border-color: $leather-brown;
+		}
+		&.cream {
+			border-color: $cream;
 		}
 		&.gray {
 			border-color: mix($grey, white, 75%);
@@ -129,6 +132,9 @@
 		}
 		&.olive {
 			border-color: $olive;
+		}
+		&.orange {
+			border-color: $orange;
 		}
 		&.bordeaux {
 			border-color: $bordeaux;
