@@ -55,7 +55,7 @@
         <legend>Collar <small>+ $70</small></legend>
       @if ($jacket->collar_colors()->count() > 1)
         @foreach ($jacket->collar_colors() as $collar_color)
-          <label class="button tiny hollow {{{ camel_case($collar_color->name) }}}" ng-class="{active: jacket.collar_color == '{{{ $collar_color->id }}}' }">{{{ $collar_color->name }}}
+          <label ng-if="compatibleCollars.includes('{{{ $collar_color->name }}}')" class="button tiny hollow {{{ camel_case($collar_color->name) }}}" ng-class="{active: jacket.collar_color == '{{{ $collar_color->id }}}' }">{{{ $collar_color->name }}}
             <input type="radio" name="jacket_look[collar_color]" ng-model="jacket.collar_color" value="{{{ $collar_color->id }}}" ng-change="updateSessionCache()">
           </label>
         @endforeach

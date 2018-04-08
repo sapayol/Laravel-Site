@@ -32,6 +32,7 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
       window.location.hash = jacketColor
     }
     $scope.jacket.lining_color = jacketColor === 'black' ? 12 : 18;
+    $scope.jacket.collar_color = parseInt($scope.jacket.collar_color) === 0 ? 0 : jacketColor === 'black' ? 14 : 17;
     $scope.updateSessionCache();
   }
 
@@ -42,20 +43,21 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
     jacket[sapayol.jacket.model] = $scope.jacket;
     const leather_color = getAttributeName($scope.jacket.leather_color)
     $scope.compatibleLinings = leather_color === 'black' ? ['black', 'bordeaux'] : ['brown', 'orange'];
+    $scope.compatibleCollars = leather_color === 'black' ? ['black', 'gray'] : ['brown', 'cream'];
     Session.store(jacket);
   }
 
   $scope.setPreviewImageName = function() {
-    var lining_color = $scope.jacket.lining_color === '13' ? 'red' : 'black';
+    var lining_color = getAttributeName($scope.jacket.lining_color);
     var hardware_color = 'silver';
-    if ($scope.jacket.hardware_color === '10') {
+    if (parseInt($scope.jacket.hardware_color) === 10) {
       hardware_color = 'gray';
-    } else if ($scope.jacket.hardware_color === '11') {
+    } else if (parseInt($scope.jacket.hardware_color) === 11) {
       hardware_color = 'gold';
     }
     if ($scope.jacket.model === 'linden') {
-      var collar_color = ($scope.jacket.collar_color === '14' ? 'black' : 'gray');
-      if ($scope.jacket.collar_color === '0') {
+      var collar_color = getAttributeName($scope.jacket.collar_color);
+      if (parseInt($scope.jacket.collar_color) === 0) {
         collar_color = 'none'
       }
       $scope.front_image = lining_color + '-' + hardware_color + '-' + collar_color;
