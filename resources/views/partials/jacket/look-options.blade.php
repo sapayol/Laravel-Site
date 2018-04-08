@@ -29,7 +29,7 @@
       <legend>Lining Color</legend>
       @if ($jacket->lining_colors()->count() > 1)
         @foreach ($jacket->lining_colors() as $lining_color)
-          <label class="button tiny hollow {{{ camel_case($lining_color->name) }}}" ng-class="{active: jacket.lining_color == '{{{ $lining_color->id}}}' }">{{{ $lining_color->name }}}
+          <label ng-if="compatibleLinings.includes('{{{ camel_case($lining_color->name) }}}')" class="button tiny hollow {{{ camel_case($lining_color->name) }}}" ng-class="{active: jacket.lining_color == '{{{ $lining_color->id }}}' }">{{{ $lining_color->name }}}
             <input type="radio" name="jacket_look[lining_color]" ng-model="jacket.lining_color" value="{{{ $lining_color->id }}}" ng-change="updateSessionCache()">
           </label>
         @endforeach

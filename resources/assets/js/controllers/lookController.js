@@ -16,16 +16,22 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
     $scope.showBack = false;
   }
 
-  getColorName = function(id) {
-    return id === '1' ? 'black' : 'brown';
+  getAttributeName = function(id) {
+    const result = sapayol.attributes.find(function(attribute) {
+      return parseInt(attribute.id) === parseInt(id)
+    });
+
+    return result ? result.name : null
   }
 
   $scope.changeJacketColor = function() {
     $rootScope.$broadcast('changePageColor', $scope.jacket.leather_color);
     const onJacketPage = window.location.href.indexOf('jackets') > -1
+    const jacketColor = getAttributeName($scope.jacket.leather_color);
     if (onJacketPage) {
-      window.location.hash = getColorName($scope.jacket.leather_color);
+      window.location.hash = jacketColor
     }
+    $scope.jacket.lining_color = jacketColor === 'black' ? 12 : 18;
     $scope.updateSessionCache();
   }
 
@@ -34,6 +40,8 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
     var jacket = {};
     $scope.setPreviewImageName()
     jacket[sapayol.jacket.model] = $scope.jacket;
+    const leather_color = getAttributeName($scope.jacket.leather_color)
+    $scope.compatibleLinings = leather_color === 'black' ? ['black', 'bordeaux'] : ['brown', 'orange'];
     Session.store(jacket);
   }
 

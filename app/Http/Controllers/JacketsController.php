@@ -21,7 +21,11 @@ class JacketsController extends Controller {
 	{
 		$user = Auth::user();
 		$jacket = Jacket::where('model', '=', $model)->firstOrFail();
-		JavaScript::put(['jacket' => $jacket, 'session' => Session::all()]);
+		JavaScript::put([
+			'attributes' => $jacket->attributes()->get(),
+			'jacket' => $jacket,
+			'session' => Session::all()
+		]);
 
 		if ($user && $user->unfinishedOrders()->count() > 0) {
 			$order = Auth::user()->unfinishedOrders->last();
