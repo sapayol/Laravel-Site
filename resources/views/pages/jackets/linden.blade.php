@@ -16,13 +16,13 @@ A-2 style flight leather jacket
 
 <?php
   $carouselImageNames = [
-    'front_closed_silver_fur-black',
-    '45-left_closed_silver_fur-black',
-    'side-left_closed_silver_fur-black',
-    'back_closed_silver_fur-black',
-    'front_open_silver_fur-black',
-    '45-left_closed_silver_fur-gray',
-    'front_closed_silver_fur-gray',
+    'front_closed_silver_fur-1',
+    '45-left_closed_silver_fur-1',
+    'side-left_closed_silver_fur-1',
+    'back_closed_silver_fur-1',
+    'front_open_silver_fur-1',
+    '45-left_closed_silver_fur-2',
+    'front_closed_silver_fur-2',
     '45-left_closed_silver_fur-none',
     'front_closed_silver_fur-none',
   ]
