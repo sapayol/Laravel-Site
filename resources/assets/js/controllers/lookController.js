@@ -49,12 +49,7 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
 
   $scope.setPreviewImageName = function() {
     var lining_color = getAttributeName($scope.jacket.lining_color);
-    var hardware_color = 'silver';
-    if (parseInt($scope.jacket.hardware_color) === 10) {
-      hardware_color = 'gray';
-    } else if (parseInt($scope.jacket.hardware_color) === 11) {
-      hardware_color = 'gold';
-    }
+    var hardware_color = getAttributeName($scope.jacket.hardware_color);
     if ($scope.jacket.model === 'linden') {
       var collar_color = getAttributeName($scope.jacket.collar_color);
       if (parseInt($scope.jacket.collar_color) === 0) {
