@@ -30,7 +30,12 @@ class OrdersController extends Controller {
       $new_order = $request->old();
     }
 
-    JavaScript::put(['jacket' => $jacket, 'session' => Session::all()]);
+    JavaScript::put([
+      'attributes' => $jacket->attributes()->get(),
+      'jacket' => $jacket,
+      'session' => Session::all()
+    ]);
+
 		return view('pages.orders.show', ['order' => $order, 'jacket' => $jacket, 'new_order' => $new_order]);
 	}
 
