@@ -1,11 +1,5 @@
 <div class="look-options-form">
-  <form action="/orders" method="POST" name="createOrderForm" ng-init="init(
-    {{{ $jacket->leather_types()->first()->id }}},
-    {{{ $jacket->leather_colors()->first()->id }}},
-    {{{ $jacket->lining_colors()->first()->id }}},
-    {{{ $jacket->hardware_colors()->first()->id }}},
-    {{{ $jacket->collar_colors()->count() > 0  ? $jacket->collar_colors()->first()->id : 0 }}}
-    )">
+  <form action="/orders" method="POST" name="createOrderForm" ng-init="init()">
     @if (empty($order))
       <h2 class="thin hide-for-small">
         {{{ !empty($order) ? 'Change' : 'Design' }}} your look <br><br>

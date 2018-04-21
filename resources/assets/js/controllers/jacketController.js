@@ -30,12 +30,13 @@ jacketController.controller('jacketCtrl', ['$scope', '$http', '$q', 'Session', '
     $scope.jacket = typeof(sessionJacket) !== 'undefined' ? sessionJacket : catalogJacket
     var hashColor = getColorFromURLHash()
     if (hashColor) {
-      $scope.leather_color = getLeatherColorId(hashColor)
       $scope.jacket.leather_color = getLeatherColorId(hashColor)
+    } else if (typeof(sessionJacket) !== 'undefined') {
+      $scope.jacket = sessionJacket
     } else {
       $scope.jacket.leather_color = leatherDefaults[$scope.jacket.model]
-      $scope.leather_color = leatherDefaults[$scope.jacket.model]
     }
+    $scope.leather_color = $scope.jacket.leather_color
   }
 
   $scope.getColorName = function(id) {
@@ -47,7 +48,7 @@ jacketController.controller('jacketCtrl', ['$scope', '$http', '$q', 'Session', '
   $scope.updateSessionCache = function() {
     var session = {}
     var jacket = $scope.jacket
-    jacket.leather_color = $scope.leather_color
+    jacket.leather_color = parseInt($scope.leather_color)
     session[jacket.model] = jacket
     Session.store(session)
   }
