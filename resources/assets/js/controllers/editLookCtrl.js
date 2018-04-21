@@ -60,7 +60,7 @@ editLookController.controller('editLookCtrl', ['$scope', '$http', '$q', 'notifyU
       hardware_color:  $scope.selectedHardwareColor.id,
     }
     if ($scope.selectedCollarColor) {
-      query.collar_color = $scope.selectedCollarColor
+      query.collar_color = $scope.selectedCollarColor.id
     }
     $http.post('/orders/' + $scope.order.id + '/look', query)
     .success(function(response, status) {

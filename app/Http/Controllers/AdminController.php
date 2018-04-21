@@ -75,7 +75,7 @@ class AdminController extends Controller {
     ];
 
     if ($request->collar_color) {
-    	array_push($attirbutes, $request->collar_color);
+    	array_push($attributes, $request->collar_color);
     }
 
     $order->attributes()->sync($attributes);
