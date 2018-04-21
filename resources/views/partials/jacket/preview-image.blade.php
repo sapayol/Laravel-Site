@@ -3,7 +3,7 @@
   $lining_color = $order->lining_color()->name;
   $hardware_color = $order->hardware_color()->name;
   if ($jacket->model === 'linden') {
-    $collar_color = ($order->collar_color() === '14' ? 'black' : 'gray');
+    $collar_color = ($order->collar_color()->name === 'black' || $order->collar_color()->name === 'brown' ? 'fur-1' : 'fur-2');
     $front_image = $lining_color . '-' . $hardware_color . '-' . $collar_color;
   } else {
     $front_image = $lining_color . '-' . $hardware_color;
