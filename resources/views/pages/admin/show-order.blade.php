@@ -51,7 +51,7 @@ Order: {{{ $order->id }}}
 		@include('partials.admin.order-look')
 	</section>
 
-	<section class="large-5 medium-8 small-12 columns">
+	<section class="large-5 medium-8 small-12 columns" ng-controller="editMeasurementsCtrl" >
 		@include('partials.admin.order-measurements')
 	</section>
 

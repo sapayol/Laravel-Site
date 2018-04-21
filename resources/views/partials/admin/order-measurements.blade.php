@@ -1,6 +1,6 @@
 <div class="row">
 	@foreach (['body', 'product'] as $type)
-		<div class="large-6 medium-6 medium-uncentered small-6 columns" ng-controller="editMeasurementsCtrl" ng-init="init( '{{{$type}}}' )" >
+		<div class="large-6 medium-6 medium-uncentered small-6 columns" ng-init="init( '{{{$type}}}' )" >
 			<div class="value-list-controls">
 				<h3 class="left">{{{ ucwords($type)}}}</h3>
 				@if ($order->status !== 'completed' && $order->statusIsAfter('started'))

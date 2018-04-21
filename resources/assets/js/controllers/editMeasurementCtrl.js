@@ -16,14 +16,14 @@ editMeasurementsController.controller('editMeasurementsCtrl', ['$scope', '$http'
   }
 
   $scope.updateMeasurements = function() {
-    updateOrderOnServer($scope.newData, $scope.measurement_type).then(function(data) {
+    updateMeasurementsOnServer($scope.newData, $scope.measurement_type).then(function(data) {
         $scope.currentData = angular.copy($scope.newData);
         notifyUser.ofSuccessMessage('Customer successfully updated');
         $scope.editMode = false;
       });
   }
 
-  updateOrderOnServer = function(newData, measurement_type) {
+  updateMeasurementsOnServer = function(newData, measurement_type) {
     var deferred = $q.defer();
     $http.post('/orders/' + $scope.order.id + '/fit/', {
       _method:       'PATCH',

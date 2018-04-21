@@ -16,7 +16,7 @@ editUserController.controller('editUserCtrl', ['$scope', '$http', '$q', 'notifyU
 
   $scope.updateUser = function() {
     if ($scope.updateUserForm.email.$valid) {
-      updateOrderOnServer($scope.newData).then(function(data) {
+      updateOrderUserOnServer($scope.newData).then(function(data) {
           $scope.currentData = angular.copy($scope.newData);
           notifyUser.ofSuccessMessage('Customer successfully updated');
           $scope.editMode = false;
@@ -26,7 +26,7 @@ editUserController.controller('editUserCtrl', ['$scope', '$http', '$q', 'notifyU
     }
   }
 
-  updateOrderOnServer = function(newData) {
+  updateOrderUserOnServer = function(newData) {
     var deferred = $q.defer();
     $http.post('/orders/' + $scope.order.id, {
       _method: 'PATCH',
