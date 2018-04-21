@@ -43,6 +43,8 @@
 			<a href="{{{ env('SITE_URL') }}}/orders/{{{ $order->id}}}/fit/{{{ array_shift($uncompleted_measurements) }}}" class="button">Add Missing Measurements</a>
 		</div>
 	@else
-		<p>We will soon offer a flight jacket and a moto. <br> <a class="underlined" href="{{{ env('SITE_URL') }}}/jackets?jacket-updates">Sign up here</a> if you would like to be one of the first to know about them.</p>
+		<p>
+  	  <a href="/care-instructions" class="button">See our Care Instructions</a>
+	  </p>
 	@endif
 @stop

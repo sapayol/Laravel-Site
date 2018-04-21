@@ -23,12 +23,9 @@
 @stop
 
 @section('row3')
-	<p>We will soon offer a flight jacket and a moto. Sign up if you would like to be one of the first to know about them.</p>
-	<br>
-	<div class="text-center">
-		<br>
-		<a href="{{{ env('SITE_URL') }}}/jackets?jacket-updates" class="button">Sign Up For Updates</a>
-	</div>
+	<p>
+    <a href="/care-instructions" class="button">See our Care Instructions</a>
+  </p>
 @stop
 
 @section('row4')
