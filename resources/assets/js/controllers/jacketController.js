@@ -2,7 +2,18 @@ var jacketController = angular.module('jacketController', []);
 
 jacketController.controller('jacketCtrl', ['$scope', '$http', '$q', 'Session', '$timeout', 'Auth', 'notifyUser', function($scope, $http, $q, Session, $timeout, Auth, notifyUser) {
 
-  var getHashColor = function() {
+  getLeatherColorId = function(name) {
+    return name === 'black' ? 1 : 2;
+  }
+
+  const leatherDefaults = {
+    'bleecker': getLeatherColorId('black'),
+    'linden': getLeatherColorId('brown'),
+    'mott': getLeatherColorId('black'),
+    'e-161': getLeatherColorId('brown'),
+  }
+
+  var getColorFromURLHash = function() {
     if (window.location.hash) {
       const hash = window.location.hash.substring(1)
       const validHash = hash === 'black' || hash === 'brown'
@@ -13,23 +24,22 @@ jacketController.controller('jacketCtrl', ['$scope', '$http', '$q', 'Session', '
     }
   }
 
-  getColorId = function(name) {
-    return name === 'black' ? '1' : '2';
-  }
-
   $scope.init = function(model) {
-    $scope.jacket = typeof(sapayol.session[model]) !== 'undefined' ? sapayol.session[model] : sapayol.jackets[model];
-    var hashColor = getHashColor()
+    const sessionJacket = sapayol.session[model]
+    const catalogJacket = sapayol.jackets ? sapayol.jackets[model] : sapayol.jacket
+    $scope.jacket = typeof(sessionJacket) !== 'undefined' ? sessionJacket : catalogJacket
+    var hashColor = getColorFromURLHash()
     if (hashColor) {
-      $scope.leather_color = getColorId(hashColor)
-      $scope.jacket.leather_color = getColorId(hashColor)
+      $scope.leather_color = getLeatherColorId(hashColor)
+      $scope.jacket.leather_color = getLeatherColorId(hashColor)
     } else {
-      $scope.leather_color = $scope.jacket ? $scope.jacket.leather_color : '1'
+      $scope.jacket.leather_color = leatherDefaults[$scope.jacket.model]
+      $scope.leather_color = leatherDefaults[$scope.jacket.model]
     }
   }
 
   $scope.getColorName = function(id) {
-    return id === '1' ? 'black' : 'brown';
+    return parseInt(id) === 1 ? 'black' : 'brown'
   }
 
 
@@ -39,7 +49,7 @@ jacketController.controller('jacketCtrl', ['$scope', '$http', '$q', 'Session', '
     var jacket = $scope.jacket
     jacket.leather_color = $scope.leather_color
     session[jacket.model] = jacket
-    Session.store(session);
+    Session.store(session)
   }
 
   $scope.$on('changePageColor', function (event, color_id) {
