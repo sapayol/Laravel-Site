@@ -26,7 +26,7 @@ SAPAYOL offers made-to-measure, customizable leather jackets, tailored by master
 			</div>
 			<div class="title-container large-8 medium-10 medium-centered columns">
 				<h2 class="hero-text">
-					<span class="line1 thin">Leather jackets, tailored by master craftsmen to your measurements. <br>Made from the most exclusive full-grain, aniline dyed, vegetable tanned leather.</span>
+					<span class="line1 thin">Leather jackets, tailored by master craftsmen to your measurements. <br>Made from the most exclusive full-grain, aniline dyed, vegetable tanned lamb leather.</span>
 				</h2>
 			</div>
 		</div>
