@@ -83,13 +83,17 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
   }
 
   $scope.setPreviewImageName = function() {
-    var lining_color = getAttributeName($scope.jacket.lining_color)
-    var hardware_color = getAttributeName($scope.jacket.hardware_color)
+    const lining_color = getAttributeName($scope.jacket.lining_color)
+    const hardware_color = getAttributeName($scope.jacket.hardware_color)
     if ($scope.jacket.model === 'linden') {
-      var collar_color = getAttributeName($scope.jacket.collar_color)
+      const collar_name = getAttributeName($scope.jacket.collar_color)
+      var collar_color = 'fur-2'
       if (parseInt($scope.jacket.collar_color) === 0) {
         collar_color = 'none'
+      } else if (collar_name === 'brown') {
+        collar_color = 'fur-1'
       }
+
       $scope.front_image = lining_color + '-' + hardware_color + '-' + collar_color
       const sameBack = $scope.jacket.model === 'e-161'
 
