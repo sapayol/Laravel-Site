@@ -54,7 +54,8 @@ jacketController.controller('jacketCtrl', ['$scope', '$http', '$q', 'Session', '
   }
 
   $scope.$on('changePageColor', function (event, color_id) {
-    $scope.leather_color = color_id;
+    $scope.jacket.leather_color = parseInt(color_id);
+    $scope.leather_color = parseInt(color_id);
   });
 
 }]);

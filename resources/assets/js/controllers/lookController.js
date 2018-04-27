@@ -47,6 +47,8 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
     $scope.jacket.lining_color   = attributeIsSaved('lining_color')   ? sessionJacket.lining_color   : getLiningColorId(getAttributeName($scope.jacket.leather_color))
     $scope.jacket.hardware_color = attributeIsSaved('hardware_color') ? sessionJacket.hardware_color : 9 // Silver
     $scope.jacket.collar_color   = attributeIsSaved('collar_color')   ? sessionJacket.collar_color   : getAttributeName($scope.jacket.leather_color) === 'black' ? 14 : 16
+
+    $scope.setDefaultParamsOnChange()
     $scope.updateSessionCache()
     $scope.showBack = false
   }
@@ -60,15 +62,24 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
   }
 
   $scope.changeJacketColor = function() {
+    $scope.jacket.leather_color = parseInt($scope.jacket.leather_color)
     $rootScope.$broadcast('changePageColor', $scope.jacket.leather_color)
     const onJacketPage = window.location.href.indexOf('jackets') > -1
-    const jacketColor = getAttributeName($scope.jacket.leather_color)
+    const leatherColorName = getAttributeName($scope.jacket.leather_color)
     if (onJacketPage) {
-      window.location.hash = jacketColor
+      window.location.hash = leatherColorName
     }
-    $scope.jacket.lining_color = jacketColor === 'black' ? 12 : 18
-    $scope.jacket.collar_color = parseInt($scope.jacket.collar_color) === 0 ? 0 : jacketColor === 'black' ? 14 : 17
+
+    $scope.setDefaultParamsOnChange()
     $scope.updateSessionCache()
+  }
+
+  $scope.setDefaultParamsOnChange = function () {
+    const leatherColorName = getAttributeName($scope.jacket.leather_color)
+    $scope.jacket.lining_color = leatherColorName === 'black' ? 12 : 18
+    $scope.jacket.collar_color = parseInt($scope.jacket.collar_color) === 0 ? 0 : leatherColorName === 'black' ? 14 : 17
+    $scope.compatibleLinings = leatherColorName === 'black' ? ['black', 'bordeaux'] : ['brown', 'orange']
+    $scope.compatibleCollars = leatherColorName === 'black' ? ['black', 'gray'] : ['brown', 'cream']
   }
 
   // Update the session on the server to match the changes that the user makes
@@ -76,9 +87,6 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
     var jacket = {}
     $scope.setPreviewImageName()
     jacket[sapayol.jacket.model] = $scope.jacket
-    const leather_color = getAttributeName($scope.jacket.leather_color)
-    $scope.compatibleLinings = leather_color === 'black' ? ['black', 'bordeaux'] : ['brown', 'orange']
-    $scope.compatibleCollars = leather_color === 'black' ? ['black', 'gray'] : ['brown', 'cream']
     Session.store(jacket)
   }
 
@@ -90,7 +98,7 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
       var collar_color = 'fur-2'
       if (parseInt($scope.jacket.collar_color) === 0) {
         collar_color = 'none'
-      } else if (collar_name === 'brown') {
+      } else if (collar_name === 'brown' || collar_name === 'black') {
         collar_color = 'fur-1'
       }
 
@@ -104,6 +112,12 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
       $scope.back_image = sameBack ? 'back' : 'back-' + hardware_color
     }
   }
+
+  $scope.$on('changePageColor', function (event, color_id) {
+    $scope.jacket.leather_color = parseInt(color_id);
+    $scope.setDefaultParamsOnChange()
+    $scope.updateSessionCache()
+  });
 
   $scope.submitAuthRequest = function(request) {
     if (request === 'logout') return logout($scope.user)
