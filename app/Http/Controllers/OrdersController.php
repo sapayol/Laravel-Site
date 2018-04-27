@@ -147,6 +147,8 @@ class OrdersController extends Controller {
 
     $attributes = ['leather_type', 'leather_color', 'lining_color', 'hardware_color', 'collar_color'];
 
+    $jacket_look = [];
+
     foreach ($attributes as $attribute) {
       if ($jacket[$attribute]) {
         $jacket_look[] = $jacket[$attribute];
