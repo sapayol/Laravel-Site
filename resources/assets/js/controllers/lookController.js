@@ -77,7 +77,11 @@ lookController.controller('lookAndFitCtrl', ['$rootScope', '$scope', '$http', '$
   $scope.setDefaultParamsOnChange = function () {
     const leatherColorName = getAttributeName($scope.jacket.leather_color)
     $scope.jacket.lining_color = leatherColorName === 'black' ? 12 : 18
-    $scope.jacket.collar_color = parseInt($scope.jacket.collar_color) === 0 ? 0 : leatherColorName === 'black' ? 14 : 17
+    if ($scope.jacket.model === 'linden') {
+      $scope.jacket.collar_color = parseInt($scope.jacket.collar_color) === 0 ? 0 : leatherColorName === 'black' ? 14 : 17
+    } else {
+      $scope.jacket.collar_color = null;
+    }
     $scope.compatibleLinings = leatherColorName === 'black' ? ['black', 'bordeaux'] : ['brown', 'orange']
     $scope.compatibleCollars = leatherColorName === 'black' ? ['black', 'gray'] : ['brown', 'cream']
   }

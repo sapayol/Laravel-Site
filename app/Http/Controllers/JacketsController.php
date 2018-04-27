@@ -29,6 +29,9 @@ class JacketsController extends Controller {
 
 		if ($user && $user->unfinishedOrders()->count() > 0) {
 			$order = Auth::user()->unfinishedOrders->last();
+			if ($order->jacket->model !== $model) {
+				$order = null;
+			}
 		} else {
 			$order = null;
 		}

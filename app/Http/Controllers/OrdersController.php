@@ -46,7 +46,10 @@ class OrdersController extends Controller {
     Session::remove('card');
 
     $last_order = Auth::user()->orders->last();
-    if ($last_order && ($last_order->status == 'new' || $last_order->status == 'started')) {
+    $hasExistingOrder = $last_order && ($last_order->status == 'new' || $last_order->status == 'started');
+    $switchedModels = $last_order->model !== $request->model;
+
+    if ($hasExistingOrder && !$switchedModels) {
       $order = $last_order;
     } else {
       $order = $this->dispatchFrom('App\Jobs\CreateNewOrder', $request);
