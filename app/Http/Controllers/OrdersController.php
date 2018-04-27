@@ -157,8 +157,14 @@ class OrdersController extends Controller {
 
     $order->attributes()->sync($jacket_look);
 
+    $total_price = $order->jacket->price;
+    foreach ($order->attributes()->get() as $order_attribute) {
+      $total_price += $order_attribute->price;
+    }
+
     if (!isset($order->measurements['note']) || $order->measurements['note'] == '') {
       $order->measurements['note'] = '-';
+      $order->total = money_format('%i', $total_price);
       $order->save();
     }
 
