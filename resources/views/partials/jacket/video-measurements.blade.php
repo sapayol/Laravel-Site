@@ -1,3 +1,6 @@
+{{-- UNUSED --}}
+
+
 <div  class="large-10 medium-10 medium-centered small-12 columns">
 	<br class="show-for-small">
 	<a class="video-caption underlined animated slideInDown" ng-show="!measurementsVisible" ng-click="measurementsVisible = !measurementsVisible">Measurements in the images &amp; video </a>
