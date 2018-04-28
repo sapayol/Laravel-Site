@@ -43,6 +43,15 @@
 @stop
 
 @section('row6')
+	<p style="color: #B02428;">
+		All customs and taxes will be paid by us, the sender. If the delivery person insists on getting money from you, there’s been some miscommunication between us and the courier. Get in touch with us and we will sort it out.
+	</p>
+	<p>
+		If you pay taxes, customs or any handling fee upon delivery of the package, make sure to keep a receipt so that we can refund you.
+	</p>
+@stop
+
+@section('row7')
 	<table>
 		<tbody>
 			<tr>
