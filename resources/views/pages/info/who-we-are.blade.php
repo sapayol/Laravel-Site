@@ -21,7 +21,6 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 	<div class="player large-10 medium-centered columns" ng-controller="videoCtrl">
 		<br><br>
 	  <video poster="/images/video-posters/who_we_are.jpg" controls crossorigin preload="none">
-	    <source src="/videos/who_we_are.webm" type="video/webm">
 	    <source src="/videos/who_we_are.mp4"  type="video/mp4">
 	    <a href="/videos/who_we_are.mp4">Download</a>
 	  </video>

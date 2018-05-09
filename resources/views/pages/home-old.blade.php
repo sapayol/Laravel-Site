@@ -31,7 +31,6 @@ SAPAYOL offers made-to-measure, customizable leather jackets, tailored by master
 {{-- 		<section class="small-12 medium-12 large-12 columns">
 			<div class="player" ng-controller="videoCtrl">
 			  <video poster="/images/video-posters/home_page.jpg" controls crossorigin>
-			    <source src="/videos/home_page.webm" type="video/webm">
 			    <source src="/videos/home_page.mp4"  type="video/mp4">
 			    <a href="/videos/home_page.mp4">Download</a>
 			  </video>

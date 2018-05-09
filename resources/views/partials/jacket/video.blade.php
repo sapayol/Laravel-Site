@@ -1,8 +1,12 @@
 <div class="large-10 medium-11 medium-centered small-12 columns jacket-video">
-	<div class="player" ng-controller="videoCtrl">
-	  <video poster="/images/video-posters/jackets/{{{ $jacket->model }}} poster 1.jpg" controls crossorigin preload="none">
-	    <source src="/videos/jackets/{{{ $jacket->model }}}.webm" type="video/webm">
-	    <source src="/videos/jackets/{{{ $jacket->model }}}.mp4"  type="video/mp4">
+	<div class="player" ng-controller="videoCtrl" ng-init="init()">
+	  <video
+      src="/videos/jackets/@{{ video_leather_color }}/{{{ $jacket->model }}}.mp4"
+      poster="/images/video-posters/jackets/@{{ video_leather_color }}/{{{ $jacket->model }}}_poster_1.jpg"
+      controls
+      crossorigin
+      preload="none"
+    >
 	    <a href="/videos/jackets/{{{ $jacket->model }}}.mp4">Download</a>
 	  </video>
     @include('partials.global.play-button')
