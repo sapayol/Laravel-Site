@@ -2,6 +2,8 @@ var videoController = angular.module('videoController', []);
 
 videoController.controller('videoCtrl', ['$scope', function($scope) {
 	$(document).ready(function(){
+    $scope.loadCount = 0
+
   	plyr.setup({
   		controls: ["play", "fullscreen", "volume"]
     });
@@ -13,6 +15,10 @@ videoController.controller('videoCtrl', ['$scope', function($scope) {
     });
     media.addEventListener("loadstart", function() {
       console.log('video loading')
+      $scope.loadCount += 1
+      if ($scope.loadCount > 1) {
+        return
+      }
       player.addClass('loading');
     });
     media.addEventListener("canplay", function() {
@@ -51,7 +57,16 @@ videoController.controller('videoCtrl', ['$scope', function($scope) {
 
       $scope.$on('changePageColor', function (event, color_id) {
         $scope.video_leather_color = getColorById(color_id)
+        var player = document.querySelectorAll(".player")[0].plyr
+        console.log('--------------CHANGE!--------------')
+        player.restore()        // player.restart()
+        $('.player').removeClass('playing')
+        $(".player-controls").removeClass('descended');
       });
+    }
+
+    const jacketVideoURL = function() {
+      return '/videos/jackets/' + $scope.video_leather_color + '/' + $scope.jacket.model + '.mp4'
     }
 
   });
