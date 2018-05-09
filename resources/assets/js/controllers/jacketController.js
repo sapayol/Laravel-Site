@@ -25,18 +25,19 @@ jacketController.controller('jacketCtrl', ['$scope', '$http', '$q', 'Session', '
   }
 
   $scope.init = function(model) {
-    const sessionJacket = sapayol.session[model]
-    const catalogJacket = sapayol.jackets ? sapayol.jackets[model] : sapayol.jacket
-    $scope.jacket = typeof(sessionJacket) !== 'undefined' ? sessionJacket : catalogJacket
-    var hashColor = getColorFromURLHash()
+    const catalogJacket = sapayol.jacket ? sapayol.jacket : sapayol.jackets[model]
+    const sessionJacket = sapayol.session[catalogJacket.model]
+    const jacket = typeof(sessionJacket) !== 'undefined' ? sessionJacket : catalogJacket
+    const hashColor = getColorFromURLHash()
+
     if (hashColor) {
-      $scope.jacket.leather_color = getLeatherColorId(hashColor)
-    } else if (typeof(sessionJacket) !== 'undefined') {
-      $scope.jacket = sessionJacket
+      $scope.leather_color = getLeatherColorId(hashColor)
     } else {
-      $scope.jacket.leather_color = leatherDefaults[$scope.jacket.model]
+      $scope.leather_color = jacket.leather_color || leatherDefaults[jacket.model]
     }
-    $scope.leather_color = $scope.jacket.leather_color
+
+    $scope.jacket = jacket
+    $scope.jacket.leather_color = $scope.leather_color
   }
 
   $scope.getColorName = function(id) {

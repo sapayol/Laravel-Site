@@ -35,6 +35,25 @@ videoController.controller('videoCtrl', ['$scope', function($scope) {
         c.innerHTML = a.responseText;
         b.insertBefore(c, b.childNodes[0]);
       }
+
+    getColorById = function (id) {
+      return parseInt(id) === 1 ? 'black' : 'brown'
+    }
+
+    const catalog_jacket = sapayol.jacket
+
+    if (catalog_jacket) {
+      const session_jacket = sapayol.session[catalog_jacket.model]
+
+      $scope.video_leather_color = getColorById(
+        session_jacket ? session_jacket.leather_color : catalog_jacket.leather_color
+      )
+
+      $scope.$on('changePageColor', function (event, color_id) {
+        $scope.video_leather_color = getColorById(color_id)
+      });
+    }
+
   });
 
 }]);
