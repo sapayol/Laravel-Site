@@ -1,4 +1,4 @@
-<div class="overlay">
+<div class="overlay" ng-click='onPlayClick()'>
   <button ng-click='onPlayClick()' class="play-button">
     <svg
       width="112px"
