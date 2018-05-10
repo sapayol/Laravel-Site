@@ -58,11 +58,14 @@ videoController.controller('videoCtrl', ['$scope', function($scope) {
       $scope.$on('changePageColor', function (event, color_id) {
         $scope.video_leather_color = getColorById(color_id)
         var player = document.querySelectorAll(".player")[0].plyr
-        console.log('--------------CHANGE!--------------')
-        player.restore()        // player.restart()
+        player.restore()
         $('.player').removeClass('playing')
         $(".player-controls").removeClass('descended');
       });
+    }
+
+    $scope.getVideoUrl = function (leather_color, model) {
+      return '/videos/jackets/' + leather_color + '/' + model + '.mp4'
     }
 
     const jacketVideoURL = function() {
