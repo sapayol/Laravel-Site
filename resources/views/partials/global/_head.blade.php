@@ -1,6 +1,7 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" ng-app="sapayolApp" class="no-js" ng-controller="GlobalCtrl">
 	<head>
+    @include('partials.global.google-tagmanager-head')
 		<meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="@yield('description')">
@@ -17,3 +18,4 @@
 	</head>
 
 	<body "@yield('angular_page_controller')" id="top">
+		@include('partials.global.google-tagmanager-body')
