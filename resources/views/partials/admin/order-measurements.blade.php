@@ -17,14 +17,14 @@
 			</div>
 
 			<ul ng-show="!editMode" class="no-bullet value-list">
-				<li ng-repeat="key in notSorted(currentData)" ng-if="key != 'note'">
+				<li ng-repeat="key in notSorted(currentData['{{ $type }}'])" ng-if="key != 'note'">
 					<span class="list-key"><small>@{{ key.snakeToText() }}</small></span>
 					<span class="list-value">
-						<strong>@{{ currentData[key] }} </strong>
-						<span ng-if="currentData[key]">
-							@if ($type == 'body')
-								{{{ $order->bodyMeasurements->units == 'in' ? '"' : 'cm' }}}
-							@elseif ($type == 'product' && $order->productMeasurements)
+              @if ($type == 'body')
+                <strong>@{{ currentData.body[key] }} </strong> <span ng-if="currentData['{{ $type }}'][key]">
+                {{{ $order->bodyMeasurements->units == 'in' ? '"' : 'cm' }}}
+              @elseif ($type == 'product' && $order->productMeasurements)
+  	 	   				<strong>@{{ currentData.product[key] }} </strong> <span ng-if="currentData['{{ $type }}'][key]">
 								{{{ $order->productMeasurements->units == 'in' ? '"' : 'cm' }}}
 							@endif
 						</span>
@@ -33,7 +33,7 @@
 				@if ($type == 'body')
 					<li>
 						<span class="list-key"><small>Note</small></span>
-						<span class="list-value"><em>@{{ currentData.note }}</em></span>
+						<span class="list-value"><em>@{{ currentData.body.note }}</em></span>
 					</li>
 				@endif
 			</ul>

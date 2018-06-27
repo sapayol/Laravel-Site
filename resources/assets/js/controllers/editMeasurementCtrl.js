@@ -7,7 +7,10 @@ editMeasurementsController.controller('editMeasurementsCtrl', ['$scope', '$http'
     $scope.editMode         = false;
     $scope.order            = sapayol.order;
     $scope.measurement_type = measurement_type;
-    $scope.currentData      = measurement_type == 'body' ? sapayol.body_measurements : sapayol.product_measurements;
+    $scope.currentData = {
+      body: sapayol.body_measurements,
+      product: sapayol.product_measurements,
+    }
   }
 
   $scope.enterEditMode = function() {
