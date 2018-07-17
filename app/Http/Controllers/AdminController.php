@@ -87,15 +87,22 @@ class AdminController extends Controller {
 	public function updateFit($id, Request $request)
 	{
  		$order = Order::find($id);
+
 		foreach ($order->bodyMeasurements->measurement_names as $name) {
- 			if ($request->type == 'body') {
-			  $order->bodyMeasurements->$name = $request->$name;
-		    $order->bodyMeasurements->save();
- 			} elseif ($request->type == 'product') {
-			  $order->productMeasurements->$name = $request->$name;
-		    $order->productMeasurements->save();
+			$newValue = intval($request->$name) === 0 ? null : intval($request->$name);
+ 			if ($request->type === 'body') {
+				$order->bodyMeasurements->$name = $newValue;
+ 			} elseif ($request->type === 'product') {
+			  $order->productMeasurements->$name = $newValue;
  			}
  		}
+
+		if ($request->type === 'body') {
+			$order->bodyMeasurements->save();
+		} elseif ($request->type === 'product') {
+			$order->productMeasurements->save();
+		}
+
 		return response()->json($order->measurements);
 	}
 

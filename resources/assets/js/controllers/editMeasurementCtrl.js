@@ -18,8 +18,8 @@ editMeasurementsController.controller('editMeasurementsCtrl', ['$scope', '$http'
     $scope.editMode = true;
   }
 
-  $scope.updateMeasurements = function() {
-    updateMeasurementsOnServer($scope.newData, $scope.measurement_type).then(function(data) {
+  $scope.updateMeasurements = function(measurement_type) {
+    updateMeasurementsOnServer($scope.newData, measurement_type).then(function(data) {
         $scope.currentData = angular.copy($scope.newData);
         notifyUser.ofSuccessMessage('Customer successfully updated');
         $scope.editMode = false;
@@ -28,19 +28,20 @@ editMeasurementsController.controller('editMeasurementsCtrl', ['$scope', '$http'
 
   updateMeasurementsOnServer = function(newData, measurement_type) {
     var deferred = $q.defer();
+    const measurements = newData[measurement_type]
     $http.post('/orders/' + $scope.order.id + '/fit/', {
       _method:       'PATCH',
       type:          measurement_type,
-      height:        newData.height,
-      half_shoulder: newData.half_shoulder,
-      back_width:    newData.back_width,
-      chest:         newData.chest,
-      stomach:       newData.stomach ,
-      back_length:   newData.back_length,
-      waist:         newData.waist,
-      arm:           newData.arm,
-      biceps:        newData.biceps,
-      note:          newData.note
+      height:        measurements.height || null,
+      half_shoulder: measurements.half_shoulder || null,
+      back_width:    measurements.back_width || null,
+      chest:         measurements.chest || null,
+      stomach:       measurements.stomach || null,
+      back_length:   measurements.back_length || null,
+      waist:         measurements.waist || null,
+      arm:           measurements.arm || null,
+      biceps:        measurements.biceps || null,
+      note:          measurements.note || null
     }).success(function(response, status) {
       deferred.resolve(response);
     }).error(function(response, status) {

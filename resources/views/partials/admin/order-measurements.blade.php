@@ -13,7 +13,7 @@
 			<div class="clearfix"></div>
 
 			<div ng-show="editMode" class="animated fadeIn">
-				@include('partials.admin.edit-measurements-form')
+				@include('partials.admin.edit-measurements-form', ['type' => $type])
 			</div>
 
 			<ul ng-show="!editMode" class="no-bullet value-list">
