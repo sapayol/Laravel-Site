@@ -7,7 +7,7 @@
 					<a class="right value-list-action" ng-show="!editMode" ng-click="enterEditMode()">Edit</a>
 				@endif
 			  <a class="right value-list-action" ng-show="editMode"  ng-click="updateMeasurements( '{{{ $type }}}' )">Save</a>
-			  <span ng-show="editMode" > &nbsp; | &nbsp;</span>
+			  <span class="right link-divider" ng-show="editMode" > &nbsp; | &nbsp;</span>
 			  <a class="right value-list-action" ng-show="editMode"  ng-click="editMode = !editMode">Cancel</a>
 			</div>
 			<div class="clearfix"></div>
