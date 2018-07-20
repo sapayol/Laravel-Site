@@ -89,7 +89,10 @@ class AdminController extends Controller {
  		$order = Order::find($id);
 
 		foreach ($order->bodyMeasurements->measurement_names as $name) {
-			$newValue = intval($request->$name) === 0 ? null : intval($request->$name);
+			$newValue = $request->$name;
+			if ($name !== 'note') {
+				$newValue = intval($request->$name) === 0 ? null : intval($request->$name);
+			}
  			if ($request->type === 'body') {
 				$order->bodyMeasurements->$name = $newValue;
  			} elseif ($request->type === 'product') {
