@@ -4,19 +4,19 @@
 			<div class="value-list-controls">
 				<h3 class="left">{{{ ucwords($type)}}}</h3>
 				@if ($order->status !== 'completed' && $order->statusIsAfter('started'))
-					<a class="right value-list-action" ng-show="!editMode" ng-click="enterEditMode()">Edit</a>
+					<a class="right value-list-action" ng-show="!{{{ $type }}}EditMode" ng-click="enterEditMode('{{{ $type }}}')">Edit</a>
 				@endif
-			  <a class="right value-list-action" ng-show="editMode"  ng-click="updateMeasurements( '{{{ $type }}}' )">Save</a>
-			  <span class="right link-divider" ng-show="editMode" > &nbsp; | &nbsp;</span>
-			  <a class="right value-list-action" ng-show="editMode"  ng-click="editMode = !editMode">Cancel</a>
+			  <a class="right value-list-action" ng-show="{{{ $type }}}EditMode"  ng-click="updateMeasurements( '{{{ $type }}}' )">Save</a>
+			  <span class="right link-divider" ng-show="{{{ $type }}}EditMode" > &nbsp; | &nbsp;</span>
+			  <a class="right value-list-action" ng-show="{{{ $type }}}EditMode"  ng-click="{{{ $type }}}EditMode = !{{{ $type }}}EditMode">Cancel</a>
 			</div>
 			<div class="clearfix"></div>
 
-			<div ng-show="editMode" class="animated fadeIn">
+			<div ng-show="{{{ $type }}}EditMode" class="animated fadeIn">
 				@include('partials.admin.edit-measurements-form', ['type' => $type])
 			</div>
 
-			<ul ng-show="!editMode" class="no-bullet value-list">
+			<ul ng-show="!{{{ $type }}}EditMode" class="no-bullet value-list">
 				<li ng-repeat="key in notSorted(currentData['{{ $type }}'])" ng-if="key != 'note'">
 					<span class="list-key"><small>@{{ key.snakeToText() }}</small></span>
 					<span class="list-value">
@@ -30,12 +30,10 @@
 						</span>
 					</span>
 				</li>
-				@if ($type == 'body')
-					<li>
-						<span class="list-key"><small>Note</small></span>
-						<span class="list-value"><em>@{{ currentData.body.note }}</em></span>
-					</li>
-				@endif
+				<li>
+					<span class="list-key"><small>Note</small></span>
+					<span class="list-value"><em>@{{ currentData.{{{ $type }}}.note }}</em></span>
+				</li>
 			</ul>
 		</div>
 	@endforeach
