@@ -44,7 +44,7 @@
 		</div>
 	@else
 		<p>
-  	  <a href="/care-instructions" class="button">See our Care Instructions</a>
+  	  <a href="{{{ env('SITE_URL') }}}/care-instructions" class="button">See our Care Instructions</a>
 	  </p>
 	@endif
 @stop
