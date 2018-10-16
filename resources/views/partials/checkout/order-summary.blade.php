@@ -1,4 +1,12 @@
-	@include('partials.jacket.preview-image')
+@include('partials.jacket.preview-image')
+
+	<?php
+	  $leather_type = null !== $order->leather_type() ? $order->leather_type()->name : 'empty';
+	  $leather_color = null !== $order->leather_color() ? $order->leather_color()->name : 'empty';
+	  $lining_color = null !== $order->lining_color() ? $order->lining_color()->name : 'empty';
+	  $hardware_color = null !== $order->hardware_color() ? $order->hardware_color()->name : 'empty';
+	?>
+
 
 	<section class="large-6 medium-6 small-12 columns">
 		<h3 class="thin left">Look</h3>
@@ -6,10 +14,10 @@
 		<div class="clearfix"></div>
 		<ul class="no-bullet value-list">
 			<li><small class="list-key">Model</small><strong>{{{ ucfirst($order->jacket->name)  }}}	</strong></li>
-			<li><small class="list-key">Leather Type </small><strong>{{{ ucfirst($order->leather_type()->name)  }}}	</strong></li>
-			<li><small class="list-key">Leather Color </small><strong>{{{ ucfirst($order->leather_color()->name) }}}	</strong></li>
-			<li><small class="list-key">Lining Color </small><strong>{{{ ucfirst($order->lining_color()->name) }}}	</strong></li>
-			<li><small class="list-key">Hardware Color </small><strong>{{{ ucfirst($order->hardware_color()->name) }}}	</strong></li>
+			<li><small class="list-key">Leather Type </small><strong>{{{ ucfirst($leather_type)  }}}	</strong></li>
+			<li><small class="list-key">Leather Color </small><strong>{{{ ucfirst($leather_color) }}}	</strong></li>
+			<li><small class="list-key">Lining Color </small><strong>{{{ ucfirst($lining_color) }}}	</strong></li>
+			<li><small class="list-key">Hardware Color </small><strong>{{{ ucfirst($hardware_color) }}}	</strong></li>
 			@if ($order->collar_color())
 				<li><small class="list-key">Collar Color </small><strong>{{{ ucfirst($order->collar_color()->name) }}}	</strong></li>
 			@endif
