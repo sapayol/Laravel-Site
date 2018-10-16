@@ -1,7 +1,8 @@
 <?php
   $jacket = $order->jacket;
-  $lining_color = $order->lining_color()->name;
-  $hardware_color = $order->hardware_color()->name;
+  $lining_color = isset($order->lining_color()) ? $order->lining_color()->name : 'empty';
+  $hardware_color = isset($order->hardware_color()) ? $order->hardware_color()->name : 'empty';
+  $leather_color = isset($order->leather_color()) ? $order->leather_color()->name : 'empty';
   $collar_color = null;
   if ($jacket->model === 'linden') {
     if ($order->collar_color()) {
@@ -15,4 +16,4 @@
   }
 ?>
 
-<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/variations/{{{ $order->leather_color()->name }}}/{{{ $front_image }}}-medium.jpg" alt="Jacket Photo">
+<img class="customization-image" src="/images/photos/jackets/{{{ $order->jacket->model }}}/variations/{{{ $leather_color }}}/{{{ $front_image }}}-medium.jpg" alt="Jacket Photo">
