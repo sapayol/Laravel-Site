@@ -1,8 +1,8 @@
 <?php
   $jacket = $order->jacket;
-  $lining_color = isset($order->lining_color()) ? $order->lining_color()->name : 'empty';
-  $hardware_color = isset($order->hardware_color()) ? $order->hardware_color()->name : 'empty';
-  $leather_color = isset($order->leather_color()) ? $order->leather_color()->name : 'empty';
+  $lining_color = null !== $order->lining_color() ? $order->lining_color()->name : 'empty';
+  $hardware_color = null !== $order->hardware_color() ? $order->hardware_color()->name : 'empty';
+  $leather_color = null !== $order->leather_color() ? $order->leather_color()->name : 'empty';
   $collar_color = null;
   if ($jacket->model === 'linden') {
     if ($order->collar_color()) {
