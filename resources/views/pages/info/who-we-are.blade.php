@@ -82,8 +82,6 @@ SAPAYOL is a New York City based company that is committed to master craftsmansh
 	<hr>
 
 	<section class="large-7 medium-9 medium-centered columns">
-		<h2>New York City is our home.</h2>
-		<p>SAPAYOL is based and incorporated in New York City. This city fuels us with energy and inspiration.</p>
 		<h2> Our jackets are made in Istanbul, Turkey.</h2>
 		<p>The long textile and leather tradition in the region makes it possible to buy top-grade skins, work with a world-class tannery, have our jackets tailored by master craftsmen and source all materials within a 250 mile radius. In addition to that, we can work with supply partners that pay above-average wage.</p>
 	</section>

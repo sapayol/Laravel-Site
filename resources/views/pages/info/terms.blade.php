@@ -206,7 +206,7 @@ Terms &amp; Conditions
 		<section id="governing-law">
 			<h3>GOVERNING LAW</h3>
 			<a href="#terms-nav" class="underlined under-heading-link">Back to Top</a>
-			<p>These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of New York City and New York State, USA.</p>
+			<p>These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of Zurich, Switzerland.</p>
 		</section>
 
 		<section id="changes-to-terms">
@@ -298,13 +298,14 @@ Terms &amp; Conditions
 			<h3>CHANGES TO THIS PRIVACY POLICY</h3>
 			<a href="#terms-nav" class="underlined under-heading-link">Back to Top</a>
 			<p>We reserve the right to modify this privacy policy at any time, so please review it frequently. Changes and clarifications will take effect immediately upon their posting on the website. If we make material changes to this policy, we will notify you here that it has been updated, so that you are aware of what information we collect, how we use it, and under what circumstances, if any, we use and/or disclose it.</p>
-			<p>If our store is acquired or merged with another company, your information may be transferred to the new owners so that we may continue to sell products to you.</p
+			<p>If our store is acquired or merged with another company, your information may be transferred to the new owners so that we may continue to sell products to you.
+			</p>
 		</section>
 
 		<section id="questions">
 			<h3>QUESTIONS AND CONTACT INFORMATION</h3>
 			<a href="#terms-nav" class="underlined under-heading-link">Back to Top</a>
-			<p>If you would like to: access, correct, amend or delete any personal information we have about you, register a complaint, or simply want more information contact us at <a href="mailto:contact@sapayol.com" title="">contact@sapayol.com</a> or by mail at SAPA YOL INC, 453 W36th Street, New York, NY 10018, USA.</p>
+			<p>If you would like to: access, correct, amend or delete any personal information we have about you, register a complaint, or simply want more information contact us at <a href="mailto:contact@sapayol.com" title="">contact@sapayol.com</a> or by mail at SAPAYOL GmbH, Josefstrasse 150, 8005 Zurich, Switzerland.</p>
 		</section>
 	</article>
 @stop
